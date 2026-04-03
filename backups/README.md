@@ -1,34 +1,34 @@
 # Backup Index
 
-## Available backups
+This directory contains two independent backup tracks.
 
-| Package | Manifest | Archive | Created |
-| --- | --- | --- | --- |
-| Codex complete plus generated v2 | [manifest](https://github.com/hdxdfff/MetaForge/releases/download/backup-codex-complete-plus-generated-v2-20260404-022752/codex-complete-plus-generated-v2-20260404-022752.manifest.json) | [archive](https://github.com/hdxdfff/MetaForge/releases/download/backup-codex-complete-plus-generated-v2-20260404-022752/codex-complete-plus-generated-v2-20260404-022752.zip) | `2026-04-04T02:29:37` |
-| ToyOS project backup | [manifest](toyos-project-backup-20260404-023214.manifest.json) | [archive](toyos-project-backup-20260404-023214.zip) | `2026-04-04T02:32:16.002675` |
+## Project 1: Codex complete plus generated v2
 
-## Scope
+| Item | Link |
+| --- | --- |
+| Manifest | [codex-complete-plus-generated-v2-20260404-022752.manifest.json](https://github.com/hdxdfff/MetaForge/releases/download/backup-codex-complete-plus-generated-v2-20260404-022752/codex-complete-plus-generated-v2-20260404-022752.manifest.json) |
+| Archive | [codex-complete-plus-generated-v2-20260404-022752.zip](https://github.com/hdxdfff/MetaForge/releases/download/backup-codex-complete-plus-generated-v2-20260404-022752/codex-complete-plus-generated-v2-20260404-022752.zip) |
+| Created | `2026-04-04T02:29:37` |
 
-- Source root: `D:\codex`
-- Captured roots:
-  - `generated/toy-os-demo`
-  - `orchestrator-mvp/factory/runtime/harness_runs`
-  - `orchestrator-mvp/data/harness_goals`
-  - `goals`
+Scope:
+- `generated/toy-os-demo`
+- `orchestrator-mvp/factory/runtime/harness_runs`
+- `orchestrator-mvp/data/harness_goals`
+- `goals`
 
-## Suggested restore order
+## Project 2: ToyOS project backup
 
-1. Manifest first.
-2. Archive second.
-3. Reconcile runtime status files after extraction.
-4. Re-run the ToyOS validation flow.
+| Item | Link |
+| --- | --- |
+| Manifest | [toyos-project-backup-20260404-023214.manifest.json](toyos-project-backup-20260404-023214.manifest.json) |
+| Archive | [toyos-project-backup-20260404-023214.zip](toyos-project-backup-20260404-023214.zip) |
+| Created | `2026-04-04T02:32:16.002675` |
 
-## Integrity cues
+Scope:
+- ToyOS-only project state
+- Earlier backup package from the same day
 
-The manifest records:
+## Boundary rule
 
-- file count
-- compressed and uncompressed sizes
-- sampled entries
-- excluded name substrings
-- selected runtime status files
+Keep the two package lines separate when you restore or audit them.
+They share a workspace source root, but they are not the same project.
