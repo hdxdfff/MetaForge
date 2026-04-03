@@ -13,6 +13,7 @@ This entry page covers the first backup track in the repository.
 
 - Manifest: [codex-complete-plus-generated-v2-20260404-022752.manifest.json](https://github.com/hdxdfff/MetaForge/releases/download/backup-codex-complete-plus-generated-v2-20260404-022752/codex-complete-plus-generated-v2-20260404-022752.manifest.json)
 - Archive: [codex-complete-plus-generated-v2-20260404-022752.zip](https://github.com/hdxdfff/MetaForge/releases/download/backup-codex-complete-plus-generated-v2-20260404-022752/codex-complete-plus-generated-v2-20260404-022752.zip)
+- Note: the archive is a release asset and does not appear as a normal file in this directory.
 - Release: [backup-codex-complete-plus-generated-v2-20260404-022752](https://github.com/hdxdfff/MetaForge/releases/tag/backup-codex-complete-plus-generated-v2-20260404-022752)
 
 ## Restore order
