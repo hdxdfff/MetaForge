@@ -4,8 +4,9 @@ This repository is a backup entry point for the MetaForge / ToyOS workspace.
 
 ## Latest backup package
 
-- [Backup manifest](backups/toyos-project-backup-20260404-023214.manifest.json)
-- [Backup archive](backups/toyos-project-backup-20260404-023214.zip)
+- [Backup manifest asset](https://github.com/hdxdfff/MetaForge/releases/download/backup-codex-complete-plus-generated-v2-20260404-022752/codex-complete-plus-generated-v2-20260404-022752.manifest.json)
+- [Backup archive asset](https://github.com/hdxdfff/MetaForge/releases/download/backup-codex-complete-plus-generated-v2-20260404-022752/codex-complete-plus-generated-v2-20260404-022752.zip)
+- [Release page](https://github.com/hdxdfff/MetaForge/releases/tag/backup-codex-complete-plus-generated-v2-20260404-022752)
 
 ## What is included
 
@@ -16,12 +17,12 @@ This repository is a backup entry point for the MetaForge / ToyOS workspace.
 
 ## Snapshot summary
 
-- Created: `2026-04-04T02:32:16.002675`
+- Created: `2026-04-04T02:29:37`
 - Source root: `D:\codex`
 - Files captured: `1588`
 - Uncompressed size: `2,450,156 bytes`
-- Archive size: `983,372 bytes`
-- Approximate archive size: `1.0 MB`
+- Archive size: `990,125,817 bytes`
+- Approximate archive size: `944.5 MB`
 
 ## Verification
 
@@ -30,12 +31,12 @@ Use the manifest first when you want to inspect scope before unpacking the archi
 
 ## Restore path
 
-1. Download the archive.
+1. Download the archive asset from the release page.
 2. Open the manifest to verify the scope.
 3. Extract the archive into the target workspace.
 4. Rehydrate the ToyOS and orchestrator state from the extracted files.
 
 ## Notes
 
-- This repository currently stores backup artifacts and the entry pages for them.
-- For live development, use the local workspace rather than editing the archive directly.
+- This repository stores the manifest and archive as release assets because the archive is too large for a normal repository contents upload.
+- The earlier ToyOS-specific backup remains available as an archived entry.
