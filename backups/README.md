@@ -5,7 +5,7 @@
 | Package | Manifest | Archive | Created |
 | --- | --- | --- | --- |
 | Codex complete plus generated v2 | [manifest](https://github.com/hdxdfff/MetaForge/releases/download/backup-codex-complete-plus-generated-v2-20260404-022752/codex-complete-plus-generated-v2-20260404-022752.manifest.json) | [archive](https://github.com/hdxdfff/MetaForge/releases/download/backup-codex-complete-plus-generated-v2-20260404-022752/codex-complete-plus-generated-v2-20260404-022752.zip) | `2026-04-04T02:29:37` |
-| ToyOS project backup | [manifest](toyos-project-backup-20260404-023214.manifest.json) | [archive](https://github.com/hdxdfff/MetaForge/releases/tag/backup-toyos-project-backup-20260404-023214) | `2026-04-04T02:32:16.002675` |
+| ToyOS project backup | [manifest](toyos-project-backup-20260404-023214.manifest.json) | [archive](toyos-project-backup-20260404-023214.zip) | `2026-04-04T02:32:16.002675` |
 
 ## Scope
 
