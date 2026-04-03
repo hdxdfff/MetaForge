@@ -2,7 +2,7 @@
 
 This repository is a backup entry point for two separate project tracks.
 
-## Project 1: Codex complete plus generated v2
+## Project 1: MetaForge
 
 - [Manifest asset](https://github.com/hdxdfff/MetaForge/releases/download/backup-codex-complete-plus-generated-v2-20260404-022752/codex-complete-plus-generated-v2-20260404-022752.manifest.json)
 - [Archive asset](https://github.com/hdxdfff/MetaForge/releases/download/backup-codex-complete-plus-generated-v2-20260404-022752/codex-complete-plus-generated-v2-20260404-022752.zip)
@@ -34,5 +34,5 @@ Scope:
 ## Notes
 
 - The two backup tracks are intentionally separate.
-- Do not treat the ToyOS backup as part of the Codex complete plus generated snapshot.
-- Do not treat the Codex complete plus generated snapshot as a ToyOS-only artifact.
+- Do not treat the ToyOS backup as part of MetaForge.
+- Do not treat the MetaForge backup as a ToyOS-only artifact.
