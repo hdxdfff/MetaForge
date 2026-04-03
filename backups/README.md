@@ -7,6 +7,7 @@ This directory contains two independent backup tracks in dedicated subdirectorie
 - Entry page: [metaforge/README.md](metaforge/README.md)
 - Manifest asset: [codex-complete-plus-generated-v2-20260404-022752.manifest.json](https://github.com/hdxdfff/MetaForge/releases/download/backup-codex-complete-plus-generated-v2-20260404-022752/codex-complete-plus-generated-v2-20260404-022752.manifest.json)
 - Archive asset: [codex-complete-plus-generated-v2-20260404-022752.zip](https://github.com/hdxdfff/MetaForge/releases/download/backup-codex-complete-plus-generated-v2-20260404-022752/codex-complete-plus-generated-v2-20260404-022752.zip)
+- Note: release assets hold the large archive artifacts.
 - Release: [backup-codex-complete-plus-generated-v2-20260404-022752](https://github.com/hdxdfff/MetaForge/releases/tag/backup-codex-complete-plus-generated-v2-20260404-022752)
 
 ## Project 2: ToyOS project backup
