@@ -10,6 +10,8 @@ from uuid import uuid4
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 EVENT_LOG_PATH = DATA / "factory_events.jsonl"
+EVENT_LOG_FALLBACK_PATH = Path("/workspace/data/factory_events.jsonl")
+EVENT_LOG_RUNTIME_FALLBACK_PATH = DATA / "factory_events.runtime.jsonl"
 EVENT_LOG_MAX_BYTES = 10 * 1024 * 1024
 EVENT_LOG_ARCHIVE_COUNT = 4
 EVENT_LOG_TAIL_LIMIT = 5000
@@ -20,11 +22,32 @@ def _event_log_archive_path(index: int) -> Path:
 
 
 def _event_log_paths(*, include_archives: bool) -> list[Path]:
+    primary = [EVENT_LOG_PATH, EVENT_LOG_FALLBACK_PATH, EVENT_LOG_RUNTIME_FALLBACK_PATH]
     if not include_archives:
-        return [EVENT_LOG_PATH]
+        return primary
     paths = [_event_log_archive_path(index) for index in range(EVENT_LOG_ARCHIVE_COUNT, 0, -1)]
-    paths.append(EVENT_LOG_PATH)
+    paths.extend(primary)
     return paths
+
+
+def _select_event_log_path() -> Path:
+    candidates = [EVENT_LOG_PATH, EVENT_LOG_FALLBACK_PATH, EVENT_LOG_RUNTIME_FALLBACK_PATH]
+    last_error: Exception | None = None
+    for path in candidates:
+        try:
+            path.parent.mkdir(parents=True, exist_ok=True)
+            with path.open("a", encoding="utf-8"):
+                pass
+            return path
+        except PermissionError as exc:
+            last_error = exc
+            continue
+        except OSError as exc:
+            last_error = exc
+            continue
+    if last_error is not None:
+        raise last_error
+    return EVENT_LOG_PATH
 
 
 def _tail_lines(path: Path, limit: int) -> list[str]:
@@ -69,30 +92,31 @@ def _tail_lines(path: Path, limit: int) -> list[str]:
 
 
 def rotate_event_log() -> None:
-    if not EVENT_LOG_PATH.exists():
+    path = _select_event_log_path()
+    if not path.exists():
         return
     try:
-        if EVENT_LOG_PATH.stat().st_size < EVENT_LOG_MAX_BYTES:
+        if path.stat().st_size < EVENT_LOG_MAX_BYTES:
             return
     except OSError:
         return
 
-    EVENT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
-    oldest = _event_log_archive_path(EVENT_LOG_ARCHIVE_COUNT)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    oldest = path.with_name(f"{path.name}.{EVENT_LOG_ARCHIVE_COUNT}")
     if oldest.exists():
         oldest.unlink()
     for index in range(EVENT_LOG_ARCHIVE_COUNT - 1, 0, -1):
-        src = _event_log_archive_path(index)
+        src = path.with_name(f"{path.name}.{index}")
         if not src.exists():
             continue
-        dst = _event_log_archive_path(index + 1)
+        dst = path.with_name(f"{path.name}.{index + 1}")
         if dst.exists():
             dst.unlink()
         src.replace(dst)
-    first_archive = _event_log_archive_path(1)
+    first_archive = path.with_name(f"{path.name}.1")
     if first_archive.exists():
         first_archive.unlink()
-    EVENT_LOG_PATH.replace(first_archive)
+    path.replace(first_archive)
 
 
 def utc_iso() -> str:
@@ -118,9 +142,9 @@ def append_event(
         "payload": payload or {},
         "refs": refs or {},
     }
-    EVENT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+    path = _select_event_log_path()
     rotate_event_log()
-    with EVENT_LOG_PATH.open("a", encoding="utf-8") as handle:
+    with path.open("a", encoding="utf-8") as handle:
         handle.write(json.dumps(event, ensure_ascii=False) + "\n")
     return event
 
