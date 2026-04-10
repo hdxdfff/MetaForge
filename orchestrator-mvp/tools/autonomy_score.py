@@ -402,6 +402,7 @@ def _signal_policy(
     quality_score: float,
     soak_confirmed: bool,
     production_score: float,
+    control_layer: dict[str, Any],
 ) -> dict[str, Any]:
     runtime_blockers: list[str] = []
     if runtime_critical:
@@ -416,9 +417,24 @@ def _signal_policy(
         maturity_signals.append("production_gap")
 
     release_gate_signals: list[str] = []
+    control_policy = control_layer.get("control_policy") or {}
+    release_policy = control_policy.get("release") or {}
+    release_operations = control_layer.get("release_operations") or {}
+    release_claim_policy = release_operations.get("release_claim_policy") or {}
+    release_blocks = bool(
+        release_claim_policy.get("blocks_release")
+        or release_policy.get("blocks_release")
+        or release_policy.get("blocks_promotion")
+    )
+    blocking_reasons = [
+        str(item) for item in (release_claim_policy.get("blocking_reasons") or [])
+        if str(item).strip()
+    ]
+    if release_blocks:
+        release_gate_signals.extend(blocking_reasons or ["release_gate_not_confirmed"])
     if not soak_confirmed:
         release_gate_signals.append("stage4_confirmation_pending")
-    if stage != "stage4_confirmed":
+    if stage != "stage4_confirmed" and not release_blocks:
         release_gate_signals.append("release_gate_not_confirmed")
 
     return summarize_signal_policy(
@@ -541,6 +557,7 @@ def run_autonomy_score(*, quality_snapshot: dict[str, Any] | None = None) -> dic
             quality_score=float(quality.get("overall_score", 0.0) or 0.0),
             soak_confirmed=bool(soak.get("confirmed")),
             production_score=production_score,
+            control_layer=control_layer,
         ),
         "decision": {
             "stable_autonomy": stage == "stage4_confirmed" and not runtime_critical,

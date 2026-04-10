@@ -14,7 +14,7 @@ from tools.ai_testing_compat import load_ai_test_status
 from tools.artifact_audit import evaluate_artifact, validate_release_payload
 from tools.io_utils import atomic_write_json
 from tools.governance_contract import load_governance_contract, summarize_governance_contract
-from tools.task_state_tools import promote_delivery_ready_tasks, resolved_delivery_evidence
+from tools.task_state_tools import reconcile_task_delivery_pipeline, resolved_delivery_evidence
 
 DATA = ROOT / "data"
 
@@ -375,6 +375,8 @@ def _release_readiness_checks(
     ready_patches: list[dict[str, Any]],
     blocked_patches: list[dict[str, Any]],
     release_tiers: dict[str, dict[str, Any]],
+    delivery_gate_ok: bool,
+    delivery_ready_count: int,
     daemon_alive: bool,
     brain_loop_ok: bool,
     task_engine_ok: bool,
@@ -436,6 +438,19 @@ def _release_readiness_checks(
                 "blocked_patch_count": len(blocked_patches),
             },
             "next_action": "repair-release-artifacts" if not artifact_release_ok else "observe-only",
+        },
+        {
+            "name": "delivery_gate",
+            "status": "pass" if delivery_gate_ok else "attention",
+            "effect": "protect_release_delivery",
+            "affects_runtime": False,
+            "affects_release": True,
+            "affects_reporting": True,
+            "detail": {
+                "delivery_ready_count": delivery_ready_count,
+                "mainline_release_tier": release_tiers.get("mainline", {}).get("status"),
+            },
+            "next_action": "promote-delivery-ready" if not delivery_gate_ok else "observe-only",
         },
         {
             "name": "ai_release_signal",
@@ -594,21 +609,6 @@ def run_release_operations_status() -> dict[str, Any]:
             },
         },
     }
-    readiness_checks = _release_readiness_checks(
-        runtime_ok=runtime_ok,
-        verification_ok=verification_ok,
-        control_ok=control_ok,
-        artifact_release_ok=artifact_release_ok,
-        ai_testing=ai_testing,
-        ai_release_signal=ai_release_signal,
-        release_gate=release_gate,
-        ready_patches=ready_patches,
-        blocked_patches=blocked_patches,
-        release_tiers=release_tiers,
-        daemon_alive=daemon_alive,
-        brain_loop_ok=brain_loop_ok,
-        task_engine_ok=task_engine_ok,
-    )
     delivery_ready_state_machine = _delivery_ready_state_machine(
         tasks=tasks,
         runtime_ok=runtime_ok,
@@ -618,9 +618,18 @@ def run_release_operations_status() -> dict[str, Any]:
         release_gate=release_gate,
         blocked_patches=blocked_patches,
     )
+    delivery_ready_count = int((delivery_ready_state_machine.get("counts") or {}).get("delivery_ready") or 0)
+    delivery_gate_ok = delivery_ready_count > 0
+    release_tiers["mainline"]["status"] = (
+        "ready"
+        if verification_ok and control_ok and runtime_ok and ai_ok and artifact_release_ok and delivery_gate_ok
+        else "blocked"
+    )
+    release_tiers["mainline"]["requirements"]["delivery_gate_ok"] = delivery_gate_ok
+    release_tiers["mainline"]["requirements"]["delivery_ready_count"] = delivery_ready_count
     promotion_result = {"updated_count": 0, "task_ids": [], "skipped_count": 0, "skipped": []}
     if delivery_ready_state_machine["promotion_allowed"] and delivery_ready_state_machine["promotable_tasks"]:
-        promotion_result = promote_delivery_ready_tasks(
+        promotion_result = reconcile_task_delivery_pipeline(
             [str(item.get("task_id") or "").strip() for item in delivery_ready_state_machine["promotable_tasks"]],
             summary="Task promoted to delivery_ready after verified VM production evidence satisfied release promotion gates.",
         )
@@ -634,6 +643,33 @@ def run_release_operations_status() -> dict[str, Any]:
             release_gate=release_gate,
             blocked_patches=blocked_patches,
         )
+        delivery_ready_count = int((delivery_ready_state_machine.get("counts") or {}).get("delivery_ready") or 0)
+        delivery_gate_ok = delivery_ready_count > 0
+        release_tiers["mainline"]["status"] = (
+            "ready"
+            if verification_ok and control_ok and runtime_ok and ai_ok and artifact_release_ok and delivery_gate_ok
+            else "blocked"
+        )
+        release_tiers["mainline"]["requirements"]["delivery_gate_ok"] = delivery_gate_ok
+        release_tiers["mainline"]["requirements"]["delivery_ready_count"] = delivery_ready_count
+
+    readiness_checks = _release_readiness_checks(
+        runtime_ok=runtime_ok,
+        verification_ok=verification_ok,
+        control_ok=control_ok,
+        artifact_release_ok=artifact_release_ok,
+        ai_testing=ai_testing,
+        ai_release_signal=ai_release_signal,
+        release_gate=release_gate,
+        ready_patches=ready_patches,
+        blocked_patches=blocked_patches,
+        release_tiers=release_tiers,
+        delivery_gate_ok=delivery_gate_ok,
+        delivery_ready_count=delivery_ready_count,
+        daemon_alive=daemon_alive,
+        brain_loop_ok=brain_loop_ok,
+        task_engine_ok=task_engine_ok,
+    )
 
     release_train_status = "ready" if release_tiers["mainline"]["status"] == "ready" else "degraded" if release_tiers["experimental"]["status"] == "ready" else "blocked"
     if not governance_ok:
@@ -651,6 +687,8 @@ def run_release_operations_status() -> dict[str, Any]:
         next_action = "merge-ready-patches"
     elif blocked_patches:
         next_action = "clear-patch-blockers"
+    elif not delivery_gate_ok:
+        next_action = "promote-delivery-ready"
     elif valid_release_candidates and release_tiers["experimental"]["status"] == "ready":
         next_action = "advance-experimental-candidate"
     elif valid_release_candidates:
@@ -659,6 +697,14 @@ def run_release_operations_status() -> dict[str, Any]:
     payload = {
         "updated_at": _utc(),
         "status": "pass" if release_train_status == "ready" else "attention",
+        "blocking_enforced": True,
+        "release_claim_policy": {
+            "mode": "blocking_gate",
+            "status": "pass" if release_train_status == "ready" else "blocked",
+            "passed": release_train_status == "ready",
+            "blocks_release": release_train_status != "ready",
+            "blocking_reasons": [] if release_train_status == "ready" else [item["name"] for item in readiness_checks if item["status"] != "pass" and item.get("affects_release")],
+        },
         "governance_contract": governance_contract,
         "governance_split": governance_split,
         "governance_gate": {
@@ -718,6 +764,8 @@ def run_release_operations_status() -> dict[str, Any]:
             "governance_ok": governance_ok,
             "ai_ok": ai_ok,
             "artifact_release_ok": artifact_release_ok,
+            "delivery_gate_ok": delivery_gate_ok,
+            "delivery_ready_count": delivery_ready_count,
             "primary_artifact_ready": primary_artifact_ready,
             "ai_release_signal": ai_release_signal,
             "ai_overall_score": ai_testing.get("overall_score"),

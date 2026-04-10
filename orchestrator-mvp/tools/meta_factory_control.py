@@ -830,18 +830,20 @@ def run_control_layer(
     }
     verification_release_gate = verification.get("release_gate") or {}
     promotion_gate = release_ops.get("promotion_gate") or {}
+    release_claim_policy = release_ops.get("release_claim_policy") or {}
+    release_blocking_enforced = bool(release_ops.get("blocking_enforced"))
     release_blocks_promotion = bool(promotion_gate.get("blocks_promotion"))
-    release_blocks_verification = bool(verification_release_gate.get("blocks_release"))
+    release_blocks_verification = bool(verification_release_gate.get("blocks_release") or release_claim_policy.get("blocks_release"))
     release_hard_gate = bool(verification_release_gate.get("hard_gate_recommended"))
     release_mode = (
         "blocking_gate"
-        if release_blocks_promotion or release_blocks_verification
+        if release_blocking_enforced or release_blocks_promotion or release_blocks_verification
         else "gated_ready"
     )
     release_status = (
         "blocked"
         if release_blocks_promotion or release_blocks_verification
-        else str(verification_release_gate.get("status") or promotion_gate.get("status") or "pass")
+        else str(release_claim_policy.get("status") or verification_release_gate.get("status") or promotion_gate.get("status") or "pass")
     )
 
     payload = {
@@ -864,6 +866,7 @@ def run_control_layer(
                 "blocks_release": release_blocks_verification,
                 "blocks_promotion": release_blocks_promotion,
                 "hard_gate_recommended": release_hard_gate,
+                "blocking_enforced": release_blocking_enforced,
             },
             "signal_dashboard": signal_dashboard,
         },

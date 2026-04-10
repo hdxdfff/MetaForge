@@ -32,6 +32,9 @@ D:\codex\factoryctl.cmd autonomy-score
 - Keep OpenCode-facing changes focused on wrappers, prompts, operator docs, workflows, and validation paths unless backend changes are explicitly requested.
 - Do not modify runtime internals only to make a task appear complete.
 - Do not claim delivery until the requested artifact exists in the target workspace.
+- Every code or documentation mutation must leave behind two backups: a local snapshot under `D:\codex\backups\backup_<timestamp>` and a GitHub push on the working branch.
+- Use `D:\codex\backup-and-publish.cmd` or `D:\codex\tools\workspace_backup.py` to create the local snapshot and publish the matching Git commit.
+- Do not consider a mutation complete until the snapshot manifest exists and the Git push succeeds.
 
 ## Workspace layout
 

@@ -403,6 +403,8 @@ def _control_layer_summary_payload(payload):
             'status': release_operations.get('status'),
             'release_train_status': release_operations.get('release_train_status') or release_train.get('status'),
             'next_action': release_operations.get('next_action') or release_train.get('next_action'),
+            'blocking_enforced': release_operations.get('blocking_enforced'),
+            'release_claim_policy': release_operations.get('release_claim_policy') or {},
             'readiness_summary': release_operations.get('readiness_summary') or {},
             'readiness_checks': _preview_checks(release_operations.get('readiness_checks') or []),
             'promotion_gate': release_operations.get('promotion_gate') or {},
