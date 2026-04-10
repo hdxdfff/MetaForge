@@ -5,7 +5,7 @@ import json
 import sys
 import time
 from collections import Counter, defaultdict
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 from uuid import uuid4
@@ -15,6 +15,7 @@ sys.path.insert(0, str(ROOT))
 
 from tools.goal_backlog_replenisher import build_goal_backlog_plan, record_goal_backlog_result
 from tools.io_utils import atomic_write_json
+from tools.production_focus import build_production_focus
 
 DATA = ROOT / "data"
 TASKS_PATH = DATA / "tasks.json"
@@ -23,6 +24,7 @@ TASK_ARCHIVE_PATH = DATA / "task_archive.json"
 TASK_TEMPLATES_PATH = DATA / "task_templates.json"
 REPORT_PATH = DATA / "task_backlog_automation.json"
 INDUSTRIAL_OPERATIONS_PATH = DATA / "industrial_operations.json"
+BACKLOG_STATE_PATH = DATA / "failure_backlog_state.json"
 
 ACTIVE_STATUSES = {"planning", "running", "verification_pending", "verification_running"}
 PENDING_STATUSES = {"queued", "waiting_approval"}
@@ -31,6 +33,7 @@ MAX_CREATED_PER_RUN = 4
 TOP_CLUSTER_LIMIT = 5
 DESIRED_ACTIVE = 2
 DESIRED_PENDING = 5
+REPLENISHMENT_COOLDOWN_HOURS = 12
 
 TOYOS_MARKERS = ("toyos", "toy-os", "generated/toy-os-demo")
 ORCHESTRATION_MARKERS = ("agent orchestration", "throughput", "dispatch", "executor")
@@ -184,6 +187,15 @@ def _save_json(path: Path, payload: Any) -> None:
     atomic_write_json(path, payload)
 
 
+def _load_backlog_state() -> dict[str, Any]:
+    payload = _load_json(BACKLOG_STATE_PATH, {})
+    return payload if isinstance(payload, dict) else {}
+
+
+def _save_backlog_state(payload: dict[str, Any]) -> None:
+    atomic_write_json(BACKLOG_STATE_PATH, payload)
+
+
 def _parse_time(value: Any) -> datetime | None:
     text = str(value or "").strip()
     if not text:
@@ -200,6 +212,15 @@ def _normalize(text: Any) -> str:
 
 def _task_status(task: dict[str, Any]) -> str:
     return _normalize(task.get("status"))
+
+
+def _task_template_id(task: dict[str, Any]) -> str:
+    scheduler_hint = task.get("scheduler_hint") or {}
+    if isinstance(scheduler_hint, dict):
+        template_id = _normalize(scheduler_hint.get("template_id"))
+        if template_id:
+            return template_id
+    return _normalize(task.get("template_id"))
 
 
 def _task_corpus(task: dict[str, Any]) -> str:
@@ -278,6 +299,61 @@ def _dedupe_records(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
         if (record_rank or datetime.min.replace(tzinfo=timezone.utc)) >= (existing_rank or datetime.min.replace(tzinfo=timezone.utc)):
             merged[key] = record
     return list(merged.values()) + anonymous
+
+
+def _cooldown_map(payload: dict[str, Any], key: str) -> dict[str, str]:
+    raw = payload.get(key) or {}
+    if not isinstance(raw, dict):
+        return {}
+    return {str(item_key).strip(): str(value or "").strip() for item_key, value in raw.items() if str(item_key).strip()}
+
+
+def _cooldown_active(cooldowns: dict[str, str], key: str, now: datetime) -> bool:
+    key = str(key or "").strip()
+    if not key:
+        return False
+    expires_at = _parse_time(cooldowns.get(key))
+    return expires_at is not None and expires_at > now
+
+
+def _recent_signatures(records: list[dict[str, Any]], now: datetime, hours: int) -> tuple[set[str], set[str]]:
+    window = now - timedelta(hours=hours)
+    template_ids: set[str] = set()
+    cluster_keys: set[str] = set()
+    for record in records:
+        seen_at = _parse_time(record.get("updated_at") or record.get("created_at") or record.get("heartbeat_at"))
+        if seen_at is None or seen_at < window:
+            continue
+        template_id = _task_template_id(record)
+        if template_id:
+            template_ids.add(template_id)
+        cluster_key = _cluster_key(record)
+        if cluster_key:
+            cluster_keys.add(cluster_key)
+    return template_ids, cluster_keys
+
+
+def _record_cooldown(
+    cooldowns: dict[str, str],
+    key: str,
+    *,
+    now: datetime,
+    hours: int,
+) -> None:
+    key = str(key or "").strip()
+    if not key:
+        return
+    cooldowns[key] = (now + timedelta(hours=hours)).isoformat().replace("+00:00", "Z")
+
+
+def _prune_cooldowns(cooldowns: dict[str, str], now: datetime) -> dict[str, str]:
+    pruned: dict[str, str] = {}
+    for key, value in cooldowns.items():
+        expires_at = _parse_time(value)
+        if expires_at is None or expires_at <= now:
+            continue
+        pruned[key] = value
+    return pruned
 
 
 def _count_runtime(tasks: list[dict[str, Any]]) -> dict[str, Any]:
@@ -398,7 +474,7 @@ def _template_payload(template: dict[str, Any], *, repo_path: str, cluster: dict
         "preferred_worker": preferred_worker,
         "scheduler_hint": scheduler_hint,
         "execution_mode": "governance",
-        "execution_lane": "host-control",
+        "execution_lane": "worker-vm" if str(repo_path).startswith("/") else "host-control",
         "task_type": task_type,
         "queue_name": queue_name,
         "verification_level": verification_level,
@@ -540,6 +616,11 @@ def _select_payloads(
     desired_active: int,
     desired_pending: int,
     mode: str,
+    recent_template_ids: set[str],
+    recent_cluster_keys: set[str],
+    template_cooldowns: dict[str, str],
+    cluster_cooldowns: dict[str, str],
+    now: datetime,
 ) -> list[dict[str, Any]]:
     open_template_ids = _open_template_ids(tasks)
     runtime = _count_runtime(tasks)
@@ -550,7 +631,8 @@ def _select_payloads(
     if budget <= 0 and not cluster_recommendations:
         return []
 
-    repo_path = str(ROOT)
+    focus = build_production_focus()
+    repo_path = str((focus.get("goal_template") or {}).get("repo_path") or ROOT)
     selected: list[dict[str, Any]] = []
     seen_templates: set[str] = set()
 
@@ -562,6 +644,11 @@ def _select_payloads(
                 break
             template = templates.get(template_id)
             if not template or template_id in open_template_ids or template_id in seen_templates:
+                continue
+            if template_id in recent_template_ids or _cooldown_active(template_cooldowns, template_id, now):
+                continue
+            cluster_key = str(cluster.get("cluster_key") or "").strip()
+            if cluster_key and (cluster_key in recent_cluster_keys or _cooldown_active(cluster_cooldowns, cluster_key, now)):
                 continue
             payload = _template_payload(template, repo_path=repo_path, cluster=cluster, dispatch_now=len(selected) < max(1, budget // 2))
             if not _budget_gate_allows(str((payload.get("scheduler_hint") or {}).get("budget_pool") or "")):
@@ -589,6 +676,8 @@ def _select_payloads(
             template = templates.get(template_id)
             if not template or template_id in open_template_ids or template_id in seen_templates:
                 continue
+            if template_id in recent_template_ids or _cooldown_active(template_cooldowns, template_id, now):
+                continue
             payload = _template_payload(
                 template,
                 repo_path=repo_path,
@@ -602,6 +691,9 @@ def _select_payloads(
             )
             if not _budget_gate_allows(str((payload.get("scheduler_hint") or {}).get("budget_pool") or "")):
                 continue
+            cluster_key = str(payload.get("scheduler_hint", {}).get("cluster_key") or "").strip()
+            if cluster_key and (cluster_key in recent_cluster_keys or _cooldown_active(cluster_cooldowns, cluster_key, now)):
+                continue
             selected.append(payload)
             seen_templates.add(template_id)
     return selected
@@ -612,6 +704,7 @@ def run_failure_backlog_automation(mode: str = "full") -> dict[str, Any]:
     history = _load_json(TASK_HISTORY_PATH, [])
     archive = _load_json(TASK_ARCHIVE_PATH, [])
     templates = _template_lookup()
+    backlog_state = _load_backlog_state()
     goal_backlog_status = _load_json(DATA / "goal_backlog_status.json", {})
 
     terminal_live = _terminal_records(tasks)
@@ -637,6 +730,14 @@ def run_failure_backlog_automation(mode: str = "full") -> dict[str, Any]:
     recommendations.sort(key=lambda item: (-int(item.get("count") or 0), str(item.get("cluster_key") or "")))
 
     runtime = _count_runtime(tasks)
+    now = datetime.now(timezone.utc)
+    terminal_recent_templates, terminal_recent_clusters = _recent_signatures(
+        _dedupe_records(_terminal_records(tasks) + _terminal_records(history) + _terminal_records(archive)),
+        now,
+        REPLENISHMENT_COOLDOWN_HOURS,
+    )
+    template_cooldowns = _prune_cooldowns(_cooldown_map(backlog_state, "template_cooldowns"), now)
+    cluster_cooldowns = _prune_cooldowns(_cooldown_map(backlog_state, "cluster_cooldowns"), now)
     desired_active = DESIRED_ACTIVE
     desired_pending = DESIRED_PENDING
     current_report = {
@@ -666,6 +767,13 @@ def run_failure_backlog_automation(mode: str = "full") -> dict[str, Any]:
         "created_tasks": [],
         "created_count": 0,
         "toyos_replenishment": {"status": "skipped"},
+        "replenishment_cooldown": {
+            "hours": REPLENISHMENT_COOLDOWN_HOURS,
+            "recent_template_count": len(terminal_recent_templates),
+            "recent_cluster_count": len(terminal_recent_clusters),
+            "template_cooldown_count": len(template_cooldowns),
+            "cluster_cooldown_count": len(cluster_cooldowns),
+        },
         "residual_risk": "Historical terminal failures are summarized, but existing completed/final tasks remain in archival history for auditability.",
     }
 
@@ -691,6 +799,11 @@ def run_failure_backlog_automation(mode: str = "full") -> dict[str, Any]:
         for candidate in toyos_candidates:
             template_id = str((candidate.get("scheduler_hint") or {}).get("template_id") or "").strip()
             if template_id and template_id in open_template_ids:
+                continue
+            if template_id and (template_id in terminal_recent_templates or _cooldown_active(template_cooldowns, template_id, now)):
+                continue
+            cluster_key = str((candidate.get("scheduler_hint") or {}).get("cluster_key") or "").strip()
+            if cluster_key and (cluster_key in terminal_recent_clusters or _cooldown_active(cluster_cooldowns, cluster_key, now)):
                 continue
             if not _budget_gate_allows(str((candidate.get("scheduler_hint") or {}).get("budget_pool") or "")):
                 continue
@@ -729,6 +842,11 @@ def run_failure_backlog_automation(mode: str = "full") -> dict[str, Any]:
                     desired_active=desired_active,
                     desired_pending=desired_pending,
                     mode=mode,
+                    recent_template_ids=terminal_recent_templates,
+                    recent_cluster_keys=terminal_recent_clusters,
+                    template_cooldowns=template_cooldowns,
+                    cluster_cooldowns=cluster_cooldowns,
+                    now=now,
                 )[:remaining_budget]
             )
 
@@ -760,6 +878,19 @@ def run_failure_backlog_automation(mode: str = "full") -> dict[str, Any]:
                 **current_report["toyos_replenishment"],
                 "record_error": str(exc),
             }
+
+    if created:
+        for item in created:
+            template_id = str(item.get("template_id") or "").strip()
+            cluster_key = str(item.get("cluster_key") or "").strip()
+            if template_id:
+                _record_cooldown(template_cooldowns, template_id, now=now, hours=REPLENISHMENT_COOLDOWN_HOURS)
+            if cluster_key:
+                _record_cooldown(cluster_cooldowns, cluster_key, now=now, hours=REPLENISHMENT_COOLDOWN_HOURS)
+        backlog_state["template_cooldowns"] = template_cooldowns
+        backlog_state["cluster_cooldowns"] = cluster_cooldowns
+        backlog_state["updated_at"] = _utc()
+        _save_backlog_state(backlog_state)
 
     current_report["created_tasks"] = created
     current_report["created_count"] = len(created)

@@ -405,6 +405,8 @@ def _control_layer_summary_payload(payload):
             'next_action': release_operations.get('next_action') or release_train.get('next_action'),
             'readiness_summary': release_operations.get('readiness_summary') or {},
             'readiness_checks': _preview_checks(release_operations.get('readiness_checks') or []),
+            'promotion_gate': release_operations.get('promotion_gate') or {},
+            'delivery_ready_state_machine': release_operations.get('delivery_ready_state_machine') or {},
         },
         'automation_lab': {
             'status': automation_lab.get('status'),
@@ -1045,6 +1047,7 @@ def cmd_control_layer_status(args):
             quality_snapshot=quality_payload,
             refresh_autonomy=True,
             refresh_tool_health=True,
+            refresh_release_operations=True,
         )
     elif not _control_layer_cache_is_fresh():
         payload = run_control_layer()
@@ -1070,6 +1073,7 @@ def cmd_engineering_os_status(args):
             quality_snapshot=quality_payload,
             refresh_autonomy=True,
             refresh_tool_health=True,
+            refresh_release_operations=True,
         )
     else:
         payload = run_control_layer()

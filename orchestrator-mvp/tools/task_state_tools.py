@@ -26,6 +26,7 @@ STALE_SMOKE_MINUTES = 30
 STALE_RUNNING_MINUTES = 20
 STALE_PLANNING_MINUTES = 20
 STALE_REQUEUED_PAUSE_MINUTES = 10
+VM_AUTHORITY_ROOTS = ("/workspace", "/srv/orchestrator-mvp")
 SMOKE_CALLERS = ("caller: codex-smoke", "caller: vm-policy-smoke", "caller: auto-debug", "caller: smoke-test")
 PLANNING_CALLERS = ("caller: brain-loop", "caller: codex-control")
 ACTIVE_TASK_STATUSES = {"queued", "planning", "running", "waiting_approval"}
@@ -204,6 +205,23 @@ def _task_artifact_spec(task: dict[str, Any]) -> dict[str, Any] | None:
     return payload or None
 
 
+def _resolved_task_repo_path(task: dict[str, Any]) -> str:
+    repo_path = str(task.get("repo_path") or "").strip()
+    if repo_path.rstrip("/") != "/srv":
+        return repo_path
+    result = task.get("result") or {}
+    execution_evidence_path = str(result.get("execution_evidence_path") or "").strip() if isinstance(result, dict) else ""
+    spec = _task_artifact_spec(task) or {}
+    output_root = str(spec.get("output") or "").strip()
+    if (
+        _task_execution_mode(task) == "production"
+        and execution_evidence_path.startswith("/workspace/factory/runtime/tasks/")
+        and output_root.startswith("generated/toy-os-demo")
+    ):
+        return "/workspace"
+    return repo_path
+
+
 def _task_requires_audit_gate(task: dict[str, Any]) -> bool:
     if _task_execution_mode(task) != "production":
         return False
@@ -218,7 +236,7 @@ def _task_has_verified_audit(task: dict[str, Any]) -> bool:
         return True
     if not _task_requires_audit_gate(task):
         return True
-    repo_path = str(task.get("repo_path") or "").strip()
+    repo_path = _resolved_task_repo_path(task)
     created_at = _parse_time(task.get("created_at") or task.get("updated_at"))
     spec = _task_artifact_spec(task)
     if not repo_path or created_at is None or not spec:
@@ -236,8 +254,83 @@ def _task_has_verified_audit(task: dict[str, Any]) -> bool:
         return False
 
 
+def resolved_delivery_evidence(task: dict[str, Any]) -> dict[str, Any]:
+    result = task.get("result") or {}
+    production_evidence = result.get("production_evidence") if isinstance(result, dict) else {}
+    if isinstance(production_evidence, dict) and str(production_evidence.get("status") or "").strip().lower() == "verified":
+        return dict(production_evidence)
+    if not _task_repo_is_vm_authoritative(task):
+        return {}
+    if str(task.get("status") or "").strip().lower() != "completed":
+        return {}
+    if _task_execution_mode(task) != "production":
+        return {}
+    if not _task_has_verified_audit(task):
+        return {}
+    spec = _task_artifact_spec(task) or {}
+    required_artifacts = [str(item) for item in (spec.get("required_artifacts") or []) if str(item).strip()]
+    verified_at = str(
+        (result.get("completed_at") if isinstance(result, dict) else None)
+        or task.get("updated_at")
+        or task.get("created_at")
+        or _utc()
+    )
+    return {
+        "status": "verified",
+        "source": "artifact_audit_backfill",
+        "verified_at": verified_at,
+        "audit_gate": "passed",
+        "repo_path": _resolved_task_repo_path(task),
+        "required_artifacts": required_artifacts,
+    }
+
+
 def _can_mark_task_completed(task: dict[str, Any]) -> bool:
     return _task_has_verified_audit(task)
+
+
+def _task_repo_is_vm_authoritative(task: dict[str, Any]) -> bool:
+    repo_path = _resolved_task_repo_path(task)
+    if not repo_path or ":\\" in repo_path:
+        return False
+    normalized = repo_path.rstrip("/")
+    if any(
+        normalized == root or normalized.startswith(f"{root}/")
+        for root in VM_AUTHORITY_ROOTS
+    ):
+        return True
+    if normalized != "/srv":
+        return False
+    result = task.get("result") or {}
+    execution_evidence_path = str(result.get("execution_evidence_path") or "").strip() if isinstance(result, dict) else ""
+    spec = _task_artifact_spec(task) or {}
+    output_root = str(spec.get("output") or "").strip()
+    return (
+        _task_execution_mode(task) == "production"
+        and execution_evidence_path.startswith("/workspace/factory/runtime/tasks/")
+        and output_root.startswith("generated/toy-os-demo")
+    )
+
+
+def _task_eligible_for_delivery_ready(task: dict[str, Any]) -> bool:
+    if str(task.get("status") or "").strip().lower() != "completed":
+        return False
+    if str(task.get("execution_mode") or "").strip().lower() != "production":
+        return False
+    if not _task_repo_is_vm_authoritative(task):
+        return False
+    result = task.get("result") or {}
+    if not isinstance(result, dict):
+        return False
+    if str(result.get("superseded_by") or "").strip():
+        return False
+    if bool(result.get("dedupe_reconciled")):
+        return False
+    if str((resolved_delivery_evidence(task) or {}).get("status") or "").strip().lower() != "verified":
+        return False
+    if not _can_mark_task_completed(task):
+        return False
+    return True
 
 
 def _synthesized_execution_steps(task: dict[str, Any]) -> list[dict[str, Any]]:
@@ -468,6 +561,114 @@ def complete_tasks(task_ids: list[str], summary: str) -> int:
     if updated:
         _save_json(TASKS, tasks)
     return updated
+
+
+def auto_complete_verified_tasks(
+    task_ids: list[str] | None = None,
+    allowed_statuses: set[str] | None = None,
+    summary: str | None = None,
+) -> dict[str, Any]:
+    tasks = _load_json(TASKS, [])
+    updated: list[str] = []
+    now = _utc()
+    target_ids = {str(task_id).strip() for task_id in (task_ids or []) if str(task_id).strip()}
+    allowed = {
+        str(status).strip().lower()
+        for status in (allowed_statuses or {"queued", "planning", "running", "waiting_approval"})
+        if str(status).strip()
+    }
+    for item in tasks:
+        task_id = str(item.get("id") or "").strip()
+        status = str(item.get("status") or "").strip().lower()
+        if target_ids and task_id not in target_ids:
+            continue
+        if allowed and status not in allowed:
+            continue
+        if not _can_mark_task_completed(item):
+            continue
+        item["status"] = "completed"
+        item["updated_at"] = now
+        result = item.setdefault("result", {})
+        result.setdefault("summary", summary or "Task auto-completed after verified evidence passed artifact audit.")
+        result["auto_completed"] = True
+        result["auto_completed_at"] = now
+        updated.append(task_id)
+    if updated:
+        _save_json(TASKS, tasks)
+    return {"updated_count": len(updated), "task_ids": updated}
+
+
+def reconcile_task_delivery_pipeline(
+    task_ids: list[str] | None = None,
+    *,
+    allowed_statuses: set[str] | None = None,
+    summary: str | None = None,
+) -> dict[str, Any]:
+    auto_completed = auto_complete_verified_tasks(
+        task_ids=task_ids,
+        allowed_statuses=allowed_statuses,
+        summary=summary,
+    )
+    delivery_ready = promote_delivery_ready_tasks(
+        task_ids=auto_completed.get("task_ids") or task_ids,
+        summary=summary,
+    )
+    return {
+        "auto_completed": auto_completed,
+        "delivery_ready": delivery_ready,
+        "task_ids": list(dict.fromkeys([
+            *(auto_completed.get("task_ids") or []),
+            *(delivery_ready.get("task_ids") or []),
+        ])),
+    }
+
+
+def promote_delivery_ready_tasks(
+    task_ids: list[str] | None = None,
+    *,
+    summary: str | None = None,
+) -> dict[str, Any]:
+    tasks = _load_json(TASKS, [])
+    updated: list[str] = []
+    skipped: list[dict[str, Any]] = []
+    now = _utc()
+    target_ids = {str(task_id).strip() for task_id in (task_ids or []) if str(task_id).strip()}
+    for item in tasks:
+        task_id = str(item.get("id") or "").strip()
+        if target_ids and task_id not in target_ids:
+            continue
+        if not _task_eligible_for_delivery_ready(item):
+            skipped.append(
+                {
+                    "task_id": task_id,
+                    "status": item.get("status"),
+                    "repo_path": item.get("repo_path"),
+                    "execution_mode": item.get("execution_mode"),
+                }
+            )
+            continue
+        item["status"] = "delivery_ready"
+        item["updated_at"] = now
+        result = item.setdefault("result", {})
+        production_evidence = resolved_delivery_evidence(item)
+        if production_evidence:
+            result["production_evidence"] = production_evidence
+        result["delivery_state"] = "delivery_ready"
+        result["delivery_ready_at"] = now
+        result["delivery_ready_auto_promoted"] = True
+        result.setdefault(
+            "summary",
+            summary or "Task promoted to delivery_ready after verified VM production evidence satisfied promotion gates.",
+        )
+        updated.append(task_id)
+    if updated:
+        _save_json(TASKS, tasks)
+    return {
+        "updated_count": len(updated),
+        "task_ids": updated,
+        "skipped_count": len(skipped),
+        "skipped": skipped[:10],
+    }
 
 
 def _completed_goals() -> list[dict[str, Any]]:

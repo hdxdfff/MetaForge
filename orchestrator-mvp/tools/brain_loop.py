@@ -1307,6 +1307,7 @@ def _dispatch_node(
     retry_count = int(node.get("retry_count") or 0)
     retry_summary = str(node.get("last_failure_summary") or "").strip()
     dispatch_prompt = node["prompt"]
+    repo_path = str(goal.get("repo_path") or ROOT).strip()
     if retry_count and retry_summary:
         dispatch_prompt = (
             f"{node['prompt']}\n\n"
@@ -1323,7 +1324,7 @@ def _dispatch_node(
         "node_id": node.get("id"),
         "scheduled_by": "runtime.scheduler",
         "caller": "brain-loop",
-        "repo_path": str(ROOT),
+        "repo_path": repo_path,
         "task_heartbeat_at": heartbeat_at,
         "auto_approve": auto_approve,
         "allow_resource_scan": True,

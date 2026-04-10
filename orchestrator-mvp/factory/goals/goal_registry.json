@@ -528717,11 +528717,11 @@
     },
     "scoring": {
       "value": 0.84,
-      "urgency": 0.9,
+      "urgency": 0.98,
       "success": 0.73,
       "cost": 0.48,
       "reward": 0.84,
-      "priority_score": 0.5952,
+      "priority_score": 0.6123,
       "priority_band": "high"
     },
     "repo_path": "D:\\codex",
@@ -528730,7 +528730,7 @@
     "factory_priority": "P0",
     "priority_class": "runtime",
     "release_tier": "mainline",
-    "priority_score": 0.5952,
+    "priority_score": 0.6123,
     "priority_band": "high",
     "lifecycle": {
       "stage": "planned",

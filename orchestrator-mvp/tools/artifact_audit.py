@@ -702,6 +702,19 @@ def validate_task_artifact_completion(
     artifact_spec: dict[str, Any] | None,
     created_at: datetime,
 ) -> dict[str, Any]:
+    return evaluate_task_artifact_completion(
+        repo_root=repo_root,
+        artifact_spec=artifact_spec,
+        created_at=created_at,
+    )
+
+
+def evaluate_task_artifact_completion(
+    *,
+    repo_root: Path,
+    artifact_spec: dict[str, Any] | None,
+    created_at: datetime,
+) -> dict[str, Any]:
     if not artifact_spec:
         raise ValueError("Production task rejected: artifact_spec is required.")
     required = [str(item) for item in (artifact_spec.get("required_artifacts") or []) if str(item).strip()]

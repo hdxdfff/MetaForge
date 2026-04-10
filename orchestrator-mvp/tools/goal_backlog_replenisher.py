@@ -272,7 +272,7 @@ def _select_goal(goals: list[dict[str, Any]], focus: dict[str, Any]) -> dict[str
 
 def _template_payload(goal: dict[str, Any], graph: dict[str, Any], template: dict[str, Any], *, dispatch_now: bool, node: dict[str, Any] | None = None) -> dict[str, Any]:
     focus = build_production_focus()
-    repo_path = goal.get("repo_path") or (focus.get("goal_template") or {}).get("repo_path") or str(ROOT.parent)
+    repo_path = goal.get("repo_path") or (focus.get("goal_template") or {}).get("repo_path") or "/workspace"
     node = node or {}
     queue_name = str(template.get("queue_name") or "fastlane").strip().lower()
     task_type = str(template.get("task_type") or "report_refresh").strip().lower()
@@ -362,7 +362,7 @@ def _template_payload(goal: dict[str, Any], graph: dict[str, Any], template: dic
             "budget_pool": _budget_pool_for_task(task_type, queue_name, dispatch_now=dispatch_now),
         },
         "execution_mode": "production" if queue_name != "fastlane" else "governance",
-        "execution_lane": "host-control",
+        "execution_lane": "worker-vm" if str(repo_path).startswith("/") else "host-control",
         "task_type": task_type,
         "queue_name": queue_name,
         "verification_level": verification_level,

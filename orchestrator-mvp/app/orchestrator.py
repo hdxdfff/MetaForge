@@ -647,6 +647,22 @@ class Orchestrator:
             platform_context = {}
             capability_guidance = None
             tool_route = {}
+            repo_path_text = str(repo_path or '').strip()
+            vm_repo_path = (
+                repo_path_text == '/workspace'
+                or repo_path_text.startswith('/workspace/')
+                or repo_path_text == '/srv/orchestrator-mvp'
+                or repo_path_text.startswith('/srv/orchestrator-mvp/')
+            )
+            vm_request_text = str(payload.vm_request or '').strip().lower()
+            worker_vm_preferred = vm_repo_path or vm_request_text in {
+                'worker-vm',
+                'vm-first',
+                'vm',
+                'dev_template',
+                'test_template',
+                'experiment_template',
+            }
             surface_route = {
                 "preferred_surface": "enqueue",
                 "fallback_surface": "enqueue",
@@ -655,14 +671,15 @@ class Orchestrator:
             }
             vm_template = None
             worker_vm_policy = {
-                "lane": "host-control",
-                "worker_vm_preferred": False,
-                "worker_vm_allowed": False,
+                "lane": "worker-vm" if worker_vm_preferred else "host-control",
+                "worker_vm_preferred": worker_vm_preferred,
+                "worker_vm_allowed": worker_vm_preferred,
+                "reason": "vm-authority-root" if vm_repo_path else ("vm-requested" if worker_vm_preferred else "enqueue-host-default"),
             }
             code_graph_focus = {}
             effective_auto_approve = False
             vm_context = {
-                'mode': 'enqueue-only',
+                'mode': 'enqueue-vm' if worker_vm_preferred else 'enqueue-only',
                 'selected_template': None,
                 'placement': worker_vm_policy.get('lane'),
                 'policy': worker_vm_policy,

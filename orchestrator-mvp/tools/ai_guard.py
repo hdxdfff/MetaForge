@@ -58,12 +58,25 @@ def load_policy() -> dict[str, Any]:
         'max_strong_model_ratio': 0.15,
         'max_error_escalations': 5,
         'protect_core_paths': [str(ROOT / 'app'), str(ROOT / 'runtime'), str(ROOT / 'tools'), str(ROOT / 'brain'), str(ROOT / 'state')],
-        'workspace_paths': [str(ROOT / 'workspace'), str(ROOT / 'factory' / 'workspace')],
+        'workspace_paths': [
+            str(ROOT / 'workspace'),
+            str(ROOT / 'factory' / 'workspace'),
+            '/workspace',
+            '/srv/orchestrator-mvp',
+        ],
         'deny_learning_keywords': ['miner', 'botnet', 'ransomware', 'keylogger', 'exploit', 'payload', 'credential stealer'],
     }
     current = _load_json(POLICY, default)
     merged = dict(default)
     merged.update(current)
+    merged['workspace_paths'] = list(dict.fromkeys([
+        *default.get('workspace_paths', []),
+        *(current.get('workspace_paths', []) or []),
+    ]))
+    merged['protect_core_paths'] = list(dict.fromkeys([
+        *default.get('protect_core_paths', []),
+        *(current.get('protect_core_paths', []) or []),
+    ]))
     return merged
 
 

@@ -29,6 +29,7 @@ from tools.task_state_tools import (
     reconcile_stale_running_tasks,
     reconcile_stale_task_heartbeats,
     reconcile_terminal_task_snapshots,
+    reconcile_task_delivery_pipeline,
 )
 from tools.goal_runtime import sync_goal_runtime
 from tools.goal_storage_audit import run_goal_storage_audit
@@ -155,6 +156,9 @@ def run_smoke_hygiene(mode: str = "auto") -> dict[str, Any]:
 def maintain_tasks(mode: str = "full") -> dict[str, Any]:
     terminal_snapshots = reconcile_terminal_task_snapshots()
     evidence_backfill = reconcile_execution_evidence_steps()
+    delivery_pipeline = reconcile_task_delivery_pipeline()
+    auto_completed = delivery_pipeline["auto_completed"]
+    delivery_ready = delivery_pipeline["delivery_ready"]
     heartbeat_recovery = reconcile_stale_task_heartbeats()
     timed_out = []
     archived = []
@@ -165,6 +169,8 @@ def maintain_tasks(mode: str = "full") -> dict[str, Any]:
         return {
             "terminal_snapshots": terminal_snapshots,
             "evidence_backfill": evidence_backfill,
+            "auto_completed": auto_completed,
+            "delivery_ready": delivery_ready,
             "heartbeat_recovery": heartbeat_recovery,
             "smoke_hygiene": smoke_hygiene,
             "goal_runtime": {"status": "skipped", "reason": "light_mode"},
@@ -242,6 +248,8 @@ def maintain_tasks(mode: str = "full") -> dict[str, Any]:
         "mode": mode,
         "terminal_snapshots": terminal_snapshots,
         "evidence_backfill": evidence_backfill,
+        "auto_completed": auto_completed,
+        "delivery_ready": delivery_ready,
         "heartbeat_recovery": heartbeat_recovery,
         "goal_runtime": goal_runtime,
         "goal_storage": goal_storage,

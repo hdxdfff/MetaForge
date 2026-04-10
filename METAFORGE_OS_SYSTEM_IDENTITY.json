@@ -71,7 +71,7 @@
     "research"
   ],
   "live_state": {
-    "updated_at": "2026-04-09T16:21:40.098267Z",
+    "updated_at": "2026-04-10T09:45:04.880518Z",
     "status": "stable",
     "summary": "MetaForge OS on codex with goal=restore_toyos_delivery",
     "operator": {
@@ -127,12 +127,12 @@
       "last_verified_at": null,
       "daemon_last_tick_at": "2026-04-09T16:21:38.723395Z",
       "daemon_freshness_seconds": 0,
-      "identity_revision": "METAFORGE_OS_SYSTEM_IDENTITY.json:1775732385:6397|core_agent_profile.json:1773033172:412|self_model_runtime.json:1775751698:26690|control_session.json:1774024241:239|control_center_state.json:1775135925:188|factory_daemon_state.json:1775751698:8775|memory_objects.jsonl:1775725736:10928|memory_candidates.jsonl:1775122032:13567"
+      "identity_revision": "METAFORGE_OS_SYSTEM_IDENTITY.json:1775751700:6211|core_agent_profile.json:1773033172:412|self_model_runtime.json:1775751698:26690|control_session.json:1774024241:239|control_center_state.json:1775135925:188|factory_daemon_state.json:1775751698:8775|memory_objects.jsonl:1775725736:10928|memory_candidates.jsonl:1775122032:13567"
     },
-    "identity_revision": "METAFORGE_OS_SYSTEM_IDENTITY.json:1775732385:6397|core_agent_profile.json:1773033172:412|self_model_runtime.json:1775751698:26690|control_session.json:1774024241:239|control_center_state.json:1775135925:188|factory_daemon_state.json:1775751698:8775|memory_objects.jsonl:1775725736:10928|memory_candidates.jsonl:1775122032:13567"
+    "identity_revision": "METAFORGE_OS_SYSTEM_IDENTITY.json:1775751700:6211|core_agent_profile.json:1773033172:412|self_model_runtime.json:1775751698:26690|control_session.json:1774024241:239|control_center_state.json:1775135925:188|factory_daemon_state.json:1775751698:8775|memory_objects.jsonl:1775725736:10928|memory_candidates.jsonl:1775122032:13567"
   },
-  "last_updated": "2026-04-09T16:21:40.098267Z",
-  "live_revision": "METAFORGE_OS_SYSTEM_IDENTITY.json:1775732385:6397|core_agent_profile.json:1773033172:412|self_model_runtime.json:1775751698:26690|control_session.json:1774024241:239|control_center_state.json:1775135925:188|factory_daemon_state.json:1775751698:8775|memory_objects.jsonl:1775725736:10928|memory_candidates.jsonl:1775122032:13567",
+  "last_updated": "2026-04-10T09:45:04.880518Z",
+  "live_revision": "METAFORGE_OS_SYSTEM_IDENTITY.json:1775751700:6211|core_agent_profile.json:1773033172:412|self_model_runtime.json:1775751698:26690|control_session.json:1774024241:239|control_center_state.json:1775135925:188|factory_daemon_state.json:1775751698:8775|memory_objects.jsonl:1775725736:10928|memory_candidates.jsonl:1775122032:13567",
   "source_paths": {
     "kernel": "D:\\codex\\orchestrator-mvp\\data\\identity_kernel.json",
     "core_agent": "D:\\codex\\orchestrator-mvp\\data\\core_agent_profile.json",

@@ -421,6 +421,7 @@ def run_control_layer(
     quality_snapshot: dict[str, Any] | None = None,
     refresh_autonomy: bool = False,
     refresh_tool_health: bool = False,
+    refresh_release_operations: bool = False,
 ) -> dict[str, Any]:
     previous_payload = _load_json(OUT, {})
 
@@ -654,14 +655,18 @@ def run_control_layer(
         _disabled_status("automation_lab", kernel_mode),
         previous_payload.get("automation_lab"),
     )
-    release_ops = load_snapshot(
-        DATA / "release_operations_status.json",
-        {
-            "release_train": {"status": "signal-only", "blocked_patch_count": 0},
-            "operations_readiness": {"runtime_ok": True, "verification_ok": True, "control_ok": True},
-            **_disabled_status("release_operations", kernel_mode),
-        },
-        previous_payload.get("release_operations"),
+    release_ops = (
+        run_release_operations_status()
+        if refresh_release_operations
+        else load_snapshot(
+            DATA / "release_operations_status.json",
+            {
+                "release_train": {"status": "signal-only", "blocked_patch_count": 0},
+                "operations_readiness": {"runtime_ok": True, "verification_ok": True, "control_ok": True},
+                **_disabled_status("release_operations", kernel_mode),
+            },
+            previous_payload.get("release_operations"),
+        )
     )
     rnd_department = load_snapshot(DATA / "rnd_department_status.json", _disabled_status("rnd_department", kernel_mode), previous_payload.get("rnd_department"))
     rnd_delivery_pipeline = load_snapshot(DATA / "rnd_delivery_pipeline_status.json", _disabled_status("rnd_delivery_pipeline", kernel_mode), previous_payload.get("rnd_delivery_pipeline"))
@@ -749,6 +754,17 @@ def run_control_layer(
     execution_policy = _derive_execution_policy(
         decision, verification, ai_testing, kernel_mode, guard, identity_gate
     )
+    identity_runtime = dict(identity_gate.get("runtime") or {})
+    identity_runtime.update(
+        {
+            "control_status": execution_policy,
+            "autonomy_stage": autonomy.get("stage"),
+            "autonomy_score": autonomy.get("score"),
+            "quality_status": quality.get("status"),
+            "quality_score": quality.get("overall_score"),
+        }
+    )
+    identity_gate["runtime"] = identity_runtime
     promoted_platform_count, promoted_candidate_count = quality_counts(quality)
 
     def _merge_signals(*paths: tuple[str, str]) -> list[dict[str, Any]]:
@@ -812,6 +828,21 @@ def run_control_layer(
             "signals": release_signals,
         },
     }
+    verification_release_gate = verification.get("release_gate") or {}
+    promotion_gate = release_ops.get("promotion_gate") or {}
+    release_blocks_promotion = bool(promotion_gate.get("blocks_promotion"))
+    release_blocks_verification = bool(verification_release_gate.get("blocks_release"))
+    release_hard_gate = bool(verification_release_gate.get("hard_gate_recommended"))
+    release_mode = (
+        "blocking_gate"
+        if release_blocks_promotion or release_blocks_verification
+        else "gated_ready"
+    )
+    release_status = (
+        "blocked"
+        if release_blocks_promotion or release_blocks_verification
+        else str(verification_release_gate.get("status") or promotion_gate.get("status") or "pass")
+    )
 
     payload = {
         "updated_at": _utc(),
@@ -828,8 +859,11 @@ def run_control_layer(
                 "status": (verification.get("delayed_verification") or verification.get("patch_gate", {})).get("status"),
             },
             "release": {
-                "mode": (verification.get("release_gate") or {}).get("mode", "advisory_signal"),
-                "status": (verification.get("release_gate") or {}).get("status"),
+                "mode": release_mode,
+                "status": release_status,
+                "blocks_release": release_blocks_verification,
+                "blocks_promotion": release_blocks_promotion,
+                "hard_gate_recommended": release_hard_gate,
             },
             "signal_dashboard": signal_dashboard,
         },

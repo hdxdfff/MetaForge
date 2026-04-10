@@ -14,6 +14,7 @@ from tools.ai_testing_compat import load_ai_test_status
 from tools.artifact_audit import evaluate_artifact, validate_release_payload
 from tools.io_utils import atomic_write_json
 from tools.governance_contract import load_governance_contract, summarize_governance_contract
+from tools.task_state_tools import promote_delivery_ready_tasks, resolved_delivery_evidence
 
 DATA = ROOT / "data"
 
@@ -38,7 +39,9 @@ CONTROL = DATA / "control_layer_status.json"
 BRAIN_LOOP = DATA / "brain_loop_state.json"
 TASK_ENGINE = DATA / "factory_task_engine_status.json"
 PRODUCTION_FOCUS = DATA / "production_focus_status.json"
+TASKS = DATA / "tasks.json"
 STALE_RELEASE_HOURS = 24
+ACTIVE_TASK_STATUSES = {"queued", "planning", "running", "waiting_approval"}
 
 
 def _utc() -> str:
@@ -96,18 +99,231 @@ def _verification_release_gate(verification: dict[str, Any]) -> dict[str, Any]:
     release_gate = verification.get("release_gate") or {}
     patch_gate = verification.get("patch_gate") or {}
     sample_failures = list(release_gate.get("sample_failures") or patch_gate.get("reasons") or [])
+    blocking_failures = list(
+        release_gate.get("blocking_reasons")
+        or release_gate.get("blocking_sample_failures")
+        or patch_gate.get("blocking_reasons")
+        or []
+    )
     gate_status = str(release_gate.get("status") or patch_gate.get("status") or "pass")
     status = "pass" if not sample_failures and gate_status == "pass" else "attention"
     next_action = str(release_gate.get("next_action") or "observe-release-signal")
     if status == "attention" and next_action == "release-ready":
         next_action = "observe-release-signal"
+    blocking_reasons = [str(item) for item in blocking_failures if str(item).strip()]
     return {
         "mode": str(release_gate.get("mode") or patch_gate.get("mode") or "advisory_signal"),
         "status": status,
-        "blocks_release": False,
+        "blocks_release": bool(blocking_reasons),
+        "hard_gate_recommended": bool(blocking_reasons),
+        "blocking_reasons": blocking_reasons,
         "sample_failures": sample_failures,
         "sample_size": int(release_gate.get("sample_size") or 0),
         "next_action": next_action,
+    }
+
+
+def _logical_task_key(task: dict[str, Any]) -> str:
+    goal_id = str(task.get("goal_id") or "").strip()
+    node_id = str(task.get("node_id") or "").strip()
+    artifact_id = str((((task.get("scheduler_hint") or {}).get("artifact_spec") or {}).get("artifact_id")) or "").strip()
+    title = str(task.get("title") or "").strip()
+    prompt = str(task.get("prompt") or "").strip()
+    discriminator = artifact_id or node_id or title or prompt or str(task.get("id") or "").strip()
+    return f"{goal_id}|{discriminator}"
+
+
+def _latest_task_attempts(tasks: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    latest: dict[str, dict[str, Any]] = {}
+    for task in tasks:
+        key = _logical_task_key(task)
+        current = latest.get(key)
+        task_ts = _parse_utc(task.get("updated_at") or task.get("created_at"))
+        current_ts = _parse_utc((current or {}).get("updated_at") or (current or {}).get("created_at"))
+        if current is None:
+            latest[key] = task
+            continue
+        if task_ts is not None and (current_ts is None or task_ts >= current_ts):
+            latest[key] = task
+        elif task_ts is None and current_ts is None:
+            latest[key] = task
+    return list(latest.values())
+
+
+def _task_requires_delivery_evidence(task: dict[str, Any]) -> bool:
+    artifact_spec = task.get("artifact_spec")
+    if isinstance(artifact_spec, dict) and artifact_spec:
+        required = artifact_spec.get("required_artifacts") or []
+        return bool(required)
+    scheduler_hint = task.get("scheduler_hint") or {}
+    hint_spec = scheduler_hint.get("artifact_spec") or {}
+    if isinstance(hint_spec, dict) and (hint_spec.get("required_artifacts") or []):
+        return True
+    return False
+
+
+def _task_has_delivery_evidence(task: dict[str, Any]) -> bool:
+    if str((resolved_delivery_evidence(task) or {}).get("status") or "").strip().lower() == "verified":
+        return True
+    return not _task_requires_delivery_evidence(task)
+
+
+def _task_repo_is_vm_authoritative(task: dict[str, Any]) -> bool:
+    repo_path = str(task.get("repo_path") or "").strip()
+    if not repo_path or ":\\" in repo_path:
+        return False
+    normalized = repo_path.rstrip("/")
+    if (
+        normalized == "/workspace"
+        or normalized.startswith("/workspace/")
+        or normalized == "/srv/orchestrator-mvp"
+        or normalized.startswith("/srv/orchestrator-mvp/")
+    ):
+        return True
+    if normalized != "/srv":
+        return False
+    result = task.get("result") or {}
+    execution_evidence_path = str(result.get("execution_evidence_path") or "").strip() if isinstance(result, dict) else ""
+    artifact_spec = task.get("artifact_spec")
+    if not isinstance(artifact_spec, dict) or not artifact_spec:
+        scheduler_hint = task.get("scheduler_hint") or {}
+        hint_spec = scheduler_hint.get("artifact_spec") or {}
+        artifact_spec = hint_spec if isinstance(hint_spec, dict) else {}
+    output_root = str((artifact_spec or {}).get("output") or "").strip()
+    return (
+        str(task.get("execution_mode") or "").strip().lower() == "production"
+        and execution_evidence_path.startswith("/workspace/factory/runtime/tasks/")
+        and output_root.startswith("generated/toy-os-demo")
+    )
+
+
+def _task_eligible_for_delivery_ready(task: dict[str, Any]) -> bool:
+    if str(task.get("status") or "").strip().lower() != "completed":
+        return False
+    if str(task.get("execution_mode") or "").strip().lower() != "production":
+        return False
+    if not _task_repo_is_vm_authoritative(task):
+        return False
+    result = task.get("result") or {}
+    if not isinstance(result, dict):
+        return False
+    if str(result.get("superseded_by") or "").strip():
+        return False
+    if bool(result.get("dedupe_reconciled")):
+        return False
+    return str((resolved_delivery_evidence(task) or {}).get("status") or "").strip().lower() == "verified"
+
+
+def _delivery_ready_global_blockers(
+    *,
+    runtime_ok: bool,
+    control_ok: bool,
+    artifact_release_ok: bool,
+    governance_ok: bool,
+    release_gate: dict[str, Any],
+    blocked_patches: list[dict[str, Any]],
+) -> list[str]:
+    blockers: list[str] = []
+    if not runtime_ok:
+        blockers.append("runtime-not-ready")
+    if not control_ok:
+        blockers.append("control-gate-blocked")
+    if not governance_ok:
+        blockers.append("governance-contract-invalid")
+    if not artifact_release_ok:
+        blockers.append("artifact-gate-blocked")
+    blockers.extend(str(item) for item in (release_gate.get("blocking_reasons") or []) if str(item).strip())
+    if blocked_patches:
+        blockers.append("patch-queue-blocked")
+    return blockers
+
+
+def _delivery_ready_state_machine(
+    *,
+    tasks: list[dict[str, Any]],
+    runtime_ok: bool,
+    control_ok: bool,
+    artifact_release_ok: bool,
+    governance_ok: bool,
+    release_gate: dict[str, Any],
+    blocked_patches: list[dict[str, Any]],
+) -> dict[str, Any]:
+    latest_tasks = _latest_task_attempts([item for item in tasks if isinstance(item, dict)])
+    completed = [item for item in latest_tasks if str(item.get("status") or "").strip() == "completed"]
+    delivery_ready = [item for item in latest_tasks if str(item.get("status") or "").strip() == "delivery_ready"]
+    released = [item for item in latest_tasks if str(item.get("status") or "").strip() == "released"]
+    verification_failed = [item for item in latest_tasks if str(item.get("status") or "").strip() == "verification_failed"]
+    active = [item for item in latest_tasks if str(item.get("status") or "").strip() in ACTIVE_TASK_STATUSES]
+
+    evidence_ready: list[dict[str, Any]] = []
+    evidence_missing: list[dict[str, Any]] = []
+    historical_completed: list[dict[str, Any]] = []
+    for task in completed:
+        if not _task_eligible_for_delivery_ready(task):
+            historical_completed.append(task)
+            continue
+        if _task_has_delivery_evidence(task):
+            evidence_ready.append(task)
+        else:
+            evidence_missing.append(task)
+
+    global_blockers = _delivery_ready_global_blockers(
+        runtime_ok=runtime_ok,
+        control_ok=control_ok,
+        artifact_release_ok=artifact_release_ok,
+        governance_ok=governance_ok,
+        release_gate=release_gate,
+        blocked_patches=blocked_patches,
+    )
+    promotion_allowed = not global_blockers
+    promotable = evidence_ready if promotion_allowed else []
+    blocked_by_global = evidence_ready if global_blockers else []
+
+    def _preview(items: list[dict[str, Any]], *, limit: int = 5) -> list[dict[str, Any]]:
+        preview: list[dict[str, Any]] = []
+        for task in items[:limit]:
+            preview.append(
+                {
+                    "task_id": task.get("id"),
+                    "title": task.get("title"),
+                    "status": task.get("status"),
+                    "goal_id": task.get("goal_id"),
+                    "repo_path": task.get("repo_path"),
+                    "updated_at": task.get("updated_at"),
+                }
+            )
+        return preview
+
+    if promotable:
+        next_action = "promote-delivery-ready"
+    elif evidence_missing:
+        next_action = "collect-delivery-evidence"
+    elif global_blockers:
+        next_action = "clear-release-blockers"
+    else:
+        next_action = "observe-only"
+
+    return {
+        "status": "ready" if promotable else "blocked" if (evidence_missing or global_blockers) else "idle",
+        "promotion_allowed": promotion_allowed,
+        "global_blockers": global_blockers,
+        "counts": {
+            "active": len(active),
+            "completed": len(completed),
+            "historical_completed_ignored": len(historical_completed),
+            "delivery_ready": len(delivery_ready),
+            "released": len(released),
+            "verification_failed": len(verification_failed),
+            "evidence_ready_completed": len(evidence_ready),
+            "evidence_missing_completed": len(evidence_missing),
+            "promotable_completed": len(promotable),
+            "blocked_by_global_gate": len(blocked_by_global),
+        },
+        "next_action": next_action,
+        "promotable_tasks": _preview(promotable),
+        "evidence_missing_tasks": _preview(evidence_missing),
+        "historical_completed_tasks": _preview(historical_completed),
+        "blocked_by_global_gate_tasks": _preview(blocked_by_global),
     }
 
 
@@ -269,6 +485,7 @@ def run_release_operations_status() -> dict[str, Any]:
     governance_contract = load_governance_contract()
     governance_split = summarize_governance_contract(governance_contract)
     governance_gate_from_verification = (verification.get("governance_gate") or {}) if isinstance(verification, dict) else {}
+    tasks = _load_json(TASKS, [])
     governance_ok = bool(
         governance_gate_from_verification.get("passed")
         if governance_gate_from_verification
@@ -392,6 +609,31 @@ def run_release_operations_status() -> dict[str, Any]:
         brain_loop_ok=brain_loop_ok,
         task_engine_ok=task_engine_ok,
     )
+    delivery_ready_state_machine = _delivery_ready_state_machine(
+        tasks=tasks,
+        runtime_ok=runtime_ok,
+        control_ok=control_ok,
+        artifact_release_ok=artifact_release_ok,
+        governance_ok=governance_ok,
+        release_gate=release_gate,
+        blocked_patches=blocked_patches,
+    )
+    promotion_result = {"updated_count": 0, "task_ids": [], "skipped_count": 0, "skipped": []}
+    if delivery_ready_state_machine["promotion_allowed"] and delivery_ready_state_machine["promotable_tasks"]:
+        promotion_result = promote_delivery_ready_tasks(
+            [str(item.get("task_id") or "").strip() for item in delivery_ready_state_machine["promotable_tasks"]],
+            summary="Task promoted to delivery_ready after verified VM production evidence satisfied release promotion gates.",
+        )
+        tasks = _load_json(TASKS, [])
+        delivery_ready_state_machine = _delivery_ready_state_machine(
+            tasks=tasks,
+            runtime_ok=runtime_ok,
+            control_ok=control_ok,
+            artifact_release_ok=artifact_release_ok,
+            governance_ok=governance_ok,
+            release_gate=release_gate,
+            blocked_patches=blocked_patches,
+        )
 
     release_train_status = "ready" if release_tiers["mainline"]["status"] == "ready" else "degraded" if release_tiers["experimental"]["status"] == "ready" else "blocked"
     if not governance_ok:
@@ -459,6 +701,14 @@ def run_release_operations_status() -> dict[str, Any]:
             "failing_checks": [item["name"] for item in readiness_checks if item["status"] != "pass"],
             "next_action": next((item["next_action"] for item in readiness_checks if item["status"] != "pass"), "observe-only"),
         },
+        "promotion_gate": {
+            "status": "pass" if delivery_ready_state_machine["promotion_allowed"] else "blocked",
+            "blocks_promotion": not delivery_ready_state_machine["promotion_allowed"],
+            "blocking_reasons": delivery_ready_state_machine["global_blockers"],
+            "next_action": delivery_ready_state_machine["next_action"],
+            "last_promotion_result": promotion_result,
+        },
+        "delivery_ready_state_machine": delivery_ready_state_machine,
         "operations_readiness": {
             "runtime_ok": runtime_ok,
             "verification_ok": verification_ok,

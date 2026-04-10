@@ -1,6 +1,7 @@
 ﻿from __future__ import annotations
 
 import json
+import importlib
 from pathlib import Path
 from tools.io_utils import atomic_write_json
 
@@ -10,6 +11,20 @@ from tools.schema_hygiene import scan_schema_drift
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / 'data'
 HISTORY = DATA / 'tool_health_history.json'
+MODULE_INTERFACE_SPECS: tuple[tuple[str, tuple[str, ...]], ...] = (
+    ('tools.task_state_tools', ('resolved_delivery_evidence', 'promote_delivery_ready_tasks', 'auto_complete_verified_tasks')),
+    ('tools.release_operations', ('run_release_operations_status',)),
+    ('tools.meta_factory_control', ('run_control_layer',)),
+    ('tools.verification_engine', ('run_verification',)),
+    ('tools.quality_system', ('run_quality',)),
+    ('tools.autonomy_score', ('run_autonomy_score',)),
+    ('tools.ai_testing_compat', ('run_ai_test_suite', 'load_ai_test_status')),
+    ('tools.company_os', ('run_company_os_status',)),
+    ('tools.automation_lab', ('run_automation_lab_status',)),
+    ('tools.rnd_delivery_pipeline', ('build_rnd_delivery_pipeline_status',)),
+    ('tools.rnd_asset_governance', ('build_rnd_asset_governance_status',)),
+    ('tools.pipeline_status', ('build_pipeline_status',)),
+)
 
 
 def _load(name: str, default):
@@ -20,6 +35,40 @@ def _load(name: str, default):
         return json.loads(path.read_text(encoding='utf-8-sig'))
     except Exception as exc:
         return {'status': 'error', 'error': str(exc), 'path': str(path)}
+
+
+def _module_interface_compatibility() -> dict[str, object]:
+    checks: list[dict[str, object]] = []
+    issues: list[str] = []
+    for module_name, required_attrs in MODULE_INTERFACE_SPECS:
+        try:
+            module = importlib.import_module(module_name)
+        except Exception as exc:
+            checks.append(
+                {
+                    'module': module_name,
+                    'status': 'blocked',
+                    'missing': list(required_attrs),
+                    'error': f'{type(exc).__name__}: {exc}',
+                }
+            )
+            issues.append(f'{module_name}:import-failed')
+            continue
+        missing = [attr for attr in required_attrs if not hasattr(module, attr)]
+        checks.append(
+            {
+                'module': module_name,
+                'status': 'pass' if not missing else 'blocked',
+                'missing': missing,
+            }
+        )
+        if missing:
+            issues.append(f"{module_name}:{','.join(missing)}")
+    return {
+        'status': 'pass' if not issues else 'attention',
+        'issues': issues,
+        'checks': checks,
+    }
 
 
 def run_tool_health_audit() -> dict:
@@ -33,6 +82,7 @@ def run_tool_health_audit() -> dict:
     company = _load('company_os_status.json', {})
     lab = _load('automation_lab_status.json', {})
     verification = _load('verification_status.json', {})
+    module_interface = _module_interface_compatibility()
     schema_hygiene = scan_schema_drift()
     issues = []
     daemon_cycle = int(daemon.get('cycle') or 0)
@@ -85,6 +135,8 @@ def run_tool_health_audit() -> dict:
         issues.append('memory-muscle-benchmark-attention')
     if verification.get('status') not in {'pass', 'attention'}:
         issues.append('verification-invalid-state')
+    if module_interface.get('status') != 'pass':
+        issues.extend(str(item) for item in module_interface.get('issues', []) if str(item).strip())
     if schema_hygiene.get('finding_count', 0):
         issues.append('schema-drift-low-level')
 
@@ -145,6 +197,7 @@ def run_tool_health_audit() -> dict:
         'verification': {
             'status': verification.get('status'),
         },
+        'module_interface_compatibility': module_interface,
         'schema_hygiene': schema_hygiene,
         'startup_grace': startup_grace,
     }
@@ -170,6 +223,7 @@ def append_tool_health_history(entry: dict, keep: int = 200) -> dict:
         'memory_quality_status': (entry.get('memory_quality_scorecard') or {}).get('status'),
         'memory_muscle_status': (entry.get('memory_muscle_benchmark') or {}).get('status'),
         'autonomy_stage': (entry.get('autonomy') or {}).get('stage'),
+        'module_interface_status': (entry.get('module_interface_compatibility') or {}).get('status'),
     })
     history = history[-keep:]
     atomic_write_json(HISTORY, history)

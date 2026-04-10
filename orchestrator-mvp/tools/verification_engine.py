@@ -192,6 +192,11 @@ def _ai_testing_check(ai_testing: dict[str, Any]) -> dict[str, Any]:
         signal_reasons.append(f"failing_cases={','.join(failing_case_ids[:5]) or 'unknown'}")
     if failed_release_blocker_case_ids:
         signal_reasons.append(f"release_blocker_failures={','.join(failed_release_blocker_case_ids[:5])}")
+    blocking_reasons: list[str] = []
+    if failed_release_blocker_case_ids:
+        blocking_reasons.append("ai_release_blocker_failures")
+    if release_signal not in {"ready", "signal_only", "sampled_async"}:
+        blocking_reasons.append("ai_release_signal_invalid")
     return {
         "mode": "sampled_async",
         "status": status,
@@ -205,12 +210,12 @@ def _ai_testing_check(ai_testing: dict[str, Any]) -> dict[str, Any]:
         "failing_case_ids": failing_case_ids[:10],
         "failed_release_blocker_case_ids": failed_release_blocker_case_ids[:10],
         "signal_reasons": signal_reasons,
-        "blocking_reasons": [],
-        "signal_only": True,
+        "blocking_reasons": blocking_reasons,
+        "signal_only": not bool(blocking_reasons),
         "blocks_execution": False,
         "blocks_patch_gate": False,
-        "blocks_release": False,
-        "passed": True,
+        "blocks_release": bool(blocking_reasons),
+        "passed": not bool(blocking_reasons),
     }
 
 
@@ -312,18 +317,21 @@ def _release_sample_gate(checks: dict[str, Any]) -> dict[str, Any]:
     blocking_sample_failures = [
         name for name in sample_failures if name not in {"artifact_audit", "reality_dashboard"}
     ]
+    hard_gate_recommended = bool(blocking_sample_failures)
     return {
-        "mode": "advisory_signal",
+        "mode": "blocking_gate" if hard_gate_recommended else "advisory_signal",
         "status": "pass" if not blocking_sample_failures else "attention",
-        "passed": True,
-        "signal_only": True,
+        "passed": not hard_gate_recommended,
+        "signal_only": not hard_gate_recommended,
         "blocks_execution": False,
-        "blocks_release": False,
+        "blocks_release": hard_gate_recommended,
         "sample_size": len(sample_results),
         "sampled_checks": sample_results,
         "sample_failures": sample_failures,
         "blocking_sample_failures": blocking_sample_failures,
-        "next_action": "release-ready" if not sample_failures else "observe-release-signal",
+        "hard_gate_recommended": hard_gate_recommended,
+        "blocking_reasons": list(blocking_sample_failures),
+        "next_action": "release-ready" if not sample_failures else ("hold-release-candidate" if hard_gate_recommended else "observe-release-signal"),
     }
 
 

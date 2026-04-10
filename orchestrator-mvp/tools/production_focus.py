@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 import sys
 import time
 from datetime import datetime, timezone
@@ -31,6 +32,15 @@ PRIMARY_REQUIRED_ARTIFACTS = [
     "generated/toy-os-demo/artifact_manifest.json",
 ]
 FOCUS_KEYWORDS = ("toyos", "toy-os", "toy os", "kernel.bin", "qemu")
+
+
+def _authoritative_production_repo_path() -> str:
+    if os.name != "nt":
+        if Path("/workspace").exists():
+            return "/workspace"
+        if ROOT.exists():
+            return str(ROOT)
+    return str(ROOT.parent)
 
 
 def _utc() -> str:
@@ -123,7 +133,7 @@ def build_production_focus(schedule: dict[str, Any] | None = None) -> dict[str, 
             "priority_class": "runtime",
             "goal_class": "artifact-delivery",
             "primary_artifact_id": PRIMARY_ARTIFACT_ID,
-            "repo_path": str(ROOT.parent),
+            "repo_path": _authoritative_production_repo_path(),
             "notes": "Single-product production mode. Convert generated/toy-os-demo from prototype to real artifact by refreshing build, test, and evidence outputs.",
         },
     }
