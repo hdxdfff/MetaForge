@@ -1,0 +1,250 @@
+{
+  "task_id": "deae236aaa8047358c27097d6270e88e",
+  "task_status": "failed",
+  "phase": "failed",
+  "updated_at": "2026-04-02T22:40:18.674679Z",
+  "heartbeat_at": "2026-04-02T22:40:18.674679Z",
+  "repo_path": "D:\\codex\\orchestrator-mvp",
+  "goal": "Use the orchestrator as an AI-managed software delivery pipeline instead of a single coding agent.",
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": "runtime.failure_backlog_automation",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\deae236aaa8047358c27097d6270e88e",
+  "error": "<asyncio.locks.Lock object at 0x000001FDB77A6CD0 [unlocked, waiters:1]> is bound to a different event loop",
+  "title": "Software Factory Flow",
+  "prompt": "Turn a raw request into a structured delivery flow: derive requirements, architecture notes, task dependencies, role assignments, rule checks, git workflow expectations, implementation steps, validation steps, and release blockers.",
+  "scheduler_hint": {
+    "automation_source": "failure_backlog_automation",
+    "template_id": "software-factory",
+    "template_category": "governance",
+    "cluster_key": "recover stable execution output",
+    "cluster_count": 179,
+    "cluster_status": "attention",
+    "handling_mode": "generic_saturation",
+    "dispatch_now": false,
+    "admission_mode": "degraded",
+    "scheduled_by": "runtime.failure_backlog_automation"
+  },
+  "context_package": {},
+  "plan": [
+    {
+      "id": "323f718c",
+      "title": "Spawn decomposition subtasks",
+      "status": "failed",
+      "worker": "planner",
+      "phase": "decompose"
+    },
+    {
+      "id": "2b0b2314",
+      "title": "Wait for child task completion",
+      "status": "pending",
+      "worker": "planner",
+      "phase": "decompose"
+    },
+    {
+      "id": "22c6ef7a",
+      "title": "Aggregate decomposition results",
+      "status": "pending",
+      "worker": "reviewer",
+      "phase": "verify"
+    }
+  ],
+  "verification_signals": [
+    {
+      "timestamp": "2026-04-02T22:31:42.230213Z",
+      "kind": "admission_accepted",
+      "success": true,
+      "task_id": "deae236aaa8047358c27097d6270e88e",
+      "admission_lane": null,
+      "admission_reason": null,
+      "execution_mode": "governance",
+      "queue_name": "fastlane",
+      "task_type": "report_refresh"
+    },
+    {
+      "timestamp": "2026-04-02T22:36:52.242353Z",
+      "kind": "step_failed",
+      "success": false,
+      "task_id": "deae236aaa8047358c27097d6270e88e",
+      "step_id": "323f718c",
+      "step_title": "Spawn decomposition subtasks",
+      "worker": "planner",
+      "phase": "decompose",
+      "route_model": "internal-recovery",
+      "route_provider": "runtime",
+      "elapsed_ms": 126437,
+      "error": "<asyncio.locks.Lock object at 0x000001FDB77A6CD0 [unlocked, waiters:1]> is bound to a different event loop",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "error-output",
+        "char_count": 106,
+        "line_count": 1,
+        "stored_raw": false
+      }
+    }
+  ],
+  "verification_signal_count": 2,
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-02T22:31:42.230213Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "deae236aaa8047358c27097d6270e88e",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "governance",
+        "queue_name": "fastlane",
+        "task_type": "report_refresh"
+      },
+      {
+        "timestamp": "2026-04-02T22:36:52.242353Z",
+        "kind": "step_failed",
+        "success": false,
+        "task_id": "deae236aaa8047358c27097d6270e88e",
+        "step_id": "323f718c",
+        "step_title": "Spawn decomposition subtasks",
+        "worker": "planner",
+        "phase": "decompose",
+        "route_model": "internal-recovery",
+        "route_provider": "runtime",
+        "elapsed_ms": 126437,
+        "error": "<asyncio.locks.Lock object at 0x000001FDB77A6CD0 [unlocked, waiters:1]> is bound to a different event loop",
+        "output_ref": {},
+        "output_stats": {
+          "channel": "error-output",
+          "char_count": 106,
+          "line_count": 1,
+          "stored_raw": false
+        }
+      }
+    ],
+    "decomposition": {
+      "summary": "Fallback decomposition for: Turn a raw request into a structured delivery flow: derive requirements, architecture notes, task dependencies, role ass",
+      "strategy": "bounded multi-layer split with analysis, execution, and verification branches",
+      "subtasks": [
+        {
+          "title": "Analyze the current state",
+          "prompt": "Inspect the current repository state and isolate the smallest workable slice for: Turn a raw request into a structured delivery flow: derive requirements, architecture notes, task dependencies, role assignments, rule checks, git workflow expectations, implementation steps, validation steps, and release blockers.",
+          "goal": "Identify the smallest viable slice",
+          "task_type": "report_refresh",
+          "path_kind": "shared",
+          "queue_name": "fastlane",
+          "verification_level": "L1",
+          "preferred_worker": "reviewer",
+          "execution_mode": "governance",
+          "execution_lane": "host-control",
+          "decompose_children": false,
+          "shared_dependency_group": "deae236aaa8047358c27097d6270e88e",
+          "repair_for": null,
+          "inputs": [],
+          "outputs": [
+            "analysis note"
+          ],
+          "dependencies": [],
+          "acceptance_criteria": [
+            "The smallest feasible slice is identified."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        },
+        {
+          "title": "Implement the bounded change",
+          "prompt": "Make the smallest safe implementation or repair needed for: Turn a raw request into a structured delivery flow: derive requirements, architecture notes, task dependencies, role assignments, rule checks, git workflow expectations, implementation steps, validation steps, and release blockers.",
+          "goal": "Implement the bounded change",
+          "task_type": "build_fix",
+          "path_kind": "branch",
+          "queue_name": "build_test",
+          "verification_level": "L2",
+          "preferred_worker": "coder",
+          "execution_mode": "production",
+          "execution_lane": "vm-first",
+          "decompose_children": true,
+          "shared_dependency_group": "deae236aaa8047358c27097d6270e88e",
+          "repair_for": null,
+          "inputs": [
+            "analysis note"
+          ],
+          "outputs": [
+            "bounded patch"
+          ],
+          "dependencies": [
+            "Analyze the current state"
+          ],
+          "acceptance_criteria": [
+            "A bounded implementation exists."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        },
+        {
+          "title": "Validate the result",
+          "prompt": "Run the narrowest useful validation for the bounded change: Turn a raw request into a structured delivery flow: derive requirements, architecture notes, task dependencies, role assignments, rule checks, git workflow expectations, implementation steps, validation steps, and release blockers.",
+          "goal": "Validate the change",
+          "task_type": "unit_test_run",
+          "path_kind": "repair",
+          "queue_name": "build_test",
+          "verification_level": "L2",
+          "preferred_worker": "docker",
+          "execution_mode": "production",
+          "execution_lane": "vm-first",
+          "decompose_children": false,
+          "shared_dependency_group": "deae236aaa8047358c27097d6270e88e",
+          "repair_for": "Analyze the current state",
+          "inputs": [
+            "bounded patch"
+          ],
+          "outputs": [
+            "validation evidence"
+          ],
+          "dependencies": [
+            "Analyze the current state",
+            "Implement the bounded change"
+          ],
+          "acceptance_criteria": [
+            "Validation evidence is recorded."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        }
+      ],
+      "dag": {
+        "shared_nodes": [
+          "Analyze the current state"
+        ],
+        "branch_nodes": [
+          "Implement the bounded change"
+        ],
+        "repair_nodes": [
+          "Validate the result"
+        ],
+        "optional_nodes": [],
+        "speculative_nodes": [],
+        "blocked_nodes": [],
+        "edges": [
+          {
+            "from": "Analyze the current state",
+            "to": "Implement the bounded change",
+            "kind": "branch"
+          },
+          {
+            "from": "Analyze the current state",
+            "to": "Validate the result",
+            "kind": "repair"
+          },
+          {
+            "from": "Implement the bounded change",
+            "to": "Validate the result",
+            "kind": "repair"
+          }
+        ],
+        "shared_dependency_group": "deae236aaa8047358c27097d6270e88e"
+      },
+      "depth": 0,
+      "max_depth": 2,
+      "mode": "multi_layer"
+    }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "steps": [
+    {
+      "step_id": "d2eb8ea0",
+      "step_title": "Understand task",
+      "action": "planner_step",
+      "ok": true,
+      "at": "2026-04-02T20:16:45.688144Z",
+      "worker": "planner",
+      "phase": "understand",
+      "route_model": "deepseek-reasoner",
+      "route_provider": "reasoning",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 593,
+        "line_count": 4,
+        "stored_raw": false
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "303a6a91",
+      "step_title": "Draft solution",
+      "action": "coder_step",
+      "ok": false,
+      "at": "2026-04-02T20:30:34.116163Z",
+      "worker": "coder",
+      "phase": "draft",
+      "route_model": "kimi-k2.5",
+      "route_provider": "openai",
+      "error": "Audit output schema rejected for report_refresh/coder: Coder audit output missing required structured sections.",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "error-output",
+        "char_count": 111,
+        "line_count": 1,
+        "stored_raw": false
+      },
+      "probe_attempts": 0
+    }
+  ],
+  "task_id": "03c58bcaf4094b7db738ec5672a1b8a9",
+  "task_title": "Analyze the current state",
+  "task_status": "failed",
+  "started_at": "2026-04-02T20:04:58.419399Z",
+  "updated_at": "2026-04-02T20:36:25.980115Z",
+  "completed": false,
+  "result": {
+    "state": "failed_execution",
+    "reason": "Audit output schema rejected for report_refresh/coder: Coder audit output missing required structured sections.",
+    "task_id": "03c58bcaf4094b7db738ec5672a1b8a9",
+    "repo_path": "D:\\codex\\orchestrator-mvp",
+    "execution_mode": "governance",
+    "goal": "Identify the smallest viable slice",
+    "cheap_calls_used": 2,
+    "cheap_chars_used": 7960,
+    "escalation_count": 2,
+    "failed_steps": [
+      {
+        "step_id": "303a6a91",
+        "title": "Draft solution",
+        "phase": "draft",
+        "worker": "coder",
+        "command": null,
+        "output": "Draft solution failure: 111 chars, 1 non-empty lines.\nHead:\n- Audit output schema rejected for report_refresh/coder: Coder audit output missing required structured sections.",
+        "output_ref": {},
+        "output_stats": {
+          "channel": "error-output",
+          "char_count": 111,
+          "line_count": 1,
+          "stored_raw": false
+        },
+        "probe_attempts": 0,
+        "max_probe_attempts": 1,
+        "last_diagnosis": "Diagnosis for Draft solution: 914 chars, 30 non-empty lines.\nHead:\n- Cheap lane escalation triggered.\n- Original worker: reviewer\n- Escalation model: kimi-k2.5\n- Reason: Structured output validation failed for research/governance audit work.\nTail:\n- - next_action\n- Provider error: APITimeoutError: Request timed out.\n- Provider error: APITimeoutError: Request timed out.\nRaw artifact: ctx_945728dfe6b5",
+        "last_diagnosis_ref": {
+          "artifact_id": "ctx_945728dfe6b5",
+          "task_id": "03c58bcaf4094b7db738ec5672a1b8a9",
+          "step_id": "303a6a91",
+          "channel": "diagnosis-output",
+          "title": "Diagnosis for Draft solution",
+          "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\03c58bcaf4094b7db738ec5672a1b8a9\\303a6a91-diagnosis-output-ctx_945728dfe6b5.txt",
+          "size_chars": 914,
+          "line_count": 30,
+          "created_at": "2026-04-02T20:33:48.273959Z",
+          "metadata": {
+            "worker": "reviewer",
+            "phase": "check",
+            "route_model": "kimi-k2.5",
+            "route_provider": "openai"
+          }
+        }
+      }
+    ],
+    "next_action_required": "Inspect execution evidence and rerun or replace the task; no approval hold was applied.",
+    "failure_pause_policy": "If a long task fails, allow at most one cheap-model-approved probe retry with bounded local cost. If cheap approval is missing, ambiguous, or the retry still fails, pause execution, return a structured error report, and wait for explicit core guidance.",
+    "pause_required": false,
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\03c58bcaf4094b7db738ec5672a1b8a9\\execution-evidence.json",
+    "execution_evidence_step_count": 2
+  }
+}

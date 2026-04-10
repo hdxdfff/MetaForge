@@ -1,0 +1,19 @@
+﻿{
+  "capability_id": "fix_bug",
+  "version": 1,
+  "domain": "coding",
+  "summary": "Diagnose a defect, patch the affected code, and verify the fix.",
+  "goal_types": ["build_product", "build_platform", "capability_upgrade", "verification_upgrade"],
+  "keywords": ["bug", "fix", "failure", "broken", "regression", "error", "repair"],
+  "inputs": ["bug_report", "source_paths", "validation_signal"],
+  "steps": [
+    {"id": "analyze_issue", "title": "Analyze issue", "role": "product", "tools": ["read_file", "search_code"]},
+    {"id": "locate_root_cause", "title": "Locate root cause", "role": "coder", "tools": ["read_file", "search_code"]},
+    {"id": "patch_code", "title": "Patch code", "role": "coder", "tools": ["patch_apply", "write_file"]},
+    {"id": "run_verification", "title": "Run verification", "role": "tester", "tools": ["run_tests", "compileall"]}
+  ],
+  "tools": ["read_file", "search_code", "patch_apply", "run_tests"],
+  "success_conditions": ["bug_reproduced_or_understood", "patch_applied", "verification_passed"],
+  "fallbacks": ["narrow_scope", "collect_more_context", "escalate_permissions"],
+  "reusable_for": ["build_failure", "runtime_error", "regression", "failing_test"]
+}

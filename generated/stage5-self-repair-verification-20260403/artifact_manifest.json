@@ -1,0 +1,20 @@
+{
+  "artifact_id": "stage5-self-repair-verification-20260403",
+  "type": "demo",
+  "version": "0.1.0",
+  "artifact_path": "D:/codex/generated/stage5-self-repair-verification-20260403",
+  "entrypoint": "run_demo.py",
+  "evidence": [
+    "build-report.json",
+    "test-report.json",
+    "execution-report.json"
+  ],
+  "buildable": true,
+  "runnable": true,
+  "test_passed": true,
+  "reproducible": true,
+  "category": "demo",
+  "title": "Stage 5 self repair: verification gate refresh",
+  "message": "self repair verification gate refresh",
+  "sha256": "e2293a57a949acd7634fa1d6e9929adc7ab68a9daadc56f6afaa09f37d9acec5"
+}

@@ -1,0 +1,92 @@
+﻿{
+    "system":  "MetaForge OS",
+    "memory_mode":  "shared-cross-dialogue-memory",
+    "updated_at":  "2026-03-11T19:23:10",
+    "identity_memory":  {
+                            "system":  "MetaForge OS",
+                            "operator_surface":  "OpenCode / Codex",
+                            "acting_ceo_surface":  "main dialogue",
+                            "role_split":  "local small model for chores, OpenCode for CEO mediation, runtime for persistent execution",
+                            "hard_constraints":  [
+                                                     "preserve target-workspace integrity",
+                                                     "no validation means no delivery",
+                                                     "provider-only output is not ToyOS success"
+                                                 ]
+                        },
+    "state_memory":  {
+                         "control_status":  "active",
+                         "active_task_count":  2,
+                         "route_drift_count":  2,
+                         "active_execution_roots":  [
+                                                        "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-agent-orchestration-capability"
+                                                    ],
+                         "current_priority":  "orange"
+                     },
+    "delivery_memory":  {
+                            "authoritative_product_workspace":  "D:\\codex\\generated\\toy-os-demo",
+                            "current_active_roots":  [
+                                                         "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-agent-orchestration-capability"
+                                                     ],
+                            "top_goals":  [
+                                              {
+                                                  "target":  "build ai-video-factory",
+                                                  "status":  "completed",
+                                                  "type":  "build_product"
+                                              },
+                                              {
+                                                  "target":  "AI Web Platform Factory",
+                                                  "status":  "completed",
+                                                  "type":  "build_platform"
+                                              },
+                                              {
+                                                  "target":  "Run platform verification sweep",
+                                                  "status":  "completed",
+                                                  "type":  "verify_platforms"
+                                              }
+                                          ],
+                            "invalid_delivery_risk":  "high"
+                        },
+    "decision_memory":  {
+                            "current_contradiction":  "route_drift",
+                            "next_action":  "prefer patch proposal or direct local ToyOS work until routing integrity is repaired",
+                            "recent_decisions":  [
+                                                     {
+                                                         "type":  "brain-loop-action",
+                                                         "summary":  "github-learning-scan"
+                                                     },
+                                                     {
+                                                         "type":  "brain-loop-action",
+                                                         "summary":  "github-learning-refresh"
+                                                     },
+                                                     {
+                                                         "type":  "brain-loop-action",
+                                                         "summary":  "experiment-plan"
+                                                     },
+                                                     {
+                                                         "type":  "brain-loop-action",
+                                                         "summary":  "experiment-run"
+                                                     },
+                                                     {
+                                                         "type":  "brain-loop-action",
+                                                         "summary":  "experiment-evaluate"
+                                                     }
+                                                 ]
+                        },
+    "handoff_memory":  {
+                           "lane_hints":  [
+                                              "ceo-lane",
+                                              "chore-lane",
+                                              "product-lane",
+                                              "research-lane"
+                                          ],
+                           "default_control_tier":  "ceo-review-required unless chore-only is explicit",
+                           "startup_files":  [
+                                                 "D:\\codex\\METAFORGE-OS.md",
+                                                 "D:\\codex\\METAFORGE_OS_CODEX_MULTI_SESSION_BOOTSTRAP.md",
+                                                 "D:\\codex\\METAFORGE_OS_ROLE_SPLIT.md",
+                                                 "D:\\codex\\METAFORGE_OS_CHORE_QUEUE_POLICY.md",
+                                                 "D:\\codex\\METAFORGE_OS_DISPATCH_TEMPLATE.md"
+                                             ],
+                           "startup_command":  "D:\\codex\\codex-session-bootstrap.ps1"
+                       }
+}

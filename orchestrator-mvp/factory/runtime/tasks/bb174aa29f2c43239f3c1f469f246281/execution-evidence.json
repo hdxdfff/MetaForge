@@ -1,0 +1,30 @@
+{
+  "steps": [
+    {
+      "step_id": "3f2c161e",
+      "step_title": "Build Toy OS baseline",
+      "action": "shell_step",
+      "ok": false,
+      "at": "2026-03-26T15:46:59.293690Z",
+      "worker": "shell",
+      "phase": "execute",
+      "route_model": "deepseek-chat",
+      "route_provider": "runtime",
+      "error": "Action shell_exec requires explicit approval for role ops.",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "error-output",
+        "char_count": 58,
+        "line_count": 1,
+        "stored_raw": false
+      },
+      "probe_attempts": 0
+    }
+  ],
+  "task_id": "bb174aa29f2c43239f3c1f469f246281",
+  "task_title": null,
+  "task_status": "running",
+  "started_at": "2026-03-26T15:45:48.529695Z",
+  "updated_at": "2026-03-26T15:46:59.294193Z",
+  "completed": false
+}

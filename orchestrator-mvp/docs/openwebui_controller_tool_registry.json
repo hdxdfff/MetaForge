@@ -1,0 +1,161 @@
+{
+  "name": "MetaForge Controller API",
+  "description": "Bounded OpenAPI tool surface for Open WebUI control and verification.",
+  "server_url": "http://controller-api:8710/openapi.json",
+  "base_url": "http://controller-api:8710",
+  "host_server_url": "http://host.docker.internal:8710/openapi.json",
+  "host_base_url": "http://host.docker.internal:8710",
+  "open_webui_registration_mode": "global_tool_server",
+  "recommended_scope": "admin_only",
+    "tool_groups": [
+      {
+        "group": "read_only",
+        "description": "Safe inspection tools. No state mutation.",
+        "tools": [
+        {
+          "name": "status",
+          "method": "GET",
+          "path": "/status",
+          "description": "Return a 24-hour runtime, log, artifact, and verification summary for the MetaForge controller."
+        },
+        {
+          "name": "recent_output",
+          "method": "GET",
+          "path": "/output/recent",
+          "description": "Return the recent controller output summary with log evidence and artifact freshness."
+        },
+        {
+          "name": "health",
+          "method": "GET",
+          "path": "/health",
+          "description": "Return a high-level runtime, queue, verification, and artifact snapshot."
+        },
+        {
+          "name": "runtime_summary",
+          "method": "GET",
+          "path": "/runtime/summary",
+          "description": "Return the current runtime summary, epoch, control center, task counts, and verification status."
+        },
+        {
+          "name": "control_status",
+          "method": "GET",
+          "path": "/control/status",
+          "description": "Return control center and queue pause state."
+        },
+        {
+          "name": "queue_status",
+          "method": "GET",
+          "path": "/queue/status",
+          "description": "Return task queue counts and pending tasks."
+        },
+        {
+          "name": "tasks_pending",
+          "method": "GET",
+          "path": "/tasks/pending",
+          "description": "Return the current pending and waiting approval tasks."
+        },
+        {
+          "name": "verification_status",
+          "method": "GET",
+          "path": "/verification/status",
+          "description": "Return verification, release gate, runtime health, tool health, and AI testing status."
+        },
+        {
+          "name": "artifacts_recent",
+          "method": "GET",
+          "path": "/artifacts/recent",
+          "description": "Return a summary of recent artifacts and evidence freshness."
+        }
+      ]
+    },
+    {
+      "group": "controlled_write",
+      "description": "Bounded writes that update controller state or task decisions.",
+      "tools": [
+        {
+          "name": "goal_activate",
+          "method": "POST",
+          "path": "/goal/activate",
+          "description": "Activate a goal in controller state."
+        },
+        {
+          "name": "queue_pause",
+          "method": "POST",
+          "path": "/queue/pause",
+          "description": "Pause the controller queue."
+        },
+        {
+          "name": "queue_resume",
+          "method": "POST",
+          "path": "/queue/resume",
+          "description": "Resume the controller queue."
+        },
+        {
+          "name": "task_approve",
+          "method": "POST",
+          "path": "/task/approve",
+          "description": "Approve a task and return it to queued state."
+        },
+        {
+          "name": "task_reject",
+          "method": "POST",
+          "path": "/task/reject",
+          "description": "Reject a task and mark it cancelled."
+        },
+        {
+          "name": "repair_schedule",
+          "method": "POST",
+          "path": "/repair/schedule",
+          "description": "Schedule a bounded repair request for follow-up execution."
+        }
+      ]
+    },
+    {
+      "group": "danger_confirmed",
+      "description": "Confirmation-gated endpoints. Only use with explicit human confirmation.",
+      "tools": [
+        {
+          "name": "daemon_restart",
+          "method": "POST",
+          "path": "/daemon/restart",
+          "description": "Confirmation-gated daemon restart request."
+        },
+        {
+          "name": "release_promote",
+          "method": "POST",
+          "path": "/release/promote",
+          "description": "Confirmation-gated release promotion request."
+        },
+        {
+          "name": "queue_clear_stale",
+          "method": "POST",
+          "path": "/queue/clear-stale",
+          "description": "Confirmation-gated stale queue cleanup request."
+        },
+        {
+          "name": "runtime_rotate_epoch",
+          "method": "POST",
+          "path": "/runtime/rotate-epoch",
+          "description": "Confirmation-gated runtime epoch rotation request."
+        }
+      ]
+    }
+  ],
+  "tool_payload_conventions": {
+    "actor": "webui",
+    "source": "open-webui",
+    "common_fields": [
+      "actor",
+      "source",
+      "reason"
+    ],
+    "danger_actions_require_confirm": true
+  },
+  "open_webui_setup_notes": [
+    "Register as a Global Tool Server for shared/admin access.",
+    "Use controller-api:8710 when Open WebUI and the controller share the same Docker network.",
+    "Use host.docker.internal when Open WebUI runs in Docker on Windows but the controller runs on the host.",
+    "Keep the MetaForge Controller API separate from the main orchestrator control plane.",
+    "Prefer read-only tools for first-time validation."
+  ]
+}

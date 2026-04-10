@@ -1,0 +1,276 @@
+{
+  "task_id": "3f44c172cd504c11b9572f1ab841ac1a",
+  "task_title": "Plan lifecycle contract",
+  "task_status": "timed_out",
+  "started_at": "2026-04-03T12:33:15.655921Z",
+  "updated_at": "2026-04-03T12:48:36.774358Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "0cd5fde0",
+      "step_title": "Spawn decomposition subtasks",
+      "action": "planner_step",
+      "ok": true,
+      "at": "2026-04-03T12:48:36.774358Z",
+      "phase": "decompose",
+      "worker": "planner",
+      "status": "completed",
+      "output_ref": {
+        "artifact_id": "ctx_ef8fbd6f713d",
+        "task_id": "3f44c172cd504c11b9572f1ab841ac1a",
+        "step_id": "0cd5fde0",
+        "channel": "planner-output",
+        "title": "Spawn decomposition subtasks output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\3f44c172cd504c11b9572f1ab841ac1a\\0cd5fde0-planner-output-ctx_ef8fbd6f713d.json",
+        "size_chars": 682,
+        "line_count": 25,
+        "created_at": "2026-04-03T12:33:45.419054Z",
+        "metadata": {
+          "worker": "planner",
+          "phase": "decompose",
+          "route_model": "internal-recovery",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 682,
+        "line_count": 25,
+        "stored_raw": true
+      },
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "86bddfaf",
+      "step_title": "Wait for child task completion",
+      "action": "planner_step",
+      "ok": false,
+      "at": "2026-04-03T12:48:36.774358Z",
+      "phase": "decompose",
+      "worker": "planner",
+      "status": "running",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "83f8597f",
+      "step_title": "Aggregate decomposition results",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-04-03T12:48:36.774358Z",
+      "phase": "verify",
+      "worker": "reviewer",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    }
+  ],
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-03T12:33:15.659919Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "3f44c172cd504c11b9572f1ab841ac1a",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "governance",
+        "queue_name": "report_refresh",
+        "task_type": "report_refresh"
+      },
+      {
+        "timestamp": "2026-04-03T12:33:42.934410Z",
+        "kind": "decomposition_spawned",
+        "success": true,
+        "task_id": "3f44c172cd504c11b9572f1ab841ac1a",
+        "child_task_count": 2,
+        "child_task_ids": [
+          "0fc2c5f2e78b4e59b72b91ea7826365a",
+          "79a7209d3ecc4da5a73e955329b1c6de"
+        ],
+        "dag": {
+          "shared_nodes": [
+            "Clarify the target"
+          ],
+          "branch_nodes": [
+            "Execute the next bounded action"
+          ],
+          "repair_nodes": [],
+          "optional_nodes": [],
+          "speculative_nodes": [],
+          "blocked_nodes": [],
+          "edges": [
+            {
+              "from": "Clarify the target",
+              "to": "Execute the next bounded action",
+              "kind": "branch"
+            }
+          ],
+          "shared_dependency_group": "d366268ad45144ebace7bcbee94ca69d",
+          "child_dependency_ids": {
+            "0fc2c5f2e78b4e59b72b91ea7826365a": [],
+            "79a7209d3ecc4da5a73e955329b1c6de": [
+              "0fc2c5f2e78b4e59b72b91ea7826365a"
+            ]
+          }
+        }
+      },
+      {
+        "timestamp": "2026-04-03T12:33:46.294217Z",
+        "kind": "step_completed",
+        "success": true,
+        "task_id": "3f44c172cd504c11b9572f1ab841ac1a",
+        "step_id": "0cd5fde0",
+        "step_title": "Spawn decomposition subtasks",
+        "worker": "planner",
+        "phase": "decompose",
+        "route_model": "internal-recovery",
+        "route_provider": "runtime",
+        "elapsed_ms": 8594,
+        "output_ref": {
+          "artifact_id": "ctx_ef8fbd6f713d",
+          "task_id": "3f44c172cd504c11b9572f1ab841ac1a",
+          "step_id": "0cd5fde0",
+          "channel": "planner-output",
+          "title": "Spawn decomposition subtasks output",
+          "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\3f44c172cd504c11b9572f1ab841ac1a\\0cd5fde0-planner-output-ctx_ef8fbd6f713d.json",
+          "size_chars": 682,
+          "line_count": 25,
+          "created_at": "2026-04-03T12:33:45.419054Z",
+          "metadata": {
+            "worker": "planner",
+            "phase": "decompose",
+            "route_model": "internal-recovery",
+            "route_provider": "runtime"
+          }
+        },
+        "output_stats": {
+          "channel": "planner-output",
+          "char_count": 682,
+          "line_count": 25,
+          "stored_raw": true
+        }
+      }
+    ],
+    "decomposition": {
+      "summary": "Fallback decomposition for: Demonstrate the complete bounded task lifecycle for ToyOS delivery: publish, plan, decompose, execute, verify, and defin",
+      "strategy": "bounded multi-layer split with analysis, execution, and verification branches",
+      "subtasks": [
+        {
+          "title": "Clarify the target",
+          "prompt": "Restate the objective and the smallest acceptable outcome for: Demonstrate the complete bounded task lifecycle for ToyOS delivery: publish, plan, decompose, execute, verify, and define rollback behavior. Use the recovered stage1 and stage2 runtime state as the working baseline, produce explicit evidence, and if verification fails, return to the planner with a bounded rollback rule instead of claiming completion.",
+          "goal": "Clarify target outcome",
+          "task_type": "report_refresh",
+          "path_kind": "shared",
+          "queue_name": "fastlane",
+          "verification_level": "L1",
+          "preferred_worker": "reviewer",
+          "execution_mode": "governance",
+          "execution_lane": "host-control",
+          "decompose_children": false,
+          "shared_dependency_group": "d366268ad45144ebace7bcbee94ca69d",
+          "repair_for": null,
+          "inputs": [],
+          "outputs": [
+            "target brief"
+          ],
+          "dependencies": [],
+          "acceptance_criteria": [
+            "Target outcome is explicit."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        },
+        {
+          "title": "Execute the next bounded action",
+          "prompt": "Carry out the smallest bounded action that advances: Demonstrate the complete bounded task lifecycle for ToyOS delivery: publish, plan, decompose, execute, verify, and define rollback behavior. Use the recovered stage1 and stage2 runtime state as the working baseline, produce explicit evidence, and if verification fails, return to the planner with a bounded rollback rule instead of claiming completion.",
+          "goal": "Execute the next action",
+          "task_type": "doc_patch",
+          "path_kind": "branch",
+          "queue_name": "fastlane",
+          "verification_level": "L1",
+          "preferred_worker": "coder",
+          "execution_mode": "governance",
+          "execution_lane": "host-control",
+          "decompose_children": false,
+          "shared_dependency_group": "d366268ad45144ebace7bcbee94ca69d",
+          "repair_for": null,
+          "inputs": [
+            "target brief"
+          ],
+          "outputs": [
+            "action result"
+          ],
+          "dependencies": [
+            "Clarify the target"
+          ],
+          "acceptance_criteria": [
+            "The action produces a concrete result."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        }
+      ],
+      "dag": {
+        "shared_nodes": [
+          "Clarify the target"
+        ],
+        "branch_nodes": [
+          "Execute the next bounded action"
+        ],
+        "repair_nodes": [],
+        "optional_nodes": [],
+        "speculative_nodes": [],
+        "blocked_nodes": [],
+        "edges": [
+          {
+            "from": "Clarify the target",
+            "to": "Execute the next bounded action",
+            "kind": "branch"
+          }
+        ],
+        "shared_dependency_group": "d366268ad45144ebace7bcbee94ca69d",
+        "child_dependency_ids": {
+          "0fc2c5f2e78b4e59b72b91ea7826365a": [],
+          "79a7209d3ecc4da5a73e955329b1c6de": [
+            "0fc2c5f2e78b4e59b72b91ea7826365a"
+          ]
+        }
+      },
+      "depth": 1,
+      "max_depth": 2,
+      "mode": "multi_layer",
+      "child_task_ids": [
+        "0fc2c5f2e78b4e59b72b91ea7826365a",
+        "79a7209d3ecc4da5a73e955329b1c6de"
+      ],
+      "child_tasks": [
+        {
+          "task_id": "0fc2c5f2e78b4e59b72b91ea7826365a",
+          "title": "Clarify the target",
+          "task_type": "report_refresh",
+          "execution_mode": "governance",
+          "depth": 2,
+          "path_kind": "shared"
+        },
+        {
+          "task_id": "79a7209d3ecc4da5a73e955329b1c6de",
+          "title": "Execute the next bounded action",
+          "task_type": "doc_patch",
+          "execution_mode": "governance",
+          "depth": 2,
+          "path_kind": "branch"
+        }
+      ],
+      "spawned_at": "2026-04-03T12:33:42.934410Z"
+    },
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "updated_at": "2026-03-12T07:09:59.612527Z",
+  "window_hours": 24,
+  "score": 0.6925,
+  "stage": "stage4_confirmed",
+  "verdict": "Stable autonomy confirmed by soak validation and consistent runtime control signals.",
+  "weights": {
+    "cheap_ratio": 0.25,
+    "active_tasks": 0.1,
+    "goal_progress": 0.2,
+    "recovery": 0.15,
+    "stuck_tasks": 0.15,
+    "uptime": 0.15
+  },
+  "metrics": {
+    "cheap_ratio": {
+      "cheap_calls": 7,
+      "strong_calls": 0,
+      "cheap_ratio": 1.0,
+      "target_min_ratio": 0.8
+    },
+    "active_tasks": {
+      "active_tasks": 1,
+      "target_range": [
+        1,
+        12
+      ]
+    },
+    "goal_progress": {
+      "completed_tasks_last_24h": 3,
+      "completed_goals_last_24h": 71,
+      "progress_events": 38
+    },
+    "recovery": {
+      "recoveries_last_24h": 5,
+      "open_error_escalations": 1
+    },
+    "stuck_tasks": {
+      "stuck_tasks": 0,
+      "stuck_task_ids": [],
+      "stuck_threshold_minutes": 10
+    },
+    "uptime": {
+      "uptime_hours": 18.23,
+      "running": false,
+      "target_hours_for_confirmed": 12,
+      "cycle": 179
+    }
+  },
+  "control_layer_status": "operator_attention",
+  "quality_score": 0.6354,
+  "quality_status": "attention",
+  "decision": {
+    "stable_autonomy": true,
+    "needs_more_soak": false,
+    "needs_operator_attention": false
+  }
+}

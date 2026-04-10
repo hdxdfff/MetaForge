@@ -1,0 +1,63 @@
+{
+  "updated_at": "2026-03-11T15:28:38.129418Z",
+  "records": [
+    {
+      "candidate_id": "e97a5e3ce0b9",
+      "patch_id": "patch_0008",
+      "reviewer": "operator",
+      "reason": "retroactive approval path validation",
+      "target_files": [
+        "tools/decision_engine.py",
+        "tools/tool_health_audit.py",
+        "tools/release_operations.py"
+      ],
+      "validation": [
+        "compileall-tools",
+        "file-presence",
+        "file-presence",
+        "file-presence",
+        "verification-refresh"
+      ],
+      "rollback_note": "Revert logical patch record and restore previous approved asset if post-merge verification fails.",
+      "status": "approved",
+      "approved_at": "2026-03-11T15:07:17.214188Z"
+    },
+    {
+      "candidate_id": "6f8fd8400323",
+      "patch_id": "patch_0011",
+      "reviewer": "operator",
+      "reason": "approve primary provider self-improvement candidate",
+      "target_files": [
+        "tools/ai_test_automation.py",
+        "app/config.py"
+      ],
+      "validation": [
+        "compileall-tools",
+        "file-presence",
+        "file-presence"
+      ],
+      "rollback_note": "Revert logical patch record and restore previous approved asset if post-merge verification fails.",
+      "status": "approved",
+      "approved_at": "2026-03-11T15:21:10.906842Z"
+    },
+    {
+      "candidate_id": "1e76c6a2d61a",
+      "patch_id": "patch_0014",
+      "reviewer": "operator",
+      "reason": "approve daemon health stabilization candidate",
+      "target_files": [
+        "tools/factory_daemon.py",
+        "tools/tool_health_audit.py"
+      ],
+      "validation": [
+        "compileall-tools",
+        "file-presence",
+        "file-presence",
+        "verification-refresh"
+      ],
+      "rollback_note": "Revert logical patch record and restore previous approved asset if post-merge verification fails.",
+      "status": "approved",
+      "approved_at": "2026-03-11T15:28:38.129418Z"
+    }
+  ]
+}

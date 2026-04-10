@@ -1,0 +1,526 @@
+{
+  "updated_at": "2026-04-03T14:34:48.712773Z",
+  "artifact_count": 7,
+  "real_artifact_count": 3,
+  "valuable_artifact_count": 1,
+  "prototype_artifact_count": 4,
+  "status": "pass",
+  "artifacts": [
+    {
+      "artifact_id": "autonomy-soak-evidence",
+      "type": "demo",
+      "version": "0.1.0",
+      "artifact_path": "D:\\codex\\generated\\autonomy-soak-evidence",
+      "entrypoint": "run_demo.py",
+      "manifest_present": true,
+      "real": true,
+      "status": "real",
+      "delivery_status": "technical_only",
+      "declared": {
+        "buildable": true,
+        "runnable": true,
+        "test_passed": true,
+        "reproducible": true
+      },
+      "verified": {
+        "buildable": true,
+        "runnable": true,
+        "test_passed": true,
+        "reproducible": true
+      },
+      "value": {
+        "valuable": false,
+        "value_sources": [],
+        "focus_match": false,
+        "delivery_contract": false,
+        "release_linked": false,
+        "target_user": null,
+        "job_to_be_done": null,
+        "delivery_target": null,
+        "internal_only": false
+      },
+      "checks": {
+        "entrypoint_exists": true,
+        "entrypoint_path": "D:\\codex\\generated\\autonomy-soak-evidence\\run_demo.py",
+        "existing_evidence": [
+          "build-report.json",
+          "test-report.json",
+          "execution-report.json"
+        ],
+        "missing_evidence": [],
+        "build_report_exists": true,
+        "build_report_error": null,
+        "build_success": true,
+        "build_ready": true,
+        "test_report_exists": true,
+        "test_report_error": null,
+        "generic_test_passed": true,
+        "execution_report_exists": true,
+        "execution_report_error": null,
+        "generic_execution_passed": true,
+        "qemu_report_exists": false,
+        "qemu_report_error": null,
+        "qemu_all_passed": false,
+        "build_timestamp": "2026-04-03T14:21:38.212560Z",
+        "test_timestamp": "2026-04-03T14:21:38.213559Z",
+        "execution_timestamp": "2026-04-03T14:21:38.214053Z",
+        "qemu_timestamp": null,
+        "latest_evidence_at": "2026-04-03T14:21:38.214053Z",
+        "reproducibility_assets": [
+          "Dockerfile.build",
+          "build.sh"
+        ],
+        "reproducibility_assets_present": true,
+        "sha256_generated": true,
+        "sha256": "70a1e12f5dfb4dbeeb97850b2e1817196cc0cce6069af45f907ed09744760225"
+      },
+      "issues": []
+    },
+    {
+      "artifact_id": "execution-kernel-smoke",
+      "type": "report",
+      "version": "0.1",
+      "artifact_path": "D:\\codex\\generated\\execution-kernel-smoke",
+      "entrypoint": "BINARY_CLASSIFICATION_AUTORUN_RESULT.md",
+      "manifest_present": true,
+      "real": false,
+      "status": "prototype",
+      "delivery_status": "prototype",
+      "declared": {
+        "buildable": false,
+        "runnable": false,
+        "test_passed": false,
+        "reproducible": false
+      },
+      "verified": {
+        "buildable": false,
+        "runnable": false,
+        "test_passed": false,
+        "reproducible": false
+      },
+      "value": {
+        "valuable": false,
+        "value_sources": [],
+        "focus_match": false,
+        "delivery_contract": false,
+        "release_linked": false,
+        "target_user": null,
+        "job_to_be_done": null,
+        "delivery_target": null,
+        "internal_only": false
+      },
+      "checks": {
+        "entrypoint_exists": true,
+        "entrypoint_path": "D:\\codex\\generated\\execution-kernel-smoke\\BINARY_CLASSIFICATION_AUTORUN_RESULT.md",
+        "existing_evidence": [
+          "BINARY_CLASSIFICATION_AUTORUN_RESULT.md",
+          "binary_classification_metrics.json"
+        ],
+        "missing_evidence": [],
+        "build_report_exists": false,
+        "build_report_error": null,
+        "build_success": false,
+        "build_ready": false,
+        "test_report_exists": false,
+        "test_report_error": null,
+        "generic_test_passed": false,
+        "execution_report_exists": false,
+        "execution_report_error": null,
+        "generic_execution_passed": false,
+        "qemu_report_exists": false,
+        "qemu_report_error": null,
+        "qemu_all_passed": false,
+        "build_timestamp": null,
+        "test_timestamp": null,
+        "execution_timestamp": null,
+        "qemu_timestamp": null,
+        "latest_evidence_at": null,
+        "reproducibility_assets": [],
+        "reproducibility_assets_present": false,
+        "sha256_generated": true,
+        "sha256": "411ee1149cd0c39764efb4627b88e259760170a3ec569deca7a0cfa9dcc76a28"
+      },
+      "issues": []
+    },
+    {
+      "artifact_id": "execution-recovery-demo",
+      "type": "demo",
+      "version": "0.1.0",
+      "artifact_path": "D:\\codex\\generated\\execution-recovery-demo",
+      "entrypoint": "run_demo.py",
+      "manifest_present": true,
+      "real": true,
+      "status": "real",
+      "delivery_status": "technical_only",
+      "declared": {
+        "buildable": true,
+        "runnable": true,
+        "test_passed": true,
+        "reproducible": true
+      },
+      "verified": {
+        "buildable": true,
+        "runnable": true,
+        "test_passed": true,
+        "reproducible": true
+      },
+      "value": {
+        "valuable": false,
+        "value_sources": [],
+        "focus_match": false,
+        "delivery_contract": false,
+        "release_linked": false,
+        "target_user": null,
+        "job_to_be_done": null,
+        "delivery_target": null,
+        "internal_only": true
+      },
+      "checks": {
+        "entrypoint_exists": true,
+        "entrypoint_path": "D:\\codex\\generated\\execution-recovery-demo\\run_demo.py",
+        "existing_evidence": [
+          "build-report.json",
+          "test-report.json",
+          "execution-report.json"
+        ],
+        "missing_evidence": [],
+        "build_report_exists": true,
+        "build_report_error": null,
+        "build_success": true,
+        "build_ready": true,
+        "test_report_exists": true,
+        "test_report_error": null,
+        "generic_test_passed": true,
+        "execution_report_exists": true,
+        "execution_report_error": null,
+        "generic_execution_passed": true,
+        "qemu_report_exists": false,
+        "qemu_report_error": null,
+        "qemu_all_passed": false,
+        "build_timestamp": "2026-04-02T16:46:24.830498Z",
+        "test_timestamp": "2026-04-02T16:46:26.688950Z",
+        "execution_timestamp": "2026-04-02T16:46:30.338158Z",
+        "qemu_timestamp": null,
+        "latest_evidence_at": "2026-04-02T16:46:30.338158Z",
+        "reproducibility_assets": [
+          "Dockerfile.build",
+          "build.sh"
+        ],
+        "reproducibility_assets_present": true,
+        "sha256_generated": true,
+        "sha256": "6ef4802d5fb0fb564df0c572eb6d71c90a01bd0b1429213c145f8eb46104ebd7"
+      },
+      "issues": []
+    },
+    {
+      "artifact_id": "metaforge-ai-factory",
+      "type": "document",
+      "version": "0.1",
+      "artifact_path": "D:\\codex\\generated\\metaforge-ai-factory",
+      "entrypoint": "AI_FACTORY_ACCELERATION_HANDOFF.md",
+      "manifest_present": true,
+      "real": false,
+      "status": "prototype",
+      "delivery_status": "prototype",
+      "declared": {
+        "buildable": false,
+        "runnable": false,
+        "test_passed": false,
+        "reproducible": false
+      },
+      "verified": {
+        "buildable": false,
+        "runnable": false,
+        "test_passed": false,
+        "reproducible": false
+      },
+      "value": {
+        "valuable": false,
+        "value_sources": [],
+        "focus_match": false,
+        "delivery_contract": false,
+        "release_linked": false,
+        "target_user": null,
+        "job_to_be_done": null,
+        "delivery_target": null,
+        "internal_only": false
+      },
+      "checks": {
+        "entrypoint_exists": true,
+        "entrypoint_path": "D:\\codex\\generated\\metaforge-ai-factory\\AI_FACTORY_ACCELERATION_HANDOFF.md",
+        "existing_evidence": [
+          "AI_FACTORY_ACCELERATION_HANDOFF.md",
+          "recursive-memory-6h-plan.json"
+        ],
+        "missing_evidence": [],
+        "build_report_exists": false,
+        "build_report_error": null,
+        "build_success": false,
+        "build_ready": false,
+        "test_report_exists": false,
+        "test_report_error": null,
+        "generic_test_passed": false,
+        "execution_report_exists": false,
+        "execution_report_error": null,
+        "generic_execution_passed": false,
+        "qemu_report_exists": false,
+        "qemu_report_error": null,
+        "qemu_all_passed": false,
+        "build_timestamp": null,
+        "test_timestamp": null,
+        "execution_timestamp": null,
+        "qemu_timestamp": null,
+        "latest_evidence_at": null,
+        "reproducibility_assets": [],
+        "reproducibility_assets_present": false,
+        "sha256_generated": true,
+        "sha256": "1e035d9ec9a68412e39dff1df6a96fc360dab7958b659ead733c9a4509cf8380"
+      },
+      "issues": []
+    },
+    {
+      "artifact_id": "metaforge-network-layer",
+      "type": "document",
+      "version": "0.1",
+      "artifact_path": "D:\\codex\\generated\\metaforge-network-layer",
+      "entrypoint": "NETWORK_GATEWAY_ROLLOUT.md",
+      "manifest_present": true,
+      "real": false,
+      "status": "prototype",
+      "delivery_status": "prototype",
+      "declared": {
+        "buildable": false,
+        "runnable": false,
+        "test_passed": false,
+        "reproducible": false
+      },
+      "verified": {
+        "buildable": false,
+        "runnable": false,
+        "test_passed": false,
+        "reproducible": false
+      },
+      "value": {
+        "valuable": false,
+        "value_sources": [],
+        "focus_match": false,
+        "delivery_contract": false,
+        "release_linked": false,
+        "target_user": null,
+        "job_to_be_done": null,
+        "delivery_target": null,
+        "internal_only": false
+      },
+      "checks": {
+        "entrypoint_exists": true,
+        "entrypoint_path": "D:\\codex\\generated\\metaforge-network-layer\\NETWORK_GATEWAY_ROLLOUT.md",
+        "existing_evidence": [
+          "NETWORK_GATEWAY_ROLLOUT.md"
+        ],
+        "missing_evidence": [],
+        "build_report_exists": false,
+        "build_report_error": null,
+        "build_success": false,
+        "build_ready": false,
+        "test_report_exists": false,
+        "test_report_error": null,
+        "generic_test_passed": false,
+        "execution_report_exists": false,
+        "execution_report_error": null,
+        "generic_execution_passed": false,
+        "qemu_report_exists": false,
+        "qemu_report_error": null,
+        "qemu_all_passed": false,
+        "build_timestamp": null,
+        "test_timestamp": null,
+        "execution_timestamp": null,
+        "qemu_timestamp": null,
+        "latest_evidence_at": null,
+        "reproducibility_assets": [],
+        "reproducibility_assets_present": false,
+        "sha256_generated": true,
+        "sha256": "eefc9a3b5bf216a87e22d02d610438cef7056a80a57b238b5b6b2848bed713bd"
+      },
+      "issues": []
+    },
+    {
+      "artifact_id": "ml-binary-classification-lab",
+      "type": "report",
+      "version": "0.1",
+      "artifact_path": "D:\\codex\\generated\\ml-binary-classification-lab",
+      "entrypoint": "BINARY_CLASSIFICATION_AUTORUN_RESULT.md",
+      "manifest_present": true,
+      "real": false,
+      "status": "prototype",
+      "delivery_status": "prototype",
+      "declared": {
+        "buildable": false,
+        "runnable": false,
+        "test_passed": false,
+        "reproducible": false
+      },
+      "verified": {
+        "buildable": false,
+        "runnable": false,
+        "test_passed": false,
+        "reproducible": false
+      },
+      "value": {
+        "valuable": false,
+        "value_sources": [],
+        "focus_match": false,
+        "delivery_contract": false,
+        "release_linked": false,
+        "target_user": null,
+        "job_to_be_done": null,
+        "delivery_target": null,
+        "internal_only": false
+      },
+      "checks": {
+        "entrypoint_exists": true,
+        "entrypoint_path": "D:\\codex\\generated\\ml-binary-classification-lab\\BINARY_CLASSIFICATION_AUTORUN_RESULT.md",
+        "existing_evidence": [
+          "BINARY_CLASSIFICATION_AUTORUN_RESULT.md",
+          "binary_classification_metrics.json",
+          "DISPATCH_BRIEF.md",
+          "SYSTEM_PROMPT.txt"
+        ],
+        "missing_evidence": [],
+        "build_report_exists": false,
+        "build_report_error": null,
+        "build_success": false,
+        "build_ready": false,
+        "test_report_exists": false,
+        "test_report_error": null,
+        "generic_test_passed": false,
+        "execution_report_exists": false,
+        "execution_report_error": null,
+        "generic_execution_passed": false,
+        "qemu_report_exists": false,
+        "qemu_report_error": null,
+        "qemu_all_passed": false,
+        "build_timestamp": null,
+        "test_timestamp": null,
+        "execution_timestamp": null,
+        "qemu_timestamp": null,
+        "latest_evidence_at": null,
+        "reproducibility_assets": [],
+        "reproducibility_assets_present": false,
+        "sha256_generated": true,
+        "sha256": "02ebae046f04fc8a19d0c8662bfa0d840f431dc3a54173f2d8123158082ed12f"
+      },
+      "issues": []
+    },
+    {
+      "artifact_id": "toy-os-demo",
+      "type": "software",
+      "version": "0.1",
+      "artifact_path": "D:\\codex\\generated\\toy-os-demo",
+      "entrypoint": "build/kernel.bin",
+      "manifest_present": true,
+      "real": true,
+      "status": "real",
+      "delivery_status": "valuable",
+      "declared": {
+        "buildable": true,
+        "runnable": true,
+        "test_passed": true,
+        "reproducible": true
+      },
+      "verified": {
+        "buildable": true,
+        "runnable": true,
+        "test_passed": true,
+        "reproducible": true
+      },
+      "value": {
+        "valuable": true,
+        "value_sources": [
+          "production_focus"
+        ],
+        "focus_match": true,
+        "delivery_contract": false,
+        "release_linked": false,
+        "target_user": null,
+        "job_to_be_done": null,
+        "delivery_target": null,
+        "internal_only": false
+      },
+      "checks": {
+        "entrypoint_exists": true,
+        "entrypoint_path": "D:\\codex\\generated\\toy-os-demo\\build\\kernel.bin",
+        "existing_evidence": [
+          "build-report.json",
+          "build\\build.log",
+          "build\\generic-qemu-smoke-report.json",
+          "score-report.json",
+          "build\\artifact.sha256",
+          "toyos-delivery-closure-report.md"
+        ],
+        "missing_evidence": [],
+        "build_report_exists": true,
+        "build_report_error": null,
+        "build_success": true,
+        "build_ready": true,
+        "test_report_exists": true,
+        "test_report_error": null,
+        "generic_test_passed": true,
+        "execution_report_exists": true,
+        "execution_report_error": null,
+        "generic_execution_passed": true,
+        "qemu_report_exists": true,
+        "qemu_report_error": null,
+        "qemu_all_passed": false,
+        "build_timestamp": "2026-04-03T14:13:52.767131Z",
+        "test_timestamp": "2026-04-03T13:25:14.523444Z",
+        "execution_timestamp": "2026-04-03T13:25:14.524478Z",
+        "qemu_timestamp": "2026-04-03T14:01:44.736018Z",
+        "latest_evidence_at": "2026-04-03T14:13:52.767131Z",
+        "reproducibility_assets": [
+          "Dockerfile.build",
+          "build.sh"
+        ],
+        "reproducibility_assets_present": true,
+        "sha256_generated": true,
+        "sha256": "50e3cc398f389d2364ff6caf651be2cb1e61aea05f36be9e60c3d7e99360bdd0"
+      },
+      "issues": []
+    }
+  ],
+  "issues": [],
+  "strategy_learning": {
+    "updated_at": "2026-04-03T14:34:49.298367Z",
+    "revision": 335,
+    "pattern_count": 1,
+    "active_pattern_count": 1,
+    "strategy_guided_terminal_tasks": 0,
+    "reuse_success_rate": 0.0,
+    "valuable_artifact_ratio": 0.1429,
+    "pattern_score_variance": 0.0,
+    "exploration_ratio": 0.2,
+    "valuable_artifact_count": 1,
+    "artifact_count": 7,
+    "top_patterns": [
+      {
+        "pattern_id": "strategy_f1aa4996530f",
+        "task_type": "implementation",
+        "score": 0.7767,
+        "preferred_worker": "docker",
+        "tools_used": [
+          "docker_exec",
+          "file_write_workspace",
+          "git_push",
+          "read_repo",
+          "shell_exec"
+        ],
+        "status": "reinforced"
+      }
+    ],
+    "review_summary": {
+      "reviewed_pattern_count": 1,
+      "active_pattern_count": 1,
+      "reinforced_count": 1,
+      "pruned_count": 0
+    }
+  }
+}

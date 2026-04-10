@@ -1,0 +1,198 @@
+{
+  "updated_at": "2026-03-11T11:19:03.162375Z",
+  "enabled": true,
+  "topics": [
+    "agent",
+    "llm",
+    "compiler",
+    "kernel",
+    "robotics",
+    "distributed-system",
+    "inference"
+  ],
+  "languages": [
+    "Python",
+    "TypeScript",
+    "Rust",
+    "C++",
+    "C",
+    "Go"
+  ],
+  "min_stars": 500,
+  "max_candidates": 12,
+  "clone_root": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning",
+  "curated_repos": [
+    {
+      "full_name": "OpenInterpreter/open-interpreter",
+      "clone_url": "https://github.com/OpenInterpreter/open-interpreter.git",
+      "html_url": "https://github.com/OpenInterpreter/open-interpreter",
+      "description": "Natural language computer control agent.",
+      "language": "Python",
+      "topics": [
+        "agent",
+        "computer-use",
+        "tool-executor",
+        "llm"
+      ],
+      "stars": 58000,
+      "recent_commits": 48,
+      "updated_days_ago": 10,
+      "source": "curated-default"
+    },
+    {
+      "full_name": "microsoft/autogen",
+      "clone_url": "https://github.com/microsoft/autogen.git",
+      "html_url": "https://github.com/microsoft/autogen",
+      "description": "Multi-agent framework for autonomous systems.",
+      "language": "Python",
+      "topics": [
+        "agent",
+        "multi-agent",
+        "orchestration",
+        "llm"
+      ],
+      "stars": 41000,
+      "recent_commits": 60,
+      "updated_days_ago": 7,
+      "source": "curated-default"
+    },
+    {
+      "full_name": "langchain-ai/langchain",
+      "clone_url": "https://github.com/langchain-ai/langchain.git",
+      "html_url": "https://github.com/langchain-ai/langchain",
+      "description": "Composable LLM application framework.",
+      "language": "Python",
+      "topics": [
+        "agent",
+        "llm",
+        "tools",
+        "retrieval"
+      ],
+      "stars": 103000,
+      "recent_commits": 95,
+      "updated_days_ago": 4,
+      "source": "curated-default"
+    },
+    {
+      "full_name": "crewAIInc/crewAI",
+      "clone_url": "https://github.com/crewAIInc/crewAI.git",
+      "html_url": "https://github.com/crewAIInc/crewAI",
+      "description": "Collaborative AI agents framework.",
+      "language": "Python",
+      "topics": [
+        "agent",
+        "multi-agent",
+        "workflow",
+        "automation"
+      ],
+      "stars": 32000,
+      "recent_commits": 52,
+      "updated_days_ago": 9,
+      "source": "curated-default"
+    },
+    {
+      "full_name": "ggerganov/llama.cpp",
+      "clone_url": "https://github.com/ggerganov/llama.cpp.git",
+      "html_url": "https://github.com/ggerganov/llama.cpp",
+      "description": "Local LLM inference in portable C/C++.",
+      "language": "C++",
+      "topics": [
+        "inference",
+        "llm",
+        "kv-cache",
+        "quantization"
+      ],
+      "stars": 77000,
+      "recent_commits": 72,
+      "updated_days_ago": 3,
+      "source": "curated-default"
+    },
+    {
+      "full_name": "vllm-project/vllm",
+      "clone_url": "https://github.com/vllm-project/vllm.git",
+      "html_url": "https://github.com/vllm-project/vllm",
+      "description": "High-throughput LLM serving engine.",
+      "language": "Python",
+      "topics": [
+        "inference",
+        "llm",
+        "serving",
+        "scheduler"
+      ],
+      "stars": 38000,
+      "recent_commits": 88,
+      "updated_days_ago": 5,
+      "source": "curated-default"
+    },
+    {
+      "full_name": "ray-project/ray",
+      "clone_url": "https://github.com/ray-project/ray.git",
+      "html_url": "https://github.com/ray-project/ray",
+      "description": "Distributed compute runtime and scheduling.",
+      "language": "Python",
+      "topics": [
+        "distributed-system",
+        "scheduler",
+        "runtime",
+        "ml"
+      ],
+      "stars": 36000,
+      "recent_commits": 75,
+      "updated_days_ago": 6,
+      "source": "curated-default"
+    },
+    {
+      "full_name": "dask/dask",
+      "clone_url": "https://github.com/dask/dask.git",
+      "html_url": "https://github.com/dask/dask",
+      "description": "Parallel and distributed Python execution.",
+      "language": "Python",
+      "topics": [
+        "distributed-system",
+        "scheduler",
+        "parallel",
+        "data"
+      ],
+      "stars": 13000,
+      "recent_commits": 34,
+      "updated_days_ago": 8,
+      "source": "curated-default"
+    },
+    {
+      "full_name": "mit-pdos/xv6-public",
+      "clone_url": "https://github.com/mit-pdos/xv6-public.git",
+      "html_url": "https://github.com/mit-pdos/xv6-public",
+      "description": "Small Unix-like teaching kernel.",
+      "language": "C",
+      "topics": [
+        "kernel",
+        "os",
+        "scheduler",
+        "systems"
+      ],
+      "stars": 7800,
+      "recent_commits": 4,
+      "updated_days_ago": 240,
+      "source": "curated-default"
+    },
+    {
+      "full_name": "Significant-Gravitas/AutoGPT",
+      "clone_url": "https://github.com/Significant-Gravitas/AutoGPT.git",
+      "html_url": "https://github.com/Significant-Gravitas/AutoGPT",
+      "description": "Agent platform and classic agent runtime.",
+      "language": "Python",
+      "topics": [
+        "agent",
+        "llm",
+        "automation",
+        "workflow"
+      ],
+      "stars": 170000,
+      "recent_commits": 40,
+      "updated_days_ago": 12,
+      "source": "local-vendor",
+      "local_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT"
+    }
+  ],
+  "live_scan": false
+}

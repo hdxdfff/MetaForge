@@ -1,0 +1,24 @@
+{
+  "role_name": "runner",
+  "version": "1.0",
+  "purpose": "Execute built artifacts and collect runtime evidence.",
+  "allowed_actions": [
+    "shell_execute",
+    "container_execute",
+    "qemu_execute",
+    "metric_collect",
+    "log_collect"
+  ],
+  "denied_actions": [
+    "task_create",
+    "code_write",
+    "artifact_audit",
+    "artifact_publish"
+  ],
+  "required_inputs": [
+    "build_handoff"
+  ],
+  "required_outputs": [
+    "run_handoff"
+  ]
+}

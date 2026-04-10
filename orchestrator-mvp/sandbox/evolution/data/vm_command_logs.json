@@ -1,0 +1,144 @@
+{
+  "entries": [
+    {
+      "logged_at": "2026-03-09T07:38:56.931050Z",
+      "vm_id": "vm_0ac34d4c55",
+      "event": "provisioned",
+      "payload": {
+        "task_id": "78d2040c0c24401d80f61c9e718dd7bc",
+        "template_id": "dev_template",
+        "workdir": "D:\\codex"
+      }
+    },
+    {
+      "logged_at": "2026-03-09T07:38:56.932049Z",
+      "vm_id": "vm_0ac34d4c55",
+      "event": "command",
+      "payload": {
+        "worker": "shell",
+        "command": "python --version",
+        "workdir": "D:\\codex"
+      }
+    },
+    {
+      "logged_at": "2026-03-09T07:38:56.935056Z",
+      "vm_id": "vm_0ac34d4c55",
+      "event": "finalize",
+      "payload": {
+        "success": false,
+        "worker": "shell",
+        "error": "[WinError 5] 拒绝访问。"
+      }
+    },
+    {
+      "logged_at": "2026-03-09T07:38:56.937049Z",
+      "vm_id": "vm_0ac34d4c55",
+      "event": "snapshot",
+      "payload": {
+        "snapshot_id": "snap_4e30a3d9",
+        "name": "shell-fail-fail"
+      }
+    },
+    {
+      "logged_at": "2026-03-09T07:38:56.938050Z",
+      "vm_id": "vm_0ac34d4c55",
+      "event": "stop",
+      "payload": {
+        "status": "stopped"
+      }
+    },
+    {
+      "logged_at": "2026-03-09T07:39:19.185125Z",
+      "vm_id": "vm_c9a5d66ef7",
+      "event": "provisioned",
+      "payload": {
+        "task_id": "dbaf381b86d7426b82fb01a2d3ffd36f",
+        "template_id": "dev_template",
+        "workdir": "D:\\codex"
+      }
+    },
+    {
+      "logged_at": "2026-03-09T07:39:19.186518Z",
+      "vm_id": "vm_c9a5d66ef7",
+      "event": "command",
+      "payload": {
+        "worker": "shell",
+        "command": "python --version",
+        "workdir": "D:\\codex"
+      }
+    },
+    {
+      "logged_at": "2026-03-09T07:39:24.524320Z",
+      "vm_id": "vm_c9a5d66ef7",
+      "event": "finalize",
+      "payload": {
+        "success": false,
+        "worker": "shell",
+        "error": "WSL command failed with code 1: w\u0000s\u0000l\u0000:\u0000 \u0000�hKm0R \u0000l\u0000o\u0000c\u0000a\u0000l\u0000h\u0000o\u0000s\u0000t\u0000 \u0000�N\u0006tM�n\f�FO*g\\��P0R \u0000W\u0000S\u0000L\u0000\u00020N\u0000A\u0000T\u0000 \u0000!j\u000f_\u000bN�v \u0000W\u0000S\u0000L\u0000 \u0000\rN/e\u0001c \u0000l\u0000o\u0000c\u0000a\u0000l\u0000h\u0000o\u0000s\u0000t\u0000 \u0000�N\u0006t\u00020\r\u0000\n\u0000bash: line 1: python: command not found"
+      }
+    },
+    {
+      "logged_at": "2026-03-09T07:39:24.526249Z",
+      "vm_id": "vm_c9a5d66ef7",
+      "event": "snapshot",
+      "payload": {
+        "snapshot_id": "snap_5e03d567",
+        "name": "shell-fail-fail"
+      }
+    },
+    {
+      "logged_at": "2026-03-09T07:39:24.527327Z",
+      "vm_id": "vm_c9a5d66ef7",
+      "event": "stop",
+      "payload": {
+        "status": "stopped"
+      }
+    },
+    {
+      "logged_at": "2026-03-09T07:40:33.529109Z",
+      "vm_id": "vm_6fd79212bd",
+      "event": "provisioned",
+      "payload": {
+        "task_id": "38ac5202d13948c2a91e41acd37f27e9",
+        "template_id": "dev_template",
+        "workdir": "D:\\codex"
+      }
+    },
+    {
+      "logged_at": "2026-03-09T07:40:33.529109Z",
+      "vm_id": "vm_6fd79212bd",
+      "event": "command",
+      "payload": {
+        "worker": "shell",
+        "command": "git --version",
+        "workdir": "D:\\codex"
+      }
+    },
+    {
+      "logged_at": "2026-03-09T07:40:36.206041Z",
+      "vm_id": "vm_6fd79212bd",
+      "event": "finalize",
+      "payload": {
+        "success": true,
+        "worker": "shell"
+      }
+    },
+    {
+      "logged_at": "2026-03-09T07:40:36.209043Z",
+      "vm_id": "vm_6fd79212bd",
+      "event": "snapshot",
+      "payload": {
+        "snapshot_id": "snap_e2fa21b3",
+        "name": "shell-ok"
+      }
+    },
+    {
+      "logged_at": "2026-03-09T07:40:36.210050Z",
+      "vm_id": "vm_6fd79212bd",
+      "event": "stop",
+      "payload": {
+        "status": "stopped"
+      }
+    }
+  ]
+}

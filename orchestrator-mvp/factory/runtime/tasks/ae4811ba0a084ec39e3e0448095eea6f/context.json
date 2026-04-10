@@ -1,0 +1,511 @@
+{
+  "task_id": "ae4811ba0a084ec39e3e0448095eea6f",
+  "task_status": "released",
+  "phase": "verification-passed",
+  "updated_at": "2026-03-30T12:48:25.436810Z",
+  "heartbeat_at": "2026-03-30T12:48:25.436810Z",
+  "repo_path": "D:\\codex",
+  "goal": "Recover stable execution output",
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": "factory-daemon.recovery",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\ae4811ba0a084ec39e3e0448095eea6f",
+  "completed_steps": 4,
+  "verification_result": {
+    "status": "verified",
+    "passed": true,
+    "mode": "production",
+    "verification_level": "L1",
+    "contract": {
+      "verification_level": "L1",
+      "required_checks": [
+        "contract_valid",
+        "build_success",
+        "tests_pass",
+        "artifact_manifest_present",
+        "evidence_fresh"
+      ],
+      "artifact_requirements": {
+        "must_register_artifact": true,
+        "must_have_timestamp": true,
+        "must_have_files": [
+          "generated\\execution-recovery-demo\\run_demo.py",
+          "generated\\execution-recovery-demo\\build-report.json",
+          "generated\\execution-recovery-demo\\test-report.json",
+          "generated\\execution-recovery-demo\\execution-report.json",
+          "generated\\execution-recovery-demo\\artifact_manifest.json",
+          "generated\\execution-recovery-demo\\build.sh",
+          "generated\\execution-recovery-demo\\Dockerfile.build"
+        ],
+        "expected_outputs": [
+          "generated\\execution-recovery-demo\\run_demo.py",
+          "generated\\execution-recovery-demo\\build-report.json",
+          "generated\\execution-recovery-demo\\test-report.json",
+          "generated\\execution-recovery-demo\\execution-report.json",
+          "generated\\execution-recovery-demo\\artifact_manifest.json",
+          "generated\\execution-recovery-demo\\build.sh",
+          "generated\\execution-recovery-demo\\Dockerfile.build"
+        ],
+        "entrypoint": "generated\\execution-recovery-demo\\run_demo.py",
+        "artifact_type": "demo",
+        "test_command": "run_demo.py --self-test"
+      },
+      "release_gate": "all_required_checks_pass",
+      "failure_policy": "return_to_planner",
+      "evidence_requirements": [],
+      "verification_notes": [
+        "Recover stable execution output",
+        "Produce explicit verification output or a bounded failure report.",
+        "Do not treat documentation-only progress as production completion.",
+        "Task is invalid unless the declared artifact set is refreshed and verifiable."
+      ]
+    },
+    "evidence": {
+      "mode": "production",
+      "status": "verified",
+      "artifact_spec": {
+        "artifact_id": "execution-recovery-demo",
+        "artifact_type": "demo",
+        "type": "demo",
+        "output": "generated\\execution-recovery-demo",
+        "entrypoint": "generated\\execution-recovery-demo\\run_demo.py",
+        "deliverables": [
+          "generated\\execution-recovery-demo\\run_demo.py",
+          "generated\\execution-recovery-demo\\build-report.json",
+          "generated\\execution-recovery-demo\\test-report.json",
+          "generated\\execution-recovery-demo\\execution-report.json",
+          "generated\\execution-recovery-demo\\artifact_manifest.json",
+          "generated\\execution-recovery-demo\\build.sh",
+          "generated\\execution-recovery-demo\\Dockerfile.build"
+        ],
+        "expected_outputs": [
+          "generated\\execution-recovery-demo\\run_demo.py",
+          "generated\\execution-recovery-demo\\build-report.json",
+          "generated\\execution-recovery-demo\\test-report.json",
+          "generated\\execution-recovery-demo\\execution-report.json",
+          "generated\\execution-recovery-demo\\artifact_manifest.json",
+          "generated\\execution-recovery-demo\\build.sh",
+          "generated\\execution-recovery-demo\\Dockerfile.build"
+        ],
+        "required_artifacts": [
+          "generated\\execution-recovery-demo\\run_demo.py",
+          "generated\\execution-recovery-demo\\build-report.json",
+          "generated\\execution-recovery-demo\\test-report.json",
+          "generated\\execution-recovery-demo\\execution-report.json",
+          "generated\\execution-recovery-demo\\artifact_manifest.json",
+          "generated\\execution-recovery-demo\\build.sh",
+          "generated\\execution-recovery-demo\\Dockerfile.build"
+        ],
+        "evidence": [
+          "build-report.json",
+          "test-report.json",
+          "execution-report.json"
+        ],
+        "verification": {
+          "build_required": true,
+          "tests_required": true,
+          "runtime_required": true
+        },
+        "registry": "artifact_registry",
+        "test_command": "run_demo.py --self-test",
+        "min_fresh_artifacts": 7
+      },
+      "required_count": 7,
+      "min_fresh_artifacts": 7,
+      "fresh_artifacts": [
+        {
+          "path": "D:\\codex\\generated\\execution-recovery-demo\\run_demo.py",
+          "size": 446,
+          "mtime": "2026-03-30T12:47:14.801086Z",
+          "observed_at": "2026-03-30T12:47:14.801086Z"
+        },
+        {
+          "path": "D:\\codex\\generated\\execution-recovery-demo\\build-report.json",
+          "size": 357,
+          "mtime": "2026-03-30T12:47:15.861054Z",
+          "observed_at": "2026-03-30T12:47:15.686478Z"
+        },
+        {
+          "path": "D:\\codex\\generated\\execution-recovery-demo\\test-report.json",
+          "size": 350,
+          "mtime": "2026-03-30T12:47:16.677424Z",
+          "observed_at": "2026-03-30T12:47:16.675424Z"
+        },
+        {
+          "path": "D:\\codex\\generated\\execution-recovery-demo\\execution-report.json",
+          "size": 423,
+          "mtime": "2026-03-30T12:47:17.989361Z",
+          "observed_at": "2026-03-30T12:47:17.976858Z"
+        },
+        {
+          "path": "D:\\codex\\generated\\execution-recovery-demo\\artifact_manifest.json",
+          "size": 491,
+          "mtime": "2026-03-30T12:47:18.011478Z",
+          "observed_at": "2026-03-30T12:47:17.976858Z"
+        },
+        {
+          "path": "D:\\codex\\generated\\execution-recovery-demo\\build.sh",
+          "size": 51,
+          "mtime": "2026-03-30T12:47:14.956559Z",
+          "observed_at": "2026-03-30T12:47:14.956559Z"
+        },
+        {
+          "path": "D:\\codex\\generated\\execution-recovery-demo\\Dockerfile.build",
+          "size": 104,
+          "mtime": "2026-03-30T12:47:15.033796Z",
+          "observed_at": "2026-03-30T12:47:15.033796Z"
+        }
+      ],
+      "stale_artifacts": [],
+      "missing_artifacts": []
+    }
+  },
+  "delivery_state": "released",
+  "title": "Execution recovery: smoke and runnable artifact",
+  "prompt": "Execution recovery task: produce a real completed task and a runnable artifact.",
+  "scheduler_hint": {
+    "recovery_task": true,
+    "scheduled_by": "factory-daemon.recovery",
+    "factory_pool": "ops",
+    "execution_mode": "production",
+    "title": "Execution recovery: smoke and runnable artifact"
+  },
+  "context_package": {},
+  "plan": [
+    {
+      "id": "b1bc2e24",
+      "title": "Write recovery smoke file",
+      "status": "completed",
+      "worker": "docker",
+      "phase": "execute"
+    },
+    {
+      "id": "a67e8b89",
+      "title": "Probe direct LLM path",
+      "status": "completed",
+      "worker": "docker",
+      "phase": "execute"
+    },
+    {
+      "id": "a53053da",
+      "title": "Create runnable recovery artifact",
+      "status": "completed",
+      "worker": "docker",
+      "phase": "execute"
+    },
+    {
+      "id": "8e2fc15b",
+      "title": "Verify recovery artifact",
+      "status": "completed",
+      "worker": "docker",
+      "phase": "verify"
+    }
+  ],
+  "result": {
+    "summary": "Resumed from saved task plan.",
+    "completed_steps": 4,
+    "context_used_chars": 586,
+    "cheap_calls_used": 0,
+    "cheap_chars_used": 0,
+    "escalation_count": 0,
+    "execution_mode": "production",
+    "execution_status": "execution_finished",
+    "production_evidence": {
+      "mode": "production",
+      "status": "verified",
+      "artifact_spec": {
+        "artifact_id": "execution-recovery-demo",
+        "artifact_type": "demo",
+        "type": "demo",
+        "output": "generated\\execution-recovery-demo",
+        "entrypoint": "generated\\execution-recovery-demo\\run_demo.py",
+        "deliverables": [
+          "generated\\execution-recovery-demo\\run_demo.py",
+          "generated\\execution-recovery-demo\\build-report.json",
+          "generated\\execution-recovery-demo\\test-report.json",
+          "generated\\execution-recovery-demo\\execution-report.json",
+          "generated\\execution-recovery-demo\\artifact_manifest.json",
+          "generated\\execution-recovery-demo\\build.sh",
+          "generated\\execution-recovery-demo\\Dockerfile.build"
+        ],
+        "expected_outputs": [
+          "generated\\execution-recovery-demo\\run_demo.py",
+          "generated\\execution-recovery-demo\\build-report.json",
+          "generated\\execution-recovery-demo\\test-report.json",
+          "generated\\execution-recovery-demo\\execution-report.json",
+          "generated\\execution-recovery-demo\\artifact_manifest.json",
+          "generated\\execution-recovery-demo\\build.sh",
+          "generated\\execution-recovery-demo\\Dockerfile.build"
+        ],
+        "required_artifacts": [
+          "generated\\execution-recovery-demo\\run_demo.py",
+          "generated\\execution-recovery-demo\\build-report.json",
+          "generated\\execution-recovery-demo\\test-report.json",
+          "generated\\execution-recovery-demo\\execution-report.json",
+          "generated\\execution-recovery-demo\\artifact_manifest.json",
+          "generated\\execution-recovery-demo\\build.sh",
+          "generated\\execution-recovery-demo\\Dockerfile.build"
+        ],
+        "evidence": [
+          "build-report.json",
+          "test-report.json",
+          "execution-report.json"
+        ],
+        "verification": {
+          "build_required": true,
+          "tests_required": true,
+          "runtime_required": true
+        },
+        "registry": "artifact_registry",
+        "test_command": "run_demo.py --self-test",
+        "min_fresh_artifacts": 7
+      },
+      "required_count": 7,
+      "min_fresh_artifacts": 7,
+      "fresh_artifacts": [
+        {
+          "path": "D:\\codex\\generated\\execution-recovery-demo\\run_demo.py",
+          "size": 446,
+          "mtime": "2026-03-30T12:47:14.801086Z",
+          "observed_at": "2026-03-30T12:47:14.801086Z"
+        },
+        {
+          "path": "D:\\codex\\generated\\execution-recovery-demo\\build-report.json",
+          "size": 357,
+          "mtime": "2026-03-30T12:47:15.861054Z",
+          "observed_at": "2026-03-30T12:47:15.686478Z"
+        },
+        {
+          "path": "D:\\codex\\generated\\execution-recovery-demo\\test-report.json",
+          "size": 350,
+          "mtime": "2026-03-30T12:47:16.677424Z",
+          "observed_at": "2026-03-30T12:47:16.675424Z"
+        },
+        {
+          "path": "D:\\codex\\generated\\execution-recovery-demo\\execution-report.json",
+          "size": 423,
+          "mtime": "2026-03-30T12:47:17.989361Z",
+          "observed_at": "2026-03-30T12:47:17.976858Z"
+        },
+        {
+          "path": "D:\\codex\\generated\\execution-recovery-demo\\artifact_manifest.json",
+          "size": 491,
+          "mtime": "2026-03-30T12:47:18.011478Z",
+          "observed_at": "2026-03-30T12:47:17.976858Z"
+        },
+        {
+          "path": "D:\\codex\\generated\\execution-recovery-demo\\build.sh",
+          "size": 51,
+          "mtime": "2026-03-30T12:47:14.956559Z",
+          "observed_at": "2026-03-30T12:47:14.956559Z"
+        },
+        {
+          "path": "D:\\codex\\generated\\execution-recovery-demo\\Dockerfile.build",
+          "size": 104,
+          "mtime": "2026-03-30T12:47:15.033796Z",
+          "observed_at": "2026-03-30T12:47:15.033796Z"
+        }
+      ],
+      "stale_artifacts": [],
+      "missing_artifacts": []
+    },
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\ae4811ba0a084ec39e3e0448095eea6f\\execution-evidence.json",
+    "execution_evidence_step_count": 4,
+    "verification_contract": {
+      "verification_level": "L1",
+      "required_checks": [
+        "contract_valid",
+        "build_success",
+        "tests_pass",
+        "artifact_manifest_present",
+        "evidence_fresh"
+      ],
+      "artifact_requirements": {
+        "must_register_artifact": true,
+        "must_have_timestamp": true,
+        "must_have_files": [
+          "generated\\execution-recovery-demo\\run_demo.py",
+          "generated\\execution-recovery-demo\\build-report.json",
+          "generated\\execution-recovery-demo\\test-report.json",
+          "generated\\execution-recovery-demo\\execution-report.json",
+          "generated\\execution-recovery-demo\\artifact_manifest.json",
+          "generated\\execution-recovery-demo\\build.sh",
+          "generated\\execution-recovery-demo\\Dockerfile.build"
+        ],
+        "expected_outputs": [
+          "generated\\execution-recovery-demo\\run_demo.py",
+          "generated\\execution-recovery-demo\\build-report.json",
+          "generated\\execution-recovery-demo\\test-report.json",
+          "generated\\execution-recovery-demo\\execution-report.json",
+          "generated\\execution-recovery-demo\\artifact_manifest.json",
+          "generated\\execution-recovery-demo\\build.sh",
+          "generated\\execution-recovery-demo\\Dockerfile.build"
+        ],
+        "entrypoint": "generated\\execution-recovery-demo\\run_demo.py",
+        "artifact_type": "demo",
+        "test_command": "run_demo.py --self-test"
+      },
+      "release_gate": "all_required_checks_pass",
+      "failure_policy": "return_to_planner",
+      "evidence_requirements": [],
+      "verification_notes": [
+        "Recover stable execution output",
+        "Produce explicit verification output or a bounded failure report.",
+        "Do not treat documentation-only progress as production completion.",
+        "Task is invalid unless the declared artifact set is refreshed and verifiable."
+      ]
+    },
+    "verification_result": {
+      "status": "verified",
+      "passed": true,
+      "mode": "production",
+      "verification_level": "L1",
+      "contract": {
+        "verification_level": "L1",
+        "required_checks": [
+          "contract_valid",
+          "build_success",
+          "tests_pass",
+          "artifact_manifest_present",
+          "evidence_fresh"
+        ],
+        "artifact_requirements": {
+          "must_register_artifact": true,
+          "must_have_timestamp": true,
+          "must_have_files": [
+            "generated\\execution-recovery-demo\\run_demo.py",
+            "generated\\execution-recovery-demo\\build-report.json",
+            "generated\\execution-recovery-demo\\test-report.json",
+            "generated\\execution-recovery-demo\\execution-report.json",
+            "generated\\execution-recovery-demo\\artifact_manifest.json",
+            "generated\\execution-recovery-demo\\build.sh",
+            "generated\\execution-recovery-demo\\Dockerfile.build"
+          ],
+          "expected_outputs": [
+            "generated\\execution-recovery-demo\\run_demo.py",
+            "generated\\execution-recovery-demo\\build-report.json",
+            "generated\\execution-recovery-demo\\test-report.json",
+            "generated\\execution-recovery-demo\\execution-report.json",
+            "generated\\execution-recovery-demo\\artifact_manifest.json",
+            "generated\\execution-recovery-demo\\build.sh",
+            "generated\\execution-recovery-demo\\Dockerfile.build"
+          ],
+          "entrypoint": "generated\\execution-recovery-demo\\run_demo.py",
+          "artifact_type": "demo",
+          "test_command": "run_demo.py --self-test"
+        },
+        "release_gate": "all_required_checks_pass",
+        "failure_policy": "return_to_planner",
+        "evidence_requirements": [],
+        "verification_notes": [
+          "Recover stable execution output",
+          "Produce explicit verification output or a bounded failure report.",
+          "Do not treat documentation-only progress as production completion.",
+          "Task is invalid unless the declared artifact set is refreshed and verifiable."
+        ]
+      },
+      "evidence": {
+        "mode": "production",
+        "status": "verified",
+        "artifact_spec": {
+          "artifact_id": "execution-recovery-demo",
+          "artifact_type": "demo",
+          "type": "demo",
+          "output": "generated\\execution-recovery-demo",
+          "entrypoint": "generated\\execution-recovery-demo\\run_demo.py",
+          "deliverables": [
+            "generated\\execution-recovery-demo\\run_demo.py",
+            "generated\\execution-recovery-demo\\build-report.json",
+            "generated\\execution-recovery-demo\\test-report.json",
+            "generated\\execution-recovery-demo\\execution-report.json",
+            "generated\\execution-recovery-demo\\artifact_manifest.json",
+            "generated\\execution-recovery-demo\\build.sh",
+            "generated\\execution-recovery-demo\\Dockerfile.build"
+          ],
+          "expected_outputs": [
+            "generated\\execution-recovery-demo\\run_demo.py",
+            "generated\\execution-recovery-demo\\build-report.json",
+            "generated\\execution-recovery-demo\\test-report.json",
+            "generated\\execution-recovery-demo\\execution-report.json",
+            "generated\\execution-recovery-demo\\artifact_manifest.json",
+            "generated\\execution-recovery-demo\\build.sh",
+            "generated\\execution-recovery-demo\\Dockerfile.build"
+          ],
+          "required_artifacts": [
+            "generated\\execution-recovery-demo\\run_demo.py",
+            "generated\\execution-recovery-demo\\build-report.json",
+            "generated\\execution-recovery-demo\\test-report.json",
+            "generated\\execution-recovery-demo\\execution-report.json",
+            "generated\\execution-recovery-demo\\artifact_manifest.json",
+            "generated\\execution-recovery-demo\\build.sh",
+            "generated\\execution-recovery-demo\\Dockerfile.build"
+          ],
+          "evidence": [
+            "build-report.json",
+            "test-report.json",
+            "execution-report.json"
+          ],
+          "verification": {
+            "build_required": true,
+            "tests_required": true,
+            "runtime_required": true
+          },
+          "registry": "artifact_registry",
+          "test_command": "run_demo.py --self-test",
+          "min_fresh_artifacts": 7
+        },
+        "required_count": 7,
+        "min_fresh_artifacts": 7,
+        "fresh_artifacts": [
+          {
+            "path": "D:\\codex\\generated\\execution-recovery-demo\\run_demo.py",
+            "size": 446,
+            "mtime": "2026-03-30T12:47:14.801086Z",
+            "observed_at": "2026-03-30T12:47:14.801086Z"
+          },
+          {
+            "path": "D:\\codex\\generated\\execution-recovery-demo\\build-report.json",
+            "size": 357,
+            "mtime": "2026-03-30T12:47:15.861054Z",
+            "observed_at": "2026-03-30T12:47:15.686478Z"
+          },
+          {
+            "path": "D:\\codex\\generated\\execution-recovery-demo\\test-report.json",
+            "size": 350,
+            "mtime": "2026-03-30T12:47:16.677424Z",
+            "observed_at": "2026-03-30T12:47:16.675424Z"
+          },
+          {
+            "path": "D:\\codex\\generated\\execution-recovery-demo\\execution-report.json",
+            "size": 423,
+            "mtime": "2026-03-30T12:47:17.989361Z",
+            "observed_at": "2026-03-30T12:47:17.976858Z"
+          },
+          {
+            "path": "D:\\codex\\generated\\execution-recovery-demo\\artifact_manifest.json",
+            "size": 491,
+            "mtime": "2026-03-30T12:47:18.011478Z",
+            "observed_at": "2026-03-30T12:47:17.976858Z"
+          },
+          {
+            "path": "D:\\codex\\generated\\execution-recovery-demo\\build.sh",
+            "size": 51,
+            "mtime": "2026-03-30T12:47:14.956559Z",
+            "observed_at": "2026-03-30T12:47:14.956559Z"
+          },
+          {
+            "path": "D:\\codex\\generated\\execution-recovery-demo\\Dockerfile.build",
+            "size": 104,
+            "mtime": "2026-03-30T12:47:15.033796Z",
+            "observed_at": "2026-03-30T12:47:15.033796Z"
+          }
+        ],
+        "stale_artifacts": [],
+        "missing_artifacts": []
+      }
+    },
+    "delivery_state": "released"
+  }
+}

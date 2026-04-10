@@ -1,0 +1,433 @@
+{
+  "task_id": "e72f3d97221745f18901318475256d52",
+  "task_status": "released",
+  "phase": "verification-passed",
+  "updated_at": "2026-04-02T22:10:07.763024Z",
+  "heartbeat_at": "2026-04-02T22:10:07.763024Z",
+  "repo_path": "D:\\codex\\orchestrator-mvp",
+  "goal": "Use the assistant as the primary implementation worker for ToyOS.",
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": "runtime.failure_backlog_automation",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\e72f3d97221745f18901318475256d52",
+  "completed_steps": 3,
+  "verification_result": {
+    "status": "verified",
+    "passed": true,
+    "mode": "governance",
+    "verification_level": "L2",
+    "contract": {
+      "verification_level": "L2",
+      "required_checks": [
+        "contract_valid",
+        "build_success",
+        "tests_pass",
+        "smoke_pass",
+        "artifact_manifest_present",
+        "evidence_fresh",
+        "release_checklist"
+      ],
+      "artifact_requirements": {
+        "must_register_artifact": true,
+        "must_have_timestamp": true,
+        "must_have_files": [
+          "build-report.json",
+          "build/kernel.bin",
+          "build/generic-qemu-smoke-report.json",
+          "score-report.json"
+        ],
+        "expected_outputs": []
+      },
+      "release_gate": "all_required_checks_pass",
+      "failure_policy": "return_to_planner",
+      "evidence_requirements": [
+        "build-report.json",
+        "build/kernel.bin",
+        "build/generic-qemu-smoke-report.json",
+        "score-report.json"
+      ],
+      "verification_notes": [
+        "Production completion requires fresh ToyOS artifacts, not just docs or source edits.",
+        "Prefer build-report.json, generic-qemu-smoke-report.json, kernel.bin, and score-report.json.",
+        "Use the assistant as the primary implementation worker for ToyOS.",
+        "Produce explicit verification output or a bounded failure report.",
+        "Keep governance work separate from implementation claims.",
+        "Refresh ToyOS build-report.json for this execution.",
+        "Refresh ToyOS runtime evidence such as kernel.bin or generic-qemu-smoke-report.json.",
+        "Refresh ToyOS score-report.json before claiming production completion."
+      ]
+    },
+    "evidence": {
+      "status": "verified",
+      "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\e72f3d97221745f18901318475256d52\\execution-evidence.json",
+      "execution_evidence_present": true,
+      "required_checks": [
+        "contract_valid",
+        "build_success",
+        "tests_pass",
+        "smoke_pass",
+        "artifact_manifest_present",
+        "evidence_fresh",
+        "release_checklist"
+      ],
+      "artifact_requirements": {
+        "must_register_artifact": true,
+        "must_have_timestamp": true,
+        "must_have_files": [
+          "build-report.json",
+          "build/kernel.bin",
+          "build/generic-qemu-smoke-report.json",
+          "score-report.json"
+        ],
+        "expected_outputs": []
+      }
+    }
+  },
+  "delivery_state": "released",
+  "title": "ToyOS Mainline Development",
+  "prompt": "Use WSL and QEMU as the default loop for ToyOS changes, keep patches small, preserve bootability, run VM tests, and escalate only for architecture or repeated runtime failures.",
+  "scheduler_hint": {
+    "automation_source": "failure_backlog_automation",
+    "template_id": "toyos-mainline",
+    "template_category": "kernel",
+    "cluster_key": "restore toyos real artifact delivery",
+    "cluster_count": 31,
+    "cluster_status": "attention",
+    "handling_mode": "toyos_replenishment",
+    "dispatch_now": false,
+    "admission_mode": "degraded",
+    "scheduled_by": "runtime.failure_backlog_automation"
+  },
+  "context_package": {},
+  "plan": [
+    {
+      "id": "6d63e5ac",
+      "title": "Spawn decomposition subtasks",
+      "status": "completed",
+      "worker": "planner",
+      "phase": "decompose"
+    },
+    {
+      "id": "f49a0d8b",
+      "title": "Wait for child task completion",
+      "status": "completed",
+      "worker": "planner",
+      "phase": "decompose"
+    },
+    {
+      "id": "1c9ca4ac",
+      "title": "Aggregate decomposition results",
+      "status": "completed",
+      "worker": "reviewer",
+      "phase": "verify"
+    }
+  ],
+  "verification_signals": [
+    {
+      "timestamp": "2026-04-02T21:17:48.460581Z",
+      "kind": "admission_accepted",
+      "success": true,
+      "task_id": "e72f3d97221745f18901318475256d52",
+      "admission_lane": null,
+      "admission_reason": null,
+      "execution_mode": "governance",
+      "queue_name": "incubation",
+      "task_type": "subsystem_refactor"
+    },
+    {
+      "timestamp": "2026-04-02T21:38:39.020481Z",
+      "kind": "decomposition_spawned",
+      "success": true,
+      "task_id": "e72f3d97221745f18901318475256d52",
+      "child_task_count": 3,
+      "child_task_ids": [
+        "c40c1625f8fc46cf889e551ea99c3814",
+        "d018e4b28ad543c38273177d8f9d5f90",
+        "8457292c6c1945cca578e8fe3b564ac2"
+      ],
+      "dag": {
+        "shared_nodes": [
+          "Analyze the current state"
+        ],
+        "branch_nodes": [
+          "Implement the bounded change"
+        ],
+        "repair_nodes": [
+          "Validate the result"
+        ],
+        "optional_nodes": [],
+        "speculative_nodes": [],
+        "blocked_nodes": [],
+        "edges": [
+          {
+            "from": "Analyze the current state",
+            "to": "Implement the bounded change",
+            "kind": "branch"
+          },
+          {
+            "from": "Analyze the current state",
+            "to": "Validate the result",
+            "kind": "repair"
+          },
+          {
+            "from": "Implement the bounded change",
+            "to": "Validate the result",
+            "kind": "repair"
+          }
+        ],
+        "shared_dependency_group": "e72f3d97221745f18901318475256d52",
+        "child_dependency_ids": {
+          "c40c1625f8fc46cf889e551ea99c3814": [],
+          "d018e4b28ad543c38273177d8f9d5f90": [
+            "c40c1625f8fc46cf889e551ea99c3814"
+          ],
+          "8457292c6c1945cca578e8fe3b564ac2": [
+            "c40c1625f8fc46cf889e551ea99c3814",
+            "d018e4b28ad543c38273177d8f9d5f90"
+          ]
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-02T21:49:18.122144Z",
+      "kind": "step_completed",
+      "success": true,
+      "task_id": "e72f3d97221745f18901318475256d52",
+      "step_id": "6d63e5ac",
+      "step_title": "Spawn decomposition subtasks",
+      "worker": "planner",
+      "phase": "decompose",
+      "route_model": "internal-recovery",
+      "route_provider": "runtime",
+      "elapsed_ms": 1552984,
+      "output_ref": {
+        "artifact_id": "ctx_342cdf4ce82d",
+        "task_id": "e72f3d97221745f18901318475256d52",
+        "step_id": "6d63e5ac",
+        "channel": "planner-output",
+        "title": "Spawn decomposition subtasks output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\e72f3d97221745f18901318475256d52\\6d63e5ac-planner-output-ctx_342cdf4ce82d.json",
+        "size_chars": 960,
+        "line_count": 34,
+        "created_at": "2026-04-02T21:47:31.892369Z",
+        "metadata": {
+          "worker": "planner",
+          "phase": "decompose",
+          "route_model": "internal-recovery",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 960,
+        "line_count": 34,
+        "stored_raw": true
+      }
+    },
+    {
+      "timestamp": "2026-04-02T22:07:13.091031Z",
+      "kind": "step_completed",
+      "success": true,
+      "task_id": "e72f3d97221745f18901318475256d52",
+      "step_id": "f49a0d8b",
+      "step_title": "Wait for child task completion",
+      "worker": "planner",
+      "phase": "decompose",
+      "route_model": "internal-recovery",
+      "route_provider": "runtime",
+      "elapsed_ms": 794187,
+      "output_ref": {
+        "artifact_id": "ctx_2a1cef740d7b",
+        "task_id": "e72f3d97221745f18901318475256d52",
+        "step_id": "f49a0d8b",
+        "channel": "planner-output",
+        "title": "Wait for child task completion output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\e72f3d97221745f18901318475256d52\\f49a0d8b-planner-output-ctx_2a1cef740d7b.json",
+        "size_chars": 12741,
+        "line_count": 175,
+        "created_at": "2026-04-02T22:06:54.187324Z",
+        "metadata": {
+          "worker": "planner",
+          "phase": "decompose",
+          "route_model": "internal-recovery",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 12741,
+        "line_count": 175,
+        "stored_raw": true
+      }
+    },
+    {
+      "timestamp": "2026-04-02T22:09:15.227465Z",
+      "kind": "step_completed",
+      "success": true,
+      "task_id": "e72f3d97221745f18901318475256d52",
+      "step_id": "1c9ca4ac",
+      "step_title": "Aggregate decomposition results",
+      "worker": "reviewer",
+      "phase": "verify",
+      "route_model": "internal-recovery",
+      "route_provider": "runtime",
+      "elapsed_ms": 60515,
+      "output_ref": {
+        "artifact_id": "ctx_3c7ff0936f4e",
+        "task_id": "e72f3d97221745f18901318475256d52",
+        "step_id": "1c9ca4ac",
+        "channel": "reviewer-output",
+        "title": "Aggregate decomposition results output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\e72f3d97221745f18901318475256d52\\1c9ca4ac-reviewer-output-ctx_3c7ff0936f4e.json",
+        "size_chars": 1142,
+        "line_count": 35,
+        "created_at": "2026-04-02T22:08:53.727703Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "verify",
+          "route_model": "internal-recovery",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 1142,
+        "line_count": 35,
+        "stored_raw": true
+      }
+    }
+  ],
+  "verification_signal_count": 5,
+  "result": {
+    "summary": "Fallback decomposition for: Use WSL and QEMU as the default loop for ToyOS changes, keep patches small, preserve bootability, run VM tests, and esca",
+    "completed_steps": 3,
+    "context_used_chars": 637,
+    "cheap_calls_used": 0,
+    "cheap_chars_used": 0,
+    "escalation_count": 0,
+    "execution_mode": "governance",
+    "execution_status": "execution_finished",
+    "production_evidence": {
+      "mode": "governance",
+      "status": "not-required"
+    },
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\e72f3d97221745f18901318475256d52\\execution-evidence.json",
+    "execution_evidence_step_count": 3,
+    "verification_contract": {
+      "verification_level": "L2",
+      "required_checks": [
+        "contract_valid",
+        "build_success",
+        "tests_pass",
+        "smoke_pass",
+        "artifact_manifest_present",
+        "evidence_fresh",
+        "release_checklist"
+      ],
+      "artifact_requirements": {
+        "must_register_artifact": true,
+        "must_have_timestamp": true,
+        "must_have_files": [
+          "build-report.json",
+          "build/kernel.bin",
+          "build/generic-qemu-smoke-report.json",
+          "score-report.json"
+        ],
+        "expected_outputs": []
+      },
+      "release_gate": "all_required_checks_pass",
+      "failure_policy": "return_to_planner",
+      "evidence_requirements": [
+        "build-report.json",
+        "build/kernel.bin",
+        "build/generic-qemu-smoke-report.json",
+        "score-report.json"
+      ],
+      "verification_notes": [
+        "Production completion requires fresh ToyOS artifacts, not just docs or source edits.",
+        "Prefer build-report.json, generic-qemu-smoke-report.json, kernel.bin, and score-report.json.",
+        "Use the assistant as the primary implementation worker for ToyOS.",
+        "Produce explicit verification output or a bounded failure report.",
+        "Keep governance work separate from implementation claims.",
+        "Refresh ToyOS build-report.json for this execution.",
+        "Refresh ToyOS runtime evidence such as kernel.bin or generic-qemu-smoke-report.json.",
+        "Refresh ToyOS score-report.json before claiming production completion."
+      ]
+    },
+    "verification_result": {
+      "status": "verified",
+      "passed": true,
+      "mode": "governance",
+      "verification_level": "L2",
+      "contract": {
+        "verification_level": "L2",
+        "required_checks": [
+          "contract_valid",
+          "build_success",
+          "tests_pass",
+          "smoke_pass",
+          "artifact_manifest_present",
+          "evidence_fresh",
+          "release_checklist"
+        ],
+        "artifact_requirements": {
+          "must_register_artifact": true,
+          "must_have_timestamp": true,
+          "must_have_files": [
+            "build-report.json",
+            "build/kernel.bin",
+            "build/generic-qemu-smoke-report.json",
+            "score-report.json"
+          ],
+          "expected_outputs": []
+        },
+        "release_gate": "all_required_checks_pass",
+        "failure_policy": "return_to_planner",
+        "evidence_requirements": [
+          "build-report.json",
+          "build/kernel.bin",
+          "build/generic-qemu-smoke-report.json",
+          "score-report.json"
+        ],
+        "verification_notes": [
+          "Production completion requires fresh ToyOS artifacts, not just docs or source edits.",
+          "Prefer build-report.json, generic-qemu-smoke-report.json, kernel.bin, and score-report.json.",
+          "Use the assistant as the primary implementation worker for ToyOS.",
+          "Produce explicit verification output or a bounded failure report.",
+          "Keep governance work separate from implementation claims.",
+          "Refresh ToyOS build-report.json for this execution.",
+          "Refresh ToyOS runtime evidence such as kernel.bin or generic-qemu-smoke-report.json.",
+          "Refresh ToyOS score-report.json before claiming production completion."
+        ]
+      },
+      "evidence": {
+        "status": "verified",
+        "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\e72f3d97221745f18901318475256d52\\execution-evidence.json",
+        "execution_evidence_present": true,
+        "required_checks": [
+          "contract_valid",
+          "build_success",
+          "tests_pass",
+          "smoke_pass",
+          "artifact_manifest_present",
+          "evidence_fresh",
+          "release_checklist"
+        ],
+        "artifact_requirements": {
+          "must_register_artifact": true,
+          "must_have_timestamp": true,
+          "must_have_files": [
+            "build-report.json",
+            "build/kernel.bin",
+            "build/generic-qemu-smoke-report.json",
+            "score-report.json"
+          ],
+          "expected_outputs": []
+        }
+      }
+    },
+    "delivery_state": "released"
+  }
+}

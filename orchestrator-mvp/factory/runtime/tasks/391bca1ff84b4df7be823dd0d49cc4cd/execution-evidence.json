@@ -1,0 +1,85 @@
+{
+  "task_id": "391bca1ff84b4df7be823dd0d49cc4cd",
+  "task_title": "Align project Database Systems Lab for Strengthen agent orchestration capability",
+  "task_status": "timed_out",
+  "started_at": "2026-03-20T14:08:35.221750Z",
+  "updated_at": "2026-03-20T14:30:56.446404Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "ecd95e99",
+      "step_title": "Understand task",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-03-20T14:30:56.446404Z",
+      "phase": "understand",
+      "worker": "reviewer",
+      "status": "running",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "84fec64b",
+      "step_title": "Draft solution",
+      "action": "coder_step",
+      "ok": false,
+      "at": "2026-03-20T14:30:56.446404Z",
+      "phase": "draft",
+      "worker": "coder",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "0dffbc7a",
+      "step_title": "Execute validation",
+      "action": "shell_step",
+      "ok": false,
+      "at": "2026-03-20T14:30:56.446404Z",
+      "phase": "execute",
+      "worker": "shell",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "e6ac89f2",
+      "step_title": "Verify result",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-03-20T14:30:56.446404Z",
+      "phase": "verify",
+      "worker": "reviewer",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "d9325f2f",
+      "step_title": "Revise next action",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-03-20T14:30:56.446404Z",
+      "phase": "revise",
+      "worker": "reviewer",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    }
+  ],
+  "result": {
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

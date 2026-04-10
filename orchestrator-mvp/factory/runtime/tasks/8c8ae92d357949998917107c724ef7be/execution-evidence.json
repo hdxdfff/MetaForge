@@ -1,0 +1,391 @@
+{
+  "task_id": "8c8ae92d357949998917107c724ef7be",
+  "task_title": "Localize ToyOS build break",
+  "task_status": "timed_out",
+  "started_at": "2026-03-29T01:21:33.982553Z",
+  "updated_at": "2026-03-29T10:21:38.908307Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "8c8ae92d357949998917107c724ef7be-terminal-record",
+      "step_title": "Localize ToyOS build break",
+      "action": "task_terminal_record",
+      "ok": false,
+      "at": "2026-03-29T10:21:38.908307Z",
+      "status": "timed_out",
+      "summary": null,
+      "error": "Task timed out after 120 minutes without progress.",
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ],
+  "result": {
+    "state": "queued_for_backlog",
+    "reason": "Backlog admission deferred until active capacity is available.",
+    "scheduler_hint": {
+      "goal_primary": "Restore ToyOS real artifact delivery",
+      "goal_mode": "toyos_priority_mode",
+      "goal_target": "Restore ToyOS real artifact delivery",
+      "goal_id": "goal_42e8cd07d0",
+      "graph_id": "graph_c9ae2e2b6e",
+      "node_id": "build_break_localization",
+      "node_title": "Localize ToyOS build break",
+      "task_type": "build_fix",
+      "queue_name": "build_test",
+      "verification_level": "L2",
+      "max_runtime_seconds": 2400,
+      "retry_limit": 1,
+      "rollback_rule": "mark_failed_and_requeue_split",
+      "template_id": "build_break_localization",
+      "admission_mode": "degraded",
+      "module_focus": [
+        "tools.factory_daemon",
+        "tools.brain_loop",
+        "tools.artifact_audit",
+        "tools.scheduling_kernel",
+        "tools.self_model"
+      ],
+      "owner_teams": [
+        "infrastructure_team"
+      ],
+      "layers": [
+        "unclassified"
+      ],
+      "graph_matches": [
+        {
+          "module": "tools.factory_daemon",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified",
+          "dependency_count": 36,
+          "dependents": 0,
+          "internal_imports": [
+            "app.config",
+            "app.main",
+            "tools.ai_guard",
+            "tools.ai_runtime_observability",
+            "tools.ai_testing_compat",
+            "tools.architecture_validator",
+            "tools.autonomy_score",
+            "tools.autonomy_state",
+            "tools.brain_loop",
+            "tools.code_knowledge_graph",
+            "tools.company_os",
+            "tools.coordination_runtime",
+            "tools.cross_project_coordination",
+            "tools.economics_engine",
+            "tools.environment_repair_lane",
+            "tools.experiment_evaluator",
+            "tools.experiment_executor",
+            "tools.experiment_planner",
+            "tools.factory_event_log",
+            "tools.factory_self_report",
+            "tools.factory_state",
+            "tools.global_policy_engine",
+            "tools.goal_runtime",
+            "tools.identity_kernel",
+            "tools.kernel_mode",
+            "tools.meta_factory_control",
+            "tools.module_ownership",
+            "tools.release_operations",
+            "tools.release_train_runtime",
+            "tools.runtime_maintenance",
+            "tools.schema_hygiene",
+            "tools.score_toy_os",
+            "tools.self_model",
+            "tools.shadow_pipeline_bridge",
+            "tools.tool_health_audit",
+            "tools.verification_engine"
+          ]
+        },
+        {
+          "module": "tools.brain_loop",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified",
+          "dependency_count": 41,
+          "dependents": 3,
+          "internal_imports": [
+            "app.main",
+            "app.models",
+            "runtime.platform_generator",
+            "runtime.scheduler",
+            "tools.ai_guard",
+            "tools.ai_testing_compat",
+            "tools.capability_distillation",
+            "tools.context_kernel",
+            "tools.coordination_runtime",
+            "tools.cross_project_coordination",
+            "tools.decision_engine",
+            "tools.experiment_evaluator",
+            "tools.experiment_executor",
+            "tools.experiment_planner",
+            "tools.factory_task_engine",
+            "tools.github_capability_library",
+            "tools.github_learning_engine",
+            "tools.global_policy_engine",
+            "tools.goal_backlog_replenisher",
+            "tools.goal_registry",
+            "tools.goal_runtime",
+            "tools.goal_storage_audit",
+            "tools.io_utils",
+            "tools.kernel_mode",
+            "tools.knowledge_engine",
+            "tools.memory_system",
+            "tools.module_ownership",
+            "tools.platform_registry",
+            "tools.platform_verification_sweep",
+            "tools.privilege_policy",
+            "tools.production_focus",
+            "tools.prompt_improvement_sweep",
+            "tools.release_operations",
+            "tools.release_train_runtime",
+            "tools.runtime_maintenance",
+            "tools.scheduler_optimization_sweep",
+            "tools.scheduling_kernel",
+            "tools.task_state_tools",
+            "tools.taskgraph_compiler",
+            "tools.tool_health_audit",
+            "tools.verification_engine"
+          ]
+        },
+        {
+          "module": "tools.artifact_audit",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified",
+          "dependency_count": 2,
+          "dependents": 8,
+          "internal_imports": [
+            "tools.io_utils",
+            "tools.strategy_engine"
+          ]
+        },
+        {
+          "module": "tools.scheduling_kernel",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified",
+          "dependency_count": 3,
+          "dependents": 1,
+          "internal_imports": [
+            "runtime.scheduler",
+            "tools.io_utils",
+            "tools.production_focus"
+          ]
+        },
+        {
+          "module": "tools.self_model",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified",
+          "dependency_count": 5,
+          "dependents": 1,
+          "internal_imports": [
+            "tools.brain_loop",
+            "tools.execution_engine",
+            "tools.runtime_maintenance",
+            "tools.strategy_engine",
+            "tools.task_state_tools"
+          ]
+        }
+      ],
+      "surface_route": {
+        "request": "Localize the ToyOS build break, identify the smallest failing scope, and produce the minimal repair note or patch.",
+        "reason": "Matched task shape: short interactive edit",
+        "task_shape": "short interactive edit",
+        "matched_keywords": [
+          "patch",
+          "build"
+        ],
+        "rule_launch_mode": "message",
+        "preferred_surface": "Aider",
+        "preferred_available": true,
+        "preferred_resolved": "D:\\codex\\bin\\aider.cmd",
+        "fallback_surface": "OpenCode",
+        "fallback_available": true,
+        "availability": {
+          "Aider": {
+            "available": true,
+            "resolved": "D:\\codex\\bin\\aider.cmd"
+          },
+          "OpenCode": {
+            "available": true,
+            "resolved": "opencode"
+          },
+          "Goose": {
+            "available": true,
+            "resolved": "D:\\codex\\bin\\goose.cmd"
+          },
+          "OpenHands": {
+            "available": true,
+            "resolved": "D:\\codex\\bin\\openhands.cmd"
+          },
+          "Plandex": {
+            "available": true,
+            "resolved": "D:\\codex\\bin\\plandex.cmd"
+          },
+          "Continue": {
+            "available": true,
+            "resolved": "D:\\Microsoft VS Code\\bin\\code.cmd"
+          },
+          "Codex": {
+            "available": true,
+            "resolved": "D:\\codex\\factoryctl.py"
+          }
+        },
+        "launch_mode": "message",
+        "launch_hint": "D:\\codex\\bin\\aider.cmd --message Localize the ToyOS build break, identify the smallest failing scope, and produce the minimal repair note or patch. --yes-always",
+        "next_step_command": "D:\\codex\\bin\\aider.cmd --message Localize the ToyOS build break, identify the smallest failing scope, and produce the minimal repair note or patch. --yes-always",
+        "launch_command": [
+          "D:\\codex\\bin\\aider.cmd",
+          "--message",
+          "Localize the ToyOS build break, identify the smallest failing scope, and produce the minimal repair note or patch.",
+          "--yes-always"
+        ],
+        "launch_cwd": "D:\\codex",
+        "launch_stdin_text": null,
+        "dispatchable": true,
+        "tool_stack": {
+          "version": "v1",
+          "primary_interactive_surface": "Aider",
+          "control_shells": [
+            "OpenCode",
+            "Goose"
+          ],
+          "control_plane": "MetaForge",
+          "long_task_executors": [
+            "OpenHands",
+            "Plandex"
+          ],
+          "development_executors": [
+            "Codex"
+          ],
+          "inspection_surface": "Continue",
+          "final_verification_boundary": [
+            "Verification",
+            "Artifact"
+          ],
+          "routing": [
+            {
+              "task_shape": "short interactive edit",
+              "keywords": [
+                "edit",
+                "fix",
+                "patch",
+                "refactor",
+                "code",
+                "build",
+                "test",
+                "修复",
+                "补丁",
+                "重构",
+                "代码",
+                "构建",
+                "编译",
+                "测试"
+              ],
+              "preferred_surface": "Aider",
+              "fallback_surface": "OpenCode",
+              "launch_mode": "message",
+              "dispatchable": true
+            },
+            {
+              "task_shape": "long agentic implementation",
+              "keywords": [
+                "long",
+                "multi-step",
+                "agent",
+                "workflow",
+                "execute",
+                "run",
+                "长任务",
+                "多步",
+                "执行",
+                "运行",
+                "工作流"
+              ],
+              "preferred_surface": "OpenHands",
+              "fallback_surface": "Plandex",
+              "launch_mode": "server",
+              "dispatchable": true
+            },
+            {
+              "task_shape": "controlled management and dispatch",
+              "keywords": [
+                "dispatch",
+                "status",
+                "control",
+                "approve",
+                "reject",
+                "session",
+                "派发",
+                "状态",
+                "控制",
+                "批准",
+                "拒绝",
+                "会话"
+              ],
+              "preferred_surface": "OpenCode",
+              "fallback_surface": "Goose",
+              "launch_mode": "control",
+              "dispatchable": true
+            },
+            {
+              "task_shape": "code review and PR inspection",
+              "keywords": [
+                "review",
+                "pr",
+                "inspect",
+                "diff",
+                "check",
+                "审查",
+                "检查",
+                "复核",
+                "差异",
+                "查看"
+              ],
+              "preferred_surface": "Continue",
+              "fallback_surface": "OpenCode",
+              "launch_mode": "review",
+              "dispatchable": true
+            },
+            {
+              "task_shape": "final acceptance",
+              "keywords": [
+                "verify",
+                "verification",
+                "artifact",
+                "acceptance",
+                "最终",
+                "裁决",
+                "验收",
+                "产物"
+              ],
+              "preferred_surface": "Verification / Artifact",
+              "fallback_surface": "OpenCode",
+              "launch_mode": "verify",
+              "dispatchable": false
+            }
+          ]
+        },
+        "workspace": "D:\\codex"
+      },
+      "strategy_applied": false,
+      "strategy_explored": false,
+      "strategy_reason": "no_strong_pattern",
+      "strategy_revision": 8071,
+      "throughput": {
+        "queue_name": "build_test",
+        "task_type": "build_fix",
+        "verification_level": "L2",
+        "max_runtime_seconds": 2400,
+        "retry_limit": 1,
+        "rollback_rule": "mark_failed_and_requeue_split",
+        "artifact_key": "artifact_id:graph_c9ae2e2b6e:build_break_localization"
+      }
+    },
+    "error": "Task timed out after 120 minutes without progress."
+  }
+}

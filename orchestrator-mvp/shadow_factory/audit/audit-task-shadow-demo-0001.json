@@ -1,0 +1,17 @@
+{
+  "audit_id": "audit-task-shadow-demo-0001",
+  "task_id": "task-shadow-demo-0001",
+  "verdict": "pass",
+  "score": 100,
+  "issues": [],
+  "evidence": {
+    "build_report": "D:\\codex\\orchestrator-mvp\\shadow_factory\\artifacts\\task-shadow-demo-0001\\build-report.json",
+    "execution_report": "D:\\codex\\orchestrator-mvp\\shadow_factory\\artifacts\\task-shadow-demo-0001\\execution-report.json",
+    "artifact_paths": [
+      "D:\\codex\\orchestrator-mvp\\shadow_factory\\artifacts\\task-shadow-demo-0001\\dummy-artifact.txt"
+    ]
+  },
+  "reproducible": false,
+  "shadow_mode": true,
+  "audited_at": "2026-03-26T14:28:14Z"
+}

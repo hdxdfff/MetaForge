@@ -1,0 +1,24 @@
+﻿{
+  "id": "execution_priority_skips_self_model_during_rescue",
+  "recorded_at": "2026-03-20T02:49:30+08:00",
+  "scope": "factory_daemon",
+  "symptom": "Daemon cycles stalled after recovery or low-supervision ticks because the main loop still executed self-model and supervisory control paths before completing the tick.",
+  "trigger": {
+    "recovery_mode": true,
+    "run_meta": false,
+    "run_evolution": false,
+    "run_ai_testing": false,
+    "run_environment_lane": false
+  },
+  "fix": {
+    "execution_priority_mode": true,
+    "actions": [
+      "skip self_model during rescue or non-supervisory cycles",
+      "downgrade control_layer, coordination, release_train, release_operations, and company_os to signal-only during execution-priority cycles"
+    ]
+  },
+  "expected_effect": [
+    "tick completes quickly enough to avoid stale watchdog restarts",
+    "real task completion continues while control paths remain observable but non-blocking"
+  ]
+}

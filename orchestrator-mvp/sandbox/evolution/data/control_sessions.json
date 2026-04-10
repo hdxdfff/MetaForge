@@ -1,0 +1,59 @@
+{
+  "active_token": "e6c0bcc374a0dbd2b3f14ee149c5dbc0",
+  "sessions": [
+    {
+      "active": true,
+      "owner": "codex-control",
+      "role": "operator",
+      "token": "e6c0bcc374a0dbd2b3f14ee149c5dbc0",
+      "scope": "global",
+      "opened_at": "2026-03-10T07:35:05.889858Z",
+      "updated_at": "2026-03-10T07:35:05.889858Z"
+    },
+    {
+      "active": true,
+      "owner": "toyos-branch",
+      "role": "planner",
+      "token": "859ccc3433ffd616b40a49df590310bc",
+      "scope": "toyos-branch",
+      "opened_at": "2026-03-11T10:35:16.801786Z",
+      "updated_at": "2026-03-11T10:35:16.801786Z"
+    },
+    {
+      "active": true,
+      "owner": "opencode-control",
+      "role": "operator",
+      "token": "bbcbc3715ae76b64b3b7746687dc8ee4",
+      "scope": "global",
+      "opened_at": "2026-03-11T11:09:24.728824Z",
+      "updated_at": "2026-03-11T11:09:24.728824Z"
+    },
+    {
+      "active": true,
+      "owner": "codex",
+      "role": "operator",
+      "token": "3dfe51d9b35f381359e1d2823930352f",
+      "scope": "global",
+      "opened_at": "2026-03-11T14:25:15.995548Z",
+      "updated_at": "2026-03-11T14:25:15.995548Z"
+    },
+    {
+      "active": true,
+      "owner": "codex",
+      "role": "operator",
+      "token": "152472e6f2beb790dfdecf5001f2a77f",
+      "scope": "global",
+      "opened_at": "2026-03-11T14:37:52.718078Z",
+      "updated_at": "2026-03-11T14:37:52.718078Z"
+    },
+    {
+      "active": true,
+      "owner": "codex-main",
+      "role": "operator",
+      "token": "5638270ea753f3cbff331c936233b08d",
+      "scope": "main-control",
+      "opened_at": "2026-03-11T15:00:11.091764Z",
+      "updated_at": "2026-03-11T15:00:11.091764Z"
+    }
+  ]
+}

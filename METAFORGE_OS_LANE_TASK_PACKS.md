@@ -1,0 +1,61 @@
+﻿# MetaForge OS Lane Task Packs
+
+This file defines the immediate next-task packs for each active lane.
+
+## CEO lane
+
+Focus:
+
+- preserve workspace integrity
+- reject invalid delivery
+- arbitrate lane priorities
+
+Immediate tasks:
+
+- review lane workboard
+- keep ToyOS product lane focused on local delivery
+- keep research lane focused on routing repair proposals
+- keep chore lane focused on low-risk reports and inventories
+
+## Product lane
+
+Focus:
+
+- bounded ToyOS mainline delivery in `D:\codex\generated\toy-os-demo`
+
+Immediate tasks:
+
+- produce `TOYOS_PAGING_STAGE0_BRANCH_GOAL.md`
+- produce `TOYOS_REGRESSION_TEST_PLAN.md`
+- produce `TOYOS_SYSCALL_INVENTORY_SUMMARY.md`
+- consume `METAFORGE_OS_HIGH_THROUGHPUT_TASK_PACK.json` for the ToyOS smoke/regression batch
+
+## Research lane
+
+Focus:
+
+- routing repair, KPI, memory, self-improvement
+
+Immediate tasks:
+
+- refine routing-guard patch proposal
+- refine workspace-lock enforcement proposal
+- track route-drift evidence from current active tasks
+- align the high-throughput blueprint with queue policy and dispatch templates
+- define the first pass of queue admission and WIP enforcement checks
+- audit the first high-throughput task pack for invalid schema or routing drift
+
+## Chore lane
+
+Focus:
+
+- reports, digests, inventories, formatting
+
+Immediate tasks:
+
+- route drift digest
+- dialogue lane status digest
+- lane workboard refresh
+- refresh the high-throughput rollout checklist
+- summarize current control-plane references for the new throughput policy
+- prepare the operator-facing dispatch summary for the first throughput batch

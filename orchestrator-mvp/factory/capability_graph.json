@@ -1,0 +1,787 @@
+{
+  "updated_at": "2026-03-21T13:01:52.998613Z",
+  "nodes": [
+    {
+      "id": "local-capability-library",
+      "type": "platform",
+      "label": "MetaForge Capability Library"
+    },
+    {
+      "id": "debug_runtime",
+      "type": "capability",
+      "label": "debug_runtime"
+    },
+    {
+      "id": "design_architecture",
+      "type": "capability",
+      "label": "design_architecture"
+    },
+    {
+      "id": "fix_bug",
+      "type": "capability",
+      "label": "fix_bug"
+    },
+    {
+      "id": "write_feature",
+      "type": "capability",
+      "label": "write_feature"
+    },
+    {
+      "id": "write_test",
+      "type": "capability",
+      "label": "write_test"
+    },
+    {
+      "id": "github-learning:gh-dc17f0f4fb",
+      "type": "platform",
+      "label": "Significant-Gravitas/AutoGPT"
+    },
+    {
+      "id": "agent_orchestration",
+      "type": "capability",
+      "label": "agent_orchestration"
+    },
+    {
+      "id": "platform_2af0d9ba98",
+      "type": "platform",
+      "label": "Strengthen agent orchestration capability"
+    },
+    {
+      "id": "platform_38c67a4233",
+      "type": "platform",
+      "label": "Strengthen agent orchestration capability"
+    },
+    {
+      "id": "platform_464dac2a0b",
+      "type": "platform",
+      "label": "Optimize task scheduler from agent experience"
+    },
+    {
+      "id": "platform_4cb6cdb84e",
+      "type": "platform",
+      "label": "Strengthen agent orchestration capability"
+    },
+    {
+      "id": "platform_79a3e0e03e",
+      "type": "platform",
+      "label": "Improve cheap agent prompts"
+    },
+    {
+      "id": "platform_8755b93ba0",
+      "type": "platform",
+      "label": "Strengthen agent orchestration capability"
+    },
+    {
+      "id": "platform_8855699f64",
+      "type": "platform",
+      "label": "AI Agent Factory"
+    },
+    {
+      "id": "platform_982e1ff1de",
+      "type": "platform",
+      "label": "Strengthen agent orchestration capability"
+    },
+    {
+      "id": "platform_b27f294ffe",
+      "type": "platform",
+      "label": "Strengthen agent orchestration capability"
+    },
+    {
+      "id": "platform_f4aa8bafd6",
+      "type": "platform",
+      "label": "Strengthen agent orchestration capability"
+    },
+    {
+      "id": "platform_fa6557b2cd",
+      "type": "platform",
+      "label": "Strengthen agent orchestration capability"
+    },
+    {
+      "id": "platform_009b511d6b",
+      "type": "platform",
+      "label": "build ai-video-factory"
+    },
+    {
+      "id": "deploy_scaffold",
+      "type": "capability",
+      "label": "deploy_scaffold"
+    },
+    {
+      "id": "platform_1d10c77bbf",
+      "type": "platform",
+      "label": "Advance release train operations"
+    },
+    {
+      "id": "platform_22e2a10330",
+      "type": "platform",
+      "label": "Strengthen webapp generation capability"
+    },
+    {
+      "id": "platform_2f39873e84",
+      "type": "platform",
+      "label": "Ship deployable release artifact bundle"
+    },
+    {
+      "id": "platform_34b4031314",
+      "type": "platform",
+      "label": "Expand tool extension coverage"
+    },
+    {
+      "id": "platform_38e98c09bc",
+      "type": "platform",
+      "label": "Expand tool extension coverage"
+    },
+    {
+      "id": "platform_3f9a992241",
+      "type": "platform",
+      "label": "Deepen repo learning and knowledge routing reuse"
+    },
+    {
+      "id": "platform_4a565d61d5",
+      "type": "platform",
+      "label": "ToyOS: Deepen the security module with a demonstrable AES encryption path"
+    },
+    {
+      "id": "platform_4f5397914e",
+      "type": "platform",
+      "label": "Deepen repo learning and knowledge routing reuse"
+    },
+    {
+      "id": "platform_59154940c0",
+      "type": "platform",
+      "label": "Coordinate ToyOS Kernel with AI Math Foundations Workspace"
+    },
+    {
+      "id": "platform_67936c2b39",
+      "type": "platform",
+      "label": "Expand tool extension coverage"
+    },
+    {
+      "id": "platform_7a2f920e50",
+      "type": "platform",
+      "label": "Ship deployable release artifact bundle"
+    },
+    {
+      "id": "platform_83ed536a57",
+      "type": "platform",
+      "label": "Deepen repo learning and knowledge routing reuse"
+    },
+    {
+      "id": "platform_850e026ee3",
+      "type": "platform",
+      "label": "Coordinate ToyOS Kernel with AI Math Foundations Workspace"
+    },
+    {
+      "id": "platform_8590e6bcbe",
+      "type": "platform",
+      "label": "AI Web Platform Factory"
+    },
+    {
+      "id": "platform_8632991421",
+      "type": "platform",
+      "label": "Coordinate ToyOS Kernel with AI Math Foundations Workspace"
+    },
+    {
+      "id": "platform_884b16cef2",
+      "type": "platform",
+      "label": "Coordinate ToyOS Kernel with AI Math Foundations Workspace"
+    },
+    {
+      "id": "platform_8864b9faf3",
+      "type": "platform",
+      "label": "Coordinate ToyOS Kernel with AI Math Foundations Workspace"
+    },
+    {
+      "id": "platform_893798c8e5",
+      "type": "platform",
+      "label": "ToyOS: Add a simple ELF loader and run externally compiled user programs"
+    },
+    {
+      "id": "platform_900f86db07",
+      "type": "platform",
+      "label": "Continue ToyOS kernel branch work with mainline context reuse"
+    },
+    {
+      "id": "platform_a507e53e57",
+      "type": "platform",
+      "label": "Strengthen webapp generation capability"
+    },
+    {
+      "id": "platform_b5a152e0f7",
+      "type": "platform",
+      "label": "Expand tool extension coverage"
+    },
+    {
+      "id": "platform_b6fd416bd3",
+      "type": "platform",
+      "label": "Coordinate AI Math Foundations Workspace with organization departments"
+    },
+    {
+      "id": "platform_b9e5c175ad",
+      "type": "platform",
+      "label": "Continue ToyOS kernel branch work with mainline context reuse"
+    },
+    {
+      "id": "platform_c303bfe0ca",
+      "type": "platform",
+      "label": "Support mainline branch delivery"
+    },
+    {
+      "id": "platform_c3bb90675c",
+      "type": "platform",
+      "label": "Expand tool extension coverage"
+    },
+    {
+      "id": "platform_cf3b6621a0",
+      "type": "platform",
+      "label": "Ship deployable release artifact bundle"
+    },
+    {
+      "id": "platform_d71e64eed0",
+      "type": "platform",
+      "label": "Coordinate ToyOS Kernel with AI Math Foundations Workspace"
+    },
+    {
+      "id": "platform_df90392702",
+      "type": "platform",
+      "label": "Expand capability routing patterns"
+    },
+    {
+      "id": "platform_e09cfd3561",
+      "type": "platform",
+      "label": "Strengthen webapp generation capability"
+    },
+    {
+      "id": "platform_f30e01dc23",
+      "type": "platform",
+      "label": "Coordinate ToyOS Kernel with AI Math Foundations Workspace"
+    },
+    {
+      "id": "platform_faa733ed1b",
+      "type": "platform",
+      "label": "Coordinate ToyOS Kernel with AI Math Foundations Workspace"
+    },
+    {
+      "id": "kv_cache_manager",
+      "type": "capability",
+      "label": "kv_cache_manager"
+    },
+    {
+      "id": "local_llm_runner",
+      "type": "capability",
+      "label": "local_llm_runner"
+    },
+    {
+      "id": "token_streaming",
+      "type": "capability",
+      "label": "token_streaming"
+    },
+    {
+      "id": "tool_execution",
+      "type": "capability",
+      "label": "tool_execution"
+    },
+    {
+      "id": "tool_extension",
+      "type": "capability",
+      "label": "tool_extension"
+    },
+    {
+      "id": "webapp_generation",
+      "type": "capability",
+      "label": "webapp_generation"
+    },
+    {
+      "id": "workflow_planning",
+      "type": "capability",
+      "label": "workflow_planning"
+    }
+  ],
+  "edges": [
+    {
+      "from": "local-capability-library",
+      "to": "debug_runtime",
+      "type": "provides"
+    },
+    {
+      "from": "local-capability-library",
+      "to": "design_architecture",
+      "type": "provides"
+    },
+    {
+      "from": "local-capability-library",
+      "to": "fix_bug",
+      "type": "provides"
+    },
+    {
+      "from": "local-capability-library",
+      "to": "write_feature",
+      "type": "provides"
+    },
+    {
+      "from": "local-capability-library",
+      "to": "write_test",
+      "type": "provides"
+    },
+    {
+      "from": "github-learning:gh-dc17f0f4fb",
+      "to": "agent_orchestration",
+      "type": "provides"
+    },
+    {
+      "from": "platform_2af0d9ba98",
+      "to": "agent_orchestration",
+      "type": "provides"
+    },
+    {
+      "from": "platform_38c67a4233",
+      "to": "agent_orchestration",
+      "type": "provides"
+    },
+    {
+      "from": "platform_464dac2a0b",
+      "to": "agent_orchestration",
+      "type": "provides"
+    },
+    {
+      "from": "platform_4cb6cdb84e",
+      "to": "agent_orchestration",
+      "type": "provides"
+    },
+    {
+      "from": "platform_79a3e0e03e",
+      "to": "agent_orchestration",
+      "type": "provides"
+    },
+    {
+      "from": "platform_8755b93ba0",
+      "to": "agent_orchestration",
+      "type": "provides"
+    },
+    {
+      "from": "platform_8855699f64",
+      "to": "agent_orchestration",
+      "type": "provides"
+    },
+    {
+      "from": "platform_982e1ff1de",
+      "to": "agent_orchestration",
+      "type": "provides"
+    },
+    {
+      "from": "platform_b27f294ffe",
+      "to": "agent_orchestration",
+      "type": "provides"
+    },
+    {
+      "from": "platform_f4aa8bafd6",
+      "to": "agent_orchestration",
+      "type": "provides"
+    },
+    {
+      "from": "platform_fa6557b2cd",
+      "to": "agent_orchestration",
+      "type": "provides"
+    },
+    {
+      "from": "platform_009b511d6b",
+      "to": "deploy_scaffold",
+      "type": "provides"
+    },
+    {
+      "from": "platform_1d10c77bbf",
+      "to": "deploy_scaffold",
+      "type": "provides"
+    },
+    {
+      "from": "platform_22e2a10330",
+      "to": "deploy_scaffold",
+      "type": "provides"
+    },
+    {
+      "from": "platform_2f39873e84",
+      "to": "deploy_scaffold",
+      "type": "provides"
+    },
+    {
+      "from": "platform_34b4031314",
+      "to": "deploy_scaffold",
+      "type": "provides"
+    },
+    {
+      "from": "platform_38e98c09bc",
+      "to": "deploy_scaffold",
+      "type": "provides"
+    },
+    {
+      "from": "platform_3f9a992241",
+      "to": "deploy_scaffold",
+      "type": "provides"
+    },
+    {
+      "from": "platform_4a565d61d5",
+      "to": "deploy_scaffold",
+      "type": "provides"
+    },
+    {
+      "from": "platform_4f5397914e",
+      "to": "deploy_scaffold",
+      "type": "provides"
+    },
+    {
+      "from": "platform_59154940c0",
+      "to": "deploy_scaffold",
+      "type": "provides"
+    },
+    {
+      "from": "platform_67936c2b39",
+      "to": "deploy_scaffold",
+      "type": "provides"
+    },
+    {
+      "from": "platform_7a2f920e50",
+      "to": "deploy_scaffold",
+      "type": "provides"
+    },
+    {
+      "from": "platform_83ed536a57",
+      "to": "deploy_scaffold",
+      "type": "provides"
+    },
+    {
+      "from": "platform_850e026ee3",
+      "to": "deploy_scaffold",
+      "type": "provides"
+    },
+    {
+      "from": "platform_8590e6bcbe",
+      "to": "deploy_scaffold",
+      "type": "provides"
+    },
+    {
+      "from": "platform_8632991421",
+      "to": "deploy_scaffold",
+      "type": "provides"
+    },
+    {
+      "from": "platform_884b16cef2",
+      "to": "deploy_scaffold",
+      "type": "provides"
+    },
+    {
+      "from": "platform_8864b9faf3",
+      "to": "deploy_scaffold",
+      "type": "provides"
+    },
+    {
+      "from": "platform_893798c8e5",
+      "to": "deploy_scaffold",
+      "type": "provides"
+    },
+    {
+      "from": "platform_900f86db07",
+      "to": "deploy_scaffold",
+      "type": "provides"
+    },
+    {
+      "from": "platform_a507e53e57",
+      "to": "deploy_scaffold",
+      "type": "provides"
+    },
+    {
+      "from": "platform_b5a152e0f7",
+      "to": "deploy_scaffold",
+      "type": "provides"
+    },
+    {
+      "from": "platform_b6fd416bd3",
+      "to": "deploy_scaffold",
+      "type": "provides"
+    },
+    {
+      "from": "platform_b9e5c175ad",
+      "to": "deploy_scaffold",
+      "type": "provides"
+    },
+    {
+      "from": "platform_c303bfe0ca",
+      "to": "deploy_scaffold",
+      "type": "provides"
+    },
+    {
+      "from": "platform_c3bb90675c",
+      "to": "deploy_scaffold",
+      "type": "provides"
+    },
+    {
+      "from": "platform_cf3b6621a0",
+      "to": "deploy_scaffold",
+      "type": "provides"
+    },
+    {
+      "from": "platform_d71e64eed0",
+      "to": "deploy_scaffold",
+      "type": "provides"
+    },
+    {
+      "from": "platform_df90392702",
+      "to": "deploy_scaffold",
+      "type": "provides"
+    },
+    {
+      "from": "platform_e09cfd3561",
+      "to": "deploy_scaffold",
+      "type": "provides"
+    },
+    {
+      "from": "platform_f30e01dc23",
+      "to": "deploy_scaffold",
+      "type": "provides"
+    },
+    {
+      "from": "platform_faa733ed1b",
+      "to": "deploy_scaffold",
+      "type": "provides"
+    },
+    {
+      "from": "github-learning:gh-dc17f0f4fb",
+      "to": "kv_cache_manager",
+      "type": "provides"
+    },
+    {
+      "from": "github-learning:gh-dc17f0f4fb",
+      "to": "local_llm_runner",
+      "type": "provides"
+    },
+    {
+      "from": "github-learning:gh-dc17f0f4fb",
+      "to": "token_streaming",
+      "type": "provides"
+    },
+    {
+      "from": "github-learning:gh-dc17f0f4fb",
+      "to": "tool_execution",
+      "type": "provides"
+    },
+    {
+      "from": "platform_2af0d9ba98",
+      "to": "tool_extension",
+      "type": "provides"
+    },
+    {
+      "from": "platform_38c67a4233",
+      "to": "tool_extension",
+      "type": "provides"
+    },
+    {
+      "from": "platform_464dac2a0b",
+      "to": "tool_extension",
+      "type": "provides"
+    },
+    {
+      "from": "platform_4cb6cdb84e",
+      "to": "tool_extension",
+      "type": "provides"
+    },
+    {
+      "from": "platform_79a3e0e03e",
+      "to": "tool_extension",
+      "type": "provides"
+    },
+    {
+      "from": "platform_8755b93ba0",
+      "to": "tool_extension",
+      "type": "provides"
+    },
+    {
+      "from": "platform_8855699f64",
+      "to": "tool_extension",
+      "type": "provides"
+    },
+    {
+      "from": "platform_982e1ff1de",
+      "to": "tool_extension",
+      "type": "provides"
+    },
+    {
+      "from": "platform_b27f294ffe",
+      "to": "tool_extension",
+      "type": "provides"
+    },
+    {
+      "from": "platform_f4aa8bafd6",
+      "to": "tool_extension",
+      "type": "provides"
+    },
+    {
+      "from": "platform_fa6557b2cd",
+      "to": "tool_extension",
+      "type": "provides"
+    },
+    {
+      "from": "platform_009b511d6b",
+      "to": "webapp_generation",
+      "type": "provides"
+    },
+    {
+      "from": "platform_1d10c77bbf",
+      "to": "webapp_generation",
+      "type": "provides"
+    },
+    {
+      "from": "platform_22e2a10330",
+      "to": "webapp_generation",
+      "type": "provides"
+    },
+    {
+      "from": "platform_2f39873e84",
+      "to": "webapp_generation",
+      "type": "provides"
+    },
+    {
+      "from": "platform_34b4031314",
+      "to": "webapp_generation",
+      "type": "provides"
+    },
+    {
+      "from": "platform_38e98c09bc",
+      "to": "webapp_generation",
+      "type": "provides"
+    },
+    {
+      "from": "platform_3f9a992241",
+      "to": "webapp_generation",
+      "type": "provides"
+    },
+    {
+      "from": "platform_4a565d61d5",
+      "to": "webapp_generation",
+      "type": "provides"
+    },
+    {
+      "from": "platform_4f5397914e",
+      "to": "webapp_generation",
+      "type": "provides"
+    },
+    {
+      "from": "platform_59154940c0",
+      "to": "webapp_generation",
+      "type": "provides"
+    },
+    {
+      "from": "platform_67936c2b39",
+      "to": "webapp_generation",
+      "type": "provides"
+    },
+    {
+      "from": "platform_7a2f920e50",
+      "to": "webapp_generation",
+      "type": "provides"
+    },
+    {
+      "from": "platform_83ed536a57",
+      "to": "webapp_generation",
+      "type": "provides"
+    },
+    {
+      "from": "platform_850e026ee3",
+      "to": "webapp_generation",
+      "type": "provides"
+    },
+    {
+      "from": "platform_8590e6bcbe",
+      "to": "webapp_generation",
+      "type": "provides"
+    },
+    {
+      "from": "platform_8632991421",
+      "to": "webapp_generation",
+      "type": "provides"
+    },
+    {
+      "from": "platform_884b16cef2",
+      "to": "webapp_generation",
+      "type": "provides"
+    },
+    {
+      "from": "platform_8864b9faf3",
+      "to": "webapp_generation",
+      "type": "provides"
+    },
+    {
+      "from": "platform_893798c8e5",
+      "to": "webapp_generation",
+      "type": "provides"
+    },
+    {
+      "from": "platform_900f86db07",
+      "to": "webapp_generation",
+      "type": "provides"
+    },
+    {
+      "from": "platform_a507e53e57",
+      "to": "webapp_generation",
+      "type": "provides"
+    },
+    {
+      "from": "platform_b5a152e0f7",
+      "to": "webapp_generation",
+      "type": "provides"
+    },
+    {
+      "from": "platform_b6fd416bd3",
+      "to": "webapp_generation",
+      "type": "provides"
+    },
+    {
+      "from": "platform_b9e5c175ad",
+      "to": "webapp_generation",
+      "type": "provides"
+    },
+    {
+      "from": "platform_c303bfe0ca",
+      "to": "webapp_generation",
+      "type": "provides"
+    },
+    {
+      "from": "platform_c3bb90675c",
+      "to": "webapp_generation",
+      "type": "provides"
+    },
+    {
+      "from": "platform_cf3b6621a0",
+      "to": "webapp_generation",
+      "type": "provides"
+    },
+    {
+      "from": "platform_d71e64eed0",
+      "to": "webapp_generation",
+      "type": "provides"
+    },
+    {
+      "from": "platform_df90392702",
+      "to": "webapp_generation",
+      "type": "provides"
+    },
+    {
+      "from": "platform_e09cfd3561",
+      "to": "webapp_generation",
+      "type": "provides"
+    },
+    {
+      "from": "platform_f30e01dc23",
+      "to": "webapp_generation",
+      "type": "provides"
+    },
+    {
+      "from": "platform_faa733ed1b",
+      "to": "webapp_generation",
+      "type": "provides"
+    },
+    {
+      "from": "github-learning:gh-dc17f0f4fb",
+      "to": "workflow_planning",
+      "type": "provides"
+    }
+  ]
+}

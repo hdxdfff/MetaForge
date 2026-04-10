@@ -1,0 +1,30 @@
+{
+  "task_id": "919190de5cd84b4783a0b6e0abaa1e75",
+  "task_status": "completed",
+  "phase": "completed",
+  "updated_at": "2026-03-28T18:59:05.129753Z",
+  "heartbeat_at": "2026-03-28T18:59:05.129753Z",
+  "repo_path": "D:\\codex",
+  "goal": null,
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": null,
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\919190de5cd84b4783a0b6e0abaa1e75",
+  "completed_steps": 1,
+  "title": null,
+  "prompt": "Docker default command smoke check",
+  "scheduler_hint": {},
+  "context_package": {},
+  "plan": [
+    {
+      "id": "90790f9b",
+      "title": "Smoke docker default",
+      "status": "completed",
+      "worker": "docker",
+      "phase": "execute"
+    }
+  ],
+  "result": {}
+}

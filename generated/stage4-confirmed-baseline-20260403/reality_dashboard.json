@@ -1,0 +1,123 @@
+{
+  "updated_at": "2026-04-03T14:34:49.338949Z",
+  "status": "pass",
+  "products_real": 1,
+  "technical_real_artifacts": 3,
+  "artifacts_total": 7,
+  "artifacts_prototype": 4,
+  "reproducible_real": 1,
+  "tasks_completed_last_24h": 46,
+  "artifacts_produced_last_24h": 3,
+  "technical_artifacts_produced_last_24h": 3,
+  "conversion_rate": 6.52,
+  "technical_conversion_rate": 6.52,
+  "value_conversion_rate": 2.17,
+  "single_product_mode": true,
+  "focus_artifact_id": "toy-os-demo",
+  "focus_reason": "priority-directive-toyos",
+  "focus_target": "Restore ToyOS real artifact delivery",
+  "focus_artifact_real": true,
+  "focus_artifact_valuable": true,
+  "bootstrap_success": true,
+  "llm_throughput": {
+    "usage_parse_error": null,
+    "control_parse_error": null,
+    "cheap_calls": 0,
+    "reasoning_calls": 0,
+    "strong_calls": 5,
+    "source_window_hours": 24
+  },
+  "strategy": {
+    "revision": 335,
+    "pattern_count": 1,
+    "active_pattern_count": 1,
+    "reuse_success_rate": 0.0,
+    "valuable_artifact_ratio": 0.1429,
+    "pattern_score_variance": 0.0,
+    "top_patterns": [
+      {
+        "pattern_id": "strategy_f1aa4996530f",
+        "task_type": "implementation",
+        "score": 0.7767,
+        "preferred_worker": "docker",
+        "tools_used": [
+          "docker_exec",
+          "file_write_workspace",
+          "git_push",
+          "read_repo",
+          "shell_exec"
+        ],
+        "status": "reinforced"
+      }
+    ]
+  },
+  "data_quality": {
+    "tasks_parse_error": null,
+    "task_history_parse_error": null,
+    "usage_parse_error": null,
+    "control_parse_error": null,
+    "production_focus_parse_error": null,
+    "unverified_completed_tasks_last_24h": 0
+  },
+  "registry": {
+    "status": "pass",
+    "issue_count": 0
+  },
+  "verified_completed_task_ids": [
+    "954c6af729e944f8a73d467fb3c9826c",
+    "0dead6687d5f4832bffaaa66b926e3bf",
+    "41eaada3a400443982bb2414df18a845",
+    "42a700a208064d15b4f79567f14032bb",
+    "65f8de21760243ca94a9949b4601f350",
+    "70f41900a0ec4f66bc0dea8c65dd41b2",
+    "91d37c28ef184e34a3de0e049f1640c8",
+    "aa76b42b64f74712b295bcb0586367ca",
+    "aae4157c217d4ae0930ec6436fbab198",
+    "c7a812f7b163467c972cbceb503dc013",
+    "cccff2bba8c3489c827e8b9b3b3b97d0",
+    "d27f07df1b534c8493b1855b357d833e",
+    "d9ab471df164426781eb6056677e2b0c",
+    "e489d593d00f401680b942dda433f618",
+    "c52e8740161c4035a4809b93e6c87ccc",
+    "dc66ed09ea3846dfa684bc6ae4509ab7",
+    "57bb016240924a24b0c682e9e0f85a90",
+    "8556ef489cbd402fb704bb09ab757d3f",
+    "53fa86cbde2f42b0adb6193efd8fcc55",
+    "e72f3d97221745f18901318475256d52",
+    "d0299f4d1b5d4df3a9ca3f1a1f815b2f",
+    "79568bf178634a959a8870b444082605",
+    "ab25e9966ecb4563a0199b72ff895688",
+    "8fe731d94507446fb59d42d8f613f38d",
+    "ae704ac213fa4e778c41c305d8afa2c8",
+    "176de5672ffc43f295d2e56dc5aa1280",
+    "fdbe5e99242049288db2ed59fbfe7e3b",
+    "e5945bfaafb94023ad6306cf5a64ecaf",
+    "7866e82d6f2e419aaa6d133ea008099b",
+    "0c8e5fec352a4bcb9043c7e1c5595386",
+    "5bbdebb54b1f41e0b52fa556f82e905c",
+    "bdc3903b94c6427cb908126d105c1889",
+    "6d974e216cdc4b33948f3693f4b9b50e",
+    "304dafe7a08e47c0a4ba024ec1ede671",
+    "e981be68069642f7b01e3c3ab9b900c6",
+    "8cf3cc1cda12492bad321d7cb2f31275",
+    "e26757484bc0459b83f789b00d1ba675",
+    "7230569bc1594eb98b037f1b7e750f61",
+    "9a4052335717452da34e4a8138545719",
+    "945bf57076044b79b6d0b458346d600a",
+    "7a23d81b945941c7b0627f5c6f6fcdc1",
+    "1610c647e62b4604821cc85d56036449",
+    "56ca685f6b2f4083bf504291dfd25622",
+    "37c04ef143c94432875dd3fe27975f61",
+    "bb7fd41f793b499b9ba76bc2d8a9facf",
+    "4cd1bf28acc1420c9417f5724d877fcb"
+  ],
+  "recent_real_artifact_ids": [
+    "toy-os-demo"
+  ],
+  "recent_technical_real_artifact_ids": [
+    "autonomy-soak-evidence",
+    "execution-recovery-demo",
+    "toy-os-demo"
+  ],
+  "top_issues": []
+}

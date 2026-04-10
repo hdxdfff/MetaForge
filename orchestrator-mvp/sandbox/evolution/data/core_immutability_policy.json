@@ -1,0 +1,17 @@
+{
+  "updated_at": "2026-03-11T14:43:49.394616Z",
+  "immutable_roots": [
+    "app",
+    "runtime",
+    "state"
+  ],
+  "immutable_tool_modules": [
+    "tools.codex_control",
+    "tools.decision_engine",
+    "tools.factory_daemon",
+    "tools.meta_factory_control",
+    "tools.privilege_policy",
+    "tools.session_guard"
+  ],
+  "rule": "Core Modules Immutable"
+}

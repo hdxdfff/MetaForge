@@ -1,0 +1,57 @@
+{
+  "task_id": "7e2318c1459c4f38afcf0d7010e913f3",
+  "task_status": "failed",
+  "phase": "failed",
+  "updated_at": "2026-03-19T14:39:10.299124Z",
+  "heartbeat_at": "2026-03-19T14:39:10.299124Z",
+  "repo_path": "D:\\codex",
+  "goal": "Recover stable execution output",
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": "factory-daemon.recovery",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\7e2318c1459c4f38afcf0d7010e913f3",
+  "error": "name 'PlannerResponse' is not defined",
+  "title": "Execution recovery: smoke and runnable artifact",
+  "prompt": "Execution recovery task: produce a real completed task and a runnable artifact.",
+  "scheduler_hint": {
+    "recovery_task": true,
+    "scheduled_by": "factory-daemon.recovery",
+    "factory_pool": "ops",
+    "execution_mode": "production",
+    "title": "Execution recovery: smoke and runnable artifact"
+  },
+  "context_package": {},
+  "plan": [
+    {
+      "id": "ecce9312",
+      "title": "Write recovery smoke file",
+      "status": "pending",
+      "worker": "shell",
+      "phase": "execute"
+    },
+    {
+      "id": "2ecd7cbd",
+      "title": "Probe direct LLM path",
+      "status": "pending",
+      "worker": "shell",
+      "phase": "execute"
+    },
+    {
+      "id": "985b4985",
+      "title": "Create runnable recovery artifact",
+      "status": "pending",
+      "worker": "shell",
+      "phase": "execute"
+    },
+    {
+      "id": "896e0dd1",
+      "title": "Verify recovery artifact",
+      "status": "pending",
+      "worker": "shell",
+      "phase": "verify"
+    }
+  ],
+  "result": {}
+}

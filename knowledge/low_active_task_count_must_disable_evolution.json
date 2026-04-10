@@ -1,0 +1,15 @@
+{
+  "id": "low_active_task_count_must_disable_evolution",
+  "created_at": "2026-03-20T02:08:00+08:00",
+  "scope": "policy-cadence",
+  "symptom": "Global policy could reduce experiment_every to 2 when active tasks dropped below the minimum target, causing the daemon to hit the heavy evolution lane exactly during execution recovery.",
+  "impact": [
+    "daemon cycles became stale while runtime throughput was still low",
+    "ordinary queued tasks stopped advancing because evolution monopolized the cycle budget",
+    "uptime-based acceptance could not be reached despite healthy guard status"
+  ],
+  "fix": [
+    "set cadence_policy.experiment_every to 0 when active_task_count < min_active_tasks",
+    "resume experiments only after runtime task pressure recovers above the minimum target"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "role_name": "builder",
+  "version": "1.0",
+  "purpose": "Produce implementation artifacts according to a bounded task contract.",
+  "allowed_actions": [
+    "code_write",
+    "file_create",
+    "file_modify",
+    "build_execute"
+  ],
+  "denied_actions": [
+    "task_create",
+    "task_redefine",
+    "artifact_audit",
+    "artifact_publish"
+  ],
+  "required_inputs": [
+    "task_packet",
+    "input_spec"
+  ],
+  "required_outputs": [
+    "build_handoff"
+  ]
+}

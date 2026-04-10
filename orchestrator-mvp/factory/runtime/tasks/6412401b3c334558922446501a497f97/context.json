@@ -1,0 +1,87 @@
+{
+  "task_id": "6412401b3c334558922446501a497f97",
+  "task_status": "planning",
+  "phase": "planning",
+  "updated_at": "2026-04-09T16:18:44.822976Z",
+  "heartbeat_at": "2026-04-09T16:18:44.822976Z",
+  "repo_path": "D:\\codex",
+  "goal": "Recover stable execution output",
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": "factory-daemon.recovery",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\6412401b3c334558922446501a497f97",
+  "title": "Execution recovery: smoke and runnable artifact",
+  "prompt": "Execution recovery task: produce a real completed task and a runnable artifact.",
+  "scheduler_hint": {
+    "recovery_task": true,
+    "scheduled_by": "factory-daemon.recovery",
+    "factory_pool": "ops",
+    "execution_mode": "production",
+    "title": "Execution recovery: smoke and runnable artifact"
+  },
+  "context_package": {},
+  "plan": [
+    {
+      "id": "9e1a4a80",
+      "title": "Write recovery smoke file",
+      "status": "pending",
+      "worker": "docker",
+      "phase": "execute"
+    },
+    {
+      "id": "386e236f",
+      "title": "Probe direct LLM path",
+      "status": "pending",
+      "worker": "docker",
+      "phase": "execute"
+    },
+    {
+      "id": "0413f420",
+      "title": "Create runnable recovery artifact",
+      "status": "pending",
+      "worker": "docker",
+      "phase": "execute"
+    },
+    {
+      "id": "4f1a6e2c",
+      "title": "Verify recovery artifact",
+      "status": "pending",
+      "worker": "docker",
+      "phase": "verify"
+    }
+  ],
+  "verification_signals": [
+    {
+      "timestamp": "2026-04-09T16:10:51.013406Z",
+      "kind": "admission_accepted",
+      "success": true,
+      "task_id": "6412401b3c334558922446501a497f97",
+      "admission_lane": null,
+      "admission_reason": null,
+      "execution_mode": "production",
+      "queue_name": null,
+      "task_type": null
+    }
+  ],
+  "verification_signal_count": 1,
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-09T16:10:51.013406Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "6412401b3c334558922446501a497f97",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "production",
+        "queue_name": null,
+        "task_type": null
+      }
+    ],
+    "resume_requested_at": "2026-04-09T16:18:38.625111Z",
+    "resume_reason": "Recovery task runner was lost before completion; relaunching detached execution.",
+    "recovery_resolution": "resumed_after_daemon_restart"
+  }
+}

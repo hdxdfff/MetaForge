@@ -1,0 +1,227 @@
+{
+  "tools": [
+    {
+      "tool_id": "git_clone",
+      "domain": "code",
+      "provider": "git",
+      "command": "git clone",
+      "keywords": [
+        "git",
+        "clone",
+        "repo",
+        "repository",
+        "checkout",
+        "拉取仓库",
+        "克隆仓库"
+      ]
+    },
+    {
+      "tool_id": "git_status",
+      "domain": "code",
+      "provider": "git",
+      "command": "git status",
+      "keywords": [
+        "git",
+        "status",
+        "diff",
+        "branch",
+        "变更",
+        "状态"
+      ]
+    },
+    {
+      "tool_id": "docker_build",
+      "domain": "infrastructure",
+      "provider": "docker",
+      "command": "docker build",
+      "keywords": [
+        "docker",
+        "image",
+        "build",
+        "container",
+        "构建镜像",
+        "容器构建"
+      ]
+    },
+    {
+      "tool_id": "docker_run",
+      "domain": "infrastructure",
+      "provider": "docker",
+      "command": "docker run",
+      "keywords": [
+        "docker",
+        "run",
+        "container",
+        "deploy",
+        "启动容器",
+        "运行容器"
+      ]
+    },
+    {
+      "tool_id": "run_python",
+      "domain": "code",
+      "provider": "python",
+      "command": "python",
+      "keywords": [
+        "python",
+        "script",
+        "run",
+        "execute",
+        "脚本",
+        "运行 python"
+      ]
+    },
+    {
+      "tool_id": "pytest_run",
+      "domain": "code",
+      "provider": "pytest",
+      "command": "pytest",
+      "keywords": [
+        "pytest",
+        "test",
+        "unit test",
+        "测试",
+        "单元测试"
+      ]
+    },
+    {
+      "tool_id": "npm_install",
+      "domain": "code",
+      "provider": "npm",
+      "command": "npm install",
+      "keywords": [
+        "npm",
+        "install",
+        "dependency",
+        "node",
+        "前端依赖",
+        "安装依赖"
+      ]
+    },
+    {
+      "tool_id": "npm_build",
+      "domain": "code",
+      "provider": "npm",
+      "command": "npm run build",
+      "keywords": [
+        "npm",
+        "build",
+        "frontend",
+        "webapp",
+        "前端构建",
+        "打包"
+      ]
+    },
+    {
+      "tool_id": "mysql_query",
+      "domain": "data",
+      "provider": "mysql",
+      "command": "mysql",
+      "keywords": [
+        "mysql",
+        "sql",
+        "query",
+        "database",
+        "数据库查询",
+        "执行 sql"
+      ]
+    },
+    {
+      "tool_id": "mysql_dump",
+      "domain": "data",
+      "provider": "mysqldump",
+      "command": "mysqldump",
+      "keywords": [
+        "mysql",
+        "backup",
+        "dump",
+        "database",
+        "数据库备份",
+        "导出数据"
+      ]
+    },
+    {
+      "tool_id": "curl_request",
+      "domain": "network",
+      "provider": "curl",
+      "command": "curl",
+      "keywords": [
+        "http",
+        "api",
+        "curl",
+        "request",
+        "fetch",
+        "下载",
+        "接口请求"
+      ]
+    },
+    {
+      "tool_id": "write_file",
+      "domain": "system",
+      "provider": "filesystem",
+      "command": "write_file",
+      "keywords": [
+        "write",
+        "file",
+        "config",
+        "save",
+        "写文件",
+        "保存配置"
+      ]
+    },
+    {
+      "tool_id": "read_file",
+      "domain": "system",
+      "provider": "filesystem",
+      "command": "read_file",
+      "keywords": [
+        "read",
+        "file",
+        "open",
+        "load",
+        "读文件",
+        "打开文件"
+      ]
+    },
+    {
+      "tool_id": "list_dir",
+      "domain": "system",
+      "provider": "filesystem",
+      "command": "list_dir",
+      "keywords": [
+        "list",
+        "dir",
+        "folder",
+        "tree",
+        "目录",
+        "列出文件"
+      ]
+    },
+    {
+      "tool_id": "ai_test_automation",
+      "domain": "quality",
+      "provider": "openai-compatible",
+      "command": "python tools/ai_test_automation.py",
+      "keywords": [
+        "??",
+        "???",
+        "????",
+        "?????",
+        "ai",
+        "ai ?????",
+        "ai test",
+        "automated test",
+        "automation",
+        "context boundary",
+        "eval",
+        "evaluation",
+        "freshness check",
+        "hallucination",
+        "hallucination test",
+        "llm test",
+        "model evaluation",
+        "prompt reliability"
+      ]
+    }
+  ]
+}

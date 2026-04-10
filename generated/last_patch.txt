@@ -1,0 +1,7 @@
+*** Begin Patch
+*** Update File: orchestrator-mvp/tools/verification_engine.py
+@@
+-from tools.architecture_validator import run_architecture_validation
++from tools.architecture_validator import run_architecture_validation
++from tools.ai_test_automation import load_ai_test_status
+*** End Patch

@@ -1,0 +1,60 @@
+{
+  "task_id": "8251d081e5ee483491aaab5a40f0f768",
+  "task_title": "Localize ToyOS build break",
+  "task_status": "timed_out",
+  "started_at": "2026-04-02T22:19:56.500678Z",
+  "updated_at": "2026-04-03T12:48:51.106542Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "8251d081e5ee483491aaab5a40f0f768-terminal-record",
+      "step_title": "Localize ToyOS build break",
+      "action": "task_terminal_record",
+      "ok": false,
+      "at": "2026-04-03T12:48:51.106542Z",
+      "status": "timed_out",
+      "summary": null,
+      "error": "Task timed out after 120 minutes without progress.",
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ],
+  "result": {
+    "state": "queued_for_backlog",
+    "reason": "Backlog admission deferred until active capacity is available.",
+    "scheduler_hint": {
+      "goal_primary": "Restore ToyOS real artifact delivery",
+      "goal_mode": "toyos_priority_mode",
+      "goal_target": "Restore ToyOS real artifact delivery",
+      "goal_id": "goal_42e8cd07d0",
+      "graph_id": "graph_c9ae2e2b6e",
+      "node_id": "build_break_localization",
+      "node_title": "Localize ToyOS build break",
+      "task_type": "build_fix",
+      "queue_name": "build_test",
+      "verification_level": "L2",
+      "max_runtime_seconds": 2400,
+      "retry_limit": 1,
+      "rollback_rule": "mark_failed_and_requeue_split",
+      "template_id": "build_break_localization",
+      "admission_mode": "degraded",
+      "handling_mode": "toyos_replenishment",
+      "automation_source": "failure_backlog_automation"
+    },
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-02T22:19:57.528396Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "8251d081e5ee483491aaab5a40f0f768",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "production",
+        "queue_name": "build_test",
+        "task_type": "build_fix"
+      }
+    ],
+    "error": "Task timed out after 120 minutes without progress."
+  }
+}

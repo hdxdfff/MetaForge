@@ -1,0 +1,28 @@
+{
+  "task_id": "819515e286be42de97628bea04d4e32e",
+  "task_title": "Implement module runtime.scheduler",
+  "task_status": "timed_out",
+  "started_at": "2026-03-20T20:37:17.764126Z",
+  "updated_at": "2026-03-20T20:46:10.425463Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "819515e286be42de97628bea04d4e32e-terminal-record",
+      "step_title": "Implement module runtime.scheduler",
+      "action": "task_terminal_record",
+      "ok": false,
+      "at": "2026-03-20T20:46:10.425463Z",
+      "status": "timed_out",
+      "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+      "error": null,
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ],
+  "result": {
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

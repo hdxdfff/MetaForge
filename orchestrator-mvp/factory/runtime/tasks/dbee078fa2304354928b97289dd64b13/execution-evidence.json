@@ -1,0 +1,28 @@
+{
+  "task_id": "dbee078fa2304354928b97289dd64b13",
+  "task_title": null,
+  "task_status": "timed_out",
+  "started_at": "2026-03-29T11:34:40.434169Z",
+  "updated_at": "2026-03-29T11:40:03.408704Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "dbee078fa2304354928b97289dd64b13-terminal-record",
+      "step_title": "goal_42e8cd07d0",
+      "action": "task_terminal_record",
+      "ok": false,
+      "at": "2026-03-29T11:40:03.408704Z",
+      "status": "timed_out",
+      "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+      "error": null,
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ],
+  "result": {
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

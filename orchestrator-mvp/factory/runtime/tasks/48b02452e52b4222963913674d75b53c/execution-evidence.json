@@ -1,0 +1,28 @@
+{
+  "task_id": "48b02452e52b4222963913674d75b53c",
+  "task_title": "Align project Database Systems Lab for Expand tool extension coverage",
+  "task_status": "timed_out",
+  "started_at": "2026-03-20T04:31:49.108189Z",
+  "updated_at": "2026-03-20T04:41:33.816055Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "48b02452e52b4222963913674d75b53c-terminal-record",
+      "step_title": "Align project Database Systems Lab for Expand tool extension coverage",
+      "action": "task_terminal_record",
+      "ok": false,
+      "at": "2026-03-20T04:41:33.816055Z",
+      "status": "timed_out",
+      "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+      "error": null,
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ],
+  "result": {
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

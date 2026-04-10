@@ -1,0 +1,409 @@
+{
+  "suite": "ToyOS QEMU Regression Suite",
+  "root": "/codex/generated/toy-os-demo",
+  "tests": [
+    {
+      "name": "qemu_boot_smoke",
+      "rounds": 5,
+      "required_passes": 5,
+      "passed_rounds": 5,
+      "all_passed": true,
+      "results": [
+        {
+          "round": 1,
+          "name": "qemu_boot_smoke",
+          "returncode": 0,
+          "timed_out": false,
+          "stdout_tail": "",
+          "stderr_tail": "qemu-system-i386: terminating on signal 15 from pid 54 (timeout)\n",
+          "log_sources": [
+            {
+              "path": "/codex/generated/toy-os-demo/build/qemu-debug.log",
+              "size": 7571
+            }
+          ],
+          "total_log_size": 7571,
+          "min_log_size": 200,
+          "marker_positions": {
+            "ToyOS: kernel_main entered": 67,
+            "ToyOS: GDT and TSS ready": 94,
+            "ToyOS: core subsystems initialized": 119,
+            "ToyOS: memory allocations ready": 154,
+            "VFS: format done": 375,
+            "ToyOS: filesystems ready": 571,
+            "ToyOS: processes created": 596,
+            "ToyOS: scheduler rounds completed": 7564,
+            "ToyOS: kernel services online": 7608
+          },
+          "missing_markers": [],
+          "seen_fail_markers": [],
+          "passed": true
+        },
+        {
+          "round": 2,
+          "name": "qemu_boot_smoke",
+          "returncode": 0,
+          "timed_out": false,
+          "stdout_tail": "",
+          "stderr_tail": "qemu-system-i386: terminating on signal 15 from pid 60 (timeout)\n",
+          "log_sources": [
+            {
+              "path": "/codex/generated/toy-os-demo/build/qemu-debug.log",
+              "size": 10540
+            }
+          ],
+          "total_log_size": 10540,
+          "min_log_size": 200,
+          "marker_positions": {
+            "ToyOS: kernel_main entered": 67,
+            "ToyOS: GDT and TSS ready": 94,
+            "ToyOS: core subsystems initialized": 119,
+            "ToyOS: memory allocations ready": 154,
+            "VFS: format done": 375,
+            "ToyOS: filesystems ready": 571,
+            "ToyOS: processes created": 596,
+            "ToyOS: scheduler rounds completed": 10533,
+            "ToyOS: kernel services online": 10577
+          },
+          "missing_markers": [],
+          "seen_fail_markers": [],
+          "passed": true
+        },
+        {
+          "round": 3,
+          "name": "qemu_boot_smoke",
+          "returncode": 0,
+          "timed_out": false,
+          "stdout_tail": "",
+          "stderr_tail": "qemu-system-i386: terminating on signal 15 from pid 66 (timeout)\n",
+          "log_sources": [
+            {
+              "path": "/codex/generated/toy-os-demo/build/qemu-debug.log",
+              "size": 10065
+            }
+          ],
+          "total_log_size": 10065,
+          "min_log_size": 200,
+          "marker_positions": {
+            "ToyOS: kernel_main entered": 67,
+            "ToyOS: GDT and TSS ready": 94,
+            "ToyOS: core subsystems initialized": 119,
+            "ToyOS: memory allocations ready": 154,
+            "VFS: format done": 375,
+            "ToyOS: filesystems ready": 571,
+            "ToyOS: processes created": 596,
+            "ToyOS: scheduler rounds completed": 10058,
+            "ToyOS: kernel services online": 10102
+          },
+          "missing_markers": [],
+          "seen_fail_markers": [],
+          "passed": true
+        },
+        {
+          "round": 4,
+          "name": "qemu_boot_smoke",
+          "returncode": 0,
+          "timed_out": false,
+          "stdout_tail": "",
+          "stderr_tail": "qemu-system-i386: terminating on signal 15 from pid 72 (timeout)\n",
+          "log_sources": [
+            {
+              "path": "/codex/generated/toy-os-demo/build/qemu-debug.log",
+              "size": 10104
+            }
+          ],
+          "total_log_size": 10104,
+          "min_log_size": 200,
+          "marker_positions": {
+            "ToyOS: kernel_main entered": 67,
+            "ToyOS: GDT and TSS ready": 94,
+            "ToyOS: core subsystems initialized": 119,
+            "ToyOS: memory allocations ready": 154,
+            "VFS: format done": 375,
+            "ToyOS: filesystems ready": 571,
+            "ToyOS: processes created": 596,
+            "ToyOS: scheduler rounds completed": 10097,
+            "ToyOS: kernel services online": 10141
+          },
+          "missing_markers": [],
+          "seen_fail_markers": [],
+          "passed": true
+        },
+        {
+          "round": 5,
+          "name": "qemu_boot_smoke",
+          "returncode": 0,
+          "timed_out": false,
+          "stdout_tail": "",
+          "stderr_tail": "qemu-system-i386: terminating on signal 15 from pid 78 (timeout)\n",
+          "log_sources": [
+            {
+              "path": "/codex/generated/toy-os-demo/build/qemu-debug.log",
+              "size": 10346
+            }
+          ],
+          "total_log_size": 10346,
+          "min_log_size": 200,
+          "marker_positions": {
+            "ToyOS: kernel_main entered": 67,
+            "ToyOS: GDT and TSS ready": 94,
+            "ToyOS: core subsystems initialized": 119,
+            "ToyOS: memory allocations ready": 154,
+            "VFS: format done": 375,
+            "ToyOS: filesystems ready": 571,
+            "ToyOS: processes created": 596,
+            "ToyOS: scheduler rounds completed": 10339,
+            "ToyOS: kernel services online": 10383
+          },
+          "missing_markers": [],
+          "seen_fail_markers": [],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "qemu_boot_soak",
+      "rounds": 3,
+      "required_passes": 3,
+      "passed_rounds": 3,
+      "all_passed": true,
+      "results": [
+        {
+          "round": 1,
+          "name": "qemu_boot_soak",
+          "returncode": 0,
+          "timed_out": false,
+          "stdout_tail": "",
+          "stderr_tail": "qemu-system-i386: terminating on signal 15 from pid 84 (timeout)\n",
+          "log_sources": [
+            {
+              "path": "/codex/generated/toy-os-demo/build/qemu-debug.log",
+              "size": 10065
+            }
+          ],
+          "total_log_size": 10065,
+          "min_log_size": 200,
+          "marker_positions": {
+            "ToyOS: kernel_main entered": 67,
+            "ToyOS: kernel services online": 10102
+          },
+          "missing_markers": [],
+          "seen_fail_markers": [],
+          "passed": true
+        },
+        {
+          "round": 2,
+          "name": "qemu_boot_soak",
+          "returncode": 0,
+          "timed_out": false,
+          "stdout_tail": "",
+          "stderr_tail": "qemu-system-i386: terminating on signal 15 from pid 90 (timeout)\n",
+          "log_sources": [
+            {
+              "path": "/codex/generated/toy-os-demo/build/qemu-debug.log",
+              "size": 10213
+            }
+          ],
+          "total_log_size": 10213,
+          "min_log_size": 200,
+          "marker_positions": {
+            "ToyOS: kernel_main entered": 67,
+            "ToyOS: kernel services online": 10250
+          },
+          "missing_markers": [],
+          "seen_fail_markers": [],
+          "passed": true
+        },
+        {
+          "round": 3,
+          "name": "qemu_boot_soak",
+          "returncode": 0,
+          "timed_out": false,
+          "stdout_tail": "",
+          "stderr_tail": "qemu-system-i386: terminating on signal 15 from pid 96 (timeout)\n",
+          "log_sources": [
+            {
+              "path": "/codex/generated/toy-os-demo/build/qemu-debug.log",
+              "size": 10990
+            }
+          ],
+          "total_log_size": 10990,
+          "min_log_size": 200,
+          "marker_positions": {
+            "ToyOS: kernel_main entered": 67,
+            "ToyOS: kernel services online": 11027
+          },
+          "missing_markers": [],
+          "seen_fail_markers": [],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "qemu_user_probe_assertions",
+      "rounds": 3,
+      "required_passes": 3,
+      "passed_rounds": 3,
+      "all_passed": true,
+      "results": [
+        {
+          "round": 1,
+          "name": "qemu_user_probe_assertions",
+          "returncode": 0,
+          "timed_out": false,
+          "stdout_tail": "",
+          "stderr_tail": "qemu-system-i386: terminating on signal 15 from pid 102 (timeout)\n",
+          "log_sources": [
+            {
+              "path": "/codex/generated/toy-os-demo/build/qemu-debug.log",
+              "size": 11839
+            }
+          ],
+          "total_log_size": 11839,
+          "min_log_size": 200,
+          "marker_positions": {
+            "ToyOS: user probe complete": 3442,
+            "ToyOS: scheduler rounds completed": 11833,
+            "ToyOS: kernel services online": 11877
+          },
+          "missing_markers": [],
+          "seen_fail_markers": [],
+          "passed": true
+        },
+        {
+          "round": 2,
+          "name": "qemu_user_probe_assertions",
+          "returncode": 0,
+          "timed_out": false,
+          "stdout_tail": "",
+          "stderr_tail": "qemu-system-i386: terminating on signal 15 from pid 108 (timeout)\n",
+          "log_sources": [
+            {
+              "path": "/codex/generated/toy-os-demo/build/qemu-debug.log",
+              "size": 5459
+            }
+          ],
+          "total_log_size": 5459,
+          "min_log_size": 200,
+          "marker_positions": {
+            "ToyOS: user probe complete": 1919,
+            "ToyOS: scheduler rounds completed": 5453,
+            "ToyOS: kernel services online": 5497
+          },
+          "missing_markers": [],
+          "seen_fail_markers": [],
+          "passed": true
+        },
+        {
+          "round": 3,
+          "name": "qemu_user_probe_assertions",
+          "returncode": 0,
+          "timed_out": false,
+          "stdout_tail": "",
+          "stderr_tail": "qemu-system-i386: terminating on signal 15 from pid 114 (timeout)\n",
+          "log_sources": [
+            {
+              "path": "/codex/generated/toy-os-demo/build/qemu-debug.log",
+              "size": 11642
+            }
+          ],
+          "total_log_size": 11642,
+          "min_log_size": 200,
+          "marker_positions": {
+            "ToyOS: user probe complete": 1473,
+            "ToyOS: scheduler rounds completed": 11636,
+            "ToyOS: kernel services online": 11680
+          },
+          "missing_markers": [],
+          "seen_fail_markers": [],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "qemu_filesystem_stress_assertions",
+      "rounds": 3,
+      "required_passes": 3,
+      "passed_rounds": 3,
+      "all_passed": true,
+      "results": [
+        {
+          "round": 1,
+          "name": "qemu_filesystem_stress_assertions",
+          "returncode": 0,
+          "timed_out": false,
+          "stdout_tail": "",
+          "stderr_tail": "qemu-system-i386: terminating on signal 15 from pid 120 (timeout)\n",
+          "log_sources": [
+            {
+              "path": "/codex/generated/toy-os-demo/build/qemu-debug.log",
+              "size": 11753
+            }
+          ],
+          "total_log_size": 11753,
+          "min_log_size": 340,
+          "marker_positions": {
+            "ToyOS: fs stress start": 2179,
+            "ToyOS: fs stress verified": 2245,
+            "ToyOS: fs stress complete": 2271,
+            "ToyOS: kernel services online": 11791
+          },
+          "missing_markers": [],
+          "seen_fail_markers": [],
+          "passed": true
+        },
+        {
+          "round": 2,
+          "name": "qemu_filesystem_stress_assertions",
+          "returncode": 0,
+          "timed_out": false,
+          "stdout_tail": "",
+          "stderr_tail": "qemu-system-i386: terminating on signal 15 from pid 126 (timeout)\n",
+          "log_sources": [
+            {
+              "path": "/codex/generated/toy-os-demo/build/qemu-debug.log",
+              "size": 10540
+            }
+          ],
+          "total_log_size": 10540,
+          "min_log_size": 340,
+          "marker_positions": {
+            "ToyOS: fs stress start": 1566,
+            "ToyOS: fs stress verified": 1632,
+            "ToyOS: fs stress complete": 1658,
+            "ToyOS: kernel services online": 10578
+          },
+          "missing_markers": [],
+          "seen_fail_markers": [],
+          "passed": true
+        },
+        {
+          "round": 3,
+          "name": "qemu_filesystem_stress_assertions",
+          "returncode": 0,
+          "timed_out": false,
+          "stdout_tail": "",
+          "stderr_tail": "qemu-system-i386: terminating on signal 15 from pid 132 (timeout)\n",
+          "log_sources": [
+            {
+              "path": "/codex/generated/toy-os-demo/build/qemu-debug.log",
+              "size": 8162
+            }
+          ],
+          "total_log_size": 8162,
+          "min_log_size": 340,
+          "marker_positions": {
+            "ToyOS: fs stress start": 3584,
+            "ToyOS: fs stress verified": 3650,
+            "ToyOS: fs stress complete": 3676,
+            "ToyOS: kernel services online": 8200
+          },
+          "missing_markers": [],
+          "seen_fail_markers": [],
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "all_passed": true
+}

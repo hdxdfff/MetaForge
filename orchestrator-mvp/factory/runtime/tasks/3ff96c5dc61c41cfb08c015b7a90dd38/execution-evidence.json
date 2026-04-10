@@ -1,0 +1,131 @@
+{
+  "steps": [
+    {
+      "step_id": "e47140b9",
+      "step_title": "Spawn decomposition subtasks",
+      "action": "planner_step",
+      "ok": true,
+      "at": "2026-04-02T19:39:26.073426Z",
+      "phase": "decompose",
+      "worker": "planner",
+      "status": "completed",
+      "output_ref": {
+        "artifact_id": "ctx_6c068e06d60d",
+        "task_id": "3ff96c5dc61c41cfb08c015b7a90dd38",
+        "step_id": "e47140b9",
+        "channel": "planner-output",
+        "title": "Spawn decomposition subtasks output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\3ff96c5dc61c41cfb08c015b7a90dd38\\e47140b9-planner-output-ctx_6c068e06d60d.json",
+        "size_chars": 682,
+        "line_count": 25,
+        "created_at": "2026-04-02T19:20:31.063936Z",
+        "metadata": {
+          "worker": "planner",
+          "phase": "decompose",
+          "route_model": "internal-recovery",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 682,
+        "line_count": 25,
+        "stored_raw": true
+      },
+      "synthesized": true,
+      "source": "task-plan"
+    },
+    {
+      "step_id": "89273eb7",
+      "step_title": "Wait for child task completion",
+      "action": "planner_step",
+      "ok": true,
+      "at": "2026-04-02T19:39:26.073426Z",
+      "phase": "decompose",
+      "worker": "planner",
+      "status": "completed",
+      "output_ref": {
+        "artifact_id": "ctx_9155e6777907",
+        "task_id": "3ff96c5dc61c41cfb08c015b7a90dd38",
+        "step_id": "89273eb7",
+        "channel": "planner-output",
+        "title": "Wait for child task completion output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\3ff96c5dc61c41cfb08c015b7a90dd38\\89273eb7-planner-output-ctx_9155e6777907.json",
+        "size_chars": 11281,
+        "line_count": 153,
+        "created_at": "2026-04-02T19:36:09.900793Z",
+        "metadata": {
+          "worker": "planner",
+          "phase": "decompose",
+          "route_model": "internal-recovery",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 11281,
+        "line_count": 153,
+        "stored_raw": true
+      },
+      "synthesized": true,
+      "source": "task-plan"
+    },
+    {
+      "step_id": "820f06dd",
+      "step_title": "Aggregate decomposition results",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-04-02T19:39:26.073426Z",
+      "phase": "verify",
+      "worker": "reviewer",
+      "status": "completed",
+      "output_ref": {
+        "artifact_id": "ctx_149ee1ad1682",
+        "task_id": "3ff96c5dc61c41cfb08c015b7a90dd38",
+        "step_id": "820f06dd",
+        "channel": "reviewer-output",
+        "title": "Aggregate decomposition results output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\3ff96c5dc61c41cfb08c015b7a90dd38\\820f06dd-reviewer-output-ctx_149ee1ad1682.json",
+        "size_chars": 872,
+        "line_count": 26,
+        "created_at": "2026-04-02T19:38:51.787564Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "verify",
+          "route_model": "internal-recovery",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 872,
+        "line_count": 26,
+        "stored_raw": true
+      },
+      "synthesized": true,
+      "source": "task-plan"
+    }
+  ],
+  "task_id": "3ff96c5dc61c41cfb08c015b7a90dd38",
+  "task_title": "Run ToyOS boot and QEMU smoke",
+  "task_status": "failed",
+  "completed": false,
+  "updated_at": "2026-04-02T19:39:45.937137Z",
+  "result": {
+    "state": "failed_execution",
+    "reason": "Production evidence incomplete: fresh=1/3 missing=['generated/toy-os-demo/build-report.json', 'generated/toy-os-demo/build/build.log', 'generated/toy-os-demo/artifact.sha256'] stale=['generated/toy-os-demo/build/kernel.bin', 'generated/toy-os-demo/artifact_manifest.json', 'generated/toy-os-demo/score-report.json']",
+    "task_id": "3ff96c5dc61c41cfb08c015b7a90dd38",
+    "repo_path": "D:\\codex",
+    "execution_mode": "production",
+    "goal": "Unblock Restore ToyOS real artifact delivery: Run baseline runtime test loop for Restore ToyOS real artifact delivery",
+    "cheap_calls_used": 0,
+    "cheap_chars_used": 0,
+    "escalation_count": 0,
+    "failed_steps": [],
+    "next_action_required": "Inspect execution evidence and rerun or replace the task; no approval hold was applied.",
+    "failure_pause_policy": "If a long task fails, allow at most one cheap-model-approved probe retry with bounded local cost. If cheap approval is missing, ambiguous, or the retry still fails, pause execution, return a structured error report, and wait for explicit core guidance.",
+    "pause_required": false,
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\3ff96c5dc61c41cfb08c015b7a90dd38\\execution-evidence.json",
+    "execution_evidence_step_count": 3
+  }
+}

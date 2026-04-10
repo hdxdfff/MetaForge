@@ -1,0 +1,560 @@
+{
+  "263320129163d206": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-09T11:06:32.071886Z",
+    "prompt_chars": 5794
+  },
+  "208b672f6883fc57": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-09T11:08:49.497522Z",
+    "prompt_chars": 6073
+  },
+  "37c13c80b9936fd1": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-09T11:40:10.395047Z",
+    "prompt_chars": 6109
+  },
+  "ce60e61100ef352c": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-09T11:50:23.618663Z",
+    "prompt_chars": 5800
+  },
+  "e46c5ecc71eff5a7": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-10T07:30:47.765373Z",
+    "prompt_chars": 5881
+  },
+  "7dd7a5deabf80559": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-10T07:34:01.263626Z",
+    "prompt_chars": 5883
+  },
+  "1fdf27f66f435c94": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-10T05:19:05.292612Z",
+    "prompt_chars": 5877
+  },
+  "a6f5506e165feee1": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-10T05:22:38.472590Z",
+    "prompt_chars": 5880
+  },
+  "cb9de17b8ef4e4cc": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-10T05:26:07.001762Z",
+    "prompt_chars": 5887
+  },
+  "c5fb0e79980c2e31": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "failed",
+    "attempt": 3,
+    "error": "APIConnectionError: Connection error.",
+    "updated_at": "2026-03-10T07:39:15.866681Z",
+    "prompt_chars": 5869
+  },
+  "f68294ff56fbec0a": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "failed",
+    "attempt": 3,
+    "error": "APIConnectionError: Connection error.",
+    "updated_at": "2026-03-10T09:18:48.624288Z",
+    "prompt_chars": 6027
+  },
+  "b0a2446b0231ec76": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "failed",
+    "attempt": 3,
+    "error": "APIConnectionError: Connection error.",
+    "updated_at": "2026-03-10T09:22:14.017803Z",
+    "prompt_chars": 6023
+  },
+  "fb05178adf6b2286": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "failed",
+    "attempt": 3,
+    "error": "APIConnectionError: Connection error.",
+    "updated_at": "2026-03-10T09:22:34.278935Z",
+    "prompt_chars": 6029
+  },
+  "d6fcef0e7de5bccd": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-10T10:15:13.312177Z",
+    "prompt_chars": 6081
+  },
+  "1393b4eb11f951f7": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-10T11:21:54.660932Z",
+    "prompt_chars": 6313
+  },
+  "81ce96fce8b2f55c": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-10T12:39:47.093458Z",
+    "prompt_chars": 6426
+  },
+  "c3cc89a98d81035d": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-10T11:49:03.247724Z",
+    "prompt_chars": 6346
+  },
+  "5d5add64e7927d4f": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-10T12:09:52.155517Z",
+    "prompt_chars": 6391
+  },
+  "f0067c975f433eeb": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-10T12:49:32.801186Z",
+    "prompt_chars": 6402
+  },
+  "6e6382bb7215e801": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-10T12:50:41.696885Z",
+    "prompt_chars": 6409
+  },
+  "e3e162477b0e444a": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-10T12:17:09.011580Z",
+    "prompt_chars": 6322
+  },
+  "583b9d148d6b159a": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-10T12:18:22.331892Z",
+    "prompt_chars": 6329
+  },
+  "902fe0fcd4c08ed3": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-10T12:46:16.773011Z",
+    "prompt_chars": 6367
+  },
+  "752bf0fa62a2af2e": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-10T12:47:22.882597Z",
+    "prompt_chars": 6374
+  },
+  "7e39f618b5898386": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-10T16:42:30.480442Z",
+    "prompt_chars": 6908
+  },
+  "8f0a0c874d35ddab": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-10T16:46:59.767845Z",
+    "prompt_chars": 6975
+  },
+  "0cfa15570251337e": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-10T19:35:24.653294Z",
+    "prompt_chars": 7110
+  },
+  "c8f99a7a2fcc0dec": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-10T19:38:47.152110Z",
+    "prompt_chars": 7104
+  },
+  "96d339753fe8bbfb": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-10T19:40:59.299013Z",
+    "prompt_chars": 7028
+  },
+  "6f5f4d04f8fd4cf4": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "failed",
+    "attempt": 3,
+    "error": "APIConnectionError: Connection error.",
+    "updated_at": "2026-03-10T19:49:29.172542Z",
+    "prompt_chars": 7259
+  },
+  "df8ca88969ddcda9": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "failed",
+    "attempt": 3,
+    "error": "APIConnectionError: Connection error.",
+    "updated_at": "2026-03-10T19:49:29.413772Z",
+    "prompt_chars": 7139
+  },
+  "be668c3036d87209": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-10T19:52:42.742913Z",
+    "prompt_chars": 7034
+  },
+  "7752e80976c0b52d": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-10T19:53:52.594630Z",
+    "prompt_chars": 7028
+  },
+  "6b3c5d565fdb41a9": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-10T23:34:16.912400Z",
+    "prompt_chars": 7119
+  },
+  "30f16d0b6febdd46": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-10T23:40:38.488203Z",
+    "prompt_chars": 9228
+  },
+  "f38454f9023773e4": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-11T02:16:15.584512Z",
+    "prompt_chars": 6650
+  },
+  "17e56197fc48ba12": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-11T04:47:27.895493Z",
+    "prompt_chars": 7213
+  },
+  "734514c62f01b3a5": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-11T09:55:38.493527Z",
+    "prompt_chars": 7085
+  },
+  "31ba65fa9cc297b9": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-11T09:57:23.033958Z",
+    "prompt_chars": 7028
+  },
+  "5d4cc883a6f81655": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-11T10:00:02.435824Z",
+    "prompt_chars": 7050
+  },
+  "15ee4cfe52b952e5": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "failed",
+    "attempt": 3,
+    "error": "APIConnectionError: Connection error.",
+    "updated_at": "2026-03-11T10:06:38.796253Z",
+    "prompt_chars": 7385
+  },
+  "fc6a1879ec9f4285": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "failed",
+    "attempt": 3,
+    "error": "APIConnectionError: Connection error.",
+    "updated_at": "2026-03-11T10:06:39.207014Z",
+    "prompt_chars": 7582
+  },
+  "ec266e90cb563c17": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "failed",
+    "attempt": 3,
+    "error": "APIConnectionError: Connection error.",
+    "updated_at": "2026-03-11T10:16:49.528953Z",
+    "prompt_chars": 7743
+  },
+  "f8ac9eb5edd997f5": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "failed",
+    "attempt": 3,
+    "error": "APIConnectionError: Connection error.",
+    "updated_at": "2026-03-11T10:16:49.825990Z",
+    "prompt_chars": 7750
+  },
+  "edf26101d237acdf": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "failed",
+    "attempt": 3,
+    "error": "APIConnectionError: Connection error.",
+    "updated_at": "2026-03-11T10:33:35.650376Z",
+    "prompt_chars": 7682
+  },
+  "67ec594222e8e974": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "failed",
+    "attempt": 3,
+    "error": "APIConnectionError: Connection error.",
+    "updated_at": "2026-03-11T10:33:35.758156Z",
+    "prompt_chars": 7727
+  },
+  "69c766fcac9d654d": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "failed",
+    "attempt": 3,
+    "error": "APIConnectionError: Connection error.",
+    "updated_at": "2026-03-11T10:33:35.666133Z",
+    "prompt_chars": 7686
+  },
+  "dec212f361fc5e19": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "failed",
+    "attempt": 3,
+    "error": "APIConnectionError: Connection error.",
+    "updated_at": "2026-03-11T11:10:07.752232Z",
+    "prompt_chars": 7488
+  },
+  "72699dca3043bc96": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "failed",
+    "attempt": 3,
+    "error": "APIConnectionError: Connection error.",
+    "updated_at": "2026-03-11T11:10:07.922524Z",
+    "prompt_chars": 7555
+  },
+  "8c24bfab25d4cdc8": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "failed",
+    "attempt": 3,
+    "error": "APIConnectionError: Connection error.",
+    "updated_at": "2026-03-11T11:10:08.186612Z",
+    "prompt_chars": 7568
+  },
+  "13029e21fc2cb2df": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "running",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-11T14:26:16.011571Z",
+    "prompt_chars": 7807
+  },
+  "858c56be9f9952c1": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "running",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-11T14:26:16.223113Z",
+    "prompt_chars": 7685
+  },
+  "3f9d05f10e534b0b": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "running",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-11T14:26:16.307099Z",
+    "prompt_chars": 7572
+  },
+  "31c1c1ee22a6adb4": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "running",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-11T14:26:16.346851Z",
+    "prompt_chars": 7742
+  },
+  "5ed3672b4cd2dadf": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "running",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-11T14:26:16.349888Z",
+    "prompt_chars": 7837
+  },
+  "c3c49f99b5638680": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "running",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-11T14:26:16.367437Z",
+    "prompt_chars": 7883
+  },
+  "ee83d6b31ace43a1": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "running",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-11T14:26:16.452630Z",
+    "prompt_chars": 7825
+  },
+  "4a2e3480b4e9f62d": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "running",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-11T14:26:16.582106Z",
+    "prompt_chars": 7667
+  },
+  "1488e34a358af828": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-11T15:01:55.400962Z",
+    "prompt_chars": 7090
+  },
+  "6c2d5d70848aa224": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-11T15:02:22.083044Z",
+    "prompt_chars": 7037
+  },
+  "82cd86875e5a89e9": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-11T15:44:00.892825Z",
+    "prompt_chars": 6974
+  },
+  "e703f438e6640bca": {
+    "provider": "cheap",
+    "model": "deepseek-chat",
+    "status": "completed",
+    "attempt": 1,
+    "error": null,
+    "updated_at": "2026-03-11T15:44:28.110550Z",
+    "prompt_chars": 6988
+  }
+}

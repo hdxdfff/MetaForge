@@ -1,0 +1,25 @@
+{
+  "status": "fail",
+  "updated_at": "2026-04-03T19:16:40.900501Z",
+  "checks": {
+    "markdown_section_present": false,
+    "allow_p2_sandbox": false,
+    "budget_pool": "unknown",
+    "sandbox_lane": "unknown"
+  },
+  "target_files": [
+    "D:\\codex\\orchestrator-mvp\\data\\autonomy_control_plane_summary.md",
+    "D:\\codex\\orchestrator-mvp\\data\\autonomy_control_plane.json"
+  ],
+  "smallest_gap": "The summary markdown is missing the P2 sandbox section or the sandbox gate is disabled.",
+  "patch_plan": [
+    "Keep the P2 sandbox section in the summary markdown.",
+    "Keep allow_p2_sandbox enabled while the sandbox lane remains low risk.",
+    "Refresh the control-plane summary after any budget change."
+  ],
+  "validation_commands": [
+    "Get-Content \"D:\\codex\\orchestrator-mvp\\data\\autonomy_control_plane_summary.md\"",
+    "python D:\\codex\\orchestrator-mvp\\tools\\autonomy_control_plane.py"
+  ],
+  "residual_risk": "Sandbox lane remains intentionally narrow and budgeted."
+}

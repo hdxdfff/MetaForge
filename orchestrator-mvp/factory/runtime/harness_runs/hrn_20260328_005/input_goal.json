@@ -1,0 +1,62 @@
+{
+  "run_id": "hrn_20260328_005",
+  "goal_id": "toyos_syscall_exit_runtime_v1",
+  "product": "toy-os-demo",
+  "feature_name": "syscall_exit_runtime",
+  "feature_type": "kernel_feature",
+  "task_type": "harness_atomic_feature",
+  "source_goal": "Validate the ToyOS syscall exit path through runtime log evidence.",
+  "allowed_paths": [
+    "generated/toy-os-demo/kernel/**",
+    "generated/toy-os-demo/user/**",
+    "generated/toy-os-demo/tests/**",
+    "generated/toy-os-demo/docs/**"
+  ],
+  "forbidden_paths": [
+    "generated/toy-os-demo/toolchain/**",
+    "generated/toy-os-demo/bootloader/**",
+    "generated/toy-os-demo/network/**"
+  ],
+  "max_files_to_change": 12,
+  "deliverables": [
+    "syscall exit marker remains visible",
+    "docker-backed build evidence",
+    "qemu smoke evidence",
+    "runtime log marker proof"
+  ],
+  "definition_of_done": [
+    "project builds successfully",
+    "qemu smoke run completes without crash",
+    "syscall exit marker appears in qemu log",
+    "all required evidence files are produced"
+  ],
+  "acceptance_checks": [
+    {
+      "id": "build_success",
+      "type": "command_exit_code",
+      "command": "D:\\codex\\tools\\python311-embed\\python.exe D:\\codex\\generated\\toy-os-demo\\tools\\system_toolchain.py build",
+      "expected_exit_code": 0
+    },
+    {
+      "id": "qemu_smoke",
+      "type": "command_exit_code",
+      "command": "D:\\codex\\tools\\python311-embed\\python.exe D:\\codex\\generated\\toy-os-demo\\tools\\system_toolchain.py qemu-smoke",
+      "expected_exit_code": 0
+    },
+    {
+      "id": "output_contains_marker",
+      "type": "file_contains",
+      "file": "factory/runtime/harness_runs/hrn_20260328_005/evidence/qemu-output.txt",
+      "must_contain": [
+        "SYSCALL: exit requested"
+      ]
+    }
+  ],
+  "required_evidence": [
+    "evidence/build-report.json",
+    "evidence/qemu-smoke-report.json",
+    "evidence/qemu-output.txt",
+    "generator_report.json",
+    "evaluation_report.json"
+  ]
+}

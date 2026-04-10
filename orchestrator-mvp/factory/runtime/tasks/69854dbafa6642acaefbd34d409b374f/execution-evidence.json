@@ -1,0 +1,53 @@
+{
+  "steps": [
+    {
+      "step_id": "2fd41fb3",
+      "step_title": "Write recovery smoke file",
+      "action": "write_smoke_file",
+      "ok": true,
+      "at": "2026-03-21T17:31:08.207562Z",
+      "path": "D:\\codex\\orchestrator-mvp\\data\\execution-recovery\\test.txt",
+      "size": 97
+    },
+    {
+      "step_id": "73179fe4",
+      "step_title": "Probe direct LLM path",
+      "action": "direct_llm_call",
+      "ok": false,
+      "at": "2026-03-21T17:35:09.340421Z",
+      "provider": "cheap",
+      "model": "deepseek-chat",
+      "usage_before": 127,
+      "usage_after": 127,
+      "used_fallback": true,
+      "output_excerpt": "Provider error: APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "step_id": "7c943857",
+      "step_title": "Create runnable recovery artifact",
+      "action": "create_runnable_artifact",
+      "ok": true,
+      "at": "2026-03-21T17:38:21.815684Z",
+      "artifact_dir": "D:\\codex\\generated\\execution-recovery-demo",
+      "build_timestamp": "2026-03-21T17:38:16.952357Z",
+      "test_timestamp": "2026-03-21T17:38:20.205751Z",
+      "execution_timestamp": "2026-03-21T17:38:21.240231Z"
+    },
+    {
+      "step_id": "f3393d53",
+      "step_title": "Verify recovery artifact",
+      "action": "verify_runnable_artifact",
+      "ok": true,
+      "at": "2026-03-21T17:42:36.744224Z",
+      "artifact_id": "execution-recovery-demo",
+      "latest_evidence_at": "2026-03-21T17:38:21.240231Z",
+      "dashboard_status": "pass"
+    }
+  ],
+  "task_id": "69854dbafa6642acaefbd34d409b374f",
+  "task_title": "Execution recovery: smoke and runnable artifact",
+  "task_status": "running",
+  "started_at": "2026-03-21T17:22:39.235958Z",
+  "updated_at": "2026-03-21T17:42:36.744224Z",
+  "completed": false
+}

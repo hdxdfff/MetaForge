@@ -1,0 +1,40 @@
+{
+  "task_id": "671aa2c20797423d867c6faa7cf9d002",
+  "task_title": "Implement module app.network_agent",
+  "task_status": "failed",
+  "completed": false,
+  "updated_at": "2026-03-19T17:36:13.972482Z",
+  "result": {
+    "state": "failed_execution",
+    "reason": "Production evidence incomplete: fresh=0/3 missing=['docker-compose.app.yml', 'deploy-template.yml', 'Dockerfile', 'artifact_manifest.json', 'reports/release-evidence.json'] stale=['app/network_agent.py']",
+    "task_id": "671aa2c20797423d867c6faa7cf9d002",
+    "repo_path": "D:\\codex\\orchestrator-mvp",
+    "execution_mode": "production",
+    "goal": "Strengthen agent orchestration capability",
+    "cheap_calls_used": 4,
+    "cheap_chars_used": 2973,
+    "escalation_count": 2,
+    "failed_steps": [],
+    "next_action_required": "Inspect execution evidence and rerun or replace the task; no approval hold was applied.",
+    "failure_pause_policy": "If a long task fails, allow at most one cheap-model-approved probe retry with bounded local cost. If cheap approval is missing, ambiguous, or the retry still fails, pause execution, return a structured error report, and wait for explicit core guidance.",
+    "pause_required": false,
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\671aa2c20797423d867c6faa7cf9d002\\execution-evidence.json",
+    "execution_evidence_step_count": 0
+  },
+  "started_at": "2026-03-19T17:29:50.861083Z",
+  "steps": [
+    {
+      "step_id": "671aa2c20797423d867c6faa7cf9d002-terminal-record",
+      "step_title": "Implement module app.network_agent",
+      "action": "task_terminal_record",
+      "ok": false,
+      "at": "2026-03-19T17:36:13.972482Z",
+      "status": "failed",
+      "summary": null,
+      "error": null,
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ]
+}

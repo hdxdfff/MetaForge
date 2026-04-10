@@ -1,0 +1,142 @@
+{
+  "updated_at": "2026-03-11T11:28:08.119342Z",
+  "platform_runtime": {
+    "platform_count": 17,
+    "active_count": 0,
+    "unhealthy_count": 0,
+    "platforms": [
+      {
+        "platform_id": "platform_d33a56cc79",
+        "name": "AI Research Factory",
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null
+      },
+      {
+        "platform_id": "platform_8855699f64",
+        "name": "AI Agent Factory",
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null
+      },
+      {
+        "platform_id": "platform_009b511d6b",
+        "name": "build ai-video-factory",
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null
+      },
+      {
+        "platform_id": "platform_8590e6bcbe",
+        "name": "AI Web Platform Factory",
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null
+      },
+      {
+        "platform_id": "platform_df90392702",
+        "name": "Expand capability routing patterns",
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null
+      },
+      {
+        "platform_id": "platform_79a3e0e03e",
+        "name": "Improve cheap agent prompts",
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null
+      },
+      {
+        "platform_id": "platform_464dac2a0b",
+        "name": "Optimize task scheduler from agent experience",
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null
+      },
+      {
+        "platform_id": "platform_fa6557b2cd",
+        "name": "Strengthen agent orchestration capability",
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null
+      },
+      {
+        "platform_id": "platform_e09cfd3561",
+        "name": "Strengthen webapp generation capability",
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null
+      },
+      {
+        "platform_id": "platform_c3bb90675c",
+        "name": "Expand tool extension coverage",
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null
+      },
+      {
+        "platform_id": "platform_38c67a4233",
+        "name": "Strengthen agent orchestration capability",
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null
+      },
+      {
+        "platform_id": "platform_b9e5c175ad",
+        "name": "Continue ToyOS kernel branch work with mainline context reuse",
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null
+      },
+      {
+        "platform_id": "platform_3f9a992241",
+        "name": "Deepen repo learning and knowledge routing reuse",
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null
+      },
+      {
+        "platform_id": "platform_83ed536a57",
+        "name": "Deepen repo learning and knowledge routing reuse",
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null
+      },
+      {
+        "platform_id": "platform_900f86db07",
+        "name": "Continue ToyOS kernel branch work with mainline context reuse",
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null
+      },
+      {
+        "platform_id": "platform_4f5397914e",
+        "name": "Deepen repo learning and knowledge routing reuse",
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null
+      },
+      {
+        "platform_id": "platform_8632991421",
+        "name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null
+      }
+    ]
+  },
+  "control_layer": {
+    "status": "constrained",
+    "quality_status": "promote",
+    "quality_score": 0.8554,
+    "safety_status": "healthy",
+    "evolution_allowed": true
+  },
+  "summary": {
+    "platform_count": 17,
+    "healthy_platforms": 17,
+    "active_platforms": 0,
+    "unhealthy_platforms": 0
+  }
+}

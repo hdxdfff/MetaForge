@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Artifact Manifest",
+  "type": "object",
+  "required": [
+    "artifact_id",
+    "type",
+    "version",
+    "artifact_path",
+    "entrypoint",
+    "evidence"
+  ],
+  "properties": {
+    "artifact_id": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "buildable": {
+      "type": "boolean"
+    },
+    "runnable": {
+      "type": "boolean"
+    },
+    "test_passed": {
+      "type": "boolean"
+    },
+    "reproducible": {
+      "type": "boolean"
+    },
+    "artifact_path": {
+      "type": "string"
+    },
+    "entrypoint": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

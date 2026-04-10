@@ -1,0 +1,81 @@
+{
+  "steps": [
+    {
+      "step_id": "17bed6b3",
+      "step_title": "Run deterministic binary classification lab",
+      "action": "binary_classification_lab_run",
+      "ok": true,
+      "at": "2026-03-20T17:11:14.193947Z",
+      "workspace": "D:\\codex\\generated\\ml-binary-classification-lab",
+      "output_path": "D:\\codex\\generated\\ml-binary-classification-lab\\BINARY_CLASSIFICATION_AUTORUN_RESULT.md",
+      "metrics_path": "D:\\codex\\generated\\ml-binary-classification-lab\\binary_classification_metrics.json",
+      "dataset_source": "deterministic synthetic fallback",
+      "accuracies": {
+        "Logistic Regression": 0.95,
+        "Linear SVM": 0.9333333333333333,
+        "Perceptron": 0.95,
+        "SGD Classifier": 0.95
+      }
+    }
+  ],
+  "task_id": "5db0ffef9e554c0ebaa167c303592d22",
+  "task_title": "Binary classification lab smoke run",
+  "task_status": "completed",
+  "started_at": "2026-03-20T17:10:40.338581Z",
+  "updated_at": "2026-03-20T17:11:21.892913Z",
+  "completed": true,
+  "result": {
+    "summary": "Local fallback plan for a deterministic binary-classification lab run with an embedded dataset fallback.",
+    "completed_steps": 1,
+    "context_used_chars": 647,
+    "cheap_calls_used": 0,
+    "cheap_chars_used": 0,
+    "escalation_count": 0,
+    "execution_mode": "production",
+    "production_evidence": {
+      "mode": "production",
+      "status": "verified",
+      "artifact_spec": {
+        "artifact_id": "ml-binary-classification-lab",
+        "artifact_type": "report",
+        "type": "report",
+        "output": "BINARY_CLASSIFICATION_AUTORUN_RESULT.md",
+        "entrypoint": "BINARY_CLASSIFICATION_AUTORUN_RESULT.md",
+        "deliverables": [
+          "source_code",
+          "build_script",
+          "test_suite"
+        ],
+        "expected_outputs": [
+          "source_code",
+          "build_script",
+          "test_suite"
+        ],
+        "required_artifacts": [
+          "BINARY_CLASSIFICATION_AUTORUN_RESULT.md"
+        ],
+        "evidence": [
+          "binary_classification_metrics.json"
+        ],
+        "verification": {},
+        "registry": null,
+        "test_command": "pytest",
+        "min_fresh_artifacts": 1
+      },
+      "required_count": 1,
+      "min_fresh_artifacts": 1,
+      "fresh_artifacts": [
+        {
+          "path": "D:\\codex\\generated\\ml-binary-classification-lab\\BINARY_CLASSIFICATION_AUTORUN_RESULT.md",
+          "size": 1713,
+          "mtime": "2026-03-20T17:11:14.192948Z",
+          "observed_at": "2026-03-20T17:11:14.192948Z"
+        }
+      ],
+      "stale_artifacts": [],
+      "missing_artifacts": []
+    },
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\5db0ffef9e554c0ebaa167c303592d22\\execution-evidence.json",
+    "execution_evidence_step_count": 1
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "steps": [
+    {
+      "step_id": "1444e5be",
+      "step_title": "Understand task",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-03-20T09:11:01.304603Z",
+      "worker": "reviewer",
+      "phase": "understand",
+      "route_model": "deepseek-v3.2",
+      "route_provider": "openai",
+      "output_ref": {
+        "artifact_id": "ctx_895d68796d49",
+        "task_id": "5896f297ac984a17abf030f995c301a5",
+        "step_id": "1444e5be",
+        "channel": "reviewer-output",
+        "title": "Understand task output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\5896f297ac984a17abf030f995c301a5\\1444e5be-reviewer-output-ctx_895d68796d49.txt",
+        "size_chars": 1152,
+        "line_count": 32,
+        "created_at": "2026-03-20T09:10:58.270719Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "understand",
+          "route_model": "deepseek-v3.2",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 1152,
+        "line_count": 32,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "3d475ff1",
+      "step_title": "Draft solution",
+      "action": "coder_step",
+      "ok": true,
+      "at": "2026-03-20T09:11:15.926719Z",
+      "worker": "coder",
+      "phase": "draft",
+      "route_model": "deepseek-v3.2",
+      "route_provider": "openai",
+      "output_ref": {
+        "artifact_id": "ctx_262c3f214c24",
+        "task_id": "5896f297ac984a17abf030f995c301a5",
+        "step_id": "3d475ff1",
+        "channel": "coder-output",
+        "title": "Draft solution output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\5896f297ac984a17abf030f995c301a5\\3d475ff1-coder-output-ctx_262c3f214c24.txt",
+        "size_chars": 1232,
+        "line_count": 26,
+        "created_at": "2026-03-20T09:11:13.411933Z",
+        "metadata": {
+          "worker": "coder",
+          "phase": "draft",
+          "route_model": "deepseek-v3.2",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "coder-output",
+        "char_count": 1232,
+        "line_count": 26,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "404f516d",
+      "step_title": "Execute validation",
+      "action": "shell_step",
+      "ok": false,
+      "at": "2026-03-20T09:11:27.281154Z",
+      "worker": "shell",
+      "phase": "execute",
+      "route_model": "deepseek-chat",
+      "route_provider": "runtime",
+      "error": "WSL command failed with code 1: ",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "error-output",
+        "char_count": 32,
+        "line_count": 1,
+        "stored_raw": false
+      },
+      "probe_attempts": 0
+    }
+  ],
+  "task_id": "5896f297ac984a17abf030f995c301a5",
+  "task_title": "Refresh ToyOS runnable artifact evidence (direct strategy run)",
+  "task_status": "failed",
+  "started_at": "2026-03-20T09:10:14.187943Z",
+  "updated_at": "2026-03-20T09:11:39.769946Z",
+  "completed": false,
+  "result": {
+    "state": "failed_execution",
+    "reason": "WSL command failed with code 1: ",
+    "task_id": "5896f297ac984a17abf030f995c301a5",
+    "repo_path": "D:\\codex\\generated\\toy-os-demo",
+    "execution_mode": "production",
+    "goal": "Refresh ToyOS runnable artifact evidence",
+    "cheap_calls_used": 3,
+    "cheap_chars_used": 2359,
+    "escalation_count": 2,
+    "failed_steps": [
+      {
+        "step_id": "404f516d",
+        "title": "Execute validation",
+        "phase": "execute",
+        "worker": "shell",
+        "command": "python D:\\codex\\orchestrator-mvp\\tools\\read_only_syntax_check.py .",
+        "output": "Execute validation failure: 32 chars, 1 non-empty lines.\nHead:\n- WSL command failed with code 1:",
+        "output_ref": {},
+        "output_stats": {
+          "channel": "error-output",
+          "char_count": 32,
+          "line_count": 1,
+          "stored_raw": false
+        },
+        "probe_attempts": 0,
+        "max_probe_attempts": 1,
+        "last_diagnosis": "Diagnosis for Execute validation: 391 chars, 11 non-empty lines.\nHead:\n- Fallback\n- Assigned model: deepseek-chat\n- Reason: Default review and summarization stay on the cheap lane; escalate only for regression-heavy or architectural review.\n- Cheap review provider is not configured.\nTail:\n- - regression risks\n- - escalation triggers\n- Provider error: APIConnectionError: Connection error.",
+        "last_diagnosis_ref": {}
+      }
+    ],
+    "next_action_required": "Inspect execution evidence and rerun or replace the task; no approval hold was applied.",
+    "failure_pause_policy": "If a long task fails, allow at most one cheap-model-approved probe retry with bounded local cost. If cheap approval is missing, ambiguous, or the retry still fails, pause execution, return a structured error report, and wait for explicit core guidance.",
+    "pause_required": false,
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\5896f297ac984a17abf030f995c301a5\\execution-evidence.json",
+    "execution_evidence_step_count": 3
+  }
+}

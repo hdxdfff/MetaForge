@@ -1,0 +1,63 @@
+﻿[
+  {
+    "dialogue_id": "main-dialogue",
+    "lane_type": "ceo-lane",
+    "target_workspace": "D:\\codex",
+    "allowed_scope": [
+      "D:\\codex"
+    ],
+    "forbidden_scope": [
+      "D:\\codex\\orchestrator-mvp\\app"
+    ],
+    "current_goal": "arbitrate lanes, preserve workspace integrity, support high-priority ToyOS development",
+    "priority": "high",
+    "merge_policy": "ceo-review",
+    "workspace_locked": true
+  },
+  {
+    "dialogue_id": "toyos-product-dialogue",
+    "lane_type": "product-lane",
+    "target_workspace": "D:\\codex\\generated\\toy-os-demo",
+    "allowed_scope": [
+      "D:\\codex\\generated\\toy-os-demo"
+    ],
+    "forbidden_scope": [
+      "D:\\codex\\orchestrator-mvp\\app",
+      "D:\\codex\\orchestrator-mvp\\tools"
+    ],
+    "current_goal": "advance ToyOS bounded delivery with authoritative workspace enforcement - highest priority",
+    "priority": "critical",
+    "merge_policy": "bounded-branch",
+    "workspace_locked": true
+  },
+  {
+    "dialogue_id": "metaforge-research-dialogue",
+    "lane_type": "research-lane",
+    "target_workspace": "D:\\codex",
+    "allowed_scope": [
+      "D:\\codex"
+    ],
+    "forbidden_scope": [
+      "D:\\codex\\generated\\toy-os-demo"
+    ],
+    "current_goal": "improve routing, KPI, memory, and self-improvement policy without mutating product code",
+    "priority": "medium",
+    "merge_policy": "proposal-only",
+    "workspace_locked": true
+  },
+  {
+    "dialogue_id": "ops-chore-dialogue",
+    "lane_type": "chore-lane",
+    "target_workspace": "D:\\codex",
+    "allowed_scope": [
+      "D:\\codex"
+    ],
+    "forbidden_scope": [
+      "D:\\codex\\generated\\toy-os-demo"
+    ],
+    "current_goal": "produce low-risk reports, inventories, digests, and summaries",
+    "priority": "medium",
+    "merge_policy": "report-only",
+    "workspace_locked": true
+  }
+]

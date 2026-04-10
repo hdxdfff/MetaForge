@@ -1,0 +1,25 @@
+{
+  "pattern_id": "weak_control_runtime_recovery",
+  "title": "Weak control keeps execution open while verification and release remain bounded",
+  "problem": "When patch verification, release review, and self-model reflection all run as hard gates, the daemon drifts back into fake progress or stale runtime states.",
+  "signals": [
+    "control layer becomes constrained because patch gate is attention",
+    "products_real includes internal recovery artifacts",
+    "self_model runs in-band or dominates active delivery priorities"
+  ],
+  "adopted_fix": {
+    "execution": "signal_only",
+    "verification": "delayed",
+    "release": "sampled_blocking",
+    "artifact_value_rule": "count only valuable real artifacts with production-focus, release-candidate, or explicit value-contract evidence",
+    "self_model_schedule": [
+      "cycle_end",
+      "failure_trigger"
+    ]
+  },
+  "guardrails": [
+    "execution must not be blocked by delayed verification",
+    "release blocking must be limited to sampled release-critical evidence",
+    "internal recovery demos must not count toward products_real"
+  ]
+}

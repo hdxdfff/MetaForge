@@ -1,0 +1,182 @@
+{
+  "updated_at": "2026-03-12T07:09:58.449269Z",
+  "request": "strengthen agent orchestration capability",
+  "focus_modules": [
+    "agents.coder_agent",
+    "agents.deploy_agent",
+    "agents.test_agent",
+    "app.network_agent",
+    "app.models",
+    "runtime.scheduler",
+    "tools.codex_control",
+    "app.orchestrator"
+  ],
+  "impacted_modules": [
+    {
+      "module": "agents.coder_agent",
+      "depth": 0,
+      "owner_team": "backend_team",
+      "layer": "unclassified",
+      "dependents": 0
+    },
+    {
+      "module": "agents.deploy_agent",
+      "depth": 0,
+      "owner_team": "backend_team",
+      "layer": "unclassified",
+      "dependents": 0
+    },
+    {
+      "module": "agents.test_agent",
+      "depth": 0,
+      "owner_team": "backend_team",
+      "layer": "unclassified",
+      "dependents": 0
+    },
+    {
+      "module": "app.models",
+      "depth": 0,
+      "owner_team": "backend_team",
+      "layer": "unclassified",
+      "dependents": 9
+    },
+    {
+      "module": "app.network_agent",
+      "depth": 0,
+      "owner_team": "backend_team",
+      "layer": "unclassified",
+      "dependents": 1
+    },
+    {
+      "module": "app.orchestrator",
+      "depth": 0,
+      "owner_team": "backend_team",
+      "layer": "unclassified",
+      "dependents": 1
+    },
+    {
+      "module": "runtime.scheduler",
+      "depth": 0,
+      "owner_team": "architecture_team",
+      "layer": "agent_teams",
+      "dependents": 1
+    },
+    {
+      "module": "tools.codex_control",
+      "depth": 0,
+      "owner_team": "infrastructure_team",
+      "layer": "unclassified",
+      "dependents": 0
+    },
+    {
+      "module": "app.budget_manager",
+      "depth": 1,
+      "owner_team": "backend_team",
+      "layer": "unclassified",
+      "dependents": 1
+    },
+    {
+      "module": "app.context_service",
+      "depth": 1,
+      "owner_team": "backend_team",
+      "layer": "unclassified",
+      "dependents": 1
+    },
+    {
+      "module": "app.git_service",
+      "depth": 1,
+      "owner_team": "backend_team",
+      "layer": "unclassified",
+      "dependents": 2
+    },
+    {
+      "module": "app.main",
+      "depth": 1,
+      "owner_team": "backend_team",
+      "layer": "unclassified",
+      "dependents": 2
+    },
+    {
+      "module": "app.model_router",
+      "depth": 1,
+      "owner_team": "backend_team",
+      "layer": "unclassified",
+      "dependents": 3
+    },
+    {
+      "module": "app.openai_client",
+      "depth": 1,
+      "owner_team": "backend_team",
+      "layer": "unclassified",
+      "dependents": 1
+    },
+    {
+      "module": "app.resource_registry",
+      "depth": 1,
+      "owner_team": "backend_team",
+      "layer": "unclassified",
+      "dependents": 2
+    },
+    {
+      "module": "app.worker_adapters",
+      "depth": 1,
+      "owner_team": "backend_team",
+      "layer": "unclassified",
+      "dependents": 1
+    },
+    {
+      "module": "tools.brain_loop",
+      "depth": 1,
+      "owner_team": "infrastructure_team",
+      "layer": "unclassified",
+      "dependents": 2
+    },
+    {
+      "module": "app.llm_service",
+      "depth": 2,
+      "owner_team": "backend_team",
+      "layer": "unclassified",
+      "dependents": 1
+    },
+    {
+      "module": "runtime.executor",
+      "depth": 2,
+      "owner_team": "backend_team",
+      "layer": "unclassified",
+      "dependents": 1
+    },
+    {
+      "module": "tools.factory_daemon",
+      "depth": 2,
+      "owner_team": "infrastructure_team",
+      "layer": "unclassified",
+      "dependents": 0
+    }
+  ],
+  "affected_teams": [
+    "architecture_team",
+    "backend_team",
+    "infrastructure_team"
+  ],
+  "affected_layers": [
+    "agent_teams",
+    "unclassified"
+  ],
+  "verification_scope": [
+    "app.budget_manager",
+    "app.context_service",
+    "app.git_service",
+    "app.llm_service",
+    "app.main",
+    "app.model_router",
+    "app.models",
+    "app.network_agent",
+    "app.openai_client",
+    "app.orchestrator",
+    "app.resource_registry",
+    "app.worker_adapters",
+    "runtime.executor",
+    "runtime.scheduler",
+    "tools.brain_loop"
+  ]
+}

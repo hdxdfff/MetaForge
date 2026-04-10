@@ -1,0 +1,2812 @@
+[
+  {
+    "updated_at": "2026-03-11T10:08:36.322019Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 176,
+      "last_tick_at": "2026-03-11T10:08:36.311470Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:09:45.500598Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 177,
+      "last_tick_at": "2026-03-11T10:09:45.495596Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:10:54.857766Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 178,
+      "last_tick_at": "2026-03-11T10:10:54.853766Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:12:05.450238Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 179,
+      "last_tick_at": "2026-03-11T10:12:05.444307Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:12:05.450238Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 179,
+      "last_tick_at": "2026-03-11T10:12:05.444307Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:13:22.267445Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 180,
+      "last_tick_at": "2026-03-11T10:13:22.261454Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:14:31.501718Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 181,
+      "last_tick_at": "2026-03-11T10:14:31.489719Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:15:40.068883Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 182,
+      "last_tick_at": "2026-03-11T10:15:40.063814Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:16:49.408249Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 183,
+      "last_tick_at": "2026-03-11T10:16:49.402240Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:16:49.408249Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 183,
+      "last_tick_at": "2026-03-11T10:16:49.402240Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:18:01.242340Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 184,
+      "last_tick_at": "2026-03-11T10:18:01.236345Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:19:17.271614Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 185,
+      "last_tick_at": "2026-03-11T10:19:17.266931Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:20:27.098134Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 186,
+      "last_tick_at": "2026-03-11T10:20:27.087050Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:21:36.672450Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 187,
+      "last_tick_at": "2026-03-11T10:21:36.667452Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:21:36.672450Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 187,
+      "last_tick_at": "2026-03-11T10:21:36.667452Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:22:47.722401Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 188,
+      "last_tick_at": "2026-03-11T10:22:47.717390Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:23:56.989941Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 189,
+      "last_tick_at": "2026-03-11T10:23:56.983995Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:25:14.400230Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 190,
+      "last_tick_at": "2026-03-11T10:25:14.393230Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:26:25.127869Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 191,
+      "last_tick_at": "2026-03-11T10:26:25.116862Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:26:25.127869Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 191,
+      "last_tick_at": "2026-03-11T10:26:25.116862Z"
+    },
+    "control_layer_status": "stable",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:27:37.069755Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 192,
+      "last_tick_at": "2026-03-11T10:27:37.064747Z"
+    },
+    "control_layer_status": "stable",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:28:46.066930Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 193,
+      "last_tick_at": "2026-03-11T10:28:46.061427Z"
+    },
+    "control_layer_status": "stable",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:29:56.123877Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 194,
+      "last_tick_at": "2026-03-11T10:29:56.118880Z"
+    },
+    "control_layer_status": "stable",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:31:11.897709Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 195,
+      "last_tick_at": "2026-03-11T10:31:11.892699Z"
+    },
+    "control_layer_status": "stable",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:32:21.415830Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 196,
+      "last_tick_at": "2026-03-11T10:32:21.404301Z"
+    },
+    "control_layer_status": "stable",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:33:31.747345Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 197,
+      "last_tick_at": "2026-03-11T10:33:31.742341Z"
+    },
+    "control_layer_status": "stable",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:34:48.321582Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 198,
+      "last_tick_at": "2026-03-11T10:34:48.315230Z"
+    },
+    "control_layer_status": "stable",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:35:58.874045Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 199,
+      "last_tick_at": "2026-03-11T10:35:58.863045Z"
+    },
+    "control_layer_status": "stable",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:35:58.874045Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 199,
+      "last_tick_at": "2026-03-11T10:35:58.863045Z"
+    },
+    "control_layer_status": "stable",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:37:15.555169Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 200,
+      "last_tick_at": "2026-03-11T10:37:15.550161Z"
+    },
+    "control_layer_status": "stable",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:38:30.516289Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 201,
+      "last_tick_at": "2026-03-11T10:38:30.503374Z"
+    },
+    "control_layer_status": "stable",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:39:39.724033Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 202,
+      "last_tick_at": "2026-03-11T10:39:39.711036Z"
+    },
+    "control_layer_status": "stable",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:40:49.708375Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 203,
+      "last_tick_at": "2026-03-11T10:40:49.703169Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:42:04.298297Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 204,
+      "last_tick_at": "2026-03-11T10:42:04.293297Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:43:20.909453Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 205,
+      "last_tick_at": "2026-03-11T10:43:20.905454Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:44:29.842043Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 206,
+      "last_tick_at": "2026-03-11T10:44:29.831063Z"
+    },
+    "control_layer_status": "stable",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:46:19.798439Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 0,
+      "last_tick_at": null
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:46:21.716559Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 1,
+      "last_tick_at": "2026-03-11T10:46:21.716559Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:47:23.814898Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 2,
+      "last_tick_at": "2026-03-11T10:47:23.814898Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:47:23.814898Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 2,
+      "last_tick_at": "2026-03-11T10:47:23.814898Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:48:25.764184Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 3,
+      "last_tick_at": "2026-03-11T10:48:25.763176Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:48:25.764184Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 3,
+      "last_tick_at": "2026-03-11T10:48:25.763176Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:48:25.764184Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 3,
+      "last_tick_at": "2026-03-11T10:48:25.763176Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:48:25.764184Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 3,
+      "last_tick_at": "2026-03-11T10:48:25.763176Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:48:25.764184Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 3,
+      "last_tick_at": "2026-03-11T10:48:25.763176Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:48:25.764184Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 3,
+      "last_tick_at": "2026-03-11T10:48:25.763176Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:49:28.569560Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 4,
+      "last_tick_at": "2026-03-11T10:49:28.568420Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:50:34.859746Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 0,
+      "last_tick_at": null
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:51:35.691738Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 6,
+      "last_tick_at": "2026-03-11T10:51:35.691738Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:52:38.042369Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 7,
+      "last_tick_at": "2026-03-11T10:52:38.042369Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T10:55:59.635301Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 1,
+      "last_tick_at": "2026-03-11T10:55:59.634298Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T11:02:25.359613Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 2,
+      "last_tick_at": "2026-03-11T11:02:25.358232Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T11:08:49.111967Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 3,
+      "last_tick_at": "2026-03-11T11:08:49.110292Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T11:08:49.111967Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 3,
+      "last_tick_at": "2026-03-11T11:08:49.110292Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T11:15:15.306922Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 4,
+      "last_tick_at": "2026-03-11T11:15:15.305725Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T11:21:43.675347Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 5,
+      "last_tick_at": "2026-03-11T11:21:43.674334Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T11:28:10.634239Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 6,
+      "last_tick_at": "2026-03-11T11:28:10.632241Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T11:34:45.802939Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 7,
+      "last_tick_at": "2026-03-11T11:34:45.796946Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T11:34:45.802939Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 7,
+      "last_tick_at": "2026-03-11T11:34:45.796946Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T11:41:03.848524Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 8,
+      "last_tick_at": "2026-03-11T11:41:03.842525Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T11:47:42.544764Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 9,
+      "last_tick_at": "2026-03-11T11:47:42.538763Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T11:51:07.210361Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 10,
+      "last_tick_at": "2026-03-11T11:51:07.204357Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T11:57:12.946027Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 11,
+      "last_tick_at": "2026-03-11T11:57:12.935025Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T11:57:12.946027Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 11,
+      "last_tick_at": "2026-03-11T11:57:12.935025Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T12:03:53.296369Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 12,
+      "last_tick_at": "2026-03-11T12:03:53.289504Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T12:10:31.381496Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 13,
+      "last_tick_at": "2026-03-11T12:10:31.375509Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T12:16:55.909602Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 14,
+      "last_tick_at": "2026-03-11T12:16:55.903730Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T12:23:41.418884Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 15,
+      "last_tick_at": "2026-03-11T12:23:41.412336Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T12:23:41.418884Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 15,
+      "last_tick_at": "2026-03-11T12:23:41.412336Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T12:30:21.804112Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 16,
+      "last_tick_at": "2026-03-11T12:30:21.791377Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T12:36:59.016110Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 17,
+      "last_tick_at": "2026-03-11T12:36:59.010118Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T12:43:35.885194Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 18,
+      "last_tick_at": "2026-03-11T12:43:35.879172Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T12:50:13.429086Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 19,
+      "last_tick_at": "2026-03-11T12:50:13.423107Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T12:50:13.429086Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 19,
+      "last_tick_at": "2026-03-11T12:50:13.423107Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T12:57:01.450863Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 20,
+      "last_tick_at": "2026-03-11T12:57:01.444848Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T13:03:20.438392Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 21,
+      "last_tick_at": "2026-03-11T13:03:20.426838Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T13:09:58.019400Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 22,
+      "last_tick_at": "2026-03-11T13:09:58.013392Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T13:16:35.695988Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 23,
+      "last_tick_at": "2026-03-11T13:16:35.689793Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T13:16:35.695988Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 23,
+      "last_tick_at": "2026-03-11T13:16:35.689793Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T13:23:16.162527Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 24,
+      "last_tick_at": "2026-03-11T13:23:16.156523Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T13:30:01.837124Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 25,
+      "last_tick_at": "2026-03-11T13:30:01.831135Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T13:58:47.627353Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 26,
+      "last_tick_at": "2026-03-11T13:58:47.625334Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T14:05:13.055337Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 27,
+      "last_tick_at": "2026-03-11T14:05:13.054333Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T14:05:13.055337Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 27,
+      "last_tick_at": "2026-03-11T14:05:13.054333Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T14:11:39.334434Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 28,
+      "last_tick_at": "2026-03-11T14:11:39.332434Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T14:18:04.207508Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 29,
+      "last_tick_at": "2026-03-11T14:18:04.206508Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T14:30:56.711897Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "error",
+      "cycle": 31,
+      "last_tick_at": "2026-03-11T14:30:56.708909Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T14:31:57.531415Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "error",
+      "cycle": 32,
+      "last_tick_at": "2026-03-11T14:31:57.529426Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T14:40:25.678982Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 0,
+      "last_tick_at": null
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T14:40:31.047677Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 1,
+      "last_tick_at": "2026-03-11T14:40:31.047677Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T14:41:36.331850Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 2,
+      "last_tick_at": "2026-03-11T14:41:36.330821Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T14:42:41.407949Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "operator_attention",
+      "cycle": 3,
+      "last_tick_at": "2026-03-11T14:42:41.406952Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T14:42:41.407949Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "operator_attention",
+      "cycle": 3,
+      "last_tick_at": "2026-03-11T14:42:41.406952Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T14:44:40.807314Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 4,
+      "last_tick_at": "2026-03-11T14:44:40.806314Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T14:45:53.104022Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 5,
+      "last_tick_at": "2026-03-11T14:45:53.102022Z"
+    },
+    "control_layer_status": "stable",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T14:47:00.012974Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 6,
+      "last_tick_at": "2026-03-11T14:47:00.007973Z"
+    },
+    "control_layer_status": "stable",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T14:48:05.908540Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 7,
+      "last_tick_at": "2026-03-11T14:48:05.904547Z"
+    },
+    "control_layer_status": "stable",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T14:48:05.908540Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 7,
+      "last_tick_at": "2026-03-11T14:48:05.904547Z"
+    },
+    "control_layer_status": "stable",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T14:49:12.824878Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 8,
+      "last_tick_at": "2026-03-11T14:49:12.822880Z"
+    },
+    "control_layer_status": "stable",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T14:50:21.517609Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 9,
+      "last_tick_at": "2026-03-11T14:50:21.514584Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T14:52:16.207187Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 10,
+      "last_tick_at": "2026-03-11T14:52:16.203169Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T14:53:22.146092Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 11,
+      "last_tick_at": "2026-03-11T14:53:22.142093Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T14:53:22.146092Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 11,
+      "last_tick_at": "2026-03-11T14:53:22.142093Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T14:55:16.864896Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 12,
+      "last_tick_at": "2026-03-11T14:55:16.862387Z"
+    },
+    "control_layer_status": "stable",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T14:56:22.667636Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 13,
+      "last_tick_at": "2026-03-11T14:56:22.664637Z"
+    },
+    "control_layer_status": "stable",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T14:57:28.389408Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 14,
+      "last_tick_at": "2026-03-11T14:57:28.387409Z"
+    },
+    "control_layer_status": "stable",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T14:58:38.915672Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 15,
+      "last_tick_at": "2026-03-11T14:58:38.913690Z"
+    },
+    "control_layer_status": "stable",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T14:58:38.915672Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 15,
+      "last_tick_at": "2026-03-11T14:58:38.913690Z"
+    },
+    "control_layer_status": "stable",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T14:59:45.766036Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 16,
+      "last_tick_at": "2026-03-11T14:59:45.761542Z"
+    },
+    "control_layer_status": "stable",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:00:51.631997Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 17,
+      "last_tick_at": "2026-03-11T15:00:51.629998Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:02:01.074654Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 18,
+      "last_tick_at": "2026-03-11T15:02:01.072650Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:03:08.357702Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 19,
+      "last_tick_at": "2026-03-11T15:03:08.352950Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:03:08.357702Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 19,
+      "last_tick_at": "2026-03-11T15:03:08.352950Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:05:09.443193Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 20,
+      "last_tick_at": "2026-03-11T15:05:09.441205Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:06:18.164929Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 21,
+      "last_tick_at": "2026-03-11T15:06:18.159731Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:07:21.765234Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "operator_attention",
+      "cycle": 22,
+      "last_tick_at": "2026-03-11T15:07:21.763204Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:08:25.099685Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "operator_attention",
+      "cycle": 23,
+      "last_tick_at": "2026-03-11T15:08:25.097817Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:08:25.099685Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "operator_attention",
+      "cycle": 23,
+      "last_tick_at": "2026-03-11T15:08:25.097817Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:10:17.945532Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 24,
+      "last_tick_at": "2026-03-11T15:10:17.943473Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:11:27.690517Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 25,
+      "last_tick_at": "2026-03-11T15:11:27.685407Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:12:31.198321Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 26,
+      "last_tick_at": "2026-03-11T15:12:31.194302Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:13:34.513510Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 27,
+      "last_tick_at": "2026-03-11T15:13:34.511490Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:13:34.513510Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 27,
+      "last_tick_at": "2026-03-11T15:13:34.511490Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:14:38.917112Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 28,
+      "last_tick_at": "2026-03-11T15:14:38.915038Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:15:42.246306Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 29,
+      "last_tick_at": "2026-03-11T15:15:42.243837Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:17:38.917705Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 30,
+      "last_tick_at": "2026-03-11T15:17:38.912704Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:18:42.237474Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 31,
+      "last_tick_at": "2026-03-11T15:18:42.233475Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:19:45.231776Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "error",
+      "cycle": 32,
+      "last_tick_at": "2026-03-11T15:19:45.220283Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:21:04.623547Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "operator_attention",
+      "cycle": 33,
+      "last_tick_at": "2026-03-11T15:21:04.616542Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:22:25.521452Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "operator_attention",
+      "cycle": 34,
+      "last_tick_at": "2026-03-11T15:22:25.505625Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:24:01.035597Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "operator_attention",
+      "cycle": 35,
+      "last_tick_at": "2026-03-11T15:24:01.020349Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:24:01.035597Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "operator_attention",
+      "cycle": 35,
+      "last_tick_at": "2026-03-11T15:24:01.020349Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:26:10.695864Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 36,
+      "last_tick_at": "2026-03-11T15:26:10.691751Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:27:14.686566Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 37,
+      "last_tick_at": "2026-03-11T15:27:14.683566Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:28:18.490086Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 38,
+      "last_tick_at": "2026-03-11T15:28:18.487086Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:29:22.526871Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 39,
+      "last_tick_at": "2026-03-11T15:29:22.523892Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:29:22.526871Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 39,
+      "last_tick_at": "2026-03-11T15:29:22.523892Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:31:44.682557Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 40,
+      "last_tick_at": "2026-03-11T15:31:44.679561Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:32:48.724908Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 41,
+      "last_tick_at": "2026-03-11T15:32:48.720881Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:33:52.873883Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "operator_attention",
+      "cycle": 42,
+      "last_tick_at": "2026-03-11T15:33:52.868861Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:35:00.660392Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "operator_attention",
+      "cycle": 43,
+      "last_tick_at": "2026-03-11T15:35:00.654393Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:35:00.660392Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "operator_attention",
+      "cycle": 43,
+      "last_tick_at": "2026-03-11T15:35:00.654393Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:37:04.440988Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 44,
+      "last_tick_at": "2026-03-11T15:37:04.437988Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:38:24.374784Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 45,
+      "last_tick_at": "2026-03-11T15:38:24.370761Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:39:28.416701Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 46,
+      "last_tick_at": "2026-03-11T15:39:28.411676Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:40:32.376411Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "operator_attention",
+      "cycle": 47,
+      "last_tick_at": "2026-03-11T15:40:32.373734Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:40:32.376411Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "operator_attention",
+      "cycle": 47,
+      "last_tick_at": "2026-03-11T15:40:32.373734Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:42:27.390540Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "operator_attention",
+      "cycle": 48,
+      "last_tick_at": "2026-03-11T15:42:27.388494Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:44:32.511696Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 49,
+      "last_tick_at": "2026-03-11T15:44:32.509714Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:46:34.833322Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 50,
+      "last_tick_at": "2026-03-11T15:46:34.830320Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:47:41.423161Z",
+    "status": "attention",
+    "issues": [
+      "control-layer-lags-quality"
+    ],
+    "daemon": {
+      "status": "running",
+      "cycle": 51,
+      "last_tick_at": "2026-03-11T15:47:41.419443Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:48:42.566991Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "error",
+      "cycle": 52,
+      "last_tick_at": "2026-03-11T15:48:42.563992Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:49:49.679040Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 53,
+      "last_tick_at": "2026-03-11T15:49:49.675266Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:51:04.131044Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 54,
+      "last_tick_at": "2026-03-11T15:51:04.129044Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:52:26.794585Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 55,
+      "last_tick_at": "2026-03-11T15:52:26.789585Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:52:26.794585Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 55,
+      "last_tick_at": "2026-03-11T15:52:26.789585Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:53:34.897031Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 56,
+      "last_tick_at": "2026-03-11T15:53:34.892028Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:54:42.066639Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 57,
+      "last_tick_at": "2026-03-11T15:54:42.063640Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:55:48.460504Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 58,
+      "last_tick_at": "2026-03-11T15:55:48.457493Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:56:55.212398Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 59,
+      "last_tick_at": "2026-03-11T15:56:55.209384Z"
+    },
+    "control_layer_status": "stable",
+    "quality_status": "promote",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:57:56.449408Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "error",
+      "cycle": 60,
+      "last_tick_at": "2026-03-11T15:57:56.447417Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T15:59:03.083641Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 61,
+      "last_tick_at": "2026-03-11T15:59:03.080629Z"
+    },
+    "control_layer_status": "constrained",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T16:00:14.672384Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 62,
+      "last_tick_at": "2026-03-11T16:00:14.669272Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T16:01:18.787572Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 63,
+      "last_tick_at": "2026-03-11T16:01:18.784518Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T16:05:28.275506Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "error",
+      "cycle": 67,
+      "last_tick_at": "2026-03-11T16:05:28.273526Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T16:10:24.251553Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "error",
+      "cycle": 71,
+      "last_tick_at": "2026-03-11T16:10:24.249553Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T16:14:33.311910Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "error",
+      "cycle": 75,
+      "last_tick_at": "2026-03-11T16:14:33.307884Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T16:18:35.832935Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "error",
+      "cycle": 79,
+      "last_tick_at": "2026-03-11T16:18:35.830933Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T16:22:46.819184Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "error",
+      "cycle": 83,
+      "last_tick_at": "2026-03-11T16:22:46.805170Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T16:27:04.363526Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "error",
+      "cycle": 87,
+      "last_tick_at": "2026-03-11T16:27:04.347614Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-11T16:31:21.839705Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "error",
+      "cycle": 91,
+      "last_tick_at": "2026-03-11T16:31:21.825606Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-12T01:31:13.484874Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "error",
+      "cycle": 95,
+      "last_tick_at": "2026-03-12T01:31:13.470212Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-12T01:35:32.636122Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "error",
+      "cycle": 99,
+      "last_tick_at": "2026-03-12T01:35:32.619125Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-12T01:39:51.645176Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "error",
+      "cycle": 103,
+      "last_tick_at": "2026-03-12T01:39:51.627176Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-12T01:44:11.012384Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "error",
+      "cycle": 107,
+      "last_tick_at": "2026-03-12T01:44:10.997382Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-12T02:47:55.722263Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "error",
+      "cycle": 111,
+      "last_tick_at": "2026-03-12T02:47:55.707283Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-12T02:52:14.496516Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "error",
+      "cycle": 115,
+      "last_tick_at": "2026-03-12T02:52:14.480519Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-12T02:56:33.387248Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "error",
+      "cycle": 119,
+      "last_tick_at": "2026-03-12T02:56:33.371244Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-12T04:00:19.548265Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "error",
+      "cycle": 123,
+      "last_tick_at": "2026-03-12T04:00:19.543362Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-12T04:04:38.224808Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "error",
+      "cycle": 127,
+      "last_tick_at": "2026-03-12T04:04:38.206799Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-12T04:08:56.733139Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "error",
+      "cycle": 131,
+      "last_tick_at": "2026-03-12T04:08:56.718164Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-12T04:13:15.643389Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "error",
+      "cycle": 135,
+      "last_tick_at": "2026-03-12T04:13:15.629387Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-12T05:01:55.739939Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "error",
+      "cycle": 139,
+      "last_tick_at": "2026-03-12T05:01:55.725063Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-12T05:06:14.770047Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "error",
+      "cycle": 143,
+      "last_tick_at": "2026-03-12T05:06:14.754041Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-12T05:10:33.609799Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "error",
+      "cycle": 147,
+      "last_tick_at": "2026-03-12T05:10:33.594801Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-12T05:14:52.298962Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "error",
+      "cycle": 151,
+      "last_tick_at": "2026-03-12T05:14:52.281963Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-12T06:18:38.628431Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "error",
+      "cycle": 155,
+      "last_tick_at": "2026-03-12T06:18:38.612435Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-12T06:22:57.296346Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "error",
+      "cycle": 159,
+      "last_tick_at": "2026-03-12T06:22:57.282362Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-12T06:27:15.663515Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "error",
+      "cycle": 163,
+      "last_tick_at": "2026-03-12T06:27:15.649515Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-12T06:52:04.204293Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "error",
+      "cycle": 167,
+      "last_tick_at": "2026-03-12T06:52:04.199274Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-12T06:56:07.966233Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "error",
+      "cycle": 171,
+      "last_tick_at": "2026-03-12T06:56:07.963136Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "candidate",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-12T06:59:10.978010Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "error",
+      "cycle": 174,
+      "last_tick_at": "2026-03-12T06:59:10.975009Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "attention",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-12T07:01:36.341544Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 175,
+      "last_tick_at": "2026-03-12T07:01:36.338651Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "attention",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-12T07:01:36.341544Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 175,
+      "last_tick_at": "2026-03-12T07:01:36.338651Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "attention",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-12T07:03:33.464323Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "running",
+      "cycle": 176,
+      "last_tick_at": "2026-03-12T07:03:33.454786Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "attention",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-12T07:04:48.876183Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "operator_attention",
+      "cycle": 177,
+      "last_tick_at": "2026-03-12T07:04:48.838131Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "attention",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-12T07:05:56.253863Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "operator_attention",
+      "cycle": 178,
+      "last_tick_at": "2026-03-12T07:05:56.245595Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "attention",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-12T07:07:04.667237Z",
+    "status": "attention",
+    "issues": [
+      "daemon-not-running"
+    ],
+    "daemon": {
+      "status": "operator_attention",
+      "cycle": 179,
+      "last_tick_at": "2026-03-12T07:07:04.659241Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "attention",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-12T07:07:04.667237Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "operator_attention",
+      "cycle": 179,
+      "last_tick_at": "2026-03-12T07:07:04.659241Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "attention",
+    "autonomy_stage": "stage4_confirmed"
+  },
+  {
+    "updated_at": "2026-03-12T07:07:04.667237Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "operator_attention",
+      "cycle": 179,
+      "last_tick_at": "2026-03-12T07:07:04.659241Z"
+    },
+    "control_layer_status": "operator_attention",
+    "quality_status": "attention",
+    "autonomy_stage": "stage4_confirmed"
+  }
+]

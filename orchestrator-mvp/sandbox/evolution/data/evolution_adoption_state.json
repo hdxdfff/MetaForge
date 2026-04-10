@@ -1,0 +1,19 @@
+{
+  "updated_at": "2026-03-12T07:09:26.174391Z",
+  "status": "candidate",
+  "branch": "codex/evolution-20260312t070926",
+  "sandbox_status": "ready",
+  "candidate_count": 9,
+  "artifacts": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "notes": "Ready to record a release candidate if a repository path is attached."
+}

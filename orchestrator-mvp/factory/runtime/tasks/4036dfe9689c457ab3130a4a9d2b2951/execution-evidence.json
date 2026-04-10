@@ -1,0 +1,63 @@
+{
+  "task_id": "4036dfe9689c457ab3130a4a9d2b2951",
+  "task_title": "Isolate ToyOS failing test",
+  "task_status": "completed",
+  "started_at": "2026-04-03T17:39:22.676640Z",
+  "updated_at": "2026-04-04T17:18:21.566735Z",
+  "completed": true,
+  "steps": [
+    {
+      "step_id": "4036dfe9689c457ab3130a4a9d2b2951-terminal-record",
+      "step_title": "Isolate ToyOS failing test",
+      "action": "task_terminal_record",
+      "ok": true,
+      "at": "2026-04-04T17:18:21.566735Z",
+      "status": "completed",
+      "summary": "Superseded by newer runtime task 28bc130eec124207b31729677c3a00b6 for node failing_test_isolation.",
+      "error": null,
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ],
+  "result": {
+    "state": "queued_for_backlog",
+    "reason": "Backlog admission deferred until active capacity is available.",
+    "scheduler_hint": {
+      "goal_primary": "Restore ToyOS real artifact delivery",
+      "goal_mode": "toyos_priority_mode",
+      "goal_target": "Restore ToyOS real artifact delivery",
+      "goal_id": "goal_42e8cd07d0",
+      "graph_id": "graph_c9ae2e2b6e",
+      "node_id": "failing_test_isolation",
+      "node_title": "Isolate ToyOS failing test",
+      "task_type": "harness_regression_run",
+      "queue_name": "regression",
+      "verification_level": "L3",
+      "max_runtime_seconds": 3000,
+      "retry_limit": 1,
+      "rollback_rule": "mark_failed_and_requeue_split",
+      "template_id": "failing_test_isolation",
+      "admission_mode": "degraded",
+      "budget_pool": "P1",
+      "handling_mode": "toyos_replenishment",
+      "automation_source": "failure_backlog_automation"
+    },
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-03T17:39:22.681264Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "4036dfe9689c457ab3130a4a9d2b2951",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "production",
+        "queue_name": "regression",
+        "task_type": "harness_regression_run"
+      }
+    ],
+    "summary": "Superseded by newer runtime task 28bc130eec124207b31729677c3a00b6 for node failing_test_isolation.",
+    "superseded_by": "28bc130eec124207b31729677c3a00b6",
+    "dedupe_reconciled": true
+  }
+}

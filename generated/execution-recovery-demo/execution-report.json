@@ -1,0 +1,13 @@
+{
+  "artifact_id": "execution-recovery-demo",
+  "executed": true,
+  "success": true,
+  "execution_timestamp": "2026-04-04T17:13:17.657945Z",
+  "exit_code": 0,
+  "command": [
+    "D:\\codex\\tools\\python311-embed\\python.exe",
+    "D:\\codex\\generated\\execution-recovery-demo\\run_demo.py"
+  ],
+  "stdout": "{\"status\": \"ok\", \"message\": \"hello from execution recovery\", \"args\": []}",
+  "stderr": ""
+}

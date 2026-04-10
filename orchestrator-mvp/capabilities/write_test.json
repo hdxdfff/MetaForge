@@ -1,0 +1,19 @@
+﻿{
+  "capability_id": "write_test",
+  "version": 1,
+  "domain": "quality",
+  "summary": "Design or extend tests to cover a target behavior or regression.",
+  "goal_types": ["verification_upgrade", "capability_upgrade", "build_product", "build_platform"],
+  "keywords": ["test", "coverage", "assertion", "qa", "verification", "regression test"],
+  "inputs": ["target_behavior", "source_paths", "existing_tests"],
+  "steps": [
+    {"id": "inspect_current_coverage", "title": "Inspect current coverage", "role": "tester", "tools": ["read_file", "search_code"]},
+    {"id": "design_test_cases", "title": "Design test cases", "role": "tester", "tools": ["read_file"]},
+    {"id": "implement_tests", "title": "Implement tests", "role": "coder", "tools": ["patch_apply", "write_file"]},
+    {"id": "execute_tests", "title": "Execute tests", "role": "tester", "tools": ["run_tests"]}
+  ],
+  "tools": ["read_file", "patch_apply", "run_tests"],
+  "success_conditions": ["tests_added_or_updated", "tests_execute_cleanly"],
+  "fallbacks": ["use_smoke_checks", "mark_test_gap"],
+  "reusable_for": ["regression_prevention", "coverage_gap"]
+}

@@ -1,0 +1,2692 @@
+[
+  {
+    "created_at": "2026-03-11T05:35:46.989762Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T05:35:46.214697Z",
+        "task_total": 1,
+        "task_completed": 0,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.0,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T05:35:46.330605Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T05:35:46.214697Z",
+          "task_total": 1,
+          "task_completed": 0,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.0,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T05:35:46.784677Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t053546",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T05:35:46.893657Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t053546",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T05:41:43.882852Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T05:41:43.178127Z",
+        "task_total": 1,
+        "task_completed": 0,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.0,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T05:41:43.279134Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T05:41:43.178127Z",
+          "task_total": 1,
+          "task_completed": 0,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.0,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T05:41:43.686065Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t054143",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T05:41:43.795771Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t054143",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T06:29:45.975527Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T06:29:45.283599Z",
+        "task_total": 1,
+        "task_completed": 0,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.0,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T06:29:45.498243Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T06:29:45.283599Z",
+          "task_total": 1,
+          "task_completed": 0,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.0,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T06:29:45.845915Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t062945",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T06:29:45.913002Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t062945",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T06:35:24.333172Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T06:35:23.688537Z",
+        "task_total": 1,
+        "task_completed": 0,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.0,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T06:35:23.780368Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T06:35:23.688537Z",
+          "task_total": 1,
+          "task_completed": 0,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.0,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T06:35:24.159236Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t063524",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T06:35:24.247831Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t063524",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T06:41:17.672526Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T06:41:16.999245Z",
+        "task_total": 1,
+        "task_completed": 0,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.0,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T06:41:17.088293Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T06:41:16.999245Z",
+          "task_total": 1,
+          "task_completed": 0,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.0,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T06:41:17.491428Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t064117",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T06:41:17.591784Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t064117",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T07:31:51.295485Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T07:31:50.650107Z",
+        "task_total": 1,
+        "task_completed": 0,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.0,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T07:31:50.740028Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T07:31:50.650107Z",
+          "task_total": 1,
+          "task_completed": 0,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.0,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T07:31:51.128660Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t073151",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T07:31:51.205025Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t073151",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T07:37:45.423985Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T07:37:44.811551Z",
+        "task_total": 1,
+        "task_completed": 0,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.0,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T07:37:44.898323Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T07:37:44.811551Z",
+          "task_total": 1,
+          "task_completed": 0,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.0,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T07:37:45.257060Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t073745",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T07:37:45.343829Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t073745",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T07:43:40.082506Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T07:43:39.436519Z",
+        "task_total": 1,
+        "task_completed": 0,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.0,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T07:43:39.535212Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T07:43:39.436519Z",
+          "task_total": 1,
+          "task_completed": 0,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.0,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T07:43:39.895652Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t074339",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T07:43:39.994328Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t074339",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T08:44:01.727096Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T08:44:01.061840Z",
+        "task_total": 1,
+        "task_completed": 0,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.0,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T08:44:01.151397Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T08:44:01.061840Z",
+          "task_total": 1,
+          "task_completed": 0,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.0,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T08:44:01.541175Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t084401",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T08:44:01.634578Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t084401",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T08:49:54.549980Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T08:49:53.927492Z",
+        "task_total": 1,
+        "task_completed": 0,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.0,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T08:49:54.006887Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T08:49:53.927492Z",
+          "task_total": 1,
+          "task_completed": 0,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.0,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T08:49:54.376559Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t084954",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T08:49:54.462468Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t084954",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T08:55:58.781202Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T08:55:58.067831Z",
+        "task_total": 1,
+        "task_completed": 0,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.0,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T08:55:58.166898Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T08:55:58.067831Z",
+          "task_total": 1,
+          "task_completed": 0,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.0,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T08:55:58.562626Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t085558",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T08:55:58.688208Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t085558",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T09:01:54.086544Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T09:01:53.425855Z",
+        "task_total": 1,
+        "task_completed": 0,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.0,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T09:01:53.521629Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T09:01:53.425855Z",
+          "task_total": 1,
+          "task_completed": 0,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.0,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T09:01:53.896399Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t090153",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T09:01:53.995768Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t090153",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T09:20:43.372130Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T09:20:42.633462Z",
+        "task_total": 1,
+        "task_completed": 0,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.0,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T09:20:42.728603Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T09:20:42.633462Z",
+          "task_total": 1,
+          "task_completed": 0,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.0,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T09:20:43.160227Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t092043",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T09:20:43.267883Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t092043",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T09:26:37.418868Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T09:26:36.604787Z",
+        "task_total": 1,
+        "task_completed": 0,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.0,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T09:26:36.791409Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T09:26:36.604787Z",
+          "task_total": 1,
+          "task_completed": 0,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.0,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T09:26:37.214977Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t092637",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T09:26:37.318865Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t092637",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T09:32:36.394676Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T09:32:35.681907Z",
+        "task_total": 1,
+        "task_completed": 0,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.0,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T09:32:35.781788Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T09:32:35.681907Z",
+          "task_total": 1,
+          "task_completed": 0,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.0,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T09:32:36.197802Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t093236",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T09:32:36.306728Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t093236",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T09:38:34.089709Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T09:38:33.417900Z",
+        "task_total": 1,
+        "task_completed": 0,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.0,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T09:38:33.523438Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T09:38:33.417900Z",
+          "task_total": 1,
+          "task_completed": 0,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.0,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T09:38:33.892095Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t093833",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T09:38:33.998623Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t093833",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T09:44:32.905321Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T09:44:32.159491Z",
+        "task_total": 1,
+        "task_completed": 0,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.0,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T09:44:32.258301Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T09:44:32.159491Z",
+          "task_total": 1,
+          "task_completed": 0,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.0,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T09:44:32.674245Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t094432",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T09:44:32.805245Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t094432",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T09:50:26.412878Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T09:50:25.758304Z",
+        "task_total": 1,
+        "task_completed": 0,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.0,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T09:50:25.844835Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T09:50:25.758304Z",
+          "task_total": 1,
+          "task_completed": 0,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.0,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T09:50:26.226398Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t095026",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T09:50:26.328297Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t095026",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T10:01:16.694814Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T10:01:15.942193Z",
+        "task_total": 4,
+        "task_completed": 0,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.0,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T10:01:16.038169Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T10:01:15.942193Z",
+          "task_total": 4,
+          "task_completed": 0,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.0,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T10:01:16.491642Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t100116",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T10:01:16.592816Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t100116",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T10:07:14.154983Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T10:07:13.392418Z",
+        "task_total": 1,
+        "task_completed": 0,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.0,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T10:07:13.512764Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T10:07:13.392418Z",
+          "task_total": 1,
+          "task_completed": 0,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.0,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T10:07:13.932134Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t100713",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T10:07:14.043039Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t100713",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T10:13:13.101068Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T10:13:12.409303Z",
+        "task_total": 1,
+        "task_completed": 0,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.0,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T10:13:12.490584Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T10:13:12.409303Z",
+          "task_total": 1,
+          "task_completed": 0,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.0,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T10:13:12.900061Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t101312",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T10:13:13.011380Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t101312",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T10:19:07.276750Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T10:19:06.582062Z",
+        "task_total": 3,
+        "task_completed": 0,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.0,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T10:19:06.682107Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T10:19:06.582062Z",
+          "task_total": 3,
+          "task_completed": 0,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.0,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T10:19:07.081709Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t101907",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T10:19:07.177675Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t101907",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T10:25:02.833322Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T10:25:02.153543Z",
+        "task_total": 3,
+        "task_completed": 0,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.0,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T10:25:02.244913Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T10:25:02.153543Z",
+          "task_total": 3,
+          "task_completed": 0,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.0,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T10:25:02.639364Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t102502",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T10:25:02.737536Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t102502",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T10:31:01.674065Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T10:31:00.951219Z",
+        "task_total": 3,
+        "task_completed": 1,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.3333,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T10:31:01.050136Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T10:31:00.951219Z",
+          "task_total": 3,
+          "task_completed": 1,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.3333,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T10:31:01.476119Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t103101",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T10:31:01.575053Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t103101",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T10:34:36.736259Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T10:34:36.009685Z",
+        "task_total": 4,
+        "task_completed": 1,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.25,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T10:34:36.120340Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T10:34:36.009685Z",
+          "task_total": 4,
+          "task_completed": 1,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.25,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T10:34:36.547248Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t103436",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T10:34:36.646056Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t103436",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T10:38:19.582748Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T10:38:18.876632Z",
+        "task_total": 4,
+        "task_completed": 3,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.75,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T10:38:18.981229Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T10:38:18.876632Z",
+          "task_total": 4,
+          "task_completed": 3,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.75,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T10:38:19.390291Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t103819",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T10:38:19.487983Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t103819",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T10:41:54.061738Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T10:41:53.404498Z",
+        "task_total": 4,
+        "task_completed": 3,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.75,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T10:41:53.498680Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T10:41:53.404498Z",
+          "task_total": 4,
+          "task_completed": 3,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.75,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T10:41:53.876417Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t104153",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T10:41:53.970497Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t104153",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T10:43:10.372663Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T10:43:09.703941Z",
+        "task_total": 4,
+        "task_completed": 3,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.75,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T10:43:09.783437Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T10:43:09.703941Z",
+          "task_total": 4,
+          "task_completed": 3,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.75,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T10:43:10.199404Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t104310",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T10:43:10.287222Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t104310",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T10:50:31.428747Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T10:50:30.838284Z",
+        "task_total": 4,
+        "task_completed": 3,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.75,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T10:50:30.921982Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T10:50:30.838284Z",
+          "task_total": 4,
+          "task_completed": 3,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.75,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T10:50:31.280420Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t105031",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T10:50:31.358629Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t105031",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T11:21:41.209216Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T11:21:40.552635Z",
+        "task_total": 5,
+        "task_completed": 3,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.6,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T11:21:40.641744Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T11:21:40.552635Z",
+          "task_total": 5,
+          "task_completed": 3,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.6,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T11:21:41.031869Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t112141",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T11:21:41.122992Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t112141",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T11:50:53.295577Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T11:50:52.539337Z",
+        "task_total": 5,
+        "task_completed": 3,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.6,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T11:50:52.660268Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T11:50:52.539337Z",
+          "task_total": 5,
+          "task_completed": 3,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.6,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T11:50:53.077465Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t115053",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T11:50:53.190465Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t115053",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T12:23:28.561638Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T12:23:27.839009Z",
+        "task_total": 5,
+        "task_completed": 3,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.6,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T12:23:27.935441Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T12:23:27.839009Z",
+          "task_total": 5,
+          "task_completed": 3,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.6,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T12:23:28.356498Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t122328",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T12:23:28.457849Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t122328",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T12:56:48.529781Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T12:56:47.842042Z",
+        "task_total": 5,
+        "task_completed": 3,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.6,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T12:56:47.939052Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T12:56:47.842042Z",
+          "task_total": 5,
+          "task_completed": 3,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.6,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T12:56:48.349129Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t125648",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T12:56:48.432115Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t125648",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T13:29:48.538074Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T13:29:47.830917Z",
+        "task_total": 5,
+        "task_completed": 3,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.6,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T13:29:47.928423Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T13:29:47.830917Z",
+          "task_total": 5,
+          "task_completed": 3,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.6,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T13:29:48.351441Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t132948",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T13:29:48.439160Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t132948",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T14:24:30.546954Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T14:24:29.860417Z",
+        "task_total": 5,
+        "task_completed": 3,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.6,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T14:24:29.956841Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T14:24:29.860417Z",
+          "task_total": 5,
+          "task_completed": 3,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.6,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T14:24:30.349482Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t142430",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T14:24:30.447951Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t142430",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T14:45:49.121256Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T14:45:47.615579Z",
+        "task_total": 1,
+        "task_completed": 0,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.0,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T14:45:47.710668Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T14:45:47.615579Z",
+          "task_total": 1,
+          "task_completed": 0,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.0,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T14:45:48.936425Z",
+        "status": "prepared",
+        "branch": "codex/evolution-20260311t144548",
+        "candidate_count": 4,
+        "targets": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T14:45:49.027274Z",
+        "status": "candidate",
+        "branch": "codex/evolution-20260311t144548",
+        "sandbox_status": "ready",
+        "candidate_count": 4,
+        "artifacts": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "notes": "Ready to record a release candidate if a repository path is attached."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T14:50:17.755504Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T14:50:16.974632Z",
+        "task_total": 0,
+        "task_completed": 0,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.0,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T14:50:17.092720Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T14:50:16.974632Z",
+          "task_total": 0,
+          "task_completed": 0,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.0,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T14:50:17.566764Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t145017",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T14:50:17.660281Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t145017",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T14:58:35.081995Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T14:58:34.316114Z",
+        "task_total": 0,
+        "task_completed": 0,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.0,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T14:58:34.414346Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T14:58:34.316114Z",
+          "task_total": 0,
+          "task_completed": 0,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.0,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T14:58:34.863793Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t145834",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T14:58:34.990532Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t145834",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T15:01:57.154914Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T15:01:56.424664Z",
+        "task_total": 2,
+        "task_completed": 0,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.0,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T15:01:56.515826Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T15:01:56.424664Z",
+          "task_total": 2,
+          "task_completed": 0,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.0,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T15:01:56.969920Z",
+        "status": "idle",
+        "branch": "codex/evolution-20260311t150156",
+        "candidate_count": 0,
+        "targets": [],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T15:01:57.061249Z",
+        "status": "blocked",
+        "branch": "codex/evolution-20260311t150156",
+        "sandbox_status": "idle",
+        "candidate_count": 0,
+        "artifacts": [],
+        "notes": "Sandbox or patch preparation not ready."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T15:05:05.504467Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T15:05:03.684636Z",
+        "task_total": 7,
+        "task_completed": 0,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.0,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T15:05:03.780653Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T15:05:03.684636Z",
+          "task_total": 7,
+          "task_completed": 0,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.0,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T15:05:05.315343Z",
+        "status": "prepared",
+        "branch": "codex/evolution-20260311t150505",
+        "candidate_count": 2,
+        "targets": [
+          null,
+          null
+        ],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T15:05:05.412868Z",
+        "status": "candidate",
+        "branch": "codex/evolution-20260311t150505",
+        "sandbox_status": "ready",
+        "candidate_count": 2,
+        "artifacts": [
+          null,
+          null
+        ],
+        "notes": "Ready to record a release candidate if a repository path is attached."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T15:11:23.622043Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T15:11:21.547311Z",
+        "task_total": 9,
+        "task_completed": 1,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.1111,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T15:11:21.645305Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T15:11:21.547311Z",
+          "task_total": 9,
+          "task_completed": 1,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.1111,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T15:11:23.439612Z",
+        "status": "prepared",
+        "branch": "codex/evolution-20260311t151123",
+        "candidate_count": 3,
+        "targets": [
+          null,
+          null,
+          null
+        ],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T15:11:23.531904Z",
+        "status": "candidate",
+        "branch": "codex/evolution-20260311t151123",
+        "sandbox_status": "ready",
+        "candidate_count": 3,
+        "artifacts": [
+          null,
+          null,
+          null
+        ],
+        "notes": "Ready to record a release candidate if a repository path is attached."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T15:17:34.121167Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T15:17:32.203384Z",
+        "task_total": 9,
+        "task_completed": 1,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.1111,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T15:17:32.301408Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T15:17:32.203384Z",
+          "task_total": 9,
+          "task_completed": 1,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.1111,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T15:17:33.936056Z",
+        "status": "prepared",
+        "branch": "codex/evolution-20260311t151733",
+        "candidate_count": 2,
+        "targets": [
+          null,
+          null
+        ],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T15:17:34.035853Z",
+        "status": "candidate",
+        "branch": "codex/evolution-20260311t151733",
+        "sandbox_status": "ready",
+        "candidate_count": 2,
+        "artifacts": [
+          null,
+          null
+        ],
+        "notes": "Ready to record a release candidate if a repository path is attached."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T15:23:34.563924Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T15:23:31.216845Z",
+        "task_total": 9,
+        "task_completed": 1,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.1111,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T15:23:31.314433Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T15:23:31.216845Z",
+          "task_total": 9,
+          "task_completed": 1,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.1111,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T15:23:34.333533Z",
+        "status": "prepared",
+        "branch": "codex/evolution-20260311t152334",
+        "candidate_count": 6,
+        "targets": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T15:23:34.446551Z",
+        "status": "candidate",
+        "branch": "codex/evolution-20260311t152334",
+        "sandbox_status": "ready",
+        "candidate_count": 6,
+        "artifacts": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "notes": "Ready to record a release candidate if a repository path is attached."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T15:31:39.941761Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T15:31:35.367070Z",
+        "task_total": 9,
+        "task_completed": 1,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.1111,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T15:31:35.463071Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T15:31:35.367070Z",
+          "task_total": 9,
+          "task_completed": 1,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.1111,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T15:31:39.783787Z",
+        "status": "prepared",
+        "branch": "codex/evolution-20260311t153139",
+        "candidate_count": 7,
+        "targets": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T15:31:39.861392Z",
+        "status": "candidate",
+        "branch": "codex/evolution-20260311t153139",
+        "sandbox_status": "ready",
+        "candidate_count": 7,
+        "artifacts": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "notes": "Ready to record a release candidate if a repository path is attached."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T15:38:19.001260Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T15:38:15.524427Z",
+        "task_total": 13,
+        "task_completed": 0,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.0,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T15:38:15.618697Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T15:38:15.524427Z",
+          "task_total": 13,
+          "task_completed": 0,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.0,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T15:38:18.820835Z",
+        "status": "prepared",
+        "branch": "codex/evolution-20260311t153818",
+        "candidate_count": 6,
+        "targets": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T15:38:18.916040Z",
+        "status": "candidate",
+        "branch": "codex/evolution-20260311t153818",
+        "sandbox_status": "ready",
+        "candidate_count": 6,
+        "artifacts": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "notes": "Ready to record a release candidate if a repository path is attached."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T15:46:30.119175Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T15:46:27.237936Z",
+        "task_total": 15,
+        "task_completed": 11,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.7333,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T15:46:27.329675Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T15:46:27.237936Z",
+          "task_total": 15,
+          "task_completed": 11,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.7333,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T15:46:29.922011Z",
+        "status": "prepared",
+        "branch": "codex/evolution-20260311t154629",
+        "candidate_count": 4,
+        "targets": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T15:46:30.027175Z",
+        "status": "candidate",
+        "branch": "codex/evolution-20260311t154629",
+        "sandbox_status": "ready",
+        "candidate_count": 4,
+        "artifacts": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "notes": "Ready to record a release candidate if a repository path is attached."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T15:50:59.232460Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T15:50:53.656830Z",
+        "task_total": 15,
+        "task_completed": 11,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.7333,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T15:50:53.773886Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T15:50:53.656830Z",
+          "task_total": 15,
+          "task_completed": 11,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.7333,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T15:50:59.036769Z",
+        "status": "prepared",
+        "branch": "codex/evolution-20260311t155059",
+        "candidate_count": 2,
+        "targets": [
+          null,
+          null
+        ],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T15:50:59.143597Z",
+        "status": "candidate",
+        "branch": "codex/evolution-20260311t155059",
+        "sandbox_status": "ready",
+        "candidate_count": 2,
+        "artifacts": [
+          null,
+          null
+        ],
+        "notes": "Ready to record a release candidate if a repository path is attached."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-11T15:52:21.454899Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-11T15:52:15.491553Z",
+        "task_total": 15,
+        "task_completed": 11,
+        "task_failed": 0,
+        "task_waiting": 0,
+        "task_success_rate": 0.7333,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-11T15:52:15.588753Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-11T15:52:15.491553Z",
+          "task_total": 15,
+          "task_completed": 11,
+          "task_failed": 0,
+          "task_waiting": 0,
+          "task_success_rate": 0.7333,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-11T15:52:21.267169Z",
+        "status": "prepared",
+        "branch": "codex/evolution-20260311t155221",
+        "candidate_count": 2,
+        "targets": [
+          null,
+          null
+        ],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-11T15:52:21.358283Z",
+        "status": "candidate",
+        "branch": "codex/evolution-20260311t155221",
+        "sandbox_status": "ready",
+        "candidate_count": 2,
+        "artifacts": [
+          null,
+          null
+        ],
+        "notes": "Ready to record a release candidate if a repository path is attached."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-12T07:01:30.654667Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-12T07:00:54.906587Z",
+        "task_total": 17,
+        "task_completed": 3,
+        "task_failed": 0,
+        "task_waiting": 1,
+        "task_success_rate": 0.1765,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-12T07:00:55.005513Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-12T07:00:54.906587Z",
+          "task_total": 17,
+          "task_completed": 3,
+          "task_failed": 0,
+          "task_waiting": 1,
+          "task_success_rate": 0.1765,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-12T07:01:30.413785Z",
+        "status": "prepared",
+        "branch": "codex/evolution-20260312t070130",
+        "candidate_count": 11,
+        "targets": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-12T07:01:30.521935Z",
+        "status": "candidate",
+        "branch": "codex/evolution-20260312t070130",
+        "sandbox_status": "ready",
+        "candidate_count": 11,
+        "artifacts": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "notes": "Ready to record a release candidate if a repository path is attached."
+      }
+    }
+  },
+  {
+    "created_at": "2026-03-12T07:09:26.263630Z",
+    "snapshot": {
+      "telemetry": {
+        "updated_at": "2026-03-12T07:08:59.100550Z",
+        "task_total": 17,
+        "task_completed": 3,
+        "task_failed": 0,
+        "task_waiting": 1,
+        "task_success_rate": 0.1765,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "evaluation": {
+        "updated_at": "2026-03-12T07:08:59.200954Z",
+        "telemetry_snapshot": {
+          "updated_at": "2026-03-12T07:08:59.100550Z",
+          "task_total": 17,
+          "task_completed": 3,
+          "task_failed": 0,
+          "task_waiting": 1,
+          "task_success_rate": 0.1765,
+          "cheap_calls_total": 0,
+          "core_escalations_total": 0,
+          "meta_factory_status": "attention",
+          "candidate_count": 3
+        },
+        "findings": [],
+        "status": "stable"
+      },
+      "patch": {
+        "updated_at": "2026-03-12T07:09:26.087233Z",
+        "status": "prepared",
+        "branch": "codex/evolution-20260312t070926",
+        "candidate_count": 9,
+        "targets": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+      },
+      "adoption": {
+        "updated_at": "2026-03-12T07:09:26.174391Z",
+        "status": "candidate",
+        "branch": "codex/evolution-20260312t070926",
+        "sandbox_status": "ready",
+        "candidate_count": 9,
+        "artifacts": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "notes": "Ready to record a release candidate if a repository path is attached."
+      }
+    }
+  }
+]

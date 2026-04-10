@@ -1,0 +1,28 @@
+{
+  "task_id": "07b234997d2948288f796180dd34a923",
+  "task_title": "Build current runnable baseline for Strengthen webapp generation capability",
+  "task_status": "timed_out",
+  "started_at": "2026-03-21T21:09:09.390537Z",
+  "updated_at": "2026-03-21T21:14:51.511860Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "07b234997d2948288f796180dd34a923-terminal-record",
+      "step_title": "Build current runnable baseline for Strengthen webapp generation capability",
+      "action": "task_terminal_record",
+      "ok": false,
+      "at": "2026-03-21T21:14:51.511860Z",
+      "status": "timed_out",
+      "summary": "Superseded by newer runtime task 3506653a7b06487181a473169fd5f5b7 for node bootstrap_build.",
+      "error": null,
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ],
+  "result": {
+    "summary": "Superseded by newer runtime task 3506653a7b06487181a473169fd5f5b7 for node bootstrap_build.",
+    "superseded_by": "3506653a7b06487181a473169fd5f5b7",
+    "dedupe_reconciled": true
+  }
+}

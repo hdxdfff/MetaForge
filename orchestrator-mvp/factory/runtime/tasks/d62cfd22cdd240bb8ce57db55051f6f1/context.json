@@ -1,0 +1,131 @@
+{
+  "task_id": "d62cfd22cdd240bb8ce57db55051f6f1",
+  "task_status": "failed",
+  "phase": "failed",
+  "updated_at": "2026-04-02T21:58:59.506890Z",
+  "heartbeat_at": "2026-04-02T21:58:59.506890Z",
+  "repo_path": "D:\\codex\\orchestrator-mvp",
+  "goal": "Clarify target outcome",
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": "runtime.failure_backlog_automation",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\d62cfd22cdd240bb8ce57db55051f6f1",
+  "error": "Audit output schema rejected for report_refresh/reviewer: Reviewer audit output missing required structured sections.",
+  "title": "Clarify the target",
+  "prompt": "Summarize the experiment objective, exact steps, commands, observed results, and residual risks, then generate a screenshot-friendly lab report in Markdown with local image paths embedded.",
+  "scheduler_hint": {
+    "automation_source": "failure_backlog_automation",
+    "template_id": "lab-report",
+    "template_category": "course",
+    "cluster_key": "recover stable execution output",
+    "cluster_count": 186,
+    "cluster_status": "attention",
+    "handling_mode": "generic_saturation",
+    "dispatch_now": true,
+    "admission_mode": "normal",
+    "scheduled_by": "runtime.failure_backlog_automation",
+    "decomposition_child": true,
+    "decomposition_parent_task_id": "0d085850ebb64740961a50774c3d52fa",
+    "decomposition_root_task_id": "0d085850ebb64740961a50774c3d52fa",
+    "decomposition_depth": 1,
+    "max_decomposition_depth": 2,
+    "decomposition_child_index": 1,
+    "decomposition_allow_children": false,
+    "decomposition_path_kind": "shared",
+    "decomposition_shared_dependency_group": "0d085850ebb64740961a50774c3d52fa",
+    "decomposition_repair_for": null,
+    "decomposition_dependencies": [],
+    "dependency_task_ids": [],
+    "dependency_count": 0
+  },
+  "context_package": {},
+  "plan": [
+    {
+      "id": "24b35805",
+      "title": "Request experiment details",
+      "status": "failed",
+      "worker": "reviewer",
+      "phase": null
+    },
+    {
+      "id": "07875054",
+      "title": "Generate lab report template",
+      "status": "pending",
+      "worker": "planner",
+      "phase": null
+    }
+  ],
+  "verification_signals": [
+    {
+      "timestamp": "2026-04-02T21:23:42.992900Z",
+      "kind": "admission_accepted",
+      "success": true,
+      "task_id": "d62cfd22cdd240bb8ce57db55051f6f1",
+      "admission_lane": null,
+      "admission_reason": null,
+      "execution_mode": "governance",
+      "queue_name": "fastlane",
+      "task_type": "report_refresh"
+    },
+    {
+      "timestamp": "2026-04-02T21:53:23.677086Z",
+      "kind": "step_failed",
+      "success": false,
+      "task_id": "d62cfd22cdd240bb8ce57db55051f6f1",
+      "step_id": "24b35805",
+      "step_title": "Request experiment details",
+      "worker": "reviewer",
+      "phase": null,
+      "route_model": "kimi-k2.5",
+      "route_provider": "openai",
+      "elapsed_ms": 866875,
+      "error": "Audit output schema rejected for report_refresh/reviewer: Reviewer audit output missing required structured sections.",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "error-output",
+        "char_count": 117,
+        "line_count": 1,
+        "stored_raw": false
+      }
+    }
+  ],
+  "verification_signal_count": 2,
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-02T21:23:42.992900Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "d62cfd22cdd240bb8ce57db55051f6f1",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "governance",
+        "queue_name": "fastlane",
+        "task_type": "report_refresh"
+      },
+      {
+        "timestamp": "2026-04-02T21:53:23.677086Z",
+        "kind": "step_failed",
+        "success": false,
+        "task_id": "d62cfd22cdd240bb8ce57db55051f6f1",
+        "step_id": "24b35805",
+        "step_title": "Request experiment details",
+        "worker": "reviewer",
+        "phase": null,
+        "route_model": "kimi-k2.5",
+        "route_provider": "openai",
+        "elapsed_ms": 866875,
+        "error": "Audit output schema rejected for report_refresh/reviewer: Reviewer audit output missing required structured sections.",
+        "output_ref": {},
+        "output_stats": {
+          "channel": "error-output",
+          "char_count": 117,
+          "line_count": 1,
+          "stored_raw": false
+        }
+      }
+    ]
+  }
+}

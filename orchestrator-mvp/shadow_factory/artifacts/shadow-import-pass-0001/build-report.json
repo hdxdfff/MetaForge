@@ -1,0 +1,8 @@
+{
+  "task_id": "shadow-import-pass-0001",
+  "status": "pass",
+  "build_success": true,
+  "build_ready": true,
+  "built_at": "2026-03-28T21:14:20Z",
+  "shadow_mode": true
+}

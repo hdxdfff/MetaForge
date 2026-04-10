@@ -1,0 +1,22 @@
+{
+  "audit_id": "audit-task-toyos-build-shadow-0001",
+  "task_id": "task-toyos-build-shadow-0001",
+  "verdict": "fail",
+  "score": 60,
+  "issues": [
+    "build report does not indicate success",
+    "execution report does not indicate pass"
+  ],
+  "evidence": {
+    "build_report": "D:\\codex\\orchestrator-mvp\\shadow_factory\\artifacts\\task-toyos-build-shadow-0001\\build-report.json",
+    "execution_report": "D:\\codex\\orchestrator-mvp\\shadow_factory\\artifacts\\task-toyos-build-shadow-0001\\build\\execution-report.json",
+    "artifact_paths": [
+      "D:\\codex\\orchestrator-mvp\\shadow_factory\\artifacts\\task-toyos-build-shadow-0001\\builder-execution.json",
+      "D:\\codex\\orchestrator-mvp\\shadow_factory\\artifacts\\task-toyos-build-shadow-0001\\build-report.json",
+      "D:\\codex\\orchestrator-mvp\\shadow_factory\\artifacts\\task-toyos-build-shadow-0001\\build\\build.log"
+    ]
+  },
+  "reproducible": false,
+  "shadow_mode": true,
+  "audited_at": "2026-03-26T14:43:11Z"
+}

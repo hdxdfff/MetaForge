@@ -1,0 +1,85 @@
+{
+  "task_id": "4ea8910eb20541ceb5781f06a1302af2",
+  "task_title": "Refresh control-layer status via publication",
+  "task_status": "timed_out",
+  "started_at": "2026-03-29T17:09:29.963847Z",
+  "updated_at": "2026-03-29T17:14:58.443555Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "290be6eb",
+      "step_title": "Understand task",
+      "action": "planner_step",
+      "ok": false,
+      "at": "2026-03-29T17:14:58.443555Z",
+      "phase": "understand",
+      "worker": "planner",
+      "status": "running",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "d67d9724",
+      "step_title": "Draft solution",
+      "action": "coder_step",
+      "ok": false,
+      "at": "2026-03-29T17:14:58.443555Z",
+      "phase": "draft",
+      "worker": "coder",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "0957aa0d",
+      "step_title": "Execute validation",
+      "action": "docker_step",
+      "ok": false,
+      "at": "2026-03-29T17:14:58.443555Z",
+      "phase": "execute",
+      "worker": "docker",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "186cb81b",
+      "step_title": "Issue patch decision",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-03-29T17:14:58.443555Z",
+      "phase": "verify",
+      "worker": "reviewer",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "e5de58c7",
+      "step_title": "Revise next action",
+      "action": "planner_step",
+      "ok": false,
+      "at": "2026-03-29T17:14:58.443555Z",
+      "phase": "revise",
+      "worker": "planner",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    }
+  ],
+  "result": {
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

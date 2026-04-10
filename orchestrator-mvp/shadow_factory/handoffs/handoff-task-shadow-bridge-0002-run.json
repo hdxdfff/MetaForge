@@ -1,0 +1,18 @@
+{
+  "handoff_id": "handoff-task-shadow-bridge-0002-run",
+  "task_id": "task-shadow-bridge-0002",
+  "from_role": "runner",
+  "to_role": "auditor",
+  "status": "success",
+  "payload": {
+    "build_report_path": "D:\\codex\\orchestrator-mvp\\shadow_factory\\artifacts\\task-shadow-bridge-0002\\build-report.json",
+    "execution_report_path": "D:\\codex\\orchestrator-mvp\\shadow_factory\\artifacts\\task-shadow-bridge-0002\\execution-report.json",
+    "artifact_paths": [
+      "D:\\codex\\orchestrator-mvp\\shadow_factory\\artifacts\\task-shadow-bridge-0002\\dummy-artifact.txt"
+    ]
+  },
+  "notes": [
+    "shadow run completed"
+  ],
+  "created_at": "2026-03-28T20:41:36Z"
+}

@@ -1,0 +1,156 @@
+[
+  {
+    "pattern_id": "metaforge-ui-bootstrap-code-leakage",
+    "project": "MetaForge OS",
+    "category": "ui-i18n",
+    "symptoms": [
+      "Chinese operator UI shows internal goal mode codes like priority-directive-toyos.",
+      "Bootstrap values reach the shell before zh() mappings cover them."
+    ],
+    "recommended_response": "Add explicit display mappings for bootstrap/runtime codes and keep control-state fallbacks aligned with the nested authority snapshot.",
+    "confidence": 0.94
+  },
+  {
+    "pattern_id": "metaforge-port-only-launcher-stale-service",
+    "project": "MetaForge OS",
+    "category": "runtime-startup",
+    "symptoms": [
+      "The launcher treats an open TCP port as proof the dashboard is healthy.",
+      "A stale serve_api process keeps 8787 bound while / and /api/control-center/status time out."
+    ],
+    "recommended_response": "Probe a lightweight health endpoint, kill stale serve_api processes when the probe fails, and restart the embedded launcher before opening the browser.",
+    "confidence": 0.97
+  },
+  {
+    "pattern_id": "toyos-paging-gated-stable-path",
+    "project": "ToyOS",
+    "category": "paging",
+    "symptoms": [
+      "Paging code exists but remains disabled on the stable path.",
+      "Ring3 return constraints block direct promotion."
+    ],
+    "recommended_response": "Introduce a guarded experimental path before changing the default boot contract.",
+    "confidence": 0.82
+  },
+  {
+    "pattern_id": "toyos-syscall-shallow-pointer-checks",
+    "project": "ToyOS",
+    "category": "syscall",
+    "symptoms": [
+      "Syscall handlers only check for null pointers.",
+      "User buffer safety is not expressed through a reusable validation API."
+    ],
+    "recommended_response": "Centralize pointer validation behind a stub that can evolve with paging.",
+    "confidence": 0.88
+  },
+  {
+    "pattern_id": "toyos-pointer-validation-stub-required",
+    "project": "ToyOS",
+    "category": "syscall",
+    "symptoms": [
+      "Pointer-bearing syscalls repeat ad hoc argument checks.",
+      "Paging work needs one validation chokepoint before stricter enforcement can land."
+    ],
+    "recommended_response": "Route pointer-bearing syscalls through a shared validation stub before adding real address-space checks.",
+    "confidence": 0.9
+  },
+  {
+    "pattern_id": "orchestrator-windows-atomic-replace-lock",
+    "project": "MetaForge OS",
+    "category": "runtime-maintenance",
+    "symptoms": [
+      "Windows occasionally rejects os.replace over live JSON state files.",
+      "Control-layer rebuilds or ownership graph refreshes fail with WinError 5 despite valid write intent."
+    ],
+    "recommended_response": "Retry the atomic replace briefly and fall back to a direct write so controller status generation does not stall on transient file locks.",
+    "confidence": 0.91
+  },
+  {
+    "pattern_id": "ai-test-context-boundary-evaluator-drift",
+    "project": "MetaForge OS",
+    "category": "ai-testing",
+    "symptoms": [
+      "A boundary-safe answer mentions memory or current-session scope but still fails the context-boundary case.",
+      "Evaluation logic is narrower than the policy guidance supplied to the model."
+    ],
+    "recommended_response": "Keep the evaluator fallback phrases aligned with policy guidance for current-conversation, other-chat, and hidden-memory refusals.",
+    "confidence": 0.86
+  },
+  {
+    "pattern_id": "orchestrator-provider-route-stall",
+    "project": "MetaForge OS",
+    "category": "network-resilience",
+    "symptoms": [
+      "Multiple LLM workers stall together when the active upstream route degrades.",
+      "Simple retry loops keep hitting the same base URL or proxy and extend the outage window."
+    ],
+    "recommended_response": "Score provider routes, cap attempts per request, and open a short circuit on repeated failures so later requests can move to a healthier route.",
+    "confidence": 0.93
+  },
+  {
+    "pattern_id": "metaforge-long-cycle-runtime-freshness-gap",
+    "project": "MetaForge OS",
+    "category": "runtime-observability",
+    "symptoms": [
+      "Release readiness flips to blocked while the daemon is still executing a long first-cycle tick.",
+      "Task engine and brain-loop timestamps lag behind live execution, so active work looks dead from the control plane."
+    ],
+    "recommended_response": "Treat a fresh cycle-start marker as runtime-alive evidence and avoid gating release solely on short heartbeat windows when long-cycle work is expected.",
+    "confidence": 0.94
+  },
+  {
+    "pattern_id": "metaforge-internal-runtime-approval-guard-lock",
+    "project": "MetaForge OS",
+    "category": "runtime-throughput",
+    "symptoms": [
+      "Internal runtime.scheduler tasks pause on manual approval or shell_exec RBAC even though they run inside the controlled automation lane.",
+      "Guard stays blocked because stale internal failures keep counting toward recent task creation and open error escalation limits."
+    ],
+    "recommended_response": "Auto-approve tightly scoped internal runtime tasks, auto-resolve stale internal permission-denied errors once owning tasks are terminal, and exclude terminal internal scheduler tasks from short-window creation throttles.",
+    "confidence": 0.96
+  },
+  {
+    "pattern_id": "metaforge-cheap-lane-cognitive-collapse",
+    "project": "MetaForge OS",
+    "category": "model-routing",
+    "symptoms": [
+      "Planner, coder, and reviewer all default to the cheap chat lane, so the factory shows activity without corresponding reasoning depth.",
+      "Usage telemetry reports almost all calls as deepseek-chat while root-cause analysis, planning quality, and review quality remain shallow."
+    ],
+    "recommended_response": "Separate strategic, reasoning, and cheap helper lanes. Route planner/coder/reviewer through a reasoning model, keep architecture/escalation on the strategic lane, and leave summaries plus formatting on the cheap lane.",
+    "confidence": 0.95
+  },
+  {
+    "pattern_id": "metaforge-goal-target-autocomplete-collision",
+    "project": "MetaForge OS",
+    "category": "runtime-throughput",
+    "symptoms": [
+      "New runtime tasks are auto-completed within seconds when an older completed goal shares the same human-readable target.",
+      "The factory keeps reseeding the same strategic goal names, but the active frontier collapses before work can progress."
+    ],
+    "recommended_response": "Only auto-complete tasks when the completed parent goal explicitly owns the task via goal_id or recorded task_ids. Never close fresh work just because an older goal used the same target string.",
+    "confidence": 0.97
+  },
+  {
+    "pattern_id": "metaforge-goal-runtime-premature-completion",
+    "project": "MetaForge OS",
+    "category": "goal-lifecycle",
+    "symptoms": [
+      "Goal runtime marks a production goal completed while its graph still contains pending nodes and the frontier is still expanding.",
+      "Control-layer active task counts collapse after runtime sync even though the graph still has runnable work."
+    ],
+    "recommended_response": "Do not infer goal completion from linked task completion alone when a graph still exists. Require graph-level terminal completion, or no graph nodes at all, before closing the goal.",
+    "confidence": 0.96
+  },
+  {
+    "pattern_id": "metaforge-fast-frontdoor-hides-heavy-backend",
+    "project": "MetaForge OS",
+    "category": "runtime-startup",
+    "symptoms": [
+      "The browser shell must open quickly, but the full ASGI backend is slow or intermittently nonresponsive on loopback.",
+      "Initial dashboard routes only need lightweight bootstrap and summary data, while deep pages can tolerate deferred loading."
+    ],
+    "recommended_response": "Split the launcher into a tiny front-door server for / and bootstrap routes, then start the heavy backend asynchronously behind it. Keep summary routes local so the first paint is independent of backend readiness.",
+    "confidence": 0.95
+  }
+]

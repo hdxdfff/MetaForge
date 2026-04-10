@@ -1,0 +1,90 @@
+{
+  "task_id": "4c04136321384f91926d97b2d79ca630",
+  "task_title": "Run ToyOS boot and QEMU smoke",
+  "task_status": "failed",
+  "started_at": "2026-04-02T21:16:11.106569Z",
+  "updated_at": "2026-04-02T22:07:10.435880Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "e458adaf",
+      "step_title": "Spawn decomposition subtasks",
+      "action": "planner_step",
+      "ok": true,
+      "at": "2026-04-02T21:46:30.511119Z",
+      "phase": "decompose",
+      "worker": "planner",
+      "status": "completed",
+      "output_ref": {
+        "artifact_id": "ctx_739ebb003587",
+        "task_id": "4c04136321384f91926d97b2d79ca630",
+        "step_id": "e458adaf",
+        "channel": "planner-output",
+        "title": "Spawn decomposition subtasks output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\4c04136321384f91926d97b2d79ca630\\e458adaf-planner-output-ctx_739ebb003587.json",
+        "size_chars": 682,
+        "line_count": 25,
+        "created_at": "2026-04-02T21:29:26.744397Z",
+        "metadata": {
+          "worker": "planner",
+          "phase": "decompose",
+          "route_model": "internal-recovery",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 682,
+        "line_count": 25,
+        "stored_raw": true
+      },
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "d98d925f",
+      "step_title": "Wait for child task completion",
+      "action": "planner_step",
+      "ok": false,
+      "at": "2026-04-02T21:46:30.511119Z",
+      "phase": "decompose",
+      "worker": "planner",
+      "status": "running",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "6021cff4",
+      "step_title": "Aggregate decomposition results",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-04-02T21:46:30.511119Z",
+      "phase": "verify",
+      "worker": "reviewer",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    }
+  ],
+  "result": {
+    "state": "failed_execution",
+    "reason": "Production evidence incomplete: fresh=0/3 missing=['generated/toy-os-demo/build-report.json', 'generated/toy-os-demo/build/build.log', 'generated/toy-os-demo/artifact.sha256'] stale=['generated/toy-os-demo/build/generic-qemu-smoke-report.json', 'generated/toy-os-demo/build/kernel.bin', 'generated/toy-os-demo/artifact_manifest.json', 'generated/toy-os-demo/score-report.json']",
+    "task_id": "4c04136321384f91926d97b2d79ca630",
+    "repo_path": "D:\\codex",
+    "execution_mode": "production",
+    "goal": "Restore ToyOS real artifact delivery",
+    "cheap_calls_used": 0,
+    "cheap_chars_used": 0,
+    "escalation_count": 0,
+    "failed_steps": [],
+    "next_action_required": "Inspect execution evidence and rerun or replace the task; no approval hold was applied.",
+    "failure_pause_policy": "If a long task fails, allow at most one cheap-model-approved probe retry with bounded local cost. If cheap approval is missing, ambiguous, or the retry still fails, pause execution, return a structured error report, and wait for explicit core guidance.",
+    "pause_required": false,
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\4c04136321384f91926d97b2d79ca630\\execution-evidence.json",
+    "execution_evidence_step_count": 3
+  }
+}

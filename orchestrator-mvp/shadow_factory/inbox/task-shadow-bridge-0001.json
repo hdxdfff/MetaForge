@@ -1,0 +1,23 @@
+{
+  "task_id": "task-shadow-bridge-0001",
+  "goal_id": "goal-shadow-bridge-demo",
+  "task_type": "build",
+  "owner_role": "builder",
+  "input_spec": {
+    "project_path": "D:\\codex\\generated\\toy-os-demo",
+    "build_command": "type NUL",
+    "artifact_out_dir": "D:\\codex\\orchestrator-mvp\\shadow_factory\\artifacts\\task-shadow-bridge-0001"
+  },
+  "expected_outputs": [
+    "dummy-artifact.txt",
+    "build-report.json"
+  ],
+  "acceptance_checks": [
+    "build report exists",
+    "artifact exists"
+  ],
+  "upstream_task_id": null,
+  "artifact_scope": "shadow_only",
+  "shadow_mode": true,
+  "created_at": "2026-03-29T00:00:00Z"
+}

@@ -1,0 +1,19 @@
+{
+  "audit_id": "audit-task-shadow-bridge-0001",
+  "task_id": "task-shadow-bridge-0001",
+  "verdict": "fail",
+  "score": 80,
+  "issues": [
+    "build report does not indicate success"
+  ],
+  "evidence": {
+    "build_report": "D:\\codex\\orchestrator-mvp\\shadow_factory\\artifacts\\task-shadow-bridge-0001\\build-report.json",
+    "execution_report": "D:\\codex\\orchestrator-mvp\\shadow_factory\\artifacts\\task-shadow-bridge-0001\\execution-report.json",
+    "artifact_paths": [
+      "D:\\codex\\orchestrator-mvp\\shadow_factory\\artifacts\\task-shadow-bridge-0001\\dummy-artifact.txt"
+    ]
+  },
+  "reproducible": false,
+  "shadow_mode": true,
+  "audited_at": "2026-03-28T20:40:56Z"
+}

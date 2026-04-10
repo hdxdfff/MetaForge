@@ -1,0 +1,90 @@
+{
+  "task_id": "b47d841e2f6b4d23934503b6dff010dd",
+  "task_title": "Repair ToyOS build and toolchain",
+  "task_status": "failed",
+  "started_at": "2026-04-02T20:58:15.922229Z",
+  "updated_at": "2026-04-02T21:53:36.629460Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "0d5e7072",
+      "step_title": "Spawn decomposition subtasks",
+      "action": "planner_step",
+      "ok": true,
+      "at": "2026-04-02T21:42:41.308946Z",
+      "phase": "decompose",
+      "worker": "planner",
+      "status": "completed",
+      "output_ref": {
+        "artifact_id": "ctx_9cd60f8192fa",
+        "task_id": "b47d841e2f6b4d23934503b6dff010dd",
+        "step_id": "0d5e7072",
+        "channel": "planner-output",
+        "title": "Spawn decomposition subtasks output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\b47d841e2f6b4d23934503b6dff010dd\\0d5e7072-planner-output-ctx_9cd60f8192fa.json",
+        "size_chars": 960,
+        "line_count": 34,
+        "created_at": "2026-04-02T21:07:49.154993Z",
+        "metadata": {
+          "worker": "planner",
+          "phase": "decompose",
+          "route_model": "internal-recovery",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 960,
+        "line_count": 34,
+        "stored_raw": true
+      },
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "518d5d5f",
+      "step_title": "Wait for child task completion",
+      "action": "planner_step",
+      "ok": false,
+      "at": "2026-04-02T21:42:41.308946Z",
+      "phase": "decompose",
+      "worker": "planner",
+      "status": "running",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "d6fc1907",
+      "step_title": "Aggregate decomposition results",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-04-02T21:42:41.308946Z",
+      "phase": "verify",
+      "worker": "reviewer",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    }
+  ],
+  "result": {
+    "state": "failed_execution",
+    "reason": "Production evidence incomplete: fresh=0/3 missing=['generated/toy-os-demo/build-report.json', 'generated/toy-os-demo/build/build.log', 'generated/toy-os-demo/artifact.sha256'] stale=['generated/toy-os-demo/build/kernel.bin', 'generated/toy-os-demo/artifact_manifest.json']",
+    "task_id": "b47d841e2f6b4d23934503b6dff010dd",
+    "repo_path": "D:\\codex",
+    "execution_mode": "production",
+    "goal": "Restore ToyOS real artifact delivery",
+    "cheap_calls_used": 0,
+    "cheap_chars_used": 0,
+    "escalation_count": 0,
+    "failed_steps": [],
+    "next_action_required": "Inspect execution evidence and rerun or replace the task; no approval hold was applied.",
+    "failure_pause_policy": "If a long task fails, allow at most one cheap-model-approved probe retry with bounded local cost. If cheap approval is missing, ambiguous, or the retry still fails, pause execution, return a structured error report, and wait for explicit core guidance.",
+    "pause_required": false,
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\b47d841e2f6b4d23934503b6dff010dd\\execution-evidence.json",
+    "execution_evidence_step_count": 3
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "session_id": "codex-history:019d71ec-3242-7f42-9ebd-6f348526351d",
+  "source": "codex-history",
+  "title": "你是什么大模型",
+  "workspace": "",
+  "summary": "你是什么大模型",
+  "topics": [],
+  "constraints": [],
+  "decisions": [],
+  "tags": [],
+  "artifacts": [],
+  "messages": [
+    {
+      "role": "user",
+      "content": "你是什么大模型",
+      "created_at": "2026-04-09T11:09:21Z"
+    }
+  ],
+  "created_at": "2026-04-09T11:09:21Z",
+  "updated_at": "2026-04-09T11:09:21Z"
+}

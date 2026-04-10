@@ -1,0 +1,23 @@
+[
+  {
+    "kind": "maintenance-followup",
+    "priority": "high",
+    "reason": "Paused or failed tasks exist.",
+    "action": "Turn paused tasks into bounded follow-up tasks.",
+    "cheap_worker_ok": true
+  },
+  {
+    "kind": "db-runtime-gap",
+    "priority": "medium",
+    "reason": "No local DB client confirmed.",
+    "action": "Keep database work in document-driven mode and prepare install checklist.",
+    "cheap_worker_ok": true
+  },
+  {
+    "kind": "skill-training-loop",
+    "priority": "medium",
+    "reason": "Cheap agents should absorb repeatable fixes and playbooks.",
+    "action": "Run skill extraction and task replay preparation before escalating to stronger models.",
+    "cheap_worker_ok": true
+  }
+]

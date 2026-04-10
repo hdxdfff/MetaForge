@@ -1,0 +1,12 @@
+{
+  "status": "updated",
+  "goal_count": 411,
+  "active_goal_count": 2,
+  "updated": 0,
+  "completed": 0,
+  "failed": 0,
+  "on_hold": 0,
+  "running": 0,
+  "planned": 0,
+  "decomposition_updates": 1
+}

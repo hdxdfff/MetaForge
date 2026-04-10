@@ -1,0 +1,99 @@
+{
+  "task_id": "5c70900c5cb74d238efbe503f482fc83",
+  "task_title": "Implement module tools.brain_snapshot",
+  "task_status": "timed_out",
+  "started_at": "2026-03-21T12:51:37.605662Z",
+  "updated_at": "2026-03-21T13:03:51.464146Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "65d58a6e",
+      "step_title": "Understand OS objective",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-03-21T13:03:51.464146Z",
+      "phase": "understand",
+      "worker": "reviewer",
+      "status": "running",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "c55f9ea8",
+      "step_title": "Patch Toy OS implementation",
+      "action": "coder_step",
+      "ok": false,
+      "at": "2026-03-21T13:03:51.464146Z",
+      "phase": "draft",
+      "worker": "coder",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "f24ad9a9",
+      "step_title": "Build Toy OS",
+      "action": "shell_step",
+      "ok": false,
+      "at": "2026-03-21T13:03:51.464146Z",
+      "phase": "execute",
+      "worker": "shell",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "b1a66d5b",
+      "step_title": "Run ToyOS QEMU regressions",
+      "action": "shell_step",
+      "ok": false,
+      "at": "2026-03-21T13:03:51.464146Z",
+      "phase": "verify",
+      "worker": "shell",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "078cbd50",
+      "step_title": "Score ToyOS artifact set",
+      "action": "shell_step",
+      "ok": false,
+      "at": "2026-03-21T13:03:51.464146Z",
+      "phase": "verify",
+      "worker": "shell",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "2ec600c7",
+      "step_title": "Review ToyOS production outcome",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-03-21T13:03:51.464146Z",
+      "phase": "revise",
+      "worker": "reviewer",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    }
+  ],
+  "result": {
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

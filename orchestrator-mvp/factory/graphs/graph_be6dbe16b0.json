@@ -1,0 +1,155 @@
+{
+  "graph_id": "graph_be6dbe16b0",
+  "goal_id": "goal_ebf4b7755c",
+  "target": "Experiment adopted-pattern rollout",
+  "type": "experiment",
+  "created_at": "2026-03-10T11:20:39.123993Z",
+  "updated_at": "2026-03-10T12:07:55.562934Z",
+  "status": "completed",
+  "meta": {
+    "goal_scale": "standard",
+    "architecture_rules": [
+      "agents cannot import runtime",
+      "router must be stateless",
+      "runtime modules cannot depend on app transport handlers",
+      "tools may depend on runtime and state, but not app HTTP layer",
+      "verification must gate promotion of architecture-affecting changes"
+    ],
+    "agent_teams": [
+      "architecture_team",
+      "backend_team",
+      "infrastructure_team",
+      "testing_team"
+    ],
+    "code_graph_focus": {
+      "module_focus": [
+        "tools.knowledge_engine",
+        "tools.experiment_evaluator",
+        "tools.experiment_executor",
+        "tools.experiment_planner",
+        "tools.skill_training_loop",
+        "tools.decision_engine",
+        "tools.brain_loop",
+        "tools.codex_control"
+      ],
+      "owner_teams": [
+        "architecture_team",
+        "infrastructure_team"
+      ],
+      "layers": [
+        "task_graph_planner",
+        "unclassified"
+      ],
+      "matched_modules": [
+        {
+          "module": "tools.knowledge_engine",
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependency_count": 0,
+          "dependents": 4
+        },
+        {
+          "module": "tools.experiment_evaluator",
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependency_count": 0,
+          "dependents": 3
+        },
+        {
+          "module": "tools.experiment_executor",
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependency_count": 0,
+          "dependents": 3
+        },
+        {
+          "module": "tools.experiment_planner",
+          "owner_team": "architecture_team",
+          "layer": "task_graph_planner",
+          "dependency_count": 0,
+          "dependents": 4
+        },
+        {
+          "module": "tools.skill_training_loop",
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependency_count": 0,
+          "dependents": 1
+        },
+        {
+          "module": "tools.decision_engine",
+          "owner_team": "architecture_team",
+          "layer": "task_graph_planner",
+          "dependency_count": 4,
+          "dependents": 1
+        },
+        {
+          "module": "tools.brain_loop",
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependency_count": 21,
+          "dependents": 3
+        },
+        {
+          "module": "tools.codex_control",
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependency_count": 32,
+          "dependents": 0
+        }
+      ]
+    }
+  },
+  "nodes": [
+    {
+      "id": "product_design",
+      "title": "Design product shape for Experiment adopted-pattern rollout",
+      "role": "product",
+      "prompt": "Create a structured product design for: Experiment adopted-pattern rollout",
+      "dependencies": [],
+      "status": "completed",
+      "task_id": null,
+      "worker": "reviewer",
+      "selection_reason": "role-default:product->reviewer",
+      "worker_success_rate": 1.1402,
+      "skill_matches": [
+        "completed_1554"
+      ],
+      "execution_lane": "host-control",
+      "worker_vm_preferred": false
+    },
+    {
+      "id": "architecture_design",
+      "title": "Design architecture for Experiment adopted-pattern rollout",
+      "role": "architect",
+      "prompt": "Create a practical architecture plan for: Experiment adopted-pattern rollout",
+      "dependencies": [
+        "product_design"
+      ],
+      "status": "completed",
+      "task_id": null
+    },
+    {
+      "id": "implementation_plan",
+      "title": "Plan and start implementation for Experiment adopted-pattern rollout",
+      "role": "coder",
+      "prompt": "Break down implementation work for: Experiment adopted-pattern rollout",
+      "dependencies": [
+        "architecture_design"
+      ],
+      "status": "completed",
+      "task_id": null
+    },
+    {
+      "id": "verification",
+      "title": "Validate generated work for Experiment adopted-pattern rollout",
+      "role": "tester",
+      "prompt": "Create validation steps and tests for: Experiment adopted-pattern rollout",
+      "dependencies": [
+        "implementation_plan"
+      ],
+      "status": "completed",
+      "task_id": null
+    }
+  ]
+}

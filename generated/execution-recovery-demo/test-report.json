@@ -1,0 +1,13 @@
+{
+  "artifact_id": "execution-recovery-demo",
+  "all_passed": true,
+  "passed": true,
+  "test_timestamp": "2026-04-04T17:13:17.551088Z",
+  "command": [
+    "D:\\codex\\tools\\python311-embed\\python.exe",
+    "D:\\codex\\generated\\execution-recovery-demo\\run_demo.py",
+    "--self-test"
+  ],
+  "stdout": "SELF_TEST_OK",
+  "stderr": ""
+}

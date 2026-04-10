@@ -1,0 +1,12 @@
+{
+  "artifact_id": "blocked-to-done-ledger-evidence",
+  "all_passed": true,
+  "passed": true,
+  "command": [
+    "D:\\codex\\tools\\python311-embed\\python.exe",
+    "D:\\codex\\generated\\blocked-to-done-ledger-evidence\\run_demo.py",
+    "--self-test"
+  ],
+  "stdout": "SELF_TEST_OK",
+  "stderr": ""
+}

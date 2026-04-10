@@ -1,0 +1,48 @@
+{
+  "updated_at": "2026-03-12T07:09:31.227625Z",
+  "status": "healthy",
+  "stored_successfully": true,
+  "goal_registry_confirmed": true,
+  "task_queue_confirmed": true,
+  "goal_registry": {
+    "goal_count": 412,
+    "unique_goal_id_count": 412,
+    "active_goal_count": 2,
+    "recent_goal_count_24h": 83
+  },
+  "graph_integrity": {
+    "active_goals_with_graph": 2,
+    "missing_graph_goal_ids": [],
+    "running_goals_missing_tasks": [],
+    "missing_task_goal_ids": []
+  },
+  "task_queue": {
+    "active_task_count": 1,
+    "managed_active_task_count": 0,
+    "managed_active_tasks_with_goal_link": 0,
+    "managed_active_tasks_linked_to_existing_goal": 0,
+    "managed_active_tasks_broken_goal_link": [],
+    "managed_active_tasks_without_goal_link": [],
+    "managed_active_tasks_without_node_link": []
+  },
+  "state_confirmation": {
+    "recent_action_goal_ids": [
+      "goal_5316547f09"
+    ],
+    "recent_action_missing_goal_ids": [],
+    "memory_kernel_goal_count": 412,
+    "memory_kernel_top_goal_ids": [
+      "goal_10887c64f0",
+      "goal_5fc8f9d272",
+      "goal_7f471cb20d",
+      "goal_84adc26566",
+      "goal_c7dd020683"
+    ],
+    "active_goal_ids_not_in_memory_top": [
+      "goal_1fe0e4bb13",
+      "goal_a2cbaa0d6f"
+    ]
+  },
+  "issues": [],
+  "warnings": []
+}

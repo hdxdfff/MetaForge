@@ -1,0 +1,244 @@
+{
+  "graph_id": "graph_f9e898edbf",
+  "goal_id": "smoke-graph-2",
+  "target": "Improve scheduler module behavior",
+  "type": "build_platform",
+  "created_at": "2026-03-10T10:22:24.222510Z",
+  "updated_at": "2026-03-10T10:22:24.222510Z",
+  "status": "planned",
+  "meta": {
+    "goal_scale": "engineering-os",
+    "architecture_rules": [
+      "agents cannot import runtime",
+      "router must be stateless",
+      "runtime modules cannot depend on app transport handlers",
+      "tools may depend on runtime and state, but not app HTTP layer",
+      "verification must gate promotion of architecture-affecting changes"
+    ],
+    "agent_teams": [
+      "architecture_team",
+      "backend_team",
+      "infrastructure_team",
+      "testing_team"
+    ],
+    "code_graph_focus": {
+      "module_focus": [
+        "runtime.scheduler",
+        "tools.code_knowledge_graph",
+        "tools.prompt_improvement_sweep",
+        "tools.scheduler_optimization_sweep",
+        "tools.architecture_validator"
+      ],
+      "owner_teams": [
+        "architecture_team",
+        "infrastructure_team"
+      ],
+      "layers": [
+        "agent_teams",
+        "architecture_engine",
+        "unclassified"
+      ],
+      "matched_modules": [
+        {
+          "module": "runtime.scheduler",
+          "owner_team": "architecture_team",
+          "layer": "agent_teams",
+          "dependency_count": 0,
+          "dependents": 2
+        },
+        {
+          "module": "tools.code_knowledge_graph",
+          "owner_team": "architecture_team",
+          "layer": "architecture_engine",
+          "dependency_count": 0,
+          "dependents": 7
+        },
+        {
+          "module": "tools.prompt_improvement_sweep",
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependency_count": 0,
+          "dependents": 1
+        },
+        {
+          "module": "tools.scheduler_optimization_sweep",
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependency_count": 0,
+          "dependents": 1
+        },
+        {
+          "module": "tools.architecture_validator",
+          "owner_team": "architecture_team",
+          "layer": "architecture_engine",
+          "dependency_count": 1,
+          "dependents": 4
+        }
+      ]
+    }
+  },
+  "nodes": [
+    {
+      "id": "architecture_contract",
+      "title": "Define architecture contract for Improve scheduler module behavior",
+      "role": "architect",
+      "prompt": "Define architecture boundaries, interfaces, and ownership for: Improve scheduler module behavior",
+      "dependencies": [],
+      "status": "pending",
+      "task_id": null,
+      "team": "architecture_team",
+      "owned_modules": [
+        "brain",
+        "runtime.scheduler",
+        "tools.taskgraph_compiler",
+        "tools.code_knowledge_graph",
+        "tools.prompt_improvement_sweep",
+        "tools.scheduler_optimization_sweep",
+        "tools.architecture_validator"
+      ],
+      "kind": "architecture",
+      "module_focus": [
+        "runtime.scheduler",
+        "tools.code_knowledge_graph",
+        "tools.prompt_improvement_sweep",
+        "tools.scheduler_optimization_sweep",
+        "tools.architecture_validator"
+      ],
+      "owner_teams": [
+        "architecture_team",
+        "infrastructure_team"
+      ]
+    },
+    {
+      "id": "engineering_plan",
+      "title": "Plan engineering task graph for Improve scheduler module behavior",
+      "role": "product",
+      "prompt": "Produce the engineering task graph, interface map, and implementation slices for: Improve scheduler module behavior",
+      "dependencies": [
+        "architecture_contract"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "team": "architecture_team",
+      "owned_modules": [
+        "brain",
+        "runtime.scheduler",
+        "tools.taskgraph_compiler",
+        "tools.code_knowledge_graph",
+        "tools.prompt_improvement_sweep",
+        "tools.scheduler_optimization_sweep",
+        "tools.architecture_validator"
+      ],
+      "kind": "planning",
+      "module_focus": [
+        "runtime.scheduler",
+        "tools.code_knowledge_graph",
+        "tools.prompt_improvement_sweep",
+        "tools.scheduler_optimization_sweep",
+        "tools.architecture_validator"
+      ],
+      "owner_teams": [
+        "architecture_team",
+        "infrastructure_team"
+      ]
+    },
+    {
+      "id": "backend_impl",
+      "title": "Implement backend/runtime modules for Improve scheduler module behavior",
+      "role": "coder",
+      "prompt": "Implement backend/runtime modules for: Improve scheduler module behavior",
+      "dependencies": [
+        "engineering_plan"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "team": "backend_team",
+      "owned_modules": [
+        "app",
+        "runtime",
+        "agents",
+        "runtime.scheduler"
+      ],
+      "kind": "implementation",
+      "module_focus": [
+        "runtime.scheduler"
+      ],
+      "owner_teams": [
+        "architecture_team",
+        "infrastructure_team"
+      ]
+    },
+    {
+      "id": "infra_impl",
+      "title": "Implement infrastructure/tooling modules for Improve scheduler module behavior",
+      "role": "ops",
+      "prompt": "Implement infrastructure/tooling modules for: Improve scheduler module behavior",
+      "dependencies": [
+        "engineering_plan"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "team": "infrastructure_team",
+      "owned_modules": [
+        "tools.vm_orchestrator",
+        "tools.verification_engine",
+        "tools.platform_registry",
+        "tools.code_knowledge_graph",
+        "tools.prompt_improvement_sweep",
+        "tools.scheduler_optimization_sweep",
+        "tools.architecture_validator"
+      ],
+      "kind": "infrastructure",
+      "module_focus": [
+        "tools.code_knowledge_graph",
+        "tools.prompt_improvement_sweep",
+        "tools.scheduler_optimization_sweep",
+        "tools.architecture_validator"
+      ],
+      "owner_teams": [
+        "architecture_team",
+        "infrastructure_team"
+      ]
+    },
+    {
+      "id": "verification_gate",
+      "title": "Run verification and architecture validation for Improve scheduler module behavior",
+      "role": "tester",
+      "prompt": "Run CI, tests, and architecture validation for: Improve scheduler module behavior",
+      "dependencies": [
+        "backend_impl",
+        "infra_impl"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "team": "testing_team",
+      "owned_modules": [
+        "tests",
+        "tools.quality_system",
+        "tools.soak_validation"
+      ],
+      "kind": "verification",
+      "module_focus": [],
+      "owner_teams": [
+        "architecture_team",
+        "infrastructure_team"
+      ]
+    },
+    {
+      "id": "release_prep",
+      "title": "Prepare release plan for Improve scheduler module behavior",
+      "role": "ops",
+      "prompt": "Prepare deployment and release checklist for: Improve scheduler module behavior",
+      "dependencies": [
+        "verification"
+      ],
+      "status": "completed",
+      "task_id": null,
+      "result": {
+        "summary": "Node bypassed because component release_train is disabled under lean_execution.",
+        "disabled_component": "release_train"
+      },
+      "completed_at": "2026-03-12T19:42:40.370216Z"
+    }
+  ]
+}

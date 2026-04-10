@@ -1,0 +1,87 @@
+﻿{
+    "captured_at":  "2026-04-03T14:36:06.2188077Z",
+    "baseline_name":  "stage4-confirmed-baseline-20260403",
+    "source_note":  "First confirmed Stage 4 baseline evidence package",
+    "items":  [
+                  {
+                      "relative_path":  "artifact_registry.json",
+                      "bytes":  17320,
+                      "sha256":  "0b02e8d53e9f6de68fd3e07572e4d13dbb18d45be3b6a9533f32bd062d38efa5"
+                  },
+                  {
+                      "relative_path":  "autonomy_score.json",
+                      "bytes":  4232,
+                      "sha256":  "70f1ccf4affc0f195910fd4a0e1984578fba0831a01ba8e31a1620cf6bea8b7a"
+                  },
+                  {
+                      "relative_path":  "autonomy-soak-evidence/__pycache__/run_demo.cpython-311.pyc",
+                      "bytes":  915,
+                      "sha256":  "2496812e3e38c7240b7fc676a05186eb64645c71dbc1114b58487854cbe1b59c"
+                  },
+                  {
+                      "relative_path":  "autonomy-soak-evidence/artifact.sha256",
+                      "bytes":  79,
+                      "sha256":  "60fff187915ad274103188727287ae975155a137ee4f146ffd0798d9cfee95d3"
+                  },
+                  {
+                      "relative_path":  "autonomy-soak-evidence/artifact_manifest.json",
+                      "bytes":  471,
+                      "sha256":  "3632dd61b79547a5ee4b84d372a091e37236a3baa18e63273a72e28c2de22ea6"
+                  },
+                  {
+                      "relative_path":  "autonomy-soak-evidence/build.sh",
+                      "bytes":  60,
+                      "sha256":  "94c3057b4818be7bc117b2396b69d6fcaeac2cab8a8c39f4a875c5ef2f9ae0c6"
+                  },
+                  {
+                      "relative_path":  "autonomy-soak-evidence/build-report.json",
+                      "bytes":  291,
+                      "sha256":  "21c185f02a5641aabc2e0868c029b88e53c13f4995d86be252ac6920291e7076"
+                  },
+                  {
+                      "relative_path":  "autonomy-soak-evidence/Dockerfile.build",
+                      "bytes":  120,
+                      "sha256":  "ee9a0c6df7530719ead5d67d0179199dd82510adb23c281d4d22c17243e40675"
+                  },
+                  {
+                      "relative_path":  "autonomy-soak-evidence/execution-report.json",
+                      "bytes":  347,
+                      "sha256":  "546841c28e144bcd8902ca95e9197c27c0018bec2b942764a3ada4e7933f34ed"
+                  },
+                  {
+                      "relative_path":  "autonomy-soak-evidence/run_demo.py",
+                      "bytes":  363,
+                      "sha256":  "70a1e12f5dfb4dbeeb97850b2e1817196cc0cce6069af45f907ed09744760225"
+                  },
+                  {
+                      "relative_path":  "autonomy-soak-evidence/test-report.json",
+                      "bytes":  286,
+                      "sha256":  "0b907c74cdfd19ea76d46618bce3b88cd228e34a3335e05a035a8b6c8385e1ee"
+                  },
+                  {
+                      "relative_path":  "control_layer_status.json",
+                      "bytes":  941308,
+                      "sha256":  "19ef9a7bb631a2c1c3f6e3057bbcbd201022ca9df64dd22323fd0f220fa6f8be"
+                  },
+                  {
+                      "relative_path":  "kernel_mode.json",
+                      "bytes":  854,
+                      "sha256":  "ccdae92ad5c459dd0289749fb0787db39281ee7e9dce1d2e156c2ec3d0f947c7"
+                  },
+                  {
+                      "relative_path":  "README.md",
+                      "bytes":  861,
+                      "sha256":  "6564e3118fecfdb3af30163750de189d5bf68f5f04d04344d680ba910a2f63e0"
+                  },
+                  {
+                      "relative_path":  "reality_dashboard.json",
+                      "bytes":  3974,
+                      "sha256":  "374735a0c2c21abac16ca5a0818e3675297ad02752fb4da3833fc7b6a7a7c89e"
+                  },
+                  {
+                      "relative_path":  "release_operations_status.json",
+                      "bytes":  10513,
+                      "sha256":  "777bd4aa083e55007013a7537fd2425c37da5853b947ebadde55c4d504227e1c"
+                  }
+              ]
+}

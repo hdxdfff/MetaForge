@@ -1,0 +1,105 @@
+{
+  "graph_id": "graph_9d6c783dc2",
+  "goal_id": "goal_23da32587d",
+  "target": "Expand capability routing patterns",
+  "type": "build_product",
+  "created_at": "2026-03-10T04:11:00.055217Z",
+  "updated_at": "2026-03-10T05:28:09.605068Z",
+  "status": "completed",
+  "nodes": [
+    {
+      "id": "product_design",
+      "title": "Design product shape for Expand capability routing patterns",
+      "role": "product",
+      "prompt": "Create a structured product design for: Expand capability routing patterns",
+      "dependencies": [],
+      "status": "completed",
+      "task_id": null,
+      "worker": "reviewer",
+      "selection_reason": "role-default:product->reviewer",
+      "worker_success_rate": 1.0,
+      "skill_matches": [
+        "completed_1804",
+        "completed_1554"
+      ]
+    },
+    {
+      "id": "architecture_design",
+      "title": "Design architecture for Expand capability routing patterns",
+      "role": "architect",
+      "prompt": "Create a practical architecture plan for: Expand capability routing patterns",
+      "dependencies": [
+        "product_design"
+      ],
+      "status": "completed",
+      "task_id": null,
+      "worker": "reviewer",
+      "selection_reason": "role-default:architect->reviewer",
+      "worker_success_rate": 0.364,
+      "skill_matches": [
+        "completed_1804",
+        "completed_1554"
+      ]
+    },
+    {
+      "id": "implementation_plan",
+      "title": "Plan and start implementation for Expand capability routing patterns",
+      "role": "coder",
+      "prompt": "Break down implementation work for: Expand capability routing patterns",
+      "dependencies": [
+        "architecture_design"
+      ],
+      "status": "completed",
+      "task_id": null,
+      "worker": "coder",
+      "selection_reason": "role-default:coder->coder",
+      "worker_success_rate": 0.0,
+      "skill_matches": [
+        "completed_1804",
+        "completed_1554",
+        "task_12345678"
+      ]
+    },
+    {
+      "id": "verification",
+      "title": "Validate generated work for Expand capability routing patterns",
+      "role": "tester",
+      "prompt": "Create validation steps and tests for: Expand capability routing patterns",
+      "dependencies": [
+        "implementation_plan"
+      ],
+      "status": "completed",
+      "task_id": null,
+      "worker": "shell",
+      "selection_reason": "role-default:tester->shell",
+      "worker_success_rate": 0.308,
+      "skill_matches": [
+        "completed_1804",
+        "completed_1554"
+      ]
+    },
+    {
+      "id": "release_prep",
+      "title": "Prepare release plan for Expand capability routing patterns",
+      "role": "ops",
+      "prompt": "Prepare deployment and release checklist for: Expand capability routing patterns",
+      "dependencies": [
+        "verification"
+      ],
+      "status": "completed",
+      "task_id": null,
+      "worker": "docker",
+      "selection_reason": "role-default:ops->docker",
+      "worker_success_rate": 0.0,
+      "skill_matches": [
+        "completed_1804",
+        "completed_1554"
+      ],
+      "result": {
+        "summary": "Node bypassed because component release_train is disabled under lean_execution.",
+        "disabled_component": "release_train"
+      },
+      "completed_at": "2026-03-12T19:42:40.325836Z"
+    }
+  ]
+}

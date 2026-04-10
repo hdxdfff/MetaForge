@@ -1,0 +1,39 @@
+{
+  "task_id": "e7a2849fc164414d89796afd14449f8d",
+  "task_title": "ToyOS full lifecycle flow contract local",
+  "task_status": "completed",
+  "started_at": "2026-04-03T12:31:59.296075Z",
+  "updated_at": "2026-04-03T14:03:57.686248Z",
+  "completed": true,
+  "steps": [
+    {
+      "step_id": "e7a2849fc164414d89796afd14449f8d-terminal-record",
+      "step_title": "ToyOS full lifecycle flow contract local",
+      "action": "task_terminal_record",
+      "ok": true,
+      "at": "2026-04-03T14:03:57.686248Z",
+      "status": "completed",
+      "summary": "Queued ToyOS backlog tasks were closed against fresh local evidence after the qemu smoke and artifact refresh run.",
+      "error": null,
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ],
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-03T12:31:59.299951Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "e7a2849fc164414d89796afd14449f8d",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "governance",
+        "queue_name": null,
+        "task_type": "report_refresh"
+      }
+    ],
+    "summary": "Queued ToyOS backlog tasks were closed against fresh local evidence after the qemu smoke and artifact refresh run."
+  }
+}

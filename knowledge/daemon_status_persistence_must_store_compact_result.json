@@ -1,0 +1,23 @@
+﻿{
+  "id": "daemon_status_persistence_must_store_compact_result",
+  "created_at": "2026-03-20T16:35:00Z",
+  "kind": "daemon_runtime_pattern",
+  "summary": "Factory daemon status persistence must store a compact last_result summary instead of the full tick result payload, or JSON encoding on cycle-end state writes can block the main loop long enough for watchdog churn.",
+  "symptoms": [
+    "tick.finally completed=true and run_forever.after_tick appear in factory_daemon.tick.log but factory_daemon_state.json stays at last_tick_at=null",
+    "faulthandler stack shows json.encoder frames during cycle-end persistence",
+    "watchdog restarts daemon even though the tick body already completed"
+  ],
+  "preferred_fix": {
+    "strategy": "persist a compact last_result summary in factory_daemon_state.json and keep detailed runtime data in dedicated summary files",
+    "scope": [
+      "tools.factory_daemon"
+    ]
+  },
+  "evidence": [
+    "D:/codex/orchestrator-mvp/tools/factory_daemon.py",
+    "D:/codex/orchestrator-mvp/data/factory_daemon.tick.log",
+    "D:/codex/orchestrator-mvp/data/factory_daemon.err.log",
+    "D:/codex/orchestrator-mvp/data/factory_daemon_state.json"
+  ]
+}

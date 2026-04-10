@@ -1,0 +1,70 @@
+{
+  "target": "D:\\codex\\orchestrator-mvp\\shadow_factory\\artifacts\\task-toyos-build-shadow-0001\\workspace",
+  "toolchain": {
+    "nasm": null,
+    "gcc": null,
+    "i686_elf_gcc": null,
+    "i686_elf_ld": null,
+    "ld": null,
+    "qemu_system_i386": null,
+    "make": null,
+    "docker": "C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.EXE"
+  },
+  "checks": [
+    {
+      "ok": false,
+      "command": [
+        "nasm",
+        "boot.asm"
+      ],
+      "returncode": null,
+      "stdout": "",
+      "stderr": "nasm unavailable or boot.asm missing"
+    },
+    {
+      "ok": false,
+      "command": [
+        "nasm",
+        "src/isr_stub.asm"
+      ],
+      "returncode": null,
+      "stdout": "",
+      "stderr": "nasm unavailable or src/isr_stub.asm missing"
+    },
+    {
+      "ok": false,
+      "command": [
+        "gcc"
+      ],
+      "returncode": null,
+      "stdout": "",
+      "stderr": "no compiler available"
+    },
+    {
+      "ok": false,
+      "command": [
+        "ld"
+      ],
+      "returncode": null,
+      "stdout": "",
+      "stderr": "linker unavailable or prerequisites missing"
+    }
+  ],
+  "build_ready": false,
+  "host_build_ready": false,
+  "build_success": false,
+  "link_mode": "host-fallback",
+  "c_source_count": 13,
+  "managed_resolution": {
+    "host_build_tools_present": false,
+    "docker_client_present": true,
+    "docker_daemon_ready": false,
+    "docker_detail": "failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.",
+    "recommended_backend": "unavailable"
+  },
+  "evidence": {
+    "build_log": "D:\\codex\\orchestrator-mvp\\shadow_factory\\artifacts\\task-toyos-build-shadow-0001\\workspace\\build\\build.log",
+    "sha256": "D:\\codex\\orchestrator-mvp\\shadow_factory\\artifacts\\task-toyos-build-shadow-0001\\workspace\\build\\artifact.sha256"
+  },
+  "prebuilt_artifact_present": false
+}

@@ -1,0 +1,24 @@
+{
+  "updated_at": "2026-03-12T07:09:26.344191Z",
+  "status": "evaluated",
+  "score": 0.8995,
+  "adopt": true,
+  "experiment": {
+    "target": "Experiment progress-first goal seeding",
+    "kind": "goal-seeding",
+    "goal_type": "experiment",
+    "worker": null,
+    "source": "autonomy-engine"
+  },
+  "reason": "score-threshold-pass",
+  "history_count": 200,
+  "decision_bias": {
+    "routing_bias": {},
+    "worker_bias": {}
+  },
+  "recommendation": {
+    "bias_router": false,
+    "bias_worker": false,
+    "promote_kind": "goal-seeding"
+  }
+}

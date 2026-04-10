@@ -1,0 +1,190 @@
+{
+  "task_id": "9b2937ee5dd742069dee9a5f8a56daa1",
+  "task_status": "failed",
+  "phase": "failed",
+  "updated_at": "2026-04-02T21:45:41.730338Z",
+  "heartbeat_at": "2026-04-02T21:45:41.730338Z",
+  "repo_path": "D:\\codex\\orchestrator-mvp",
+  "goal": "Identify the smallest viable slice",
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": "runtime.failure_backlog_automation",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\9b2937ee5dd742069dee9a5f8a56daa1",
+  "error": "Audit output schema rejected for report_refresh/coder: Coder audit output missing required structured sections.",
+  "title": "Analyze the current state",
+  "prompt": "Reproduce the failure locally, capture the exact command and error, isolate the smallest failing area, propose the smallest safe fix, rerun the narrowest relevant validation step, and stop after bounded retries with a structured debug summary.",
+  "scheduler_hint": {
+    "automation_source": "failure_backlog_automation",
+    "template_id": "auto-debug",
+    "template_category": "debug",
+    "cluster_key": "recover stable execution output",
+    "cluster_count": 186,
+    "cluster_status": "attention",
+    "handling_mode": "generic_saturation",
+    "dispatch_now": true,
+    "admission_mode": "normal",
+    "scheduled_by": "runtime.failure_backlog_automation",
+    "decomposition_child": true,
+    "decomposition_parent_task_id": "2fdccf8b18044aa6bde1d1c35a71ce8d",
+    "decomposition_root_task_id": "2fdccf8b18044aa6bde1d1c35a71ce8d",
+    "decomposition_depth": 1,
+    "max_decomposition_depth": 2,
+    "decomposition_child_index": 1,
+    "decomposition_allow_children": false,
+    "decomposition_path_kind": "shared",
+    "decomposition_shared_dependency_group": "2fdccf8b18044aa6bde1d1c35a71ce8d",
+    "decomposition_repair_for": null,
+    "decomposition_dependencies": []
+  },
+  "context_package": {},
+  "plan": [
+    {
+      "id": "579f5896",
+      "title": "Understand task",
+      "status": "completed",
+      "worker": "planner",
+      "phase": "understand"
+    },
+    {
+      "id": "482c6551",
+      "title": "Draft solution",
+      "status": "failed",
+      "worker": "coder",
+      "phase": "draft"
+    },
+    {
+      "id": "aa896448",
+      "title": "Execute validation",
+      "status": "pending",
+      "worker": "docker",
+      "phase": "execute"
+    },
+    {
+      "id": "2b708a8e",
+      "title": "Issue patch decision",
+      "status": "pending",
+      "worker": "reviewer",
+      "phase": "verify"
+    },
+    {
+      "id": "2a6e6c3d",
+      "title": "Revise next action",
+      "status": "pending",
+      "worker": "planner",
+      "phase": "revise"
+    }
+  ],
+  "verification_signals": [
+    {
+      "timestamp": "2026-04-02T21:05:26.943927Z",
+      "kind": "admission_accepted",
+      "success": true,
+      "task_id": "9b2937ee5dd742069dee9a5f8a56daa1",
+      "admission_lane": null,
+      "admission_reason": null,
+      "execution_mode": "governance",
+      "queue_name": "fastlane",
+      "task_type": "report_refresh"
+    },
+    {
+      "timestamp": "2026-04-02T21:21:09.367211Z",
+      "kind": "step_completed",
+      "success": true,
+      "task_id": "9b2937ee5dd742069dee9a5f8a56daa1",
+      "step_id": "579f5896",
+      "step_title": "Understand task",
+      "worker": "planner",
+      "phase": "understand",
+      "route_model": "deepseek-reasoner",
+      "route_provider": "reasoning",
+      "elapsed_ms": 316937,
+      "output_ref": {},
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 593,
+        "line_count": 4,
+        "stored_raw": false
+      }
+    },
+    {
+      "timestamp": "2026-04-02T21:36:12.443329Z",
+      "kind": "step_failed",
+      "success": false,
+      "task_id": "9b2937ee5dd742069dee9a5f8a56daa1",
+      "step_id": "482c6551",
+      "step_title": "Draft solution",
+      "worker": "coder",
+      "phase": "draft",
+      "route_model": "kimi-k2.5",
+      "route_provider": "openai",
+      "elapsed_ms": 622562,
+      "error": "Audit output schema rejected for report_refresh/coder: Coder audit output missing required structured sections.",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "error-output",
+        "char_count": 111,
+        "line_count": 1,
+        "stored_raw": false
+      }
+    }
+  ],
+  "verification_signal_count": 3,
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-02T21:05:26.943927Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "9b2937ee5dd742069dee9a5f8a56daa1",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "governance",
+        "queue_name": "fastlane",
+        "task_type": "report_refresh"
+      },
+      {
+        "timestamp": "2026-04-02T21:21:09.367211Z",
+        "kind": "step_completed",
+        "success": true,
+        "task_id": "9b2937ee5dd742069dee9a5f8a56daa1",
+        "step_id": "579f5896",
+        "step_title": "Understand task",
+        "worker": "planner",
+        "phase": "understand",
+        "route_model": "deepseek-reasoner",
+        "route_provider": "reasoning",
+        "elapsed_ms": 316937,
+        "output_ref": {},
+        "output_stats": {
+          "channel": "planner-output",
+          "char_count": 593,
+          "line_count": 4,
+          "stored_raw": false
+        }
+      },
+      {
+        "timestamp": "2026-04-02T21:36:12.443329Z",
+        "kind": "step_failed",
+        "success": false,
+        "task_id": "9b2937ee5dd742069dee9a5f8a56daa1",
+        "step_id": "482c6551",
+        "step_title": "Draft solution",
+        "worker": "coder",
+        "phase": "draft",
+        "route_model": "kimi-k2.5",
+        "route_provider": "openai",
+        "elapsed_ms": 622562,
+        "error": "Audit output schema rejected for report_refresh/coder: Coder audit output missing required structured sections.",
+        "output_ref": {},
+        "output_stats": {
+          "channel": "error-output",
+          "char_count": 111,
+          "line_count": 1,
+          "stored_raw": false
+        }
+      }
+    ]
+  }
+}

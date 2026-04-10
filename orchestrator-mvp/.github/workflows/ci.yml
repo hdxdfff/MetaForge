@@ -1,0 +1,24 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version-file: '.python-version'
+      - uses: astral-sh/setup-uv@v7
+      - name: Sync environment
+        run: python tools/python_tooling.py sync --locked
+      - name: Run QA checks
+        run: python tools/python_tooling.py qa
+      - name: Run Ruff
+        run: python tools/python_tooling.py ruff-check

@@ -1,0 +1,49 @@
+﻿[
+  {
+    "dialogue_id": "main-dialogue",
+    "lane_type": "product",
+    "target_workspace": "D:\\codex\\generated\\toy-os-demo",
+    "allowed_scope": [
+      "D:\\codex\\generated\\toy-os-demo"
+    ],
+    "forbidden_scope": [
+      "D:\\codex\\orchestrator-mvp\\app",
+      "D:\\codex\\orchestrator-mvp\\tools"
+    ],
+    "current_goal": "advance ToyOS mainline delivery",
+    "priority": "high",
+    "merge_policy": "bounded-branch",
+    "workspace_locked": true
+  },
+  {
+    "dialogue_id": "routing-repair-dialogue",
+    "lane_type": "platform",
+    "target_workspace": "D:\\codex",
+    "allowed_scope": [
+      "D:\\codex"
+    ],
+    "forbidden_scope": [
+      "D:\\codex\\generated\\toy-os-demo"
+    ],
+    "current_goal": "repair or constrain routing drift through proposals",
+    "priority": "medium",
+    "merge_policy": "proposal-only",
+    "workspace_locked": true
+  },
+  {
+    "dialogue_id": "verification-dialogue",
+    "lane_type": "verification",
+    "target_workspace": "D:\\codex\\generated\\toy-os-demo",
+    "allowed_scope": [
+      "D:\\codex\\generated\\toy-os-demo"
+    ],
+    "forbidden_scope": [
+      "D:\\codex\\orchestrator-mvp\\app",
+      "D:\\codex\\orchestrator-mvp\\tools"
+    ],
+    "current_goal": "observe delivery integrity and verification return paths",
+    "priority": "medium",
+    "merge_policy": "report-only",
+    "workspace_locked": true
+  }
+]

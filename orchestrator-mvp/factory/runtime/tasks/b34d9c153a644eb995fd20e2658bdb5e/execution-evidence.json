@@ -1,0 +1,28 @@
+{
+  "task_id": "b34d9c153a644eb995fd20e2658bdb5e",
+  "task_title": "Implement module app.models",
+  "task_status": "completed",
+  "started_at": "2026-03-20T11:16:47.362651Z",
+  "updated_at": "2026-03-20T11:23:09.586340Z",
+  "completed": true,
+  "steps": [
+    {
+      "step_id": "b34d9c153a644eb995fd20e2658bdb5e-terminal-record",
+      "step_title": "Implement module app.models",
+      "action": "task_terminal_record",
+      "ok": true,
+      "at": "2026-03-20T11:23:09.586340Z",
+      "status": "completed",
+      "summary": "Superseded by newer runtime task 5837ef19c1dd4eef8a414d1dd980cb4a for node module_app_models.",
+      "error": null,
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ],
+  "result": {
+    "summary": "Superseded by newer runtime task 5837ef19c1dd4eef8a414d1dd980cb4a for node module_app_models.",
+    "superseded_by": "5837ef19c1dd4eef8a414d1dd980cb4a",
+    "dedupe_reconciled": true
+  }
+}

@@ -1,0 +1,4 @@
+FROM python:3.11-slim
+WORKDIR /work
+COPY . /work
+RUN python -m py_compile run_demo.py

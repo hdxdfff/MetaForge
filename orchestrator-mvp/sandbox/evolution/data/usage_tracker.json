@@ -1,0 +1,46 @@
+{
+  "updated_at": "2026-03-12T07:09:31.449871Z",
+  "window_hours": 24,
+  "recent_events": [
+    {
+      "at": "2026-03-11T09:55:38.492531Z",
+      "provider": "cheap",
+      "model": "deepseek-chat"
+    },
+    {
+      "at": "2026-03-11T09:57:23.031957Z",
+      "provider": "cheap",
+      "model": "deepseek-chat"
+    },
+    {
+      "at": "2026-03-11T10:00:02.434825Z",
+      "provider": "cheap",
+      "model": "deepseek-chat"
+    },
+    {
+      "at": "2026-03-11T15:01:55.399961Z",
+      "provider": "cheap",
+      "model": "deepseek-chat"
+    },
+    {
+      "at": "2026-03-11T15:02:22.081937Z",
+      "provider": "cheap",
+      "model": "deepseek-chat"
+    },
+    {
+      "at": "2026-03-11T15:44:00.888742Z",
+      "provider": "cheap",
+      "model": "deepseek-chat"
+    },
+    {
+      "at": "2026-03-11T15:44:28.109943Z",
+      "provider": "cheap",
+      "model": "deepseek-chat"
+    }
+  ],
+  "cheap_calls": 7,
+  "strong_calls": 0,
+  "strong_ratio": 0.0,
+  "max_strong_model_ratio": 0.0,
+  "strong_allowed": true
+}

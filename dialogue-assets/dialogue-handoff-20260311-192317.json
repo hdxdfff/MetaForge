@@ -1,0 +1,25 @@
+﻿{
+    "system":  "MetaForge OS",
+    "snapshot_type":  "dialogue-compaction",
+    "updated_at":  "2026-03-11T19:23:17",
+    "contradiction":  "route_drift",
+    "ceo_priority":  "orange",
+    "lane_hint":  "ceo-lane",
+    "authoritative_workspace":  "D:\\codex\\generated\\toy-os-demo",
+    "control_tier":  "ceo-review-required unless chore-only is explicit",
+    "required_validation":  "explicit validation notes required for all delivery claims",
+    "active_task_count":  2,
+    "active_execution_roots":  [
+                                   "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-agent-orchestration-capability"
+                               ],
+    "invalid_delivery_risk":  "high",
+    "startup_files":  [
+                          "D:\\codex\\METAFORGE-OS.md",
+                          "D:\\codex\\METAFORGE_OS_CODEX_MULTI_SESSION_BOOTSTRAP.md",
+                          "D:\\codex\\METAFORGE_OS_ROLE_SPLIT.md",
+                          "D:\\codex\\METAFORGE_OS_CHORE_QUEUE_POLICY.md",
+                          "D:\\codex\\METAFORGE_OS_DISPATCH_TEMPLATE.md"
+                      ],
+    "startup_command":  "D:\\codex\\codex-session-bootstrap.ps1",
+    "next_action":  "prefer patch proposal or direct local ToyOS work until routing integrity is repaired"
+}

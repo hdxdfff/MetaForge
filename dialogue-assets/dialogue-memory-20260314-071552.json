@@ -1,0 +1,160 @@
+﻿{
+    "system":  "MetaForge OS",
+    "memory_mode":  "shared-cross-dialogue-memory",
+    "updated_at":  "2026-03-14T07:15:43",
+    "identity_memory":  {
+                            "system":  "MetaForge OS",
+                            "operator_surface":  "OpenCode / Codex",
+                            "acting_ceo_surface":  "main dialogue",
+                            "role_split":  "local small model for chores, OpenCode for CEO mediation, runtime for persistent execution",
+                            "hard_constraints":  [
+                                                     "preserve target-workspace integrity",
+                                                     "no validation means no delivery",
+                                                     "provider-only output is not ToyOS success"
+                                                 ]
+                        },
+    "state_memory":  {
+                         "control_status":  "active",
+                         "active_task_count":  1,
+                         "route_drift_count":  0,
+                         "active_execution_roots":  [
+                                                        "D:\\codex\\orchestrator-mvp"
+                                                    ],
+                         "current_priority":  "green",
+                         "dialogue_session_count":  2,
+                         "dialogue_message_count":  2
+                     },
+    "delivery_memory":  {
+                            "authoritative_product_workspace":  "D:\\codex\\generated\\toy-os-demo",
+                            "current_active_roots":  [
+                                                         "D:\\codex\\orchestrator-mvp"
+                                                     ],
+                            "top_goals":  [
+                                              {
+                                                  "target":  "build ai-video-factory",
+                                                  "status":  "completed",
+                                                  "type":  "build_product"
+                                              },
+                                              {
+                                                  "target":  "AI Web Platform Factory",
+                                                  "status":  "completed",
+                                                  "type":  "build_platform"
+                                              },
+                                              {
+                                                  "target":  "Run platform verification sweep",
+                                                  "status":  "completed",
+                                                  "type":  "verify_platforms"
+                                              }
+                                          ],
+                            "invalid_delivery_risk":  "low",
+                            "dialogue_workspaces":  [
+                                                        "D:\\codex"
+                                                    ]
+                        },
+    "decision_memory":  {
+                            "current_contradiction":  "none_detected",
+                            "next_action":  "continue bounded dispatch with validation-first policy",
+                            "recent_decisions":  [
+                                                     {
+                                                         "type":  "brain-loop-action",
+                                                         "summary":  "experiment-run"
+                                                     },
+                                                     {
+                                                         "type":  "brain-loop-action",
+                                                         "summary":  "experiment-evaluate"
+                                                     },
+                                                     {
+                                                         "type":  "brain-loop-action",
+                                                         "summary":  "capability-distillation"
+                                                     },
+                                                     {
+                                                         "type":  "brain-loop-action",
+                                                         "summary":  "github-capability-library"
+                                                     },
+                                                     {
+                                                         "type":  "brain-loop-action",
+                                                         "summary":  "knowledge-refresh"
+                                                     }
+                                                 ],
+                            "recent_dialogue_decisions":  [
+                                                              "continue bounded dispatch with validation-first policy",
+                                                              "Use local dialogue ledger as the shared memory bridge."
+                                                          ]
+                        },
+    "handoff_memory":  {
+                           "lane_hints":  [
+                                              "ceo-lane",
+                                              "chore-lane",
+                                              "product-lane",
+                                              "research-lane"
+                                          ],
+                           "default_control_tier":  "ceo-review-required unless chore-only is explicit",
+                           "startup_files":  [
+                                                 "D:\\codex\\METAFORGE-OS.md",
+                                                 "D:\\codex\\METAFORGE_OS_CODEX_MULTI_SESSION_BOOTSTRAP.md",
+                                                 "D:\\codex\\METAFORGE_OS_ROLE_SPLIT.md",
+                                                 "D:\\codex\\METAFORGE_OS_CHORE_QUEUE_POLICY.md",
+                                                 "D:\\codex\\METAFORGE_OS_DISPATCH_TEMPLATE.md"
+                                             ],
+                           "startup_command":  "D:\\codex\\codex-session-bootstrap.ps1",
+                           "recent_dialogue_topics":  [
+                                                          "dialogue-compaction",
+                                                          "metaforge-handoff",
+                                                          "codex-memory",
+                                                          "metaforge"
+                                                      ],
+                           "shared_dialogue_constraints":  [
+                                                               "explicit validation notes required for all delivery claims",
+                                                               "Explicit validation is required before claiming delivery."
+                                                           ],
+                           "active_dialogue_summary":  "continue bounded dispatch with validation-first policy"
+                       },
+    "dialogue_memory":  {
+                            "session_count":  2,
+                            "message_count":  2,
+                            "recent_topics":  [
+                                                  "dialogue-compaction",
+                                                  "metaforge-handoff",
+                                                  "codex-memory",
+                                                  "metaforge"
+                                              ],
+                            "recent_decisions":  [
+                                                     "continue bounded dispatch with validation-first policy",
+                                                     "Use local dialogue ledger as the shared memory bridge."
+                                                 ],
+                            "shared_constraints":  [
+                                                       "explicit validation notes required for all delivery claims",
+                                                       "Explicit validation is required before claiming delivery."
+                                                   ],
+                            "active_handoff":  {
+                                                   "session_id":  "asset-20260314-061947",
+                                                   "source":  "metaforge-assetize",
+                                                   "title":  "MetaForge dialogue asset 20260314-061947",
+                                                   "workspace":  "D:\\codex",
+                                                   "summary":  "continue bounded dispatch with validation-first policy",
+                                                   "topics":  [
+                                                                  "dialogue-compaction",
+                                                                  "metaforge-handoff"
+                                                              ],
+                                                   "constraints":  [
+                                                                       "explicit validation notes required for all delivery claims"
+                                                                   ],
+                                                   "decisions":  [
+                                                                     "continue bounded dispatch with validation-first policy"
+                                                                 ],
+                                                   "tags":  [
+
+                                                            ],
+                                                   "artifacts":  [
+                                                                     "D:\\codex\\dialogue-assets\\dialogue-memory-20260314-061947.json",
+                                                                     "D:\\codex\\dialogue-assets\\dialogue-handoff-20260314-061947.json",
+                                                                     "D:\\codex\\dialogue-assets\\dialogue-asset-note-20260314-061947.md"
+                                                                 ],
+                                                   "message_count":  0,
+                                                   "last_user_message":  "",
+                                                   "last_assistant_message":  "",
+                                                   "updated_at":  "2026-03-13T22:19:48.421529Z",
+                                                   "created_at":  "2026-03-13T22:19:48.421529Z"
+                                               }
+                        }
+}

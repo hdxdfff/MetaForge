@@ -1,0 +1,716 @@
+{
+  "task_id": "60462def9ec347548ed6bd3bad238c58",
+  "task_status": "running",
+  "phase": "step-running",
+  "updated_at": "2026-04-03T12:40:07.869261Z",
+  "heartbeat_at": "2026-04-03T12:40:07.869261Z",
+  "repo_path": "D:\\codex\\generated\\toy-os-demo",
+  "goal": "restore_toyos_delivery",
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": "operator-completion",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\60462def9ec347548ed6bd3bad238c58",
+  "step_id": "cae80c9a",
+  "step_title": "Wait for child task completion",
+  "step_status": "running",
+  "worker": "planner",
+  "probe_attempts": 0,
+  "heartbeat_reason": "worker-execution-in-progress",
+  "title": "ToyOS full lifecycle flow contract v2",
+  "prompt": "Demonstrate the complete bounded task lifecycle for ToyOS delivery: publish, plan, decompose, execute, verify, and define rollback behavior. Use the recovered stage1 and stage2 runtime state as the working baseline, produce explicit evidence, and if verification fails, return to the planner with a bounded rollback rule instead of claiming completion.",
+  "scheduler_hint": {
+    "publication_mode": "structured",
+    "publication_source": "task-publication",
+    "task_type": "report_refresh",
+    "verification_level": "L2",
+    "goal_admission": {
+      "strategy": "publish-plan-decompose-execute-verify-rollback",
+      "pipeline": [
+        {
+          "stage": "plan",
+          "title": "Plan lifecycle contract",
+          "prompt": "Define the lifecycle contract, evidence requirements, and rollback policy for the ToyOS delivery flow.",
+          "goal": "prepare a bounded lifecycle contract",
+          "task_type": "report_refresh",
+          "path_kind": "shared",
+          "queue_name": "report_refresh",
+          "verification_level": "L2",
+          "preferred_worker": "shell"
+        },
+        {
+          "stage": "decompose",
+          "title": "Decompose into executable phases",
+          "prompt": "Split the lifecycle into bounded child work for execution and verification.",
+          "goal": "create child tasks with explicit dependencies",
+          "task_type": "report_refresh",
+          "path_kind": "branch",
+          "queue_name": "report_refresh",
+          "verification_level": "L2",
+          "preferred_worker": "shell"
+        },
+        {
+          "stage": "execute",
+          "title": "Execute bounded lifecycle work",
+          "prompt": "Run the bounded lifecycle work and collect execution evidence for the ToyOS delivery path.",
+          "goal": "produce execution evidence",
+          "task_type": "report_refresh",
+          "path_kind": "branch",
+          "queue_name": "report_refresh",
+          "verification_level": "L2",
+          "preferred_worker": "shell"
+        },
+        {
+          "stage": "verify",
+          "title": "Verify evidence and contract adherence",
+          "prompt": "Validate the evidence bundle, decomposition results, and runtime completion markers.",
+          "goal": "prove the lifecycle completed",
+          "task_type": "report_refresh",
+          "path_kind": "branch",
+          "queue_name": "report_refresh",
+          "verification_level": "L2",
+          "preferred_worker": "reviewer"
+        },
+        {
+          "stage": "rollback",
+          "title": "Prepare rollback and requeue split",
+          "prompt": "If verification fails, return to the planner, apply the rollback rule, and requeue the work as bounded splits.",
+          "goal": "define rollback behavior",
+          "task_type": "report_refresh",
+          "path_kind": "repair",
+          "queue_name": "report_refresh",
+          "verification_level": "L2",
+          "preferred_worker": "reviewer"
+        }
+      ]
+    }
+  },
+  "context_package": {},
+  "plan": [
+    {
+      "id": "423f4c3e",
+      "title": "Spawn decomposition subtasks",
+      "status": "completed",
+      "worker": "planner",
+      "phase": "decompose"
+    },
+    {
+      "id": "cae80c9a",
+      "title": "Wait for child task completion",
+      "status": "running",
+      "worker": "planner",
+      "phase": "decompose"
+    },
+    {
+      "id": "844ff046",
+      "title": "Aggregate decomposition results",
+      "status": "pending",
+      "worker": "reviewer",
+      "phase": "verify"
+    }
+  ],
+  "verification_signals": [
+    {
+      "timestamp": "2026-04-03T12:36:14.676933Z",
+      "kind": "admission_accepted",
+      "success": true,
+      "task_id": "60462def9ec347548ed6bd3bad238c58",
+      "admission_lane": null,
+      "admission_reason": null,
+      "execution_mode": "governance",
+      "queue_name": "report_refresh",
+      "task_type": "report_refresh"
+    },
+    {
+      "timestamp": "2026-04-03T12:36:45.348148Z",
+      "kind": "decomposition_spawned",
+      "success": true,
+      "task_id": "60462def9ec347548ed6bd3bad238c58",
+      "child_task_count": 5,
+      "child_task_ids": [
+        "5ce8ba97ca6942e0aaadb4c98a5d1a18",
+        "b1eea3a9f5734fe9bed326487bf2a0fe",
+        "641f5cf801614cedbfd802fedb6f4fb8",
+        "6fbbee9a8f5d4e2f9b70b73fa347e252",
+        "07adc124c1e64673950aee629f9f873a"
+      ],
+      "dag": {
+        "shared_nodes": [
+          "Plan lifecycle contract"
+        ],
+        "branch_nodes": [
+          "Decompose into executable phases",
+          "Execute bounded lifecycle work",
+          "Verify evidence and contract adherence"
+        ],
+        "repair_nodes": [
+          "Prepare rollback and requeue split"
+        ],
+        "optional_nodes": [],
+        "speculative_nodes": [],
+        "blocked_nodes": [],
+        "edges": [
+          {
+            "from": "Plan lifecycle contract",
+            "to": "Decompose into executable phases",
+            "kind": "branch"
+          },
+          {
+            "from": "Plan lifecycle contract",
+            "to": "Execute bounded lifecycle work",
+            "kind": "branch"
+          },
+          {
+            "from": "Decompose into executable phases",
+            "to": "Execute bounded lifecycle work",
+            "kind": "branch"
+          },
+          {
+            "from": "Plan lifecycle contract",
+            "to": "Verify evidence and contract adherence",
+            "kind": "branch"
+          },
+          {
+            "from": "Execute bounded lifecycle work",
+            "to": "Verify evidence and contract adherence",
+            "kind": "branch"
+          },
+          {
+            "from": "Plan lifecycle contract",
+            "to": "Prepare rollback and requeue split",
+            "kind": "repair"
+          },
+          {
+            "from": "Verify evidence and contract adherence",
+            "to": "Prepare rollback and requeue split",
+            "kind": "repair"
+          },
+          {
+            "from": "Decompose into executable phases",
+            "to": "Prepare rollback and requeue split",
+            "kind": "repair"
+          },
+          {
+            "from": "Execute bounded lifecycle work",
+            "to": "Prepare rollback and requeue split",
+            "kind": "repair"
+          }
+        ],
+        "shared_dependency_group": "60462def9ec347548ed6bd3bad238c58",
+        "child_dependency_ids": {
+          "5ce8ba97ca6942e0aaadb4c98a5d1a18": [],
+          "b1eea3a9f5734fe9bed326487bf2a0fe": [
+            "5ce8ba97ca6942e0aaadb4c98a5d1a18"
+          ],
+          "641f5cf801614cedbfd802fedb6f4fb8": [
+            "5ce8ba97ca6942e0aaadb4c98a5d1a18",
+            "b1eea3a9f5734fe9bed326487bf2a0fe"
+          ],
+          "6fbbee9a8f5d4e2f9b70b73fa347e252": [
+            "5ce8ba97ca6942e0aaadb4c98a5d1a18",
+            "641f5cf801614cedbfd802fedb6f4fb8"
+          ],
+          "07adc124c1e64673950aee629f9f873a": [
+            "5ce8ba97ca6942e0aaadb4c98a5d1a18",
+            "6fbbee9a8f5d4e2f9b70b73fa347e252",
+            "b1eea3a9f5734fe9bed326487bf2a0fe",
+            "641f5cf801614cedbfd802fedb6f4fb8"
+          ]
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-03T12:36:49.678753Z",
+      "kind": "step_completed",
+      "success": true,
+      "task_id": "60462def9ec347548ed6bd3bad238c58",
+      "step_id": "423f4c3e",
+      "step_title": "Spawn decomposition subtasks",
+      "worker": "planner",
+      "phase": "decompose",
+      "route_model": "internal-recovery",
+      "route_provider": "runtime",
+      "elapsed_ms": 18422,
+      "output_ref": {
+        "artifact_id": "ctx_301eeffdb786",
+        "task_id": "60462def9ec347548ed6bd3bad238c58",
+        "step_id": "423f4c3e",
+        "channel": "planner-output",
+        "title": "Spawn decomposition subtasks output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\60462def9ec347548ed6bd3bad238c58\\423f4c3e-planner-output-ctx_301eeffdb786.json",
+        "size_chars": 1502,
+        "line_count": 52,
+        "created_at": "2026-04-03T12:36:48.251062Z",
+        "metadata": {
+          "worker": "planner",
+          "phase": "decompose",
+          "route_model": "internal-recovery",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 1502,
+        "line_count": 52,
+        "stored_raw": true
+      }
+    }
+  ],
+  "verification_signal_count": 3,
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-03T12:36:14.676933Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "60462def9ec347548ed6bd3bad238c58",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "governance",
+        "queue_name": "report_refresh",
+        "task_type": "report_refresh"
+      },
+      {
+        "timestamp": "2026-04-03T12:36:45.348148Z",
+        "kind": "decomposition_spawned",
+        "success": true,
+        "task_id": "60462def9ec347548ed6bd3bad238c58",
+        "child_task_count": 5,
+        "child_task_ids": [
+          "5ce8ba97ca6942e0aaadb4c98a5d1a18",
+          "b1eea3a9f5734fe9bed326487bf2a0fe",
+          "641f5cf801614cedbfd802fedb6f4fb8",
+          "6fbbee9a8f5d4e2f9b70b73fa347e252",
+          "07adc124c1e64673950aee629f9f873a"
+        ],
+        "dag": {
+          "shared_nodes": [
+            "Plan lifecycle contract"
+          ],
+          "branch_nodes": [
+            "Decompose into executable phases",
+            "Execute bounded lifecycle work",
+            "Verify evidence and contract adherence"
+          ],
+          "repair_nodes": [
+            "Prepare rollback and requeue split"
+          ],
+          "optional_nodes": [],
+          "speculative_nodes": [],
+          "blocked_nodes": [],
+          "edges": [
+            {
+              "from": "Plan lifecycle contract",
+              "to": "Decompose into executable phases",
+              "kind": "branch"
+            },
+            {
+              "from": "Plan lifecycle contract",
+              "to": "Execute bounded lifecycle work",
+              "kind": "branch"
+            },
+            {
+              "from": "Decompose into executable phases",
+              "to": "Execute bounded lifecycle work",
+              "kind": "branch"
+            },
+            {
+              "from": "Plan lifecycle contract",
+              "to": "Verify evidence and contract adherence",
+              "kind": "branch"
+            },
+            {
+              "from": "Execute bounded lifecycle work",
+              "to": "Verify evidence and contract adherence",
+              "kind": "branch"
+            },
+            {
+              "from": "Plan lifecycle contract",
+              "to": "Prepare rollback and requeue split",
+              "kind": "repair"
+            },
+            {
+              "from": "Verify evidence and contract adherence",
+              "to": "Prepare rollback and requeue split",
+              "kind": "repair"
+            },
+            {
+              "from": "Decompose into executable phases",
+              "to": "Prepare rollback and requeue split",
+              "kind": "repair"
+            },
+            {
+              "from": "Execute bounded lifecycle work",
+              "to": "Prepare rollback and requeue split",
+              "kind": "repair"
+            }
+          ],
+          "shared_dependency_group": "60462def9ec347548ed6bd3bad238c58",
+          "child_dependency_ids": {
+            "5ce8ba97ca6942e0aaadb4c98a5d1a18": [],
+            "b1eea3a9f5734fe9bed326487bf2a0fe": [
+              "5ce8ba97ca6942e0aaadb4c98a5d1a18"
+            ],
+            "641f5cf801614cedbfd802fedb6f4fb8": [
+              "5ce8ba97ca6942e0aaadb4c98a5d1a18",
+              "b1eea3a9f5734fe9bed326487bf2a0fe"
+            ],
+            "6fbbee9a8f5d4e2f9b70b73fa347e252": [
+              "5ce8ba97ca6942e0aaadb4c98a5d1a18",
+              "641f5cf801614cedbfd802fedb6f4fb8"
+            ],
+            "07adc124c1e64673950aee629f9f873a": [
+              "5ce8ba97ca6942e0aaadb4c98a5d1a18",
+              "6fbbee9a8f5d4e2f9b70b73fa347e252",
+              "b1eea3a9f5734fe9bed326487bf2a0fe",
+              "641f5cf801614cedbfd802fedb6f4fb8"
+            ]
+          }
+        }
+      },
+      {
+        "timestamp": "2026-04-03T12:36:49.678753Z",
+        "kind": "step_completed",
+        "success": true,
+        "task_id": "60462def9ec347548ed6bd3bad238c58",
+        "step_id": "423f4c3e",
+        "step_title": "Spawn decomposition subtasks",
+        "worker": "planner",
+        "phase": "decompose",
+        "route_model": "internal-recovery",
+        "route_provider": "runtime",
+        "elapsed_ms": 18422,
+        "output_ref": {
+          "artifact_id": "ctx_301eeffdb786",
+          "task_id": "60462def9ec347548ed6bd3bad238c58",
+          "step_id": "423f4c3e",
+          "channel": "planner-output",
+          "title": "Spawn decomposition subtasks output",
+          "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\60462def9ec347548ed6bd3bad238c58\\423f4c3e-planner-output-ctx_301eeffdb786.json",
+          "size_chars": 1502,
+          "line_count": 52,
+          "created_at": "2026-04-03T12:36:48.251062Z",
+          "metadata": {
+            "worker": "planner",
+            "phase": "decompose",
+            "route_model": "internal-recovery",
+            "route_provider": "runtime"
+          }
+        },
+        "output_stats": {
+          "channel": "planner-output",
+          "char_count": 1502,
+          "line_count": 52,
+          "stored_raw": true
+        }
+      }
+    ],
+    "decomposition": {
+      "summary": "Goal pipeline for restore_toyos_delivery",
+      "strategy": "publish-plan-decompose-execute-verify-rollback",
+      "subtasks": [
+        {
+          "title": "Plan lifecycle contract",
+          "prompt": "Define the lifecycle contract, evidence requirements, and rollback policy for the ToyOS delivery flow.",
+          "goal": "prepare a bounded lifecycle contract",
+          "task_type": "report_refresh",
+          "path_kind": "shared",
+          "queue_name": "report_refresh",
+          "verification_level": "L2",
+          "preferred_worker": "shell",
+          "execution_mode": "governance",
+          "execution_lane": "host-control",
+          "decompose_children": true,
+          "shared_dependency_group": "60462def9ec347548ed6bd3bad238c58",
+          "repair_for": null,
+          "inputs": [],
+          "outputs": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            "Plan stage completed."
+          ],
+          "scheduler_hint": {
+            "goal_pipeline_stage": "plan",
+            "goal_pipeline_index": 0,
+            "goal_pipeline_root": "60462def9ec347548ed6bd3bad238c58"
+          },
+          "executor_hint": {
+            "goal_pipeline_stage": "plan",
+            "goal_pipeline_index": 0
+          }
+        },
+        {
+          "title": "Decompose into executable phases",
+          "prompt": "Split the lifecycle into bounded child work for execution and verification.",
+          "goal": "create child tasks with explicit dependencies",
+          "task_type": "report_refresh",
+          "path_kind": "branch",
+          "queue_name": "report_refresh",
+          "verification_level": "L2",
+          "preferred_worker": "shell",
+          "execution_mode": "governance",
+          "execution_lane": "host-control",
+          "decompose_children": true,
+          "shared_dependency_group": "60462def9ec347548ed6bd3bad238c58",
+          "repair_for": null,
+          "inputs": [],
+          "outputs": [],
+          "dependencies": [
+            "Plan lifecycle contract"
+          ],
+          "acceptance_criteria": [
+            "Decompose stage completed."
+          ],
+          "scheduler_hint": {
+            "goal_pipeline_stage": "decompose",
+            "goal_pipeline_index": 1,
+            "goal_pipeline_root": "60462def9ec347548ed6bd3bad238c58"
+          },
+          "executor_hint": {
+            "goal_pipeline_stage": "decompose",
+            "goal_pipeline_index": 1
+          }
+        },
+        {
+          "title": "Execute bounded lifecycle work",
+          "prompt": "Run the bounded lifecycle work and collect execution evidence for the ToyOS delivery path.",
+          "goal": "produce execution evidence",
+          "task_type": "report_refresh",
+          "path_kind": "branch",
+          "queue_name": "report_refresh",
+          "verification_level": "L2",
+          "preferred_worker": "shell",
+          "execution_mode": "governance",
+          "execution_lane": "host-control",
+          "decompose_children": true,
+          "shared_dependency_group": "60462def9ec347548ed6bd3bad238c58",
+          "repair_for": null,
+          "inputs": [],
+          "outputs": [],
+          "dependencies": [
+            "Plan lifecycle contract",
+            "Decompose into executable phases"
+          ],
+          "acceptance_criteria": [
+            "Execute stage completed."
+          ],
+          "scheduler_hint": {
+            "goal_pipeline_stage": "execute",
+            "goal_pipeline_index": 2,
+            "goal_pipeline_root": "60462def9ec347548ed6bd3bad238c58"
+          },
+          "executor_hint": {
+            "goal_pipeline_stage": "execute",
+            "goal_pipeline_index": 2
+          }
+        },
+        {
+          "title": "Verify evidence and contract adherence",
+          "prompt": "Validate the evidence bundle, decomposition results, and runtime completion markers.",
+          "goal": "prove the lifecycle completed",
+          "task_type": "report_refresh",
+          "path_kind": "branch",
+          "queue_name": "report_refresh",
+          "verification_level": "L2",
+          "preferred_worker": "reviewer",
+          "execution_mode": "governance",
+          "execution_lane": "host-control",
+          "decompose_children": true,
+          "shared_dependency_group": "60462def9ec347548ed6bd3bad238c58",
+          "repair_for": null,
+          "inputs": [],
+          "outputs": [],
+          "dependencies": [
+            "Plan lifecycle contract",
+            "Execute bounded lifecycle work"
+          ],
+          "acceptance_criteria": [
+            "Verify stage completed."
+          ],
+          "scheduler_hint": {
+            "goal_pipeline_stage": "verify",
+            "goal_pipeline_index": 3,
+            "goal_pipeline_root": "60462def9ec347548ed6bd3bad238c58"
+          },
+          "executor_hint": {
+            "goal_pipeline_stage": "verify",
+            "goal_pipeline_index": 3
+          }
+        },
+        {
+          "title": "Prepare rollback and requeue split",
+          "prompt": "If verification fails, return to the planner, apply the rollback rule, and requeue the work as bounded splits.",
+          "goal": "define rollback behavior",
+          "task_type": "report_refresh",
+          "path_kind": "repair",
+          "queue_name": "report_refresh",
+          "verification_level": "L2",
+          "preferred_worker": "reviewer",
+          "execution_mode": "governance",
+          "execution_lane": "host-control",
+          "decompose_children": false,
+          "shared_dependency_group": "60462def9ec347548ed6bd3bad238c58",
+          "repair_for": "Plan lifecycle contract",
+          "inputs": [],
+          "outputs": [],
+          "dependencies": [
+            "Plan lifecycle contract",
+            "Verify evidence and contract adherence",
+            "Decompose into executable phases",
+            "Execute bounded lifecycle work"
+          ],
+          "acceptance_criteria": [
+            "Rollback stage completed."
+          ],
+          "scheduler_hint": {
+            "goal_pipeline_stage": "rollback",
+            "goal_pipeline_index": 4,
+            "goal_pipeline_root": "60462def9ec347548ed6bd3bad238c58"
+          },
+          "executor_hint": {
+            "goal_pipeline_stage": "rollback",
+            "goal_pipeline_index": 4
+          }
+        }
+      ],
+      "dag": {
+        "shared_nodes": [
+          "Plan lifecycle contract"
+        ],
+        "branch_nodes": [
+          "Decompose into executable phases",
+          "Execute bounded lifecycle work",
+          "Verify evidence and contract adherence"
+        ],
+        "repair_nodes": [
+          "Prepare rollback and requeue split"
+        ],
+        "optional_nodes": [],
+        "speculative_nodes": [],
+        "blocked_nodes": [],
+        "edges": [
+          {
+            "from": "Plan lifecycle contract",
+            "to": "Decompose into executable phases",
+            "kind": "branch"
+          },
+          {
+            "from": "Plan lifecycle contract",
+            "to": "Execute bounded lifecycle work",
+            "kind": "branch"
+          },
+          {
+            "from": "Decompose into executable phases",
+            "to": "Execute bounded lifecycle work",
+            "kind": "branch"
+          },
+          {
+            "from": "Plan lifecycle contract",
+            "to": "Verify evidence and contract adherence",
+            "kind": "branch"
+          },
+          {
+            "from": "Execute bounded lifecycle work",
+            "to": "Verify evidence and contract adherence",
+            "kind": "branch"
+          },
+          {
+            "from": "Plan lifecycle contract",
+            "to": "Prepare rollback and requeue split",
+            "kind": "repair"
+          },
+          {
+            "from": "Verify evidence and contract adherence",
+            "to": "Prepare rollback and requeue split",
+            "kind": "repair"
+          },
+          {
+            "from": "Decompose into executable phases",
+            "to": "Prepare rollback and requeue split",
+            "kind": "repair"
+          },
+          {
+            "from": "Execute bounded lifecycle work",
+            "to": "Prepare rollback and requeue split",
+            "kind": "repair"
+          }
+        ],
+        "shared_dependency_group": "60462def9ec347548ed6bd3bad238c58",
+        "child_dependency_ids": {
+          "5ce8ba97ca6942e0aaadb4c98a5d1a18": [],
+          "b1eea3a9f5734fe9bed326487bf2a0fe": [
+            "5ce8ba97ca6942e0aaadb4c98a5d1a18"
+          ],
+          "641f5cf801614cedbfd802fedb6f4fb8": [
+            "5ce8ba97ca6942e0aaadb4c98a5d1a18",
+            "b1eea3a9f5734fe9bed326487bf2a0fe"
+          ],
+          "6fbbee9a8f5d4e2f9b70b73fa347e252": [
+            "5ce8ba97ca6942e0aaadb4c98a5d1a18",
+            "641f5cf801614cedbfd802fedb6f4fb8"
+          ],
+          "07adc124c1e64673950aee629f9f873a": [
+            "5ce8ba97ca6942e0aaadb4c98a5d1a18",
+            "6fbbee9a8f5d4e2f9b70b73fa347e252",
+            "b1eea3a9f5734fe9bed326487bf2a0fe",
+            "641f5cf801614cedbfd802fedb6f4fb8"
+          ]
+        }
+      },
+      "depth": 0,
+      "max_depth": 2,
+      "mode": "multi_layer",
+      "child_task_ids": [
+        "5ce8ba97ca6942e0aaadb4c98a5d1a18",
+        "b1eea3a9f5734fe9bed326487bf2a0fe",
+        "641f5cf801614cedbfd802fedb6f4fb8",
+        "6fbbee9a8f5d4e2f9b70b73fa347e252",
+        "07adc124c1e64673950aee629f9f873a"
+      ],
+      "child_tasks": [
+        {
+          "task_id": "5ce8ba97ca6942e0aaadb4c98a5d1a18",
+          "title": "Plan lifecycle contract",
+          "task_type": "report_refresh",
+          "execution_mode": "governance",
+          "depth": 1,
+          "path_kind": "shared"
+        },
+        {
+          "task_id": "b1eea3a9f5734fe9bed326487bf2a0fe",
+          "title": "Decompose into executable phases",
+          "task_type": "report_refresh",
+          "execution_mode": "governance",
+          "depth": 1,
+          "path_kind": "branch"
+        },
+        {
+          "task_id": "641f5cf801614cedbfd802fedb6f4fb8",
+          "title": "Execute bounded lifecycle work",
+          "task_type": "report_refresh",
+          "execution_mode": "governance",
+          "depth": 1,
+          "path_kind": "branch"
+        },
+        {
+          "task_id": "6fbbee9a8f5d4e2f9b70b73fa347e252",
+          "title": "Verify evidence and contract adherence",
+          "task_type": "report_refresh",
+          "execution_mode": "governance",
+          "depth": 1,
+          "path_kind": "branch"
+        },
+        {
+          "task_id": "07adc124c1e64673950aee629f9f873a",
+          "title": "Prepare rollback and requeue split",
+          "task_type": "report_refresh",
+          "execution_mode": "governance",
+          "depth": 1,
+          "path_kind": "repair"
+        }
+      ],
+      "spawned_at": "2026-04-03T12:36:45.348148Z"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "artifact_id": "blocked-to-done-ledger-evidence",
+  "type": "demo",
+  "version": "0.1.0",
+  "artifact_path": "D:/codex/generated/blocked-to-done-ledger-evidence",
+  "entrypoint": "run_demo.py",
+  "evidence": [
+    "build-report.json",
+    "test-report.json",
+    "execution-report.json"
+  ],
+  "buildable": true,
+  "runnable": true,
+  "test_passed": true,
+  "reproducible": true,
+  "category": "demo",
+  "title": "Blocked to done transition evidence",
+  "message": "transition ledger evidence",
+  "sha256": "56ad1995bd744aed4669586820c1e6015fad3fa97cebf3d5c275cca491f226d0"
+}

@@ -1,0 +1,85 @@
+{
+  "task_id": "b2a1a55748604dc98ed7dfd969ea73e7",
+  "task_title": "Implement module runtime.scheduler",
+  "task_status": "timed_out",
+  "started_at": "2026-03-20T08:44:33.543977Z",
+  "updated_at": "2026-03-20T09:11:04.505420Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "0e6b5415",
+      "step_title": "Understand task",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-03-20T09:11:04.505420Z",
+      "phase": "understand",
+      "worker": "reviewer",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "d22ca88b",
+      "step_title": "Draft solution",
+      "action": "coder_step",
+      "ok": false,
+      "at": "2026-03-20T09:11:04.505420Z",
+      "phase": "draft",
+      "worker": "coder",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "78bc6e96",
+      "step_title": "Execute validation",
+      "action": "shell_step",
+      "ok": false,
+      "at": "2026-03-20T09:11:04.505420Z",
+      "phase": "execute",
+      "worker": "shell",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "b17bbe98",
+      "step_title": "Verify result",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-03-20T09:11:04.505420Z",
+      "phase": "verify",
+      "worker": "reviewer",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "a281c473",
+      "step_title": "Revise next action",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-03-20T09:11:04.505420Z",
+      "phase": "revise",
+      "worker": "reviewer",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    }
+  ],
+  "result": {
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

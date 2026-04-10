@@ -1,0 +1,23 @@
+{
+  "task_id": "shadow-import-pass-0001",
+  "goal_id": "goal_shadow_import_pass_smoke",
+  "task_type": "build",
+  "owner_role": "builder",
+  "input_spec": {
+    "project_path": "D:\\codex\\orchestrator-mvp",
+    "build_command": "type NUL",
+    "artifact_out_dir": "D:\\codex\\orchestrator-mvp\\shadow_factory\\artifacts\\shadow-import-pass-0001"
+  },
+  "expected_outputs": [
+    "dummy-artifact.txt",
+    "build-report.json"
+  ],
+  "acceptance_checks": [
+    "build report exists",
+    "artifact exists"
+  ],
+  "upstream_task_id": null,
+  "artifact_scope": "shadow_only",
+  "shadow_mode": true,
+  "created_at": "2026-03-28T21:10:00Z"
+}

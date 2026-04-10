@@ -1,0 +1,23 @@
+{
+  "role_name": "auditor",
+  "version": "1.0",
+  "purpose": "Verify evidence and determine whether a task produced a real and valid outcome.",
+  "allowed_actions": [
+    "evidence_read",
+    "audit_score",
+    "audit_record_write"
+  ],
+  "denied_actions": [
+    "task_create",
+    "code_write",
+    "shell_execute",
+    "artifact_publish"
+  ],
+  "required_inputs": [
+    "run_handoff",
+    "task_packet"
+  ],
+  "required_outputs": [
+    "audit_record"
+  ]
+}

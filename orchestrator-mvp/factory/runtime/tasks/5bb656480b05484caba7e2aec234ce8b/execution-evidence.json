@@ -1,0 +1,195 @@
+{
+  "task_id": "5bb656480b05484caba7e2aec234ce8b",
+  "task_title": "Repair ToyOS build and toolchain",
+  "task_status": "timed_out",
+  "started_at": "2026-04-03T12:48:54.007358Z",
+  "updated_at": "2026-04-03T12:54:28.410745Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "e1ed46b4",
+      "step_title": "Spawn decomposition subtasks",
+      "action": "planner_step",
+      "ok": false,
+      "at": "2026-04-03T12:54:28.410745Z",
+      "phase": "decompose",
+      "worker": "planner",
+      "status": "running",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "e976b041",
+      "step_title": "Wait for child task completion",
+      "action": "planner_step",
+      "ok": false,
+      "at": "2026-04-03T12:54:28.410745Z",
+      "phase": "decompose",
+      "worker": "planner",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "1b85f6eb",
+      "step_title": "Aggregate decomposition results",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-04-03T12:54:28.410745Z",
+      "phase": "verify",
+      "worker": "reviewer",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    }
+  ],
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-03T12:48:54.017286Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "5bb656480b05484caba7e2aec234ce8b",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "production",
+        "queue_name": "build_test",
+        "task_type": "build_fix"
+      }
+    ],
+    "decomposition": {
+      "summary": "Fallback decomposition for: Repair the ToyOS build or toolchain break with the smallest safe patch, then refresh build-report evidence and note any ",
+      "strategy": "bounded multi-layer split with analysis, execution, and verification branches",
+      "subtasks": [
+        {
+          "title": "Analyze the current state",
+          "prompt": "Inspect the current repository state and isolate the smallest workable slice for: Repair the ToyOS build or toolchain break with the smallest safe patch, then refresh build-report evidence and note any remaining blockers.",
+          "goal": "Identify the smallest viable slice",
+          "task_type": "report_refresh",
+          "path_kind": "shared",
+          "queue_name": "fastlane",
+          "verification_level": "L1",
+          "preferred_worker": "reviewer",
+          "execution_mode": "governance",
+          "execution_lane": "host-control",
+          "decompose_children": false,
+          "shared_dependency_group": "5bb656480b05484caba7e2aec234ce8b",
+          "repair_for": null,
+          "inputs": [],
+          "outputs": [
+            "analysis note"
+          ],
+          "dependencies": [],
+          "acceptance_criteria": [
+            "The smallest feasible slice is identified."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        },
+        {
+          "title": "Implement the bounded change",
+          "prompt": "Make the smallest safe implementation or repair needed for: Repair the ToyOS build or toolchain break with the smallest safe patch, then refresh build-report evidence and note any remaining blockers.",
+          "goal": "Implement the bounded change",
+          "task_type": "build_fix",
+          "path_kind": "branch",
+          "queue_name": "build_test",
+          "verification_level": "L2",
+          "preferred_worker": "coder",
+          "execution_mode": "production",
+          "execution_lane": "vm-first",
+          "decompose_children": true,
+          "shared_dependency_group": "5bb656480b05484caba7e2aec234ce8b",
+          "repair_for": null,
+          "inputs": [
+            "analysis note"
+          ],
+          "outputs": [
+            "bounded patch"
+          ],
+          "dependencies": [
+            "Analyze the current state"
+          ],
+          "acceptance_criteria": [
+            "A bounded implementation exists."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        },
+        {
+          "title": "Validate the result",
+          "prompt": "Run the narrowest useful validation for the bounded change: Repair the ToyOS build or toolchain break with the smallest safe patch, then refresh build-report evidence and note any remaining blockers.",
+          "goal": "Validate the change",
+          "task_type": "unit_test_run",
+          "path_kind": "repair",
+          "queue_name": "build_test",
+          "verification_level": "L2",
+          "preferred_worker": "docker",
+          "execution_mode": "production",
+          "execution_lane": "vm-first",
+          "decompose_children": false,
+          "shared_dependency_group": "5bb656480b05484caba7e2aec234ce8b",
+          "repair_for": "Analyze the current state",
+          "inputs": [
+            "bounded patch"
+          ],
+          "outputs": [
+            "validation evidence"
+          ],
+          "dependencies": [
+            "Analyze the current state",
+            "Implement the bounded change"
+          ],
+          "acceptance_criteria": [
+            "Validation evidence is recorded."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        }
+      ],
+      "dag": {
+        "shared_nodes": [
+          "Analyze the current state"
+        ],
+        "branch_nodes": [
+          "Implement the bounded change"
+        ],
+        "repair_nodes": [
+          "Validate the result"
+        ],
+        "optional_nodes": [],
+        "speculative_nodes": [],
+        "blocked_nodes": [],
+        "edges": [
+          {
+            "from": "Analyze the current state",
+            "to": "Implement the bounded change",
+            "kind": "branch"
+          },
+          {
+            "from": "Analyze the current state",
+            "to": "Validate the result",
+            "kind": "repair"
+          },
+          {
+            "from": "Implement the bounded change",
+            "to": "Validate the result",
+            "kind": "repair"
+          }
+        ],
+        "shared_dependency_group": "5bb656480b05484caba7e2aec234ce8b"
+      },
+      "depth": 0,
+      "max_depth": 2,
+      "mode": "multi_layer"
+    },
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

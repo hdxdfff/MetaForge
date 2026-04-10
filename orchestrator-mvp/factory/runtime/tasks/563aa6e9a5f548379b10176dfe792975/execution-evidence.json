@@ -1,0 +1,70 @@
+{
+  "task_id": "563aa6e9a5f548379b10176dfe792975",
+  "task_title": "Synthesize next action",
+  "task_status": "timed_out",
+  "started_at": "2026-04-02T09:24:05.083415Z",
+  "updated_at": "2026-04-02T09:41:25.277141Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "13750cc3",
+      "step_title": "Frame research question",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-04-02T09:41:25.277141Z",
+      "phase": "understand",
+      "worker": "reviewer",
+      "status": "running",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "392cc9af",
+      "step_title": "Acquire internet knowledge",
+      "action": "docker_step",
+      "ok": false,
+      "at": "2026-04-02T09:41:25.277141Z",
+      "phase": "execute",
+      "worker": "docker",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "4d9361ea",
+      "step_title": "Synthesize research output",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-04-02T09:41:25.277141Z",
+      "phase": "summarize",
+      "worker": "reviewer",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    }
+  ],
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-02T09:24:05.087937Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "563aa6e9a5f548379b10176dfe792975",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "governance",
+        "queue_name": "fastlane",
+        "task_type": "report_refresh"
+      }
+    ],
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

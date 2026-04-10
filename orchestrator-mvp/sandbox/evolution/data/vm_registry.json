@@ -1,0 +1,108 @@
+{
+  "vms": [
+    {
+      "vm_id": "vm_91cc4374ea",
+      "name": "Smoke Test VM",
+      "purpose": "smoke-test",
+      "template_id": "experiment_template",
+      "role": "experiment",
+      "status": "stopped",
+      "cpus": 2,
+      "memory_mb": 2048,
+      "preinstalled_tools": [
+        "git",
+        "python",
+        "docker",
+        "curl"
+      ],
+      "created_at": "2026-03-09T07:29:52.299567Z",
+      "updated_at": "2026-03-09T07:29:58.178770Z",
+      "notes": "VM orchestrator MVP record only; execution remains bounded until explicit runtime integration.",
+      "snapshot_count": 1,
+      "last_started_at": "2026-03-09T07:29:54.209788Z",
+      "last_snapshot_id": "snap_a8ff18c8",
+      "last_stopped_at": "2026-03-09T07:29:58.178770Z"
+    },
+    {
+      "vm_id": "vm_0ac34d4c55",
+      "name": "shell-78d2040c",
+      "purpose": "shell",
+      "template_id": "dev_template",
+      "role": "build",
+      "status": "stopped",
+      "cpus": 2,
+      "memory_mb": 4096,
+      "preinstalled_tools": [
+        "git",
+        "python",
+        "node",
+        "docker",
+        "make",
+        "gcc"
+      ],
+      "created_at": "2026-03-09T07:38:56.930050Z",
+      "updated_at": "2026-03-09T07:38:56.937049Z",
+      "notes": "VM orchestrator MVP record only; execution remains bounded until explicit runtime integration.",
+      "snapshot_count": 1,
+      "task_id": "78d2040c0c24401d80f61c9e718dd7bc",
+      "workdir": "D:\\codex",
+      "last_started_at": "2026-03-09T07:38:56.931050Z",
+      "last_snapshot_id": "snap_4e30a3d9",
+      "last_stopped_at": "2026-03-09T07:38:56.937049Z"
+    },
+    {
+      "vm_id": "vm_c9a5d66ef7",
+      "name": "shell-dbaf381b",
+      "purpose": "shell",
+      "template_id": "dev_template",
+      "role": "build",
+      "status": "stopped",
+      "cpus": 2,
+      "memory_mb": 4096,
+      "preinstalled_tools": [
+        "git",
+        "python",
+        "node",
+        "docker",
+        "make",
+        "gcc"
+      ],
+      "created_at": "2026-03-09T07:39:19.184122Z",
+      "updated_at": "2026-03-09T07:39:24.527327Z",
+      "notes": "VM orchestrator MVP record only; execution remains bounded until explicit runtime integration.",
+      "snapshot_count": 1,
+      "task_id": "dbaf381b86d7426b82fb01a2d3ffd36f",
+      "workdir": "D:\\codex",
+      "last_started_at": "2026-03-09T07:39:19.185125Z",
+      "last_snapshot_id": "snap_5e03d567",
+      "last_stopped_at": "2026-03-09T07:39:24.527327Z"
+    },
+    {
+      "vm_id": "vm_6fd79212bd",
+      "name": "shell-38ac5202",
+      "purpose": "shell",
+      "template_id": "dev_template",
+      "role": "build",
+      "status": "stopped",
+      "cpus": 2,
+      "memory_mb": 4096,
+      "preinstalled_tools": [
+        "git",
+        "python",
+        "node",
+        "docker",
+        "make",
+        "gcc"
+      ],
+      "created_at": "2026-03-09T07:40:33.528109Z",
+      "updated_at": "2026-03-09T07:40:36.209043Z",
+      "notes": "VM orchestrator MVP record only; execution remains bounded until explicit runtime integration.",
+      "snapshot_count": 1,
+      "task_id": "38ac5202d13948c2a91e41acd37f27e9",
+      "workdir": "D:\\codex",
+      "last_started_at": "2026-03-09T07:40:33.528109Z",
+      "last_snapshot_id": "snap_e2fa21b3",
+      "last_stopped_at": "2026-03-09T07:40:36.209043Z"
+    }
+  ]
+}

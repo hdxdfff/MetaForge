@@ -1,0 +1,22 @@
+{
+  "pattern_id": "toyos_smoke_probe_order_frontload",
+  "title": "ToyOS smoke probes must frontload fs stress and user probe",
+  "symptom": "qemu_user_probe_assertions or qemu_filesystem_stress_assertions intermittently miss their completion markers within the 20s smoke window.",
+  "root_cause": "Same-priority startup ordering caused user-probe and fs-stress to be scheduled too late behind noisier kernel jobs.",
+  "fix": [
+    "Create fs-stress before kernel-maint and other heavier kernel jobs.",
+    "Create user-probe immediately after fs-stress so both probes get early scheduler turns.",
+    "Keep shell and mixed probes later in the startup list."
+  ],
+  "validation": [
+    "qemu_boot_smoke: 5/5 passed",
+    "qemu_boot_soak: 3/3 passed",
+    "qemu_user_probe_assertions: 3/3 passed",
+    "qemu_filesystem_stress_assertions: 3/3 passed"
+  ],
+  "applies_to": [
+    "D:\\codex\\generated\\toy-os-demo\\kernel.c",
+    "D:\\codex\\generated\\toy-os-demo\\tools\\generic_qemu_smoke.json"
+  ],
+  "created_at": "2026-03-29T10:00:00Z"
+}

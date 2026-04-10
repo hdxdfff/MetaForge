@@ -1,0 +1,140 @@
+{
+  "task_id": "79a7209d3ecc4da5a73e955329b1c6de",
+  "task_title": "Execute the next bounded action",
+  "task_status": "timed_out",
+  "started_at": "2026-04-03T12:33:41.193739Z",
+  "updated_at": "2026-04-03T12:48:36.773784Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "d636b949",
+      "step_title": "Build Toy OS baseline",
+      "action": "docker_step",
+      "ok": false,
+      "at": "2026-04-03T12:48:36.773784Z",
+      "phase": "execute",
+      "worker": "docker",
+      "status": "running",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "3188b780",
+      "step_title": "Boot ToyOS in QEMU",
+      "action": "docker_step",
+      "ok": false,
+      "at": "2026-04-03T12:48:36.773784Z",
+      "phase": "verify",
+      "worker": "docker",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "e74d2dad",
+      "step_title": "Audit ToyOS runtime evidence",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-04-03T12:48:36.773784Z",
+      "phase": "review",
+      "worker": "reviewer",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "4f7998b5",
+      "step_title": "Patch Toy OS implementation",
+      "action": "coder_step",
+      "ok": false,
+      "at": "2026-04-03T12:48:36.773784Z",
+      "phase": "draft",
+      "worker": "coder",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "c8eace86",
+      "step_title": "Rebuild Toy OS after patch",
+      "action": "docker_step",
+      "ok": false,
+      "at": "2026-04-03T12:48:36.773784Z",
+      "phase": "execute",
+      "worker": "docker",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "7f208202",
+      "step_title": "Re-run ToyOS QEMU and score artifacts",
+      "action": "docker_step",
+      "ok": false,
+      "at": "2026-04-03T12:48:36.773784Z",
+      "phase": "verify",
+      "worker": "docker",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "786d7f80",
+      "step_title": "Score ToyOS artifact set",
+      "action": "docker_step",
+      "ok": false,
+      "at": "2026-04-03T12:48:36.773784Z",
+      "phase": "verify",
+      "worker": "docker",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "321a81e3",
+      "step_title": "Issue ToyOS release decision",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-04-03T12:48:36.773784Z",
+      "phase": "revise",
+      "worker": "reviewer",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    }
+  ],
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-03T12:33:41.196737Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "79a7209d3ecc4da5a73e955329b1c6de",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "governance",
+        "queue_name": "fastlane",
+        "task_type": "doc_patch"
+      }
+    ],
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

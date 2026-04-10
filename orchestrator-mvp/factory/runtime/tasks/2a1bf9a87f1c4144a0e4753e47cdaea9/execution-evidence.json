@@ -1,0 +1,151 @@
+{
+  "steps": [
+    {
+      "step_id": "bb5c3e85",
+      "step_title": "Spawn decomposition subtasks",
+      "action": "planner_step",
+      "ok": true,
+      "at": "2026-04-02T19:07:05.606373Z",
+      "phase": "decompose",
+      "worker": "planner",
+      "status": "completed",
+      "output_ref": {
+        "artifact_id": "ctx_bd8df52d2678",
+        "task_id": "2a1bf9a87f1c4144a0e4753e47cdaea9",
+        "step_id": "bb5c3e85",
+        "channel": "planner-output",
+        "title": "Spawn decomposition subtasks output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\2a1bf9a87f1c4144a0e4753e47cdaea9\\bb5c3e85-planner-output-ctx_bd8df52d2678.json",
+        "size_chars": 960,
+        "line_count": 34,
+        "created_at": "2026-04-02T18:51:24.921830Z",
+        "metadata": {
+          "worker": "planner",
+          "phase": "decompose",
+          "route_model": "internal-recovery",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 960,
+        "line_count": 34,
+        "stored_raw": true
+      },
+      "synthesized": true,
+      "source": "task-plan"
+    },
+    {
+      "step_id": "a8b1372d",
+      "step_title": "Wait for child task completion",
+      "action": "planner_step",
+      "ok": true,
+      "at": "2026-04-02T19:07:05.606373Z",
+      "phase": "decompose",
+      "worker": "planner",
+      "status": "completed",
+      "output_ref": {
+        "artifact_id": "ctx_5537cf9b6a0a",
+        "task_id": "2a1bf9a87f1c4144a0e4753e47cdaea9",
+        "step_id": "a8b1372d",
+        "channel": "planner-output",
+        "title": "Wait for child task completion output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\2a1bf9a87f1c4144a0e4753e47cdaea9\\a8b1372d-planner-output-ctx_5537cf9b6a0a.json",
+        "size_chars": 10433,
+        "line_count": 253,
+        "created_at": "2026-04-02T19:05:08.687653Z",
+        "metadata": {
+          "worker": "planner",
+          "phase": "decompose",
+          "route_model": "internal-recovery",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 10433,
+        "line_count": 253,
+        "stored_raw": true
+      },
+      "synthesized": true,
+      "source": "task-plan"
+    },
+    {
+      "step_id": "acb241aa",
+      "step_title": "Aggregate decomposition results",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-04-02T19:07:05.606373Z",
+      "phase": "verify",
+      "worker": "reviewer",
+      "status": "failed",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "error-output",
+        "char_count": 117,
+        "line_count": 1,
+        "stored_raw": false
+      },
+      "synthesized": true,
+      "source": "task-plan"
+    }
+  ],
+  "task_id": "2a1bf9a87f1c4144a0e4753e47cdaea9",
+  "task_title": "Throughput Policy Audit",
+  "task_status": "failed",
+  "completed": false,
+  "updated_at": "2026-04-02T19:07:13.592813Z",
+  "result": {
+    "state": "failed_execution",
+    "reason": "Audit output schema rejected for artifact_audit/reviewer: Reviewer audit output missing required structured sections.",
+    "task_id": "2a1bf9a87f1c4144a0e4753e47cdaea9",
+    "repo_path": "D:\\codex\\orchestrator-mvp",
+    "execution_mode": "governance",
+    "goal": "Keep the high-throughput control surface aligned with the running orchestrator.",
+    "cheap_calls_used": 1,
+    "cheap_chars_used": 4959,
+    "escalation_count": 1,
+    "failed_steps": [
+      {
+        "step_id": "acb241aa",
+        "title": "Aggregate decomposition results",
+        "phase": "verify",
+        "worker": "reviewer",
+        "command": "internal://decomposition/aggregate-results",
+        "output": "Aggregate decomposition results failure: 117 chars, 1 non-empty lines.\nHead:\n- Audit output schema rejected for artifact_audit/reviewer: Reviewer audit output missing required structured sections.",
+        "output_ref": {},
+        "output_stats": {
+          "channel": "error-output",
+          "char_count": 117,
+          "line_count": 1,
+          "stored_raw": false
+        },
+        "probe_attempts": 0,
+        "max_probe_attempts": 1,
+        "last_diagnosis": "Diagnosis for Aggregate decomposition results: 914 chars, 30 non-empty lines.\nHead:\n- Cheap lane escalation triggered.\n- Original worker: reviewer\n- Escalation model: kimi-k2.5\n- Reason: Structured output validation failed for research/governance audit work.\nTail:\n- - next_action\n- Provider error: APITimeoutError: Request timed out.\n- Provider error: APITimeoutError: Request timed out.\nRaw artifact: ctx_cca022ee775d",
+        "last_diagnosis_ref": {
+          "artifact_id": "ctx_cca022ee775d",
+          "task_id": "2a1bf9a87f1c4144a0e4753e47cdaea9",
+          "step_id": "acb241aa",
+          "channel": "diagnosis-output",
+          "title": "Diagnosis for Aggregate decomposition results",
+          "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\2a1bf9a87f1c4144a0e4753e47cdaea9\\acb241aa-diagnosis-output-ctx_cca022ee775d.txt",
+          "size_chars": 914,
+          "line_count": 30,
+          "created_at": "2026-04-02T19:07:03.655596Z",
+          "metadata": {
+            "worker": "reviewer",
+            "phase": "check",
+            "route_model": "kimi-k2.5",
+            "route_provider": "openai"
+          }
+        }
+      }
+    ],
+    "next_action_required": "Inspect execution evidence and rerun or replace the task; no approval hold was applied.",
+    "failure_pause_policy": "If a long task fails, allow at most one cheap-model-approved probe retry with bounded local cost. If cheap approval is missing, ambiguous, or the retry still fails, pause execution, return a structured error report, and wait for explicit core guidance.",
+    "pause_required": false,
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\2a1bf9a87f1c4144a0e4753e47cdaea9\\execution-evidence.json",
+    "execution_evidence_step_count": 3
+  }
+}

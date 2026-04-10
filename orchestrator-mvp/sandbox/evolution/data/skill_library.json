@@ -1,0 +1,86 @@
+{
+  "updated_at": "2026-03-09T10:42:03.022085Z",
+  "skills": [
+    {
+      "skill_id": "invalid_api_key_triage",
+      "category": "integration",
+      "pattern": "Provider authentication failure",
+      "solution": "Stop retries, mark the provider as misconfigured, and route to local or cheap fallback until credentials are fixed.",
+      "keywords": [
+        "api key",
+        "401",
+        "provider",
+        "credentials"
+      ],
+      "derived_from_task": "88e62486433846659c06c54a47c7a252",
+      "created_at": "2026-03-09T06:29:53.764818Z"
+    },
+    {
+      "skill_id": "completed_1804",
+      "category": "task-playbook",
+      "pattern": "Analyze the orchestrator workspace and propose next improvements",
+      "solution": "Reuse the same local-first execution path and validation sequence for similar tasks.",
+      "keywords": [
+        "analyze",
+        "the",
+        "orchestrator",
+        "workspace",
+        "and",
+        "propose",
+        "next",
+        "improvements"
+      ],
+      "derived_from_task": "79aef50ae6d74f4bb8802c9f4f33a1fc",
+      "created_at": "2026-03-09T06:29:53.764818Z"
+    },
+    {
+      "skill_id": "completed_4642",
+      "category": "task-playbook",
+      "pattern": "???token????????????????????",
+      "solution": "Reuse the same local-first execution path and validation sequence for similar tasks.",
+      "keywords": [
+        "???token????????????????????"
+      ],
+      "derived_from_task": "6e73a98fefd94c17b10b85aa1ec5f554",
+      "created_at": "2026-03-09T06:29:53.764818Z"
+    },
+    {
+      "skill_id": "completed_1554",
+      "category": "task-playbook",
+      "pattern": "Use cheap worker to produce a concise code review checklist for a Python backend.",
+      "solution": "Reuse the same local-first execution path and validation sequence for similar tasks.",
+      "keywords": [
+        "use",
+        "cheap",
+        "worker",
+        "to",
+        "produce",
+        "a",
+        "concise",
+        "code"
+      ],
+      "derived_from_task": "5d36aab352db41d4bc890bd9b62cd322",
+      "created_at": "2026-03-09T06:29:53.764818Z"
+    },
+    {
+      "skill_id": "task_12345678",
+      "category": "cheap-distilled",
+      "pattern": "Implement cheap-first router smoke task",
+      "solution": "Prefer cheap reviewer and coder before escalation.",
+      "keywords": [
+        "implement",
+        "cheap",
+        "first",
+        "router",
+        "smoke",
+        "task",
+        "prefer",
+        "reviewer",
+        "coder",
+        "before"
+      ],
+      "derived_from_task": "smoke12345678",
+      "created_at": "2026-03-09T10:42:03.022085Z"
+    }
+  ]
+}

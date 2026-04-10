@@ -1,0 +1,25 @@
+{
+  "updated_at": "2026-03-12T07:09:26.333081Z",
+  "status": "completed",
+  "experiment": {
+    "target": "Experiment progress-first goal seeding",
+    "kind": "goal-seeding",
+    "goal_type": "experiment",
+    "worker": null,
+    "source": "autonomy-engine"
+  },
+  "result": {
+    "success_rate": 0.91,
+    "cost_score": 0.95,
+    "latency_score": 0.86,
+    "quality_score": 0.88,
+    "summary": "Goal seeding experiment found low-risk background work that prevents idle loops.",
+    "decision_bias": {
+      "routing_bias": {},
+      "worker_bias": {}
+    },
+    "observations": {
+      "open_tasks": 0
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "soak_monitor_must_use_dedicated_state_file",
+  "updated_at": "2026-03-20T13:50:00Z",
+  "type": "validation_pattern",
+  "summary": "Custom soak tooling must not write to the shared soak_state.json because existing runtime components also mutate that file.",
+  "symptoms": [
+    "soak_state.json schema changes mid-run",
+    "external action_count/active_actions records overwrite monitor samples",
+    "monitor progress becomes ambiguous even when the sampler is still running"
+  ],
+  "guidance": [
+    "Use a dedicated monitor state file such as soak_monitor_state.json.",
+    "Treat the timestamped soak_report_*.json as the primary artifact for final acceptance."
+  ]
+}

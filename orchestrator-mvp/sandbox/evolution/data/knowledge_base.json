@@ -1,0 +1,970 @@
+{
+  "updated_at": "2026-03-12T07:09:57.456619Z",
+  "decision_patterns": [
+    {
+      "pattern": "goal-state",
+      "count": 183,
+      "examples": []
+    },
+    {
+      "pattern": "brain-loop-action",
+      "count": 16,
+      "examples": []
+    },
+    {
+      "pattern": "task-exception",
+      "count": 1,
+      "examples": []
+    }
+  ],
+  "failure_solutions": [
+    {
+      "failure": "Prompt: Unified orchestrator dispatch.\n\nCaller: codex-main\n\nRuntime policy: Prefer local runtime resources such as WSL, ",
+      "solution": "investigate",
+      "scope": "runtime"
+    }
+  ],
+  "recent_task_summaries": [
+    {
+      "task_id": "c6f11c0c44fc49a6bd27ab91810ab92e",
+      "status": "timed_out",
+      "goal": "Strengthen agent orchestration capability",
+      "repo_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+      "updated_at": "2026-03-12T01:32:14.680491Z",
+      "error": "Task timed out after 120 minutes without progress."
+    },
+    {
+      "task_id": "af224c6808d742218a20b13ded6514c2",
+      "status": "timed_out",
+      "goal": "Strengthen agent orchestration capability",
+      "repo_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+      "updated_at": "2026-03-12T01:32:14.680491Z",
+      "error": "Task timed out after 120 minutes without progress."
+    },
+    {
+      "task_id": "facb1f1a2cca4c0884ff7c61c4dd4dfb",
+      "status": "timed_out",
+      "goal": "Stabilize primary AI test provider path",
+      "repo_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+      "updated_at": "2026-03-12T01:32:14.680491Z",
+      "error": "Task timed out after 120 minutes without progress."
+    },
+    {
+      "task_id": "868e4124b0e74da3a7f7e58a6085f86e",
+      "status": "timed_out",
+      "goal": "Expand verification regression coverage",
+      "repo_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+      "updated_at": "2026-03-12T01:32:14.679496Z",
+      "error": "Task timed out after 120 minutes without progress."
+    },
+    {
+      "task_id": "d6e7434df74c4d4cbc3024c9f958ef40",
+      "status": "timed_out",
+      "goal": "Strengthen capability distillation pipeline",
+      "repo_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+      "updated_at": "2026-03-12T01:32:14.679496Z",
+      "error": "Task timed out after 120 minutes without progress."
+    },
+    {
+      "task_id": "19061ea41f494db887acd16af3655cd2",
+      "status": "timed_out",
+      "goal": "Refine MetaFactory architecture governance",
+      "repo_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+      "updated_at": "2026-03-12T01:32:14.679496Z",
+      "error": "Task timed out after 120 minutes without progress."
+    },
+    {
+      "task_id": "4334e5c8644842c88ae5357446e4bb7c",
+      "status": "timed_out",
+      "goal": "Deepen repo learning and knowledge routing reuse",
+      "repo_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+      "updated_at": "2026-03-12T01:32:14.679496Z",
+      "error": "Task timed out after 120 minutes without progress."
+    },
+    {
+      "task_id": "197d845f480743ababfa92208a9a26d0",
+      "status": "timed_out",
+      "goal": "Expand verification regression coverage",
+      "repo_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+      "updated_at": "2026-03-12T01:32:14.679496Z",
+      "error": "Task timed out after 120 minutes without progress."
+    },
+    {
+      "task_id": "eab703f77f7b47148fa7db7f007db56e",
+      "status": "timed_out",
+      "goal": "Strengthen capability distillation pipeline",
+      "repo_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+      "updated_at": "2026-03-12T01:32:14.679496Z",
+      "error": "Task timed out after 120 minutes without progress."
+    },
+    {
+      "task_id": "b071f117f1cf45dd8e9a6d17a362551a",
+      "status": "timed_out",
+      "goal": "Continue ToyOS kernel branch work with mainline context reuse",
+      "repo_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+      "updated_at": "2026-03-12T01:32:14.679496Z",
+      "error": "Task timed out after 120 minutes without progress."
+    },
+    {
+      "task_id": "2d741bd4c93e495d8131e5d13416a29d",
+      "status": "timed_out",
+      "goal": "Deepen repo learning and knowledge routing reuse",
+      "repo_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+      "updated_at": "2026-03-12T01:32:14.679496Z",
+      "error": "Task timed out after 120 minutes without progress."
+    },
+    {
+      "task_id": "2096faa813fb47df9d142215612af442",
+      "status": "timed_out",
+      "goal": "Deepen repo learning and knowledge routing reuse",
+      "repo_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+      "updated_at": "2026-03-12T01:32:14.679496Z",
+      "error": "Task timed out after 120 minutes without progress."
+    },
+    {
+      "task_id": "68d0f8d8d5d64412bb28c29c9dcf5236",
+      "status": "timed_out",
+      "goal": "Continue ToyOS kernel branch work with mainline context reuse",
+      "repo_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+      "updated_at": "2026-03-12T01:32:14.679496Z",
+      "error": "Task timed out after 120 minutes without progress."
+    },
+    {
+      "task_id": "23aed7fd31e84afc9e79dae952256407",
+      "status": "completed",
+      "goal": "Strengthen webapp generation capability",
+      "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\build-ai-video-factory",
+      "updated_at": "2026-03-11T16:04:27.450844Z",
+      "error": null
+    },
+    {
+      "task_id": "cd2dcfe1bcb944dda4ea7c34a0d2604b",
+      "status": "completed",
+      "goal": "Strengthen webapp generation capability",
+      "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\build-ai-video-factory",
+      "updated_at": "2026-03-11T16:04:27.450844Z",
+      "error": null
+    },
+    {
+      "task_id": "cc3f0733b7e1440dbcd64ed810eb3c11",
+      "status": "completed",
+      "goal": null,
+      "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\build-ai-video-factory",
+      "updated_at": "2026-03-11T16:01:15.019186Z",
+      "error": null
+    },
+    {
+      "task_id": "ccb165ed8549456997edf05f8a021395",
+      "status": "waiting_approval",
+      "goal": "goal_4af4102d2f",
+      "repo_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+      "updated_at": "2026-03-11T16:00:28.351326Z",
+      "error": null
+    }
+  ],
+  "agent_knowledge": [
+    {
+      "worker": "reviewer",
+      "success_rate": 1.0,
+      "completed": 3,
+      "preferred_domains": []
+    },
+    {
+      "worker": "shell",
+      "success_rate": 1.0,
+      "completed": 3,
+      "preferred_domains": []
+    },
+    {
+      "worker": "supervisor",
+      "success_rate": 0.0,
+      "completed": 0,
+      "preferred_domains": []
+    }
+  ],
+  "experiment_patterns": [
+    {
+      "pattern": "goal-seeding",
+      "target": "Experiment progress-first goal seeding",
+      "score": 0.88,
+      "adopt": true,
+      "decision_bias": {
+        "routing_bias": {},
+        "worker_bias": {}
+      }
+    },
+    {
+      "pattern": "pattern-rollout",
+      "target": "Experiment adopted-pattern rollout",
+      "score": 0.9,
+      "adopt": true,
+      "decision_bias": {
+        "routing_bias": {
+          "agent_orchestration": 0.05,
+          "webapp_generation": 0.03
+        },
+        "worker_bias": {
+          "reviewer": 0.03
+        }
+      }
+    },
+    {
+      "pattern": "github-capability-extraction",
+      "target": "Experiment GitHub repo capability extraction",
+      "score": 0.94,
+      "adopt": true,
+      "decision_bias": {
+        "routing_bias": {
+          "agent_orchestration": 0.04,
+          "kv_cache_manager": 0.04,
+          "local_llm_runner": 0.04,
+          "token_streaming": 0.04
+        },
+        "worker_bias": {}
+      }
+    },
+    {
+      "pattern": "prompt-specialization",
+      "target": "Experiment reviewer prompt specialization",
+      "score": 0.93,
+      "adopt": true,
+      "decision_bias": {
+        "routing_bias": {},
+        "worker_bias": {
+          "reviewer": 0.08
+        }
+      }
+    },
+    {
+      "pattern": "recovery-patterns",
+      "target": "Experiment cheap-agent recovery patterns",
+      "score": 0.92,
+      "adopt": true,
+      "decision_bias": {
+        "routing_bias": {},
+        "worker_bias": {
+          "reviewer": 0.05
+        }
+      }
+    },
+    {
+      "pattern": "routing-heuristics",
+      "target": "Experiment capability routing heuristics",
+      "score": 0.91,
+      "adopt": true,
+      "decision_bias": {
+        "routing_bias": {
+          "webapp_generation": 0.08,
+          "agent_orchestration": 0.07,
+          "deploy_scaffold": 0.05,
+          "tool_extension": 0.04
+        },
+        "worker_bias": {}
+      }
+    }
+  ],
+  "decision_hints": {
+    "preferred_goal_types": [
+      "experiment"
+    ],
+    "priority_targets": [
+      "Experiment progress-first goal seeding"
+    ],
+    "avoid_targets": [],
+    "routing_bias": {},
+    "worker_bias": {},
+    "preferred_capabilities": [
+      "agent_orchestration",
+      "webapp_generation",
+      "deploy_scaffold",
+      "tool_extension",
+      "kv_cache_manager",
+      "local_llm_runner",
+      "token_streaming"
+    ],
+    "preferred_workers": [
+      "reviewer"
+    ]
+  },
+  "capability_distillation": {
+    "updated_at": "2026-03-12T07:08:54.376472Z",
+    "experiment": {
+      "target": "Experiment GitHub repo capability extraction",
+      "kind": "github-capability-extraction",
+      "goal_type": "experiment",
+      "worker": null,
+      "source": "github-learning"
+    },
+    "adopted": true,
+    "routing_bias": {
+      "agent_orchestration": 0.04,
+      "kv_cache_manager": 0.04,
+      "local_llm_runner": 0.04,
+      "token_streaming": 0.04
+    },
+    "worker_bias": {},
+    "capability_hints": [
+      {
+        "capability_id": "agent_orchestration",
+        "provider_platform_id": "github-learning:gh-dc17f0f4fb",
+        "provider_name": "Significant-Gravitas/AutoGPT",
+        "boost": 0.04,
+        "matched_bias": {
+          "agent_orchestration": 0.04
+        }
+      },
+      {
+        "capability_id": "agent_orchestration",
+        "provider_platform_id": "platform_38c67a4233",
+        "provider_name": "Strengthen agent orchestration capability",
+        "boost": 0.04,
+        "matched_bias": {
+          "agent_orchestration": 0.04
+        }
+      },
+      {
+        "capability_id": "agent_orchestration",
+        "provider_platform_id": "platform_464dac2a0b",
+        "provider_name": "Optimize task scheduler from agent experience",
+        "boost": 0.04,
+        "matched_bias": {
+          "agent_orchestration": 0.04
+        }
+      },
+      {
+        "capability_id": "agent_orchestration",
+        "provider_platform_id": "platform_79a3e0e03e",
+        "provider_name": "Improve cheap agent prompts",
+        "boost": 0.04,
+        "matched_bias": {
+          "agent_orchestration": 0.04
+        }
+      },
+      {
+        "capability_id": "agent_orchestration",
+        "provider_platform_id": "platform_8855699f64",
+        "provider_name": "AI Agent Factory",
+        "boost": 0.04,
+        "matched_bias": {
+          "agent_orchestration": 0.04
+        }
+      },
+      {
+        "capability_id": "agent_orchestration",
+        "provider_platform_id": "platform_fa6557b2cd",
+        "provider_name": "Strengthen agent orchestration capability",
+        "boost": 0.04,
+        "matched_bias": {
+          "agent_orchestration": 0.04
+        }
+      },
+      {
+        "capability_id": "kv_cache_manager",
+        "provider_platform_id": "github-learning:gh-dc17f0f4fb",
+        "provider_name": "Significant-Gravitas/AutoGPT",
+        "boost": 0.04,
+        "matched_bias": {
+          "kv_cache_manager": 0.04
+        }
+      },
+      {
+        "capability_id": "local_llm_runner",
+        "provider_platform_id": "github-learning:gh-dc17f0f4fb",
+        "provider_name": "Significant-Gravitas/AutoGPT",
+        "boost": 0.04,
+        "matched_bias": {
+          "local_llm_runner": 0.04
+        }
+      },
+      {
+        "capability_id": "token_streaming",
+        "provider_platform_id": "github-learning:gh-dc17f0f4fb",
+        "provider_name": "Significant-Gravitas/AutoGPT",
+        "boost": 0.04,
+        "matched_bias": {
+          "token_streaming": 0.04
+        }
+      }
+    ],
+    "reputation": {
+      "updated_at": "2026-03-12T07:08:54.376472Z",
+      "capabilities": {
+        "webapp_generation": {
+          "score": 11.718,
+          "count": 204
+        },
+        "agent_orchestration": {
+          "score": 11.9749,
+          "count": 211
+        },
+        "deploy_scaffold": {
+          "score": 6.156,
+          "count": 135
+        },
+        "tool_extension": {
+          "score": 4.9275,
+          "count": 135
+        },
+        "kv_cache_manager": {
+          "score": 0.2569,
+          "count": 7
+        },
+        "local_llm_runner": {
+          "score": 0.2569,
+          "count": 7
+        },
+        "token_streaming": {
+          "score": 0.2569,
+          "count": 7
+        }
+      },
+      "workers": {
+        "reviewer": {
+          "score": 7.908,
+          "count": 151
+        }
+      }
+    },
+    "status": "ready"
+  },
+  "capability_reputation": {
+    "capability_count": 7,
+    "worker_count": 1,
+    "top_capabilities": [
+      {
+        "capability_id": "agent_orchestration",
+        "score": 11.9749,
+        "count": 211
+      },
+      {
+        "capability_id": "webapp_generation",
+        "score": 11.718,
+        "count": 204
+      },
+      {
+        "capability_id": "deploy_scaffold",
+        "score": 6.156,
+        "count": 135
+      },
+      {
+        "capability_id": "tool_extension",
+        "score": 4.9275,
+        "count": 135
+      },
+      {
+        "capability_id": "kv_cache_manager",
+        "score": 0.2569,
+        "count": 7
+      },
+      {
+        "capability_id": "local_llm_runner",
+        "score": 0.2569,
+        "count": 7
+      },
+      {
+        "capability_id": "token_streaming",
+        "score": 0.2569,
+        "count": 7
+      }
+    ],
+    "top_workers": [
+      {
+        "worker": "reviewer",
+        "score": 7.908,
+        "count": 151
+      }
+    ]
+  },
+  "global_policy": {
+    "updated_at": "2026-03-12T07:09:50.606368Z",
+    "focus_capabilities": [
+      "agent_orchestration",
+      "webapp_generation",
+      "deploy_scaffold",
+      "tool_extension",
+      "kv_cache_manager",
+      "local_llm_runner"
+    ],
+    "resource_budget": {
+      "runtime_tasks": 0.35,
+      "experiments": 0.2,
+      "capability_building": 0.15,
+      "maintenance": 0.2
+    },
+    "cadence_policy": {
+      "runtime_dispatch_limit": 2,
+      "goal_generation_every": 3,
+      "maintenance_mode": "full",
+      "maintenance_every": 4,
+      "capability_building_every": 5,
+      "experiment_every": 5,
+      "meta_every": 5,
+      "ai_testing_every": 4
+    },
+    "experiment_portfolio": {
+      "routing-heuristics": 0.35,
+      "prompt-specialization": 0.2,
+      "recovery-patterns": 0.2,
+      "goal-seeding": 0.125,
+      "pattern-rollout": 0.125
+    },
+    "worker_bias_policy": {
+      "reviewer": 0.3,
+      "coder": 0.12,
+      "docker": 0.03,
+      "shell": 0.12
+    },
+    "organization_priority": {
+      "departments": [
+        {
+          "department": "engineering_department",
+          "project_count": 22,
+          "default_worker": "coder"
+        },
+        {
+          "department": "qa_department",
+          "project_count": 22,
+          "default_worker": "shell"
+        },
+        {
+          "department": "architecture_department",
+          "project_count": 11,
+          "default_worker": "reviewer"
+        },
+        {
+          "department": "research_department",
+          "project_count": 11,
+          "default_worker": "reviewer"
+        },
+        {
+          "department": "operations_department",
+          "project_count": 3,
+          "default_worker": "docker"
+        }
+      ]
+    },
+    "top_capabilities": [
+      {
+        "capability_id": "agent_orchestration",
+        "score": 11.9749,
+        "count": 211
+      },
+      {
+        "capability_id": "webapp_generation",
+        "score": 11.718,
+        "count": 204
+      },
+      {
+        "capability_id": "deploy_scaffold",
+        "score": 6.156,
+        "count": 135
+      },
+      {
+        "capability_id": "tool_extension",
+        "score": 4.9275,
+        "count": 135
+      },
+      {
+        "capability_id": "kv_cache_manager",
+        "score": 0.2569,
+        "count": 7
+      },
+      {
+        "capability_id": "local_llm_runner",
+        "score": 0.2569,
+        "count": 7
+      }
+    ],
+    "top_workers": [
+      {
+        "score": 7.908,
+        "count": 151,
+        "worker": "reviewer",
+        "success_rate": 1.0
+      }
+    ],
+    "inputs": {
+      "quality_score": 0.6354,
+      "control_status": "operator_attention",
+      "autonomy_stage": "stage4_confirmed",
+      "autonomy_source": "soak_validation",
+      "autonomy_confirmed": true,
+      "experiment_history_count": 200,
+      "organization_departments": 5,
+      "ai_testing_status": "attention",
+      "ai_testing_pass_rate": 0.8,
+      "ai_testing_error_count": 0
+    }
+  },
+  "autonomy": {
+    "stage": "stage4_confirmed",
+    "score": 0.6925,
+    "source": "soak_validation",
+    "confirmed": true
+  },
+  "repo_learning": {
+    "updated_at": "2026-03-12T07:09:57.436188Z",
+    "embedding": {
+      "provider": "local",
+      "model": "BAAI/bge-small-en-v1.5",
+      "dimensions": 128,
+      "backend": "hashed-local",
+      "ready": true
+    },
+    "graph_modules": 124,
+    "chunk_count": 144,
+    "top_modules": [
+      {
+        "module": "tools.brain_loop",
+        "layer": "unclassified",
+        "owner_team": "infrastructure_team",
+        "path": "D:\\codex\\orchestrator-mvp\\tools\\brain_loop.py"
+      },
+      {
+        "module": "tools.factory_daemon",
+        "layer": "unclassified",
+        "owner_team": "infrastructure_team",
+        "path": "D:\\codex\\orchestrator-mvp\\tools\\factory_daemon.py"
+      },
+      {
+        "module": "tools.meta_factory_control",
+        "layer": "architecture_engine",
+        "owner_team": "infrastructure_team",
+        "path": "D:\\codex\\orchestrator-mvp\\tools\\meta_factory_control.py"
+      },
+      {
+        "module": "app.orchestrator",
+        "layer": "unclassified",
+        "owner_team": "backend_team",
+        "path": "D:\\codex\\orchestrator-mvp\\app\\orchestrator.py"
+      },
+      {
+        "module": "tools.decision_engine",
+        "layer": "task_graph_planner",
+        "owner_team": "architecture_team",
+        "path": "D:\\codex\\orchestrator-mvp\\tools\\decision_engine.py"
+      },
+      {
+        "module": "app.main",
+        "layer": "unclassified",
+        "owner_team": "backend_team",
+        "path": "D:\\codex\\orchestrator-mvp\\app\\main.py"
+      },
+      {
+        "module": "tools.change_request_analyzer",
+        "layer": "unclassified",
+        "owner_team": "infrastructure_team",
+        "path": "D:\\codex\\orchestrator-mvp\\tools\\change_request_analyzer.py"
+      },
+      {
+        "module": "tools.verification_engine",
+        "layer": "verification",
+        "owner_team": "infrastructure_team",
+        "path": "D:\\codex\\orchestrator-mvp\\tools\\verification_engine.py"
+      },
+      {
+        "module": "tools.taskgraph_compiler",
+        "layer": "architecture_engine",
+        "owner_team": "architecture_team",
+        "path": "D:\\codex\\orchestrator-mvp\\tools\\taskgraph_compiler.py"
+      },
+      {
+        "module": "app.worker_adapters",
+        "layer": "unclassified",
+        "owner_team": "backend_team",
+        "path": "D:\\codex\\orchestrator-mvp\\app\\worker_adapters.py"
+      },
+      {
+        "module": "tools.automation_lab",
+        "layer": "unclassified",
+        "owner_team": "infrastructure_team",
+        "path": "D:\\codex\\orchestrator-mvp\\tools\\automation_lab.py"
+      },
+      {
+        "module": "app.openai_client",
+        "layer": "unclassified",
+        "owner_team": "backend_team",
+        "path": "D:\\codex\\orchestrator-mvp\\app\\openai_client.py"
+      }
+    ],
+    "learned_repositories": [
+      {
+        "repo_id": "gh-dc17f0f4fb",
+        "full_name": "Significant-Gravitas/AutoGPT",
+        "local_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+        "language_mix": [
+          {
+            "language": ".json",
+            "files": 1076
+          },
+          {
+            "language": "Python",
+            "files": 914
+          },
+          {
+            "language": "TypeScript",
+            "files": 911
+          },
+          {
+            "language": "Markdown",
+            "files": 320
+          },
+          {
+            "language": ".yml",
+            "files": 43
+          },
+          {
+            "language": ".yaml",
+            "files": 23
+          }
+        ],
+        "key_files": [
+          "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\README.md"
+        ],
+        "sampled_files": [
+          "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\docs\\integrations\\README.md",
+          "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\README.md",
+          "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\classic\\forge\\forge\\components\\README.md",
+          "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\backend\\load-tests\\README.md",
+          "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\classic\\original_autogpt\\README.md",
+          "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\frontend\\README.md",
+          "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\frontend\\package.json",
+          "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\README.md"
+        ],
+        "capabilities": [
+          "local_llm_runner",
+          "token_streaming",
+          "kv_cache_manager",
+          "agent_orchestration",
+          "tool_execution",
+          "workflow_planning"
+        ],
+        "architecture_summary": "# AutoGPT: Build, Deploy, and Run AI Agents\n\n[![Discord Follow](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscord.com%2Fapi%2Finvites%2Fautogpt%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&label=total%20members&logo=discord&logoColor=white&color=7289da)](https://discord.gg/autogpt) &ensp;\n[![Twitter Follow](https://img.shields.io/twitter/follow/Auto_GPT?style=social)](https://twitter.com/Auto_GPT) &ensp;\n\n<!-- Keep these links. Translations will automatically update with the README. -->\n[Deutsch](https://zdoc.app/de/Significant-Gravitas/AutoGPT) | \n[Español](https:",
+        "experiment_plan": {
+          "sandbox_required": true,
+          "recommended_commands": [],
+          "can_run_without_dependency_install": false
+        },
+        "chunk_count": 24
+      }
+    ],
+    "learned_repository_count": 1,
+    "extracted_capabilities": [
+      "agent_orchestration",
+      "kv_cache_manager",
+      "local_llm_runner",
+      "token_streaming",
+      "tool_execution",
+      "workflow_planning"
+    ],
+    "github_learning": {
+      "updated_at": "2026-03-12T07:09:57.436188Z",
+      "enabled": true,
+      "topics": [
+        "agent",
+        "llm",
+        "compiler",
+        "kernel",
+        "robotics",
+        "distributed-system",
+        "inference"
+      ],
+      "languages": [
+        "Python",
+        "TypeScript",
+        "Rust",
+        "C++",
+        "C",
+        "Go"
+      ],
+      "managed_repo_count": 10,
+      "ready_repo_count": 1,
+      "candidate_repo_count": 9,
+      "scan_candidate_count": 10,
+      "top_candidates": [
+        {
+          "full_name": "langchain-ai/langchain",
+          "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\langchain-ai-langchain",
+          "score": 41262.1142,
+          "learning_status": "candidate"
+        },
+        {
+          "full_name": "ggerganov/llama.cpp",
+          "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\ggerganov-llama.cpp",
+          "score": 30857.5689,
+          "learning_status": "candidate"
+        },
+        {
+          "full_name": "OpenInterpreter/open-interpreter",
+          "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\OpenInterpreter-open-interpreter",
+          "score": 23252.3854,
+          "learning_status": "candidate"
+        },
+        {
+          "full_name": "microsoft/autogen",
+          "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\microsoft-autogen",
+          "score": 16454.9498,
+          "learning_status": "candidate"
+        },
+        {
+          "full_name": "vllm-project/vllm",
+          "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\vllm-project-vllm",
+          "score": 15260.6594,
+          "learning_status": "candidate"
+        },
+        {
+          "full_name": "ray-project/ray",
+          "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\ray-project-ray",
+          "score": 14451.3379,
+          "learning_status": "candidate"
+        },
+        {
+          "full_name": "crewAIInc/crewAI",
+          "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\crewAIInc-crewAI",
+          "score": 12846.5735,
+          "learning_status": "candidate"
+        },
+        {
+          "full_name": "dask/dask",
+          "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\dask-dask",
+          "score": 5243.0283,
+          "learning_status": "candidate"
+        }
+      ]
+    }
+  },
+  "github_learning": {
+    "updated_at": "2026-03-12T07:09:57.436188Z",
+    "enabled": true,
+    "topics": [
+      "agent",
+      "llm",
+      "compiler",
+      "kernel",
+      "robotics",
+      "distributed-system",
+      "inference"
+    ],
+    "languages": [
+      "Python",
+      "TypeScript",
+      "Rust",
+      "C++",
+      "C",
+      "Go"
+    ],
+    "managed_repo_count": 10,
+    "ready_repo_count": 1,
+    "candidate_repo_count": 9,
+    "scan_candidate_count": 10,
+    "top_candidates": [
+      {
+        "full_name": "langchain-ai/langchain",
+        "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\langchain-ai-langchain",
+        "score": 41262.1142,
+        "learning_status": "candidate"
+      },
+      {
+        "full_name": "ggerganov/llama.cpp",
+        "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\ggerganov-llama.cpp",
+        "score": 30857.5689,
+        "learning_status": "candidate"
+      },
+      {
+        "full_name": "OpenInterpreter/open-interpreter",
+        "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\OpenInterpreter-open-interpreter",
+        "score": 23252.3854,
+        "learning_status": "candidate"
+      },
+      {
+        "full_name": "microsoft/autogen",
+        "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\microsoft-autogen",
+        "score": 16454.9498,
+        "learning_status": "candidate"
+      },
+      {
+        "full_name": "vllm-project/vllm",
+        "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\vllm-project-vllm",
+        "score": 15260.6594,
+        "learning_status": "candidate"
+      },
+      {
+        "full_name": "ray-project/ray",
+        "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\ray-project-ray",
+        "score": 14451.3379,
+        "learning_status": "candidate"
+      },
+      {
+        "full_name": "crewAIInc/crewAI",
+        "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\crewAIInc-crewAI",
+        "score": 12846.5735,
+        "learning_status": "candidate"
+      },
+      {
+        "full_name": "dask/dask",
+        "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\dask-dask",
+        "score": 5243.0283,
+        "learning_status": "candidate"
+      }
+    ]
+  },
+  "github_capability_library": {
+    "updated_at": "2026-03-12T07:09:57.455581Z",
+    "status": "ready",
+    "learned_repository_count": 1,
+    "asset_count": 6,
+    "synced_registry_count": 0,
+    "assets": [
+      {
+        "repo_id": "gh-dc17f0f4fb",
+        "repo_full_name": "Significant-Gravitas/AutoGPT",
+        "capability_id": "local_llm_runner",
+        "asset_path": "D:\\codex\\orchestrator-mvp\\factory\\agents\\github_learning\\significant-gravitas-autogpt\\local-llm-runner.json"
+      },
+      {
+        "repo_id": "gh-dc17f0f4fb",
+        "repo_full_name": "Significant-Gravitas/AutoGPT",
+        "capability_id": "token_streaming",
+        "asset_path": "D:\\codex\\orchestrator-mvp\\factory\\agents\\github_learning\\significant-gravitas-autogpt\\token-streaming.json"
+      },
+      {
+        "repo_id": "gh-dc17f0f4fb",
+        "repo_full_name": "Significant-Gravitas/AutoGPT",
+        "capability_id": "kv_cache_manager",
+        "asset_path": "D:\\codex\\orchestrator-mvp\\factory\\agents\\github_learning\\significant-gravitas-autogpt\\kv-cache-manager.json"
+      },
+      {
+        "repo_id": "gh-dc17f0f4fb",
+        "repo_full_name": "Significant-Gravitas/AutoGPT",
+        "capability_id": "agent_orchestration",
+        "asset_path": "D:\\codex\\orchestrator-mvp\\factory\\agents\\github_learning\\significant-gravitas-autogpt\\agent-orchestration.json"
+      },
+      {
+        "repo_id": "gh-dc17f0f4fb",
+        "repo_full_name": "Significant-Gravitas/AutoGPT",
+        "capability_id": "tool_execution",
+        "asset_path": "D:\\codex\\orchestrator-mvp\\factory\\agents\\github_learning\\significant-gravitas-autogpt\\tool-execution.json"
+      },
+      {
+        "repo_id": "gh-dc17f0f4fb",
+        "repo_full_name": "Significant-Gravitas/AutoGPT",
+        "capability_id": "workflow_planning",
+        "asset_path": "D:\\codex\\orchestrator-mvp\\factory\\agents\\github_learning\\significant-gravitas-autogpt\\workflow-planning.json"
+      }
+    ]
+  },
+  "embedding": {
+    "provider": "local",
+    "model": "BAAI/bge-small-en-v1.5",
+    "dimensions": 128,
+    "backend": "hashed-local",
+    "ready": true
+  },
+  "counts": {
+    "decisions": 200,
+    "failures": 1,
+    "task_history": 17,
+    "agents": 3,
+    "experiments": 200
+  }
+}

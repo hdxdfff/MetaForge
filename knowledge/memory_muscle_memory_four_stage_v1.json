@@ -1,0 +1,84 @@
+{
+  "memory_id": "mem_muscle_memory_four_stage_v1_001",
+  "memory_type": "decision",
+  "title": "Memory muscle memory uses a four-stage loop: sediment, promote, bind, reproduce",
+  "summary": "MetaForge memory becomes operational muscle memory only when raw events sediment into candidates, candidates are promoted into verified objects, verified objects bind to live behavior, and later tasks reproduce the learned action correctly.",
+  "scope": {
+    "system": "metaforge",
+    "workspace": "D:\\codex",
+    "component": [
+      "memory_objects",
+      "context_builder",
+      "identity_kernel",
+      "tool_health_audit",
+      "verification_engine"
+    ],
+    "task_domain": [
+      "memory",
+      "continuity",
+      "dispatch",
+      "verification"
+    ]
+  },
+  "tags": [
+    "memory",
+    "muscle-memory",
+    "promotion",
+    "binding",
+    "recall",
+    "anti-drift"
+  ],
+  "authority": "verified",
+  "status": "active",
+  "source_refs": [
+    "D:\\codex\\METAFORGE_OS_MEMORY_MODEL.md",
+    "D:\\codex\\METAFORGE_OS_MEMORY_SCHEMA_V1.md",
+    "D:\\codex\\orchestrator-mvp\\data\\memory_quality_scorecard.json",
+    "D:\\codex\\orchestrator-mvp\\data\\memory_objects.jsonl"
+  ],
+  "evidence_refs": [
+    "D:\\codex\\orchestrator-mvp\\data\\memory_quality_scorecard.json",
+    "D:\\codex\\orchestrator-mvp\\data\\memory_integrity.json",
+    "D:\\codex\\orchestrator-mvp\\data\\identity_kernel.json"
+  ],
+  "created_at": "2026-04-02T13:45:00Z",
+  "updated_at": "2026-04-02T13:45:00Z",
+  "last_verified_at": "2026-04-02T13:45:00Z",
+  "validity": {
+    "kind": "revalidate_on_change",
+    "trigger": [
+      "memory_model_changed",
+      "memory_schema_changed",
+      "memory_quality_scorecard_changed",
+      "identity_kernel_changed"
+    ],
+    "expires_at": null
+  },
+  "reuse_score": 0.96,
+  "priority": "high",
+  "superseded_by": null,
+  "conflicts_with": [],
+  "decision": {
+    "question": "How should MetaForge turn memory into habit rather than archive?",
+    "chosen_option": "Use a four-stage loop: sediment, promote, bind, reproduce.",
+    "alternatives_considered": [
+      "Store raw memory only",
+      "Use a two-stage candidate to verified model only",
+      "Use a four-stage operational loop that includes behavior binding and reproduction"
+    ],
+    "reasoning": [
+      "Archive-only memory does not change system behavior.",
+      "Promotion without binding leaves memory unused.",
+      "Reproduction is the evidence that memory became operational habit."
+    ],
+    "impact_scope": [
+      "planning",
+      "dispatch",
+      "verification",
+      "continuity"
+    ],
+    "rollback_condition": [
+      "If the memory system stops using recall to change live decisions, the loop must be reworked."
+    ]
+  }
+}

@@ -1,0 +1,257 @@
+{
+  "updated_at": "2026-04-03T17:24:34.326426Z",
+  "status": "pass",
+  "window_hours": 720,
+  "total_classified_failures_30d": 249,
+  "categories": {
+    "artifact_audit_failure": {
+      "count_30d": 113,
+      "last_seen_at": "2026-04-03T16:20:19.844767Z",
+      "default_strategy": {
+        "priority": "P1",
+        "repair_kind": "artifact_repair",
+        "action": "restore evidence, manifest, or reproducibility assets and rerun artifact audit",
+        "verification": [
+          "artifact audit",
+          "manifest check",
+          "evidence check"
+        ]
+      },
+      "sample_task_ids": [
+        "df1cc9c631eb4b5fb1cc8c146d5d97ad",
+        "fdc383758e3a478cbcb77181cb8ff779",
+        "954c6af729e944f8a73d467fb3c9826c",
+        "0dead6687d5f4832bffaaa66b926e3bf",
+        "41eaada3a400443982bb2414df18a845"
+      ]
+    },
+    "verification_failure": {
+      "count_30d": 60,
+      "last_seen_at": "2026-04-03T13:50:57.693777Z",
+      "default_strategy": {
+        "priority": "P1",
+        "repair_kind": "verification_repair",
+        "action": "add a minimal repro plus the missing validator or assertion and rerun verification",
+        "verification": [
+          "validator smoke",
+          "regression check",
+          "status refresh"
+        ]
+      },
+      "sample_task_ids": [
+        "d27859a51ce2419fbe15e1f6ef4100b9",
+        "1e27ee3aed3c47d6b92c6b931868a639",
+        "941a1f2d427241809948be9c642da0c8",
+        "1bbcba74b8a04861b4a909b5d7a80db4",
+        "c3a6bac078e1441e877f3fc39b245d48"
+      ]
+    },
+    "rollback_failure": {
+      "count_30d": 38,
+      "last_seen_at": "2026-04-03T12:48:36.774358Z",
+      "default_strategy": {
+        "priority": "P1",
+        "repair_kind": "rollback_repair",
+        "action": "fix rollback wiring, then rerun rollback drill before any expansion",
+        "verification": [
+          "rollback drill",
+          "release readiness",
+          "status refresh"
+        ]
+      },
+      "sample_task_ids": [
+        "07adc124c1e64673950aee629f9f873a",
+        "0ce3d51bb624449bac66b7332d287797",
+        "17028ec58bce4b97b8a9ea1c6bc6f56a",
+        "264e66a851b8499fb6ff76be1df30947",
+        "3f44c172cd504c11b9572f1ab841ac1a"
+      ]
+    },
+    "execution_failure": {
+      "count_30d": 15,
+      "last_seen_at": "2026-04-03T12:48:36.773784Z",
+      "default_strategy": {
+        "priority": "P0",
+        "repair_kind": "execution_repair",
+        "action": "repair the failing execution path with the smallest bounded patch and rerun local execution",
+        "verification": [
+          "local execution",
+          "py_compile",
+          "status refresh"
+        ]
+      },
+      "sample_task_ids": [
+        "4e89edc950234b3ebd851408e50d29f6",
+        "a0d24a66d6ce4cef9b200658d760e117",
+        "ac5dc764b8394efa99e9ccfd9b19c270",
+        "bb174aa29f2c43239f3c1f469f246281",
+        "e5b4726c62ae435680c8f7280216b7d5"
+      ]
+    },
+    "dispatch_failure": {
+      "count_30d": 11,
+      "last_seen_at": "2026-04-03T16:22:40.431880Z",
+      "default_strategy": {
+        "priority": "P1",
+        "repair_kind": "dispatch_repair",
+        "action": "repair admission, queue, or scheduler routing and rerun a dispatch smoke",
+        "verification": [
+          "dispatch smoke",
+          "queue sanity",
+          "status refresh"
+        ]
+      },
+      "sample_task_ids": [
+        "288e2bd72b4c476488525ecad61e701f",
+        "49c1b390568142fd9a3071b00c769ad2",
+        "a9661a8d6bb64c65829e379c8b9816f5",
+        "ce92f1e6caf94b8b81566a034a96aa6f",
+        "6b31c460999447479c3cc92d71eeee2b"
+      ]
+    },
+    "environment_failure": {
+      "count_30d": 7,
+      "last_seen_at": "2026-04-02T22:11:48.661533Z",
+      "default_strategy": {
+        "priority": "P1",
+        "repair_kind": "environment_repair",
+        "action": "repair the runtime environment, paths, dependencies, or sandbox assumptions",
+        "verification": [
+          "environment smoke",
+          "path check",
+          "status refresh"
+        ]
+      },
+      "sample_task_ids": [
+        "0d085850ebb64740961a50774c3d52fa",
+        "7c8abc88d2664d76b2b871d5de89c4ed",
+        "d62cfd22cdd240bb8ce57db55051f6f1",
+        "b064f2b7579743c89dbbd0fc46bdb5c9",
+        "22de2b4cf67f4c26825c41d6ed7618b1"
+      ]
+    },
+    "policy_gate_failure": {
+      "count_30d": 5,
+      "last_seen_at": "2026-04-02T09:50:37.527384Z",
+      "default_strategy": {
+        "priority": "P1",
+        "repair_kind": "policy_repair",
+        "action": "adjust the policy or gate inputs with a minimal safe change and rerun the gate",
+        "verification": [
+          "gate refresh",
+          "release readiness",
+          "status refresh"
+        ]
+      },
+      "sample_task_ids": [
+        "3c95090cf4b9418e851443a0679e90e9",
+        "c3d76ef63a394796b1857a65af4a18ca",
+        "324c2ffdabfc49f8b63e5978bb8c1322",
+        "563aa6e9a5f548379b10176dfe792975",
+        "b91474e40db5431f848f23139a96de4a"
+      ]
+    }
+  },
+  "default_strategies": {
+    "dispatch_failure": {
+      "priority": "P1",
+      "repair_kind": "dispatch_repair",
+      "action": "repair admission, queue, or scheduler routing and rerun a dispatch smoke",
+      "verification": [
+        "dispatch smoke",
+        "queue sanity",
+        "status refresh"
+      ]
+    },
+    "execution_failure": {
+      "priority": "P0",
+      "repair_kind": "execution_repair",
+      "action": "repair the failing execution path with the smallest bounded patch and rerun local execution",
+      "verification": [
+        "local execution",
+        "py_compile",
+        "status refresh"
+      ]
+    },
+    "verification_failure": {
+      "priority": "P1",
+      "repair_kind": "verification_repair",
+      "action": "add a minimal repro plus the missing validator or assertion and rerun verification",
+      "verification": [
+        "validator smoke",
+        "regression check",
+        "status refresh"
+      ]
+    },
+    "artifact_audit_failure": {
+      "priority": "P1",
+      "repair_kind": "artifact_repair",
+      "action": "restore evidence, manifest, or reproducibility assets and rerun artifact audit",
+      "verification": [
+        "artifact audit",
+        "manifest check",
+        "evidence check"
+      ]
+    },
+    "rollback_failure": {
+      "priority": "P1",
+      "repair_kind": "rollback_repair",
+      "action": "fix rollback wiring, then rerun rollback drill before any expansion",
+      "verification": [
+        "rollback drill",
+        "release readiness",
+        "status refresh"
+      ]
+    },
+    "environment_failure": {
+      "priority": "P1",
+      "repair_kind": "environment_repair",
+      "action": "repair the runtime environment, paths, dependencies, or sandbox assumptions",
+      "verification": [
+        "environment smoke",
+        "path check",
+        "status refresh"
+      ]
+    },
+    "policy_gate_failure": {
+      "priority": "P1",
+      "repair_kind": "policy_repair",
+      "action": "adjust the policy or gate inputs with a minimal safe change and rerun the gate",
+      "verification": [
+        "gate refresh",
+        "release readiness",
+        "status refresh"
+      ]
+    },
+    "permission_failure": {
+      "priority": "P1",
+      "repair_kind": "permission_repair",
+      "action": "repair path access, execution policy, or privilege boundary and rerun the task",
+      "verification": [
+        "permission smoke",
+        "workspace write check",
+        "status refresh"
+      ]
+    },
+    "provider_failure": {
+      "priority": "P2",
+      "repair_kind": "fallback_repair",
+      "action": "switch to fallback provider, cheap-first routing, or cached evidence path",
+      "verification": [
+        "fallback smoke",
+        "provider probe",
+        "status refresh"
+      ]
+    },
+    "flaky_failure": {
+      "priority": "P1",
+      "repair_kind": "stability_repair",
+      "action": "stabilize retries, isolate nondeterminism, and rerun the failing path repeatedly",
+      "verification": [
+        "repeat smoke",
+        "flake repro",
+        "status refresh"
+      ]
+    }
+  }
+}

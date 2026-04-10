@@ -1,0 +1,48 @@
+{
+  "updated_at": "2026-03-29T15:14:26+08:00",
+  "profile": "interaction_only",
+  "rule": "repair_or_mutating_tasks_must_route_to_external_executors",
+  "intent": "Local control surfaces may read, decompose, forward, verify, and report, but may not directly self-repair or consume write-capable fallback executors for mutating tasks.",
+  "enforced_layers": [
+    "tools.kernel_mode",
+    "app.executor_routing",
+    "tools.tool_stack"
+  ],
+  "blocked_local_executors": [
+    "codex_executor",
+    "script_executor"
+  ],
+  "external_executor_preference": [
+    "aider_executor",
+    "goose_executor",
+    "continue_executor",
+    "openhands_executor",
+    "plandex_executor"
+  ],
+  "mutating_task_types": [
+    "build_fix",
+    "subsystem_refactor",
+    "architecture_migration",
+    "path_repair",
+    "unit_test_run",
+    "demo_rebuild",
+    "package_validation",
+    "harness_regression_run",
+    "qemu_smoke_run",
+    "doc_patch",
+    "json_fix",
+    "config_fix",
+    "manifest_patch",
+    "small_json_patch",
+    "new_artifact_bootstrap",
+    "new_demo_creation"
+  ],
+  "validation_paths": [
+    "D:\\codex\\orchestrator-mvp\\app\\executor_routing.py",
+    "D:\\codex\\orchestrator-mvp\\tools\\tool_stack.py",
+    "D:\\codex\\orchestrator-mvp\\tools\\kernel_mode.py",
+    "D:\\codex\\orchestrator-mvp\\data\\kernel_mode.json",
+    "D:\\codex\\orchestrator-mvp\\dist\\AICommandConsole\\_internal\\app\\executor_routing.py",
+    "D:\\codex\\orchestrator-mvp\\dist\\AICommandConsole\\_internal\\tools\\tool_stack.py"
+  ]
+}

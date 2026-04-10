@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "open_items": [
+    {
+      "id": "p2s_20260403_doc-generation",
+      "task_type": "doc_patch",
+      "category": "p2_sandbox_low_risk",
+      "amplifier": "p2_sandbox_task_generator",
+      "budget_pool": "P2",
+      "sandbox_lane": "p2_low_risk",
+      "admission_lane": "sandbox_low_risk",
+      "growth_type": "doc-generation",
+      "title": "draft a control-plane doc patch",
+      "goal": "Prepare a small documentation patch for the autonomy control plane.",
+      "expected_outcome": "small low-risk sandbox task with manifest and validation evidence",
+      "verification_plan": [
+        "py_compile",
+        "self-test",
+        "status refresh"
+      ],
+      "priority": "low",
+      "status": "open",
+      "created_at": "2026-04-03T18:45:42.467533Z"
+    }
+  ],
+  "in_progress_items": [],
+  "done_items": [],
+  "failed_items": []
+}

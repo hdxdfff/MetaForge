@@ -1,0 +1,26 @@
+{
+  "session_id": "asset-20260314-071552",
+  "source": "metaforge-assetize",
+  "title": "MetaForge dialogue asset 20260314-071552",
+  "workspace": "D:\\codex",
+  "summary": "continue bounded dispatch with validation-first policy",
+  "topics": [
+    "dialogue-compaction",
+    "metaforge-handoff"
+  ],
+  "constraints": [
+    "explicit validation notes required for all delivery claims"
+  ],
+  "decisions": [
+    "continue bounded dispatch with validation-first policy"
+  ],
+  "tags": [],
+  "artifacts": [
+    "D:\\codex\\dialogue-assets\\dialogue-memory-20260314-071552.json",
+    "D:\\codex\\dialogue-assets\\dialogue-handoff-20260314-071552.json",
+    "D:\\codex\\dialogue-assets\\dialogue-asset-note-20260314-071552.md"
+  ],
+  "messages": [],
+  "created_at": "2026-03-13T23:15:52.993887Z",
+  "updated_at": "2026-03-13T23:15:52.993887Z"
+}

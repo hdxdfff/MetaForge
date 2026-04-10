@@ -1,0 +1,229 @@
+{
+  "updated_at": "2026-04-03T16:05:19.011615Z",
+  "status": "archived",
+  "task_history_count": 200,
+  "failed_task_count": 95,
+  "failure_rate": 0.475,
+  "historical_failure_debt_count": 95,
+  "historical_failure_debt_severity": "high",
+  "historical_failure_debt_burndown_rate": 0.0,
+  "historical_failure_debt_last_reduced_at": null,
+  "status_counts": {
+    "running": 2,
+    "planning": 1,
+    "failed": 95,
+    "completed": 21,
+    "released": 22,
+    "timed_out": 56,
+    "queued": 3
+  },
+  "top_failed_goals": [
+    [
+      "Identify the smallest viable slice",
+      27
+    ],
+    [
+      "Implement the bounded change",
+      13
+    ],
+    [
+      "Clarify target outcome",
+      8
+    ],
+    [
+      "Finish routine coding work with small verified patches and local execution.",
+      7
+    ],
+    [
+      "Let cheap workers handle routine debugging first and escalate only when repeated failures or risky changes appear.",
+      7
+    ],
+    [
+      "Restore ToyOS real artifact delivery",
+      7
+    ],
+    [
+      "Execute the next action",
+      6
+    ],
+    [
+      "Validate the change",
+      6
+    ],
+    [
+      "Use the orchestrator as an AI-managed software delivery pipeline instead of a single coding agent.",
+      5
+    ],
+    [
+      "Close deployment gaps without waiting on cloud credentials.",
+      5
+    ]
+  ],
+  "failed_samples": [
+    {
+      "task_id": "1e27ee3aed3c47d6b92c6b931868a639",
+      "status": "failed",
+      "goal": "Finish routine coding work with small verified patches and local execution.",
+      "repo_path": "D:\\codex\\orchestrator-mvp",
+      "updated_at": "2026-04-03T13:41:50.947090Z",
+      "error": null
+    },
+    {
+      "task_id": "941a1f2d427241809948be9c642da0c8",
+      "status": "failed",
+      "goal": "Let cheap workers handle routine debugging first and escalate only when repeated failures or risky changes appear.",
+      "repo_path": "D:\\codex\\orchestrator-mvp",
+      "updated_at": "2026-04-03T13:41:41.053529Z",
+      "error": null
+    },
+    {
+      "task_id": "fdc383758e3a478cbcb77181cb8ff779",
+      "status": "failed",
+      "goal": "Restore ToyOS real artifact delivery",
+      "repo_path": "D:\\codex",
+      "updated_at": "2026-04-03T13:41:29.535181Z",
+      "error": null
+    },
+    {
+      "task_id": "e608b9876db5454ab7de90ee1fbcb74d",
+      "status": "failed",
+      "goal": "Finish routine coding work with small verified patches and local execution.",
+      "repo_path": "D:\\codex\\orchestrator-mvp",
+      "updated_at": "2026-04-02T22:59:52.676838Z",
+      "error": null
+    },
+    {
+      "task_id": "c393b9bc8c2e419cb09ba1a64b408b0a",
+      "status": "failed",
+      "goal": "Let cheap workers handle routine debugging first and escalate only when repeated failures or risky changes appear.",
+      "repo_path": "D:\\codex\\orchestrator-mvp",
+      "updated_at": "2026-04-02T22:58:58.539826Z",
+      "error": null
+    },
+    {
+      "task_id": "c3ca6c6a29394f4f88cff7a9952c73ee",
+      "status": "failed",
+      "goal": "Implement the bounded change",
+      "repo_path": "D:\\codex",
+      "updated_at": "2026-04-02T22:44:01.240840Z",
+      "error": null
+    },
+    {
+      "task_id": "1452cfc81763484babfce4e6eb3d9b0c",
+      "status": "failed",
+      "goal": "Identify the smallest viable slice",
+      "repo_path": "D:\\codex",
+      "updated_at": "2026-04-02T22:43:54.412937Z",
+      "error": null
+    },
+    {
+      "task_id": "deae236aaa8047358c27097d6270e88e",
+      "status": "failed",
+      "goal": "Use the orchestrator as an AI-managed software delivery pipeline instead of a single coding agent.",
+      "repo_path": "D:\\codex\\orchestrator-mvp",
+      "updated_at": "2026-04-02T22:43:11.611927Z",
+      "error": null
+    },
+    {
+      "task_id": "e2918fe215384da6bd9369eabbfbb7da",
+      "status": "failed",
+      "goal": "Restore ToyOS real artifact delivery",
+      "repo_path": "D:\\codex",
+      "updated_at": "2026-04-02T22:42:57.400742Z",
+      "error": null
+    },
+    {
+      "task_id": "cd4d6ffb64b44353b893de21fd99ae2c",
+      "status": "failed",
+      "goal": "Finish routine coding work with small verified patches and local execution.",
+      "repo_path": "D:\\codex\\orchestrator-mvp",
+      "updated_at": "2026-04-02T22:41:53.510276Z",
+      "error": null
+    },
+    {
+      "task_id": "1a14caf938a7429f8c1058bb2d1497db",
+      "status": "failed",
+      "goal": "Implement the bounded change",
+      "repo_path": "D:\\codex",
+      "updated_at": "2026-04-02T22:29:59.459855Z",
+      "error": null
+    },
+    {
+      "task_id": "0f82fa3672f24bb8996e752b00a43b94",
+      "status": "failed",
+      "goal": "Identify the smallest viable slice",
+      "repo_path": "D:\\codex",
+      "updated_at": "2026-04-02T22:29:47.756403Z",
+      "error": null
+    },
+    {
+      "task_id": "02a07b18714046319d9106e84a8211af",
+      "status": "failed",
+      "goal": "Restore ToyOS real artifact delivery",
+      "repo_path": "D:\\codex",
+      "updated_at": "2026-04-02T22:27:23.038869Z",
+      "error": null
+    },
+    {
+      "task_id": "0d085850ebb64740961a50774c3d52fa",
+      "status": "failed",
+      "goal": "Produce a reusable local experiment report without spending premium-model budget on formatting.",
+      "repo_path": "D:\\codex\\orchestrator-mvp",
+      "updated_at": "2026-04-02T22:11:48.661533Z",
+      "error": null
+    },
+    {
+      "task_id": "7c8abc88d2664d76b2b871d5de89c4ed",
+      "status": "failed",
+      "goal": "Execute the next action",
+      "repo_path": "D:\\codex\\orchestrator-mvp",
+      "updated_at": "2026-04-02T22:09:20.212381Z",
+      "error": null
+    },
+    {
+      "task_id": "8457292c6c1945cca578e8fe3b564ac2",
+      "status": "failed",
+      "goal": "Validate the change",
+      "repo_path": "D:\\codex\\orchestrator-mvp",
+      "updated_at": "2026-04-02T22:07:55.720406Z",
+      "error": null
+    },
+    {
+      "task_id": "c40c1625f8fc46cf889e551ea99c3814",
+      "status": "failed",
+      "goal": "Identify the smallest viable slice",
+      "repo_path": "D:\\codex\\orchestrator-mvp",
+      "updated_at": "2026-04-02T22:05:19.181214Z",
+      "error": null
+    },
+    {
+      "task_id": "d62cfd22cdd240bb8ce57db55051f6f1",
+      "status": "failed",
+      "goal": "Clarify target outcome",
+      "repo_path": "D:\\codex\\orchestrator-mvp",
+      "updated_at": "2026-04-02T22:02:11.966374Z",
+      "error": null
+    },
+    {
+      "task_id": "c8bb13992ab945368cdfc29612a4f079",
+      "status": "failed",
+      "goal": "Close deployment gaps without waiting on cloud credentials.",
+      "repo_path": "D:\\codex\\orchestrator-mvp",
+      "updated_at": "2026-04-02T21:56:49.692636Z",
+      "error": null
+    },
+    {
+      "task_id": "49052ff55907406486c451c090de1567",
+      "status": "failed",
+      "goal": "Execute the next action",
+      "repo_path": "D:\\codex\\orchestrator-mvp",
+      "updated_at": "2026-04-02T21:53:58.891049Z",
+      "error": null
+    }
+  ],
+  "archive_dir": "D:\\codex\\orchestrator-mvp\\generated\\historical-failure-debt-archive\\20260403T160519Z",
+  "risk_notes": [
+    "This archive separates historical failure debt from live queue pressure.",
+    "Use queue_pressure_analysis.json for current operational pressure."
+  ]
+}

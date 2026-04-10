@@ -1,0 +1,275 @@
+{
+  "task_id": "c40c1625f8fc46cf889e551ea99c3814",
+  "task_status": "failed",
+  "phase": "failed",
+  "updated_at": "2026-04-02T22:02:15.243449Z",
+  "heartbeat_at": "2026-04-02T22:02:15.243449Z",
+  "repo_path": "D:\\codex\\orchestrator-mvp",
+  "goal": "Identify the smallest viable slice",
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": "runtime.failure_backlog_automation",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\c40c1625f8fc46cf889e551ea99c3814",
+  "error": "Shell command failed with code 1: Traceback (most recent call last):\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 167, in <module>\r\n    raise SystemExit(main())\r\n                     ^^^^^^\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 141, in main\r\n    spec = json.loads(spec_path.read_text(encoding=\"utf-8\"))\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"pathlib.py\", line 1058, in read_text\r\n  File \"pathlib.py\", line 1044, in open\r\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\codex\\\\orchestrator-mvp\\\\tools\\\\generic_qemu_smoke.json'",
+  "title": "Analyze the current state",
+  "prompt": "Use WSL and QEMU as the default loop for ToyOS changes, keep patches small, preserve bootability, run VM tests, and escalate only for architecture or repeated runtime failures.",
+  "scheduler_hint": {
+    "automation_source": "failure_backlog_automation",
+    "template_id": "toyos-mainline",
+    "template_category": "kernel",
+    "cluster_key": "restore toyos real artifact delivery",
+    "cluster_count": 31,
+    "cluster_status": "attention",
+    "handling_mode": "toyos_replenishment",
+    "dispatch_now": false,
+    "admission_mode": "degraded",
+    "scheduled_by": "runtime.failure_backlog_automation",
+    "decomposition_child": true,
+    "decomposition_parent_task_id": "e72f3d97221745f18901318475256d52",
+    "decomposition_root_task_id": "e72f3d97221745f18901318475256d52",
+    "decomposition_depth": 1,
+    "max_decomposition_depth": 2,
+    "decomposition_child_index": 1,
+    "decomposition_allow_children": false,
+    "decomposition_path_kind": "shared",
+    "decomposition_shared_dependency_group": "e72f3d97221745f18901318475256d52",
+    "decomposition_repair_for": null,
+    "decomposition_dependencies": [],
+    "dependency_task_ids": [],
+    "dependency_count": 0
+  },
+  "context_package": {},
+  "plan": [
+    {
+      "id": "4ca2d71b",
+      "title": "Build Toy OS baseline",
+      "status": "completed",
+      "worker": "docker",
+      "phase": "execute"
+    },
+    {
+      "id": "7feb4600",
+      "title": "Boot ToyOS in QEMU",
+      "status": "failed",
+      "worker": "docker",
+      "phase": "verify"
+    },
+    {
+      "id": "320fbf36",
+      "title": "Audit ToyOS runtime evidence",
+      "status": "pending",
+      "worker": "reviewer",
+      "phase": "review"
+    },
+    {
+      "id": "879f2693",
+      "title": "Patch Toy OS implementation",
+      "status": "pending",
+      "worker": "coder",
+      "phase": "draft"
+    },
+    {
+      "id": "42aa2774",
+      "title": "Rebuild Toy OS after patch",
+      "status": "pending",
+      "worker": "docker",
+      "phase": "execute"
+    },
+    {
+      "id": "568f2e7a",
+      "title": "Re-run ToyOS QEMU and score artifacts",
+      "status": "pending",
+      "worker": "docker",
+      "phase": "verify"
+    },
+    {
+      "id": "12896071",
+      "title": "Score ToyOS artifact set",
+      "status": "pending",
+      "worker": "docker",
+      "phase": "verify"
+    },
+    {
+      "id": "50a6a0c4",
+      "title": "Issue ToyOS release decision",
+      "status": "pending",
+      "worker": "reviewer",
+      "phase": "revise"
+    }
+  ],
+  "verification_signals": [
+    {
+      "timestamp": "2026-04-02T21:25:01.891854Z",
+      "kind": "admission_accepted",
+      "success": true,
+      "task_id": "c40c1625f8fc46cf889e551ea99c3814",
+      "admission_lane": null,
+      "admission_reason": null,
+      "execution_mode": "governance",
+      "queue_name": "fastlane",
+      "task_type": "report_refresh"
+    },
+    {
+      "timestamp": "2026-04-02T21:47:16.769839Z",
+      "kind": "step_completed",
+      "success": true,
+      "task_id": "c40c1625f8fc46cf889e551ea99c3814",
+      "step_id": "4ca2d71b",
+      "step_title": "Build Toy OS baseline",
+      "worker": "docker",
+      "phase": "execute",
+      "route_model": "deepseek-chat",
+      "route_provider": "runtime",
+      "elapsed_ms": 398077,
+      "output_ref": {
+        "artifact_id": "ctx_be161ab0c642",
+        "task_id": "c40c1625f8fc46cf889e551ea99c3814",
+        "step_id": "4ca2d71b",
+        "channel": "docker-output",
+        "title": "Build Toy OS baseline output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\c40c1625f8fc46cf889e551ea99c3814\\4ca2d71b-docker-output-ctx_be161ab0c642.txt",
+        "size_chars": 400,
+        "line_count": 12,
+        "created_at": "2026-04-02T21:45:00.491609Z",
+        "metadata": {
+          "worker": "docker",
+          "phase": "execute",
+          "route_model": "deepseek-chat",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "docker-output",
+        "char_count": 400,
+        "line_count": 12,
+        "stored_raw": true
+      }
+    },
+    {
+      "timestamp": "2026-04-02T21:56:13.888306Z",
+      "kind": "step_failed",
+      "success": false,
+      "task_id": "c40c1625f8fc46cf889e551ea99c3814",
+      "step_id": "7feb4600",
+      "step_title": "Boot ToyOS in QEMU",
+      "worker": "docker",
+      "phase": "verify",
+      "route_model": "deepseek-chat",
+      "route_provider": "runtime",
+      "elapsed_ms": 227843,
+      "error": "Shell command failed with code 1: Traceback (most recent call last):\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 167, in <module>\r\n    raise SystemExit(main())\r\n                     ^^^^^^\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 141, in main\r\n    spec = json.loads(spec_path.read_text(encoding=\"utf-8\"))\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"pathlib.py\", line 1058, in read_text\r\n  File \"pathlib.py\", line 1044, in open\r\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\codex\\\\orchestrator-mvp\\\\tools\\\\generic_qemu_smoke.json'",
+      "output_ref": {
+        "artifact_id": "ctx_4cc4b9c20fa5",
+        "task_id": "c40c1625f8fc46cf889e551ea99c3814",
+        "step_id": "7feb4600",
+        "channel": "error-output",
+        "title": "Boot ToyOS in QEMU failure",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\c40c1625f8fc46cf889e551ea99c3814\\7feb4600-error-output-ctx_4cc4b9c20fa5.txt",
+        "size_chars": 628,
+        "line_count": 10,
+        "created_at": "2026-04-02T21:55:11.201369Z",
+        "metadata": {
+          "worker": "docker",
+          "phase": "verify",
+          "error": "Shell command failed with code 1: Traceback (most recent call last):\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 167, in <module>\r\n    raise SystemExit(main())\r\n                     ^^^^^^\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 141, in main\r\n    spec = json.loads(spec_path.read_text(encoding=\"utf-8\"))\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"pathlib.py\", line 1058, in read_text\r\n  File \"pathlib.py\", line 1044, in open\r\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\codex\\\\orchestrator-mvp\\\\tools\\\\generic_qemu_smoke.json'"
+        }
+      },
+      "output_stats": {
+        "channel": "error-output",
+        "char_count": 628,
+        "line_count": 10,
+        "stored_raw": true
+      }
+    }
+  ],
+  "verification_signal_count": 3,
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-02T21:25:01.891854Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "c40c1625f8fc46cf889e551ea99c3814",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "governance",
+        "queue_name": "fastlane",
+        "task_type": "report_refresh"
+      },
+      {
+        "timestamp": "2026-04-02T21:47:16.769839Z",
+        "kind": "step_completed",
+        "success": true,
+        "task_id": "c40c1625f8fc46cf889e551ea99c3814",
+        "step_id": "4ca2d71b",
+        "step_title": "Build Toy OS baseline",
+        "worker": "docker",
+        "phase": "execute",
+        "route_model": "deepseek-chat",
+        "route_provider": "runtime",
+        "elapsed_ms": 398077,
+        "output_ref": {
+          "artifact_id": "ctx_be161ab0c642",
+          "task_id": "c40c1625f8fc46cf889e551ea99c3814",
+          "step_id": "4ca2d71b",
+          "channel": "docker-output",
+          "title": "Build Toy OS baseline output",
+          "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\c40c1625f8fc46cf889e551ea99c3814\\4ca2d71b-docker-output-ctx_be161ab0c642.txt",
+          "size_chars": 400,
+          "line_count": 12,
+          "created_at": "2026-04-02T21:45:00.491609Z",
+          "metadata": {
+            "worker": "docker",
+            "phase": "execute",
+            "route_model": "deepseek-chat",
+            "route_provider": "runtime"
+          }
+        },
+        "output_stats": {
+          "channel": "docker-output",
+          "char_count": 400,
+          "line_count": 12,
+          "stored_raw": true
+        }
+      },
+      {
+        "timestamp": "2026-04-02T21:56:13.888306Z",
+        "kind": "step_failed",
+        "success": false,
+        "task_id": "c40c1625f8fc46cf889e551ea99c3814",
+        "step_id": "7feb4600",
+        "step_title": "Boot ToyOS in QEMU",
+        "worker": "docker",
+        "phase": "verify",
+        "route_model": "deepseek-chat",
+        "route_provider": "runtime",
+        "elapsed_ms": 227843,
+        "error": "Shell command failed with code 1: Traceback (most recent call last):\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 167, in <module>\r\n    raise SystemExit(main())\r\n                     ^^^^^^\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 141, in main\r\n    spec = json.loads(spec_path.read_text(encoding=\"utf-8\"))\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"pathlib.py\", line 1058, in read_text\r\n  File \"pathlib.py\", line 1044, in open\r\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\codex\\\\orchestrator-mvp\\\\tools\\\\generic_qemu_smoke.json'",
+        "output_ref": {
+          "artifact_id": "ctx_4cc4b9c20fa5",
+          "task_id": "c40c1625f8fc46cf889e551ea99c3814",
+          "step_id": "7feb4600",
+          "channel": "error-output",
+          "title": "Boot ToyOS in QEMU failure",
+          "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\c40c1625f8fc46cf889e551ea99c3814\\7feb4600-error-output-ctx_4cc4b9c20fa5.txt",
+          "size_chars": 628,
+          "line_count": 10,
+          "created_at": "2026-04-02T21:55:11.201369Z",
+          "metadata": {
+            "worker": "docker",
+            "phase": "verify",
+            "error": "Shell command failed with code 1: Traceback (most recent call last):\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 167, in <module>\r\n    raise SystemExit(main())\r\n                     ^^^^^^\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 141, in main\r\n    spec = json.loads(spec_path.read_text(encoding=\"utf-8\"))\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"pathlib.py\", line 1058, in read_text\r\n  File \"pathlib.py\", line 1044, in open\r\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\codex\\\\orchestrator-mvp\\\\tools\\\\generic_qemu_smoke.json'"
+          }
+        },
+        "output_stats": {
+          "channel": "error-output",
+          "char_count": 628,
+          "line_count": 10,
+          "stored_raw": true
+        }
+      }
+    ]
+  }
+}

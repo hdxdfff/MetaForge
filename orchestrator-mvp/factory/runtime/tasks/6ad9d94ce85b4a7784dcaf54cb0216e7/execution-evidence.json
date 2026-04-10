@@ -1,0 +1,27 @@
+{
+  "task_id": "6ad9d94ce85b4a7784dcaf54cb0216e7",
+  "task_title": "Implement module agents.deploy_agent",
+  "task_status": "completed",
+  "started_at": "2026-03-20T02:26:15.882525Z",
+  "updated_at": "2026-03-20T02:53:08.845072Z",
+  "completed": true,
+  "steps": [
+    {
+      "step_id": "6ad9d94ce85b4a7784dcaf54cb0216e7-terminal-record",
+      "step_title": "Implement module agents.deploy_agent",
+      "action": "task_terminal_record",
+      "ok": true,
+      "at": "2026-03-20T02:53:08.845072Z",
+      "status": "completed",
+      "summary": "Stale planning task auto-closed after no progress beyond the stale-planning window.",
+      "error": null,
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ],
+  "result": {
+    "summary": "Stale planning task auto-closed after no progress beyond the stale-planning window.",
+    "stale_reconciled": true
+  }
+}

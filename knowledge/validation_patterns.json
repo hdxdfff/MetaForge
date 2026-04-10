@@ -1,0 +1,44 @@
+﻿[
+  {
+    "pattern_id": "toyos-default-path-regression",
+    "project": "ToyOS",
+    "checks": [
+      "Refresh build-report.json after code changes.",
+      "Run the default QEMU smoke path.",
+      "Verify ordered boot markers remain unchanged."
+    ],
+    "applies_to": [
+      "kernel.c",
+      "src/*.c",
+      "src/*.asm"
+    ]
+  },
+  {
+    "pattern_id": "toyos-experimental-path-regression",
+    "project": "ToyOS",
+    "checks": [
+      "Use explicit pre-enable and post-enable debug markers.",
+      "Keep experimental checks separate from the stable acceptance set.",
+      "Record failures back into knowledge/discovered_issues.json."
+    ],
+    "applies_to": [
+      "paging experiments",
+      "scheduler experiments",
+      "syscall hardening experiments"
+    ]
+  },
+  {
+    "pattern_id": "metaforge-self-improvement-ai-gate",
+    "project": "MetaForge OS",
+    "checks": [
+      "Refresh ai_test_status from ai_test_report after evaluator or policy changes.",
+      "Require the baseline AI suite to pass fully before release_signal becomes ready.",
+      "Treat failing release-blocker AI cases as verification blockers, not score-only warnings."
+    ],
+    "applies_to": [
+      "tools/ai_test_automation.py",
+      "tools/verification_engine.py",
+      "tools/factory_daemon.py"
+    ]
+  }
+]

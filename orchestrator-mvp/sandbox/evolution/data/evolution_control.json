@@ -1,0 +1,44 @@
+{
+  "updated_at": "2026-03-12T07:09:31.359693Z",
+  "allowed": true,
+  "reason": "ok",
+  "guard_status": "healthy",
+  "strong_allowed": true,
+  "strong_ratio": 0.0,
+  "quality_status": "attention",
+  "selected_candidates": [
+    {
+      "candidate_id": "e97a5e3ce0b9",
+      "title": "Align control layer with quality gate",
+      "target_files": [
+        "tools/decision_engine.py",
+        "tools/tool_health_audit.py",
+        "tools/release_operations.py"
+      ],
+      "priority": "high",
+      "approved_patch_required": true,
+      "cheap_worker_ok": false,
+      "sandbox_required": true,
+      "existing_patch_id": null,
+      "quality_score": 0.77,
+      "quality_status": "promote"
+    },
+    {
+      "candidate_id": "96f998f8dd10",
+      "title": "Repair runtime health verification failure",
+      "target_files": [
+        "tools/runtime_maintenance.py",
+        "tools/goal_runtime.py",
+        "tools/task_state_tools.py"
+      ],
+      "priority": "high",
+      "approved_patch_required": false,
+      "cheap_worker_ok": true,
+      "sandbox_required": true,
+      "existing_patch_id": null,
+      "quality_score": 0.95,
+      "quality_status": "promote"
+    }
+  ],
+  "selected_count": 2
+}

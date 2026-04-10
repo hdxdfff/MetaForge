@@ -1,0 +1,421 @@
+{
+  "steps": [
+    {
+      "step_id": "7ade96b1",
+      "step_title": "Write recovery smoke file",
+      "action": "write_smoke_file",
+      "ok": true,
+      "at": "2026-03-20T07:45:24.526473Z",
+      "path": "D:\\codex\\orchestrator-mvp\\data\\execution-recovery\\test.txt",
+      "size": 97
+    },
+    {
+      "step_id": "ec720077",
+      "step_title": "Probe direct LLM path",
+      "action": "direct_llm_call",
+      "ok": true,
+      "at": "2026-03-20T07:46:16.222784Z",
+      "provider": "cheap",
+      "model": "deepseek-chat",
+      "usage_before": 472,
+      "usage_after": 473,
+      "used_fallback": false,
+      "output_excerpt": "`print(\"Hello, world!\")`"
+    },
+    {
+      "step_id": "adc6beb7",
+      "step_title": "Create runnable recovery artifact",
+      "action": "create_runnable_artifact",
+      "ok": true,
+      "at": "2026-03-20T07:46:53.775115Z",
+      "artifact_dir": "D:\\codex\\generated\\execution-recovery-demo",
+      "build_timestamp": "2026-03-20T07:46:53.341001Z",
+      "test_timestamp": "2026-03-20T07:46:53.606107Z",
+      "execution_timestamp": "2026-03-20T07:46:53.754105Z"
+    },
+    {
+      "step_id": "a5f7095a",
+      "step_title": "Verify recovery artifact",
+      "action": "verify_runnable_artifact",
+      "ok": true,
+      "at": "2026-03-20T07:47:04.276411Z",
+      "artifact_id": "execution-recovery-demo",
+      "latest_evidence_at": "2026-03-20T07:46:53.754105Z",
+      "dashboard_status": "pass"
+    },
+    {
+      "step_id": "7ade96b1",
+      "step_title": "Write recovery smoke file",
+      "action": "write_smoke_file",
+      "ok": true,
+      "at": "2026-03-20T07:51:59.435320Z",
+      "path": "D:\\codex\\orchestrator-mvp\\data\\execution-recovery\\test.txt",
+      "size": 97
+    },
+    {
+      "step_id": "ec720077",
+      "step_title": "Probe direct LLM path",
+      "action": "direct_llm_call",
+      "ok": true,
+      "at": "2026-03-20T07:52:33.701931Z",
+      "provider": "cheap",
+      "model": "deepseek-chat",
+      "usage_before": 476,
+      "usage_after": 477,
+      "used_fallback": false,
+      "output_excerpt": "`print(\"Hello, world!\")`"
+    },
+    {
+      "step_id": "adc6beb7",
+      "step_title": "Create runnable recovery artifact",
+      "action": "create_runnable_artifact",
+      "ok": true,
+      "at": "2026-03-20T07:52:48.817939Z",
+      "artifact_dir": "D:\\codex\\generated\\execution-recovery-demo",
+      "build_timestamp": "2026-03-20T07:52:47.437333Z",
+      "test_timestamp": "2026-03-20T07:52:47.777221Z",
+      "execution_timestamp": "2026-03-20T07:52:48.233713Z"
+    },
+    {
+      "step_id": "a5f7095a",
+      "step_title": "Verify recovery artifact",
+      "action": "verify_runnable_artifact",
+      "ok": true,
+      "at": "2026-03-20T07:53:20.251325Z",
+      "artifact_id": "execution-recovery-demo",
+      "latest_evidence_at": "2026-03-20T07:52:48.233713Z",
+      "dashboard_status": "pass"
+    },
+    {
+      "step_id": "7ade96b1",
+      "step_title": "Write recovery smoke file",
+      "action": "write_smoke_file",
+      "ok": true,
+      "at": "2026-03-20T08:00:45.325319Z",
+      "path": "D:\\codex\\orchestrator-mvp\\data\\execution-recovery\\test.txt",
+      "size": 97
+    },
+    {
+      "step_id": "ec720077",
+      "step_title": "Probe direct LLM path",
+      "action": "direct_llm_call",
+      "ok": true,
+      "at": "2026-03-20T08:02:06.610659Z",
+      "provider": "cheap",
+      "model": "deepseek-chat",
+      "usage_before": 480,
+      "usage_after": 481,
+      "used_fallback": false,
+      "output_excerpt": "`print(\"Hello, world!\")`"
+    },
+    {
+      "step_id": "adc6beb7",
+      "step_title": "Create runnable recovery artifact",
+      "action": "create_runnable_artifact",
+      "ok": true,
+      "at": "2026-03-20T08:03:11.686137Z",
+      "artifact_dir": "D:\\codex\\generated\\execution-recovery-demo",
+      "build_timestamp": "2026-03-20T08:03:10.493315Z",
+      "test_timestamp": "2026-03-20T08:03:10.887065Z",
+      "execution_timestamp": "2026-03-20T08:03:11.266963Z"
+    },
+    {
+      "step_id": "a5f7095a",
+      "step_title": "Verify recovery artifact",
+      "action": "verify_runnable_artifact",
+      "ok": true,
+      "at": "2026-03-20T08:04:31.455259Z",
+      "artifact_id": "execution-recovery-demo",
+      "latest_evidence_at": "2026-03-20T08:03:11.266963Z",
+      "dashboard_status": "pass"
+    },
+    {
+      "step_id": "7ade96b1",
+      "step_title": "Write recovery smoke file",
+      "action": "write_smoke_file",
+      "ok": true,
+      "at": "2026-03-20T08:13:31.024726Z",
+      "path": "D:\\codex\\orchestrator-mvp\\data\\execution-recovery\\test.txt",
+      "size": 97
+    },
+    {
+      "step_id": "ec720077",
+      "step_title": "Probe direct LLM path",
+      "action": "direct_llm_call",
+      "ok": false,
+      "at": "2026-03-20T08:15:21.107921Z",
+      "provider": "cheap",
+      "model": "deepseek-chat",
+      "usage_before": 481,
+      "usage_after": 481,
+      "used_fallback": true,
+      "output_excerpt": "Provider error: APITimeoutError: Request timed out."
+    },
+    {
+      "step_id": "adc6beb7",
+      "step_title": "Create runnable recovery artifact",
+      "action": "create_runnable_artifact",
+      "ok": true,
+      "at": "2026-03-20T08:16:20.746840Z",
+      "artifact_dir": "D:\\codex\\generated\\execution-recovery-demo",
+      "build_timestamp": "2026-03-20T08:16:19.376520Z",
+      "test_timestamp": "2026-03-20T08:16:19.739584Z",
+      "execution_timestamp": "2026-03-20T08:16:20.210933Z"
+    },
+    {
+      "step_id": "a5f7095a",
+      "step_title": "Verify recovery artifact",
+      "action": "verify_runnable_artifact",
+      "ok": true,
+      "at": "2026-03-20T08:18:00.287360Z",
+      "artifact_id": "execution-recovery-demo",
+      "latest_evidence_at": "2026-03-20T08:16:20.210933Z",
+      "dashboard_status": "pass"
+    },
+    {
+      "step_id": "7ade96b1",
+      "step_title": "Write recovery smoke file",
+      "action": "write_smoke_file",
+      "ok": true,
+      "at": "2026-03-20T08:19:46.353985Z",
+      "path": "D:\\codex\\orchestrator-mvp\\data\\execution-recovery\\test.txt",
+      "size": 97
+    },
+    {
+      "step_id": "ec720077",
+      "step_title": "Probe direct LLM path",
+      "action": "direct_llm_call",
+      "ok": true,
+      "at": "2026-03-20T08:20:05.835175Z",
+      "provider": "cheap",
+      "model": "deepseek-chat",
+      "usage_before": 481,
+      "usage_after": 483,
+      "used_fallback": false,
+      "output_excerpt": "`print(\"Hello, world!\")`"
+    },
+    {
+      "step_id": "adc6beb7",
+      "step_title": "Create runnable recovery artifact",
+      "action": "create_runnable_artifact",
+      "ok": true,
+      "at": "2026-03-20T08:20:33.063289Z",
+      "artifact_dir": "D:\\codex\\generated\\execution-recovery-demo",
+      "build_timestamp": "2026-03-20T08:20:32.546448Z",
+      "test_timestamp": "2026-03-20T08:20:32.759308Z",
+      "execution_timestamp": "2026-03-20T08:20:33.053774Z"
+    },
+    {
+      "step_id": "a5f7095a",
+      "step_title": "Verify recovery artifact",
+      "action": "verify_runnable_artifact",
+      "ok": true,
+      "at": "2026-03-20T08:20:50.698590Z",
+      "artifact_id": "execution-recovery-demo",
+      "latest_evidence_at": "2026-03-20T08:20:33.053774Z",
+      "dashboard_status": "pass"
+    },
+    {
+      "step_id": "7ade96b1",
+      "step_title": "Write recovery smoke file",
+      "action": "write_smoke_file",
+      "ok": true,
+      "at": "2026-03-20T08:25:07.436801Z",
+      "path": "D:\\codex\\orchestrator-mvp\\data\\execution-recovery\\test.txt",
+      "size": 97
+    },
+    {
+      "step_id": "ec720077",
+      "step_title": "Probe direct LLM path",
+      "action": "direct_llm_call",
+      "ok": true,
+      "at": "2026-03-20T08:26:12.231601Z",
+      "provider": "cheap",
+      "model": "deepseek-chat",
+      "usage_before": 484,
+      "usage_after": 485,
+      "used_fallback": false,
+      "output_excerpt": "`print(\"Hello, world!\")`"
+    },
+    {
+      "step_id": "7ade96b1",
+      "step_title": "Write recovery smoke file",
+      "action": "write_smoke_file",
+      "ok": true,
+      "at": "2026-03-20T08:26:32.394587Z",
+      "path": "D:\\codex\\orchestrator-mvp\\data\\execution-recovery\\test.txt",
+      "size": 97
+    },
+    {
+      "step_id": "ec720077",
+      "step_title": "Probe direct LLM path",
+      "action": "direct_llm_call",
+      "ok": true,
+      "at": "2026-03-20T08:26:52.603648Z",
+      "provider": "cheap",
+      "model": "deepseek-chat",
+      "usage_before": 485,
+      "usage_after": 486,
+      "used_fallback": false,
+      "output_excerpt": "`print(\"Hello, world!\")`"
+    },
+    {
+      "step_id": "adc6beb7",
+      "step_title": "Create runnable recovery artifact",
+      "action": "create_runnable_artifact",
+      "ok": true,
+      "at": "2026-03-20T08:26:58.589718Z",
+      "artifact_dir": "D:\\codex\\generated\\execution-recovery-demo",
+      "build_timestamp": "2026-03-20T08:26:53.255944Z",
+      "test_timestamp": "2026-03-20T08:26:54.048259Z",
+      "execution_timestamp": "2026-03-20T08:26:57.678281Z"
+    },
+    {
+      "step_id": "adc6beb7",
+      "step_title": "Create runnable recovery artifact",
+      "action": "create_runnable_artifact",
+      "ok": true,
+      "at": "2026-03-20T08:27:40.231017Z",
+      "artifact_dir": "D:\\codex\\generated\\execution-recovery-demo",
+      "build_timestamp": "2026-03-20T08:27:38.648941Z",
+      "test_timestamp": "2026-03-20T08:27:39.328547Z",
+      "execution_timestamp": "2026-03-20T08:27:39.784540Z"
+    },
+    {
+      "step_id": "a5f7095a",
+      "step_title": "Verify recovery artifact",
+      "action": "verify_runnable_artifact",
+      "ok": true,
+      "at": "2026-03-20T08:28:00.241922Z",
+      "artifact_id": "execution-recovery-demo",
+      "latest_evidence_at": "2026-03-20T08:27:39.784540Z",
+      "dashboard_status": "pass"
+    },
+    {
+      "step_id": "a5f7095a",
+      "step_title": "Verify recovery artifact",
+      "action": "verify_runnable_artifact",
+      "ok": true,
+      "at": "2026-03-20T08:28:22.063991Z",
+      "artifact_id": "execution-recovery-demo",
+      "latest_evidence_at": "2026-03-20T08:27:39.784540Z",
+      "dashboard_status": "pass"
+    }
+  ],
+  "task_id": "32cdf57ea4214d50aa0355f1c1cb2d47",
+  "task_title": "Execution recovery: smoke and runnable artifact",
+  "task_status": "completed",
+  "started_at": "2026-03-20T07:44:47.791273Z",
+  "updated_at": "2026-03-20T08:28:47.794941Z",
+  "completed": true,
+  "result": {
+    "summary": "Resumed from saved task plan.",
+    "completed_steps": 4,
+    "context_used_chars": 586,
+    "cheap_calls_used": 0,
+    "cheap_chars_used": 0,
+    "escalation_count": 0,
+    "execution_mode": "production",
+    "production_evidence": {
+      "mode": "production",
+      "status": "verified",
+      "artifact_spec": {
+        "artifact_id": "execution-recovery-demo",
+        "artifact_type": "demo",
+        "type": "demo",
+        "output": "generated\\execution-recovery-demo",
+        "entrypoint": "generated\\execution-recovery-demo\\run_demo.py",
+        "deliverables": [
+          "generated\\execution-recovery-demo\\run_demo.py",
+          "generated\\execution-recovery-demo\\build-report.json",
+          "generated\\execution-recovery-demo\\test-report.json",
+          "generated\\execution-recovery-demo\\execution-report.json",
+          "generated\\execution-recovery-demo\\artifact_manifest.json",
+          "generated\\execution-recovery-demo\\build.sh",
+          "generated\\execution-recovery-demo\\Dockerfile.build"
+        ],
+        "expected_outputs": [
+          "generated\\execution-recovery-demo\\run_demo.py",
+          "generated\\execution-recovery-demo\\build-report.json",
+          "generated\\execution-recovery-demo\\test-report.json",
+          "generated\\execution-recovery-demo\\execution-report.json",
+          "generated\\execution-recovery-demo\\artifact_manifest.json",
+          "generated\\execution-recovery-demo\\build.sh",
+          "generated\\execution-recovery-demo\\Dockerfile.build"
+        ],
+        "required_artifacts": [
+          "generated\\execution-recovery-demo\\run_demo.py",
+          "generated\\execution-recovery-demo\\build-report.json",
+          "generated\\execution-recovery-demo\\test-report.json",
+          "generated\\execution-recovery-demo\\execution-report.json",
+          "generated\\execution-recovery-demo\\artifact_manifest.json",
+          "generated\\execution-recovery-demo\\build.sh",
+          "generated\\execution-recovery-demo\\Dockerfile.build"
+        ],
+        "evidence": [
+          "build-report.json",
+          "test-report.json",
+          "execution-report.json"
+        ],
+        "verification": {
+          "build_required": true,
+          "tests_required": true,
+          "runtime_required": true
+        },
+        "registry": "artifact_registry",
+        "test_command": "run_demo.py --self-test",
+        "min_fresh_artifacts": 7
+      },
+      "required_count": 7,
+      "min_fresh_artifacts": 7,
+      "fresh_artifacts": [
+        {
+          "path": "D:\\codex\\generated\\execution-recovery-demo\\run_demo.py",
+          "size": 446,
+          "mtime": "2026-03-20T08:27:37.651570Z",
+          "observed_at": "2026-03-20T08:27:37.651570Z"
+        },
+        {
+          "path": "D:\\codex\\generated\\execution-recovery-demo\\build-report.json",
+          "size": 357,
+          "mtime": "2026-03-20T08:27:39.123516Z",
+          "observed_at": "2026-03-20T08:27:38.648941Z"
+        },
+        {
+          "path": "D:\\codex\\generated\\execution-recovery-demo\\test-report.json",
+          "size": 350,
+          "mtime": "2026-03-20T08:27:39.438549Z",
+          "observed_at": "2026-03-20T08:27:39.328547Z"
+        },
+        {
+          "path": "D:\\codex\\generated\\execution-recovery-demo\\execution-report.json",
+          "size": 423,
+          "mtime": "2026-03-20T08:27:39.911537Z",
+          "observed_at": "2026-03-20T08:27:39.784540Z"
+        },
+        {
+          "path": "D:\\codex\\generated\\execution-recovery-demo\\artifact_manifest.json",
+          "size": 491,
+          "mtime": "2026-03-20T08:27:40.129541Z",
+          "observed_at": "2026-03-20T08:27:39.784540Z"
+        },
+        {
+          "path": "D:\\codex\\generated\\execution-recovery-demo\\build.sh",
+          "size": 51,
+          "mtime": "2026-03-20T08:27:37.906570Z",
+          "observed_at": "2026-03-20T08:27:37.906570Z"
+        },
+        {
+          "path": "D:\\codex\\generated\\execution-recovery-demo\\Dockerfile.build",
+          "size": 104,
+          "mtime": "2026-03-20T08:27:37.906570Z",
+          "observed_at": "2026-03-20T08:27:37.906570Z"
+        }
+      ],
+      "stale_artifacts": [],
+      "missing_artifacts": []
+    },
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\32cdf57ea4214d50aa0355f1c1cb2d47\\execution-evidence.json",
+    "execution_evidence_step_count": 28
+  }
+}

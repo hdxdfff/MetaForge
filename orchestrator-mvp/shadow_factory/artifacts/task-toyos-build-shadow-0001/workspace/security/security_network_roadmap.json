@@ -1,0 +1,63 @@
+﻿{
+  "artifact": "toyos-security-network-roadmap",
+  "target_workspace": "D:\\codex\\generated\\toy-os-demo",
+  "status": "scaffolded",
+  "updated_at": "2026-03-13T00:00:00Z",
+  "baseline": {
+    "tcp_ip": false,
+    "socket_layer": false,
+    "tls": "scaffold-only",
+    "secure_rpc": "scaffold-only",
+    "zero_trust": "design-only"
+  },
+  "modules": [
+    "include/security.h",
+    "security/tls/tls.c",
+    "security/tls/tls_handshake.c",
+    "security/tls/tls_record.c",
+    "security/tls/tls_crypto.c",
+    "security/tls/tls_session.c",
+    "security/rpc/secure_rpc.c",
+    "security/keystore/keystore.c",
+    "security/monitor/security_monitor.c"
+  ],
+  "stages": [
+    {
+      "id": "stage0",
+      "name": "security scaffold",
+      "status": "done"
+    },
+    {
+      "id": "stage1",
+      "name": "transport facade and loopback validation",
+      "status": "pending"
+    },
+    {
+      "id": "stage2",
+      "name": "identity and keystore hardening",
+      "status": "pending"
+    },
+    {
+      "id": "stage3",
+      "name": "real TLS 1.3 handshake and record protection",
+      "status": "pending"
+    },
+    {
+      "id": "stage4",
+      "name": "secure RPC dispatch and replay defense",
+      "status": "pending"
+    },
+    {
+      "id": "stage5",
+      "name": "mTLS zero trust policy",
+      "status": "pending"
+    }
+  ],
+  "validation": {
+    "planned_minimum": [
+      "compile kernel with scaffolded security objects",
+      "preserve existing ToyOS build path",
+      "document residual risk clearly"
+    ]
+  }
+}

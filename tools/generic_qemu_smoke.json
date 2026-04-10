@@ -1,0 +1,467 @@
+{
+  "name": "ToyOS QEMU Regression Suite",
+  "report": "build/generic-qemu-smoke-report.json",
+  "tests": [
+    {
+      "name": "qemu_boot_smoke",
+      "cwd": ".",
+      "shell": false,
+      "command": [
+        "python",
+        "tools/toyos_regression_case.py",
+        "--case",
+        "qemu_boot_smoke"
+      ],
+      "timeout_seconds": 35,
+      "rounds": 5,
+      "required_passes": 5,
+      "allow_timeout": false,
+      "expected_returncodes": [
+        0
+      ],
+      "log_files": [
+        "build/qemu-debug.log"
+      ],
+      "ordered_pass_markers": true,
+      "min_log_size": 200,
+      "pass_markers": [
+        "ToyOS: kernel_main entered",
+        "ToyOS: GDT and TSS ready",
+        "ToyOS: core subsystems initialized",
+        "ToyOS: memory allocations ready",
+        "VFS: format done",
+        "ToyOS: filesystems ready",
+        "ToyOS: processes created",
+        "ToyOS: scheduler rounds completed",
+        "ToyOS: kernel services online"
+      ],
+      "fail_markers": [
+        "PANIC:",
+        "*** KERNEL PANIC ***"
+      ]
+    },
+    {
+      "name": "qemu_boot_soak",
+      "cwd": ".",
+      "shell": false,
+      "command": [
+        "python",
+        "tools/toyos_regression_case.py",
+        "--case",
+        "qemu_boot_soak"
+      ],
+      "timeout_seconds": 35,
+      "rounds": 3,
+      "required_passes": 3,
+      "allow_timeout": false,
+      "expected_returncodes": [
+        0
+      ],
+      "log_files": [
+        "build/qemu-debug.log"
+      ],
+      "ordered_pass_markers": true,
+      "min_log_size": 200,
+      "pass_markers": [
+        "ToyOS: kernel_main entered",
+        "ToyOS: kernel services online"
+      ],
+      "fail_markers": [
+        "PANIC:",
+        "*** KERNEL PANIC ***"
+      ]
+    },
+    {
+      "name": "qemu_boot_paging_stage1",
+      "cwd": ".",
+      "shell": false,
+      "command": [
+        "python",
+        "tools/toyos_regression_case.py",
+        "--case",
+        "qemu_boot_paging_stage1"
+      ],
+      "timeout_seconds": 220,
+      "rounds": 2,
+      "required_passes": 2,
+      "allow_timeout": false,
+      "expected_returncodes": [
+        0
+      ],
+      "log_files": [
+        "build/qemu-debug.log"
+      ],
+      "ordered_pass_markers": true,
+      "min_log_size": 220,
+      "pass_markers": [
+        "ToyOS: paging stage1 pre-enable",
+        "ToyOS: paging stage1 post-enable",
+        "ToyOS: filesystems ready",
+        "ToyOS: kernel services online"
+      ],
+      "fail_markers": [
+        "PANIC:",
+        "*** KERNEL PANIC ***",
+        "ToyOS: paging stage1 fallback panic",
+        "ToyOS: paging stage1 skipped (stable path)"
+      ]
+    },
+    {
+      "name": "qemu_boot_paging_stage2",
+      "cwd": ".",
+      "shell": false,
+      "command": [
+        "python",
+        "tools/toyos_regression_case.py",
+        "--case",
+        "qemu_boot_paging_stage2"
+      ],
+      "timeout_seconds": 220,
+      "rounds": 2,
+      "required_passes": 2,
+      "allow_timeout": false,
+      "expected_returncodes": [
+        0
+      ],
+      "log_files": [
+        "build/qemu-debug.log"
+      ],
+      "ordered_pass_markers": true,
+      "min_log_size": 260,
+      "pass_markers": [
+        "ToyOS: paging stage2 aspace create",
+        "ToyOS: paging stage2 aspace attach",
+        "ToyOS: image launch stage2 metadata rejected",
+        "ToyOS: paging stage2 aspace release",
+        "ToyOS: filesystems ready",
+        "ToyOS: kernel services online"
+      ],
+      "fail_markers": [
+        "PANIC:",
+        "*** KERNEL PANIC ***",
+        "ToyOS: image launch stage2 metadata unexpected",
+        "ToyOS: paging stage2 aspace create failed",
+        "ToyOS: paging stage2 aspace activate failed",
+        "ToyOS: paging stage2 aspace release failed",
+        "ToyOS: paging stage2 skipped (stable path)"
+      ]
+    },
+    {
+      "name": "qemu_user_probe_stage2_pointer_policy",
+      "cwd": ".",
+      "shell": false,
+      "command": [
+        "python",
+        "tools/toyos_regression_case.py",
+        "--case",
+        "qemu_user_probe_stage2_pointer_policy"
+      ],
+      "timeout_seconds": 220,
+      "rounds": 2,
+      "required_passes": 2,
+      "allow_timeout": false,
+      "expected_returncodes": [
+        0
+      ],
+      "log_files": [
+        "build/qemu-debug.log"
+      ],
+      "ordered_pass_markers": true,
+      "min_log_size": 260,
+      "pass_markers": [
+        "ToyOS: paging stage2 aspace create",
+        "ToyOS: paging stage2 aspace attach",
+        "ToyOS: image launch stage2 metadata rejected",
+        "ToyOS: probe stage2 pointer-policy",
+        "ToyOS: probe stage2 pointer-policy accepted",
+        "ToyOS: user probe complete",
+        "ToyOS: kernel services online"
+      ],
+      "fail_markers": [
+        "PANIC:",
+        "*** KERNEL PANIC ***",
+        "ToyOS: image launch stage2 metadata unexpected",
+        "ToyOS: probe stage2 pointer-policy accept unexpected",
+        "ToyOS: paging stage2 aspace create failed",
+        "ToyOS: paging stage2 aspace activate failed",
+        "ToyOS: paging stage2 aspace release failed",
+        "ToyOS: paging stage2 skipped (stable path)"
+      ]
+    },
+    {
+      "name": "qemu_user_probe_preempt_unified_return",
+      "cwd": ".",
+      "shell": false,
+      "command": [
+        "python",
+        "tools/toyos_regression_case.py",
+        "--case",
+        "qemu_user_probe_preempt_unified_return"
+      ],
+      "timeout_seconds": 220,
+      "rounds": 2,
+      "required_passes": 2,
+      "allow_timeout": false,
+      "expected_returncodes": [
+        0
+      ],
+      "log_files": [
+        "build/qemu-debug.log"
+      ],
+      "ordered_pass_markers": true,
+      "min_log_size": 280,
+      "pass_markers": [
+        "ToyOS: paging stage2 aspace create",
+        "ToyOS: paging stage2 aspace attach",
+        "ToyOS: preempt unified tail enter",
+        "ToyOS: preempt unified tail ring3-restore",
+        "ToyOS: user probe complete",
+        "ToyOS: kernel services online"
+      ],
+      "fail_markers": [
+        "PANIC:",
+        "*** KERNEL PANIC ***",
+        "ToyOS: preempt unified tail unexpected",
+        "ToyOS: paging stage2 aspace create failed",
+        "ToyOS: paging stage2 aspace activate failed",
+        "ToyOS: paging stage2 aspace release failed",
+        "ToyOS: paging stage2 skipped (stable path)"
+      ]
+    },
+    {
+      "name": "qemu_user_probe_assertions",
+      "cwd": ".",
+      "shell": false,
+      "command": [
+        "python",
+        "tools/toyos_regression_case.py",
+        "--case",
+        "qemu_user_probe_assertions"
+      ],
+      "timeout_seconds": 30,
+      "rounds": 3,
+      "required_passes": 3,
+      "allow_timeout": false,
+      "expected_returncodes": [
+        0
+      ],
+      "log_files": [
+        "build/qemu-debug.log"
+      ],
+      "ordered_pass_markers": true,
+      "min_log_size": 200,
+      "pass_markers": [
+        "ramfs-files=",
+        "tinyfs-files=",
+        "tinyfs[0]=",
+        "motd=",
+        "motd-repeat-match=1",
+        "drivers=",
+        "missing-read-status=1",
+        "empty-path-status=1",
+        "invalid-syscall-status=4294967295",
+        "ToyOS: probe tinyfs size ok",
+        "ToyOS: probe ramfs size ok",
+        "ToyOS: probe ramfs write zero-length rejected",
+        "ToyOS: probe tinyfs write zero-length rejected",
+        "ToyOS: probe ramfs write null-payload rejected",
+        "ToyOS: probe tinyfs write null-payload rejected",
+          "ToyOS: probe ramfs write bounded-no-nul rejected",
+          "ToyOS: probe tinyfs write bounded-no-nul rejected",
+          "ToyOS: probe ramfs write path-bounded-no-nul rejected",
+          "ToyOS: probe tinyfs write path-bounded-no-nul rejected",
+          "ToyOS: probe ramfs write declared-over-capacity rejected",
+          "ToyOS: probe tinyfs write declared-over-capacity rejected",
+        "ToyOS: probe tinyfs read null-path rejected",
+        "ToyOS: probe ramfs read null-buffer rejected",
+        "ToyOS: probe tinyfs read zero-capacity rejected",
+        "ToyOS: probe ramfs read overflow-pointer rejected",
+        "ToyOS: probe tinyfs read overflow-pointer rejected",
+        "ToyOS: user probe complete",
+        "ToyOS: scheduler rounds completed",
+        "ToyOS: kernel services online"
+      ],
+      "fail_markers": [
+        "PANIC:",
+        "*** KERNEL PANIC ***",
+        "ToyOS: probe tinyfs size unexpected",
+        "ToyOS: probe ramfs size unexpected",
+        "ToyOS: probe ramfs write zero-length unexpected",
+        "ToyOS: probe tinyfs write zero-length unexpected",
+        "ToyOS: probe ramfs write null-payload unexpected",
+        "ToyOS: probe tinyfs write null-payload unexpected",
+          "ToyOS: probe ramfs write bounded-no-nul unexpected",
+          "ToyOS: probe tinyfs write bounded-no-nul unexpected",
+          "ToyOS: probe ramfs write path-bounded-no-nul unexpected",
+          "ToyOS: probe tinyfs write path-bounded-no-nul unexpected",
+          "ToyOS: probe ramfs write declared-over-capacity unexpected",
+        "ToyOS: probe tinyfs write declared-over-capacity unexpected",
+        "ToyOS: probe tinyfs read null-path unexpected",
+        "ToyOS: probe ramfs read null-buffer unexpected",
+        "ToyOS: probe tinyfs read zero-capacity unexpected",
+        "ToyOS: probe ramfs read overflow-pointer unexpected",
+        "ToyOS: probe tinyfs read overflow-pointer unexpected",
+        "motd-repeat-match=0",
+        "missing-read-status=0",
+        "empty-path-status=0",
+        "invalid-syscall-status=0"
+      ]
+    },
+    {
+      "name": "qemu_filesystem_stress_assertions",
+      "cwd": ".",
+      "shell": false,
+      "command": [
+        "python",
+        "tools/toyos_regression_case.py",
+        "--case",
+        "qemu_filesystem_stress_assertions"
+      ],
+      "timeout_seconds": 30,
+      "rounds": 3,
+      "required_passes": 3,
+      "allow_timeout": false,
+      "expected_returncodes": [
+        0
+      ],
+      "log_files": [
+        "build/qemu-debug.log"
+      ],
+      "ordered_pass_markers": true,
+      "min_log_size": 340,
+      "pass_markers": [
+        "ToyOS: fs stress start",
+        "ToyOS: fs stress verified",
+        "ToyOS: fs stress complete",
+        "ToyOS: kernel services online"
+      ],
+      "fail_markers": [
+        "PANIC:",
+        "*** KERNEL PANIC ***",
+        "ramfs stress mismatch",
+        "tinyfs stress mismatch",
+        "tinyfs stress reread mismatch"
+      ]
+    },
+    {
+      "name": "qemu_shell_probe_assertions",
+      "cwd": ".",
+      "shell": false,
+      "command": [
+        "python",
+        "tools/toyos_regression_case.py",
+        "--case",
+        "qemu_shell_probe_assertions"
+      ],
+      "timeout_seconds": 30,
+      "rounds": 3,
+      "required_passes": 3,
+      "allow_timeout": false,
+      "expected_returncodes": [
+        0
+      ],
+      "log_files": [
+        "build/qemu-debug.log"
+      ],
+      "ordered_pass_markers": true,
+      "min_log_size": 280,
+      "pass_markers": [
+        "ToyOS: shell probe start",
+        "ToyOS: user probe complete",
+        "ToyOS: shell probe core commands",
+        "ToyOS: shell probe read checks",
+        "ToyOS: shell probe edit-path underflow ok",
+        "ToyOS: shell probe edit-path backspace ok",
+        "ToyOS: shell probe edit-path del-key ok",
+        "ToyOS: shell probe ramfs write phase",
+        "ToyOS: shell probe tinyfs write phase",
+        "ToyOS: shell probe complete",
+        "ToyOS: kernel services online"
+      ],
+      "fail_markers": [
+        "PANIC:",
+        "*** KERNEL PANIC ***",
+        "ToyOS: shell probe edit-path underflow unexpected",
+        "ToyOS: shell probe edit-path del-key unexpected",
+        "ToyOS: shell probe edit-path backspace unexpected"
+      ]
+    },
+    {
+      "name": "qemu_filesystem_multiwriter_assertions",
+      "cwd": ".",
+      "shell": false,
+      "command": [
+        "python",
+        "tools/toyos_regression_case.py",
+        "--case",
+        "qemu_filesystem_multiwriter_assertions"
+      ],
+      "timeout_seconds": 30,
+      "rounds": 3,
+      "required_passes": 3,
+      "allow_timeout": false,
+      "expected_returncodes": [
+        0
+      ],
+      "log_files": [
+        "build/qemu-debug.log"
+      ],
+      "ordered_pass_markers": true,
+      "min_log_size": 340,
+      "pass_markers": [
+        "ToyOS: fs writer A write",
+        "ToyOS: fs writer B write",
+        "ToyOS: fs writer A verified",
+        "ToyOS: fs writer B verified",
+        "ToyOS: fs multi verify start",
+        "ToyOS: fs multi verify complete",
+        "ToyOS: kernel services online"
+      ],
+      "fail_markers": [
+        "PANIC:",
+        "*** KERNEL PANIC ***",
+        "fs writer ramfs mismatch",
+        "fs writer tinyfs mismatch",
+        "fs multi verify ramfs a failed",
+        "fs multi verify tinyfs b failed"
+      ]
+    },
+    {
+      "name": "qemu_filesystem_mixed_assertions",
+      "cwd": ".",
+      "shell": false,
+      "command": [
+        "python",
+        "tools/toyos_regression_case.py",
+        "--case",
+        "qemu_filesystem_mixed_assertions"
+      ],
+      "timeout_seconds": 30,
+      "rounds": 3,
+      "required_passes": 3,
+      "allow_timeout": false,
+      "expected_returncodes": [
+        0
+      ],
+      "log_files": [
+        "build/qemu-debug.log"
+      ],
+      "ordered_pass_markers": true,
+      "min_log_size": 320,
+      "pass_markers": [
+        "ToyOS: fs mixed probe start",
+        "ToyOS: fs mixed probe phase1",
+        "ToyOS: fs mixed probe complete",
+        "ToyOS: kernel services online"
+      ],
+      "fail_markers": [
+        "PANIC:",
+        "*** KERNEL PANIC ***",
+        "ToyOS: fs mixed probe ramfs a fault",
+        "ToyOS: fs mixed probe tinyfs a fault",
+        "ToyOS: fs mixed probe ramfs b fault",
+        "ToyOS: fs mixed probe tinyfs b fault"
+      ]
+    }
+  ]
+}

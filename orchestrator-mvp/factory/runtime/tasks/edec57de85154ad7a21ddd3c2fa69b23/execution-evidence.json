@@ -1,0 +1,70 @@
+{
+  "task_id": "edec57de85154ad7a21ddd3c2fa69b23",
+  "task_title": "Collect supporting evidence",
+  "task_status": "timed_out",
+  "started_at": "2026-04-02T09:30:26.779820Z",
+  "updated_at": "2026-04-02T09:50:37.527384Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "103cfa48",
+      "step_title": "Frame research question",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-04-02T09:50:37.527384Z",
+      "phase": "understand",
+      "worker": "reviewer",
+      "status": "running",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "6d5c4ef5",
+      "step_title": "Acquire internet knowledge",
+      "action": "docker_step",
+      "ok": false,
+      "at": "2026-04-02T09:50:37.527384Z",
+      "phase": "execute",
+      "worker": "docker",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "a7c73d88",
+      "step_title": "Synthesize research output",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-04-02T09:50:37.527384Z",
+      "phase": "summarize",
+      "worker": "reviewer",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    }
+  ],
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-02T09:30:26.789739Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "edec57de85154ad7a21ddd3c2fa69b23",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "research",
+        "queue_name": "fastlane",
+        "task_type": "artifact_audit"
+      }
+    ],
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

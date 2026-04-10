@@ -1,0 +1,31 @@
+{
+  "task_id": "task-toyos-build-shadow-0001",
+  "attempts": [
+    {
+      "command": [
+        "D:\\codex\\tools\\python311-embed\\python.exe",
+        "D:\\codex\\orchestrator-mvp\\tools\\build_toy_os.py",
+        "--target",
+        "D:\\codex\\orchestrator-mvp\\shadow_factory\\artifacts\\task-toyos-build-shadow-0001\\workspace"
+      ],
+      "cwd": "D:\\codex\\orchestrator-mvp",
+      "returncode": 0,
+      "stdout": "build report: D:\\codex\\orchestrator-mvp\\shadow_factory\\artifacts\\task-toyos-build-shadow-0001\\workspace\\build-report.json\nbuild ready: False\nbuild success: False\nlink mode: host-fallback\nrecommended backend: unavailable\nc sources: 13\n- failed: nasm boot.asm\n  stderr: nasm unavailable or boot.asm missing\n- failed: nasm src/isr_stub.asm\n  stderr: nasm unavailable or src/isr_stub.asm missing\n- failed: gcc\n  stderr: no compiler available\n- failed: ld\n  stderr: linker unavailable or prerequisites missing\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "wsl.exe",
+        "bash",
+        "-lc",
+        "python3 /mnt/d/codex/orchestrator-mvp/tools/build_toy_os.py --target /mnt/d/codex/orchestrator-mvp/shadow_factory/artifacts/task-toyos-build-shadow-0001/workspace"
+      ],
+      "cwd": "D:\\codex\\orchestrator-mvp",
+      "returncode": 4294967295,
+      "stdout": "鄀誰\u0006\\義豽\u001c C\u0000:\u0000\\\u0000U\u0000s\u0000e\u0000r\u0000s\u0000\\\u0000l\u0000e\u0000n\u0000o\u0000v\u0000o\u0000\\\u0000A\u0000p\u0000p\u0000D\u0000a\u0000t\u0000a\u0000\\\u0000L\u0000o\u0000c\u0000a\u0000l\u0000\\\u0000w\u0000s\u0000l\u0000\\\u0000{\u0000b\u00007\u0000d\u00005\u0000c\u0000c\u0000e\u00002\u0000-\u00009\u00002\u00003\u00003\u0000-\u00004\u00003\u00003\u00007\u0000-\u00008\u00002\u0000e\u00002\u0000-\u0000c\u00003\u0000f\u0000d\u00009\u00007\u00001\u0000c\u00002\u00001\u00000\u0000c\u0000}\u0000\\\u0000e\u0000x\u0000t\u00004\u0000.\u0000v\u0000h\u0000d\u0000x\u0000\u001d D枲R0R \u0000W\u0000S\u0000L\u00002\u0000:\u0000 \u0000鹼邁~b\nN0R\u0007c歔剉噀鯪\u00020 \u0000\n\u0000\n\u0000\u0019曪嬨N\u0001x:\u0000 \u0000W\u0000s\u0000l\u0000/\u0000S\u0000e\u0000r\u0000v\u0000i\u0000c\u0000e\u0000/\u0000C\u0000r\u0000e\u0000a\u0000t\u0000e\u0000I\u0000n\u0000s\u0000t\u0000a\u0000n\u0000c\u0000e\u0000/\u0000M\u0000o\u0000u\u0000n\u0000t\u0000D\u0000i\u0000s\u0000k\u0000/\u0000H\u0000C\u0000S\u0000/\u0000E\u0000R\u0000R\u0000O\u0000R\u0000_\u0000F\u0000I\u0000L\u0000E\u0000_\u0000N\u0000O\u0000T\u0000_\u0000F\u0000O\u0000U\u0000N\u0000D\u0000\n\u0000\n\u0000",
+      "stderr": ""
+    }
+  ],
+  "selected_backend": "wsl",
+  "completed_at": "2026-03-26T14:43:11Z"
+}

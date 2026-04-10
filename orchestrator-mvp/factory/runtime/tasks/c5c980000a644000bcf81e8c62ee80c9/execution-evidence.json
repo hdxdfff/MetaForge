@@ -1,0 +1,28 @@
+{
+  "task_id": "c5c980000a644000bcf81e8c62ee80c9",
+  "task_title": "Coordinate cross-project impact for Expand tool extension coverage",
+  "task_status": "completed",
+  "started_at": "2026-03-19T17:57:00.745309Z",
+  "updated_at": "2026-03-19T19:57:02.225563Z",
+  "completed": true,
+  "steps": [
+    {
+      "step_id": "c5c980000a644000bcf81e8c62ee80c9-terminal-record",
+      "step_title": "Coordinate cross-project impact for Expand tool extension coverage",
+      "action": "task_terminal_record",
+      "ok": true,
+      "at": "2026-03-19T19:57:02.225563Z",
+      "status": "completed",
+      "summary": "Superseded by newer runtime task ab3c34dfe4f2499d8c18518b661edf63 for node cross_project_coordination.",
+      "error": null,
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ],
+  "result": {
+    "summary": "Superseded by newer runtime task ab3c34dfe4f2499d8c18518b661edf63 for node cross_project_coordination.",
+    "superseded_by": "ab3c34dfe4f2499d8c18518b661edf63",
+    "dedupe_reconciled": true
+  }
+}

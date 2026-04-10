@@ -1,0 +1,20 @@
+{
+  "artifact_id": "ml-binary-classification-lab",
+  "type": "report",
+  "version": "0.1.0",
+  "artifact_path": "D:/codex/generated/ml-binary-classification-lab",
+  "entrypoint": "run_demo.py",
+  "evidence": [
+    "build-report.json",
+    "test-report.json",
+    "execution-report.json"
+  ],
+  "buildable": true,
+  "runnable": true,
+  "test_passed": true,
+  "reproducible": true,
+  "category": "report",
+  "title": "Binary classification lab bundle",
+  "message": "Provide a runnable lab bundle that can self-test and emit classification metrics.",
+  "sha256": "5c314de6c0480603a37bf5ef54d618895c5c3e4f76b83466b27de28bd7ad8cf6"
+}

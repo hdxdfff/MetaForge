@@ -1,0 +1,106 @@
+{
+  "task_id": "058f0c1d823d45eba2b4d9f3d741e52f",
+  "task_title": "Coordinate cross-project impact for Strengthen webapp generation capability",
+  "task_status": "timed_out",
+  "started_at": "2026-03-19T16:33:29.760618Z",
+  "updated_at": "2026-03-19T16:45:45.107519Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "fc6422d2",
+      "step_title": "Understand task",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-03-19T16:45:45.107519Z",
+      "phase": "understand",
+      "worker": "reviewer",
+      "status": "completed",
+      "output_ref": {
+        "artifact_id": "ctx_0cf0ca8fca33",
+        "task_id": "058f0c1d823d45eba2b4d9f3d741e52f",
+        "step_id": "fc6422d2",
+        "channel": "reviewer-output",
+        "title": "Understand task output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\058f0c1d823d45eba2b4d9f3d741e52f\\fc6422d2-reviewer-output-ctx_0cf0ca8fca33.txt",
+        "size_chars": 1602,
+        "line_count": 17,
+        "created_at": "2026-03-19T16:36:13.618595Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "understand",
+          "route_model": "deepseek-reasoner",
+          "route_provider": "reasoning"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 1602,
+        "line_count": 17,
+        "stored_raw": true
+      },
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "101c2e76",
+      "step_title": "Draft solution",
+      "action": "coder_step",
+      "ok": false,
+      "at": "2026-03-19T16:45:45.107519Z",
+      "phase": "draft",
+      "worker": "coder",
+      "status": "running",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "e0fd958b",
+      "step_title": "Execute validation",
+      "action": "shell_step",
+      "ok": false,
+      "at": "2026-03-19T16:45:45.107519Z",
+      "phase": "execute",
+      "worker": "shell",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "3246ed5a",
+      "step_title": "Verify result",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-03-19T16:45:45.107519Z",
+      "phase": "verify",
+      "worker": "reviewer",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "409c5a91",
+      "step_title": "Revise next action",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-03-19T16:45:45.107519Z",
+      "phase": "revise",
+      "worker": "reviewer",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    }
+  ],
+  "result": {
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "task_id": "db93ab06c9154e7a92de129888f28b27",
+  "task_title": "Coordinate cross-project impact for Expand tool extension coverage",
+  "task_status": "completed",
+  "completed": true,
+  "updated_at": "2026-03-19T18:00:45.006958Z",
+  "result": {
+    "summary": "Fallback plan generated locally because planner remote access is unavailable.",
+    "completed_steps": 5,
+    "context_used_chars": 602,
+    "cheap_calls_used": 4,
+    "cheap_chars_used": 4157,
+    "escalation_count": 2,
+    "execution_mode": "governance",
+    "production_evidence": {
+      "mode": "governance",
+      "status": "not-required"
+    },
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\db93ab06c9154e7a92de129888f28b27\\execution-evidence.json",
+    "execution_evidence_step_count": 0
+  },
+  "started_at": "2026-03-19T17:52:49.667616Z",
+  "steps": [
+    {
+      "step_id": "a1d4fa94",
+      "step_title": "Understand task",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-03-19T18:00:45.006958Z",
+      "phase": "understand",
+      "worker": "reviewer",
+      "status": "completed",
+      "output_ref": {
+        "artifact_id": "ctx_b28f52b2e3ef",
+        "task_id": "db93ab06c9154e7a92de129888f28b27",
+        "step_id": "a1d4fa94",
+        "channel": "reviewer-output",
+        "title": "Understand task output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\db93ab06c9154e7a92de129888f28b27\\a1d4fa94-reviewer-output-ctx_b28f52b2e3ef.txt",
+        "size_chars": 1719,
+        "line_count": 16,
+        "created_at": "2026-03-19T17:55:58.204334Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "understand",
+          "route_model": "deepseek-reasoner",
+          "route_provider": "reasoning"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 1719,
+        "line_count": 16,
+        "stored_raw": true
+      },
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "d651449f",
+      "step_title": "Draft solution",
+      "action": "coder_step",
+      "ok": true,
+      "at": "2026-03-19T18:00:45.006958Z",
+      "phase": "draft",
+      "worker": "coder",
+      "status": "completed",
+      "output_ref": {
+        "artifact_id": "ctx_637d78ec3148",
+        "task_id": "db93ab06c9154e7a92de129888f28b27",
+        "step_id": "d651449f",
+        "channel": "coder-output",
+        "title": "Draft solution output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\db93ab06c9154e7a92de129888f28b27\\d651449f-coder-output-ctx_637d78ec3148.txt",
+        "size_chars": 1171,
+        "line_count": 25,
+        "created_at": "2026-03-19T17:57:20.414754Z",
+        "metadata": {
+          "worker": "coder",
+          "phase": "draft",
+          "route_model": "gpt-5.4-pro",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "coder-output",
+        "char_count": 1171,
+        "line_count": 25,
+        "stored_raw": true
+      },
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "b8008c3d",
+      "step_title": "Execute validation",
+      "action": "shell_step",
+      "ok": true,
+      "at": "2026-03-19T18:00:45.006958Z",
+      "phase": "execute",
+      "worker": "shell",
+      "status": "completed",
+      "output_ref": {
+        "artifact_id": "ctx_0edc94f4224b",
+        "task_id": "db93ab06c9154e7a92de129888f28b27",
+        "step_id": "b8008c3d",
+        "channel": "shell-output",
+        "title": "Execute validation output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\db93ab06c9154e7a92de129888f28b27\\b8008c3d-shell-output-ctx_0edc94f4224b.txt",
+        "size_chars": 352,
+        "line_count": 11,
+        "created_at": "2026-03-19T17:57:47.504340Z",
+        "metadata": {
+          "worker": "shell",
+          "phase": "execute",
+          "route_model": "deepseek-chat",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "shell-output",
+        "char_count": 352,
+        "line_count": 11,
+        "stored_raw": true
+      },
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "6f8e44f6",
+      "step_title": "Verify result",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-03-19T18:00:45.006958Z",
+      "phase": "verify",
+      "worker": "reviewer",
+      "status": "completed",
+      "output_ref": {
+        "artifact_id": "ctx_c57a4eab6c84",
+        "task_id": "db93ab06c9154e7a92de129888f28b27",
+        "step_id": "6f8e44f6",
+        "channel": "reviewer-output",
+        "title": "Verify result output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\db93ab06c9154e7a92de129888f28b27\\6f8e44f6-reviewer-output-ctx_c57a4eab6c84.txt",
+        "size_chars": 1091,
+        "line_count": 31,
+        "created_at": "2026-03-19T17:59:00.898075Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "verify",
+          "route_model": "gpt-5.4-pro",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 1091,
+        "line_count": 31,
+        "stored_raw": true
+      },
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "72ca03dd",
+      "step_title": "Revise next action",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-03-19T18:00:45.006958Z",
+      "phase": "revise",
+      "worker": "reviewer",
+      "status": "completed",
+      "output_ref": {
+        "artifact_id": "ctx_c3953cc1c064",
+        "task_id": "db93ab06c9154e7a92de129888f28b27",
+        "step_id": "72ca03dd",
+        "channel": "reviewer-output",
+        "title": "Revise next action output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\db93ab06c9154e7a92de129888f28b27\\72ca03dd-reviewer-output-ctx_c3953cc1c064.txt",
+        "size_chars": 1228,
+        "line_count": 18,
+        "created_at": "2026-03-19T17:59:51.452516Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "revise",
+          "route_model": "deepseek-reasoner",
+          "route_provider": "reasoning"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 1228,
+        "line_count": 18,
+        "stored_raw": true
+      },
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    }
+  ]
+}

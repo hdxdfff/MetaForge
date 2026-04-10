@@ -1,0 +1,309 @@
+{
+  "updated_at": "2026-04-04T15:34:02.839287Z",
+  "status": "archived",
+  "task_history_count": 120,
+  "failed_task_count": 55,
+  "failure_rate": 0.4583,
+  "historical_failure_debt_count": 55,
+  "historical_failure_debt_severity": "high",
+  "historical_failure_debt_burndown_rate": 0.0,
+  "historical_failure_debt_last_reduced_at": "2026-04-03T18:34:03.648866Z",
+  "status_counts": {
+    "failed": 55,
+    "running": 46,
+    "completed": 4,
+    "released": 8,
+    "queued": 3,
+    "planning": 2,
+    "timed_out": 2
+  },
+  "top_failed_goals": [
+    [
+      "Identify the smallest viable slice",
+      15
+    ],
+    [
+      "Implement the bounded change",
+      10
+    ],
+    [
+      "Validate the change",
+      6
+    ],
+    [
+      "Restore ToyOS real artifact delivery",
+      4
+    ],
+    [
+      "Use the orchestrator as an AI-managed software delivery pipeline instead of a single coding agent.",
+      3
+    ],
+    [
+      "Finish routine coding work with small verified patches and local execution.",
+      3
+    ],
+    [
+      "Unblock Restore ToyOS real artifact delivery: Run baseline runtime test loop for Restore ToyOS real artifact delivery",
+      3
+    ],
+    [
+      "Execute the next action",
+      3
+    ],
+    [
+      "Clarify target outcome",
+      3
+    ],
+    [
+      "Let cheap workers handle routine debugging first and escalate only when repeated failures or risky changes appear.",
+      2
+    ]
+  ],
+  "failed_samples": [
+    {
+      "task_id": "d27859a51ce2419fbe15e1f6ef4100b9",
+      "status": "failed",
+      "goal": "Use the orchestrator as an AI-managed software delivery pipeline instead of a single coding agent.",
+      "repo_path": "D:\\codex\\orchestrator-mvp",
+      "updated_at": "2026-04-03T13:50:55.675697Z",
+      "error": null,
+      "heartbeat_at": "2026-04-03T13:50:55.675697Z",
+      "result": {
+        "summary": "Audit output schema rejected for report_refresh/reviewer: Reviewer audit output missing required structured sections.",
+        "error": "Audit output schema rejected for report_refresh/reviewer: Reviewer audit output missing required structured sections."
+      }
+    },
+    {
+      "task_id": "1e27ee3aed3c47d6b92c6b931868a639",
+      "status": "failed",
+      "goal": "Finish routine coding work with small verified patches and local execution.",
+      "repo_path": "D:\\codex\\orchestrator-mvp",
+      "updated_at": "2026-04-03T13:41:50.947090Z",
+      "error": null
+    },
+    {
+      "task_id": "941a1f2d427241809948be9c642da0c8",
+      "status": "failed",
+      "goal": "Let cheap workers handle routine debugging first and escalate only when repeated failures or risky changes appear.",
+      "repo_path": "D:\\codex\\orchestrator-mvp",
+      "updated_at": "2026-04-03T13:41:41.053529Z",
+      "error": null
+    },
+    {
+      "task_id": "fdc383758e3a478cbcb77181cb8ff779",
+      "status": "failed",
+      "goal": "Restore ToyOS real artifact delivery",
+      "repo_path": "D:\\codex",
+      "updated_at": "2026-04-03T13:41:29.535181Z",
+      "error": null
+    },
+    {
+      "task_id": "954c6af729e944f8a73d467fb3c9826c",
+      "status": "failed",
+      "goal": "Implement the bounded change",
+      "repo_path": "D:\\codex",
+      "updated_at": "2026-04-03T13:42:24.146186Z",
+      "error": null,
+      "heartbeat_at": "2026-04-03T13:42:24.146186Z",
+      "result": {
+        "summary": "<asyncio.locks.Lock object at 0x000002C007220A50 [unlocked, waiters:1]> is bound to a different event loop",
+        "error": "<asyncio.locks.Lock object at 0x000002C007220A50 [unlocked, waiters:1]> is bound to a different event loop"
+      }
+    },
+    {
+      "task_id": "0dead6687d5f4832bffaaa66b926e3bf",
+      "status": "failed",
+      "goal": "Identify the smallest viable slice",
+      "repo_path": "D:\\codex",
+      "updated_at": "2026-04-02T18:45:58.595176Z",
+      "error": null,
+      "heartbeat_at": "2026-04-02T18:45:58.595176Z",
+      "result": {
+        "summary": "Shell command failed with code 1: Traceback (most recent call last):\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 167, in <module>\r\n    raise SystemExit(main())\r\n                     ^^^^^^\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 141, in main\r\n    spec = json.loads(spec_path.read_text(encoding=\"utf-8\"))\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"pathlib.py\", line 1058, in read_text\r\n  File \"pathlib.py\", line 1044, in open\r\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\codex\\\\tools\\\\generic_qemu_smoke.json'",
+        "error": "Shell command failed with code 1: Traceback (most recent call last):\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 167, in <module>\r\n    raise SystemExit(main())\r\n                     ^^^^^^\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 141, in main\r\n    spec = json.loads(spec_path.read_text(encoding=\"utf-8\"))\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"pathlib.py\", line 1058, in read_text\r\n  File \"pathlib.py\", line 1044, in open\r\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\codex\\\\tools\\\\generic_qemu_smoke.json'"
+      }
+    },
+    {
+      "task_id": "41eaada3a400443982bb2414df18a845",
+      "status": "failed",
+      "goal": "Identify the smallest viable slice",
+      "repo_path": "D:\\codex",
+      "updated_at": "2026-04-02T20:34:09.662299Z",
+      "error": null,
+      "heartbeat_at": "2026-04-02T20:34:09.662299Z",
+      "result": {
+        "summary": "Shell command failed with code 1: Traceback (most recent call last):\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 167, in <module>\r\n    raise SystemExit(main())\r\n                     ^^^^^^\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 141, in main\r\n    spec = json.loads(spec_path.read_text(encoding=\"utf-8\"))\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"pathlib.py\", line 1058, in read_text\r\n  File \"pathlib.py\", line 1044, in open\r\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\codex\\\\tools\\\\generic_qemu_smoke.json'",
+        "error": "Shell command failed with code 1: Traceback (most recent call last):\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 167, in <module>\r\n    raise SystemExit(main())\r\n                     ^^^^^^\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 141, in main\r\n    spec = json.loads(spec_path.read_text(encoding=\"utf-8\"))\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"pathlib.py\", line 1058, in read_text\r\n  File \"pathlib.py\", line 1044, in open\r\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\codex\\\\tools\\\\generic_qemu_smoke.json'"
+      }
+    },
+    {
+      "task_id": "42a700a208064d15b4f79567f14032bb",
+      "status": "failed",
+      "goal": "Identify the smallest viable slice",
+      "repo_path": "D:\\codex",
+      "updated_at": "2026-04-02T19:56:22.271683Z",
+      "error": null,
+      "heartbeat_at": "2026-04-02T19:56:22.271683Z",
+      "result": {
+        "summary": "Shell command failed with code 1: Traceback (most recent call last):\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 167, in <module>\r\n    raise SystemExit(main())\r\n                     ^^^^^^\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 141, in main\r\n    spec = json.loads(spec_path.read_text(encoding=\"utf-8\"))\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"pathlib.py\", line 1058, in read_text\r\n  File \"pathlib.py\", line 1044, in open\r\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\codex\\\\tools\\\\generic_qemu_smoke.json'",
+        "error": "Shell command failed with code 1: Traceback (most recent call last):\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 167, in <module>\r\n    raise SystemExit(main())\r\n                     ^^^^^^\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 141, in main\r\n    spec = json.loads(spec_path.read_text(encoding=\"utf-8\"))\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"pathlib.py\", line 1058, in read_text\r\n  File \"pathlib.py\", line 1044, in open\r\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\codex\\\\tools\\\\generic_qemu_smoke.json'"
+      }
+    },
+    {
+      "task_id": "65f8de21760243ca94a9949b4601f350",
+      "status": "failed",
+      "goal": "Unblock Restore ToyOS real artifact delivery: Run baseline runtime test loop for Restore ToyOS real artifact delivery",
+      "repo_path": "D:\\codex",
+      "updated_at": "2026-04-02T18:35:51.495055Z",
+      "error": null,
+      "heartbeat_at": "2026-04-02T18:35:51.495055Z",
+      "result": {
+        "summary": "<asyncio.locks.Lock object at 0x000001FDB6803210 [unlocked, waiters:1]> is bound to a different event loop",
+        "error": "<asyncio.locks.Lock object at 0x000001FDB6803210 [unlocked, waiters:1]> is bound to a different event loop"
+      }
+    },
+    {
+      "task_id": "70f41900a0ec4f66bc0dea8c65dd41b2",
+      "status": "failed",
+      "goal": "Identify the smallest viable slice",
+      "repo_path": "D:\\codex",
+      "updated_at": "2026-04-02T20:17:16.643120Z",
+      "error": null,
+      "heartbeat_at": "2026-04-02T20:17:16.643120Z",
+      "result": {
+        "summary": "Shell command failed with code 1: Traceback (most recent call last):\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 167, in <module>\r\n    raise SystemExit(main())\r\n                     ^^^^^^\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 141, in main\r\n    spec = json.loads(spec_path.read_text(encoding=\"utf-8\"))\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"pathlib.py\", line 1058, in read_text\r\n  File \"pathlib.py\", line 1044, in open\r\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\codex\\\\tools\\\\generic_qemu_smoke.json'",
+        "error": "Shell command failed with code 1: Traceback (most recent call last):\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 167, in <module>\r\n    raise SystemExit(main())\r\n                     ^^^^^^\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 141, in main\r\n    spec = json.loads(spec_path.read_text(encoding=\"utf-8\"))\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"pathlib.py\", line 1058, in read_text\r\n  File \"pathlib.py\", line 1044, in open\r\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\codex\\\\tools\\\\generic_qemu_smoke.json'"
+      }
+    },
+    {
+      "task_id": "91d37c28ef184e34a3de0e049f1640c8",
+      "status": "failed",
+      "goal": "Unblock Restore ToyOS real artifact delivery: Run baseline runtime test loop for Restore ToyOS real artifact delivery",
+      "repo_path": "D:\\codex",
+      "updated_at": "2026-04-02T19:13:08.669469Z",
+      "error": null,
+      "heartbeat_at": "2026-04-02T19:13:08.669469Z",
+      "result": {
+        "summary": "Production evidence incomplete: fresh=1/3 missing=['generated/toy-os-demo/build-report.json', 'generated/toy-os-demo/build/build.log', 'generated/toy-os-demo/artifact.sha256'] stale=['generated/toy-os-demo/artifact_manifest.json']",
+        "error": "Production evidence incomplete: fresh=1/3 missing=['generated/toy-os-demo/build-report.json', 'generated/toy-os-demo/build/build.log', 'generated/toy-os-demo/artifact.sha256'] stale=['generated/toy-os-demo/artifact_manifest.json']"
+      }
+    },
+    {
+      "task_id": "aa76b42b64f74712b295bcb0586367ca",
+      "status": "failed",
+      "goal": "Identify the smallest viable slice",
+      "repo_path": "D:\\codex",
+      "updated_at": "2026-04-02T18:36:33.390110Z",
+      "error": null,
+      "heartbeat_at": "2026-04-02T18:36:33.390110Z",
+      "result": {
+        "summary": "Shell command failed with code 1: Traceback (most recent call last):\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 167, in <module>\r\n    raise SystemExit(main())\r\n                     ^^^^^^\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 141, in main\r\n    spec = json.loads(spec_path.read_text(encoding=\"utf-8\"))\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"pathlib.py\", line 1058, in read_text\r\n  File \"pathlib.py\", line 1044, in open\r\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\codex\\\\tools\\\\generic_qemu_smoke.json'",
+        "error": "Shell command failed with code 1: Traceback (most recent call last):\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 167, in <module>\r\n    raise SystemExit(main())\r\n                     ^^^^^^\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 141, in main\r\n    spec = json.loads(spec_path.read_text(encoding=\"utf-8\"))\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"pathlib.py\", line 1058, in read_text\r\n  File \"pathlib.py\", line 1044, in open\r\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\codex\\\\tools\\\\generic_qemu_smoke.json'"
+      }
+    },
+    {
+      "task_id": "aae4157c217d4ae0930ec6436fbab198",
+      "status": "failed",
+      "goal": "Implement the bounded change",
+      "repo_path": "D:\\codex",
+      "updated_at": "2026-04-02T20:21:02.822075Z",
+      "error": null,
+      "heartbeat_at": "2026-04-02T20:21:02.822075Z",
+      "result": {
+        "summary": "<asyncio.locks.Lock object at 0x000001FDBEF692D0 [unlocked, waiters:1]> is bound to a different event loop",
+        "error": "<asyncio.locks.Lock object at 0x000001FDBEF692D0 [unlocked, waiters:1]> is bound to a different event loop"
+      }
+    },
+    {
+      "task_id": "c7a812f7b163467c972cbceb503dc013",
+      "status": "failed",
+      "goal": "Implement the bounded change",
+      "repo_path": "D:\\codex",
+      "updated_at": "2026-04-02T18:36:30.588340Z",
+      "error": null,
+      "heartbeat_at": "2026-04-02T18:36:30.588340Z",
+      "result": {
+        "summary": "<asyncio.locks.Lock object at 0x000001FDB6803210 [unlocked, waiters:1]> is bound to a different event loop",
+        "error": "<asyncio.locks.Lock object at 0x000001FDB6803210 [unlocked, waiters:1]> is bound to a different event loop"
+      }
+    },
+    {
+      "task_id": "d27f07df1b534c8493b1855b357d833e",
+      "status": "failed",
+      "goal": "Unblock Restore ToyOS real artifact delivery: Run baseline runtime test loop for Restore ToyOS real artifact delivery",
+      "repo_path": "D:\\codex",
+      "updated_at": "2026-04-02T20:34:44.197464Z",
+      "error": null,
+      "heartbeat_at": "2026-04-02T20:34:44.197464Z",
+      "result": {
+        "summary": "Production evidence incomplete: fresh=0/3 missing=['generated/toy-os-demo/build-report.json', 'generated/toy-os-demo/build/build.log', 'generated/toy-os-demo/artifact.sha256'] stale=['generated/toy-os-demo/build/kernel.bin', 'generated/toy-os-demo/artifact_manifest.json']",
+        "error": "Production evidence incomplete: fresh=0/3 missing=['generated/toy-os-demo/build-report.json', 'generated/toy-os-demo/build/build.log', 'generated/toy-os-demo/artifact.sha256'] stale=['generated/toy-os-demo/build/kernel.bin', 'generated/toy-os-demo/artifact_manifest.json']"
+      }
+    },
+    {
+      "task_id": "d9ab471df164426781eb6056677e2b0c",
+      "status": "failed",
+      "goal": "Validate the change",
+      "repo_path": "D:\\codex",
+      "updated_at": "2026-04-02T20:24:52.925787Z",
+      "error": null,
+      "heartbeat_at": "2026-04-02T20:24:52.925787Z",
+      "result": {
+        "summary": "Shell command failed with code 1: Traceback (most recent call last):\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 167, in <module>\r\n    raise SystemExit(main())\r\n                     ^^^^^^\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 141, in main\r\n    spec = json.loads(spec_path.read_text(encoding=\"utf-8\"))\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"pathlib.py\", line 1058, in read_text\r\n  File \"pathlib.py\", line 1044, in open\r\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\codex\\\\tools\\\\generic_qemu_smoke.json'",
+        "error": "Shell command failed with code 1: Traceback (most recent call last):\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 167, in <module>\r\n    raise SystemExit(main())\r\n                     ^^^^^^\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 141, in main\r\n    spec = json.loads(spec_path.read_text(encoding=\"utf-8\"))\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"pathlib.py\", line 1058, in read_text\r\n  File \"pathlib.py\", line 1044, in open\r\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\codex\\\\tools\\\\generic_qemu_smoke.json'"
+      }
+    },
+    {
+      "task_id": "e489d593d00f401680b942dda433f618",
+      "status": "failed",
+      "goal": "Validate the change",
+      "repo_path": "D:\\codex",
+      "updated_at": "2026-04-02T18:46:23.569146Z",
+      "error": null,
+      "heartbeat_at": "2026-04-02T18:46:23.569146Z",
+      "result": {
+        "summary": "Shell command failed with code 1: Traceback (most recent call last):\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 167, in <module>\r\n    raise SystemExit(main())\r\n                     ^^^^^^\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 141, in main\r\n    spec = json.loads(spec_path.read_text(encoding=\"utf-8\"))\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"pathlib.py\", line 1058, in read_text\r\n  File \"pathlib.py\", line 1044, in open\r\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\codex\\\\tools\\\\generic_qemu_smoke.json'",
+        "error": "Shell command failed with code 1: Traceback (most recent call last):\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 167, in <module>\r\n    raise SystemExit(main())\r\n                     ^^^^^^\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 141, in main\r\n    spec = json.loads(spec_path.read_text(encoding=\"utf-8\"))\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"pathlib.py\", line 1058, in read_text\r\n  File \"pathlib.py\", line 1044, in open\r\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\codex\\\\tools\\\\generic_qemu_smoke.json'"
+      }
+    },
+    {
+      "task_id": "c52e8740161c4035a4809b93e6c87ccc",
+      "status": "failed",
+      "goal": "Identify the smallest viable slice",
+      "repo_path": "D:\\codex",
+      "updated_at": "2026-04-03T13:42:28.045668Z",
+      "error": null,
+      "heartbeat_at": "2026-04-03T13:42:28.045668Z",
+      "result": {
+        "summary": "Shell command failed with code 1: Traceback (most recent call last):\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 169, in <module>\r\n    raise SystemExit(main())\r\n                     ^^^^^^\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 143, in main\r\n    spec = json.loads(spec_path.read_text(encoding=\"utf-8\"))\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"pathlib.py\", line 1058, in read_text\r\n  File \"pathlib.py\", line 1044, in open\r\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\codex\\\\tools\\\\generic_qemu_smoke.json'",
+        "error": "Shell command failed with code 1: Traceback (most recent call last):\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 169, in <module>\r\n    raise SystemExit(main())\r\n                     ^^^^^^\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 143, in main\r\n    spec = json.loads(spec_path.read_text(encoding=\"utf-8\"))\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"pathlib.py\", line 1058, in read_text\r\n  File \"pathlib.py\", line 1044, in open\r\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\codex\\\\tools\\\\generic_qemu_smoke.json'"
+      }
+    },
+    {
+      "task_id": "d99db2bd8ae84af8bbeff4b48a24a1d1",
+      "status": "failed",
+      "goal": "Identify the smallest viable slice",
+      "repo_path": "D:\\codex",
+      "updated_at": "2026-04-02T22:57:48.976051Z",
+      "error": null,
+      "heartbeat_at": "2026-04-02T22:57:48.977836Z",
+      "result": {
+        "summary": "Shell command failed with code 1: Traceback (most recent call last):\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 167, in <module>\r\n    raise SystemExit(main())\r\n                     ^^^^^^\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 141, in main\r\n    spec = json.loads(spec_path.read_text(encoding=\"utf-8\"))\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"pathlib.py\", line 1058, in read_text\r\n  File \"pathlib.py\", line 1044, in open\r\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\codex\\\\tools\\\\generic_qemu_smoke.json'",
+        "error": "Shell command failed with code 1: Traceback (most recent call last):\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 167, in <module>\r\n    raise SystemExit(main())\r\n                     ^^^^^^\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 141, in main\r\n    spec = json.loads(spec_path.read_text(encoding=\"utf-8\"))\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"pathlib.py\", line 1058, in read_text\r\n  File \"pathlib.py\", line 1044, in open\r\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\codex\\\\tools\\\\generic_qemu_smoke.json'"
+      }
+    },
+    {
+      "task_id": "e608b9876db5454ab7de90ee1fbcb74d",
+      "status": "failed",
+      "goal": "Finish routine coding work with small verified patches and local execution.",
+      "repo_path": "D:\\codex\\orchestrator-mvp",
+      "updated_at": "2026-04-02T22:59:52.676838Z",
+      "error": null
+    }
+  ],
+  "archive_dir": "D:\\codex\\orchestrator-mvp\\generated\\historical-failure-debt-archive\\20260404T153402Z",
+  "risk_notes": [
+    "This archive separates historical failure debt from live queue pressure.",
+    "Use queue_pressure_analysis.json for current operational pressure."
+  ]
+}

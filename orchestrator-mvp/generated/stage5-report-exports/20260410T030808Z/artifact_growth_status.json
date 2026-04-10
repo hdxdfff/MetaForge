@@ -1,0 +1,13 @@
+{
+  "updated_at": "2026-04-09T16:08:56.214733Z",
+  "status": "budget_closed",
+  "created_items": 0,
+  "skipped_due_to_budget": 0,
+  "open_items_total": 5,
+  "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+  "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json",
+  "budget_gate": {
+    "allow_p2": false,
+    "source": "D:\\codex\\orchestrator-mvp\\data\\industrial_operations.json"
+  }
+}

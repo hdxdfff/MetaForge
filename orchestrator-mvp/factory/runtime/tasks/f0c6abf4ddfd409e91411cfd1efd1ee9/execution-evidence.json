@@ -1,0 +1,80 @@
+{
+  "steps": [
+    {
+      "step_id": "a85b20ad",
+      "step_title": "Understand task",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-03-20T16:10:55.029857Z",
+      "worker": "reviewer",
+      "phase": "understand",
+      "route_model": "deepseek-v3.2",
+      "route_provider": "openai",
+      "output_ref": {
+        "artifact_id": "ctx_b33f44b6f2e0",
+        "task_id": "f0c6abf4ddfd409e91411cfd1efd1ee9",
+        "step_id": "a85b20ad",
+        "channel": "reviewer-output",
+        "title": "Understand task output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\f0c6abf4ddfd409e91411cfd1efd1ee9\\a85b20ad-reviewer-output-ctx_b33f44b6f2e0.txt",
+        "size_chars": 1052,
+        "line_count": 20,
+        "created_at": "2026-03-20T16:10:29.569732Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "understand",
+          "route_model": "deepseek-v3.2",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 1052,
+        "line_count": 20,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "7938c2bc",
+      "step_title": "Draft solution",
+      "action": "coder_step",
+      "ok": true,
+      "at": "2026-03-20T16:14:06.869157Z",
+      "worker": "coder",
+      "phase": "draft",
+      "route_model": "deepseek-v3.2",
+      "route_provider": "openai",
+      "output_ref": {
+        "artifact_id": "ctx_70a47589f206",
+        "task_id": "f0c6abf4ddfd409e91411cfd1efd1ee9",
+        "step_id": "7938c2bc",
+        "channel": "coder-output",
+        "title": "Draft solution output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\f0c6abf4ddfd409e91411cfd1efd1ee9\\7938c2bc-coder-output-ctx_70a47589f206.txt",
+        "size_chars": 1061,
+        "line_count": 17,
+        "created_at": "2026-03-20T16:13:54.721918Z",
+        "metadata": {
+          "worker": "coder",
+          "phase": "draft",
+          "route_model": "deepseek-v3.2",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "coder-output",
+        "char_count": 1061,
+        "line_count": 17,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    }
+  ],
+  "task_id": "f0c6abf4ddfd409e91411cfd1efd1ee9",
+  "task_title": "Align project Computer Network Lab for Strengthen agent orchestration capability",
+  "task_status": "running",
+  "started_at": "2026-03-20T16:07:33.261025Z",
+  "updated_at": "2026-03-20T16:14:06.869157Z",
+  "completed": false
+}

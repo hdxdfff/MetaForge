@@ -1,0 +1,19 @@
+{
+  "title": "Operator-deployed ToyOS mainline bundle must preempt generic goal backlog",
+  "created_at": "2026-03-21T00:00:00Z",
+  "problem": "Freshly deployed ToyOS mainline goals remained planned because generic running/planned goals with equal or higher score consumed the limited goal scan window and dispatch slot.",
+  "symptoms": [
+    "ToyOS goals exist and compile to ready graphs but no tasks are created.",
+    "brain_loop actions show unrelated goals being scanned first.",
+    "A stale running goal or generic release backlog monopolizes dispatch budget."
+  ],
+  "rule": "When explicit ToyOS mainline goals are pending or planned and there is no active ToyOS mainline task, reorder the goal scan to put ToyOS mainline goals first before generic backlog.",
+  "implementation": {
+    "brain_loop": "Prioritize ToyOS mainline goals ahead of generic active goals when no ToyOS task is active.",
+    "blocked_goal_handling": "Auto-hold running goals whose linked tasks are terminal without active work."
+  },
+  "validation": [
+    "Blocked goal goal_23a99eee18 transitioned to on_hold with runtime_hold metadata.",
+    "ToyOS goals began dispatching architecture-contract tasks after prioritization."
+  ]
+}

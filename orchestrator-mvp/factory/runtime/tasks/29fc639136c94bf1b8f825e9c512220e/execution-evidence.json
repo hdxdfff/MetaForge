@@ -1,0 +1,153 @@
+{
+  "task_id": "29fc639136c94bf1b8f825e9c512220e",
+  "task_title": "Lab Report with Screenshots",
+  "task_status": "timed_out",
+  "started_at": "2026-04-02T19:18:51.837334Z",
+  "updated_at": "2026-04-02T19:40:43.634339Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "169a124d",
+      "step_title": "Spawn decomposition subtasks",
+      "action": "planner_step",
+      "ok": false,
+      "at": "2026-04-02T19:40:43.634339Z",
+      "phase": "decompose",
+      "worker": "planner",
+      "status": "running",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "fa8a285c",
+      "step_title": "Wait for child task completion",
+      "action": "planner_step",
+      "ok": false,
+      "at": "2026-04-02T19:40:43.634339Z",
+      "phase": "decompose",
+      "worker": "planner",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "c3c4ca2e",
+      "step_title": "Aggregate decomposition results",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-04-02T19:40:43.634339Z",
+      "phase": "verify",
+      "worker": "reviewer",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    }
+  ],
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-02T19:18:52.464540Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "29fc639136c94bf1b8f825e9c512220e",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "governance",
+        "queue_name": "fastlane",
+        "task_type": "report_refresh"
+      }
+    ],
+    "decomposition": {
+      "summary": "Fallback decomposition for: Summarize the experiment objective, exact steps, commands, observed results, and residual risks, then generate a screens",
+      "strategy": "bounded multi-layer split with analysis, execution, and verification branches",
+      "subtasks": [
+        {
+          "title": "Clarify the target",
+          "prompt": "Restate the objective and the smallest acceptable outcome for: Summarize the experiment objective, exact steps, commands, observed results, and residual risks, then generate a screenshot-friendly lab report in Markdown with local image paths embedded.",
+          "goal": "Clarify target outcome",
+          "task_type": "report_refresh",
+          "path_kind": "shared",
+          "queue_name": "fastlane",
+          "verification_level": "L1",
+          "preferred_worker": "reviewer",
+          "execution_mode": "governance",
+          "execution_lane": "host-control",
+          "decompose_children": false,
+          "shared_dependency_group": "29fc639136c94bf1b8f825e9c512220e",
+          "repair_for": null,
+          "inputs": [],
+          "outputs": [
+            "target brief"
+          ],
+          "dependencies": [],
+          "acceptance_criteria": [
+            "Target outcome is explicit."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        },
+        {
+          "title": "Execute the next bounded action",
+          "prompt": "Carry out the smallest bounded action that advances: Summarize the experiment objective, exact steps, commands, observed results, and residual risks, then generate a screenshot-friendly lab report in Markdown with local image paths embedded.",
+          "goal": "Execute the next action",
+          "task_type": "doc_patch",
+          "path_kind": "branch",
+          "queue_name": "fastlane",
+          "verification_level": "L1",
+          "preferred_worker": "coder",
+          "execution_mode": "governance",
+          "execution_lane": "host-control",
+          "decompose_children": false,
+          "shared_dependency_group": "29fc639136c94bf1b8f825e9c512220e",
+          "repair_for": null,
+          "inputs": [
+            "target brief"
+          ],
+          "outputs": [
+            "action result"
+          ],
+          "dependencies": [
+            "Clarify the target"
+          ],
+          "acceptance_criteria": [
+            "The action produces a concrete result."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        }
+      ],
+      "dag": {
+        "shared_nodes": [
+          "Clarify the target"
+        ],
+        "branch_nodes": [
+          "Execute the next bounded action"
+        ],
+        "repair_nodes": [],
+        "optional_nodes": [],
+        "speculative_nodes": [],
+        "blocked_nodes": [],
+        "edges": [
+          {
+            "from": "Clarify the target",
+            "to": "Execute the next bounded action",
+            "kind": "branch"
+          }
+        ],
+        "shared_dependency_group": "29fc639136c94bf1b8f825e9c512220e"
+      },
+      "depth": 0,
+      "max_depth": 2,
+      "mode": "multi_layer"
+    },
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

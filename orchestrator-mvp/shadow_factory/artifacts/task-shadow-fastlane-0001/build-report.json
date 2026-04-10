@@ -1,0 +1,8 @@
+{
+  "task_id": "task-shadow-fastlane-0001",
+  "status": "pass",
+  "build_success": true,
+  "build_ready": true,
+  "built_at": "2026-03-28T20:58:49Z",
+  "shadow_mode": true
+}

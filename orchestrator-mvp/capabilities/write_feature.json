@@ -1,0 +1,19 @@
+﻿{
+  "capability_id": "write_feature",
+  "version": 1,
+  "domain": "coding",
+  "summary": "Clarify a requested feature, implement it, and verify delivery.",
+  "goal_types": ["build_product", "build_platform", "production_instance"],
+  "keywords": ["feature", "implement", "add", "build", "create", "deliver"],
+  "inputs": ["feature_request", "repo_context", "acceptance_criteria"],
+  "steps": [
+    {"id": "clarify_deliverable", "title": "Clarify deliverable", "role": "product", "tools": ["read_file", "search_code"]},
+    {"id": "plan_implementation", "title": "Plan implementation", "role": "architect", "tools": ["read_file", "search_code"]},
+    {"id": "implement_feature", "title": "Implement feature", "role": "coder", "tools": ["patch_apply", "write_file"]},
+    {"id": "verify_delivery", "title": "Verify delivery", "role": "tester", "tools": ["run_tests", "compileall"]}
+  ],
+  "tools": ["read_file", "patch_apply", "run_tests"],
+  "success_conditions": ["feature_behavior_present", "verification_passed"],
+  "fallbacks": ["reduce_scope", "capture_follow_up"],
+  "reusable_for": ["feature_delivery", "incremental_implementation"]
+}

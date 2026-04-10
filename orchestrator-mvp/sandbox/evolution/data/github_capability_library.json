@@ -1,0 +1,45 @@
+{
+  "updated_at": "2026-03-12T07:09:57.455581Z",
+  "status": "ready",
+  "learned_repository_count": 1,
+  "asset_count": 6,
+  "synced_registry_count": 0,
+  "assets": [
+    {
+      "repo_id": "gh-dc17f0f4fb",
+      "repo_full_name": "Significant-Gravitas/AutoGPT",
+      "capability_id": "local_llm_runner",
+      "asset_path": "D:\\codex\\orchestrator-mvp\\factory\\agents\\github_learning\\significant-gravitas-autogpt\\local-llm-runner.json"
+    },
+    {
+      "repo_id": "gh-dc17f0f4fb",
+      "repo_full_name": "Significant-Gravitas/AutoGPT",
+      "capability_id": "token_streaming",
+      "asset_path": "D:\\codex\\orchestrator-mvp\\factory\\agents\\github_learning\\significant-gravitas-autogpt\\token-streaming.json"
+    },
+    {
+      "repo_id": "gh-dc17f0f4fb",
+      "repo_full_name": "Significant-Gravitas/AutoGPT",
+      "capability_id": "kv_cache_manager",
+      "asset_path": "D:\\codex\\orchestrator-mvp\\factory\\agents\\github_learning\\significant-gravitas-autogpt\\kv-cache-manager.json"
+    },
+    {
+      "repo_id": "gh-dc17f0f4fb",
+      "repo_full_name": "Significant-Gravitas/AutoGPT",
+      "capability_id": "agent_orchestration",
+      "asset_path": "D:\\codex\\orchestrator-mvp\\factory\\agents\\github_learning\\significant-gravitas-autogpt\\agent-orchestration.json"
+    },
+    {
+      "repo_id": "gh-dc17f0f4fb",
+      "repo_full_name": "Significant-Gravitas/AutoGPT",
+      "capability_id": "tool_execution",
+      "asset_path": "D:\\codex\\orchestrator-mvp\\factory\\agents\\github_learning\\significant-gravitas-autogpt\\tool-execution.json"
+    },
+    {
+      "repo_id": "gh-dc17f0f4fb",
+      "repo_full_name": "Significant-Gravitas/AutoGPT",
+      "capability_id": "workflow_planning",
+      "asset_path": "D:\\codex\\orchestrator-mvp\\factory\\agents\\github_learning\\significant-gravitas-autogpt\\workflow-planning.json"
+    }
+  ]
+}

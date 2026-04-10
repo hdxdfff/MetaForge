@@ -1,0 +1,18 @@
+{
+  "updated_at": "2026-04-04T04:54:03.063417Z",
+  "status": "pass",
+  "incident_count": 466,
+  "open_incident_count": 3,
+  "closed_incident_count": 463,
+  "severity_counts": {
+    "medium": 463
+  },
+  "domain_counts": {
+    "config": 463
+  },
+  "auto_repair_success_count": 463,
+  "auto_recovery_success_rate": 0.9936,
+  "mttr_minutes_p50": 0.0,
+  "mttr_minutes_p95": 0.01,
+  "ledger_path": "D:\\codex\\orchestrator-mvp\\data\\incident_ledger.json"
+}

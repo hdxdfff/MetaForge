@@ -1,0 +1,347 @@
+{
+  "task_id": "a8e3798a85004045aafdda99dd8e35f2",
+  "task_title": "Collect supporting evidence",
+  "task_status": "timed_out",
+  "started_at": "2026-04-02T09:23:49.216026Z",
+  "updated_at": "2026-04-02T09:41:25.277141Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "064c0103",
+      "step_title": "Spawn decomposition subtasks",
+      "action": "planner_step",
+      "ok": true,
+      "at": "2026-04-02T09:41:25.277141Z",
+      "phase": "decompose",
+      "worker": "planner",
+      "status": "completed",
+      "output_ref": {
+        "artifact_id": "ctx_f78c454b2f5e",
+        "task_id": "a8e3798a85004045aafdda99dd8e35f2",
+        "step_id": "064c0103",
+        "channel": "planner-output",
+        "title": "Spawn decomposition subtasks output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\a8e3798a85004045aafdda99dd8e35f2\\064c0103-planner-output-ctx_f78c454b2f5e.json",
+        "size_chars": 948,
+        "line_count": 34,
+        "created_at": "2026-04-02T09:31:20.918984Z",
+        "metadata": {
+          "worker": "planner",
+          "phase": "decompose",
+          "route_model": "internal-recovery",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 948,
+        "line_count": 34,
+        "stored_raw": true
+      },
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "bb8d2311",
+      "step_title": "Wait for child task completion",
+      "action": "planner_step",
+      "ok": false,
+      "at": "2026-04-02T09:41:25.277141Z",
+      "phase": "decompose",
+      "worker": "planner",
+      "status": "running",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "d2a8408f",
+      "step_title": "Aggregate decomposition results",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-04-02T09:41:25.277141Z",
+      "phase": "verify",
+      "worker": "reviewer",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    }
+  ],
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-02T09:23:49.221076Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "a8e3798a85004045aafdda99dd8e35f2",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "research",
+        "queue_name": "fastlane",
+        "task_type": "artifact_audit"
+      },
+      {
+        "timestamp": "2026-04-02T09:30:57.641353Z",
+        "kind": "decomposition_spawned",
+        "success": true,
+        "task_id": "a8e3798a85004045aafdda99dd8e35f2",
+        "child_task_count": 3,
+        "child_task_ids": [
+          "324c2ffdabfc49f8b63e5978bb8c1322",
+          "edec57de85154ad7a21ddd3c2fa69b23",
+          "b91474e40db5431f848f23139a96de4a"
+        ],
+        "dag": {
+          "shared_nodes": [
+            "Frame the problem"
+          ],
+          "branch_nodes": [
+            "Collect supporting evidence"
+          ],
+          "repair_nodes": [
+            "Synthesize next action"
+          ],
+          "optional_nodes": [],
+          "speculative_nodes": [],
+          "blocked_nodes": [],
+          "edges": [
+            {
+              "from": "Frame the problem",
+              "to": "Collect supporting evidence",
+              "kind": "branch"
+            },
+            {
+              "from": "Frame the problem",
+              "to": "Synthesize next action",
+              "kind": "repair"
+            },
+            {
+              "from": "Collect supporting evidence",
+              "to": "Synthesize next action",
+              "kind": "repair"
+            }
+          ],
+          "shared_dependency_group": "3c95090cf4b9418e851443a0679e90e9",
+          "child_dependency_ids": {
+            "324c2ffdabfc49f8b63e5978bb8c1322": [],
+            "edec57de85154ad7a21ddd3c2fa69b23": [
+              "324c2ffdabfc49f8b63e5978bb8c1322"
+            ],
+            "b91474e40db5431f848f23139a96de4a": [
+              "324c2ffdabfc49f8b63e5978bb8c1322",
+              "edec57de85154ad7a21ddd3c2fa69b23"
+            ]
+          }
+        }
+      },
+      {
+        "timestamp": "2026-04-02T09:31:25.840599Z",
+        "kind": "step_completed",
+        "success": true,
+        "task_id": "a8e3798a85004045aafdda99dd8e35f2",
+        "step_id": "064c0103",
+        "step_title": "Spawn decomposition subtasks",
+        "worker": "planner",
+        "phase": "decompose",
+        "route_model": "internal-recovery",
+        "route_provider": "runtime",
+        "elapsed_ms": 93532,
+        "output_ref": {
+          "artifact_id": "ctx_f78c454b2f5e",
+          "task_id": "a8e3798a85004045aafdda99dd8e35f2",
+          "step_id": "064c0103",
+          "channel": "planner-output",
+          "title": "Spawn decomposition subtasks output",
+          "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\a8e3798a85004045aafdda99dd8e35f2\\064c0103-planner-output-ctx_f78c454b2f5e.json",
+          "size_chars": 948,
+          "line_count": 34,
+          "created_at": "2026-04-02T09:31:20.918984Z",
+          "metadata": {
+            "worker": "planner",
+            "phase": "decompose",
+            "route_model": "internal-recovery",
+            "route_provider": "runtime"
+          }
+        },
+        "output_stats": {
+          "channel": "planner-output",
+          "char_count": 948,
+          "line_count": 34,
+          "stored_raw": true
+        }
+      }
+    ],
+    "decomposition": {
+      "summary": "Fallback decomposition for: Measure the response speed and answer accuracy of the current OpenCode entry setup. Use the fast entry if available, com",
+      "strategy": "bounded multi-layer split with analysis, execution, and verification branches",
+      "subtasks": [
+        {
+          "title": "Frame the problem",
+          "prompt": "Restate the goal, constraints, and success criteria for: Measure the response speed and answer accuracy of the current OpenCode entry setup. Use the fast entry if available, compare it with the full entry when feasible, and evaluate both against a fixed prompt suite covering system identity, workspace awareness, control-shell boundary, default model policy, and route recommendation. Record startup latency if observable, first-response latency, total completion time, and correctness for each prompt. Return a concise report with per-prompt timings, exact answers, pass/fail notes, and one bounded next-step recommendation. Do not modify runtime internals or unrelated files.",
+          "goal": "Frame the decomposition problem",
+          "task_type": "report_refresh",
+          "path_kind": "shared",
+          "queue_name": "fastlane",
+          "verification_level": "L1",
+          "preferred_worker": "reviewer",
+          "execution_mode": "governance",
+          "execution_lane": "host-control",
+          "decompose_children": false,
+          "shared_dependency_group": "3c95090cf4b9418e851443a0679e90e9",
+          "repair_for": null,
+          "inputs": [],
+          "outputs": [
+            "problem framing note"
+          ],
+          "dependencies": [],
+          "acceptance_criteria": [
+            "The problem framing is explicit and bounded."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        },
+        {
+          "title": "Collect supporting evidence",
+          "prompt": "Gather the concrete facts, references, or repository signals needed to solve: Measure the response speed and answer accuracy of the current OpenCode entry setup. Use the fast entry if available, compare it with the full entry when feasible, and evaluate both against a fixed prompt suite covering system identity, workspace awareness, control-shell boundary, default model policy, and route recommendation. Record startup latency if observable, first-response latency, total completion time, and correctness for each prompt. Return a concise report with per-prompt timings, exact answers, pass/fail notes, and one bounded next-step recommendation. Do not modify runtime internals or unrelated files.",
+          "goal": "Collect support evidence",
+          "task_type": "artifact_audit",
+          "path_kind": "branch",
+          "queue_name": "fastlane",
+          "verification_level": "L1",
+          "preferred_worker": "shell",
+          "execution_mode": "research",
+          "execution_lane": "host-control",
+          "decompose_children": true,
+          "shared_dependency_group": "3c95090cf4b9418e851443a0679e90e9",
+          "repair_for": null,
+          "inputs": [],
+          "outputs": [
+            "supporting evidence"
+          ],
+          "dependencies": [
+            "Frame the problem"
+          ],
+          "acceptance_criteria": [
+            "Evidence is concrete and usable by a follow-up task."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        },
+        {
+          "title": "Synthesize next action",
+          "prompt": "Use the evidence to identify the next bounded implementation or verification step for: Measure the response speed and answer accuracy of the current OpenCode entry setup. Use the fast entry if available, compare it with the full entry when feasible, and evaluate both against a fixed prompt suite covering system identity, workspace awareness, control-shell boundary, default model policy, and route recommendation. Record startup latency if observable, first-response latency, total completion time, and correctness for each prompt. Return a concise report with per-prompt timings, exact answers, pass/fail notes, and one bounded next-step recommendation. Do not modify runtime internals or unrelated files.",
+          "goal": "Decide the next action",
+          "task_type": "report_refresh",
+          "path_kind": "repair",
+          "queue_name": "fastlane",
+          "verification_level": "L1",
+          "preferred_worker": "reviewer",
+          "execution_mode": "governance",
+          "execution_lane": "host-control",
+          "decompose_children": false,
+          "shared_dependency_group": "3c95090cf4b9418e851443a0679e90e9",
+          "repair_for": "Frame the problem",
+          "inputs": [
+            "problem framing note",
+            "supporting evidence"
+          ],
+          "outputs": [
+            "next action brief"
+          ],
+          "dependencies": [
+            "Frame the problem",
+            "Collect supporting evidence"
+          ],
+          "acceptance_criteria": [
+            "The next action is explicit and actionable."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        }
+      ],
+      "dag": {
+        "shared_nodes": [
+          "Frame the problem"
+        ],
+        "branch_nodes": [
+          "Collect supporting evidence"
+        ],
+        "repair_nodes": [
+          "Synthesize next action"
+        ],
+        "optional_nodes": [],
+        "speculative_nodes": [],
+        "blocked_nodes": [],
+        "edges": [
+          {
+            "from": "Frame the problem",
+            "to": "Collect supporting evidence",
+            "kind": "branch"
+          },
+          {
+            "from": "Frame the problem",
+            "to": "Synthesize next action",
+            "kind": "repair"
+          },
+          {
+            "from": "Collect supporting evidence",
+            "to": "Synthesize next action",
+            "kind": "repair"
+          }
+        ],
+        "shared_dependency_group": "3c95090cf4b9418e851443a0679e90e9",
+        "child_dependency_ids": {
+          "324c2ffdabfc49f8b63e5978bb8c1322": [],
+          "edec57de85154ad7a21ddd3c2fa69b23": [
+            "324c2ffdabfc49f8b63e5978bb8c1322"
+          ],
+          "b91474e40db5431f848f23139a96de4a": [
+            "324c2ffdabfc49f8b63e5978bb8c1322",
+            "edec57de85154ad7a21ddd3c2fa69b23"
+          ]
+        }
+      },
+      "depth": 1,
+      "max_depth": 2,
+      "mode": "multi_layer",
+      "child_task_ids": [
+        "324c2ffdabfc49f8b63e5978bb8c1322",
+        "edec57de85154ad7a21ddd3c2fa69b23",
+        "b91474e40db5431f848f23139a96de4a"
+      ],
+      "child_tasks": [
+        {
+          "task_id": "324c2ffdabfc49f8b63e5978bb8c1322",
+          "title": "Frame the problem",
+          "task_type": "report_refresh",
+          "execution_mode": "governance",
+          "depth": 2,
+          "path_kind": "shared"
+        },
+        {
+          "task_id": "edec57de85154ad7a21ddd3c2fa69b23",
+          "title": "Collect supporting evidence",
+          "task_type": "artifact_audit",
+          "execution_mode": "research",
+          "depth": 2,
+          "path_kind": "branch"
+        },
+        {
+          "task_id": "b91474e40db5431f848f23139a96de4a",
+          "title": "Synthesize next action",
+          "task_type": "report_refresh",
+          "execution_mode": "governance",
+          "depth": 2,
+          "path_kind": "repair"
+        }
+      ],
+      "spawned_at": "2026-04-02T09:30:57.641353Z"
+    },
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

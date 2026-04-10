@@ -1,0 +1,102 @@
+{
+  "steps": [
+    {
+      "step_id": "3a2ea310",
+      "step_title": "Build Toy OS baseline",
+      "action": "docker_step",
+      "ok": true,
+      "at": "2026-03-29T01:21:38.413003Z",
+      "worker": "docker",
+      "phase": "execute",
+      "route_model": "deepseek-chat",
+      "route_provider": "runtime",
+      "output_ref": {
+        "artifact_id": "ctx_2ac43e2405b4",
+        "task_id": "dcca8ec46da84cb2a4257d70dae9a146",
+        "step_id": "3a2ea310",
+        "channel": "docker-output",
+        "title": "Build Toy OS baseline output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\dcca8ec46da84cb2a4257d70dae9a146\\3a2ea310-docker-output-ctx_2ac43e2405b4.txt",
+        "size_chars": 430,
+        "line_count": 14,
+        "created_at": "2026-03-29T01:21:36.169581Z",
+        "metadata": {
+          "worker": "docker",
+          "phase": "execute",
+          "route_model": "deepseek-chat",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "docker-output",
+        "char_count": 430,
+        "line_count": 14,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "06372b35",
+      "step_title": "Boot ToyOS in QEMU",
+      "action": "docker_step",
+      "ok": false,
+      "at": "2026-03-29T01:21:42.796746Z",
+      "worker": "docker",
+      "phase": "verify",
+      "route_model": "deepseek-chat",
+      "route_provider": "runtime",
+      "error": "cannot schedule new futures after shutdown",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "error-output",
+        "char_count": 42,
+        "line_count": 1,
+        "stored_raw": false
+      },
+      "probe_attempts": 0
+    }
+  ],
+  "task_id": "dcca8ec46da84cb2a4257d70dae9a146",
+  "task_title": "Run ToyOS boot and QEMU smoke",
+  "task_status": "failed",
+  "started_at": "2026-03-29T01:21:15.670206Z",
+  "updated_at": "2026-03-29T01:21:45.344023Z",
+  "completed": false,
+  "result": {
+    "state": "failed_execution",
+    "reason": "cannot schedule new futures after shutdown",
+    "task_id": "dcca8ec46da84cb2a4257d70dae9a146",
+    "repo_path": "D:\\codex",
+    "execution_mode": "production",
+    "goal": "Restore ToyOS real artifact delivery",
+    "cheap_calls_used": 0,
+    "cheap_chars_used": 0,
+    "escalation_count": 0,
+    "failed_steps": [
+      {
+        "step_id": "06372b35",
+        "title": "Boot ToyOS in QEMU",
+        "phase": "verify",
+        "worker": "docker",
+        "command": "\"D:\\codex\\tools\\python311-embed\\python.exe\" \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\" --spec \"D:\\codex\\tools\\generic_qemu_smoke.json\"",
+        "output": "Boot ToyOS in QEMU failure: 42 chars, 1 non-empty lines.\nHead:\n- cannot schedule new futures after shutdown",
+        "output_ref": {},
+        "output_stats": {
+          "channel": "error-output",
+          "char_count": 42,
+          "line_count": 1,
+          "stored_raw": false
+        },
+        "probe_attempts": 0,
+        "max_probe_attempts": 1,
+        "last_diagnosis": null,
+        "last_diagnosis_ref": {}
+      }
+    ],
+    "next_action_required": "Inspect execution evidence and rerun or replace the task; no approval hold was applied.",
+    "failure_pause_policy": "If a long task fails, allow at most one cheap-model-approved probe retry with bounded local cost. If cheap approval is missing, ambiguous, or the retry still fails, pause execution, return a structured error report, and wait for explicit core guidance.",
+    "pause_required": false,
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\dcca8ec46da84cb2a4257d70dae9a146\\execution-evidence.json",
+    "execution_evidence_step_count": 2
+  }
+}

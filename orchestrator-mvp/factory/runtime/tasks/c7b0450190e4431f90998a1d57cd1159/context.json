@@ -1,0 +1,78 @@
+{
+  "task_id": "c7b0450190e4431f90998a1d57cd1159",
+  "task_status": "planning",
+  "phase": "planning",
+  "updated_at": "2026-04-03T16:20:16.090302Z",
+  "heartbeat_at": "2026-04-03T16:20:16.090302Z",
+  "repo_path": "D:\\codex",
+  "goal": "Clarify target outcome",
+  "goal_id": "goal_42e8cd07d0",
+  "graph_id": "graph_c9ae2e2b6e",
+  "node_id": "boot_qemu_smoke",
+  "scheduled_by": "factory-daemon.replenisher",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\c7b0450190e4431f90998a1d57cd1159",
+  "title": "Clarify the target",
+  "prompt": "Run the ToyOS boot path and QEMU smoke check, capture the exact failure surface, and update the runnable evidence bundle.",
+  "scheduler_hint": {
+    "goal_primary": "Restore ToyOS real artifact delivery",
+    "goal_mode": "toyos_priority_mode",
+    "goal_target": "Restore ToyOS real artifact delivery",
+    "goal_id": "goal_42e8cd07d0",
+    "graph_id": "graph_c9ae2e2b6e",
+    "node_id": "boot_qemu_smoke",
+    "node_title": "Run ToyOS boot and QEMU smoke",
+    "task_type": "qemu_smoke_run",
+    "queue_name": "regression",
+    "verification_level": "L3",
+    "max_runtime_seconds": 3600,
+    "retry_limit": 1,
+    "rollback_rule": "mark_failed_and_requeue_split",
+    "template_id": "boot_qemu_smoke",
+    "admission_mode": "normal",
+    "handling_mode": "toyos_replenishment",
+    "automation_source": "failure_backlog_automation",
+    "decomposition_child": true,
+    "decomposition_parent_task_id": "d6c8ce53176e4c5490ca3569393b259e",
+    "decomposition_root_task_id": "d6c8ce53176e4c5490ca3569393b259e",
+    "decomposition_depth": 1,
+    "max_decomposition_depth": 2,
+    "decomposition_child_index": 1,
+    "decomposition_allow_children": false,
+    "decomposition_path_kind": "shared",
+    "decomposition_shared_dependency_group": "d6c8ce53176e4c5490ca3569393b259e",
+    "decomposition_repair_for": null,
+    "decomposition_dependencies": []
+  },
+  "context_package": {},
+  "plan": [],
+  "verification_signals": [
+    {
+      "timestamp": "2026-04-03T16:20:09.429402Z",
+      "kind": "admission_accepted",
+      "success": true,
+      "task_id": "c7b0450190e4431f90998a1d57cd1159",
+      "admission_lane": null,
+      "admission_reason": null,
+      "execution_mode": "governance",
+      "queue_name": "fastlane",
+      "task_type": "report_refresh"
+    }
+  ],
+  "verification_signal_count": 1,
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-03T16:20:09.429402Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "c7b0450190e4431f90998a1d57cd1159",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "governance",
+        "queue_name": "fastlane",
+        "task_type": "report_refresh"
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "toyos_mainline_requires_audit_gate_single_flight_and_retry_chain",
+  "updated_at": "2026-03-21T00:00:00Z",
+  "category": "execution_policy",
+  "problem": "ToyOS tasks could auto-complete without fresh audited artifacts, fan out into parallel mainline work, and drift into validation-only paths after failures.",
+  "rule": [
+    "Production and ToyOS tasks may not be auto-marked completed unless artifact audit passes or production_evidence.status is verified.",
+    "ToyOS mainline dispatch must stay single-flight: one active mainline task at a time.",
+    "ToyOS mainline failures should retry within the same goal chain before switching work.",
+    "Scheduling must reward build/run/deliver nodes and penalize validation-only nodes."
+  ],
+  "evidence": {
+    "files": [
+      "D:\\codex\\orchestrator-mvp\\tools\\task_state_tools.py",
+      "D:\\codex\\orchestrator-mvp\\tools\\brain_loop.py",
+      "D:\\codex\\orchestrator-mvp\\tools\\scheduling_kernel.py"
+    ],
+    "validation": [
+      "py_compile passed for task_state_tools.py, brain_loop.py, scheduling_kernel.py",
+      "scheduling_kernel delivery bonus positive for ToyOS build path and negative for syntax-validation path"
+    ]
+  }
+}

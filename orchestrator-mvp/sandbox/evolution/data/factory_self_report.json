@@ -1,0 +1,126 @@
+{
+  "reported_at": "2026-03-12T07:09:49.213832Z",
+  "trigger": "manual",
+  "cycle": null,
+  "overall_status": "critical",
+  "blockers": [
+    "open_error_escalations",
+    "ai_testing_alert",
+    "operator_attention",
+    "release_train_blocked"
+  ],
+  "summary_line": "工厂整体状态告警，守护进程人工关注，控制层人工关注，AI测试关注，未关闭错误1项。",
+  "facts": [
+    "daemon=operator_attention",
+    "control=operator_attention",
+    "autonomy=stage4_confirmed:0.6925",
+    "ai_testing=attention",
+    "open_errors=1",
+    "open_warnings=0",
+    "release=blocked"
+  ],
+  "recommendations": [
+    "优先清理核心错误消息",
+    "尽快处理AI测试告警",
+    "解除发布列车阻塞"
+  ],
+  "metrics": {
+    "daemon_status": "operator_attention",
+    "daemon_running": true,
+    "control_status": "operator_attention",
+    "quality_score": 0.6354,
+    "autonomy_stage": "stage4_confirmed",
+    "autonomy_score": 0.6925,
+    "lab_status": null,
+    "tool_health_status": "attention",
+    "tool_issue_count": 1,
+    "engineering_status": "attention",
+    "patch_blocked_count": 0,
+    "patch_ready_count": 0,
+    "ai_testing_status": "attention",
+    "ai_testing_pass_rate": 0.8,
+    "ai_testing_error_count": 0,
+    "ai_testing_alert": true,
+    "open_message_count": 1,
+    "open_error_count": 1,
+    "open_warning_count": 0,
+    "release_ops_status": "attention",
+    "release_train_status": "blocked"
+  },
+  "sources": {
+    "daemon": "D:\\codex\\orchestrator-mvp\\data\\factory_daemon_state.json",
+    "status_cache": "D:\\codex\\orchestrator-mvp\\data\\status_cache.json",
+    "core_messages": "D:\\codex\\orchestrator-mvp\\data\\core_messages.json"
+  },
+  "tasks": {
+    "window_minutes": 10,
+    "active_count": 1,
+    "failed_live": 13,
+    "recent_success": 0,
+    "recent_failed": 0,
+    "completion_percent": 6,
+    "recent_goals": [
+      "goal_4af4102d2f"
+    ],
+    "recent_done_goals": [],
+    "active_goals": [
+      "goal_4af4102d2f"
+    ],
+    "active_weight": 0.85
+  },
+  "capability": {
+    "autonomy": 69,
+    "quality": 64,
+    "health": 85,
+    "overall": 73
+  },
+  "company": {
+    "status": "developing",
+    "score": 0.4,
+    "completion_percent": 40,
+    "project_count": 5,
+    "platform_count": 17,
+    "department_count": 5
+  },
+  "delivery": {
+    "opencode": {
+      "written": true,
+      "path": "D:\\codex\\METAFORGE_OS_FACTORY_SELF_REPORT.md"
+    },
+    "serverchan": {
+      "attempted": true,
+      "delivered": true,
+      "response": {
+        "code": 0,
+        "message": "",
+        "data": {
+          "pushid": "28675309",
+          "readkey": "SCTH8qUw9vPJF0g",
+          "error": "SUCCESS",
+          "errno": 0
+        }
+      }
+    },
+    "qq_mail": {
+      "attempted": true,
+      "delivered": true,
+      "smtp_host": "smtp.qq.com",
+      "smtp_port": 465,
+      "recipients": [
+        "2286073846@qq.com"
+      ]
+    }
+  },
+  "config": {
+    "enabled": true,
+    "every": 10,
+    "on_alert": true,
+    "serverchan_configured": true,
+    "qq_mail_configured": true
+  },
+  "notification_preview": {
+    "subject": "工厂汇报[告警] 能力73分 公司完成度40%",
+    "text": "工厂当前告警，AI软件公司完成度40%，能力总分73分。现有任务1项，加权完成度6%，近10分钟完成0项、异常0项。阶段总结以交付任务1项为主。总体报告：公司处于建设中，控制层人工关注，AI测试关注，发布阻塞，建议优先清理核心错误消息。",
+    "markdown": "# 工厂汇报[告警] 能力73分 公司完成度40%\n\n工厂当前告警，AI软件公司完成度40%，能力总分73分。现有任务1项，加权完成度6%，近10分钟完成0项、异常0项。阶段总结以交付任务1项为主。总体报告：公司处于建设中，控制层人工关注，AI测试关注，发布阻塞，建议优先清理核心错误消息。\n"
+  }
+}

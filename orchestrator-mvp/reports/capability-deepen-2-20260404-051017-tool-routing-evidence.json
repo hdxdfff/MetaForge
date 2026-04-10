@@ -1,0 +1,33 @@
+﻿{
+  "automation_id": "capability-deepen-2",
+  "run_timestamp_utc": "2026-04-03T21:10:17.1625710Z",
+  "focus_area": "tool_integration_routing",
+  "improvement": "Harden tool keyword routing to avoid partial-word false positives and support flexible phrase whitespace.",
+  "changed_files": [
+    "D:/codex/orchestrator-mvp/tools/tool_registry.py",
+    "D:/codex/orchestrator-mvp/tests/test_tool_registry.py"
+  ],
+  "validation": [
+    {
+      "check": "py_compile",
+      "command": "D:/codex/tools/python311-embed/python.exe -m py_compile tools/tool_registry.py tests/test_tool_registry.py",
+      "status": "pass"
+    },
+    {
+      "check": "route_tool_smoke",
+      "command": "inline python assertions with monkeypatched list_tools",
+      "status": "pass",
+      "output": "route_tool_smoke: PASS"
+    },
+    {
+      "check": "pytest targeted",
+      "command": "./.venv/Scripts/python.exe -m pytest -q tests/test_tool_registry.py",
+      "status": "blocked",
+      "reason": "Virtualenv interpreter references missing base Python path on this host"
+    }
+  ],
+  "residual_risk": [
+    "Keyword routing still uses lexical matching and may miss semantic intent without matching tokens.",
+    "No full pytest run was possible in current interpreter environment due broken venv interpreter path."
+  ]
+}

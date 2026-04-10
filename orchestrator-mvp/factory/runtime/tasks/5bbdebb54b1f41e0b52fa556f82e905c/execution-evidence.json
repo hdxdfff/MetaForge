@@ -1,0 +1,242 @@
+{
+  "steps": [
+    {
+      "step_id": "155681b7",
+      "step_title": "Understand task",
+      "action": "planner_step",
+      "ok": true,
+      "at": "2026-04-02T19:13:03.277227Z",
+      "worker": "planner",
+      "phase": "understand",
+      "route_model": "deepseek-reasoner",
+      "route_provider": "reasoning",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 580,
+        "line_count": 4,
+        "stored_raw": false
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "ed8f9389",
+      "step_title": "Draft solution",
+      "action": "coder_step",
+      "ok": true,
+      "at": "2026-04-02T19:14:36.510190Z",
+      "worker": "coder",
+      "phase": "draft",
+      "route_model": "kimi-k2.5",
+      "route_provider": "openai",
+      "output_ref": {
+        "artifact_id": "ctx_d5c15d61638c",
+        "task_id": "5bbdebb54b1f41e0b52fa556f82e905c",
+        "step_id": "ed8f9389",
+        "channel": "coder-output",
+        "title": "Draft solution output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\5bbdebb54b1f41e0b52fa556f82e905c\\ed8f9389-coder-output-ctx_d5c15d61638c.txt",
+        "size_chars": 2294,
+        "line_count": 38,
+        "created_at": "2026-04-02T19:14:21.826448Z",
+        "metadata": {
+          "worker": "coder",
+          "phase": "draft",
+          "route_model": "kimi-k2.5",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "coder-output",
+        "char_count": 2294,
+        "line_count": 38,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "1a7fbc79",
+      "step_title": "Execute validation",
+      "action": "docker_step",
+      "ok": true,
+      "at": "2026-04-02T19:15:58.514312Z",
+      "worker": "docker",
+      "phase": "execute",
+      "route_model": "deepseek-chat",
+      "route_provider": "runtime",
+      "output_ref": {
+        "artifact_id": "ctx_71563e4a01b0",
+        "task_id": "5bbdebb54b1f41e0b52fa556f82e905c",
+        "step_id": "1a7fbc79",
+        "channel": "docker-output",
+        "title": "Execute validation output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\5bbdebb54b1f41e0b52fa556f82e905c\\1a7fbc79-docker-output-ctx_71563e4a01b0.txt",
+        "size_chars": 34,
+        "line_count": 2,
+        "created_at": "2026-04-02T19:15:45.628544Z",
+        "metadata": {
+          "worker": "docker",
+          "phase": "execute",
+          "route_model": "deepseek-chat",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "docker-output",
+        "char_count": 34,
+        "line_count": 2,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "1a1f1df3",
+      "step_title": "Issue patch decision",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-04-02T19:18:19.392568Z",
+      "worker": "reviewer",
+      "phase": "verify",
+      "route_model": "kimi-k2.5",
+      "route_provider": "openai",
+      "output_ref": {
+        "artifact_id": "ctx_a880cc64e160",
+        "task_id": "5bbdebb54b1f41e0b52fa556f82e905c",
+        "step_id": "1a1f1df3",
+        "channel": "reviewer-output",
+        "title": "Issue patch decision output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\5bbdebb54b1f41e0b52fa556f82e905c\\1a1f1df3-reviewer-output-ctx_a880cc64e160.txt",
+        "size_chars": 1392,
+        "line_count": 36,
+        "created_at": "2026-04-02T19:18:17.860329Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "verify",
+          "route_model": "kimi-k2.5",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 1392,
+        "line_count": 36,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "14a29282",
+      "step_title": "Revise next action",
+      "action": "planner_step",
+      "ok": true,
+      "at": "2026-04-02T19:18:34.862770Z",
+      "worker": "planner",
+      "phase": "revise",
+      "route_model": "kimi-k2.5",
+      "route_provider": "openai",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 392,
+        "line_count": 4,
+        "stored_raw": false
+      },
+      "probe_attempts": 0
+    }
+  ],
+  "task_id": "5bbdebb54b1f41e0b52fa556f82e905c",
+  "task_title": "Validate the result",
+  "task_status": "released",
+  "started_at": "2026-04-02T19:11:31.138981Z",
+  "updated_at": "2026-04-02T19:19:27.635204Z",
+  "completed": true,
+  "result": {
+    "summary": "Fallback plan generated locally because planner remote access is unavailable.",
+    "completed_steps": 5,
+    "context_used_chars": 591,
+    "cheap_calls_used": 2,
+    "cheap_chars_used": 6038,
+    "escalation_count": 2,
+    "execution_mode": "research",
+    "execution_status": "execution_finished",
+    "production_evidence": {
+      "mode": "research",
+      "status": "not-required"
+    },
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\5bbdebb54b1f41e0b52fa556f82e905c\\execution-evidence.json",
+    "execution_evidence_step_count": 5,
+    "verification_contract": {
+      "verification_level": "L1",
+      "required_checks": [
+        "contract_valid",
+        "build_success",
+        "tests_pass",
+        "artifact_manifest_present",
+        "evidence_fresh"
+      ],
+      "artifact_requirements": {
+        "must_register_artifact": true,
+        "must_have_timestamp": true,
+        "must_have_files": [],
+        "expected_outputs": []
+      },
+      "release_gate": "all_required_checks_pass",
+      "failure_policy": "return_to_planner",
+      "evidence_requirements": [],
+      "verification_notes": [
+        "Validate the change",
+        "Produce explicit verification output or a bounded failure report.",
+        "Record what was learned and the bounded next experiment."
+      ]
+    },
+    "verification_result": {
+      "status": "verified",
+      "passed": true,
+      "mode": "research",
+      "verification_level": "L1",
+      "contract": {
+        "verification_level": "L1",
+        "required_checks": [
+          "contract_valid",
+          "build_success",
+          "tests_pass",
+          "artifact_manifest_present",
+          "evidence_fresh"
+        ],
+        "artifact_requirements": {
+          "must_register_artifact": true,
+          "must_have_timestamp": true,
+          "must_have_files": [],
+          "expected_outputs": []
+        },
+        "release_gate": "all_required_checks_pass",
+        "failure_policy": "return_to_planner",
+        "evidence_requirements": [],
+        "verification_notes": [
+          "Validate the change",
+          "Produce explicit verification output or a bounded failure report.",
+          "Record what was learned and the bounded next experiment."
+        ]
+      },
+      "evidence": {
+        "status": "verified",
+        "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\5bbdebb54b1f41e0b52fa556f82e905c\\execution-evidence.json",
+        "execution_evidence_present": true,
+        "required_checks": [
+          "contract_valid",
+          "build_success",
+          "tests_pass",
+          "artifact_manifest_present",
+          "evidence_fresh"
+        ],
+        "artifact_requirements": {
+          "must_register_artifact": true,
+          "must_have_timestamp": true,
+          "must_have_files": [],
+          "expected_outputs": []
+        }
+      }
+    },
+    "delivery_state": "released"
+  }
+}

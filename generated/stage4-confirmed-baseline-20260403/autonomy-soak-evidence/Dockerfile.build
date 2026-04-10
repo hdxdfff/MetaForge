@@ -1,0 +1,6 @@
+FROM alpine:3.20
+
+WORKDIR /work
+COPY run_demo.py /work/run_demo.py
+
+CMD ["python3", "/work/run_demo.py", "--self-test"]

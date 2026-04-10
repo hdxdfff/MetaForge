@@ -1,0 +1,24 @@
+{
+  "id": "failure_backlog_automation_repeated_terminal_clusters",
+  "created_at": "2026-04-03T00:00:00Z",
+  "scope": "orchestrator-mvp/runtime-maintenance",
+  "symptom": "Historical failed and timed-out tasks cluster heavily around agent orchestration, ToyOS delivery, and release/tooling follow-ups, while terminal records can keep distorting backlog pressure if they are only summarized manually.",
+  "impact": [
+    "terminal failures drag the apparent work queue even when they are already recoverable or archived",
+    "repeated failure clusters can starve the queue of fresh follow-up work",
+    "manual triage does not scale when history and archive contain repeated terminal records"
+  ],
+  "policy": [
+    "dedupe terminal history by task id before clustering",
+    "classify clusters into control-plane stabilization, ToyOS replenishment, delivery follow-up, tooling follow-up, or generic saturation",
+    "dispatch only a small bounded batch of follow-up and saturation tasks per maintenance pass",
+    "route ToyOS-specific recovery through goal_backlog_replenisher so the specialized replenishment loop stays authoritative",
+    "write a machine-readable maintenance report to data/task_backlog_automation.json"
+  ],
+  "validation": [
+    "py_compile passed for tools/failure_backlog_automation.py and tools/runtime_maintenance.py",
+    "smoke run wrote a task_backlog_automation.json report and selected a control_plane_stabilization follow-up",
+    "light mode skipped dispatch while still producing a report",
+    "runtime_maintenance now includes failure_backlog in its maintenance result"
+  ]
+}

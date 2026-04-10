@@ -1,0 +1,618 @@
+{
+  "task_id": "49a4eb5701834865876d40dbe0370049",
+  "task_status": "failed",
+  "phase": "failed",
+  "updated_at": "2026-04-02T20:54:51.325955Z",
+  "heartbeat_at": "2026-04-02T20:54:51.325955Z",
+  "repo_path": "D:\\codex\\orchestrator-mvp",
+  "goal": "Close deployment gaps without waiting on cloud credentials.",
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": "runtime.failure_backlog_automation",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\49a4eb5701834865876d40dbe0370049",
+  "error": "Audit output schema rejected for report_refresh/reviewer: Reviewer audit output missing required structured sections.",
+  "title": "Deployment Wrap-up",
+  "prompt": "Prepare a local-first deployment checklist, inspect Docker and CI files, generate any missing starter deployment manifests, and summarize which final external credentials or server actions are still blocked.",
+  "scheduler_hint": {
+    "automation_source": "failure_backlog_automation",
+    "template_id": "deployment-wrapup",
+    "template_category": "deployment",
+    "cluster_key": "recover stable execution output",
+    "cluster_count": 196,
+    "cluster_status": "attention",
+    "handling_mode": "generic_saturation",
+    "dispatch_now": true,
+    "admission_mode": "normal",
+    "scheduled_by": "runtime.failure_backlog_automation"
+  },
+  "context_package": {},
+  "plan": [
+    {
+      "id": "0898aecb",
+      "title": "Spawn decomposition subtasks",
+      "status": "completed",
+      "worker": "planner",
+      "phase": "decompose"
+    },
+    {
+      "id": "3b26cf39",
+      "title": "Wait for child task completion",
+      "status": "completed",
+      "worker": "planner",
+      "phase": "decompose"
+    },
+    {
+      "id": "5b396656",
+      "title": "Aggregate decomposition results",
+      "status": "failed",
+      "worker": "reviewer",
+      "phase": "verify"
+    }
+  ],
+  "verification_signals": [
+    {
+      "timestamp": "2026-04-02T20:30:51.319140Z",
+      "kind": "admission_accepted",
+      "success": true,
+      "task_id": "49a4eb5701834865876d40dbe0370049",
+      "admission_lane": null,
+      "admission_reason": null,
+      "execution_mode": "governance",
+      "queue_name": "fastlane",
+      "task_type": "report_refresh"
+    },
+    {
+      "timestamp": "2026-04-02T20:35:19.448080Z",
+      "kind": "decomposition_spawned",
+      "success": true,
+      "task_id": "49a4eb5701834865876d40dbe0370049",
+      "child_task_count": 2,
+      "child_task_ids": [
+        "cca03a46d3b14cd5908074e0ef20a895",
+        "072b19abf42242f980ea7904cc3424c4"
+      ],
+      "dag": {
+        "shared_nodes": [
+          "Clarify the target"
+        ],
+        "branch_nodes": [
+          "Execute the next bounded action"
+        ],
+        "repair_nodes": [],
+        "optional_nodes": [],
+        "speculative_nodes": [],
+        "blocked_nodes": [],
+        "edges": [
+          {
+            "from": "Clarify the target",
+            "to": "Execute the next bounded action",
+            "kind": "branch"
+          }
+        ],
+        "shared_dependency_group": "49a4eb5701834865876d40dbe0370049",
+        "child_dependency_ids": {
+          "cca03a46d3b14cd5908074e0ef20a895": [],
+          "072b19abf42242f980ea7904cc3424c4": [
+            "cca03a46d3b14cd5908074e0ef20a895"
+          ]
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-02T20:37:47.913679Z",
+      "kind": "step_completed",
+      "success": true,
+      "task_id": "49a4eb5701834865876d40dbe0370049",
+      "step_id": "0898aecb",
+      "step_title": "Spawn decomposition subtasks",
+      "worker": "planner",
+      "phase": "decompose",
+      "route_model": "internal-recovery",
+      "route_provider": "runtime",
+      "elapsed_ms": 245342,
+      "output_ref": {
+        "artifact_id": "ctx_b164fefe1a6d",
+        "task_id": "49a4eb5701834865876d40dbe0370049",
+        "step_id": "0898aecb",
+        "channel": "planner-output",
+        "title": "Spawn decomposition subtasks output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\49a4eb5701834865876d40dbe0370049\\0898aecb-planner-output-ctx_b164fefe1a6d.json",
+        "size_chars": 682,
+        "line_count": 25,
+        "created_at": "2026-04-02T20:37:21.365013Z",
+        "metadata": {
+          "worker": "planner",
+          "phase": "decompose",
+          "route_model": "internal-recovery",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 682,
+        "line_count": 25,
+        "stored_raw": true
+      }
+    },
+    {
+      "timestamp": "2026-04-02T20:50:09.793218Z",
+      "kind": "step_completed",
+      "success": true,
+      "task_id": "49a4eb5701834865876d40dbe0370049",
+      "step_id": "3b26cf39",
+      "step_title": "Wait for child task completion",
+      "worker": "planner",
+      "phase": "decompose",
+      "route_model": "internal-recovery",
+      "route_provider": "runtime",
+      "elapsed_ms": 662156,
+      "output_ref": {
+        "artifact_id": "ctx_9a6194c5c1f1",
+        "task_id": "49a4eb5701834865876d40dbe0370049",
+        "step_id": "3b26cf39",
+        "channel": "planner-output",
+        "title": "Wait for child task completion output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\49a4eb5701834865876d40dbe0370049\\3b26cf39-planner-output-ctx_9a6194c5c1f1.json",
+        "size_chars": 6529,
+        "line_count": 123,
+        "created_at": "2026-04-02T20:49:54.914328Z",
+        "metadata": {
+          "worker": "planner",
+          "phase": "decompose",
+          "route_model": "internal-recovery",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 6529,
+        "line_count": 123,
+        "stored_raw": true
+      }
+    },
+    {
+      "timestamp": "2026-04-02T20:52:07.117275Z",
+      "kind": "step_failed",
+      "success": false,
+      "task_id": "49a4eb5701834865876d40dbe0370049",
+      "step_id": "5b396656",
+      "step_title": "Aggregate decomposition results",
+      "worker": "reviewer",
+      "phase": "verify",
+      "route_model": "internal-recovery",
+      "route_provider": "runtime",
+      "elapsed_ms": 86562,
+      "error": "Audit output schema rejected for report_refresh/reviewer: Reviewer audit output missing required structured sections.",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "error-output",
+        "char_count": 117,
+        "line_count": 1,
+        "stored_raw": false
+      }
+    }
+  ],
+  "verification_signal_count": 5,
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-02T20:30:51.319140Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "49a4eb5701834865876d40dbe0370049",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "governance",
+        "queue_name": "fastlane",
+        "task_type": "report_refresh"
+      },
+      {
+        "timestamp": "2026-04-02T20:35:19.448080Z",
+        "kind": "decomposition_spawned",
+        "success": true,
+        "task_id": "49a4eb5701834865876d40dbe0370049",
+        "child_task_count": 2,
+        "child_task_ids": [
+          "cca03a46d3b14cd5908074e0ef20a895",
+          "072b19abf42242f980ea7904cc3424c4"
+        ],
+        "dag": {
+          "shared_nodes": [
+            "Clarify the target"
+          ],
+          "branch_nodes": [
+            "Execute the next bounded action"
+          ],
+          "repair_nodes": [],
+          "optional_nodes": [],
+          "speculative_nodes": [],
+          "blocked_nodes": [],
+          "edges": [
+            {
+              "from": "Clarify the target",
+              "to": "Execute the next bounded action",
+              "kind": "branch"
+            }
+          ],
+          "shared_dependency_group": "49a4eb5701834865876d40dbe0370049",
+          "child_dependency_ids": {
+            "cca03a46d3b14cd5908074e0ef20a895": [],
+            "072b19abf42242f980ea7904cc3424c4": [
+              "cca03a46d3b14cd5908074e0ef20a895"
+            ]
+          }
+        }
+      },
+      {
+        "timestamp": "2026-04-02T20:37:47.913679Z",
+        "kind": "step_completed",
+        "success": true,
+        "task_id": "49a4eb5701834865876d40dbe0370049",
+        "step_id": "0898aecb",
+        "step_title": "Spawn decomposition subtasks",
+        "worker": "planner",
+        "phase": "decompose",
+        "route_model": "internal-recovery",
+        "route_provider": "runtime",
+        "elapsed_ms": 245342,
+        "output_ref": {
+          "artifact_id": "ctx_b164fefe1a6d",
+          "task_id": "49a4eb5701834865876d40dbe0370049",
+          "step_id": "0898aecb",
+          "channel": "planner-output",
+          "title": "Spawn decomposition subtasks output",
+          "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\49a4eb5701834865876d40dbe0370049\\0898aecb-planner-output-ctx_b164fefe1a6d.json",
+          "size_chars": 682,
+          "line_count": 25,
+          "created_at": "2026-04-02T20:37:21.365013Z",
+          "metadata": {
+            "worker": "planner",
+            "phase": "decompose",
+            "route_model": "internal-recovery",
+            "route_provider": "runtime"
+          }
+        },
+        "output_stats": {
+          "channel": "planner-output",
+          "char_count": 682,
+          "line_count": 25,
+          "stored_raw": true
+        }
+      },
+      {
+        "timestamp": "2026-04-02T20:50:09.793218Z",
+        "kind": "step_completed",
+        "success": true,
+        "task_id": "49a4eb5701834865876d40dbe0370049",
+        "step_id": "3b26cf39",
+        "step_title": "Wait for child task completion",
+        "worker": "planner",
+        "phase": "decompose",
+        "route_model": "internal-recovery",
+        "route_provider": "runtime",
+        "elapsed_ms": 662156,
+        "output_ref": {
+          "artifact_id": "ctx_9a6194c5c1f1",
+          "task_id": "49a4eb5701834865876d40dbe0370049",
+          "step_id": "3b26cf39",
+          "channel": "planner-output",
+          "title": "Wait for child task completion output",
+          "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\49a4eb5701834865876d40dbe0370049\\3b26cf39-planner-output-ctx_9a6194c5c1f1.json",
+          "size_chars": 6529,
+          "line_count": 123,
+          "created_at": "2026-04-02T20:49:54.914328Z",
+          "metadata": {
+            "worker": "planner",
+            "phase": "decompose",
+            "route_model": "internal-recovery",
+            "route_provider": "runtime"
+          }
+        },
+        "output_stats": {
+          "channel": "planner-output",
+          "char_count": 6529,
+          "line_count": 123,
+          "stored_raw": true
+        }
+      },
+      {
+        "timestamp": "2026-04-02T20:52:07.117275Z",
+        "kind": "step_failed",
+        "success": false,
+        "task_id": "49a4eb5701834865876d40dbe0370049",
+        "step_id": "5b396656",
+        "step_title": "Aggregate decomposition results",
+        "worker": "reviewer",
+        "phase": "verify",
+        "route_model": "internal-recovery",
+        "route_provider": "runtime",
+        "elapsed_ms": 86562,
+        "error": "Audit output schema rejected for report_refresh/reviewer: Reviewer audit output missing required structured sections.",
+        "output_ref": {},
+        "output_stats": {
+          "channel": "error-output",
+          "char_count": 117,
+          "line_count": 1,
+          "stored_raw": false
+        }
+      }
+    ],
+    "decomposition": {
+      "summary": "Fallback decomposition for: Prepare a local-first deployment checklist, inspect Docker and CI files, generate any missing starter deployment manifes",
+      "strategy": "bounded multi-layer split with analysis, execution, and verification branches",
+      "subtasks": [
+        {
+          "title": "Clarify the target",
+          "prompt": "Restate the objective and the smallest acceptable outcome for: Prepare a local-first deployment checklist, inspect Docker and CI files, generate any missing starter deployment manifests, and summarize which final external credentials or server actions are still blocked.",
+          "goal": "Clarify target outcome",
+          "task_type": "report_refresh",
+          "path_kind": "shared",
+          "queue_name": "fastlane",
+          "verification_level": "L1",
+          "preferred_worker": "reviewer",
+          "execution_mode": "governance",
+          "execution_lane": "host-control",
+          "decompose_children": false,
+          "shared_dependency_group": "49a4eb5701834865876d40dbe0370049",
+          "repair_for": null,
+          "inputs": [],
+          "outputs": [
+            "target brief"
+          ],
+          "dependencies": [],
+          "acceptance_criteria": [
+            "Target outcome is explicit."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        },
+        {
+          "title": "Execute the next bounded action",
+          "prompt": "Carry out the smallest bounded action that advances: Prepare a local-first deployment checklist, inspect Docker and CI files, generate any missing starter deployment manifests, and summarize which final external credentials or server actions are still blocked.",
+          "goal": "Execute the next action",
+          "task_type": "doc_patch",
+          "path_kind": "branch",
+          "queue_name": "fastlane",
+          "verification_level": "L1",
+          "preferred_worker": "coder",
+          "execution_mode": "governance",
+          "execution_lane": "host-control",
+          "decompose_children": false,
+          "shared_dependency_group": "49a4eb5701834865876d40dbe0370049",
+          "repair_for": null,
+          "inputs": [
+            "target brief"
+          ],
+          "outputs": [
+            "action result"
+          ],
+          "dependencies": [
+            "Clarify the target"
+          ],
+          "acceptance_criteria": [
+            "The action produces a concrete result."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        }
+      ],
+      "dag": {
+        "shared_nodes": [
+          "Clarify the target"
+        ],
+        "branch_nodes": [
+          "Execute the next bounded action"
+        ],
+        "repair_nodes": [],
+        "optional_nodes": [],
+        "speculative_nodes": [],
+        "blocked_nodes": [],
+        "edges": [
+          {
+            "from": "Clarify the target",
+            "to": "Execute the next bounded action",
+            "kind": "branch"
+          }
+        ],
+        "shared_dependency_group": "49a4eb5701834865876d40dbe0370049",
+        "child_dependency_ids": {
+          "cca03a46d3b14cd5908074e0ef20a895": [],
+          "072b19abf42242f980ea7904cc3424c4": [
+            "cca03a46d3b14cd5908074e0ef20a895"
+          ]
+        }
+      },
+      "depth": 0,
+      "max_depth": 2,
+      "mode": "multi_layer",
+      "child_task_ids": [
+        "cca03a46d3b14cd5908074e0ef20a895",
+        "072b19abf42242f980ea7904cc3424c4"
+      ],
+      "child_tasks": [
+        {
+          "task_id": "cca03a46d3b14cd5908074e0ef20a895",
+          "title": "Clarify the target",
+          "task_type": "report_refresh",
+          "execution_mode": "governance",
+          "depth": 1,
+          "path_kind": "shared"
+        },
+        {
+          "task_id": "072b19abf42242f980ea7904cc3424c4",
+          "title": "Execute the next bounded action",
+          "task_type": "doc_patch",
+          "execution_mode": "governance",
+          "depth": 1,
+          "path_kind": "branch"
+        }
+      ],
+      "spawned_at": "2026-04-02T20:35:19.448080Z",
+      "child_statuses": {
+        "cca03a46d3b14cd5908074e0ef20a895": {
+          "status": "failed",
+          "updated_at": "2026-04-02T20:47:53.948399Z",
+          "result": {
+            "state": "failed_execution",
+            "reason": "Audit output schema rejected for report_refresh/coder: Coder audit output missing required structured sections.",
+            "task_id": "cca03a46d3b14cd5908074e0ef20a895",
+            "repo_path": "D:\\codex\\orchestrator-mvp",
+            "execution_mode": "governance",
+            "goal": "Clarify target outcome",
+            "cheap_calls_used": 2,
+            "cheap_chars_used": 7802,
+            "escalation_count": 2,
+            "failed_steps": [
+              {
+                "step_id": "d691f305",
+                "title": "Draft solution",
+                "phase": "draft",
+                "worker": "coder",
+                "command": null,
+                "output": "Draft solution failure: 111 chars, 1 non-empty lines.\nHead:\n- Audit output schema rejected for report_refresh/coder: Coder audit output missing required structured sections.",
+                "output_ref": {},
+                "output_stats": {
+                  "channel": "error-output",
+                  "char_count": 111,
+                  "line_count": 1,
+                  "stored_raw": false
+                },
+                "probe_attempts": 0,
+                "max_probe_attempts": 1,
+                "last_diagnosis": "Diagnosis for Draft solution: 914 chars, 30 non-empty lines.\nHead:\n- Cheap lane escalation triggered.\n- Original worker: reviewer\n- Escalation model: kimi-k2.5\n- Reason: Structured output validation failed for research/governance audit work.\nTail:\n- - next_action\n- Provider error: APITimeoutError: Request timed out.\n- Provider error: APITimeoutError: Request timed out.\nRaw artifact: ctx_ec5bd4489788",
+                "last_diagnosis_ref": {
+                  "artifact_id": "ctx_ec5bd4489788",
+                  "task_id": "cca03a46d3b14cd5908074e0ef20a895",
+                  "step_id": "d691f305",
+                  "channel": "diagnosis-output",
+                  "title": "Diagnosis for Draft solution",
+                  "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\cca03a46d3b14cd5908074e0ef20a895\\d691f305-diagnosis-output-ctx_ec5bd4489788.txt",
+                  "size_chars": 914,
+                  "line_count": 30,
+                  "created_at": "2026-04-02T20:47:40.709234Z",
+                  "metadata": {
+                    "worker": "reviewer",
+                    "phase": "check",
+                    "route_model": "kimi-k2.5",
+                    "route_provider": "openai"
+                  }
+                }
+              }
+            ],
+            "next_action_required": "Inspect execution evidence and rerun or replace the task; no approval hold was applied.",
+            "failure_pause_policy": "If a long task fails, allow at most one cheap-model-approved probe retry with bounded local cost. If cheap approval is missing, ambiguous, or the retry still fails, pause execution, return a structured error report, and wait for explicit core guidance.",
+            "pause_required": false,
+            "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\cca03a46d3b14cd5908074e0ef20a895\\execution-evidence.json",
+            "execution_evidence_step_count": 2
+          }
+        },
+        "072b19abf42242f980ea7904cc3424c4": {
+          "status": "failed",
+          "updated_at": "2026-04-02T20:48:23.249325Z",
+          "result": {
+            "state": "failed_execution",
+            "reason": "Audit output schema rejected for doc_patch/coder: Coder audit output missing required structured sections.",
+            "task_id": "072b19abf42242f980ea7904cc3424c4",
+            "repo_path": "D:\\codex\\orchestrator-mvp",
+            "execution_mode": "governance",
+            "goal": "Execute the next action",
+            "cheap_calls_used": 2,
+            "cheap_chars_used": 7804,
+            "escalation_count": 2,
+            "failed_steps": [
+              {
+                "step_id": "112be5e7",
+                "title": "Draft solution",
+                "phase": "draft",
+                "worker": "coder",
+                "command": null,
+                "output": "Draft solution failure: 106 chars, 1 non-empty lines.\nHead:\n- Audit output schema rejected for doc_patch/coder: Coder audit output missing required structured sections.",
+                "output_ref": {},
+                "output_stats": {
+                  "channel": "error-output",
+                  "char_count": 106,
+                  "line_count": 1,
+                  "stored_raw": false
+                },
+                "probe_attempts": 0,
+                "max_probe_attempts": 1,
+                "last_diagnosis": "Diagnosis for Draft solution: 914 chars, 30 non-empty lines.\nHead:\n- Cheap lane escalation triggered.\n- Original worker: reviewer\n- Escalation model: kimi-k2.5\n- Reason: Structured output validation failed for research/governance audit work.\nTail:\n- - next_action\n- Provider error: APITimeoutError: Request timed out.\n- Provider error: APITimeoutError: Request timed out.\nRaw artifact: ctx_4dfc86cdb933",
+                "last_diagnosis_ref": {
+                  "artifact_id": "ctx_4dfc86cdb933",
+                  "task_id": "072b19abf42242f980ea7904cc3424c4",
+                  "step_id": "112be5e7",
+                  "channel": "diagnosis-output",
+                  "title": "Diagnosis for Draft solution",
+                  "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\072b19abf42242f980ea7904cc3424c4\\112be5e7-diagnosis-output-ctx_4dfc86cdb933.txt",
+                  "size_chars": 914,
+                  "line_count": 30,
+                  "created_at": "2026-04-02T20:48:02.474003Z",
+                  "metadata": {
+                    "worker": "reviewer",
+                    "phase": "check",
+                    "route_model": "kimi-k2.5",
+                    "route_provider": "openai"
+                  }
+                }
+              }
+            ],
+            "next_action_required": "Inspect execution evidence and rerun or replace the task; no approval hold was applied.",
+            "failure_pause_policy": "If a long task fails, allow at most one cheap-model-approved probe retry with bounded local cost. If cheap approval is missing, ambiguous, or the retry still fails, pause execution, return a structured error report, and wait for explicit core guidance.",
+            "pause_required": false,
+            "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\072b19abf42242f980ea7904cc3424c4\\execution-evidence.json",
+            "execution_evidence_step_count": 2
+          }
+        }
+      },
+      "wait_completed_at": "2026-04-02T20:49:32.683534Z",
+      "wait_timed_out": false,
+      "child_results": [
+        {
+          "task_id": "cca03a46d3b14cd5908074e0ef20a895",
+          "title": "Clarify the target",
+          "status": "failed",
+          "task_type": "report_refresh",
+          "execution_mode": "governance",
+          "summary": null,
+          "delivery_state": null
+        },
+        {
+          "task_id": "072b19abf42242f980ea7904cc3424c4",
+          "title": "Execute the next bounded action",
+          "status": "failed",
+          "task_type": "doc_patch",
+          "execution_mode": "governance",
+          "summary": null,
+          "delivery_state": null
+        }
+      ],
+      "aggregated_at": "2026-04-02T20:51:19.890017Z",
+      "all_children_terminal": true,
+      "all_children_passed": false
+    },
+    "decomposition_summary": "bounded multi-layer split with analysis, execution, and verification branches",
+    "decomposition_child_count": 2,
+    "decomposition_child_results": [
+      {
+        "task_id": "cca03a46d3b14cd5908074e0ef20a895",
+        "title": "Clarify the target",
+        "status": "failed",
+        "task_type": "report_refresh",
+        "execution_mode": "governance",
+        "summary": null,
+        "delivery_state": null
+      },
+      {
+        "task_id": "072b19abf42242f980ea7904cc3424c4",
+        "title": "Execute the next bounded action",
+        "status": "failed",
+        "task_type": "doc_patch",
+        "execution_mode": "governance",
+        "summary": null,
+        "delivery_state": null
+      }
+    ]
+  }
+}

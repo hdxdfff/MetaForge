@@ -1,0 +1,5 @@
+# Architecture
+
+- Frontend
+- Backend
+- Data

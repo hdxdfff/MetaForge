@@ -1,0 +1,513 @@
+{
+  "updated_at": "2026-03-12T07:10:02.852267Z",
+  "offices": {
+    "strategy_office": {
+      "mission": "govern long-term goals, portfolio priorities, and resource allocation",
+      "departments": [
+        "architecture_department",
+        "research_department",
+        "operations_department"
+      ]
+    },
+    "architecture_office": {
+      "mission": "maintain architecture blueprints, ownership rules, and cross-project interfaces",
+      "departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department"
+      ]
+    }
+  },
+  "departments": {
+    "architecture_department": {
+      "focus": [
+        "architecture_validation",
+        "module_ownership",
+        "cross_project_coordination"
+      ],
+      "default_worker": "reviewer",
+      "teams": [
+        "architecture_team"
+      ],
+      "project_count": 11,
+      "projects": [
+        "79120c5dbb",
+        "dblab00001",
+        "aimath0001",
+        "platform_d33a56cc79",
+        "platform_8855699f64",
+        "platform_009b511d6b",
+        "platform_8590e6bcbe",
+        "platform_79a3e0e03e",
+        "platform_464dac2a0b",
+        "platform_fa6557b2cd",
+        "platform_38c67a4233"
+      ],
+      "metrics": {
+        "task_count": 3,
+        "success_rate": 1.0,
+        "workers": [
+          "reviewer"
+        ]
+      }
+    },
+    "engineering_department": {
+      "focus": [
+        "agent_orchestration",
+        "webapp_generation",
+        "tool_extension"
+      ],
+      "default_worker": "coder",
+      "teams": [
+        "backend_team"
+      ],
+      "project_count": 22,
+      "projects": [
+        "79120c5dbb",
+        "networklab01",
+        "dblab00001",
+        "frontend001",
+        "aimath0001",
+        "platform_d33a56cc79",
+        "platform_8855699f64",
+        "platform_009b511d6b",
+        "platform_8590e6bcbe",
+        "platform_df90392702",
+        "platform_79a3e0e03e",
+        "platform_464dac2a0b"
+      ],
+      "metrics": {
+        "task_count": 0,
+        "success_rate": 0.0,
+        "workers": []
+      }
+    },
+    "operations_department": {
+      "focus": [
+        "deploy_scaffold",
+        "runtime_stability",
+        "worker_vm_execution"
+      ],
+      "default_worker": "docker",
+      "teams": [
+        "infrastructure_team"
+      ],
+      "project_count": 3,
+      "projects": [
+        "networklab01",
+        "frontend001",
+        "platform_e09cfd3561"
+      ],
+      "metrics": {
+        "task_count": 0,
+        "success_rate": 0.0,
+        "workers": []
+      }
+    },
+    "qa_department": {
+      "focus": [
+        "verification",
+        "runtime_health",
+        "patch_gate"
+      ],
+      "default_worker": "shell",
+      "teams": [],
+      "project_count": 22,
+      "projects": [
+        "79120c5dbb",
+        "networklab01",
+        "dblab00001",
+        "frontend001",
+        "aimath0001",
+        "platform_d33a56cc79",
+        "platform_8855699f64",
+        "platform_009b511d6b",
+        "platform_8590e6bcbe",
+        "platform_df90392702",
+        "platform_79a3e0e03e",
+        "platform_464dac2a0b"
+      ],
+      "metrics": {
+        "task_count": 3,
+        "success_rate": 1.0,
+        "workers": [
+          "shell"
+        ]
+      }
+    },
+    "research_department": {
+      "focus": [
+        "experiments",
+        "distillation",
+        "knowledge_growth"
+      ],
+      "default_worker": "reviewer",
+      "teams": [],
+      "project_count": 11,
+      "projects": [
+        "79120c5dbb",
+        "dblab00001",
+        "aimath0001",
+        "platform_d33a56cc79",
+        "platform_8855699f64",
+        "platform_009b511d6b",
+        "platform_8590e6bcbe",
+        "platform_79a3e0e03e",
+        "platform_464dac2a0b",
+        "platform_fa6557b2cd",
+        "platform_38c67a4233"
+      ],
+      "metrics": {
+        "task_count": 0,
+        "success_rate": 0.0,
+        "workers": [
+          "supervisor"
+        ]
+      }
+    }
+  },
+  "teams": {
+    "backend_team": {
+      "department": "engineering_department",
+      "owner": "coder",
+      "module_count": 24,
+      "critical_modules": 0,
+      "layers": [
+        "task_graph_planner",
+        "unclassified"
+      ],
+      "default_worker": "coder"
+    },
+    "architecture_team": {
+      "department": "architecture_department",
+      "owner": "planner",
+      "module_count": 6,
+      "critical_modules": 4,
+      "layers": [
+        "agent_teams",
+        "architecture_engine",
+        "task_graph_planner"
+      ],
+      "default_worker": "reviewer"
+    },
+    "infrastructure_team": {
+      "department": "operations_department",
+      "owner": "ops",
+      "module_count": 92,
+      "critical_modules": 3,
+      "layers": [
+        "architecture_engine",
+        "task_graph_planner",
+        "unclassified",
+        "verification"
+      ],
+      "default_worker": "docker"
+    }
+  },
+  "project_allocations": [
+    {
+      "project_id": "79120c5dbb",
+      "name": "ToyOS Kernel",
+      "type": "project",
+      "domains": [
+        "kernel",
+        "factory"
+      ],
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ]
+    },
+    {
+      "project_id": "networklab01",
+      "name": "Computer Network Lab",
+      "type": "project",
+      "domains": [
+        "network",
+        "math"
+      ],
+      "owner_department": "operations_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department"
+      ]
+    },
+    {
+      "project_id": "dblab00001",
+      "name": "Database Systems Lab",
+      "type": "project",
+      "domains": [
+        "database",
+        "factory"
+      ],
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ]
+    },
+    {
+      "project_id": "frontend001",
+      "name": "Frontend Study Workspace",
+      "type": "project",
+      "domains": [
+        "frontend"
+      ],
+      "owner_department": "engineering_department",
+      "support_departments": [
+        "qa_department",
+        "operations_department"
+      ]
+    },
+    {
+      "project_id": "aimath0001",
+      "name": "AI Math Foundations Workspace",
+      "type": "project",
+      "domains": [
+        "kernel",
+        "math",
+        "factory"
+      ],
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ]
+    },
+    {
+      "project_id": "platform_d33a56cc79",
+      "name": "AI Research Factory",
+      "type": "platform",
+      "domains": [
+        "factory"
+      ],
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ]
+    },
+    {
+      "project_id": "platform_8855699f64",
+      "name": "AI Agent Factory",
+      "type": "platform",
+      "domains": [
+        "factory"
+      ],
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ]
+    },
+    {
+      "project_id": "platform_009b511d6b",
+      "name": "build ai-video-factory",
+      "type": "platform",
+      "domains": [
+        "factory"
+      ],
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ]
+    },
+    {
+      "project_id": "platform_8590e6bcbe",
+      "name": "AI Web Platform Factory",
+      "type": "platform",
+      "domains": [
+        "factory"
+      ],
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ]
+    },
+    {
+      "project_id": "platform_df90392702",
+      "name": "Expand capability routing patterns",
+      "type": "platform",
+      "domains": [
+        "general"
+      ],
+      "owner_department": "engineering_department",
+      "support_departments": [
+        "qa_department"
+      ]
+    },
+    {
+      "project_id": "platform_79a3e0e03e",
+      "name": "Improve cheap agent prompts",
+      "type": "platform",
+      "domains": [
+        "factory"
+      ],
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ]
+    },
+    {
+      "project_id": "platform_464dac2a0b",
+      "name": "Optimize task scheduler from agent experience",
+      "type": "platform",
+      "domains": [
+        "kernel",
+        "factory"
+      ],
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ]
+    },
+    {
+      "project_id": "platform_fa6557b2cd",
+      "name": "Strengthen agent orchestration capability",
+      "type": "platform",
+      "domains": [
+        "factory"
+      ],
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ]
+    },
+    {
+      "project_id": "platform_e09cfd3561",
+      "name": "Strengthen webapp generation capability",
+      "type": "platform",
+      "domains": [
+        "frontend"
+      ],
+      "owner_department": "engineering_department",
+      "support_departments": [
+        "qa_department",
+        "operations_department"
+      ]
+    },
+    {
+      "project_id": "platform_c3bb90675c",
+      "name": "Expand tool extension coverage",
+      "type": "platform",
+      "domains": [
+        "general"
+      ],
+      "owner_department": "engineering_department",
+      "support_departments": [
+        "qa_department"
+      ]
+    },
+    {
+      "project_id": "platform_38c67a4233",
+      "name": "Strengthen agent orchestration capability",
+      "type": "platform",
+      "domains": [
+        "factory"
+      ],
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ]
+    },
+    {
+      "project_id": "platform_b9e5c175ad",
+      "name": "Continue ToyOS kernel branch work with mainline context reuse",
+      "type": "platform",
+      "domains": [
+        "kernel"
+      ],
+      "owner_department": "engineering_department",
+      "support_departments": [
+        "qa_department"
+      ]
+    },
+    {
+      "project_id": "platform_3f9a992241",
+      "name": "Deepen repo learning and knowledge routing reuse",
+      "type": "platform",
+      "domains": [
+        "general"
+      ],
+      "owner_department": "engineering_department",
+      "support_departments": [
+        "qa_department"
+      ]
+    },
+    {
+      "project_id": "platform_83ed536a57",
+      "name": "Deepen repo learning and knowledge routing reuse",
+      "type": "platform",
+      "domains": [
+        "general"
+      ],
+      "owner_department": "engineering_department",
+      "support_departments": [
+        "qa_department"
+      ]
+    },
+    {
+      "project_id": "platform_900f86db07",
+      "name": "Continue ToyOS kernel branch work with mainline context reuse",
+      "type": "platform",
+      "domains": [
+        "kernel"
+      ],
+      "owner_department": "engineering_department",
+      "support_departments": [
+        "qa_department"
+      ]
+    },
+    {
+      "project_id": "platform_4f5397914e",
+      "name": "Deepen repo learning and knowledge routing reuse",
+      "type": "platform",
+      "domains": [
+        "general"
+      ],
+      "owner_department": "engineering_department",
+      "support_departments": [
+        "qa_department"
+      ]
+    },
+    {
+      "project_id": "platform_8632991421",
+      "name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "type": "platform",
+      "domains": [
+        "kernel",
+        "math"
+      ],
+      "owner_department": "engineering_department",
+      "support_departments": [
+        "qa_department"
+      ]
+    }
+  ],
+  "focus_capabilities": [
+    "agent_orchestration",
+    "webapp_generation",
+    "deploy_scaffold",
+    "tool_extension",
+    "kv_cache_manager",
+    "local_llm_runner"
+  ]
+}

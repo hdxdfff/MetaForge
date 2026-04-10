@@ -1,0 +1,93 @@
+{
+  "updated_at": "2026-03-12T07:09:56.414930Z",
+  "recent_log_tail": [
+    "[2026-03-12 14:29:24] error tick=165: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)",
+    "[2026-03-12 14:51:02] error tick=166: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)",
+    "[2026-03-12 14:52:04] error tick=167: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)",
+    "[2026-03-12 14:53:05] error tick=168: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)",
+    "[2026-03-12 14:54:06] error tick=169: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)",
+    "[2026-03-12 14:55:07] error tick=170: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)",
+    "[2026-03-12 14:56:07] error tick=171: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)",
+    "[2026-03-12 14:57:09] error tick=172: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)",
+    "[2026-03-12 14:58:10] error tick=173: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)",
+    "[2026-03-12 14:59:10] error tick=174: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)",
+    "[2026-03-12 15:01:36] tick=175 meta=True evolution=True meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=1",
+    "[2026-03-12 15:03:33] tick=176 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=2",
+    "[2026-03-12 15:04:48] tick=177 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=True ai_testing_failures=3",
+    "[2026-03-12 15:05:56] tick=178 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=True ai_testing_failures=4",
+    "[2026-03-12 15:07:04] tick=179 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=True ai_testing_failures=5"
+  ],
+  "recent_messages": [
+    {
+      "id": "core-0004",
+      "status": "auto-resolved",
+      "severity": "error",
+      "title": "Task paused: 4ed82201ecf74638916d19805600c03b",
+      "task_id": "4ed82201ecf74638916d19805600c03b"
+    },
+    {
+      "id": "core-0005",
+      "status": "auto-resolved",
+      "severity": "warning",
+      "title": "Diagnosis needed: Read webpage through browser bridge",
+      "task_id": "464f45a7835a4f6d9dfa8410fb77c231"
+    },
+    {
+      "id": "core-0006",
+      "status": "auto-resolved",
+      "severity": "error",
+      "title": "Task paused: 464f45a7835a4f6d9dfa8410fb77c231",
+      "task_id": "464f45a7835a4f6d9dfa8410fb77c231"
+    },
+    {
+      "id": "core-0007",
+      "status": "auto-resolved",
+      "severity": "warning",
+      "title": "Diagnosis needed: Read webpage through browser bridge",
+      "task_id": "2fd57f4a962e4c739ae37fb2ccd8a886"
+    },
+    {
+      "id": "core-0008",
+      "status": "auto-resolved",
+      "severity": "error",
+      "title": "Task paused: 2fd57f4a962e4c739ae37fb2ccd8a886",
+      "task_id": "2fd57f4a962e4c739ae37fb2ccd8a886"
+    },
+    {
+      "id": "core-0009",
+      "status": "auto-resolved",
+      "severity": "warning",
+      "title": "Diagnosis needed: Read webpage through browser bridge",
+      "task_id": "035829f1a05547529d178ffcc88b687b"
+    },
+    {
+      "id": "core-0010",
+      "status": "auto-resolved",
+      "severity": "error",
+      "title": "Task paused: 035829f1a05547529d178ffcc88b687b",
+      "task_id": "035829f1a05547529d178ffcc88b687b"
+    },
+    {
+      "id": "core-0011",
+      "status": "auto-resolved",
+      "severity": "warning",
+      "title": "Diagnosis needed: Read webpage through browser bridge",
+      "task_id": "e247faa813cb4908aa567b79e87fde97"
+    },
+    {
+      "id": "core-0012",
+      "status": "auto-resolved",
+      "severity": "error",
+      "title": "Task paused: e247faa813cb4908aa567b79e87fde97",
+      "task_id": "e247faa813cb4908aa567b79e87fde97"
+    },
+    {
+      "id": "core-0013",
+      "status": "open",
+      "severity": "error",
+      "title": "Task paused: ccb165ed8549456997edf05f8a021395",
+      "task_id": "ccb165ed8549456997edf05f8a021395"
+    }
+  ],
+  "open_policy_violations": 1
+}

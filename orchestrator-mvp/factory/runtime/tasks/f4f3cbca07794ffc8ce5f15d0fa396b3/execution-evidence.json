@@ -1,0 +1,45 @@
+{
+  "steps": [
+    {
+      "step_id": "133ca394",
+      "step_title": "Understand task",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-03-20T12:59:24.364886Z",
+      "worker": "reviewer",
+      "phase": "understand",
+      "route_model": "deepseek-v3.2",
+      "route_provider": "openai",
+      "output_ref": {
+        "artifact_id": "ctx_12ecde1383c6",
+        "task_id": "f4f3cbca07794ffc8ce5f15d0fa396b3",
+        "step_id": "133ca394",
+        "channel": "reviewer-output",
+        "title": "Understand task output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\f4f3cbca07794ffc8ce5f15d0fa396b3\\133ca394-reviewer-output-ctx_12ecde1383c6.txt",
+        "size_chars": 1160,
+        "line_count": 20,
+        "created_at": "2026-03-20T12:58:57.477945Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "understand",
+          "route_model": "deepseek-v3.2",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 1160,
+        "line_count": 20,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    }
+  ],
+  "task_id": "f4f3cbca07794ffc8ce5f15d0fa396b3",
+  "task_title": "Implement module app.network_agent",
+  "task_status": "running",
+  "started_at": "2026-03-20T12:51:54.561551Z",
+  "updated_at": "2026-03-20T12:59:24.364886Z",
+  "completed": false
+}

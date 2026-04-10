@@ -1,0 +1,4 @@
+# Agent Roles
+
+- Supervisor
+- Worker

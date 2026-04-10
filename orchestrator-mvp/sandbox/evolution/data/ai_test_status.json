@@ -1,0 +1,43 @@
+{
+  "updated_at": "2026-03-12T07:08:52.471729Z",
+  "status": "attention",
+  "suite": "ai-system-basic-suite",
+  "provider": "cheap-fallback",
+  "api_style": "chat.completions",
+  "model": "deepseek-chat",
+  "base_url": "https://api.deepseek.com",
+  "suite_path": "D:\\codex\\orchestrator-mvp\\data\\ai_test_suite.json",
+  "pass_rate": 0.8,
+  "passed_cases": 4,
+  "total_cases": 5,
+  "failing_case_ids": [
+    "context-boundary"
+  ],
+  "error_count": 0,
+  "error_types": [],
+  "max_attempt_count": 1,
+  "retry_policy": {
+    "max_retries": 2,
+    "backoff_seconds": 2.0
+  },
+  "attempted_providers": [
+    {
+      "provider": "openai-primary",
+      "api_style": "responses",
+      "model": "gpt-5.4",
+      "base_url": "https://api.openai.com/v1",
+      "all_errors": true,
+      "error_types": [
+        "AuthenticationError"
+      ]
+    },
+    {
+      "provider": "cheap-fallback",
+      "api_style": "chat.completions",
+      "model": "deepseek-chat",
+      "base_url": "https://api.deepseek.com",
+      "all_errors": false,
+      "error_types": []
+    }
+  ]
+}

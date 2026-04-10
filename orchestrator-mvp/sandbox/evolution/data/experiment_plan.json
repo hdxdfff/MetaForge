@@ -1,0 +1,128 @@
+{
+  "updated_at": "2026-03-12T07:09:26.319000Z",
+  "candidate_count": 5,
+  "selected": {
+    "target": "Experiment progress-first goal seeding",
+    "goal_type": "experiment",
+    "notes": "Evaluate additional low-risk goal seeds to keep runtime from idling.",
+    "kind": "goal-seeding",
+    "goal_alignment": 0.8,
+    "progress_gain": 0.78,
+    "risk_cost": 0.1,
+    "resource_cost": 0.12,
+    "knowledge_hits": [
+      "Experiment progress-first goal seeding"
+    ],
+    "source": "autonomy-engine",
+    "rotation_penalty": 0.0,
+    "rotation_bonus": 0.0,
+    "reputation_gap_bonus": 0.0,
+    "portfolio_bonus": 0.0125,
+    "score": 0.8325
+  },
+  "selection_reason": "autonomy-engine",
+  "knowledge_hits": [
+    "Experiment progress-first goal seeding"
+  ],
+  "candidates": [
+    {
+      "target": "Experiment progress-first goal seeding",
+      "goal_type": "experiment",
+      "notes": "Evaluate additional low-risk goal seeds to keep runtime from idling.",
+      "kind": "goal-seeding",
+      "goal_alignment": 0.8,
+      "progress_gain": 0.78,
+      "risk_cost": 0.1,
+      "resource_cost": 0.12,
+      "knowledge_hits": [
+        "Experiment progress-first goal seeding"
+      ],
+      "source": "autonomy-engine",
+      "rotation_penalty": 0.0,
+      "rotation_bonus": 0.0,
+      "reputation_gap_bonus": 0.0,
+      "portfolio_bonus": 0.0125,
+      "score": 0.8325
+    },
+    {
+      "target": "Experiment adopted-pattern rollout",
+      "goal_type": "experiment",
+      "notes": "Validate whether the latest adopted experiment pattern improves current runtime decisions.",
+      "kind": "pattern-rollout",
+      "goal_alignment": 0.8,
+      "progress_gain": 0.75,
+      "risk_cost": 0.14,
+      "resource_cost": 0.14,
+      "knowledge_hits": [
+        "Experiment GitHub repo capability extraction"
+      ],
+      "source": "experiment-evaluation",
+      "rotation_penalty": 0.0,
+      "rotation_bonus": 0.0,
+      "reputation_gap_bonus": 0.0,
+      "portfolio_bonus": 0.0125,
+      "score": 0.813
+    },
+    {
+      "target": "Experiment cheap-agent recovery patterns",
+      "goal_type": "experiment",
+      "notes": "Evaluate whether recent failure solutions can be converted into cheaper runtime-native recoveries.",
+      "kind": "recovery-patterns",
+      "goal_alignment": 0.82,
+      "progress_gain": 0.8,
+      "risk_cost": 0.14,
+      "resource_cost": 0.18,
+      "knowledge_hits": [
+        "Prompt: Unified orchestrator dispatch.\n\nCaller: codex-main\n\nRuntime policy: Prefer local runtime resources such as WSL, "
+      ],
+      "source": "knowledge-engine",
+      "rotation_penalty": 0.04,
+      "rotation_bonus": 0.0,
+      "reputation_gap_bonus": 0.0,
+      "portfolio_bonus": 0.02,
+      "score": 0.799
+    },
+    {
+      "target": "Experiment capability routing heuristics",
+      "goal_type": "experiment",
+      "notes": "Use prior successful experiments to improve capability routing heuristics.",
+      "kind": "routing-heuristics",
+      "goal_alignment": 0.83,
+      "progress_gain": 0.74,
+      "risk_cost": 0.16,
+      "resource_cost": 0.16,
+      "knowledge_hits": [
+        "Experiment GitHub repo capability extraction",
+        "Experiment capability routing heuristics",
+        "Experiment adopted-pattern rollout"
+      ],
+      "source": "experiment-history",
+      "rotation_penalty": 0.04,
+      "rotation_bonus": 0.0,
+      "reputation_gap_bonus": 0.0,
+      "portfolio_bonus": 0.035,
+      "score": 0.7965
+    },
+    {
+      "target": "Experiment GitHub repo capability extraction",
+      "goal_type": "experiment",
+      "notes": "Validate whether newly learned GitHub repositories produce reusable capability modules.",
+      "kind": "github-capability-extraction",
+      "goal_alignment": 0.87,
+      "progress_gain": 0.81,
+      "risk_cost": 0.11,
+      "resource_cost": 0.18,
+      "knowledge_hits": [
+        "langchain-ai/langchain",
+        "ggerganov/llama.cpp",
+        "OpenInterpreter/open-interpreter"
+      ],
+      "source": "github-learning",
+      "rotation_penalty": 0.12,
+      "rotation_bonus": 0.0,
+      "reputation_gap_bonus": 0.0,
+      "portfolio_bonus": 0.0,
+      "score": 0.7245
+    }
+  ]
+}

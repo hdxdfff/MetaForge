@@ -1,0 +1,167 @@
+{
+  "task_id": "df16578c45b448c08c2a7aa99c8d6f36",
+  "task_status": "released",
+  "phase": "verification-passed",
+  "updated_at": "2026-03-29T11:59:45.167900Z",
+  "heartbeat_at": "2026-03-29T11:59:45.167900Z",
+  "repo_path": null,
+  "goal": null,
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": "factory-daemon.recovery",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\df16578c45b448c08c2a7aa99c8d6f36",
+  "completed_steps": 1,
+  "verification_result": {
+    "status": "verified",
+    "passed": true,
+    "mode": "governance",
+    "verification_level": "L1",
+    "contract": {
+      "verification_level": "L1",
+      "required_checks": [
+        "contract_valid",
+        "build_success",
+        "tests_pass",
+        "artifact_manifest_present",
+        "evidence_fresh"
+      ],
+      "artifact_requirements": {
+        "must_register_artifact": true,
+        "must_have_timestamp": true,
+        "must_have_files": [],
+        "expected_outputs": []
+      },
+      "release_gate": "all_required_checks_pass",
+      "failure_policy": "return_to_planner",
+      "evidence_requirements": [],
+      "verification_notes": [
+        "Deliver a locally verified result.",
+        "Produce explicit verification output or a bounded failure report.",
+        "Keep governance work separate from implementation claims."
+      ]
+    },
+    "evidence": {
+      "status": "verified",
+      "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\df16578c45b448c08c2a7aa99c8d6f36\\execution-evidence.json",
+      "execution_evidence_present": true,
+      "required_checks": [
+        "contract_valid",
+        "build_success",
+        "tests_pass",
+        "artifact_manifest_present",
+        "evidence_fresh"
+      ],
+      "artifact_requirements": {
+        "must_register_artifact": true,
+        "must_have_timestamp": true,
+        "must_have_files": [],
+        "expected_outputs": []
+      }
+    }
+  },
+  "delivery_state": "released",
+  "title": "Delivery smoke verification flow",
+  "prompt": "Create a deterministic smoke result, verify it, and promote it to delivery-ready.",
+  "scheduler_hint": {},
+  "context_package": {},
+  "plan": [
+    {
+      "id": "3f509954",
+      "title": "Create smoke evidence",
+      "status": "completed",
+      "worker": "coder",
+      "phase": "build"
+    }
+  ],
+  "result": {
+    "summary": "Resumed from saved task plan.",
+    "completed_steps": 1,
+    "context_used_chars": 572,
+    "cheap_calls_used": 0,
+    "cheap_chars_used": 0,
+    "escalation_count": 0,
+    "execution_mode": "governance",
+    "execution_status": "execution_finished",
+    "production_evidence": {
+      "mode": "governance",
+      "status": "not-required"
+    },
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\df16578c45b448c08c2a7aa99c8d6f36\\execution-evidence.json",
+    "execution_evidence_step_count": 1,
+    "verification_contract": {
+      "verification_level": "L1",
+      "required_checks": [
+        "contract_valid",
+        "build_success",
+        "tests_pass",
+        "artifact_manifest_present",
+        "evidence_fresh"
+      ],
+      "artifact_requirements": {
+        "must_register_artifact": true,
+        "must_have_timestamp": true,
+        "must_have_files": [],
+        "expected_outputs": []
+      },
+      "release_gate": "all_required_checks_pass",
+      "failure_policy": "return_to_planner",
+      "evidence_requirements": [],
+      "verification_notes": [
+        "Deliver a locally verified result.",
+        "Produce explicit verification output or a bounded failure report.",
+        "Keep governance work separate from implementation claims."
+      ]
+    },
+    "verification_result": {
+      "status": "verified",
+      "passed": true,
+      "mode": "governance",
+      "verification_level": "L1",
+      "contract": {
+        "verification_level": "L1",
+        "required_checks": [
+          "contract_valid",
+          "build_success",
+          "tests_pass",
+          "artifact_manifest_present",
+          "evidence_fresh"
+        ],
+        "artifact_requirements": {
+          "must_register_artifact": true,
+          "must_have_timestamp": true,
+          "must_have_files": [],
+          "expected_outputs": []
+        },
+        "release_gate": "all_required_checks_pass",
+        "failure_policy": "return_to_planner",
+        "evidence_requirements": [],
+        "verification_notes": [
+          "Deliver a locally verified result.",
+          "Produce explicit verification output or a bounded failure report.",
+          "Keep governance work separate from implementation claims."
+        ]
+      },
+      "evidence": {
+        "status": "verified",
+        "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\df16578c45b448c08c2a7aa99c8d6f36\\execution-evidence.json",
+        "execution_evidence_present": true,
+        "required_checks": [
+          "contract_valid",
+          "build_success",
+          "tests_pass",
+          "artifact_manifest_present",
+          "evidence_fresh"
+        ],
+        "artifact_requirements": {
+          "must_register_artifact": true,
+          "must_have_timestamp": true,
+          "must_have_files": [],
+          "expected_outputs": []
+        }
+      }
+    },
+    "delivery_state": "released"
+  }
+}

@@ -1,0 +1,30 @@
+﻿{
+    "system":  "MetaForge OS",
+    "contradiction":  "none_detected",
+    "ceo_priority":  "yellow",
+    "startup_files":  [
+                          "D:\\codex\\METAFORGE-OS.md",
+                          "D:\\codex\\METAFORGE_OS_CODEX_MULTI_SESSION_BOOTSTRAP.md",
+                          "D:\\codex\\METAFORGE_OS_ROLE_SPLIT.md",
+                          "D:\\codex\\METAFORGE_OS_CHORE_QUEUE_POLICY.md",
+                          "D:\\codex\\METAFORGE_OS_DISPATCH_TEMPLATE.md",
+                          "D:\\codex\\METAFORGE_OS_HIGH_THROUGHPUT_TASK_PACK.md"
+                      ],
+    "startup_command":  "D:\\codex\\codex-session-bootstrap.ps1",
+    "next_action":  "continue bounded dispatch with validation-first policy",
+    "lane":  "chore-lane",
+    "authoritative_workspace":  "D:\\codex",
+    "control_tier":  "chore-only",
+    "validation":  "static review, state cross-check, or file presence check",
+    "focus":  [
+                  "digests",
+                  "inventories",
+                  "reports",
+                  "formatting",
+                  "throughput checklist refresh"
+              ],
+    "active_execution_roots":  [
+
+                               ],
+    "invalid_delivery_risk":  "low"
+}

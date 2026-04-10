@@ -1,0 +1,24 @@
+[
+  {
+    "id": "ext-23a04474b4",
+    "task_type": "http_get",
+    "status": "completed",
+    "created_at": "2026-03-08T23:14:18.209120Z",
+    "updated_at": "2026-03-08T23:52:35.350399Z",
+    "attempts": 2,
+    "max_attempts": 2,
+    "payload": {
+      "url": "https://example.com",
+      "target_name": "example-home.html"
+    },
+    "last_error": null,
+    "result": {
+      "ok": true,
+      "url": "https://example.com",
+      "target_path": "D:\\codex\\orchestrator-mvp\\cache\\external\\example-home.html",
+      "size_bytes": 528,
+      "timestamp": "2026-03-08T23:52:33.640026Z",
+      "cache_hit": false
+    }
+  }
+]

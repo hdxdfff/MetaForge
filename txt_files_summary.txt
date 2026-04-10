@@ -1,0 +1,13 @@
+D:\codex目录下.txt文件统计报告
+==================================================
+总.txt文件数: 491
+总行数: 54,753
+行数最多的文件: tools\311-embed\Lib\site-packages\litellm\llms\huggingface\huggingface_llms_metadata\hf_text_generation_models.txt (37,632 行)
+行数最少的文件: 多个只有1行的文件（如top_level.txt等）
+平均行数: 111.5
+
+说明：
+1. 统计涵盖了D:\codex目录及其所有子目录
+2. 共找到491个.txt文件
+3. 大多数文件是Python包中的配置文件和文档
+4. 最大的文件是HuggingFace模型列表，包含37,632行

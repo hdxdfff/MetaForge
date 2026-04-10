@@ -1,0 +1,39 @@
+{
+  "steps": [
+    {
+      "step_id": "task-terminal-record",
+      "step_title": "Validate the result",
+      "action": "task_terminal_record",
+      "ok": false,
+      "at": "2026-04-02T20:58:20.411056Z",
+      "status": "failed",
+      "summary": "",
+      "error": null,
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result"
+    }
+  ],
+  "task_id": "77ddade67f1b4de5b30db115535e03cc",
+  "task_title": "Validate the result",
+  "task_status": "failed",
+  "completed": false,
+  "updated_at": "2026-04-02T21:01:26.413488Z",
+  "result": {
+    "state": "failed_execution",
+    "reason": "Invalid production plan: reviewer step 'Validate changes against baseline' lacks artifact input.",
+    "task_id": "77ddade67f1b4de5b30db115535e03cc",
+    "repo_path": "D:\\codex\\orchestrator-mvp",
+    "execution_mode": "production",
+    "goal": "Validate the change",
+    "cheap_calls_used": 0,
+    "cheap_chars_used": 0,
+    "escalation_count": 0,
+    "failed_steps": [],
+    "next_action_required": "Inspect execution evidence and rerun or replace the task; no approval hold was applied.",
+    "failure_pause_policy": "If a long task fails, allow at most one cheap-model-approved probe retry with bounded local cost. If cheap approval is missing, ambiguous, or the retry still fails, pause execution, return a structured error report, and wait for explicit core guidance.",
+    "pause_required": false,
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\77ddade67f1b4de5b30db115535e03cc\\execution-evidence.json",
+    "execution_evidence_step_count": 1
+  }
+}

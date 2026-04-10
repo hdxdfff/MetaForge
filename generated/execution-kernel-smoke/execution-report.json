@@ -1,0 +1,12 @@
+{
+  "artifact_id": "execution-kernel-smoke",
+  "executed": true,
+  "success": true,
+  "exit_code": 0,
+  "command": [
+    "C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "D:\\codex\\generated\\execution-kernel-smoke\\run_demo.py"
+  ],
+  "stdout": "{\"status\": \"ok\", \"artifact_id\": \"execution-kernel-smoke\", \"message\": \"Provide a runnable execution-kernel smoke bundle with self-test and audit evidence.\", \"args\": []}",
+  "stderr": ""
+}

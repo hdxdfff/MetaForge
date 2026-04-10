@@ -1,0 +1,348 @@
+{
+  "task_id": "8a21158bc5f94c2e8cf248e8fca0e1cd",
+  "task_title": null,
+  "task_status": "timed_out",
+  "started_at": "2026-04-03T19:53:31.010540Z",
+  "updated_at": "2026-04-03T20:01:43.355757Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "bcb8ba0d",
+      "step_title": "Spawn decomposition subtasks",
+      "action": "planner_step",
+      "ok": true,
+      "at": "2026-04-03T20:01:43.355757Z",
+      "phase": "decompose",
+      "worker": "planner",
+      "status": "completed",
+      "output_ref": {
+        "artifact_id": "ctx_0d718fc9f868",
+        "task_id": "8a21158bc5f94c2e8cf248e8fca0e1cd",
+        "step_id": "bcb8ba0d",
+        "channel": "planner-output",
+        "title": "Spawn decomposition subtasks output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\8a21158bc5f94c2e8cf248e8fca0e1cd\\bcb8ba0d-planner-output-ctx_0d718fc9f868.json",
+        "size_chars": 960,
+        "line_count": 34,
+        "created_at": "2026-04-03T19:54:00.213857Z",
+        "metadata": {
+          "worker": "planner",
+          "phase": "decompose",
+          "route_model": "internal-recovery",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 960,
+        "line_count": 34,
+        "stored_raw": true
+      },
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "99bb3d30",
+      "step_title": "Wait for child task completion",
+      "action": "planner_step",
+      "ok": false,
+      "at": "2026-04-03T20:01:43.355757Z",
+      "phase": "decompose",
+      "worker": "planner",
+      "status": "running",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "d4d7f1e9",
+      "step_title": "Aggregate decomposition results",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-04-03T20:01:43.355757Z",
+      "phase": "verify",
+      "worker": "reviewer",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    }
+  ],
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-03T19:53:31.015602Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "8a21158bc5f94c2e8cf248e8fca0e1cd",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "production",
+        "queue_name": "regression",
+        "task_type": "qemu_smoke_run"
+      },
+      {
+        "timestamp": "2026-04-03T19:53:56.369169Z",
+        "kind": "decomposition_spawned",
+        "success": true,
+        "task_id": "8a21158bc5f94c2e8cf248e8fca0e1cd",
+        "child_task_count": 3,
+        "child_task_ids": [
+          "2021c0d7778b4f679f5ebb12beef8cbc",
+          "098be1aef5a749f99251dd46821e4fd8",
+          "0d4ddbe0b238445687775ea5c5d0c92d"
+        ],
+        "dag": {
+          "shared_nodes": [
+            "Analyze the current state"
+          ],
+          "branch_nodes": [
+            "Implement the bounded change"
+          ],
+          "repair_nodes": [
+            "Validate the result"
+          ],
+          "optional_nodes": [],
+          "speculative_nodes": [],
+          "blocked_nodes": [],
+          "edges": [
+            {
+              "from": "Analyze the current state",
+              "to": "Implement the bounded change",
+              "kind": "branch"
+            },
+            {
+              "from": "Analyze the current state",
+              "to": "Validate the result",
+              "kind": "repair"
+            },
+            {
+              "from": "Implement the bounded change",
+              "to": "Validate the result",
+              "kind": "repair"
+            }
+          ],
+          "shared_dependency_group": "8a21158bc5f94c2e8cf248e8fca0e1cd",
+          "child_dependency_ids": {
+            "2021c0d7778b4f679f5ebb12beef8cbc": [],
+            "098be1aef5a749f99251dd46821e4fd8": [
+              "2021c0d7778b4f679f5ebb12beef8cbc"
+            ],
+            "0d4ddbe0b238445687775ea5c5d0c92d": [
+              "2021c0d7778b4f679f5ebb12beef8cbc",
+              "098be1aef5a749f99251dd46821e4fd8"
+            ]
+          }
+        }
+      },
+      {
+        "timestamp": "2026-04-03T19:54:01.727282Z",
+        "kind": "step_completed",
+        "success": true,
+        "task_id": "8a21158bc5f94c2e8cf248e8fca0e1cd",
+        "step_id": "bcb8ba0d",
+        "step_title": "Spawn decomposition subtasks",
+        "worker": "planner",
+        "phase": "decompose",
+        "route_model": "internal-recovery",
+        "route_provider": "runtime",
+        "elapsed_ms": 17436,
+        "output_ref": {
+          "artifact_id": "ctx_0d718fc9f868",
+          "task_id": "8a21158bc5f94c2e8cf248e8fca0e1cd",
+          "step_id": "bcb8ba0d",
+          "channel": "planner-output",
+          "title": "Spawn decomposition subtasks output",
+          "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\8a21158bc5f94c2e8cf248e8fca0e1cd\\bcb8ba0d-planner-output-ctx_0d718fc9f868.json",
+          "size_chars": 960,
+          "line_count": 34,
+          "created_at": "2026-04-03T19:54:00.213857Z",
+          "metadata": {
+            "worker": "planner",
+            "phase": "decompose",
+            "route_model": "internal-recovery",
+            "route_provider": "runtime"
+          }
+        },
+        "output_stats": {
+          "channel": "planner-output",
+          "char_count": 960,
+          "line_count": 34,
+          "stored_raw": true
+        }
+      }
+    ],
+    "decomposition": {
+      "summary": "Fallback decomposition for: Repair the ToyOS build or toolchain break with the smallest safe patch, then refresh build-report evidence and note any ",
+      "strategy": "bounded multi-layer split with analysis, execution, and verification branches",
+      "subtasks": [
+        {
+          "title": "Analyze the current state",
+          "prompt": "Inspect the current repository state and isolate the smallest workable slice for: Repair the ToyOS build or toolchain break with the smallest safe patch, then refresh build-report evidence and note any remaining blockers.",
+          "goal": "Identify the smallest viable slice",
+          "task_type": "report_refresh",
+          "path_kind": "shared",
+          "queue_name": "fastlane",
+          "verification_level": "L1",
+          "preferred_worker": "reviewer",
+          "execution_mode": "governance",
+          "execution_lane": "host-control",
+          "decompose_children": false,
+          "shared_dependency_group": "8a21158bc5f94c2e8cf248e8fca0e1cd",
+          "repair_for": null,
+          "inputs": [],
+          "outputs": [
+            "analysis note"
+          ],
+          "dependencies": [],
+          "acceptance_criteria": [
+            "The smallest feasible slice is identified."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        },
+        {
+          "title": "Implement the bounded change",
+          "prompt": "Make the smallest safe implementation or repair needed for: Repair the ToyOS build or toolchain break with the smallest safe patch, then refresh build-report evidence and note any remaining blockers.",
+          "goal": "Implement the bounded change",
+          "task_type": "build_fix",
+          "path_kind": "branch",
+          "queue_name": "build_test",
+          "verification_level": "L2",
+          "preferred_worker": "coder",
+          "execution_mode": "production",
+          "execution_lane": "vm-first",
+          "decompose_children": true,
+          "shared_dependency_group": "8a21158bc5f94c2e8cf248e8fca0e1cd",
+          "repair_for": null,
+          "inputs": [
+            "analysis note"
+          ],
+          "outputs": [
+            "bounded patch"
+          ],
+          "dependencies": [
+            "Analyze the current state"
+          ],
+          "acceptance_criteria": [
+            "A bounded implementation exists."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        },
+        {
+          "title": "Validate the result",
+          "prompt": "Run the narrowest useful validation for the bounded change: Repair the ToyOS build or toolchain break with the smallest safe patch, then refresh build-report evidence and note any remaining blockers.",
+          "goal": "Validate the change",
+          "task_type": "unit_test_run",
+          "path_kind": "repair",
+          "queue_name": "build_test",
+          "verification_level": "L2",
+          "preferred_worker": "docker",
+          "execution_mode": "production",
+          "execution_lane": "vm-first",
+          "decompose_children": false,
+          "shared_dependency_group": "8a21158bc5f94c2e8cf248e8fca0e1cd",
+          "repair_for": "Analyze the current state",
+          "inputs": [
+            "bounded patch"
+          ],
+          "outputs": [
+            "validation evidence"
+          ],
+          "dependencies": [
+            "Analyze the current state",
+            "Implement the bounded change"
+          ],
+          "acceptance_criteria": [
+            "Validation evidence is recorded."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        }
+      ],
+      "dag": {
+        "shared_nodes": [
+          "Analyze the current state"
+        ],
+        "branch_nodes": [
+          "Implement the bounded change"
+        ],
+        "repair_nodes": [
+          "Validate the result"
+        ],
+        "optional_nodes": [],
+        "speculative_nodes": [],
+        "blocked_nodes": [],
+        "edges": [
+          {
+            "from": "Analyze the current state",
+            "to": "Implement the bounded change",
+            "kind": "branch"
+          },
+          {
+            "from": "Analyze the current state",
+            "to": "Validate the result",
+            "kind": "repair"
+          },
+          {
+            "from": "Implement the bounded change",
+            "to": "Validate the result",
+            "kind": "repair"
+          }
+        ],
+        "shared_dependency_group": "8a21158bc5f94c2e8cf248e8fca0e1cd",
+        "child_dependency_ids": {
+          "2021c0d7778b4f679f5ebb12beef8cbc": [],
+          "098be1aef5a749f99251dd46821e4fd8": [
+            "2021c0d7778b4f679f5ebb12beef8cbc"
+          ],
+          "0d4ddbe0b238445687775ea5c5d0c92d": [
+            "2021c0d7778b4f679f5ebb12beef8cbc",
+            "098be1aef5a749f99251dd46821e4fd8"
+          ]
+        }
+      },
+      "depth": 0,
+      "max_depth": 2,
+      "mode": "multi_layer",
+      "child_task_ids": [
+        "2021c0d7778b4f679f5ebb12beef8cbc",
+        "098be1aef5a749f99251dd46821e4fd8",
+        "0d4ddbe0b238445687775ea5c5d0c92d"
+      ],
+      "child_tasks": [
+        {
+          "task_id": "2021c0d7778b4f679f5ebb12beef8cbc",
+          "title": "Analyze the current state",
+          "task_type": "report_refresh",
+          "execution_mode": "governance",
+          "depth": 1,
+          "path_kind": "shared"
+        },
+        {
+          "task_id": "098be1aef5a749f99251dd46821e4fd8",
+          "title": "Implement the bounded change",
+          "task_type": "exploration_intake",
+          "execution_mode": "research",
+          "depth": 1,
+          "path_kind": "branch"
+        },
+        {
+          "task_id": "0d4ddbe0b238445687775ea5c5d0c92d",
+          "title": "Validate the result",
+          "task_type": "exploration_intake",
+          "execution_mode": "research",
+          "depth": 1,
+          "path_kind": "repair"
+        }
+      ],
+      "spawned_at": "2026-04-03T19:53:56.369169Z"
+    },
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

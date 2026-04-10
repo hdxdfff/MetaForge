@@ -1,0 +1,2947 @@
+{
+  "graph_id": "graph_039e02c025",
+  "goal_id": "goal_2376059559",
+  "target": "Support mainline branch delivery",
+  "type": "build_product",
+  "created_at": "2026-03-12T08:52:12.719524Z",
+  "updated_at": "2026-03-12T09:37:13.284647Z",
+  "status": "planned",
+  "meta": {
+    "goal_scale": "engineering-os",
+    "architecture_rules": [
+      "agents cannot import runtime",
+      "router must be stateless",
+      "runtime modules cannot depend on app transport handlers",
+      "tools may depend on runtime and state, but not app HTTP layer",
+      "verification must gate promotion of architecture-affecting changes"
+    ],
+    "agent_teams": [
+      "architecture_team",
+      "backend_team",
+      "infrastructure_team",
+      "testing_team"
+    ],
+    "code_graph_focus": {
+      "module_focus": [
+        "tools.prepare_self_patch_branch",
+        "tools.codex_control",
+        "tools.branch_context",
+        "tools.rnd_delivery_pipeline",
+        "app.git_service",
+        "tools.self_patch_loop",
+        "tools.branch_workboard",
+        "app.main"
+      ],
+      "owner_teams": [
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "layers": [
+        "unclassified"
+      ],
+      "matched_modules": [
+        {
+          "module": "tools.prepare_self_patch_branch",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified",
+          "dependency_count": 2,
+          "dependents": 0,
+          "internal_imports": [
+            "tools.execution_trace",
+            "tools.io_utils"
+          ]
+        },
+        {
+          "module": "tools.codex_control",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified",
+          "dependency_count": 2,
+          "dependents": 0,
+          "internal_imports": [
+            "tools.session_guard",
+            "tools.taskgraph_compiler"
+          ]
+        },
+        {
+          "module": "tools.branch_context",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified",
+          "dependency_count": 3,
+          "dependents": 1,
+          "internal_imports": [
+            "tools.context_builder",
+            "tools.io_utils",
+            "tools.telemetry_store"
+          ]
+        },
+        {
+          "module": "tools.rnd_delivery_pipeline",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified",
+          "dependency_count": 1,
+          "dependents": 3,
+          "internal_imports": [
+            "tools.io_utils"
+          ]
+        },
+        {
+          "module": "app.git_service",
+          "owner_team": "backend_team",
+          "owner": "coder",
+          "layer": "unclassified",
+          "dependency_count": 2,
+          "dependents": 2,
+          "internal_imports": [
+            "app.config",
+            "app.models"
+          ]
+        },
+        {
+          "module": "tools.self_patch_loop",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified",
+          "dependency_count": 3,
+          "dependents": 0,
+          "internal_imports": [
+            "tools.execution_trace",
+            "tools.module_ownership",
+            "tools.privilege_policy"
+          ]
+        },
+        {
+          "module": "tools.branch_workboard",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified",
+          "dependency_count": 5,
+          "dependents": 2,
+          "internal_imports": [
+            "tools.branch_context",
+            "tools.goal_registry",
+            "tools.io_utils",
+            "tools.organization_model",
+            "tools.project_graph"
+          ]
+        },
+        {
+          "module": "app.main",
+          "owner_team": "backend_team",
+          "owner": "coder",
+          "layer": "unclassified",
+          "dependency_count": 9,
+          "dependents": 2,
+          "internal_imports": [
+            "app.config",
+            "app.io_utils",
+            "app.models",
+            "app.network_agent",
+            "app.orchestrator",
+            "tools.execution_trace",
+            "tools.goal_registry",
+            "tools.goal_runtime",
+            "tools.goal_storage_audit"
+          ]
+        }
+      ]
+    },
+    "dependency_impact": {
+      "updated_at": "2026-03-12T08:52:05.635916Z",
+      "request": "Support mainline branch delivery",
+      "focus_modules": [
+        "tools.prepare_self_patch_branch",
+        "tools.codex_control",
+        "tools.branch_context",
+        "tools.rnd_delivery_pipeline",
+        "app.git_service",
+        "tools.self_patch_loop",
+        "tools.branch_workboard",
+        "app.main"
+      ],
+      "impacted_modules": [
+        {
+          "module": "app.git_service",
+          "depth": 0,
+          "owner_team": "backend_team",
+          "layer": "unclassified",
+          "dependents": 2
+        },
+        {
+          "module": "app.main",
+          "depth": 0,
+          "owner_team": "backend_team",
+          "layer": "unclassified",
+          "dependents": 2
+        },
+        {
+          "module": "tools.branch_context",
+          "depth": 0,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 1
+        },
+        {
+          "module": "tools.branch_workboard",
+          "depth": 0,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 2
+        },
+        {
+          "module": "tools.codex_control",
+          "depth": 0,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 0
+        },
+        {
+          "module": "tools.prepare_self_patch_branch",
+          "depth": 0,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 0
+        },
+        {
+          "module": "tools.rnd_delivery_pipeline",
+          "depth": 0,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 3
+        },
+        {
+          "module": "tools.self_patch_loop",
+          "depth": 0,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 0
+        },
+        {
+          "module": "app.context_service",
+          "depth": 1,
+          "owner_team": "backend_team",
+          "layer": "unclassified",
+          "dependents": 1
+        },
+        {
+          "module": "app.orchestrator",
+          "depth": 1,
+          "owner_team": "backend_team",
+          "layer": "unclassified",
+          "dependents": 1
+        },
+        {
+          "module": "tools.automation_lab",
+          "depth": 1,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 1
+        },
+        {
+          "module": "tools.brain_loop",
+          "depth": 1,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 3
+        },
+        {
+          "module": "tools.company_os",
+          "depth": 1,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 9
+        },
+        {
+          "module": "tools.decision_engine",
+          "depth": 1,
+          "owner_team": "architecture_team",
+          "layer": "task_graph_planner",
+          "dependents": 1
+        },
+        {
+          "module": "tools.factory_daemon",
+          "depth": 1,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 0
+        },
+        {
+          "module": "tools.meta_factory_control",
+          "depth": 1,
+          "owner_team": "infrastructure_team",
+          "layer": "architecture_engine",
+          "dependents": 3
+        },
+        {
+          "module": "app.config",
+          "depth": 2,
+          "owner_team": "backend_team",
+          "layer": "unclassified",
+          "dependents": 13
+        },
+        {
+          "module": "app.io_utils",
+          "depth": 2,
+          "owner_team": "backend_team",
+          "layer": "unclassified",
+          "dependents": 4
+        },
+        {
+          "module": "runtime.executor",
+          "depth": 2,
+          "owner_team": "backend_team",
+          "layer": "unclassified",
+          "dependents": 1
+        },
+        {
+          "module": "tools.factory_self_report",
+          "depth": 2,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 1
+        },
+        {
+          "module": "tools.github_learning_engine",
+          "depth": 2,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 2
+        },
+        {
+          "module": "tools.io_utils",
+          "depth": 2,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 78
+        },
+        {
+          "module": "tools.network_keepalive",
+          "depth": 2,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 0
+        },
+        {
+          "module": "tools.platform_registry",
+          "depth": 2,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 7
+        },
+        {
+          "module": "tools.platform_verification_sweep",
+          "depth": 2,
+          "owner_team": "infrastructure_team",
+          "layer": "verification",
+          "dependents": 1
+        },
+        {
+          "module": "tools.self_model",
+          "depth": 2,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 0
+        },
+        {
+          "module": "tools.verification_engine",
+          "depth": 2,
+          "owner_team": "infrastructure_team",
+          "layer": "verification",
+          "dependents": 4
+        }
+      ],
+      "affected_teams": [
+        "architecture_team",
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "affected_layers": [
+        "architecture_engine",
+        "task_graph_planner",
+        "unclassified",
+        "verification"
+      ],
+      "verification_scope": [
+        "app.config",
+        "app.context_service",
+        "app.git_service",
+        "app.io_utils",
+        "app.main",
+        "app.orchestrator",
+        "runtime.executor",
+        "tools.automation_lab",
+        "tools.brain_loop",
+        "tools.branch_context",
+        "tools.branch_workboard",
+        "tools.company_os",
+        "tools.decision_engine",
+        "tools.factory_self_report",
+        "tools.github_learning_engine",
+        "tools.io_utils",
+        "tools.meta_factory_control",
+        "tools.platform_registry",
+        "tools.platform_verification_sweep",
+        "tools.rnd_delivery_pipeline",
+        "tools.verification_engine"
+      ]
+    },
+    "project_impact": {
+      "updated_at": "2026-03-12T08:52:07.507235Z",
+      "request": "Support mainline branch delivery",
+      "query_domains": [
+        "general"
+      ],
+      "related_projects": [
+        {
+          "project_id": "platform_df90392702",
+          "name": "Expand capability routing patterns",
+          "type": "platform",
+          "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\expand-capability-routing-patterns",
+          "domains": [
+            "general"
+          ]
+        },
+        {
+          "project_id": "platform_c3bb90675c",
+          "name": "Expand tool extension coverage",
+          "type": "platform",
+          "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\expand-tool-extension-coverage",
+          "domains": [
+            "general"
+          ]
+        },
+        {
+          "project_id": "platform_3f9a992241",
+          "name": "Deepen repo learning and knowledge routing reuse",
+          "type": "platform",
+          "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\deepen-repo-learning-and-knowledge-routing-reuse",
+          "domains": [
+            "general"
+          ]
+        },
+        {
+          "project_id": "platform_83ed536a57",
+          "name": "Deepen repo learning and knowledge routing reuse",
+          "type": "platform",
+          "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\deepen-repo-learning-and-knowledge-routing-reuse",
+          "domains": [
+            "general"
+          ]
+        },
+        {
+          "project_id": "platform_4f5397914e",
+          "name": "Deepen repo learning and knowledge routing reuse",
+          "type": "platform",
+          "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\deepen-repo-learning-and-knowledge-routing-reuse",
+          "domains": [
+            "general"
+          ]
+        }
+      ],
+      "cross_project_edges": [
+        {
+          "from": "platform_df90392702",
+          "to": "platform_c3bb90675c",
+          "kind": "domain-overlap",
+          "domains": [
+            "general"
+          ]
+        },
+        {
+          "from": "platform_df90392702",
+          "to": "platform_3f9a992241",
+          "kind": "domain-overlap",
+          "domains": [
+            "general"
+          ]
+        },
+        {
+          "from": "platform_df90392702",
+          "to": "platform_83ed536a57",
+          "kind": "domain-overlap",
+          "domains": [
+            "general"
+          ]
+        },
+        {
+          "from": "platform_df90392702",
+          "to": "platform_4f5397914e",
+          "kind": "domain-overlap",
+          "domains": [
+            "general"
+          ]
+        },
+        {
+          "from": "platform_c3bb90675c",
+          "to": "platform_df90392702",
+          "kind": "domain-overlap",
+          "domains": [
+            "general"
+          ]
+        },
+        {
+          "from": "platform_c3bb90675c",
+          "to": "platform_3f9a992241",
+          "kind": "domain-overlap",
+          "domains": [
+            "general"
+          ]
+        },
+        {
+          "from": "platform_c3bb90675c",
+          "to": "platform_83ed536a57",
+          "kind": "domain-overlap",
+          "domains": [
+            "general"
+          ]
+        },
+        {
+          "from": "platform_c3bb90675c",
+          "to": "platform_4f5397914e",
+          "kind": "domain-overlap",
+          "domains": [
+            "general"
+          ]
+        },
+        {
+          "from": "platform_3f9a992241",
+          "to": "platform_df90392702",
+          "kind": "domain-overlap",
+          "domains": [
+            "general"
+          ]
+        },
+        {
+          "from": "platform_3f9a992241",
+          "to": "platform_c3bb90675c",
+          "kind": "domain-overlap",
+          "domains": [
+            "general"
+          ]
+        },
+        {
+          "from": "platform_3f9a992241",
+          "to": "platform_83ed536a57",
+          "kind": "domain-overlap",
+          "domains": [
+            "general"
+          ]
+        },
+        {
+          "from": "platform_3f9a992241",
+          "to": "platform_4f5397914e",
+          "kind": "domain-overlap",
+          "domains": [
+            "general"
+          ]
+        },
+        {
+          "from": "platform_83ed536a57",
+          "to": "platform_df90392702",
+          "kind": "domain-overlap",
+          "domains": [
+            "general"
+          ]
+        },
+        {
+          "from": "platform_83ed536a57",
+          "to": "platform_c3bb90675c",
+          "kind": "domain-overlap",
+          "domains": [
+            "general"
+          ]
+        },
+        {
+          "from": "platform_83ed536a57",
+          "to": "platform_3f9a992241",
+          "kind": "domain-overlap",
+          "domains": [
+            "general"
+          ]
+        },
+        {
+          "from": "platform_83ed536a57",
+          "to": "platform_4f5397914e",
+          "kind": "domain-overlap",
+          "domains": [
+            "general"
+          ]
+        },
+        {
+          "from": "platform_4f5397914e",
+          "to": "platform_df90392702",
+          "kind": "domain-overlap",
+          "domains": [
+            "general"
+          ]
+        },
+        {
+          "from": "platform_4f5397914e",
+          "to": "platform_c3bb90675c",
+          "kind": "domain-overlap",
+          "domains": [
+            "general"
+          ]
+        },
+        {
+          "from": "platform_4f5397914e",
+          "to": "platform_3f9a992241",
+          "kind": "domain-overlap",
+          "domains": [
+            "general"
+          ]
+        },
+        {
+          "from": "platform_4f5397914e",
+          "to": "platform_83ed536a57",
+          "kind": "domain-overlap",
+          "domains": [
+            "general"
+          ]
+        }
+      ],
+      "cross_project_count": 5
+    },
+    "project_graph_summary": {
+      "project_count": 5,
+      "platform_count": 19,
+      "edge_count": 182
+    },
+    "organization_allocation": {
+      "project_id": "79120c5dbb",
+      "name": "ToyOS Kernel",
+      "type": "project",
+      "domains": [
+        "kernel",
+        "factory"
+      ],
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ]
+    },
+    "organization_summary": {
+      "department_count": 5,
+      "team_count": 3
+    },
+    "cross_project_candidate": {},
+    "selected_work_packages": []
+  },
+  "nodes": [
+    {
+      "id": "architecture_contract",
+      "title": "Define architecture contract for Support mainline branch delivery",
+      "role": "architect",
+      "prompt": "Define architecture boundaries, interfaces, and ownership for: Support mainline branch delivery",
+      "dependencies": [],
+      "status": "completed",
+      "task_id": null,
+      "team": "architecture_team",
+      "owned_modules": [
+        "brain",
+        "runtime.scheduler",
+        "tools.taskgraph_compiler",
+        "tools.prepare_self_patch_branch",
+        "tools.codex_control",
+        "tools.branch_context",
+        "tools.rnd_delivery_pipeline",
+        "app.git_service",
+        "tools.self_patch_loop",
+        "tools.branch_workboard",
+        "app.main"
+      ],
+      "kind": "architecture",
+      "module_focus": [
+        "tools.prepare_self_patch_branch",
+        "tools.codex_control",
+        "tools.branch_context",
+        "tools.rnd_delivery_pipeline",
+        "app.git_service",
+        "tools.self_patch_loop",
+        "tools.branch_workboard",
+        "app.main"
+      ],
+      "owner_teams": [
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.prepare_self_patch_branch",
+          "tools.codex_control",
+          "tools.branch_context",
+          "tools.rnd_delivery_pipeline",
+          "app.git_service",
+          "tools.self_patch_loop",
+          "tools.branch_workboard",
+          "app.main"
+        ],
+        "owner_teams": [
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.prepare_self_patch_branch",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.codex_control",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.branch_context",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.rnd_delivery_pipeline",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "app.git_service",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.self_patch_loop",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.branch_workboard",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "app.main",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "dependency_impact": {
+        "updated_at": "2026-03-12T08:52:12.604619Z",
+        "request": "Support mainline branch delivery",
+        "focus_modules": [
+          "tools.prepare_self_patch_branch",
+          "tools.codex_control",
+          "tools.branch_context",
+          "tools.rnd_delivery_pipeline",
+          "app.git_service",
+          "tools.self_patch_loop",
+          "tools.branch_workboard",
+          "app.main"
+        ],
+        "impacted_modules": [
+          {
+            "module": "app.git_service",
+            "depth": 0,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "app.main",
+            "depth": 0,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "tools.branch_context",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.branch_workboard",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "tools.codex_control",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.prepare_self_patch_branch",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.rnd_delivery_pipeline",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "tools.self_patch_loop",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "app.context_service",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "app.orchestrator",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.automation_lab",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.brain_loop",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "tools.company_os",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 9
+          },
+          {
+            "module": "tools.decision_engine",
+            "depth": 1,
+            "owner_team": "architecture_team",
+            "layer": "task_graph_planner",
+            "dependents": 1
+          },
+          {
+            "module": "tools.factory_daemon",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.meta_factory_control",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "architecture_engine",
+            "dependents": 3
+          },
+          {
+            "module": "app.config",
+            "depth": 2,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 13
+          },
+          {
+            "module": "app.io_utils",
+            "depth": 2,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 4
+          },
+          {
+            "module": "runtime.executor",
+            "depth": 2,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.factory_self_report",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.github_learning_engine",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "tools.io_utils",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 78
+          },
+          {
+            "module": "tools.network_keepalive",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.platform_registry",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 7
+          },
+          {
+            "module": "tools.platform_verification_sweep",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "verification",
+            "dependents": 1
+          },
+          {
+            "module": "tools.self_model",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.verification_engine",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "verification",
+            "dependents": 4
+          }
+        ],
+        "affected_teams": [
+          "architecture_team",
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "affected_layers": [
+          "architecture_engine",
+          "task_graph_planner",
+          "unclassified",
+          "verification"
+        ],
+        "verification_scope": [
+          "app.config",
+          "app.context_service",
+          "app.git_service",
+          "app.io_utils",
+          "app.main",
+          "app.orchestrator",
+          "runtime.executor",
+          "tools.automation_lab",
+          "tools.brain_loop",
+          "tools.branch_context",
+          "tools.branch_workboard",
+          "tools.company_os",
+          "tools.decision_engine",
+          "tools.factory_self_report",
+          "tools.github_learning_engine",
+          "tools.io_utils",
+          "tools.meta_factory_control",
+          "tools.platform_registry",
+          "tools.platform_verification_sweep",
+          "tools.rnd_delivery_pipeline",
+          "tools.verification_engine"
+        ]
+      },
+      "project_impact": {
+        "updated_at": "2026-03-12T08:52:12.627555Z",
+        "request": "Support mainline branch delivery",
+        "query_domains": [
+          "general"
+        ],
+        "related_projects": [
+          {
+            "project_id": "platform_df90392702",
+            "name": "Expand capability routing patterns",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\expand-capability-routing-patterns",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "project_id": "platform_c3bb90675c",
+            "name": "Expand tool extension coverage",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\expand-tool-extension-coverage",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "project_id": "platform_3f9a992241",
+            "name": "Deepen repo learning and knowledge routing reuse",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\deepen-repo-learning-and-knowledge-routing-reuse",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "project_id": "platform_83ed536a57",
+            "name": "Deepen repo learning and knowledge routing reuse",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\deepen-repo-learning-and-knowledge-routing-reuse",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "project_id": "platform_4f5397914e",
+            "name": "Deepen repo learning and knowledge routing reuse",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\deepen-repo-learning-and-knowledge-routing-reuse",
+            "domains": [
+              "general"
+            ]
+          }
+        ],
+        "cross_project_edges": [
+          {
+            "from": "platform_df90392702",
+            "to": "platform_c3bb90675c",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_df90392702",
+            "to": "platform_3f9a992241",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_df90392702",
+            "to": "platform_83ed536a57",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_df90392702",
+            "to": "platform_4f5397914e",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_c3bb90675c",
+            "to": "platform_df90392702",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_c3bb90675c",
+            "to": "platform_3f9a992241",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_c3bb90675c",
+            "to": "platform_83ed536a57",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_c3bb90675c",
+            "to": "platform_4f5397914e",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_3f9a992241",
+            "to": "platform_df90392702",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_3f9a992241",
+            "to": "platform_c3bb90675c",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_3f9a992241",
+            "to": "platform_83ed536a57",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_3f9a992241",
+            "to": "platform_4f5397914e",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_83ed536a57",
+            "to": "platform_df90392702",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_83ed536a57",
+            "to": "platform_c3bb90675c",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_83ed536a57",
+            "to": "platform_3f9a992241",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_83ed536a57",
+            "to": "platform_4f5397914e",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_4f5397914e",
+            "to": "platform_df90392702",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_4f5397914e",
+            "to": "platform_c3bb90675c",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_4f5397914e",
+            "to": "platform_3f9a992241",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_4f5397914e",
+            "to": "platform_83ed536a57",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          }
+        ],
+        "cross_project_count": 5
+      },
+      "ownership_graph_summary": {
+        "module_count": 137,
+        "team_count": 3
+      },
+      "patch_required": false,
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "review_departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "department_workers": {
+        "architecture_department": "reviewer",
+        "engineering_department": "coder",
+        "qa_department": "shell",
+        "research_department": "reviewer"
+      },
+      "result": {
+        "summary": "Runtime-native architecture contract synthesized from project context kernel, code knowledge graph, ownership map, and global policy."
+      },
+      "completed_at": "2026-03-12T08:52:14.942325Z"
+    },
+    {
+      "id": "engineering_plan",
+      "title": "Plan engineering task graph for Support mainline branch delivery",
+      "role": "product",
+      "prompt": "Produce the engineering task graph, interface map, and implementation slices for: Support mainline branch delivery",
+      "dependencies": [
+        "architecture_contract"
+      ],
+      "status": "completed",
+      "task_id": null,
+      "team": "architecture_team",
+      "owned_modules": [
+        "tools.prepare_self_patch_branch",
+        "tools.codex_control",
+        "tools.branch_context",
+        "tools.rnd_delivery_pipeline",
+        "app.git_service",
+        "tools.self_patch_loop",
+        "tools.branch_workboard",
+        "app.main"
+      ],
+      "kind": "planning",
+      "module_focus": [
+        "tools.prepare_self_patch_branch",
+        "tools.codex_control",
+        "tools.branch_context",
+        "tools.rnd_delivery_pipeline",
+        "app.git_service",
+        "tools.self_patch_loop",
+        "tools.branch_workboard",
+        "app.main"
+      ],
+      "owner_teams": [
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.prepare_self_patch_branch",
+          "tools.codex_control",
+          "tools.branch_context",
+          "tools.rnd_delivery_pipeline",
+          "app.git_service",
+          "tools.self_patch_loop",
+          "tools.branch_workboard",
+          "app.main"
+        ],
+        "owner_teams": [
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.prepare_self_patch_branch",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.codex_control",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.branch_context",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.rnd_delivery_pipeline",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "app.git_service",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.self_patch_loop",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.branch_workboard",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "app.main",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "dependency_impact": {
+        "updated_at": "2026-03-12T08:52:12.604619Z",
+        "request": "Support mainline branch delivery",
+        "focus_modules": [
+          "tools.prepare_self_patch_branch",
+          "tools.codex_control",
+          "tools.branch_context",
+          "tools.rnd_delivery_pipeline",
+          "app.git_service",
+          "tools.self_patch_loop",
+          "tools.branch_workboard",
+          "app.main"
+        ],
+        "impacted_modules": [
+          {
+            "module": "app.git_service",
+            "depth": 0,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "app.main",
+            "depth": 0,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "tools.branch_context",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.branch_workboard",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "tools.codex_control",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.prepare_self_patch_branch",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.rnd_delivery_pipeline",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "tools.self_patch_loop",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "app.context_service",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "app.orchestrator",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.automation_lab",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.brain_loop",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "tools.company_os",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 9
+          },
+          {
+            "module": "tools.decision_engine",
+            "depth": 1,
+            "owner_team": "architecture_team",
+            "layer": "task_graph_planner",
+            "dependents": 1
+          },
+          {
+            "module": "tools.factory_daemon",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.meta_factory_control",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "architecture_engine",
+            "dependents": 3
+          },
+          {
+            "module": "app.config",
+            "depth": 2,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 13
+          },
+          {
+            "module": "app.io_utils",
+            "depth": 2,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 4
+          },
+          {
+            "module": "runtime.executor",
+            "depth": 2,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.factory_self_report",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.github_learning_engine",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "tools.io_utils",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 78
+          },
+          {
+            "module": "tools.network_keepalive",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.platform_registry",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 7
+          },
+          {
+            "module": "tools.platform_verification_sweep",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "verification",
+            "dependents": 1
+          },
+          {
+            "module": "tools.self_model",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.verification_engine",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "verification",
+            "dependents": 4
+          }
+        ],
+        "affected_teams": [
+          "architecture_team",
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "affected_layers": [
+          "architecture_engine",
+          "task_graph_planner",
+          "unclassified",
+          "verification"
+        ],
+        "verification_scope": [
+          "app.config",
+          "app.context_service",
+          "app.git_service",
+          "app.io_utils",
+          "app.main",
+          "app.orchestrator",
+          "runtime.executor",
+          "tools.automation_lab",
+          "tools.brain_loop",
+          "tools.branch_context",
+          "tools.branch_workboard",
+          "tools.company_os",
+          "tools.decision_engine",
+          "tools.factory_self_report",
+          "tools.github_learning_engine",
+          "tools.io_utils",
+          "tools.meta_factory_control",
+          "tools.platform_registry",
+          "tools.platform_verification_sweep",
+          "tools.rnd_delivery_pipeline",
+          "tools.verification_engine"
+        ]
+      },
+      "project_impact": {
+        "updated_at": "2026-03-12T08:52:12.627555Z",
+        "request": "Support mainline branch delivery",
+        "query_domains": [
+          "general"
+        ],
+        "related_projects": [
+          {
+            "project_id": "platform_df90392702",
+            "name": "Expand capability routing patterns",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\expand-capability-routing-patterns",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "project_id": "platform_c3bb90675c",
+            "name": "Expand tool extension coverage",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\expand-tool-extension-coverage",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "project_id": "platform_3f9a992241",
+            "name": "Deepen repo learning and knowledge routing reuse",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\deepen-repo-learning-and-knowledge-routing-reuse",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "project_id": "platform_83ed536a57",
+            "name": "Deepen repo learning and knowledge routing reuse",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\deepen-repo-learning-and-knowledge-routing-reuse",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "project_id": "platform_4f5397914e",
+            "name": "Deepen repo learning and knowledge routing reuse",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\deepen-repo-learning-and-knowledge-routing-reuse",
+            "domains": [
+              "general"
+            ]
+          }
+        ],
+        "cross_project_edges": [
+          {
+            "from": "platform_df90392702",
+            "to": "platform_c3bb90675c",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_df90392702",
+            "to": "platform_3f9a992241",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_df90392702",
+            "to": "platform_83ed536a57",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_df90392702",
+            "to": "platform_4f5397914e",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_c3bb90675c",
+            "to": "platform_df90392702",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_c3bb90675c",
+            "to": "platform_3f9a992241",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_c3bb90675c",
+            "to": "platform_83ed536a57",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_c3bb90675c",
+            "to": "platform_4f5397914e",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_3f9a992241",
+            "to": "platform_df90392702",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_3f9a992241",
+            "to": "platform_c3bb90675c",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_3f9a992241",
+            "to": "platform_83ed536a57",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_3f9a992241",
+            "to": "platform_4f5397914e",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_83ed536a57",
+            "to": "platform_df90392702",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_83ed536a57",
+            "to": "platform_c3bb90675c",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_83ed536a57",
+            "to": "platform_3f9a992241",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_83ed536a57",
+            "to": "platform_4f5397914e",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_4f5397914e",
+            "to": "platform_df90392702",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_4f5397914e",
+            "to": "platform_c3bb90675c",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_4f5397914e",
+            "to": "platform_3f9a992241",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_4f5397914e",
+            "to": "platform_83ed536a57",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          }
+        ],
+        "cross_project_count": 5
+      },
+      "ownership_graph_summary": {
+        "module_count": 137,
+        "team_count": 3
+      },
+      "patch_required": false,
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "review_departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "department_workers": {
+        "architecture_department": "reviewer",
+        "engineering_department": "coder",
+        "qa_department": "shell",
+        "research_department": "reviewer"
+      },
+      "result": {
+        "summary": "Runtime-native engineering plan synthesized from dependency-aware taskgraph and module ownership map."
+      },
+      "completed_at": "2026-03-12T08:52:14.942325Z"
+    },
+    {
+      "id": "module_tools_prepare_self_patch_branch",
+      "title": "Implement module tools.prepare_self_patch_branch",
+      "role": "ops",
+      "prompt": "Implement or refine module tools.prepare_self_patch_branch for the current engineering goal.",
+      "dependencies": [
+        "engineering_plan"
+      ],
+      "status": "completed",
+      "task_id": null,
+      "team": "infrastructure_team",
+      "owned_modules": [
+        "tools.prepare_self_patch_branch"
+      ],
+      "kind": "module-implementation",
+      "module_focus": [
+        "tools.prepare_self_patch_branch"
+      ],
+      "owner_teams": [
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.prepare_self_patch_branch"
+        ],
+        "owner_teams": [
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.prepare_self_patch_branch",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "owner": "ops",
+      "layer": "unclassified",
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "review_departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "department_workers": {
+        "architecture_department": "reviewer",
+        "engineering_department": "coder",
+        "qa_department": "shell",
+        "research_department": "reviewer"
+      },
+      "worker": "docker",
+      "selection_reason": "role-default:ops->docker+team-owner:infrastructure_team->docker",
+      "worker_success_rate": 0.075,
+      "skill_matches": [
+        "completed_1554",
+        "completed_1804",
+        "task_12345678"
+      ],
+      "execution_lane": "host-control",
+      "worker_vm_preferred": false
+    },
+    {
+      "id": "module_tools_codex_control",
+      "title": "Implement module tools.codex_control",
+      "role": "ops",
+      "prompt": "Implement or refine module tools.codex_control for the current engineering goal.",
+      "dependencies": [
+        "engineering_plan"
+      ],
+      "status": "completed",
+      "task_id": null,
+      "team": "infrastructure_team",
+      "owned_modules": [
+        "tools.codex_control"
+      ],
+      "kind": "module-implementation",
+      "module_focus": [
+        "tools.codex_control"
+      ],
+      "owner_teams": [
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.codex_control"
+        ],
+        "owner_teams": [
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.codex_control",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "owner": "ops",
+      "layer": "unclassified",
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "review_departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "department_workers": {
+        "architecture_department": "reviewer",
+        "engineering_department": "coder",
+        "qa_department": "shell",
+        "research_department": "reviewer"
+      },
+      "worker": "docker",
+      "selection_reason": "role-default:ops->docker+team-owner:infrastructure_team->docker",
+      "worker_success_rate": 0.075,
+      "skill_matches": [
+        "completed_1554",
+        "completed_1804",
+        "task_12345678"
+      ],
+      "execution_lane": "host-control",
+      "worker_vm_preferred": false
+    },
+    {
+      "id": "module_tools_branch_context",
+      "title": "Implement module tools.branch_context",
+      "role": "ops",
+      "prompt": "Implement or refine module tools.branch_context for the current engineering goal.",
+      "dependencies": [
+        "engineering_plan"
+      ],
+      "status": "completed",
+      "task_id": null,
+      "team": "infrastructure_team",
+      "owned_modules": [
+        "tools.branch_context"
+      ],
+      "kind": "module-implementation",
+      "module_focus": [
+        "tools.branch_context"
+      ],
+      "owner_teams": [
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.branch_context"
+        ],
+        "owner_teams": [
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.branch_context",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "owner": "ops",
+      "layer": "unclassified",
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "review_departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "department_workers": {
+        "architecture_department": "reviewer",
+        "engineering_department": "coder",
+        "qa_department": "shell",
+        "research_department": "reviewer"
+      },
+      "worker": "docker",
+      "selection_reason": "role-default:ops->docker+team-owner:infrastructure_team->docker",
+      "worker_success_rate": 0.075,
+      "skill_matches": [
+        "completed_1554",
+        "completed_1804",
+        "task_12345678"
+      ],
+      "execution_lane": "host-control",
+      "worker_vm_preferred": false
+    },
+    {
+      "id": "module_tools_rnd_delivery_pipeline",
+      "title": "Implement module tools.rnd_delivery_pipeline",
+      "role": "ops",
+      "prompt": "Implement or refine module tools.rnd_delivery_pipeline for the current engineering goal.",
+      "dependencies": [
+        "engineering_plan"
+      ],
+      "status": "completed",
+      "task_id": null,
+      "team": "infrastructure_team",
+      "owned_modules": [
+        "tools.rnd_delivery_pipeline"
+      ],
+      "kind": "module-implementation",
+      "module_focus": [
+        "tools.rnd_delivery_pipeline"
+      ],
+      "owner_teams": [
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.rnd_delivery_pipeline"
+        ],
+        "owner_teams": [
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.rnd_delivery_pipeline",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "owner": "ops",
+      "layer": "unclassified",
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "review_departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "department_workers": {
+        "architecture_department": "reviewer",
+        "engineering_department": "coder",
+        "qa_department": "shell",
+        "research_department": "reviewer"
+      },
+      "worker": "docker",
+      "selection_reason": "role-default:ops->docker+team-owner:infrastructure_team->docker",
+      "worker_success_rate": 0.075,
+      "skill_matches": [
+        "completed_1554",
+        "completed_1804",
+        "task_12345678"
+      ],
+      "execution_lane": "host-control",
+      "worker_vm_preferred": false
+    },
+    {
+      "id": "module_app_git_service",
+      "title": "Implement module app.git_service",
+      "role": "coder",
+      "prompt": "Implement or refine module app.git_service for the current engineering goal.",
+      "dependencies": [
+        "engineering_plan"
+      ],
+      "status": "completed",
+      "task_id": null,
+      "team": "backend_team",
+      "owned_modules": [
+        "app.git_service"
+      ],
+      "kind": "module-implementation",
+      "module_focus": [
+        "app.git_service"
+      ],
+      "owner_teams": [
+        "backend_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "app.git_service"
+        ],
+        "owner_teams": [
+          "backend_team"
+        ],
+        "ownership": [
+          {
+            "module": "app.git_service",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "owner": "coder",
+      "layer": "unclassified",
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "review_departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "department_workers": {
+        "architecture_department": "reviewer",
+        "engineering_department": "coder",
+        "qa_department": "shell",
+        "research_department": "reviewer"
+      },
+      "worker": "coder",
+      "selection_reason": "role-default:coder->coder+team-owner:backend_team->coder",
+      "worker_success_rate": 0.24,
+      "skill_matches": [
+        "completed_1804",
+        "completed_1554",
+        "task_12345678"
+      ],
+      "execution_lane": "host-control",
+      "worker_vm_preferred": false
+    },
+    {
+      "id": "module_tools_self_patch_loop",
+      "title": "Implement module tools.self_patch_loop",
+      "role": "ops",
+      "prompt": "Implement or refine module tools.self_patch_loop for the current engineering goal.",
+      "dependencies": [
+        "engineering_plan"
+      ],
+      "status": "completed",
+      "task_id": null,
+      "team": "infrastructure_team",
+      "owned_modules": [
+        "tools.self_patch_loop"
+      ],
+      "kind": "module-implementation",
+      "module_focus": [
+        "tools.self_patch_loop"
+      ],
+      "owner_teams": [
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.self_patch_loop"
+        ],
+        "owner_teams": [
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.self_patch_loop",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "owner": "ops",
+      "layer": "unclassified",
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "review_departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "department_workers": {
+        "architecture_department": "reviewer",
+        "engineering_department": "coder",
+        "qa_department": "shell",
+        "research_department": "reviewer"
+      },
+      "worker": "docker",
+      "selection_reason": "role-default:ops->docker+team-owner:infrastructure_team->docker",
+      "worker_success_rate": 0.075,
+      "skill_matches": [
+        "completed_1554",
+        "completed_1804",
+        "task_12345678"
+      ],
+      "execution_lane": "host-control",
+      "worker_vm_preferred": false
+    },
+    {
+      "id": "module_tools_branch_workboard",
+      "title": "Implement module tools.branch_workboard",
+      "role": "ops",
+      "prompt": "Implement or refine module tools.branch_workboard for the current engineering goal.",
+      "dependencies": [
+        "module_tools_branch_context"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "team": "infrastructure_team",
+      "owned_modules": [
+        "tools.branch_workboard"
+      ],
+      "kind": "module-implementation",
+      "module_focus": [
+        "tools.branch_workboard"
+      ],
+      "owner_teams": [
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.branch_workboard"
+        ],
+        "owner_teams": [
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.branch_workboard",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "owner": "ops",
+      "layer": "unclassified",
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "review_departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "department_workers": {
+        "architecture_department": "reviewer",
+        "engineering_department": "coder",
+        "qa_department": "shell",
+        "research_department": "reviewer"
+      },
+      "worker": "docker",
+      "selection_reason": "role-default:ops->docker+team-owner:infrastructure_team->docker",
+      "worker_success_rate": 0.075,
+      "skill_matches": [
+        "completed_1554",
+        "completed_1804",
+        "task_12345678"
+      ],
+      "execution_lane": "host-control",
+      "worker_vm_preferred": false
+    },
+    {
+      "id": "module_app_main",
+      "title": "Implement module app.main",
+      "role": "coder",
+      "prompt": "Implement or refine module app.main for the current engineering goal.",
+      "dependencies": [
+        "engineering_plan"
+      ],
+      "status": "completed",
+      "task_id": null,
+      "team": "backend_team",
+      "owned_modules": [
+        "app.main"
+      ],
+      "kind": "module-implementation",
+      "module_focus": [
+        "app.main"
+      ],
+      "owner_teams": [
+        "backend_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "app.main"
+        ],
+        "owner_teams": [
+          "backend_team"
+        ],
+        "ownership": [
+          {
+            "module": "app.main",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "owner": "coder",
+      "layer": "unclassified",
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "review_departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "department_workers": {
+        "architecture_department": "reviewer",
+        "engineering_department": "coder",
+        "qa_department": "shell",
+        "research_department": "reviewer"
+      },
+      "worker": "coder",
+      "selection_reason": "role-default:coder->coder+team-owner:backend_team->coder",
+      "worker_success_rate": 0.24,
+      "skill_matches": [
+        "completed_1804",
+        "completed_1554",
+        "task_12345678"
+      ],
+      "execution_lane": "host-control",
+      "worker_vm_preferred": false
+    },
+    {
+      "id": "verification_gate",
+      "title": "Run verification and architecture validation for Support mainline branch delivery",
+      "role": "tester",
+      "prompt": "Run CI, tests, and architecture validation for: Support mainline branch delivery",
+      "dependencies": [
+        "module_tools_prepare_self_patch_branch",
+        "module_tools_codex_control",
+        "module_tools_branch_context",
+        "module_tools_rnd_delivery_pipeline",
+        "module_app_git_service",
+        "module_tools_self_patch_loop",
+        "module_tools_branch_workboard",
+        "module_app_main"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "team": "testing_team",
+      "owned_modules": [
+        "tools.prepare_self_patch_branch",
+        "tools.codex_control",
+        "tools.branch_context",
+        "tools.rnd_delivery_pipeline",
+        "app.git_service",
+        "tools.self_patch_loop",
+        "tools.branch_workboard",
+        "app.main"
+      ],
+      "kind": "verification",
+      "module_focus": [
+        "tools.prepare_self_patch_branch",
+        "tools.codex_control",
+        "tools.branch_context",
+        "tools.rnd_delivery_pipeline",
+        "app.git_service",
+        "tools.self_patch_loop",
+        "tools.branch_workboard",
+        "app.main"
+      ],
+      "owner_teams": [
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.prepare_self_patch_branch",
+          "tools.codex_control",
+          "tools.branch_context",
+          "tools.rnd_delivery_pipeline",
+          "app.git_service",
+          "tools.self_patch_loop",
+          "tools.branch_workboard",
+          "app.main"
+        ],
+        "owner_teams": [
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.prepare_self_patch_branch",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.codex_control",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.branch_context",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.rnd_delivery_pipeline",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "app.git_service",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.self_patch_loop",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.branch_workboard",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "app.main",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "dependency_impact": {
+        "updated_at": "2026-03-12T08:52:12.604619Z",
+        "request": "Support mainline branch delivery",
+        "focus_modules": [
+          "tools.prepare_self_patch_branch",
+          "tools.codex_control",
+          "tools.branch_context",
+          "tools.rnd_delivery_pipeline",
+          "app.git_service",
+          "tools.self_patch_loop",
+          "tools.branch_workboard",
+          "app.main"
+        ],
+        "impacted_modules": [
+          {
+            "module": "app.git_service",
+            "depth": 0,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "app.main",
+            "depth": 0,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "tools.branch_context",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.branch_workboard",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "tools.codex_control",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.prepare_self_patch_branch",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.rnd_delivery_pipeline",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "tools.self_patch_loop",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "app.context_service",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "app.orchestrator",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.automation_lab",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.brain_loop",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "tools.company_os",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 9
+          },
+          {
+            "module": "tools.decision_engine",
+            "depth": 1,
+            "owner_team": "architecture_team",
+            "layer": "task_graph_planner",
+            "dependents": 1
+          },
+          {
+            "module": "tools.factory_daemon",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.meta_factory_control",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "architecture_engine",
+            "dependents": 3
+          },
+          {
+            "module": "app.config",
+            "depth": 2,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 13
+          },
+          {
+            "module": "app.io_utils",
+            "depth": 2,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 4
+          },
+          {
+            "module": "runtime.executor",
+            "depth": 2,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.factory_self_report",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.github_learning_engine",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "tools.io_utils",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 78
+          },
+          {
+            "module": "tools.network_keepalive",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.platform_registry",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 7
+          },
+          {
+            "module": "tools.platform_verification_sweep",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "verification",
+            "dependents": 1
+          },
+          {
+            "module": "tools.self_model",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.verification_engine",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "verification",
+            "dependents": 4
+          }
+        ],
+        "affected_teams": [
+          "architecture_team",
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "affected_layers": [
+          "architecture_engine",
+          "task_graph_planner",
+          "unclassified",
+          "verification"
+        ],
+        "verification_scope": [
+          "app.config",
+          "app.context_service",
+          "app.git_service",
+          "app.io_utils",
+          "app.main",
+          "app.orchestrator",
+          "runtime.executor",
+          "tools.automation_lab",
+          "tools.brain_loop",
+          "tools.branch_context",
+          "tools.branch_workboard",
+          "tools.company_os",
+          "tools.decision_engine",
+          "tools.factory_self_report",
+          "tools.github_learning_engine",
+          "tools.io_utils",
+          "tools.meta_factory_control",
+          "tools.platform_registry",
+          "tools.platform_verification_sweep",
+          "tools.rnd_delivery_pipeline",
+          "tools.verification_engine"
+        ]
+      },
+      "project_impact": {
+        "updated_at": "2026-03-12T08:52:12.627555Z",
+        "request": "Support mainline branch delivery",
+        "query_domains": [
+          "general"
+        ],
+        "related_projects": [
+          {
+            "project_id": "platform_df90392702",
+            "name": "Expand capability routing patterns",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\expand-capability-routing-patterns",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "project_id": "platform_c3bb90675c",
+            "name": "Expand tool extension coverage",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\expand-tool-extension-coverage",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "project_id": "platform_3f9a992241",
+            "name": "Deepen repo learning and knowledge routing reuse",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\deepen-repo-learning-and-knowledge-routing-reuse",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "project_id": "platform_83ed536a57",
+            "name": "Deepen repo learning and knowledge routing reuse",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\deepen-repo-learning-and-knowledge-routing-reuse",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "project_id": "platform_4f5397914e",
+            "name": "Deepen repo learning and knowledge routing reuse",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\deepen-repo-learning-and-knowledge-routing-reuse",
+            "domains": [
+              "general"
+            ]
+          }
+        ],
+        "cross_project_edges": [
+          {
+            "from": "platform_df90392702",
+            "to": "platform_c3bb90675c",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_df90392702",
+            "to": "platform_3f9a992241",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_df90392702",
+            "to": "platform_83ed536a57",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_df90392702",
+            "to": "platform_4f5397914e",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_c3bb90675c",
+            "to": "platform_df90392702",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_c3bb90675c",
+            "to": "platform_3f9a992241",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_c3bb90675c",
+            "to": "platform_83ed536a57",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_c3bb90675c",
+            "to": "platform_4f5397914e",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_3f9a992241",
+            "to": "platform_df90392702",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_3f9a992241",
+            "to": "platform_c3bb90675c",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_3f9a992241",
+            "to": "platform_83ed536a57",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_3f9a992241",
+            "to": "platform_4f5397914e",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_83ed536a57",
+            "to": "platform_df90392702",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_83ed536a57",
+            "to": "platform_c3bb90675c",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_83ed536a57",
+            "to": "platform_3f9a992241",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_83ed536a57",
+            "to": "platform_4f5397914e",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_4f5397914e",
+            "to": "platform_df90392702",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_4f5397914e",
+            "to": "platform_c3bb90675c",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_4f5397914e",
+            "to": "platform_3f9a992241",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          },
+          {
+            "from": "platform_4f5397914e",
+            "to": "platform_83ed536a57",
+            "kind": "domain-overlap",
+            "domains": [
+              "general"
+            ]
+          }
+        ],
+        "cross_project_count": 5
+      },
+      "patch_required": true,
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "review_departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "department_workers": {
+        "architecture_department": "reviewer",
+        "engineering_department": "coder",
+        "qa_department": "shell",
+        "research_department": "reviewer"
+      }
+    }
+  ]
+}

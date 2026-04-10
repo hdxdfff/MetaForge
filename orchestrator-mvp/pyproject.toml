@@ -1,0 +1,54 @@
+[project]
+name = "orchestrator-mvp"
+version = "0.6.1"
+description = "Local-first multi-agent coding orchestrator for Windows plus WSL."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi==0.116.1",
+    "openai==1.107.2",
+    "pydantic==2.11.7",
+    "pyinstaller==6.16.0",
+    "python-dotenv==1.1.1",
+    "pywebview==5.1",
+    "uvicorn[standard]==0.35.0",
+]
+
+[dependency-groups]
+dev = [
+    { include-group = "lint" },
+]
+lint = [
+    "ruff==0.15.7",
+]
+typing = [
+    "ty==0.0.24",
+]
+
+[tool.uv]
+package = false
+default-groups = ["dev"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+src = ["app", "tools"]
+force-exclude = true
+extend-exclude = [
+    ".venv",
+    "build",
+    "cache",
+    "data",
+    "dist",
+    "factory",
+    "workspace",
+]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
+ignore = ["E402"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"

@@ -1,0 +1,14 @@
+{
+  "updated_at": "2026-03-10T10:21:27.353398Z",
+  "status": "completed",
+  "skill_count": 5,
+  "replay_count": 5,
+  "decision_pattern_count": 1,
+  "cheap_first": true,
+  "prompt_hints": [
+    "Prefer local scripts, WSL, QEMU, and deterministic validation before escalating.",
+    "When a pattern exists in the skill library or replay store, reuse it before freeform generation.",
+    "Keep reviewer/product/architect drafting on the cheap lane unless there is a contradiction or security boundary."
+  ],
+  "summary": "Prompt improvement sweep refreshed cheap-first guidance from current skills, replay, and knowledge patterns."
+}

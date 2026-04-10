@@ -1,0 +1,248 @@
+{
+  "steps": [
+    {
+      "step_id": "4d4d7d6d",
+      "step_title": "Understand task",
+      "action": "planner_step",
+      "ok": true,
+      "at": "2026-04-02T17:52:35.738563Z",
+      "worker": "planner",
+      "phase": "understand",
+      "route_model": "deepseek-reasoner",
+      "route_provider": "reasoning",
+      "output_ref": {
+        "artifact_id": "ctx_fdefe817963b",
+        "task_id": "7a23d81b945941c7b0627f5c6f6fcdc1",
+        "step_id": "4d4d7d6d",
+        "channel": "planner-output",
+        "title": "Understand task output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\7a23d81b945941c7b0627f5c6f6fcdc1\\4d4d7d6d-planner-output-ctx_fdefe817963b.txt",
+        "size_chars": 603,
+        "line_count": 4,
+        "created_at": "2026-04-02T17:52:24.472874Z",
+        "metadata": {
+          "worker": "planner",
+          "phase": "understand",
+          "route_model": "deepseek-reasoner",
+          "route_provider": "reasoning"
+        }
+      },
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 603,
+        "line_count": 4,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "2fd1d2f4",
+      "step_title": "Draft solution",
+      "action": "coder_step",
+      "ok": true,
+      "at": "2026-04-02T17:54:04.371604Z",
+      "worker": "coder",
+      "phase": "draft",
+      "route_model": "kimi-k2.5",
+      "route_provider": "openai",
+      "output_ref": {
+        "artifact_id": "ctx_e12f6772a74f",
+        "task_id": "7a23d81b945941c7b0627f5c6f6fcdc1",
+        "step_id": "2fd1d2f4",
+        "channel": "coder-output",
+        "title": "Draft solution output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\7a23d81b945941c7b0627f5c6f6fcdc1\\2fd1d2f4-coder-output-ctx_e12f6772a74f.txt",
+        "size_chars": 2038,
+        "line_count": 38,
+        "created_at": "2026-04-02T17:53:57.753381Z",
+        "metadata": {
+          "worker": "coder",
+          "phase": "draft",
+          "route_model": "kimi-k2.5",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "coder-output",
+        "char_count": 2038,
+        "line_count": 38,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "86bf376b",
+      "step_title": "Execute validation",
+      "action": "docker_step",
+      "ok": true,
+      "at": "2026-04-02T17:55:24.125677Z",
+      "worker": "docker",
+      "phase": "execute",
+      "route_model": "deepseek-chat",
+      "route_provider": "runtime",
+      "output_ref": {
+        "artifact_id": "ctx_f26b7168c7d8",
+        "task_id": "7a23d81b945941c7b0627f5c6f6fcdc1",
+        "step_id": "86bf376b",
+        "channel": "docker-output",
+        "title": "Execute validation output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\7a23d81b945941c7b0627f5c6f6fcdc1\\86bf376b-docker-output-ctx_f26b7168c7d8.txt",
+        "size_chars": 34,
+        "line_count": 2,
+        "created_at": "2026-04-02T17:55:13.382211Z",
+        "metadata": {
+          "worker": "docker",
+          "phase": "execute",
+          "route_model": "deepseek-chat",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "docker-output",
+        "char_count": 34,
+        "line_count": 2,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "ee3d3644",
+      "step_title": "Issue patch decision",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-04-02T17:57:27.666480Z",
+      "worker": "reviewer",
+      "phase": "verify",
+      "route_model": "kimi-k2.5",
+      "route_provider": "openai",
+      "output_ref": {
+        "artifact_id": "ctx_05cb47fdf423",
+        "task_id": "7a23d81b945941c7b0627f5c6f6fcdc1",
+        "step_id": "ee3d3644",
+        "channel": "reviewer-output",
+        "title": "Issue patch decision output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\7a23d81b945941c7b0627f5c6f6fcdc1\\ee3d3644-reviewer-output-ctx_05cb47fdf423.txt",
+        "size_chars": 1380,
+        "line_count": 36,
+        "created_at": "2026-04-02T17:57:26.804617Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "verify",
+          "route_model": "kimi-k2.5",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 1380,
+        "line_count": 36,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "4a574f26",
+      "step_title": "Revise next action",
+      "action": "planner_step",
+      "ok": true,
+      "at": "2026-04-02T17:57:36.593653Z",
+      "worker": "planner",
+      "phase": "revise",
+      "route_model": "kimi-k2.5",
+      "route_provider": "openai",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 386,
+        "line_count": 4,
+        "stored_raw": false
+      },
+      "probe_attempts": 0
+    }
+  ],
+  "task_id": "7a23d81b945941c7b0627f5c6f6fcdc1",
+  "task_title": "Validate the result",
+  "task_status": "released",
+  "started_at": "2026-04-02T17:47:15.919947Z",
+  "updated_at": "2026-04-02T17:57:50.093454Z",
+  "completed": true,
+  "result": {
+    "summary": "Fallback plan generated locally because planner remote access is unavailable.",
+    "completed_steps": 5,
+    "context_used_chars": 591,
+    "cheap_calls_used": 2,
+    "cheap_chars_used": 5958,
+    "escalation_count": 2,
+    "execution_mode": "production",
+    "execution_status": "execution_finished",
+    "production_evidence": {
+      "mode": "production",
+      "status": "not-required"
+    },
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\7a23d81b945941c7b0627f5c6f6fcdc1\\execution-evidence.json",
+    "execution_evidence_step_count": 5,
+    "verification_contract": {
+      "verification_level": "L2",
+      "required_checks": [
+        "contract_valid",
+        "build_success",
+        "tests_pass",
+        "smoke_pass",
+        "artifact_manifest_present",
+        "evidence_fresh",
+        "release_checklist"
+      ],
+      "artifact_requirements": {
+        "must_register_artifact": true,
+        "must_have_timestamp": true,
+        "must_have_files": [],
+        "expected_outputs": []
+      },
+      "release_gate": "all_required_checks_pass",
+      "failure_policy": "return_to_planner",
+      "evidence_requirements": [],
+      "verification_notes": [
+        "Validate the change",
+        "Produce explicit verification output or a bounded failure report.",
+        "Do not treat documentation-only progress as production completion."
+      ]
+    },
+    "verification_result": {
+      "status": "verified",
+      "passed": true,
+      "mode": "production",
+      "verification_level": "L2",
+      "contract": {
+        "verification_level": "L2",
+        "required_checks": [
+          "contract_valid",
+          "build_success",
+          "tests_pass",
+          "smoke_pass",
+          "artifact_manifest_present",
+          "evidence_fresh",
+          "release_checklist"
+        ],
+        "artifact_requirements": {
+          "must_register_artifact": true,
+          "must_have_timestamp": true,
+          "must_have_files": [],
+          "expected_outputs": []
+        },
+        "release_gate": "all_required_checks_pass",
+        "failure_policy": "return_to_planner",
+        "evidence_requirements": [],
+        "verification_notes": [
+          "Validate the change",
+          "Produce explicit verification output or a bounded failure report.",
+          "Do not treat documentation-only progress as production completion."
+        ]
+      },
+      "evidence": {
+        "mode": "production",
+        "status": "not-required"
+      }
+    },
+    "delivery_state": "released"
+  }
+}

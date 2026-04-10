@@ -1,0 +1,983 @@
+{
+  "task_id": "19c1fbb0432f47589266da0d3563bce8",
+  "task_status": "released",
+  "phase": "verification-passed",
+  "updated_at": "2026-03-28T22:18:15.870979Z",
+  "heartbeat_at": "2026-03-28T22:18:15.870979Z",
+  "repo_path": "D:\\codex\\orchestrator-mvp",
+  "goal": "Audit the throughput blueprint against the controller and identify the smallest queue admission and WIP gaps.",
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": null,
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\19c1fbb0432f47589266da0d3563bce8",
+  "completed_steps": 5,
+  "verification_result": {
+    "status": "verified",
+    "passed": true,
+    "mode": "research",
+    "verification_level": "L1",
+    "contract": {
+      "verification_level": "L1",
+      "required_checks": [
+        "contract_valid",
+        "build_success",
+        "tests_pass",
+        "artifact_manifest_present",
+        "evidence_fresh"
+      ],
+      "artifact_requirements": {
+        "must_register_artifact": true,
+        "must_have_timestamp": true,
+        "must_have_files": [
+          "D:\\codex\\METAFORGE_OS_THROUGHPUT_AUDIT_NOTE.md"
+        ],
+        "expected_outputs": [
+          "D:\\codex\\METAFORGE_OS_THROUGHPUT_AUDIT_NOTE.md"
+        ],
+        "entrypoint": "D:\\codex\\METAFORGE_OS_THROUGHPUT_AUDIT_NOTE.md",
+        "artifact_type": "report",
+        "test_command": null
+      },
+      "release_gate": "all_required_checks_pass",
+      "failure_policy": "return_to_planner",
+      "evidence_requirements": [],
+      "verification_notes": [
+        "Audit the throughput blueprint against the controller and identify the smallest queue admission and WIP gaps.",
+        "Produce explicit verification output or a bounded failure report.",
+        "Record what was learned and the bounded next experiment.",
+        "Task is invalid unless the declared artifact set is refreshed and verifiable."
+      ]
+    },
+    "evidence": {
+      "status": "verified",
+      "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\19c1fbb0432f47589266da0d3563bce8\\execution-evidence.json",
+      "execution_evidence_present": true,
+      "required_checks": [
+        "contract_valid",
+        "build_success",
+        "tests_pass",
+        "artifact_manifest_present",
+        "evidence_fresh"
+      ],
+      "artifact_requirements": {
+        "must_register_artifact": true,
+        "must_have_timestamp": true,
+        "must_have_files": [
+          "D:\\codex\\METAFORGE_OS_THROUGHPUT_AUDIT_NOTE.md"
+        ],
+        "expected_outputs": [
+          "D:\\codex\\METAFORGE_OS_THROUGHPUT_AUDIT_NOTE.md"
+        ],
+        "entrypoint": "D:\\codex\\METAFORGE_OS_THROUGHPUT_AUDIT_NOTE.md",
+        "artifact_type": "report",
+        "test_command": null
+      }
+    }
+  },
+  "delivery_state": "released",
+  "title": null,
+  "prompt": "Audit the throughput blueprint against the current controller code, identify the smallest queue admission and WIP gaps, and return a bounded implementation note or patch plan.",
+  "scheduler_hint": {
+    "goal_target": "Audit the throughput blueprint against the controller and identify the smallest queue admission and WIP gaps.",
+    "module_focus": [
+      "app.orchestrator",
+      "tools.security_audit",
+      "tools.shadow_pipeline_bridge",
+      "tools.artifact_audit",
+      "tools.goal_storage_audit"
+    ],
+    "owner_teams": [
+      "backend_team",
+      "infrastructure_team"
+    ],
+    "layers": [
+      "unclassified"
+    ],
+    "graph_matches": [
+      {
+        "module": "app.orchestrator",
+        "owner_team": "backend_team",
+        "owner": "coder",
+        "layer": "unclassified",
+        "dependency_count": 30,
+        "dependents": 1,
+        "internal_imports": [
+          "app.config",
+          "app.context_service",
+          "app.executor_adapter",
+          "app.executor_routing",
+          "app.git_service",
+          "app.llm_service",
+          "app.model_router",
+          "app.models",
+          "app.openai_client",
+          "app.prompt_guard",
+          "app.resource_registry",
+          "app.safety_agent",
+          "app.worker_adapters",
+          "state.store",
+          "tools.artifact_audit",
+          "tools.binary_classification_lab_runner",
+          "tools.capability_registry",
+          "tools.code_knowledge_graph",
+          "tools.context_builder",
+          "tools.context_kernel",
+          "tools.distillation",
+          "tools.goal_runtime",
+          "tools.io_utils",
+          "tools.kernel_mode",
+          "tools.privilege_policy",
+          "tools.security_audit",
+          "tools.tool_policy",
+          "tools.tool_registry",
+          "tools.tool_stack",
+          "tools.vm_orchestrator"
+        ]
+      },
+      {
+        "module": "tools.security_audit",
+        "owner_team": "infrastructure_team",
+        "owner": "ops",
+        "layer": "unclassified",
+        "dependency_count": 1,
+        "dependents": 6,
+        "internal_imports": [
+          "tools.io_utils"
+        ]
+      },
+      {
+        "module": "tools.shadow_pipeline_bridge",
+        "owner_team": "infrastructure_team",
+        "owner": "ops",
+        "layer": "unclassified",
+        "dependency_count": 1,
+        "dependents": 1,
+        "internal_imports": [
+          "app.static_pipeline"
+        ]
+      },
+      {
+        "module": "tools.artifact_audit",
+        "owner_team": "infrastructure_team",
+        "owner": "ops",
+        "layer": "unclassified",
+        "dependency_count": 2,
+        "dependents": 8,
+        "internal_imports": [
+          "tools.io_utils",
+          "tools.strategy_engine"
+        ]
+      },
+      {
+        "module": "tools.goal_storage_audit",
+        "owner_team": "infrastructure_team",
+        "owner": "ops",
+        "layer": "unclassified",
+        "dependency_count": 2,
+        "dependents": 4,
+        "internal_imports": [
+          "tools.io_utils",
+          "tools.release_train_runtime"
+        ]
+      }
+    ],
+    "surface_route": {
+      "request": "Audit the throughput blueprint against the current controller code, identify the smallest queue admission and WIP gaps, and return a bounded implementation note or patch plan.",
+      "reason": "Matched task shape: short interactive edit",
+      "task_shape": "short interactive edit",
+      "matched_keywords": [
+        "patch",
+        "code"
+      ],
+      "rule_launch_mode": "message",
+      "preferred_surface": "Aider",
+      "preferred_available": true,
+      "preferred_resolved": "D:\\codex\\bin\\aider.cmd",
+      "fallback_surface": "OpenCode",
+      "fallback_available": false,
+      "availability": {
+        "Aider": {
+          "available": true,
+          "resolved": "D:\\codex\\bin\\aider.cmd"
+        },
+        "OpenCode": {
+          "available": false,
+          "resolved": null
+        },
+        "Goose": {
+          "available": true,
+          "resolved": "D:\\codex\\bin\\goose.cmd"
+        },
+        "OpenHands": {
+          "available": true,
+          "resolved": "D:\\codex\\bin\\openhands.cmd"
+        },
+        "Plandex": {
+          "available": true,
+          "resolved": "D:\\codex\\bin\\plandex.cmd"
+        },
+        "Continue": {
+          "available": true,
+          "resolved": "D:\\Microsoft VS Code\\bin\\code.cmd"
+        },
+        "Codex": {
+          "available": true,
+          "resolved": "D:\\codex\\factoryctl.py"
+        }
+      },
+      "launch_mode": "message",
+      "launch_hint": "D:\\codex\\bin\\aider.cmd --message Audit the throughput blueprint against the current controller code, identify the smallest queue admission and WIP gaps, and return a bounded implementation note or patch plan. --yes-always",
+      "next_step_command": "D:\\codex\\bin\\aider.cmd --message Audit the throughput blueprint against the current controller code, identify the smallest queue admission and WIP gaps, and return a bounded implementation note or patch plan. --yes-always",
+      "launch_command": [
+        "D:\\codex\\bin\\aider.cmd",
+        "--message",
+        "Audit the throughput blueprint against the current controller code, identify the smallest queue admission and WIP gaps, and return a bounded implementation note or patch plan.",
+        "--yes-always"
+      ],
+      "launch_cwd": "D:\\codex\\orchestrator-mvp",
+      "launch_stdin_text": null,
+      "dispatchable": true,
+      "tool_stack": {
+        "version": "v1",
+        "primary_interactive_surface": "Aider",
+        "control_shells": [
+          "OpenCode",
+          "Goose"
+        ],
+        "control_plane": "MetaForge",
+        "long_task_executors": [
+          "OpenHands",
+          "Plandex"
+        ],
+        "development_executors": [
+          "Codex"
+        ],
+        "inspection_surface": "Continue",
+        "final_verification_boundary": [
+          "Verification",
+          "Artifact"
+        ],
+        "routing": [
+          {
+            "task_shape": "short interactive edit",
+            "keywords": [
+              "edit",
+              "fix",
+              "patch",
+              "refactor",
+              "code",
+              "build",
+              "test",
+              "修复",
+              "补丁",
+              "重构",
+              "代码",
+              "构建",
+              "编译",
+              "测试"
+            ],
+            "preferred_surface": "Aider",
+            "fallback_surface": "OpenCode",
+            "launch_mode": "message",
+            "dispatchable": true
+          },
+          {
+            "task_shape": "long agentic implementation",
+            "keywords": [
+              "long",
+              "multi-step",
+              "agent",
+              "workflow",
+              "execute",
+              "run",
+              "长任务",
+              "多步",
+              "执行",
+              "运行",
+              "工作流"
+            ],
+            "preferred_surface": "OpenHands",
+            "fallback_surface": "Plandex",
+            "launch_mode": "server",
+            "dispatchable": true
+          },
+          {
+            "task_shape": "controlled management and dispatch",
+            "keywords": [
+              "dispatch",
+              "status",
+              "control",
+              "approve",
+              "reject",
+              "session",
+              "派发",
+              "状态",
+              "控制",
+              "批准",
+              "拒绝",
+              "会话"
+            ],
+            "preferred_surface": "OpenCode",
+            "fallback_surface": "Goose",
+            "launch_mode": "control",
+            "dispatchable": true
+          },
+          {
+            "task_shape": "code review and PR inspection",
+            "keywords": [
+              "review",
+              "pr",
+              "inspect",
+              "diff",
+              "check",
+              "审查",
+              "检查",
+              "复核",
+              "差异",
+              "查看"
+            ],
+            "preferred_surface": "Continue",
+            "fallback_surface": "OpenCode",
+            "launch_mode": "review",
+            "dispatchable": true
+          },
+          {
+            "task_shape": "final acceptance",
+            "keywords": [
+              "verify",
+              "verification",
+              "artifact",
+              "acceptance",
+              "最终",
+              "裁决",
+              "验收",
+              "产物"
+            ],
+            "preferred_surface": "Verification / Artifact",
+            "fallback_surface": "OpenCode",
+            "launch_mode": "verify",
+            "dispatchable": false
+          }
+        ]
+      },
+      "workspace": "D:\\codex\\orchestrator-mvp"
+    },
+    "strategy_applied": false,
+    "strategy_explored": false,
+    "strategy_reason": "no_strong_pattern",
+    "strategy_revision": 6408,
+    "queue_name": "fastlane",
+    "task_type": "artifact_audit",
+    "verification_level": "L1",
+    "max_runtime_seconds": 1800,
+    "retry_limit": 1,
+    "rollback_rule": "mark_failed_and_requeue_split",
+    "throughput": {
+      "queue_name": "fastlane",
+      "task_type": "artifact_audit",
+      "verification_level": "L1",
+      "max_runtime_seconds": 1800,
+      "retry_limit": 1,
+      "rollback_rule": "mark_failed_and_requeue_split",
+      "artifact_key": "artifact_output:D:\\codex\\METAFORGE_OS_THROUGHPUT_AUDIT_NOTE.md"
+    }
+  },
+  "context_package": {
+    "task": "Audit the throughput blueprint against the controller and identify the smallest queue admission and WIP gaps.",
+    "task_type": "implementation",
+    "repo_path": "D:\\codex\\orchestrator-mvp",
+    "module_focus": [
+      "app.orchestrator",
+      "tools.security_audit",
+      "tools.shadow_pipeline_bridge",
+      "tools.artifact_audit",
+      "tools.goal_storage_audit"
+    ],
+    "dependency_modules": [],
+    "owner_teams": [
+      "backend_team",
+      "infrastructure_team"
+    ],
+    "layers": [
+      "unclassified"
+    ],
+    "project_context": {},
+    "knowledge_hints": {
+      "preferred_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension",
+        "kv_cache_manager",
+        "local_llm_runner",
+        "token_streaming"
+      ],
+      "preferred_workers": [
+        "reviewer",
+        "coder",
+        "supervisor"
+      ],
+      "repo_learning": {
+        "updated_at": "2026-03-26T14:13:41.618089Z",
+        "embedding": {
+          "provider": "local",
+          "model": "BAAI/bge-small-en-v1.5",
+          "dimensions": 128,
+          "backend": "hashed-local",
+          "ready": true
+        },
+        "graph_modules": 164,
+        "chunk_count": 144,
+        "top_modules": [
+          {
+            "module": "tools.brain_loop",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\brain_loop.py"
+          },
+          {
+            "module": "tools.factory_daemon",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\factory_daemon.py"
+          },
+          {
+            "module": "app.orchestrator",
+            "layer": "unclassified",
+            "owner_team": "backend_team",
+            "path": "D:\\codex\\orchestrator-mvp\\app\\orchestrator.py"
+          },
+          {
+            "module": "tools.meta_factory_control",
+            "layer": "architecture_engine",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\meta_factory_control.py"
+          },
+          {
+            "module": "tools.decision_engine",
+            "layer": "task_graph_planner",
+            "owner_team": "architecture_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\decision_engine.py"
+          },
+          {
+            "module": "app.main",
+            "layer": "unclassified",
+            "owner_team": "backend_team",
+            "path": "D:\\codex\\orchestrator-mvp\\app\\main.py"
+          },
+          {
+            "module": "tools.verification_engine",
+            "layer": "verification",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\verification_engine.py"
+          },
+          {
+            "module": "tools.taskgraph_compiler",
+            "layer": "architecture_engine",
+            "owner_team": "architecture_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\taskgraph_compiler.py"
+          },
+          {
+            "module": "app.worker_adapters",
+            "layer": "unclassified",
+            "owner_team": "backend_team",
+            "path": "D:\\codex\\orchestrator-mvp\\app\\worker_adapters.py"
+          },
+          {
+            "module": "tools.change_request_analyzer",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\change_request_analyzer.py"
+          },
+          {
+            "module": "tools.factory_task_engine",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\factory_task_engine.py"
+          },
+          {
+            "module": "tools.company_os",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\company_os.py"
+          }
+        ],
+        "learned_repositories": [
+          {
+            "repo_id": "gh-dc17f0f4fb",
+            "full_name": "Significant-Gravitas/AutoGPT",
+            "local_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+            "language_mix": [
+              {
+                "language": ".json",
+                "files": 1076
+              },
+              {
+                "language": "Python",
+                "files": 914
+              },
+              {
+                "language": "TypeScript",
+                "files": 911
+              },
+              {
+                "language": "Markdown",
+                "files": 320
+              },
+              {
+                "language": ".yml",
+                "files": 43
+              },
+              {
+                "language": ".yaml",
+                "files": 23
+              }
+            ],
+            "key_files": [
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\README.md"
+            ],
+            "sampled_files": [
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\docs\\integrations\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\classic\\forge\\forge\\components\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\backend\\load-tests\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\classic\\original_autogpt\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\frontend\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\frontend\\package.json",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\README.md"
+            ],
+            "capabilities": [
+              "local_llm_runner",
+              "token_streaming",
+              "kv_cache_manager",
+              "agent_orchestration",
+              "tool_execution",
+              "workflow_planning"
+            ],
+            "architecture_summary": "# AutoGPT: Build, Deploy, and Run AI Agents\n\n[![Discord Follow](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscord.com%2Fapi%2Finvites%2Fautogpt%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&label=total%20members&logo=discord&logoColor=white&color=7289da)](https://discord.gg/autogpt) &ensp;\n[![Twitter Follow](https://img.shields.io/twitter/follow/Auto_GPT?style=social)](https://twitter.com/Auto_GPT) &ensp;\n\n<!-- Keep these links. Translations will automatically update with the README. -->\n[Deutsch](https://zdoc.app/de/Significant-Gravitas/AutoGPT) | \n[Español](https:",
+            "experiment_plan": {
+              "sandbox_required": true,
+              "recommended_commands": [],
+              "can_run_without_dependency_install": false
+            },
+            "chunk_count": 24
+          }
+        ],
+        "learned_repository_count": 1,
+        "extracted_capabilities": [
+          "agent_orchestration",
+          "kv_cache_manager",
+          "local_llm_runner",
+          "token_streaming",
+          "tool_execution",
+          "workflow_planning"
+        ],
+        "github_learning": {
+          "updated_at": "2026-03-26T14:13:41.618089Z",
+          "enabled": true,
+          "topics": [
+            "agent",
+            "llm",
+            "compiler",
+            "kernel",
+            "robotics",
+            "distributed-system",
+            "inference"
+          ],
+          "languages": [
+            "Python",
+            "TypeScript",
+            "Rust",
+            "C++",
+            "C",
+            "Go"
+          ],
+          "managed_repo_count": 10,
+          "ready_repo_count": 1,
+          "candidate_repo_count": 9,
+          "scan_candidate_count": 10,
+          "top_candidates": [
+            {
+              "full_name": "langchain-ai/langchain",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\langchain-ai-langchain",
+              "score": 41262.1142,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "ggerganov/llama.cpp",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\ggerganov-llama.cpp",
+              "score": 30857.5689,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "OpenInterpreter/open-interpreter",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\OpenInterpreter-open-interpreter",
+              "score": 23252.3854,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "microsoft/autogen",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\microsoft-autogen",
+              "score": 16454.9498,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "vllm-project/vllm",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\vllm-project-vllm",
+              "score": 15260.6594,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "ray-project/ray",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\ray-project-ray",
+              "score": 14451.3379,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "crewAIInc/crewAI",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\crewAIInc-crewAI",
+              "score": 12846.5735,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "dask/dask",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\dask-dask",
+              "score": 5243.0283,
+              "learning_status": "candidate"
+            }
+          ]
+        }
+      }
+    },
+    "dialogue_hints": {
+      "active_handoff": {
+        "session_id": "asset-20260314-071552",
+        "source": "metaforge-assetize",
+        "title": "MetaForge dialogue asset 20260314-071552",
+        "workspace": "D:\\codex",
+        "summary": "continue bounded dispatch with validation-first policy",
+        "topics": [
+          "dialogue-compaction",
+          "metaforge-handoff"
+        ],
+        "constraints": [
+          "explicit validation notes required for all delivery claims"
+        ],
+        "decisions": [
+          "continue bounded dispatch with validation-first policy"
+        ],
+        "tags": [],
+        "artifacts": [
+          "D:\\codex\\dialogue-assets\\dialogue-memory-20260314-071552.json",
+          "D:\\codex\\dialogue-assets\\dialogue-handoff-20260314-071552.json",
+          "D:\\codex\\dialogue-assets\\dialogue-asset-note-20260314-071552.md"
+        ],
+        "message_count": 0,
+        "last_user_message": "",
+        "last_assistant_message": "",
+        "updated_at": "2026-03-13T23:15:52.993887Z",
+        "created_at": "2026-03-13T23:15:52.993887Z"
+      },
+      "recent_topics": [
+        "dialogue-compaction",
+        "metaforge-handoff",
+        "codex-memory",
+        "metaforge"
+      ],
+      "shared_constraints": [
+        "explicit validation notes required for all delivery claims",
+        "Explicit validation is required before claiming delivery."
+      ],
+      "recent_decisions": [
+        "continue bounded dispatch with validation-first policy",
+        "Use local dialogue ledger as the shared memory bridge."
+      ],
+      "recent_sessions": [
+        {
+          "session_id": "asset-20260314-071552",
+          "source": "metaforge-assetize",
+          "title": "MetaForge dialogue asset 20260314-071552",
+          "workspace": "D:\\codex",
+          "summary": "continue bounded dispatch with validation-first policy",
+          "topics": [
+            "dialogue-compaction",
+            "metaforge-handoff"
+          ],
+          "constraints": [
+            "explicit validation notes required for all delivery claims"
+          ],
+          "decisions": [
+            "continue bounded dispatch with validation-first policy"
+          ],
+          "tags": [],
+          "artifacts": [
+            "D:\\codex\\dialogue-assets\\dialogue-memory-20260314-071552.json",
+            "D:\\codex\\dialogue-assets\\dialogue-handoff-20260314-071552.json",
+            "D:\\codex\\dialogue-assets\\dialogue-asset-note-20260314-071552.md"
+          ],
+          "message_count": 0,
+          "last_user_message": "",
+          "last_assistant_message": "",
+          "updated_at": "2026-03-13T23:15:52.993887Z",
+          "created_at": "2026-03-13T23:15:52.993887Z"
+        },
+        {
+          "session_id": "asset-20260314-061947",
+          "source": "metaforge-assetize",
+          "title": "MetaForge dialogue asset 20260314-061947",
+          "workspace": "D:\\codex",
+          "summary": "continue bounded dispatch with validation-first policy",
+          "topics": [
+            "dialogue-compaction",
+            "metaforge-handoff"
+          ],
+          "constraints": [
+            "explicit validation notes required for all delivery claims"
+          ],
+          "decisions": [
+            "continue bounded dispatch with validation-first policy"
+          ],
+          "tags": [],
+          "artifacts": [
+            "D:\\codex\\dialogue-assets\\dialogue-memory-20260314-061947.json",
+            "D:\\codex\\dialogue-assets\\dialogue-handoff-20260314-061947.json",
+            "D:\\codex\\dialogue-assets\\dialogue-asset-note-20260314-061947.md"
+          ],
+          "message_count": 0,
+          "last_user_message": "",
+          "last_assistant_message": "",
+          "updated_at": "2026-03-13T22:19:48.421529Z",
+          "created_at": "2026-03-13T22:19:48.421529Z"
+        },
+        {
+          "session_id": "codex-shared-memory-20260314",
+          "source": "codex",
+          "title": "Codex MetaForge shared memory rollout",
+          "workspace": "D:\\codex",
+          "summary": "Build a local dialogue memory bridge and connect Codex conversations to the shared MetaForge snapshot/context package.",
+          "topics": [
+            "codex-memory",
+            "metaforge"
+          ],
+          "constraints": [
+            "Explicit validation is required before claiming delivery."
+          ],
+          "decisions": [
+            "Use local dialogue ledger as the shared memory bridge."
+          ],
+          "tags": [],
+          "artifacts": [],
+          "message_count": 2,
+          "last_user_message": "Build a local storage memory mechanism so Codex conversations can share state with the MetaForge system.",
+          "last_assistant_message": "Use the existing memory/context framework to build a shared dialogue ledger and connect it into the MetaForge snapshot and context package.",
+          "updated_at": "2026-03-13T22:16:20.602058Z",
+          "created_at": "2026-03-13T22:16:20.602058Z"
+        }
+      ]
+    },
+    "memory_hints": [
+      "Memory fact: MetaForge startup command :: D:\\codex\\codex-session-bootstrap.ps1 is the current startup command for refreshing shared dialogue state.",
+      "Memory fact: Authoritative workspace for ToyOS execution :: D:\\codex\\generated\\toy-os-demo is the authoritative workspace for ToyOS execution and verification.",
+      "Memory failure-fix: Build readiness must gate on toolchain and Docker daemon availability :: Host-toolchain absence and Docker daemon unavailability should block build readiness claims.",
+      "Memory candidate failure-fix: Build readiness must gate on toolchain and Docker daemon availability :: Host-toolchain absence and Docker daemon unavailability should block build readiness claims.",
+      "Memory procedure: Refresh shared dialogue memory after routing changes :: Use the dialogue sync or assetize flow to keep the shared memory ledger current.",
+      "Memory candidate failure_fix: Build readiness must gate on toolchain and Docker daemon availability :: Host-toolchain absence and Docker daemon unavailability should block build readiness claims.",
+      "Memory candidate fact: Build backend availability detail :: The recommended build backend is unavailable because the Docker daemon cannot be reached."
+    ],
+    "strategy": {
+      "applied": false,
+      "explored": false,
+      "reason": "no_strong_pattern",
+      "pattern_id": null,
+      "pattern_score": null,
+      "preferred_worker": null,
+      "tools_used": [],
+      "tool_actions": [],
+      "structure_summary": null,
+      "memory_revision": 6408,
+      "hint_lines": [],
+      "exploration_ratio": 0.2,
+      "candidate_count": 0
+    },
+    "verification_scope": {
+      "modules": [
+        "app.orchestrator",
+        "tools.security_audit",
+        "tools.shadow_pipeline_bridge",
+        "tools.artifact_audit",
+        "tools.goal_storage_audit"
+      ],
+      "teams": [
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "layers": [
+        "unclassified"
+      ]
+    },
+    "current_plan": [
+      "Task type: implementation",
+      "Primary modules: app.orchestrator, tools.security_audit, tools.shadow_pipeline_bridge, tools.artifact_audit, tools.goal_storage_audit",
+      "Dependency expansion: none",
+      "Owner teams: backend_team, infrastructure_team",
+      "Layers: unclassified",
+      "Scheduler owner teams: backend_team, infrastructure_team",
+      "Scheduler layers: unclassified"
+    ],
+    "summary_blocks": [
+      "Task type: implementation\nPrimary modules: app.orchestrator, tools.security_audit, tools.shadow_pipeline_bridge, tools.artifact_audit, tools.goal_storage_audit\nDependency expansion: none\nOwner teams: backend_team, infrastructure_team\nLayers: unclassified\nScheduler owner teams: backend_team, infrastructure_team\nScheduler layers: unclassified",
+      "Failure pattern: unknown_failure -> investigate\nFailure pattern: Task failed after execution error. -> investigate\nPreferred capabilities: agent_orchestration, webapp_generation, deploy_scaffold, tool_extension, kv_cache_manager\nPreferred workers: reviewer, coder, supervisor\nTop capability reputation: agent_orchestration, webapp_generation, deploy_scaffold, tool_extension\nTop worker reputation: reviewer, coder, supervisor\nRepo learning modules=164 chunks=144",
+      "Active dialogue summary: continue bounded dispatch with validation-first policy\nShared dialogue topics: dialogue-compaction, metaforge-handoff, codex-memory, metaforge\nShared dialogue constraints: explicit validation notes required for all delivery claims; Explicit validation is required before claiming delivery.\nShared dialogue decisions: continue bounded dispatch with validation-first policy; Use local dialogue ledger as the shared memory bridge."
+    ],
+    "budget_chars": 1600
+  },
+  "plan": [
+    {
+      "id": "468723c1",
+      "title": "Understand task",
+      "status": "completed",
+      "worker": "planner",
+      "phase": "understand"
+    },
+    {
+      "id": "ee2ba770",
+      "title": "Draft solution",
+      "status": "completed",
+      "worker": "coder",
+      "phase": "draft"
+    },
+    {
+      "id": "256f416e",
+      "title": "Execute validation",
+      "status": "completed",
+      "worker": "docker",
+      "phase": "execute"
+    },
+    {
+      "id": "2a912a2c",
+      "title": "Issue patch decision",
+      "status": "completed",
+      "worker": "reviewer",
+      "phase": "verify"
+    },
+    {
+      "id": "d4b700dd",
+      "title": "Revise next action",
+      "status": "completed",
+      "worker": "planner",
+      "phase": "revise"
+    }
+  ],
+  "result": {
+    "summary": "Fallback plan generated locally because planner remote access is unavailable.",
+    "completed_steps": 5,
+    "context_used_chars": 681,
+    "cheap_calls_used": 2,
+    "cheap_chars_used": 1256,
+    "escalation_count": 2,
+    "execution_mode": "research",
+    "execution_status": "execution_finished",
+    "production_evidence": {
+      "mode": "research",
+      "status": "not-required"
+    },
+    "verification_contract": {
+      "verification_level": "L1",
+      "required_checks": [
+        "contract_valid",
+        "build_success",
+        "tests_pass",
+        "artifact_manifest_present",
+        "evidence_fresh"
+      ],
+      "artifact_requirements": {
+        "must_register_artifact": true,
+        "must_have_timestamp": true,
+        "must_have_files": [
+          "D:\\codex\\METAFORGE_OS_THROUGHPUT_AUDIT_NOTE.md"
+        ],
+        "expected_outputs": [
+          "D:\\codex\\METAFORGE_OS_THROUGHPUT_AUDIT_NOTE.md"
+        ],
+        "entrypoint": "D:\\codex\\METAFORGE_OS_THROUGHPUT_AUDIT_NOTE.md",
+        "artifact_type": "report",
+        "test_command": null
+      },
+      "release_gate": "all_required_checks_pass",
+      "failure_policy": "return_to_planner",
+      "evidence_requirements": [],
+      "verification_notes": [
+        "Audit the throughput blueprint against the controller and identify the smallest queue admission and WIP gaps.",
+        "Produce explicit verification output or a bounded failure report.",
+        "Record what was learned and the bounded next experiment.",
+        "Task is invalid unless the declared artifact set is refreshed and verifiable."
+      ]
+    },
+    "verification_result": {
+      "status": "verified",
+      "passed": true,
+      "mode": "research",
+      "verification_level": "L1",
+      "contract": {
+        "verification_level": "L1",
+        "required_checks": [
+          "contract_valid",
+          "build_success",
+          "tests_pass",
+          "artifact_manifest_present",
+          "evidence_fresh"
+        ],
+        "artifact_requirements": {
+          "must_register_artifact": true,
+          "must_have_timestamp": true,
+          "must_have_files": [
+            "D:\\codex\\METAFORGE_OS_THROUGHPUT_AUDIT_NOTE.md"
+          ],
+          "expected_outputs": [
+            "D:\\codex\\METAFORGE_OS_THROUGHPUT_AUDIT_NOTE.md"
+          ],
+          "entrypoint": "D:\\codex\\METAFORGE_OS_THROUGHPUT_AUDIT_NOTE.md",
+          "artifact_type": "report",
+          "test_command": null
+        },
+        "release_gate": "all_required_checks_pass",
+        "failure_policy": "return_to_planner",
+        "evidence_requirements": [],
+        "verification_notes": [
+          "Audit the throughput blueprint against the controller and identify the smallest queue admission and WIP gaps.",
+          "Produce explicit verification output or a bounded failure report.",
+          "Record what was learned and the bounded next experiment.",
+          "Task is invalid unless the declared artifact set is refreshed and verifiable."
+        ]
+      },
+      "evidence": {
+        "status": "verified",
+        "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\19c1fbb0432f47589266da0d3563bce8\\execution-evidence.json",
+        "execution_evidence_present": true,
+        "required_checks": [
+          "contract_valid",
+          "build_success",
+          "tests_pass",
+          "artifact_manifest_present",
+          "evidence_fresh"
+        ],
+        "artifact_requirements": {
+          "must_register_artifact": true,
+          "must_have_timestamp": true,
+          "must_have_files": [
+            "D:\\codex\\METAFORGE_OS_THROUGHPUT_AUDIT_NOTE.md"
+          ],
+          "expected_outputs": [
+            "D:\\codex\\METAFORGE_OS_THROUGHPUT_AUDIT_NOTE.md"
+          ],
+          "entrypoint": "D:\\codex\\METAFORGE_OS_THROUGHPUT_AUDIT_NOTE.md",
+          "artifact_type": "report",
+          "test_command": null
+        }
+      }
+    },
+    "delivery_state": "released"
+  }
+}

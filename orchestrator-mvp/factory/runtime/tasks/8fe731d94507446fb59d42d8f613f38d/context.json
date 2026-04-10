@@ -1,0 +1,396 @@
+{
+  "task_id": "8fe731d94507446fb59d42d8f613f38d",
+  "task_status": "released",
+  "phase": "verification-passed",
+  "updated_at": "2026-04-02T21:28:52.073333Z",
+  "heartbeat_at": "2026-04-02T21:28:52.073333Z",
+  "repo_path": "D:\\codex\\orchestrator-mvp",
+  "goal": "Validate the change",
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": "runtime.failure_backlog_automation",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\8fe731d94507446fb59d42d8f613f38d",
+  "completed_steps": 5,
+  "verification_result": {
+    "status": "verified",
+    "passed": true,
+    "mode": "research",
+    "verification_level": "L1",
+    "contract": {
+      "verification_level": "L1",
+      "required_checks": [
+        "contract_valid",
+        "build_success",
+        "tests_pass",
+        "artifact_manifest_present",
+        "evidence_fresh"
+      ],
+      "artifact_requirements": {
+        "must_register_artifact": true,
+        "must_have_timestamp": true,
+        "must_have_files": [],
+        "expected_outputs": []
+      },
+      "release_gate": "all_required_checks_pass",
+      "failure_policy": "return_to_planner",
+      "evidence_requirements": [],
+      "verification_notes": [
+        "Validate the change",
+        "Produce explicit verification output or a bounded failure report.",
+        "Record what was learned and the bounded next experiment."
+      ]
+    },
+    "evidence": {
+      "status": "verified",
+      "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\8fe731d94507446fb59d42d8f613f38d\\execution-evidence.json",
+      "execution_evidence_present": true,
+      "required_checks": [
+        "contract_valid",
+        "build_success",
+        "tests_pass",
+        "artifact_manifest_present",
+        "evidence_fresh"
+      ],
+      "artifact_requirements": {
+        "must_register_artifact": true,
+        "must_have_timestamp": true,
+        "must_have_files": [],
+        "expected_outputs": []
+      }
+    }
+  },
+  "delivery_state": "released",
+  "title": "Validate the result",
+  "prompt": "Inspect the relevant code, make a minimal coherent patch, run local tests or linters, and summarize what changed and what remains risky.",
+  "scheduler_hint": {
+    "automation_source": "failure_backlog_automation",
+    "template_id": "general-coding",
+    "template_category": "development",
+    "cluster_key": "recover stable execution output",
+    "cluster_count": 201,
+    "cluster_status": "attention",
+    "handling_mode": "generic_saturation",
+    "dispatch_now": true,
+    "admission_mode": "normal",
+    "scheduled_by": "runtime.failure_backlog_automation",
+    "decomposition_child": true,
+    "decomposition_parent_task_id": "ae704ac213fa4e778c41c305d8afa2c8",
+    "decomposition_root_task_id": "ae704ac213fa4e778c41c305d8afa2c8",
+    "decomposition_depth": 1,
+    "max_decomposition_depth": 2,
+    "decomposition_child_index": 3,
+    "decomposition_allow_children": false,
+    "decomposition_path_kind": "repair",
+    "decomposition_shared_dependency_group": "ae704ac213fa4e778c41c305d8afa2c8",
+    "decomposition_repair_for": "Analyze the current state",
+    "decomposition_dependencies": [
+      "Analyze the current state",
+      "Implement the bounded change"
+    ],
+    "admission_lane": "exploration",
+    "admission_reason": "artifact_spec_missing",
+    "requested_execution_mode": "production",
+    "task_type": "exploration_intake",
+    "queue_name": "exploration",
+    "verification_level": "L1",
+    "max_runtime_seconds": 900,
+    "retry_limit": 0,
+    "rollback_rule": "return_to_planner",
+    "dependency_task_ids": [
+      "31fb77c74bd841e48e5c82826d8ac5ff",
+      "ab25e9966ecb4563a0199b72ff895688"
+    ],
+    "dependency_count": 2
+  },
+  "context_package": {},
+  "plan": [
+    {
+      "id": "38f5da89",
+      "title": "Understand task",
+      "status": "completed",
+      "worker": "planner",
+      "phase": "understand"
+    },
+    {
+      "id": "569a080b",
+      "title": "Draft solution",
+      "status": "completed",
+      "worker": "coder",
+      "phase": "draft"
+    },
+    {
+      "id": "da624590",
+      "title": "Execute validation",
+      "status": "completed",
+      "worker": "docker",
+      "phase": "execute"
+    },
+    {
+      "id": "b84ef040",
+      "title": "Issue patch decision",
+      "status": "completed",
+      "worker": "reviewer",
+      "phase": "verify"
+    },
+    {
+      "id": "bbede999",
+      "title": "Revise next action",
+      "status": "completed",
+      "worker": "planner",
+      "phase": "revise"
+    }
+  ],
+  "verification_signals": [
+    {
+      "timestamp": "2026-04-02T20:18:04.495397Z",
+      "kind": "admission_diverted",
+      "success": true,
+      "task_id": "8fe731d94507446fb59d42d8f613f38d",
+      "admission_lane": "exploration",
+      "admission_reason": "artifact_spec_missing",
+      "execution_mode": "research",
+      "queue_name": "exploration",
+      "task_type": "exploration_intake"
+    },
+    {
+      "timestamp": "2026-04-02T20:31:26.601775Z",
+      "kind": "step_completed",
+      "success": true,
+      "task_id": "8fe731d94507446fb59d42d8f613f38d",
+      "step_id": "38f5da89",
+      "step_title": "Understand task",
+      "worker": "planner",
+      "phase": "understand",
+      "route_model": "deepseek-reasoner",
+      "route_provider": "reasoning",
+      "elapsed_ms": 230296,
+      "output_ref": {},
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 487,
+        "line_count": 4,
+        "stored_raw": false
+      }
+    },
+    {
+      "timestamp": "2026-04-02T20:43:30.625827Z",
+      "kind": "step_completed",
+      "success": true,
+      "task_id": "8fe731d94507446fb59d42d8f613f38d",
+      "step_id": "569a080b",
+      "step_title": "Draft solution",
+      "worker": "coder",
+      "phase": "draft",
+      "route_model": "kimi-k2.5",
+      "route_provider": "openai",
+      "elapsed_ms": 549359,
+      "output_ref": {
+        "artifact_id": "ctx_26d6b01b2931",
+        "task_id": "8fe731d94507446fb59d42d8f613f38d",
+        "step_id": "569a080b",
+        "channel": "coder-output",
+        "title": "Draft solution output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\8fe731d94507446fb59d42d8f613f38d\\569a080b-coder-output-ctx_26d6b01b2931.txt",
+        "size_chars": 2296,
+        "line_count": 38,
+        "created_at": "2026-04-02T20:42:02.786152Z",
+        "metadata": {
+          "worker": "coder",
+          "phase": "draft",
+          "route_model": "kimi-k2.5",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "coder-output",
+        "char_count": 2296,
+        "line_count": 38,
+        "stored_raw": true
+      }
+    },
+    {
+      "timestamp": "2026-04-02T20:52:52.238691Z",
+      "kind": "step_completed",
+      "success": true,
+      "task_id": "8fe731d94507446fb59d42d8f613f38d",
+      "step_id": "da624590",
+      "step_title": "Execute validation",
+      "worker": "docker",
+      "phase": "execute",
+      "route_model": "deepseek-chat",
+      "route_provider": "runtime",
+      "elapsed_ms": 327233,
+      "output_ref": {
+        "artifact_id": "ctx_264eecf68145",
+        "task_id": "8fe731d94507446fb59d42d8f613f38d",
+        "step_id": "da624590",
+        "channel": "docker-output",
+        "title": "Execute validation output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\8fe731d94507446fb59d42d8f613f38d\\da624590-docker-output-ctx_264eecf68145.txt",
+        "size_chars": 34,
+        "line_count": 2,
+        "created_at": "2026-04-02T20:50:11.545082Z",
+        "metadata": {
+          "worker": "docker",
+          "phase": "execute",
+          "route_model": "deepseek-chat",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "docker-output",
+        "char_count": 34,
+        "line_count": 2,
+        "stored_raw": true
+      }
+    },
+    {
+      "timestamp": "2026-04-02T21:08:20.533661Z",
+      "kind": "step_completed",
+      "success": true,
+      "task_id": "8fe731d94507446fb59d42d8f613f38d",
+      "step_id": "b84ef040",
+      "step_title": "Issue patch decision",
+      "worker": "reviewer",
+      "phase": "verify",
+      "route_model": "kimi-k2.5",
+      "route_provider": "openai",
+      "elapsed_ms": 645640,
+      "output_ref": {
+        "artifact_id": "ctx_b679ef34c661",
+        "task_id": "8fe731d94507446fb59d42d8f613f38d",
+        "step_id": "b84ef040",
+        "channel": "reviewer-output",
+        "title": "Issue patch decision output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\8fe731d94507446fb59d42d8f613f38d\\b84ef040-reviewer-output-ctx_b679ef34c661.txt",
+        "size_chars": 1392,
+        "line_count": 36,
+        "created_at": "2026-04-02T21:06:53.793314Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "verify",
+          "route_model": "kimi-k2.5",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 1392,
+        "line_count": 36,
+        "stored_raw": true
+      }
+    },
+    {
+      "timestamp": "2026-04-02T21:17:12.066704Z",
+      "kind": "step_completed",
+      "success": true,
+      "task_id": "8fe731d94507446fb59d42d8f613f38d",
+      "step_id": "bbede999",
+      "step_title": "Revise next action",
+      "worker": "planner",
+      "phase": "revise",
+      "route_model": "kimi-k2.5",
+      "route_provider": "openai",
+      "elapsed_ms": 271047,
+      "output_ref": {},
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 392,
+        "line_count": 4,
+        "stored_raw": false
+      }
+    }
+  ],
+  "verification_signal_count": 6,
+  "result": {
+    "summary": "Fallback plan generated locally because planner remote access is unavailable.",
+    "completed_steps": 5,
+    "context_used_chars": 591,
+    "cheap_calls_used": 2,
+    "cheap_chars_used": 5848,
+    "escalation_count": 2,
+    "execution_mode": "research",
+    "execution_status": "execution_finished",
+    "production_evidence": {
+      "mode": "research",
+      "status": "not-required"
+    },
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\8fe731d94507446fb59d42d8f613f38d\\execution-evidence.json",
+    "execution_evidence_step_count": 5,
+    "verification_contract": {
+      "verification_level": "L1",
+      "required_checks": [
+        "contract_valid",
+        "build_success",
+        "tests_pass",
+        "artifact_manifest_present",
+        "evidence_fresh"
+      ],
+      "artifact_requirements": {
+        "must_register_artifact": true,
+        "must_have_timestamp": true,
+        "must_have_files": [],
+        "expected_outputs": []
+      },
+      "release_gate": "all_required_checks_pass",
+      "failure_policy": "return_to_planner",
+      "evidence_requirements": [],
+      "verification_notes": [
+        "Validate the change",
+        "Produce explicit verification output or a bounded failure report.",
+        "Record what was learned and the bounded next experiment."
+      ]
+    },
+    "verification_result": {
+      "status": "verified",
+      "passed": true,
+      "mode": "research",
+      "verification_level": "L1",
+      "contract": {
+        "verification_level": "L1",
+        "required_checks": [
+          "contract_valid",
+          "build_success",
+          "tests_pass",
+          "artifact_manifest_present",
+          "evidence_fresh"
+        ],
+        "artifact_requirements": {
+          "must_register_artifact": true,
+          "must_have_timestamp": true,
+          "must_have_files": [],
+          "expected_outputs": []
+        },
+        "release_gate": "all_required_checks_pass",
+        "failure_policy": "return_to_planner",
+        "evidence_requirements": [],
+        "verification_notes": [
+          "Validate the change",
+          "Produce explicit verification output or a bounded failure report.",
+          "Record what was learned and the bounded next experiment."
+        ]
+      },
+      "evidence": {
+        "status": "verified",
+        "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\8fe731d94507446fb59d42d8f613f38d\\execution-evidence.json",
+        "execution_evidence_present": true,
+        "required_checks": [
+          "contract_valid",
+          "build_success",
+          "tests_pass",
+          "artifact_manifest_present",
+          "evidence_fresh"
+        ],
+        "artifact_requirements": {
+          "must_register_artifact": true,
+          "must_have_timestamp": true,
+          "must_have_files": [],
+          "expected_outputs": []
+        }
+      }
+    },
+    "delivery_state": "released"
+  }
+}

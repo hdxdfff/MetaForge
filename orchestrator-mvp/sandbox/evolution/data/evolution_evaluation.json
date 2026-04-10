@@ -1,0 +1,17 @@
+{
+  "updated_at": "2026-03-12T07:09:31.692689Z",
+  "telemetry_snapshot": {
+    "updated_at": "2026-03-12T07:09:31.604091Z",
+    "task_total": 17,
+    "task_completed": 3,
+    "task_failed": 0,
+    "task_waiting": 1,
+    "task_success_rate": 0.1765,
+    "cheap_calls_total": 0,
+    "core_escalations_total": 0,
+    "meta_factory_status": "attention",
+    "candidate_count": 3
+  },
+  "findings": [],
+  "status": "stable"
+}

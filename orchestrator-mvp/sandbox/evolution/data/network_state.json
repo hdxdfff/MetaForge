@@ -1,0 +1,16 @@
+{
+  "status": "online",
+  "last_probe_at": "2026-03-11T04:28:28.183878Z",
+  "last_online_at": "2026-03-11T04:28:28.183878Z",
+  "last_error": null,
+  "queue_size": 1,
+  "cache_dir": "D:\\codex\\orchestrator-mvp\\cache\\external",
+  "download_broker": "local-urllib-cache",
+  "proxy_url": "http://127.0.0.1:7890",
+  "proxy_candidates": [
+    "http://127.0.0.1:7890",
+    "socks5://127.0.0.1:7891"
+  ],
+  "proxy_index": 0,
+  "poll_seconds": 30
+}

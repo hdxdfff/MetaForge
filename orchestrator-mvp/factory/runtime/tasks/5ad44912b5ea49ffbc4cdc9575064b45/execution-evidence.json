@@ -1,0 +1,28 @@
+{
+  "task_id": "5ad44912b5ea49ffbc4cdc9575064b45",
+  "task_title": "Implement module app.models",
+  "task_status": "timed_out",
+  "started_at": "2026-03-20T03:59:38.306077Z",
+  "updated_at": "2026-03-20T04:05:08.467444Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "5ad44912b5ea49ffbc4cdc9575064b45-terminal-record",
+      "step_title": "Implement module app.models",
+      "action": "task_terminal_record",
+      "ok": false,
+      "at": "2026-03-20T04:05:08.467444Z",
+      "status": "timed_out",
+      "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+      "error": null,
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ],
+  "result": {
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

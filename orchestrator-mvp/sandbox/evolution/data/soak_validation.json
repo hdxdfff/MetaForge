@@ -1,0 +1,25 @@
+{
+  "status": "stage4_confirmed",
+  "confirmed": true,
+  "checks": {
+    "runtime_running": true,
+    "cheap_ratio_ok": true,
+    "progress_ok": true,
+    "recoveries_ok": true,
+    "stuck_tasks_ok": true,
+    "quality_ok": true,
+    "control_stable": true,
+    "uptime_confirmed": true,
+    "active_tasks_sane": true
+  },
+  "summary": {
+    "cheap_ratio": 1.0,
+    "active_tasks": 0,
+    "recoveries_last_24h": 5,
+    "stuck_tasks": 0,
+    "progress_events": 38,
+    "uptime_hours": 18.23,
+    "quality_score": 0.9245,
+    "control_layer_status": "stable"
+  }
+}

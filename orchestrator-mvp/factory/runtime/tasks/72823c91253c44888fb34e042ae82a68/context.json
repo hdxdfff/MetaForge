@@ -1,0 +1,67 @@
+{
+  "task_id": "72823c91253c44888fb34e042ae82a68",
+  "task_status": "running",
+  "phase": "step-running",
+  "updated_at": "2026-03-29T17:08:36.581804Z",
+  "heartbeat_at": "2026-03-29T17:08:36.581804Z",
+  "repo_path": "D:\\codex",
+  "goal": "refresh operator-facing control status",
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": "codex-control",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\72823c91253c44888fb34e042ae82a68",
+  "step_id": "6e5844a7",
+  "step_title": "Understand task",
+  "step_status": "running",
+  "worker": "planner",
+  "probe_attempts": 0,
+  "title": "Refresh control-layer status via publication",
+  "prompt": "Refresh control layer, identity, and release readiness evidence for operators.",
+  "scheduler_hint": {
+    "publication_mode": "structured",
+    "publication_source": "task-publication",
+    "task_type": "report_refresh",
+    "verification_level": "L1"
+  },
+  "context_package": {},
+  "plan": [
+    {
+      "id": "6e5844a7",
+      "title": "Understand task",
+      "status": "running",
+      "worker": "planner",
+      "phase": "understand"
+    },
+    {
+      "id": "f025663c",
+      "title": "Draft solution",
+      "status": "pending",
+      "worker": "coder",
+      "phase": "draft"
+    },
+    {
+      "id": "da9c92d6",
+      "title": "Execute validation",
+      "status": "pending",
+      "worker": "docker",
+      "phase": "execute"
+    },
+    {
+      "id": "f52912eb",
+      "title": "Issue patch decision",
+      "status": "pending",
+      "worker": "reviewer",
+      "phase": "verify"
+    },
+    {
+      "id": "0372b4e1",
+      "title": "Revise next action",
+      "status": "pending",
+      "worker": "planner",
+      "phase": "revise"
+    }
+  ],
+  "result": {}
+}

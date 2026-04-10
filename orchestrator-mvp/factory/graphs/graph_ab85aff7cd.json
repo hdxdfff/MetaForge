@@ -1,0 +1,1552 @@
+{
+  "graph_id": "graph_ab85aff7cd",
+  "goal_id": "goal_19f5390fc3",
+  "target": "Build proposal-to-code-edit executor for Self-Improvement",
+  "type": "architecture_upgrade",
+  "created_at": "2026-03-12T07:41:20.155148Z",
+  "updated_at": "2026-03-12T08:06:51.614619Z",
+  "status": "planned",
+  "meta": {
+    "goal_scale": "standard",
+    "architecture_rules": [
+      "agents cannot import runtime",
+      "router must be stateless",
+      "runtime modules cannot depend on app transport handlers",
+      "tools may depend on runtime and state, but not app HTTP layer",
+      "verification must gate promotion of architecture-affecting changes"
+    ],
+    "agent_teams": [
+      "architecture_team",
+      "backend_team",
+      "infrastructure_team",
+      "testing_team"
+    ],
+    "code_graph_focus": {
+      "module_focus": [
+        "tools.codex_control",
+        "runtime.executor",
+        "tools.experiment_executor",
+        "tools.score_toy_os",
+        "tools.self_model",
+        "tools.code_knowledge_graph",
+        "tools.factory_self_report",
+        "tools.module_ownership_graph"
+      ],
+      "owner_teams": [
+        "architecture_team",
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "layers": [
+        "architecture_engine",
+        "unclassified"
+      ],
+      "matched_modules": [
+        {
+          "module": "tools.codex_control",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified",
+          "dependency_count": 2,
+          "dependents": 0,
+          "internal_imports": [
+            "tools.session_guard",
+            "tools.taskgraph_compiler"
+          ]
+        },
+        {
+          "module": "runtime.executor",
+          "owner_team": "backend_team",
+          "owner": "coder",
+          "layer": "unclassified",
+          "dependency_count": 1,
+          "dependents": 1,
+          "internal_imports": [
+            "tools.brain_loop"
+          ]
+        },
+        {
+          "module": "tools.experiment_executor",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified",
+          "dependency_count": 1,
+          "dependents": 2,
+          "internal_imports": [
+            "tools.io_utils"
+          ]
+        },
+        {
+          "module": "tools.score_toy_os",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified",
+          "dependency_count": 0,
+          "dependents": 0,
+          "internal_imports": []
+        },
+        {
+          "module": "tools.self_model",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified",
+          "dependency_count": 0,
+          "dependents": 0,
+          "internal_imports": []
+        },
+        {
+          "module": "tools.code_knowledge_graph",
+          "owner_team": "architecture_team",
+          "owner": "planner",
+          "layer": "architecture_engine",
+          "dependency_count": 1,
+          "dependents": 10,
+          "internal_imports": [
+            "tools.io_utils"
+          ]
+        },
+        {
+          "module": "tools.factory_self_report",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified",
+          "dependency_count": 2,
+          "dependents": 1,
+          "internal_imports": [
+            "tools.build_toy_os",
+            "tools.io_utils"
+          ]
+        },
+        {
+          "module": "tools.module_ownership_graph",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified",
+          "dependency_count": 2,
+          "dependents": 4,
+          "internal_imports": [
+            "tools.io_utils",
+            "tools.organization_model"
+          ]
+        }
+      ]
+    },
+    "dependency_impact": {
+      "updated_at": "2026-03-12T07:41:19.813503Z",
+      "request": "Build proposal-to-code-edit executor for Self-Improvement",
+      "focus_modules": [
+        "tools.codex_control",
+        "runtime.executor",
+        "tools.experiment_executor",
+        "tools.score_toy_os",
+        "tools.self_model",
+        "tools.code_knowledge_graph",
+        "tools.factory_self_report",
+        "tools.module_ownership_graph"
+      ],
+      "impacted_modules": [
+        {
+          "module": "runtime.executor",
+          "depth": 0,
+          "owner_team": "backend_team",
+          "layer": "unclassified",
+          "dependents": 1
+        },
+        {
+          "module": "tools.code_knowledge_graph",
+          "depth": 0,
+          "owner_team": "architecture_team",
+          "layer": "architecture_engine",
+          "dependents": 10
+        },
+        {
+          "module": "tools.codex_control",
+          "depth": 0,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 0
+        },
+        {
+          "module": "tools.experiment_executor",
+          "depth": 0,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 2
+        },
+        {
+          "module": "tools.factory_self_report",
+          "depth": 0,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 1
+        },
+        {
+          "module": "tools.module_ownership_graph",
+          "depth": 0,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 4
+        },
+        {
+          "module": "tools.score_toy_os",
+          "depth": 0,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 0
+        },
+        {
+          "module": "tools.self_model",
+          "depth": 0,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 0
+        },
+        {
+          "module": "app.orchestrator",
+          "depth": 1,
+          "owner_team": "backend_team",
+          "layer": "unclassified",
+          "dependents": 1
+        },
+        {
+          "module": "runtime.brain_loop",
+          "depth": 1,
+          "owner_team": "backend_team",
+          "layer": "unclassified",
+          "dependents": 0
+        },
+        {
+          "module": "tools.architecture_validator",
+          "depth": 1,
+          "owner_team": "architecture_team",
+          "layer": "architecture_engine",
+          "dependents": 3
+        },
+        {
+          "module": "tools.brain_loop",
+          "depth": 1,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 2
+        },
+        {
+          "module": "tools.change_request_analyzer",
+          "depth": 1,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 1
+        },
+        {
+          "module": "tools.context_builder",
+          "depth": 1,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 5
+        },
+        {
+          "module": "tools.dependency_impact_engine",
+          "depth": 1,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 3
+        },
+        {
+          "module": "tools.factory_daemon",
+          "depth": 1,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 0
+        },
+        {
+          "module": "tools.meta_factory_control",
+          "depth": 1,
+          "owner_team": "infrastructure_team",
+          "layer": "architecture_engine",
+          "dependents": 3
+        },
+        {
+          "module": "tools.module_ownership",
+          "depth": 1,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 8
+        },
+        {
+          "module": "tools.repo_learning_engine",
+          "depth": 1,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 1
+        },
+        {
+          "module": "tools.taskgraph_compiler",
+          "depth": 1,
+          "owner_team": "architecture_team",
+          "layer": "architecture_engine",
+          "dependents": 3
+        },
+        {
+          "module": "tools.verification_engine",
+          "depth": 1,
+          "owner_team": "infrastructure_team",
+          "layer": "verification",
+          "dependents": 4
+        },
+        {
+          "module": "app.main",
+          "depth": 2,
+          "owner_team": "backend_team",
+          "layer": "unclassified",
+          "dependents": 2
+        },
+        {
+          "module": "runtime.scheduler",
+          "depth": 2,
+          "owner_team": "architecture_team",
+          "layer": "agent_teams",
+          "dependents": 1
+        },
+        {
+          "module": "runtime.taskgraph_engine",
+          "depth": 2,
+          "owner_team": "backend_team",
+          "layer": "task_graph_planner",
+          "dependents": 0
+        },
+        {
+          "module": "tools.branch_context",
+          "depth": 2,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 1
+        },
+        {
+          "module": "tools.decision_engine",
+          "depth": 2,
+          "owner_team": "architecture_team",
+          "layer": "task_graph_planner",
+          "dependents": 1
+        },
+        {
+          "module": "tools.environment_repair_lane",
+          "depth": 2,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 2
+        },
+        {
+          "module": "tools.knowledge_engine",
+          "depth": 2,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 3
+        },
+        {
+          "module": "tools.platform_verification_sweep",
+          "depth": 2,
+          "owner_team": "infrastructure_team",
+          "layer": "verification",
+          "dependents": 1
+        },
+        {
+          "module": "tools.replan_engine",
+          "depth": 2,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 0
+        },
+        {
+          "module": "tools.self_patch_loop",
+          "depth": 2,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 0
+        }
+      ],
+      "affected_teams": [
+        "architecture_team",
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "affected_layers": [
+        "agent_teams",
+        "architecture_engine",
+        "task_graph_planner",
+        "unclassified",
+        "verification"
+      ],
+      "verification_scope": [
+        "app.main",
+        "app.orchestrator",
+        "runtime.executor",
+        "runtime.scheduler",
+        "tools.architecture_validator",
+        "tools.brain_loop",
+        "tools.branch_context",
+        "tools.change_request_analyzer",
+        "tools.code_knowledge_graph",
+        "tools.context_builder",
+        "tools.decision_engine",
+        "tools.dependency_impact_engine",
+        "tools.environment_repair_lane",
+        "tools.experiment_executor",
+        "tools.factory_self_report",
+        "tools.knowledge_engine",
+        "tools.meta_factory_control",
+        "tools.module_ownership",
+        "tools.module_ownership_graph",
+        "tools.platform_verification_sweep",
+        "tools.repo_learning_engine",
+        "tools.taskgraph_compiler",
+        "tools.verification_engine"
+      ]
+    },
+    "project_impact": {
+      "updated_at": "2026-03-12T07:41:20.153148Z",
+      "request": "Build proposal-to-code-edit executor for Self-Improvement",
+      "query_domains": [
+        "factory"
+      ],
+      "related_projects": [
+        {
+          "project_id": "79120c5dbb",
+          "name": "ToyOS Kernel",
+          "type": "project",
+          "repo_path": "D:\\codex\\generated\\toy-os-demo",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "project_id": "dblab00001",
+          "name": "Database Systems Lab",
+          "type": "project",
+          "repo_path": "D:\\数据库系统",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "project_id": "aimath0001",
+          "name": "AI Math Foundations Workspace",
+          "type": "project",
+          "repo_path": "D:\\人工智能数学基础",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "project_id": "platform_d33a56cc79",
+          "name": "AI Research Factory",
+          "type": "platform",
+          "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\ai-research-factory",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "project_id": "platform_8855699f64",
+          "name": "AI Agent Factory",
+          "type": "platform",
+          "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\ai-agent-factory",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "project_id": "platform_009b511d6b",
+          "name": "build ai-video-factory",
+          "type": "platform",
+          "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\build-ai-video-factory",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "project_id": "platform_8590e6bcbe",
+          "name": "AI Web Platform Factory",
+          "type": "platform",
+          "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\ai-web-platform-factory",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "project_id": "platform_79a3e0e03e",
+          "name": "Improve cheap agent prompts",
+          "type": "platform",
+          "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\improve-cheap-agent-prompts",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "project_id": "platform_464dac2a0b",
+          "name": "Optimize task scheduler from agent experience",
+          "type": "platform",
+          "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\optimize-task-scheduler-from-agent-experience",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "project_id": "platform_fa6557b2cd",
+          "name": "Strengthen agent orchestration capability",
+          "type": "platform",
+          "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-agent-orchestration-capability",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "project_id": "platform_38c67a4233",
+          "name": "Strengthen agent orchestration capability",
+          "type": "platform",
+          "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-agent-orchestration-capability",
+          "domains": [
+            "factory"
+          ]
+        }
+      ],
+      "cross_project_edges": [
+        {
+          "from": "79120c5dbb",
+          "to": "dblab00001",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "79120c5dbb",
+          "to": "aimath0001",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory",
+            "kernel"
+          ]
+        },
+        {
+          "from": "79120c5dbb",
+          "to": "platform_d33a56cc79",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "79120c5dbb",
+          "to": "platform_8855699f64",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "79120c5dbb",
+          "to": "platform_009b511d6b",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "79120c5dbb",
+          "to": "platform_8590e6bcbe",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "79120c5dbb",
+          "to": "platform_79a3e0e03e",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "79120c5dbb",
+          "to": "platform_464dac2a0b",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory",
+            "kernel"
+          ]
+        },
+        {
+          "from": "79120c5dbb",
+          "to": "platform_fa6557b2cd",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "79120c5dbb",
+          "to": "platform_38c67a4233",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "dblab00001",
+          "to": "79120c5dbb",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "dblab00001",
+          "to": "aimath0001",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "dblab00001",
+          "to": "platform_d33a56cc79",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "dblab00001",
+          "to": "platform_8855699f64",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "dblab00001",
+          "to": "platform_009b511d6b",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "dblab00001",
+          "to": "platform_8590e6bcbe",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "dblab00001",
+          "to": "platform_79a3e0e03e",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "dblab00001",
+          "to": "platform_464dac2a0b",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "dblab00001",
+          "to": "platform_fa6557b2cd",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "dblab00001",
+          "to": "platform_38c67a4233",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "aimath0001",
+          "to": "79120c5dbb",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory",
+            "kernel"
+          ]
+        },
+        {
+          "from": "aimath0001",
+          "to": "dblab00001",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "aimath0001",
+          "to": "platform_d33a56cc79",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "aimath0001",
+          "to": "platform_8855699f64",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "aimath0001",
+          "to": "platform_009b511d6b",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "aimath0001",
+          "to": "platform_8590e6bcbe",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "aimath0001",
+          "to": "platform_79a3e0e03e",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "aimath0001",
+          "to": "platform_464dac2a0b",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory",
+            "kernel"
+          ]
+        },
+        {
+          "from": "aimath0001",
+          "to": "platform_fa6557b2cd",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "aimath0001",
+          "to": "platform_38c67a4233",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_d33a56cc79",
+          "to": "79120c5dbb",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_d33a56cc79",
+          "to": "dblab00001",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_d33a56cc79",
+          "to": "aimath0001",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_d33a56cc79",
+          "to": "platform_8855699f64",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_d33a56cc79",
+          "to": "platform_009b511d6b",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_d33a56cc79",
+          "to": "platform_8590e6bcbe",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_d33a56cc79",
+          "to": "platform_79a3e0e03e",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_d33a56cc79",
+          "to": "platform_464dac2a0b",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_d33a56cc79",
+          "to": "platform_fa6557b2cd",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_d33a56cc79",
+          "to": "platform_38c67a4233",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_8855699f64",
+          "to": "79120c5dbb",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_8855699f64",
+          "to": "dblab00001",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_8855699f64",
+          "to": "aimath0001",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_8855699f64",
+          "to": "platform_d33a56cc79",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_8855699f64",
+          "to": "platform_009b511d6b",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_8855699f64",
+          "to": "platform_8590e6bcbe",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_8855699f64",
+          "to": "platform_79a3e0e03e",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_8855699f64",
+          "to": "platform_464dac2a0b",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_8855699f64",
+          "to": "platform_fa6557b2cd",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_8855699f64",
+          "to": "platform_38c67a4233",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_009b511d6b",
+          "to": "79120c5dbb",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_009b511d6b",
+          "to": "dblab00001",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_009b511d6b",
+          "to": "aimath0001",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_009b511d6b",
+          "to": "platform_d33a56cc79",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_009b511d6b",
+          "to": "platform_8855699f64",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_009b511d6b",
+          "to": "platform_8590e6bcbe",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_009b511d6b",
+          "to": "platform_79a3e0e03e",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_009b511d6b",
+          "to": "platform_464dac2a0b",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_009b511d6b",
+          "to": "platform_fa6557b2cd",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_009b511d6b",
+          "to": "platform_38c67a4233",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_8590e6bcbe",
+          "to": "79120c5dbb",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_8590e6bcbe",
+          "to": "dblab00001",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_8590e6bcbe",
+          "to": "aimath0001",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_8590e6bcbe",
+          "to": "platform_d33a56cc79",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_8590e6bcbe",
+          "to": "platform_8855699f64",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_8590e6bcbe",
+          "to": "platform_009b511d6b",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_8590e6bcbe",
+          "to": "platform_79a3e0e03e",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_8590e6bcbe",
+          "to": "platform_464dac2a0b",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_8590e6bcbe",
+          "to": "platform_fa6557b2cd",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_8590e6bcbe",
+          "to": "platform_38c67a4233",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_79a3e0e03e",
+          "to": "79120c5dbb",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_79a3e0e03e",
+          "to": "dblab00001",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_79a3e0e03e",
+          "to": "aimath0001",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_79a3e0e03e",
+          "to": "platform_d33a56cc79",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_79a3e0e03e",
+          "to": "platform_8855699f64",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_79a3e0e03e",
+          "to": "platform_009b511d6b",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_79a3e0e03e",
+          "to": "platform_8590e6bcbe",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_79a3e0e03e",
+          "to": "platform_464dac2a0b",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_79a3e0e03e",
+          "to": "platform_fa6557b2cd",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_79a3e0e03e",
+          "to": "platform_38c67a4233",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_464dac2a0b",
+          "to": "79120c5dbb",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory",
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_464dac2a0b",
+          "to": "dblab00001",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_464dac2a0b",
+          "to": "aimath0001",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory",
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_464dac2a0b",
+          "to": "platform_d33a56cc79",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_464dac2a0b",
+          "to": "platform_8855699f64",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_464dac2a0b",
+          "to": "platform_009b511d6b",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_464dac2a0b",
+          "to": "platform_8590e6bcbe",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_464dac2a0b",
+          "to": "platform_79a3e0e03e",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_464dac2a0b",
+          "to": "platform_fa6557b2cd",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_464dac2a0b",
+          "to": "platform_38c67a4233",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_fa6557b2cd",
+          "to": "79120c5dbb",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_fa6557b2cd",
+          "to": "dblab00001",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_fa6557b2cd",
+          "to": "aimath0001",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_fa6557b2cd",
+          "to": "platform_d33a56cc79",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_fa6557b2cd",
+          "to": "platform_8855699f64",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_fa6557b2cd",
+          "to": "platform_009b511d6b",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_fa6557b2cd",
+          "to": "platform_8590e6bcbe",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_fa6557b2cd",
+          "to": "platform_79a3e0e03e",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_fa6557b2cd",
+          "to": "platform_464dac2a0b",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_fa6557b2cd",
+          "to": "platform_38c67a4233",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_38c67a4233",
+          "to": "79120c5dbb",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_38c67a4233",
+          "to": "dblab00001",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_38c67a4233",
+          "to": "aimath0001",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_38c67a4233",
+          "to": "platform_d33a56cc79",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_38c67a4233",
+          "to": "platform_8855699f64",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_38c67a4233",
+          "to": "platform_009b511d6b",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_38c67a4233",
+          "to": "platform_8590e6bcbe",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_38c67a4233",
+          "to": "platform_79a3e0e03e",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_38c67a4233",
+          "to": "platform_464dac2a0b",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        },
+        {
+          "from": "platform_38c67a4233",
+          "to": "platform_fa6557b2cd",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory"
+          ]
+        }
+      ],
+      "cross_project_count": 11
+    },
+    "project_graph_summary": {
+      "project_count": 5,
+      "platform_count": 17,
+      "edge_count": 160
+    },
+    "organization_allocation": {
+      "project_id": "79120c5dbb",
+      "name": "ToyOS Kernel",
+      "type": "project",
+      "domains": [
+        "kernel",
+        "factory"
+      ],
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ]
+    },
+    "organization_summary": {
+      "department_count": 5,
+      "team_count": 3
+    },
+    "cross_project_candidate": {},
+    "selected_work_packages": []
+  },
+  "nodes": [
+    {
+      "id": "product_design",
+      "title": "Design product shape for Build proposal-to-code-edit executor for Self-Improvement",
+      "role": "product",
+      "prompt": "Create a structured product design for: Build proposal-to-code-edit executor for Self-Improvement",
+      "dependencies": [],
+      "status": "pending",
+      "task_id": null,
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "review_departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "department_workers": {
+        "architecture_department": "reviewer",
+        "engineering_department": "coder",
+        "qa_department": "shell",
+        "research_department": "reviewer"
+      },
+      "worker": "reviewer",
+      "selection_reason": "role-default:product->reviewer",
+      "worker_success_rate": 9.3224,
+      "skill_matches": [
+        "completed_1554"
+      ],
+      "execution_lane": "host-control",
+      "worker_vm_preferred": false
+    },
+    {
+      "id": "architecture_design",
+      "title": "Design architecture for Build proposal-to-code-edit executor for Self-Improvement",
+      "role": "architect",
+      "prompt": "Create a practical architecture plan for: Build proposal-to-code-edit executor for Self-Improvement",
+      "dependencies": [
+        "product_design"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "review_departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "department_workers": {
+        "architecture_department": "reviewer",
+        "engineering_department": "coder",
+        "qa_department": "shell",
+        "research_department": "reviewer"
+      }
+    },
+    {
+      "id": "implementation_plan",
+      "title": "Plan and start implementation for Build proposal-to-code-edit executor for Self-Improvement",
+      "role": "coder",
+      "prompt": "Break down implementation work for: Build proposal-to-code-edit executor for Self-Improvement",
+      "dependencies": [
+        "architecture_design"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "review_departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "department_workers": {
+        "architecture_department": "reviewer",
+        "engineering_department": "coder",
+        "qa_department": "shell",
+        "research_department": "reviewer"
+      }
+    },
+    {
+      "id": "verification",
+      "title": "Validate generated work for Build proposal-to-code-edit executor for Self-Improvement",
+      "role": "tester",
+      "prompt": "Create validation steps and tests for: Build proposal-to-code-edit executor for Self-Improvement",
+      "dependencies": [
+        "implementation_plan"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "review_departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "department_workers": {
+        "architecture_department": "reviewer",
+        "engineering_department": "coder",
+        "qa_department": "shell",
+        "research_department": "reviewer"
+      }
+    }
+  ]
+}

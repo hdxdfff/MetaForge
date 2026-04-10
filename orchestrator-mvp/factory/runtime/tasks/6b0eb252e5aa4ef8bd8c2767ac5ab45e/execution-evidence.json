@@ -1,0 +1,39 @@
+{
+  "steps": [
+    {
+      "step_id": "task-terminal-record",
+      "step_title": "Build current runnable baseline for Expand tool extension coverage",
+      "action": "task_terminal_record",
+      "ok": false,
+      "at": "2026-03-21T13:59:07.528773Z",
+      "status": "failed",
+      "summary": "",
+      "error": null,
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result"
+    }
+  ],
+  "task_id": "6b0eb252e5aa4ef8bd8c2767ac5ab45e",
+  "task_title": "Build current runnable baseline for Expand tool extension coverage",
+  "task_status": "failed",
+  "completed": false,
+  "updated_at": "2026-03-21T14:00:05.341259Z",
+  "result": {
+    "state": "failed_execution",
+    "reason": "Invalid production plan: first concrete step 'Draft solution' is not build/run.",
+    "task_id": "6b0eb252e5aa4ef8bd8c2767ac5ab45e",
+    "repo_path": "D:\\codex\\orchestrator-mvp",
+    "execution_mode": "production",
+    "goal": "Expand tool extension coverage",
+    "cheap_calls_used": 0,
+    "cheap_chars_used": 0,
+    "escalation_count": 0,
+    "failed_steps": [],
+    "next_action_required": "Inspect execution evidence and rerun or replace the task; no approval hold was applied.",
+    "failure_pause_policy": "If a long task fails, allow at most one cheap-model-approved probe retry with bounded local cost. If cheap approval is missing, ambiguous, or the retry still fails, pause execution, return a structured error report, and wait for explicit core guidance.",
+    "pause_required": false,
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\6b0eb252e5aa4ef8bd8c2767ac5ab45e\\execution-evidence.json",
+    "execution_evidence_step_count": 1
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "templates": [
+    {
+      "template_id": "dev_template",
+      "name": "Ubuntu Dev Template",
+      "role": "build",
+      "base_image": "ubuntu-22.04",
+      "preinstalled_tools": [
+        "git",
+        "python",
+        "node",
+        "docker",
+        "make",
+        "gcc"
+      ],
+      "cpus": 2,
+      "memory_mb": 4096,
+      "notes": "General development and build tasks.",
+      "backend": "wsl-sandbox"
+    },
+    {
+      "template_id": "test_template",
+      "name": "Ubuntu Test Template",
+      "role": "test",
+      "base_image": "ubuntu-22.04",
+      "preinstalled_tools": [
+        "git",
+        "python",
+        "pytest",
+        "qemu-system-i386"
+      ],
+      "cpus": 2,
+      "memory_mb": 3072,
+      "notes": "Validation and regression tasks.",
+      "backend": "qemu-test"
+    },
+    {
+      "template_id": "experiment_template",
+      "name": "Ubuntu Experiment Template",
+      "role": "experiment",
+      "base_image": "ubuntu-22.04",
+      "preinstalled_tools": [
+        "git",
+        "python",
+        "docker",
+        "curl"
+      ],
+      "cpus": 2,
+      "memory_mb": 2048,
+      "notes": "Safe sandbox for architecture and tool experiments.",
+      "backend": "wsl-sandbox"
+    }
+  ]
+}

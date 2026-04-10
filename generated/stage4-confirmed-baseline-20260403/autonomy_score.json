@@ -1,0 +1,148 @@
+{
+  "updated_at": "2026-04-03T14:32:02.335563Z",
+  "window_hours": 24,
+  "score": 0.8004,
+  "stage": "stage4_confirmed",
+  "classification": {
+    "stage_domain": "autonomy_maturity",
+    "health_domain": "runtime_health",
+    "release_domain": "release_readiness",
+    "stage_is_not_health": true,
+    "release_is_not_health": true,
+    "health_is_not_stage": true
+  },
+  "verdict": "Historical soak confirmation is preserved across restart; current uptime reset does not revoke confirmed autonomy.",
+  "weights": {
+    "history": 0.4,
+    "runtime": 0.3,
+    "production": 0.3
+  },
+  "metrics": {
+    "history": {
+      "score": 0.8112,
+      "lane_mix": {
+        "cheap_calls": 0,
+        "reasoning_calls": 0,
+        "strong_calls": 5,
+        "productive_ratio": 1.0,
+        "output_input_ratio": 0.4612,
+        "reasoning_ratio": 0.0,
+        "target_min_productive_ratio": 0.85,
+        "target_output_input_ratio": 0.18,
+        "target_min_ratio_sample_calls": 5,
+        "target_reasoning_ratio_range": [
+          0.2,
+          0.7
+        ],
+        "source_window_hours": 24,
+        "source": "full_window"
+      },
+      "goal_progress": {
+        "completed_tasks_last_24h": 37,
+        "completed_goals_last_24h": 1,
+        "progress_events": 37,
+        "unverified_completed_tasks_last_24h": 3
+      },
+      "recovery": {
+        "recoveries_last_24h": 62,
+        "open_error_escalations": 0
+      },
+      "stuck_tasks": {
+        "stuck_tasks": 0,
+        "stuck_task_ids": [],
+        "stuck_threshold_minutes": 10
+      },
+      "uptime": {
+        "uptime_hours": 1.72,
+        "running": true,
+        "fresh": true,
+        "raw_status": "running",
+        "last_seen_at": "2026-04-03T14:31:54.384044Z",
+        "freshness_threshold_minutes": 5,
+        "target_hours_for_confirmed": 12,
+        "cycle": 2190
+      },
+      "soak_validation": {
+        "confirmed": true,
+        "status": "stage4_confirmed",
+        "historical_uptime_hours": 0.0,
+        "historical_control_layer_status": "stable",
+        "preserved_after_restart": true
+      }
+    },
+    "runtime": {
+      "daemon_status": "running",
+      "daemon_raw_status": "running",
+      "daemon_fresh": true,
+      "daemon_score": 1.0,
+      "active_tasks": 0,
+      "active_task_score": 0.25,
+      "artifact_rate": 3.0,
+      "artifact_rate_score": 1.0,
+      "score": 0.8125
+    },
+    "production": {
+      "products_real": 1,
+      "conversion_rate": 6.52,
+      "conversion_rate_source": "technical_conversion_rate",
+      "target_conversion_rate": 15.0,
+      "real_artifact_score": 1.0,
+      "conversion_score": 0.4347,
+      "score": 0.7739
+    }
+  },
+  "runtime_critical": false,
+  "control_layer_status": "stable",
+  "quality_score": 0.9446,
+  "quality_status": "promote",
+  "confirmation": {
+    "status": "preserved",
+    "source": "historical_soak",
+    "soak_confirmed": true
+  },
+  "signal_policy": {
+    "policy_version": "v1",
+    "source": "autonomy_score",
+    "dimensions": {
+      "stage": "autonomy",
+      "health": "runtime",
+      "release": "release_readiness"
+    },
+    "runtime_blockers": [],
+    "runtime_blocker_count": 0,
+    "rejected_runtime_blockers": [],
+    "rejected_runtime_blocker_count": 0,
+    "runtime_effect": "degrade_freeze_recovery",
+    "maturity_signals": [],
+    "maturity_signal_count": 0,
+    "maturity_effect": "dashboard_weekly_trend",
+    "release_gate_signals": [],
+    "release_gate_signal_count": 0,
+    "release_gate_effect": "stage_gate_release_claims",
+    "advisory_signals": [],
+    "advisory_signal_count": 0,
+    "advisory_effect": "observe_only",
+    "dashboard": {
+      "Runtime": {
+        "status": "healthy",
+        "signal_count": 0,
+        "signals": []
+      },
+      "Maturity": {
+        "status": "ok",
+        "signal_count": 0,
+        "signals": []
+      },
+      "Release Readiness": {
+        "status": "ready",
+        "signal_count": 0,
+        "signals": []
+      }
+    }
+  },
+  "decision": {
+    "stable_autonomy": true,
+    "needs_more_soak": false,
+    "needs_operator_attention": false
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "task_id": "8ce344cee93844e7a1f5f9600bdc99c9",
+  "task_title": "Align project Database Systems Lab for Strengthen agent orchestration capability",
+  "task_status": "timed_out",
+  "started_at": "2026-03-20T14:53:26.416220Z",
+  "updated_at": "2026-03-20T15:05:59.054367Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "8ce344cee93844e7a1f5f9600bdc99c9-terminal-record",
+      "step_title": "Align project Database Systems Lab for Strengthen agent orchestration capability",
+      "action": "task_terminal_record",
+      "ok": false,
+      "at": "2026-03-20T15:05:59.054367Z",
+      "status": "timed_out",
+      "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+      "error": null,
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ],
+  "result": {
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

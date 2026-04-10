@@ -1,0 +1,354 @@
+{
+  "updated_at": "2026-04-03T14:31:07.647006Z",
+  "status": "pass",
+  "governance_contract": {
+    "schema_version": "1.0",
+    "status": "active",
+    "contract_name": "orchestrator_harness_split",
+    "incident_classification": "quality_plane_regression_without_runtime_continuity_loss",
+    "orchestrator_responsibilities": [
+      "goal intake",
+      "task decomposition",
+      "executor dispatch",
+      "context reduction",
+      "queue management"
+    ],
+    "harness_responsibilities": [
+      "contract validation",
+      "evidence validation",
+      "risk classification",
+      "release gating",
+      "rollback eligibility",
+      "audit ledger integrity"
+    ],
+    "shared_constraints": [
+      "context separation",
+      "evidence required for pass",
+      "no pass without evaluation",
+      "incident classification preserved separately from runtime continuity"
+    ],
+    "default_governance_states": [
+      "planned",
+      "dispatched",
+      "generating",
+      "candidate_ready",
+      "evaluating",
+      "pass",
+      "fail"
+    ]
+  },
+  "governance_split": {
+    "status": "pass",
+    "schema_version": "1.0",
+    "contract_name": "orchestrator_harness_split",
+    "incident_classification": "quality_plane_regression_without_runtime_continuity_loss",
+    "orchestrator_responsibility_count": 5,
+    "harness_responsibility_count": 6,
+    "shared_constraint_count": 4,
+    "governance_state_count": 7,
+    "context_separation": true,
+    "orchestrator_responsibilities": [
+      "goal intake",
+      "task decomposition",
+      "executor dispatch",
+      "context reduction",
+      "queue management"
+    ],
+    "harness_responsibilities": [
+      "contract validation",
+      "evidence validation",
+      "risk classification",
+      "release gating",
+      "rollback eligibility",
+      "audit ledger integrity"
+    ],
+    "shared_constraints": [
+      "context separation",
+      "evidence required for pass",
+      "no pass without evaluation",
+      "incident classification preserved separately from runtime continuity"
+    ]
+  },
+  "governance_gate": {
+    "status": "pass",
+    "next_action": "observe-only",
+    "blocked_reason": null
+  },
+  "release_train": {
+    "status": "ready",
+    "candidate_count": 0,
+    "valid_candidate_count": 0,
+    "invalid_candidate_count": 0,
+    "stale_candidate_count": 0,
+    "stale_invalid_candidate_count": 0,
+    "ready_patch_count": 0,
+    "blocked_patch_count": 0,
+    "merged_patch_count": 18,
+    "next_action": "prepare-release-candidate",
+    "blocked_reason": null
+  },
+  "release_tiers": {
+    "mainline": {
+      "status": "ready",
+      "requirements": {
+        "runtime_ok": true,
+        "verification_ok": true,
+        "control_ok": true,
+        "ai_ok": true,
+        "ai_signal": "ready",
+        "artifact_release_ok": true,
+        "release_gate_status": "pass"
+      }
+    },
+    "normal": {
+      "status": "ready",
+      "requirements": {
+        "runtime_ok": true,
+        "verification_ok": true,
+        "control_ok": true,
+        "artifact_release_ok": true,
+        "release_gate_status": "pass"
+      }
+    },
+    "experimental": {
+      "status": "ready",
+      "requirements": {
+        "runtime_ok": true,
+        "artifact_release_ok": true,
+        "governance_ok": true,
+        "release_gate_status": "pass"
+      }
+    }
+  },
+  "runtime_freshness": {
+    "daemon_running": true,
+    "daemon_heartbeat_ok": true,
+    "daemon_heartbeat_at": "2026-04-03T14:31:02.847044Z",
+    "daemon_alive": true,
+    "brain_loop_ok": true,
+    "brain_loop_at": "2026-04-03T14:31:02.039976Z",
+    "cycle_in_progress_ok": true,
+    "cycle_started_at": "2026-04-03T14:31:02.847044Z",
+    "effective_brain_loop_ok": true,
+    "task_engine_ok": true,
+    "task_engine_at": "2026-04-03T14:30:52.462007Z",
+    "effective_task_engine_ok": true
+  },
+  "verification_release_gate": {
+    "mode": "advisory_signal",
+    "status": "pass",
+    "blocks_release": false,
+    "sample_failures": [],
+    "sample_size": 6,
+    "next_action": "release-ready"
+  },
+  "readiness_checks": [
+    {
+      "name": "runtime_freshness",
+      "status": "pass",
+      "effect": "protect_runtime",
+      "affects_runtime": true,
+      "affects_release": false,
+      "affects_reporting": true,
+      "detail": {
+        "daemon_alive": true,
+        "brain_loop_ok": true,
+        "task_engine_ok": true
+      },
+      "next_action": "observe-only"
+    },
+    {
+      "name": "verification_gate",
+      "status": "pass",
+      "effect": "stage_gate_release_claims",
+      "affects_runtime": false,
+      "affects_release": true,
+      "affects_reporting": true,
+      "detail": {
+        "mode": "advisory_signal",
+        "status": "pass",
+        "sample_failures": [],
+        "sample_size": 6
+      },
+      "next_action": "observe-only"
+    },
+    {
+      "name": "control_gate",
+      "status": "pass",
+      "effect": "protect_release_control",
+      "affects_runtime": false,
+      "affects_release": true,
+      "affects_reporting": true,
+      "detail": {
+        "release_tier_mainline": "ready"
+      },
+      "next_action": "observe-only"
+    },
+    {
+      "name": "artifact_gate",
+      "status": "pass",
+      "effect": "protect_release_artifacts",
+      "affects_runtime": false,
+      "affects_release": true,
+      "affects_reporting": true,
+      "detail": {
+        "artifact_release_ok": true,
+        "ready_patch_count": 0,
+        "blocked_patch_count": 0
+      },
+      "next_action": "observe-only"
+    },
+    {
+      "name": "ai_release_signal",
+      "status": "pass",
+      "effect": "observe_only",
+      "affects_runtime": false,
+      "affects_release": false,
+      "affects_reporting": true,
+      "detail": {
+        "status": "pass",
+        "overall_score": 100.0,
+        "pass_rate": 1.0,
+        "release_signal": "ready",
+        "signal_only": true
+      },
+      "next_action": "observe-only"
+    },
+    {
+      "name": "patch_queue",
+      "status": "pass",
+      "effect": "protect_release_queue",
+      "affects_runtime": false,
+      "affects_release": true,
+      "affects_reporting": true,
+      "detail": {
+        "ready_patch_count": 0,
+        "blocked_patch_count": 0
+      },
+      "next_action": "observe-only"
+    }
+  ],
+  "readiness_summary": {
+    "status": "pass",
+    "failing_checks": [],
+    "next_action": "observe-only"
+  },
+  "operations_readiness": {
+    "runtime_ok": true,
+    "verification_ok": true,
+    "verification_mode": "advisory_signal",
+    "verification_sample_failures": [],
+    "control_ok": true,
+    "governance_ok": true,
+    "ai_ok": true,
+    "artifact_release_ok": true,
+    "ai_release_signal": "ready",
+    "ai_overall_score": 100.0,
+    "cross_project_edges": 736
+  },
+  "department_execution": {
+    "engineering": {
+      "active_task_count": 1,
+      "pending_review_count": 1
+    },
+    "qa": {
+      "active_task_count": 0,
+      "pending_review_count": 0
+    },
+    "operations": {
+      "active_task_count": 1,
+      "coordination_count": 0
+    }
+  },
+  "release_evidence": {
+    "invalid_releases": [],
+    "stale_invalid_releases": []
+  },
+  "recent_releases": [],
+  "archived_releases": [
+    {
+      "id": "release-003",
+      "created_at": "2026-03-09T04:09:19.306038Z",
+      "repo_id": null,
+      "repo_path": "D:\\codex\\orchestrator-mvp",
+      "branch": "codex/evolution-20260309t040919",
+      "artifacts": [
+        "templates/tests/task_templates",
+        "policy/task_templates/prompts"
+      ],
+      "blockers": [],
+      "status": "archived",
+      "notes": "Ready to record a release candidate if a repository path is attached. Promoted to ready by release train runtime. Archived after stale release candidate failed artifact validation.",
+      "updated_at": "2026-03-14T17:17:42.498666Z",
+      "archived_at": "2026-03-14T17:17:42.498666Z",
+      "archived_reason": "stale-invalid-artifacts",
+      "artifact_evidence": {
+        "artifact_count": 2,
+        "existing_count": 0,
+        "missing_count": 2,
+        "existing": [],
+        "missing": [
+          "templates/tests/task_templates",
+          "policy/task_templates/prompts"
+        ],
+        "passed": false
+      }
+    },
+    {
+      "id": "release-002",
+      "created_at": "2026-03-09T04:08:32.086286Z",
+      "repo_id": null,
+      "repo_path": "D:\\codex\\orchestrator-mvp",
+      "branch": "codex/evolution-20260309t040831",
+      "artifacts": [
+        "templates/tests/task_templates",
+        "policy/task_templates/prompts"
+      ],
+      "blockers": [],
+      "status": "archived",
+      "notes": "Ready to record a release candidate if a repository path is attached. Promoted to ready by release train runtime. Archived after stale release candidate failed artifact validation.",
+      "updated_at": "2026-03-14T17:17:42.498666Z",
+      "archived_at": "2026-03-14T17:17:42.498666Z",
+      "archived_reason": "stale-invalid-artifacts",
+      "artifact_evidence": {
+        "artifact_count": 2,
+        "existing_count": 0,
+        "missing_count": 2,
+        "existing": [],
+        "missing": [
+          "templates/tests/task_templates",
+          "policy/task_templates/prompts"
+        ],
+        "passed": false
+      }
+    },
+    {
+      "id": "release-001",
+      "created_at": "2026-03-08T23:56:30.914712Z",
+      "repo_id": null,
+      "repo_path": "D:\\codex\\orchestrator-mvp",
+      "branch": "codex/demo",
+      "artifacts": [
+        "docker-compose.app.yml",
+        "deploy-template.yml"
+      ],
+      "blockers": [],
+      "status": "archived",
+      "notes": "local dry run Promoted to candidate by release train runtime. Promoted to ready by release train runtime. Archived after stale release candidate failed artifact validation.",
+      "updated_at": "2026-03-14T17:17:42.497643Z",
+      "archived_at": "2026-03-14T17:17:42.497643Z",
+      "archived_reason": "stale-invalid-artifacts",
+      "artifact_evidence": {
+        "artifact_count": 2,
+        "existing_count": 0,
+        "missing_count": 2,
+        "existing": [],
+        "missing": [
+          "docker-compose.app.yml",
+          "deploy-template.yml"
+        ],
+        "passed": false
+      }
+    }
+  ]
+}

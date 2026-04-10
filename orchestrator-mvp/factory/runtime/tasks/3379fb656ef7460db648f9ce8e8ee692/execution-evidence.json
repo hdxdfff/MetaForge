@@ -1,0 +1,27 @@
+{
+  "steps": [
+    {
+      "step_id": "623cda3d",
+      "step_title": "Run deterministic binary classification lab",
+      "action": "binary_classification_lab_run",
+      "ok": true,
+      "at": "2026-03-20T17:17:43.942018Z",
+      "workspace": "D:\\codex\\generated\\ml-binary-classification-lab",
+      "output_path": "D:\\codex\\generated\\ml-binary-classification-lab\\BINARY_CLASSIFICATION_AUTORUN_RESULT.md",
+      "metrics_path": "D:\\codex\\generated\\ml-binary-classification-lab\\binary_classification_metrics.json",
+      "dataset_source": "deterministic synthetic fallback",
+      "accuracies": {
+        "Logistic Regression": 0.95,
+        "Linear SVM": 0.9333333333333333,
+        "Perceptron": 0.95,
+        "SGD Classifier": 0.95
+      }
+    }
+  ],
+  "task_id": "3379fb656ef7460db648f9ce8e8ee692",
+  "task_title": "Binary classification lab final smoke run",
+  "task_status": "running",
+  "started_at": "2026-03-20T17:16:55.912603Z",
+  "updated_at": "2026-03-20T17:17:43.942018Z",
+  "completed": false
+}

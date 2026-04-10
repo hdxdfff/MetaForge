@@ -1,0 +1,6795 @@
+{
+  "graph_id": "graph_bc643aea2a",
+  "goal_id": "goal_e3cc143591",
+  "target": "Support mainline branch delivery",
+  "type": "build_product",
+  "created_at": "2026-03-12T18:51:00.849105Z",
+  "updated_at": "2026-03-12T19:08:50.434270Z",
+  "status": "planned",
+  "meta": {
+    "goal_scale": "engineering-os",
+    "capability_selection": {
+      "selected_capability_id": "fix_bug",
+      "source": "local_capability_library",
+      "recommended_tools": [
+        "read_file",
+        "search_code",
+        "patch_apply",
+        "run_tests"
+      ],
+      "success_conditions": [
+        "bug_reproduced_or_understood",
+        "patch_applied",
+        "verification_passed"
+      ],
+      "match_count": 3
+    },
+    "architecture_rules": [
+      "agents cannot import runtime",
+      "router must be stateless",
+      "runtime modules cannot depend on app transport handlers",
+      "tools may depend on runtime and state, but not app HTTP layer",
+      "verification must gate promotion of architecture-affecting changes"
+    ],
+    "agent_teams": [
+      "architecture_team",
+      "backend_team",
+      "infrastructure_team",
+      "testing_team"
+    ],
+    "code_graph_focus": {
+      "module_focus": [
+        "tools.prepare_self_patch_branch",
+        "tools.codex_control",
+        "tools.branch_context",
+        "tools.rnd_delivery_pipeline",
+        "app.git_service",
+        "tools.scheduling_kernel",
+        "tools.self_patch_loop",
+        "tools.branch_workboard"
+      ],
+      "owner_teams": [
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "layers": [
+        "unclassified"
+      ],
+      "matched_modules": [
+        {
+          "module": "tools.prepare_self_patch_branch",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified",
+          "dependency_count": 2,
+          "dependents": 0,
+          "internal_imports": [
+            "tools.execution_trace",
+            "tools.io_utils"
+          ]
+        },
+        {
+          "module": "tools.codex_control",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified",
+          "dependency_count": 2,
+          "dependents": 0,
+          "internal_imports": [
+            "tools.session_guard",
+            "tools.taskgraph_compiler"
+          ]
+        },
+        {
+          "module": "tools.branch_context",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified",
+          "dependency_count": 3,
+          "dependents": 1,
+          "internal_imports": [
+            "tools.autonomy_score",
+            "tools.context_builder",
+            "tools.io_utils"
+          ]
+        },
+        {
+          "module": "tools.rnd_delivery_pipeline",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified",
+          "dependency_count": 1,
+          "dependents": 3,
+          "internal_imports": [
+            "tools.io_utils"
+          ]
+        },
+        {
+          "module": "app.git_service",
+          "owner_team": "backend_team",
+          "owner": "coder",
+          "layer": "unclassified",
+          "dependency_count": 2,
+          "dependents": 2,
+          "internal_imports": [
+            "app.config",
+            "app.models"
+          ]
+        },
+        {
+          "module": "tools.scheduling_kernel",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified",
+          "dependency_count": 2,
+          "dependents": 1,
+          "internal_imports": [
+            "runtime.scheduler",
+            "tools.io_utils"
+          ]
+        },
+        {
+          "module": "tools.self_patch_loop",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified",
+          "dependency_count": 3,
+          "dependents": 0,
+          "internal_imports": [
+            "tools.execution_trace",
+            "tools.module_ownership",
+            "tools.privilege_policy"
+          ]
+        },
+        {
+          "module": "tools.branch_workboard",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified",
+          "dependency_count": 5,
+          "dependents": 2,
+          "internal_imports": [
+            "tools.branch_context",
+            "tools.goal_registry",
+            "tools.io_utils",
+            "tools.organization_model",
+            "tools.project_graph"
+          ]
+        }
+      ]
+    },
+    "dependency_impact": {
+      "updated_at": "2026-03-12T18:50:59.344748Z",
+      "request": "Support mainline branch delivery",
+      "focus_modules": [
+        "tools.prepare_self_patch_branch",
+        "tools.codex_control",
+        "tools.branch_context",
+        "tools.rnd_delivery_pipeline",
+        "app.git_service",
+        "tools.scheduling_kernel",
+        "tools.self_patch_loop",
+        "tools.branch_workboard"
+      ],
+      "impacted_modules": [
+        {
+          "module": "app.git_service",
+          "depth": 0,
+          "owner_team": "backend_team",
+          "layer": "unclassified",
+          "dependents": 2
+        },
+        {
+          "module": "tools.branch_context",
+          "depth": 0,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 1
+        },
+        {
+          "module": "tools.branch_workboard",
+          "depth": 0,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 2
+        },
+        {
+          "module": "tools.codex_control",
+          "depth": 0,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 0
+        },
+        {
+          "module": "tools.prepare_self_patch_branch",
+          "depth": 0,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 0
+        },
+        {
+          "module": "tools.rnd_delivery_pipeline",
+          "depth": 0,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 3
+        },
+        {
+          "module": "tools.scheduling_kernel",
+          "depth": 0,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 1
+        },
+        {
+          "module": "tools.self_patch_loop",
+          "depth": 0,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 0
+        },
+        {
+          "module": "app.context_service",
+          "depth": 1,
+          "owner_team": "backend_team",
+          "layer": "unclassified",
+          "dependents": 1
+        },
+        {
+          "module": "app.orchestrator",
+          "depth": 1,
+          "owner_team": "backend_team",
+          "layer": "unclassified",
+          "dependents": 1
+        },
+        {
+          "module": "tools.automation_lab",
+          "depth": 1,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 1
+        },
+        {
+          "module": "tools.brain_loop",
+          "depth": 1,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 3
+        },
+        {
+          "module": "tools.company_os",
+          "depth": 1,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 1
+        },
+        {
+          "module": "tools.decision_engine",
+          "depth": 1,
+          "owner_team": "architecture_team",
+          "layer": "task_graph_planner",
+          "dependents": 1
+        },
+        {
+          "module": "tools.meta_factory_control",
+          "depth": 1,
+          "owner_team": "infrastructure_team",
+          "layer": "architecture_engine",
+          "dependents": 3
+        },
+        {
+          "module": "app.main",
+          "depth": 2,
+          "owner_team": "backend_team",
+          "layer": "unclassified",
+          "dependents": 2
+        },
+        {
+          "module": "runtime.executor",
+          "depth": 2,
+          "owner_team": "backend_team",
+          "layer": "unclassified",
+          "dependents": 1
+        },
+        {
+          "module": "tools.factory_daemon",
+          "depth": 2,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 0
+        },
+        {
+          "module": "tools.platform_verification_sweep",
+          "depth": 2,
+          "owner_team": "infrastructure_team",
+          "layer": "verification",
+          "dependents": 1
+        },
+        {
+          "module": "tools.self_model",
+          "depth": 2,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 1
+        },
+        {
+          "module": "tools.verification_engine",
+          "depth": 2,
+          "owner_team": "infrastructure_team",
+          "layer": "verification",
+          "dependents": 4
+        }
+      ],
+      "affected_teams": [
+        "architecture_team",
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "affected_layers": [
+        "architecture_engine",
+        "task_graph_planner",
+        "unclassified",
+        "verification"
+      ],
+      "verification_scope": [
+        "app.context_service",
+        "app.git_service",
+        "app.main",
+        "app.orchestrator",
+        "runtime.executor",
+        "tools.automation_lab",
+        "tools.brain_loop",
+        "tools.branch_context",
+        "tools.branch_workboard",
+        "tools.company_os",
+        "tools.decision_engine",
+        "tools.meta_factory_control",
+        "tools.platform_verification_sweep",
+        "tools.rnd_delivery_pipeline",
+        "tools.scheduling_kernel",
+        "tools.self_model",
+        "tools.verification_engine"
+      ]
+    },
+    "project_impact": {
+      "updated_at": "2026-03-12T18:50:59.717017Z",
+      "request": "Support mainline branch delivery",
+      "query_domains": [
+        "kernel"
+      ],
+      "related_projects": [
+        {
+          "project_id": "79120c5dbb",
+          "name": "ToyOS Kernel",
+          "type": "project",
+          "repo_path": "D:\\codex\\generated\\toy-os-demo",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "project_id": "aimath0001",
+          "name": "AI Math Foundations Workspace",
+          "type": "project",
+          "repo_path": "D:\\人工智能数学基础",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "project_id": "platform_464dac2a0b",
+          "name": "Optimize task scheduler from agent experience",
+          "type": "platform",
+          "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\optimize-task-scheduler-from-agent-experience",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "project_id": "platform_b9e5c175ad",
+          "name": "Continue ToyOS kernel branch work with mainline context reuse",
+          "type": "platform",
+          "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\continue-toyos-kernel-branch-work-with-mainline-context-reuse",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "project_id": "platform_900f86db07",
+          "name": "Continue ToyOS kernel branch work with mainline context reuse",
+          "type": "platform",
+          "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\continue-toyos-kernel-branch-work-with-mainline-context-reuse",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "project_id": "platform_8632991421",
+          "name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+          "type": "platform",
+          "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "project_id": "platform_884b16cef2",
+          "name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+          "type": "platform",
+          "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "project_id": "platform_850e026ee3",
+          "name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+          "type": "platform",
+          "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+          "domains": [
+            "kernel"
+          ]
+        }
+      ],
+      "cross_project_edges": [
+        {
+          "from": "79120c5dbb",
+          "to": "aimath0001",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory",
+            "kernel"
+          ]
+        },
+        {
+          "from": "79120c5dbb",
+          "to": "platform_464dac2a0b",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory",
+            "kernel"
+          ]
+        },
+        {
+          "from": "79120c5dbb",
+          "to": "platform_b9e5c175ad",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "79120c5dbb",
+          "to": "platform_900f86db07",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "79120c5dbb",
+          "to": "platform_8632991421",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "79120c5dbb",
+          "to": "platform_884b16cef2",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "79120c5dbb",
+          "to": "platform_850e026ee3",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "aimath0001",
+          "to": "79120c5dbb",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory",
+            "kernel"
+          ]
+        },
+        {
+          "from": "aimath0001",
+          "to": "platform_464dac2a0b",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory",
+            "kernel"
+          ]
+        },
+        {
+          "from": "aimath0001",
+          "to": "platform_b9e5c175ad",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "aimath0001",
+          "to": "platform_900f86db07",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "aimath0001",
+          "to": "platform_8632991421",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel",
+            "math"
+          ]
+        },
+        {
+          "from": "aimath0001",
+          "to": "platform_884b16cef2",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel",
+            "math"
+          ]
+        },
+        {
+          "from": "aimath0001",
+          "to": "platform_850e026ee3",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel",
+            "math"
+          ]
+        },
+        {
+          "from": "platform_464dac2a0b",
+          "to": "79120c5dbb",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory",
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_464dac2a0b",
+          "to": "aimath0001",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory",
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_464dac2a0b",
+          "to": "platform_b9e5c175ad",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_464dac2a0b",
+          "to": "platform_900f86db07",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_464dac2a0b",
+          "to": "platform_8632991421",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_464dac2a0b",
+          "to": "platform_884b16cef2",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_464dac2a0b",
+          "to": "platform_850e026ee3",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_b9e5c175ad",
+          "to": "79120c5dbb",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_b9e5c175ad",
+          "to": "aimath0001",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_b9e5c175ad",
+          "to": "platform_464dac2a0b",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_b9e5c175ad",
+          "to": "platform_900f86db07",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_b9e5c175ad",
+          "to": "platform_8632991421",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_b9e5c175ad",
+          "to": "platform_884b16cef2",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_b9e5c175ad",
+          "to": "platform_850e026ee3",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_900f86db07",
+          "to": "79120c5dbb",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_900f86db07",
+          "to": "aimath0001",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_900f86db07",
+          "to": "platform_464dac2a0b",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_900f86db07",
+          "to": "platform_b9e5c175ad",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_900f86db07",
+          "to": "platform_8632991421",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_900f86db07",
+          "to": "platform_884b16cef2",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_900f86db07",
+          "to": "platform_850e026ee3",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_8632991421",
+          "to": "79120c5dbb",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_8632991421",
+          "to": "aimath0001",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel",
+            "math"
+          ]
+        },
+        {
+          "from": "platform_8632991421",
+          "to": "platform_464dac2a0b",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_8632991421",
+          "to": "platform_b9e5c175ad",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_8632991421",
+          "to": "platform_900f86db07",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_8632991421",
+          "to": "platform_884b16cef2",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel",
+            "math"
+          ]
+        },
+        {
+          "from": "platform_8632991421",
+          "to": "platform_850e026ee3",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel",
+            "math"
+          ]
+        },
+        {
+          "from": "platform_884b16cef2",
+          "to": "79120c5dbb",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_884b16cef2",
+          "to": "aimath0001",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel",
+            "math"
+          ]
+        },
+        {
+          "from": "platform_884b16cef2",
+          "to": "platform_464dac2a0b",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_884b16cef2",
+          "to": "platform_b9e5c175ad",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_884b16cef2",
+          "to": "platform_900f86db07",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_884b16cef2",
+          "to": "platform_8632991421",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel",
+            "math"
+          ]
+        },
+        {
+          "from": "platform_884b16cef2",
+          "to": "platform_850e026ee3",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel",
+            "math"
+          ]
+        },
+        {
+          "from": "platform_850e026ee3",
+          "to": "79120c5dbb",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_850e026ee3",
+          "to": "aimath0001",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel",
+            "math"
+          ]
+        },
+        {
+          "from": "platform_850e026ee3",
+          "to": "platform_464dac2a0b",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_850e026ee3",
+          "to": "platform_b9e5c175ad",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_850e026ee3",
+          "to": "platform_900f86db07",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_850e026ee3",
+          "to": "platform_8632991421",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel",
+            "math"
+          ]
+        },
+        {
+          "from": "platform_850e026ee3",
+          "to": "platform_884b16cef2",
+          "kind": "domain-overlap",
+          "domains": [
+            "kernel",
+            "math"
+          ]
+        }
+      ],
+      "cross_project_count": 8
+    },
+    "project_graph_summary": {
+      "project_count": 5,
+      "platform_count": 21,
+      "edge_count": 210
+    },
+    "organization_allocation": {
+      "project_id": "platform_c303bfe0ca",
+      "name": "Support mainline branch delivery",
+      "type": "platform",
+      "domains": [
+        "general"
+      ],
+      "owner_department": "engineering_department",
+      "support_departments": [
+        "qa_department"
+      ]
+    },
+    "organization_summary": {
+      "department_count": 5,
+      "team_count": 3
+    },
+    "cross_project_candidate": {},
+    "selected_work_packages": []
+  },
+  "nodes": [
+    {
+      "id": "architecture_contract",
+      "title": "Define architecture contract for Support mainline branch delivery",
+      "role": "architect",
+      "prompt": "Define architecture boundaries, interfaces, and ownership for: Support mainline branch delivery",
+      "dependencies": [],
+      "status": "completed",
+      "task_id": null,
+      "team": "architecture_team",
+      "owned_modules": [
+        "brain",
+        "runtime.scheduler",
+        "tools.taskgraph_compiler",
+        "tools.prepare_self_patch_branch",
+        "tools.codex_control",
+        "tools.branch_context",
+        "tools.rnd_delivery_pipeline",
+        "app.git_service",
+        "tools.scheduling_kernel",
+        "tools.self_patch_loop",
+        "tools.branch_workboard"
+      ],
+      "kind": "architecture",
+      "module_focus": [
+        "tools.prepare_self_patch_branch",
+        "tools.codex_control",
+        "tools.branch_context",
+        "tools.rnd_delivery_pipeline",
+        "app.git_service",
+        "tools.scheduling_kernel",
+        "tools.self_patch_loop",
+        "tools.branch_workboard"
+      ],
+      "owner_teams": [
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.prepare_self_patch_branch",
+          "tools.codex_control",
+          "tools.branch_context",
+          "tools.rnd_delivery_pipeline",
+          "app.git_service",
+          "tools.scheduling_kernel",
+          "tools.self_patch_loop",
+          "tools.branch_workboard"
+        ],
+        "owner_teams": [
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.prepare_self_patch_branch",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.codex_control",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.branch_context",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.rnd_delivery_pipeline",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "app.git_service",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.scheduling_kernel",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.self_patch_loop",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.branch_workboard",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "dependency_impact": {
+        "updated_at": "2026-03-12T18:51:00.826405Z",
+        "request": "Support mainline branch delivery",
+        "focus_modules": [
+          "tools.prepare_self_patch_branch",
+          "tools.codex_control",
+          "tools.branch_context",
+          "tools.rnd_delivery_pipeline",
+          "app.git_service",
+          "tools.scheduling_kernel",
+          "tools.self_patch_loop",
+          "tools.branch_workboard"
+        ],
+        "impacted_modules": [
+          {
+            "module": "app.git_service",
+            "depth": 0,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "tools.branch_context",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.branch_workboard",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "tools.codex_control",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.prepare_self_patch_branch",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.rnd_delivery_pipeline",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "tools.scheduling_kernel",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.self_patch_loop",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "app.context_service",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "app.orchestrator",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.automation_lab",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.brain_loop",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "tools.company_os",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.decision_engine",
+            "depth": 1,
+            "owner_team": "architecture_team",
+            "layer": "task_graph_planner",
+            "dependents": 1
+          },
+          {
+            "module": "tools.meta_factory_control",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "architecture_engine",
+            "dependents": 3
+          },
+          {
+            "module": "app.main",
+            "depth": 2,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "runtime.executor",
+            "depth": 2,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.factory_daemon",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.platform_verification_sweep",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "verification",
+            "dependents": 1
+          },
+          {
+            "module": "tools.self_model",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.verification_engine",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "verification",
+            "dependents": 4
+          }
+        ],
+        "affected_teams": [
+          "architecture_team",
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "affected_layers": [
+          "architecture_engine",
+          "task_graph_planner",
+          "unclassified",
+          "verification"
+        ],
+        "verification_scope": [
+          "app.context_service",
+          "app.git_service",
+          "app.main",
+          "app.orchestrator",
+          "runtime.executor",
+          "tools.automation_lab",
+          "tools.brain_loop",
+          "tools.branch_context",
+          "tools.branch_workboard",
+          "tools.company_os",
+          "tools.decision_engine",
+          "tools.meta_factory_control",
+          "tools.platform_verification_sweep",
+          "tools.rnd_delivery_pipeline",
+          "tools.scheduling_kernel",
+          "tools.self_model",
+          "tools.verification_engine"
+        ]
+      },
+      "project_impact": {
+        "updated_at": "2026-03-12T18:51:00.831207Z",
+        "request": "Support mainline branch delivery",
+        "query_domains": [
+          "kernel"
+        ],
+        "related_projects": [
+          {
+            "project_id": "79120c5dbb",
+            "name": "ToyOS Kernel",
+            "type": "project",
+            "repo_path": "D:\\codex\\generated\\toy-os-demo",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "project_id": "aimath0001",
+            "name": "AI Math Foundations Workspace",
+            "type": "project",
+            "repo_path": "D:\\人工智能数学基础",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "project_id": "platform_464dac2a0b",
+            "name": "Optimize task scheduler from agent experience",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\optimize-task-scheduler-from-agent-experience",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "project_id": "platform_b9e5c175ad",
+            "name": "Continue ToyOS kernel branch work with mainline context reuse",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\continue-toyos-kernel-branch-work-with-mainline-context-reuse",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "project_id": "platform_900f86db07",
+            "name": "Continue ToyOS kernel branch work with mainline context reuse",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\continue-toyos-kernel-branch-work-with-mainline-context-reuse",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "project_id": "platform_8632991421",
+            "name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "project_id": "platform_884b16cef2",
+            "name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "project_id": "platform_850e026ee3",
+            "name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+            "domains": [
+              "kernel"
+            ]
+          }
+        ],
+        "cross_project_edges": [
+          {
+            "from": "79120c5dbb",
+            "to": "aimath0001",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "79120c5dbb",
+            "to": "platform_464dac2a0b",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "79120c5dbb",
+            "to": "platform_b9e5c175ad",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "79120c5dbb",
+            "to": "platform_900f86db07",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "79120c5dbb",
+            "to": "platform_8632991421",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "79120c5dbb",
+            "to": "platform_884b16cef2",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "79120c5dbb",
+            "to": "platform_850e026ee3",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "aimath0001",
+            "to": "79120c5dbb",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "aimath0001",
+            "to": "platform_464dac2a0b",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "aimath0001",
+            "to": "platform_b9e5c175ad",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "aimath0001",
+            "to": "platform_900f86db07",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "aimath0001",
+            "to": "platform_8632991421",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "aimath0001",
+            "to": "platform_884b16cef2",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "aimath0001",
+            "to": "platform_850e026ee3",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "platform_464dac2a0b",
+            "to": "79120c5dbb",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_464dac2a0b",
+            "to": "aimath0001",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_464dac2a0b",
+            "to": "platform_b9e5c175ad",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_464dac2a0b",
+            "to": "platform_900f86db07",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_464dac2a0b",
+            "to": "platform_8632991421",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_464dac2a0b",
+            "to": "platform_884b16cef2",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_464dac2a0b",
+            "to": "platform_850e026ee3",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_b9e5c175ad",
+            "to": "79120c5dbb",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_b9e5c175ad",
+            "to": "aimath0001",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_b9e5c175ad",
+            "to": "platform_464dac2a0b",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_b9e5c175ad",
+            "to": "platform_900f86db07",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_b9e5c175ad",
+            "to": "platform_8632991421",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_b9e5c175ad",
+            "to": "platform_884b16cef2",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_b9e5c175ad",
+            "to": "platform_850e026ee3",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_900f86db07",
+            "to": "79120c5dbb",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_900f86db07",
+            "to": "aimath0001",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_900f86db07",
+            "to": "platform_464dac2a0b",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_900f86db07",
+            "to": "platform_b9e5c175ad",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_900f86db07",
+            "to": "platform_8632991421",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_900f86db07",
+            "to": "platform_884b16cef2",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_900f86db07",
+            "to": "platform_850e026ee3",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_8632991421",
+            "to": "79120c5dbb",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_8632991421",
+            "to": "aimath0001",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "platform_8632991421",
+            "to": "platform_464dac2a0b",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_8632991421",
+            "to": "platform_b9e5c175ad",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_8632991421",
+            "to": "platform_900f86db07",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_8632991421",
+            "to": "platform_884b16cef2",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "platform_8632991421",
+            "to": "platform_850e026ee3",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "platform_884b16cef2",
+            "to": "79120c5dbb",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_884b16cef2",
+            "to": "aimath0001",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "platform_884b16cef2",
+            "to": "platform_464dac2a0b",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_884b16cef2",
+            "to": "platform_b9e5c175ad",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_884b16cef2",
+            "to": "platform_900f86db07",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_884b16cef2",
+            "to": "platform_8632991421",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "platform_884b16cef2",
+            "to": "platform_850e026ee3",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "platform_850e026ee3",
+            "to": "79120c5dbb",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_850e026ee3",
+            "to": "aimath0001",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "platform_850e026ee3",
+            "to": "platform_464dac2a0b",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_850e026ee3",
+            "to": "platform_b9e5c175ad",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_850e026ee3",
+            "to": "platform_900f86db07",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_850e026ee3",
+            "to": "platform_8632991421",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "platform_850e026ee3",
+            "to": "platform_884b16cef2",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          }
+        ],
+        "cross_project_count": 8
+      },
+      "ownership_graph_summary": {
+        "module_count": 148,
+        "team_count": 3
+      },
+      "patch_required": false,
+      "capability_context": {
+        "capability_id": "fix_bug",
+        "recommended_tools": [
+          "read_file",
+          "search_code",
+          "patch_apply",
+          "run_tests"
+        ],
+        "success_conditions": [
+          "bug_reproduced_or_understood",
+          "patch_applied",
+          "verification_passed"
+        ]
+      },
+      "owner_department": "engineering_department",
+      "support_departments": [
+        "qa_department"
+      ],
+      "review_departments": [
+        "engineering_department",
+        "qa_department"
+      ],
+      "department_workers": {
+        "engineering_department": "coder",
+        "qa_department": "shell"
+      },
+      "result": {
+        "summary": "Runtime-native architecture contract synthesized from project context kernel, code knowledge graph, ownership map, and global policy."
+      },
+      "completed_at": "2026-03-12T18:51:01.450867Z"
+    },
+    {
+      "id": "engineering_plan",
+      "title": "Plan engineering task graph for Support mainline branch delivery",
+      "role": "product",
+      "prompt": "Produce the engineering task graph, interface map, and implementation slices for: Support mainline branch delivery",
+      "dependencies": [
+        "architecture_contract"
+      ],
+      "status": "completed",
+      "task_id": null,
+      "team": "architecture_team",
+      "owned_modules": [
+        "tools.prepare_self_patch_branch",
+        "tools.codex_control",
+        "tools.branch_context",
+        "tools.rnd_delivery_pipeline",
+        "app.git_service",
+        "tools.scheduling_kernel",
+        "tools.self_patch_loop",
+        "tools.branch_workboard"
+      ],
+      "kind": "planning",
+      "module_focus": [
+        "tools.prepare_self_patch_branch",
+        "tools.codex_control",
+        "tools.branch_context",
+        "tools.rnd_delivery_pipeline",
+        "app.git_service",
+        "tools.scheduling_kernel",
+        "tools.self_patch_loop",
+        "tools.branch_workboard"
+      ],
+      "owner_teams": [
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.prepare_self_patch_branch",
+          "tools.codex_control",
+          "tools.branch_context",
+          "tools.rnd_delivery_pipeline",
+          "app.git_service",
+          "tools.scheduling_kernel",
+          "tools.self_patch_loop",
+          "tools.branch_workboard"
+        ],
+        "owner_teams": [
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.prepare_self_patch_branch",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.codex_control",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.branch_context",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.rnd_delivery_pipeline",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "app.git_service",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.scheduling_kernel",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.self_patch_loop",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.branch_workboard",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "dependency_impact": {
+        "updated_at": "2026-03-12T18:51:00.826405Z",
+        "request": "Support mainline branch delivery",
+        "focus_modules": [
+          "tools.prepare_self_patch_branch",
+          "tools.codex_control",
+          "tools.branch_context",
+          "tools.rnd_delivery_pipeline",
+          "app.git_service",
+          "tools.scheduling_kernel",
+          "tools.self_patch_loop",
+          "tools.branch_workboard"
+        ],
+        "impacted_modules": [
+          {
+            "module": "app.git_service",
+            "depth": 0,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "tools.branch_context",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.branch_workboard",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "tools.codex_control",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.prepare_self_patch_branch",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.rnd_delivery_pipeline",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "tools.scheduling_kernel",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.self_patch_loop",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "app.context_service",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "app.orchestrator",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.automation_lab",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.brain_loop",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "tools.company_os",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.decision_engine",
+            "depth": 1,
+            "owner_team": "architecture_team",
+            "layer": "task_graph_planner",
+            "dependents": 1
+          },
+          {
+            "module": "tools.meta_factory_control",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "architecture_engine",
+            "dependents": 3
+          },
+          {
+            "module": "app.main",
+            "depth": 2,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "runtime.executor",
+            "depth": 2,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.factory_daemon",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.platform_verification_sweep",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "verification",
+            "dependents": 1
+          },
+          {
+            "module": "tools.self_model",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.verification_engine",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "verification",
+            "dependents": 4
+          }
+        ],
+        "affected_teams": [
+          "architecture_team",
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "affected_layers": [
+          "architecture_engine",
+          "task_graph_planner",
+          "unclassified",
+          "verification"
+        ],
+        "verification_scope": [
+          "app.context_service",
+          "app.git_service",
+          "app.main",
+          "app.orchestrator",
+          "runtime.executor",
+          "tools.automation_lab",
+          "tools.brain_loop",
+          "tools.branch_context",
+          "tools.branch_workboard",
+          "tools.company_os",
+          "tools.decision_engine",
+          "tools.meta_factory_control",
+          "tools.platform_verification_sweep",
+          "tools.rnd_delivery_pipeline",
+          "tools.scheduling_kernel",
+          "tools.self_model",
+          "tools.verification_engine"
+        ]
+      },
+      "project_impact": {
+        "updated_at": "2026-03-12T18:51:00.831207Z",
+        "request": "Support mainline branch delivery",
+        "query_domains": [
+          "kernel"
+        ],
+        "related_projects": [
+          {
+            "project_id": "79120c5dbb",
+            "name": "ToyOS Kernel",
+            "type": "project",
+            "repo_path": "D:\\codex\\generated\\toy-os-demo",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "project_id": "aimath0001",
+            "name": "AI Math Foundations Workspace",
+            "type": "project",
+            "repo_path": "D:\\人工智能数学基础",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "project_id": "platform_464dac2a0b",
+            "name": "Optimize task scheduler from agent experience",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\optimize-task-scheduler-from-agent-experience",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "project_id": "platform_b9e5c175ad",
+            "name": "Continue ToyOS kernel branch work with mainline context reuse",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\continue-toyos-kernel-branch-work-with-mainline-context-reuse",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "project_id": "platform_900f86db07",
+            "name": "Continue ToyOS kernel branch work with mainline context reuse",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\continue-toyos-kernel-branch-work-with-mainline-context-reuse",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "project_id": "platform_8632991421",
+            "name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "project_id": "platform_884b16cef2",
+            "name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "project_id": "platform_850e026ee3",
+            "name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+            "domains": [
+              "kernel"
+            ]
+          }
+        ],
+        "cross_project_edges": [
+          {
+            "from": "79120c5dbb",
+            "to": "aimath0001",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "79120c5dbb",
+            "to": "platform_464dac2a0b",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "79120c5dbb",
+            "to": "platform_b9e5c175ad",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "79120c5dbb",
+            "to": "platform_900f86db07",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "79120c5dbb",
+            "to": "platform_8632991421",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "79120c5dbb",
+            "to": "platform_884b16cef2",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "79120c5dbb",
+            "to": "platform_850e026ee3",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "aimath0001",
+            "to": "79120c5dbb",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "aimath0001",
+            "to": "platform_464dac2a0b",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "aimath0001",
+            "to": "platform_b9e5c175ad",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "aimath0001",
+            "to": "platform_900f86db07",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "aimath0001",
+            "to": "platform_8632991421",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "aimath0001",
+            "to": "platform_884b16cef2",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "aimath0001",
+            "to": "platform_850e026ee3",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "platform_464dac2a0b",
+            "to": "79120c5dbb",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_464dac2a0b",
+            "to": "aimath0001",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_464dac2a0b",
+            "to": "platform_b9e5c175ad",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_464dac2a0b",
+            "to": "platform_900f86db07",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_464dac2a0b",
+            "to": "platform_8632991421",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_464dac2a0b",
+            "to": "platform_884b16cef2",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_464dac2a0b",
+            "to": "platform_850e026ee3",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_b9e5c175ad",
+            "to": "79120c5dbb",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_b9e5c175ad",
+            "to": "aimath0001",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_b9e5c175ad",
+            "to": "platform_464dac2a0b",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_b9e5c175ad",
+            "to": "platform_900f86db07",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_b9e5c175ad",
+            "to": "platform_8632991421",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_b9e5c175ad",
+            "to": "platform_884b16cef2",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_b9e5c175ad",
+            "to": "platform_850e026ee3",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_900f86db07",
+            "to": "79120c5dbb",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_900f86db07",
+            "to": "aimath0001",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_900f86db07",
+            "to": "platform_464dac2a0b",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_900f86db07",
+            "to": "platform_b9e5c175ad",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_900f86db07",
+            "to": "platform_8632991421",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_900f86db07",
+            "to": "platform_884b16cef2",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_900f86db07",
+            "to": "platform_850e026ee3",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_8632991421",
+            "to": "79120c5dbb",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_8632991421",
+            "to": "aimath0001",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "platform_8632991421",
+            "to": "platform_464dac2a0b",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_8632991421",
+            "to": "platform_b9e5c175ad",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_8632991421",
+            "to": "platform_900f86db07",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_8632991421",
+            "to": "platform_884b16cef2",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "platform_8632991421",
+            "to": "platform_850e026ee3",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "platform_884b16cef2",
+            "to": "79120c5dbb",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_884b16cef2",
+            "to": "aimath0001",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "platform_884b16cef2",
+            "to": "platform_464dac2a0b",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_884b16cef2",
+            "to": "platform_b9e5c175ad",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_884b16cef2",
+            "to": "platform_900f86db07",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_884b16cef2",
+            "to": "platform_8632991421",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "platform_884b16cef2",
+            "to": "platform_850e026ee3",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "platform_850e026ee3",
+            "to": "79120c5dbb",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_850e026ee3",
+            "to": "aimath0001",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "platform_850e026ee3",
+            "to": "platform_464dac2a0b",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_850e026ee3",
+            "to": "platform_b9e5c175ad",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_850e026ee3",
+            "to": "platform_900f86db07",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_850e026ee3",
+            "to": "platform_8632991421",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "platform_850e026ee3",
+            "to": "platform_884b16cef2",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          }
+        ],
+        "cross_project_count": 8
+      },
+      "ownership_graph_summary": {
+        "module_count": 148,
+        "team_count": 3
+      },
+      "patch_required": false,
+      "capability_context": {
+        "capability_id": "fix_bug",
+        "recommended_tools": [
+          "read_file",
+          "search_code",
+          "patch_apply",
+          "run_tests"
+        ],
+        "success_conditions": [
+          "bug_reproduced_or_understood",
+          "patch_applied",
+          "verification_passed"
+        ]
+      },
+      "owner_department": "engineering_department",
+      "support_departments": [
+        "qa_department"
+      ],
+      "review_departments": [
+        "engineering_department",
+        "qa_department"
+      ],
+      "department_workers": {
+        "engineering_department": "coder",
+        "qa_department": "shell"
+      },
+      "result": {
+        "summary": "Runtime-native engineering plan synthesized from dependency-aware taskgraph and module ownership map."
+      },
+      "completed_at": "2026-03-12T18:51:01.450867Z"
+    },
+    {
+      "id": "cross_project_coordination",
+      "title": "Coordinate cross-project impact for Support mainline branch delivery",
+      "role": "reviewer",
+      "prompt": "Review cross-project downstream impact, compatibility, and rollout planning for: Support mainline branch delivery",
+      "dependencies": [
+        "engineering_plan"
+      ],
+      "status": "completed",
+      "task_id": null,
+      "team": "architecture_team",
+      "owned_modules": [],
+      "kind": "cross-project-coordination",
+      "module_focus": [
+        "tools.prepare_self_patch_branch",
+        "tools.codex_control",
+        "tools.branch_context",
+        "tools.rnd_delivery_pipeline",
+        "app.git_service",
+        "tools.scheduling_kernel",
+        "tools.self_patch_loop",
+        "tools.branch_workboard"
+      ],
+      "owner_teams": [
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.prepare_self_patch_branch",
+          "tools.codex_control",
+          "tools.branch_context",
+          "tools.rnd_delivery_pipeline",
+          "app.git_service",
+          "tools.scheduling_kernel",
+          "tools.self_patch_loop",
+          "tools.branch_workboard"
+        ],
+        "owner_teams": [
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.prepare_self_patch_branch",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.codex_control",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.branch_context",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.rnd_delivery_pipeline",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "app.git_service",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.scheduling_kernel",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.self_patch_loop",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.branch_workboard",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "dependency_impact": {
+        "updated_at": "2026-03-12T18:51:00.826405Z",
+        "request": "Support mainline branch delivery",
+        "focus_modules": [
+          "tools.prepare_self_patch_branch",
+          "tools.codex_control",
+          "tools.branch_context",
+          "tools.rnd_delivery_pipeline",
+          "app.git_service",
+          "tools.scheduling_kernel",
+          "tools.self_patch_loop",
+          "tools.branch_workboard"
+        ],
+        "impacted_modules": [
+          {
+            "module": "app.git_service",
+            "depth": 0,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "tools.branch_context",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.branch_workboard",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "tools.codex_control",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.prepare_self_patch_branch",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.rnd_delivery_pipeline",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "tools.scheduling_kernel",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.self_patch_loop",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "app.context_service",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "app.orchestrator",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.automation_lab",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.brain_loop",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "tools.company_os",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.decision_engine",
+            "depth": 1,
+            "owner_team": "architecture_team",
+            "layer": "task_graph_planner",
+            "dependents": 1
+          },
+          {
+            "module": "tools.meta_factory_control",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "architecture_engine",
+            "dependents": 3
+          },
+          {
+            "module": "app.main",
+            "depth": 2,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "runtime.executor",
+            "depth": 2,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.factory_daemon",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.platform_verification_sweep",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "verification",
+            "dependents": 1
+          },
+          {
+            "module": "tools.self_model",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.verification_engine",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "verification",
+            "dependents": 4
+          }
+        ],
+        "affected_teams": [
+          "architecture_team",
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "affected_layers": [
+          "architecture_engine",
+          "task_graph_planner",
+          "unclassified",
+          "verification"
+        ],
+        "verification_scope": [
+          "app.context_service",
+          "app.git_service",
+          "app.main",
+          "app.orchestrator",
+          "runtime.executor",
+          "tools.automation_lab",
+          "tools.brain_loop",
+          "tools.branch_context",
+          "tools.branch_workboard",
+          "tools.company_os",
+          "tools.decision_engine",
+          "tools.meta_factory_control",
+          "tools.platform_verification_sweep",
+          "tools.rnd_delivery_pipeline",
+          "tools.scheduling_kernel",
+          "tools.self_model",
+          "tools.verification_engine"
+        ]
+      },
+      "project_impact": {
+        "updated_at": "2026-03-12T18:51:00.831207Z",
+        "request": "Support mainline branch delivery",
+        "query_domains": [
+          "kernel"
+        ],
+        "related_projects": [
+          {
+            "project_id": "79120c5dbb",
+            "name": "ToyOS Kernel",
+            "type": "project",
+            "repo_path": "D:\\codex\\generated\\toy-os-demo",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "project_id": "aimath0001",
+            "name": "AI Math Foundations Workspace",
+            "type": "project",
+            "repo_path": "D:\\人工智能数学基础",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "project_id": "platform_464dac2a0b",
+            "name": "Optimize task scheduler from agent experience",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\optimize-task-scheduler-from-agent-experience",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "project_id": "platform_b9e5c175ad",
+            "name": "Continue ToyOS kernel branch work with mainline context reuse",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\continue-toyos-kernel-branch-work-with-mainline-context-reuse",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "project_id": "platform_900f86db07",
+            "name": "Continue ToyOS kernel branch work with mainline context reuse",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\continue-toyos-kernel-branch-work-with-mainline-context-reuse",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "project_id": "platform_8632991421",
+            "name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "project_id": "platform_884b16cef2",
+            "name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "project_id": "platform_850e026ee3",
+            "name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+            "domains": [
+              "kernel"
+            ]
+          }
+        ],
+        "cross_project_edges": [
+          {
+            "from": "79120c5dbb",
+            "to": "aimath0001",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "79120c5dbb",
+            "to": "platform_464dac2a0b",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "79120c5dbb",
+            "to": "platform_b9e5c175ad",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "79120c5dbb",
+            "to": "platform_900f86db07",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "79120c5dbb",
+            "to": "platform_8632991421",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "79120c5dbb",
+            "to": "platform_884b16cef2",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "79120c5dbb",
+            "to": "platform_850e026ee3",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "aimath0001",
+            "to": "79120c5dbb",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "aimath0001",
+            "to": "platform_464dac2a0b",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "aimath0001",
+            "to": "platform_b9e5c175ad",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "aimath0001",
+            "to": "platform_900f86db07",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "aimath0001",
+            "to": "platform_8632991421",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "aimath0001",
+            "to": "platform_884b16cef2",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "aimath0001",
+            "to": "platform_850e026ee3",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "platform_464dac2a0b",
+            "to": "79120c5dbb",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_464dac2a0b",
+            "to": "aimath0001",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_464dac2a0b",
+            "to": "platform_b9e5c175ad",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_464dac2a0b",
+            "to": "platform_900f86db07",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_464dac2a0b",
+            "to": "platform_8632991421",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_464dac2a0b",
+            "to": "platform_884b16cef2",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_464dac2a0b",
+            "to": "platform_850e026ee3",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_b9e5c175ad",
+            "to": "79120c5dbb",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_b9e5c175ad",
+            "to": "aimath0001",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_b9e5c175ad",
+            "to": "platform_464dac2a0b",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_b9e5c175ad",
+            "to": "platform_900f86db07",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_b9e5c175ad",
+            "to": "platform_8632991421",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_b9e5c175ad",
+            "to": "platform_884b16cef2",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_b9e5c175ad",
+            "to": "platform_850e026ee3",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_900f86db07",
+            "to": "79120c5dbb",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_900f86db07",
+            "to": "aimath0001",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_900f86db07",
+            "to": "platform_464dac2a0b",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_900f86db07",
+            "to": "platform_b9e5c175ad",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_900f86db07",
+            "to": "platform_8632991421",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_900f86db07",
+            "to": "platform_884b16cef2",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_900f86db07",
+            "to": "platform_850e026ee3",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_8632991421",
+            "to": "79120c5dbb",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_8632991421",
+            "to": "aimath0001",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "platform_8632991421",
+            "to": "platform_464dac2a0b",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_8632991421",
+            "to": "platform_b9e5c175ad",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_8632991421",
+            "to": "platform_900f86db07",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_8632991421",
+            "to": "platform_884b16cef2",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "platform_8632991421",
+            "to": "platform_850e026ee3",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "platform_884b16cef2",
+            "to": "79120c5dbb",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_884b16cef2",
+            "to": "aimath0001",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "platform_884b16cef2",
+            "to": "platform_464dac2a0b",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_884b16cef2",
+            "to": "platform_b9e5c175ad",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_884b16cef2",
+            "to": "platform_900f86db07",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_884b16cef2",
+            "to": "platform_8632991421",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "platform_884b16cef2",
+            "to": "platform_850e026ee3",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "platform_850e026ee3",
+            "to": "79120c5dbb",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_850e026ee3",
+            "to": "aimath0001",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "platform_850e026ee3",
+            "to": "platform_464dac2a0b",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_850e026ee3",
+            "to": "platform_b9e5c175ad",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_850e026ee3",
+            "to": "platform_900f86db07",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_850e026ee3",
+            "to": "platform_8632991421",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "platform_850e026ee3",
+            "to": "platform_884b16cef2",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          }
+        ],
+        "cross_project_count": 8
+      },
+      "patch_required": false,
+      "capability_context": {
+        "capability_id": "fix_bug",
+        "recommended_tools": [
+          "read_file",
+          "search_code",
+          "patch_apply",
+          "run_tests"
+        ],
+        "success_conditions": [
+          "bug_reproduced_or_understood",
+          "patch_applied",
+          "verification_passed"
+        ]
+      },
+      "owner_department": "engineering_department",
+      "support_departments": [
+        "qa_department"
+      ],
+      "review_departments": [
+        "engineering_department",
+        "qa_department"
+      ],
+      "department_workers": {
+        "engineering_department": "coder",
+        "qa_department": "shell"
+      },
+      "worker": "reviewer",
+      "selection_reason": "role-default:reviewer->reviewer+team-owner:architecture_team->reviewer",
+      "worker_success_rate": 10.4628,
+      "skill_matches": [
+        "completed_1804",
+        "completed_1554"
+      ],
+      "execution_mode": "governance",
+      "execution_lane": "host-control",
+      "worker_vm_preferred": false,
+      "result": {
+        "summary": "Node bypassed because component coordination is disabled under lean_execution.",
+        "disabled_component": "coordination"
+      },
+      "completed_at": "2026-03-12T19:42:40.342390Z",
+      "last_disabled_task_id": "ba95c2866e0e44418e85aa5012cdb3bf"
+    },
+    {
+      "id": "project_sync_79120c5dbb",
+      "title": "Align project ToyOS Kernel for Support mainline branch delivery",
+      "role": "reviewer",
+      "prompt": "Update compatibility plan, interfaces, tests, and rollout steps for project ToyOS Kernel in support of: Support mainline branch delivery",
+      "dependencies": [
+        "cross_project_coordination"
+      ],
+      "status": "completed",
+      "task_id": null,
+      "team": "architecture_team",
+      "owned_modules": [],
+      "kind": "cross-project-work-package",
+      "module_focus": [
+        "tools.prepare_self_patch_branch",
+        "tools.codex_control",
+        "tools.branch_context",
+        "tools.rnd_delivery_pipeline",
+        "app.git_service",
+        "tools.scheduling_kernel",
+        "tools.self_patch_loop",
+        "tools.branch_workboard"
+      ],
+      "owner_teams": [
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.prepare_self_patch_branch",
+          "tools.codex_control",
+          "tools.branch_context",
+          "tools.rnd_delivery_pipeline",
+          "app.git_service",
+          "tools.scheduling_kernel",
+          "tools.self_patch_loop",
+          "tools.branch_workboard"
+        ],
+        "owner_teams": [
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.prepare_self_patch_branch",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.codex_control",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.branch_context",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.rnd_delivery_pipeline",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "app.git_service",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.scheduling_kernel",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.self_patch_loop",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.branch_workboard",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "dependency_impact": {
+        "updated_at": "2026-03-12T18:51:00.826405Z",
+        "request": "Support mainline branch delivery",
+        "focus_modules": [
+          "tools.prepare_self_patch_branch",
+          "tools.codex_control",
+          "tools.branch_context",
+          "tools.rnd_delivery_pipeline",
+          "app.git_service",
+          "tools.scheduling_kernel",
+          "tools.self_patch_loop",
+          "tools.branch_workboard"
+        ],
+        "impacted_modules": [
+          {
+            "module": "app.git_service",
+            "depth": 0,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "tools.branch_context",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.branch_workboard",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "tools.codex_control",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.prepare_self_patch_branch",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.rnd_delivery_pipeline",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "tools.scheduling_kernel",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.self_patch_loop",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "app.context_service",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "app.orchestrator",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.automation_lab",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.brain_loop",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "tools.company_os",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.decision_engine",
+            "depth": 1,
+            "owner_team": "architecture_team",
+            "layer": "task_graph_planner",
+            "dependents": 1
+          },
+          {
+            "module": "tools.meta_factory_control",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "architecture_engine",
+            "dependents": 3
+          },
+          {
+            "module": "app.main",
+            "depth": 2,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "runtime.executor",
+            "depth": 2,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.factory_daemon",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.platform_verification_sweep",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "verification",
+            "dependents": 1
+          },
+          {
+            "module": "tools.self_model",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.verification_engine",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "verification",
+            "dependents": 4
+          }
+        ],
+        "affected_teams": [
+          "architecture_team",
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "affected_layers": [
+          "architecture_engine",
+          "task_graph_planner",
+          "unclassified",
+          "verification"
+        ],
+        "verification_scope": [
+          "app.context_service",
+          "app.git_service",
+          "app.main",
+          "app.orchestrator",
+          "runtime.executor",
+          "tools.automation_lab",
+          "tools.brain_loop",
+          "tools.branch_context",
+          "tools.branch_workboard",
+          "tools.company_os",
+          "tools.decision_engine",
+          "tools.meta_factory_control",
+          "tools.platform_verification_sweep",
+          "tools.rnd_delivery_pipeline",
+          "tools.scheduling_kernel",
+          "tools.self_model",
+          "tools.verification_engine"
+        ]
+      },
+      "project_impact": {
+        "project": {
+          "project_id": "79120c5dbb",
+          "name": "ToyOS Kernel",
+          "type": "project",
+          "repo_path": "D:\\codex\\generated\\toy-os-demo",
+          "domains": [
+            "kernel"
+          ]
+        },
+        "all": {
+          "updated_at": "2026-03-12T18:51:00.831207Z",
+          "request": "Support mainline branch delivery",
+          "query_domains": [
+            "kernel"
+          ],
+          "related_projects": [
+            {
+              "project_id": "79120c5dbb",
+              "name": "ToyOS Kernel",
+              "type": "project",
+              "repo_path": "D:\\codex\\generated\\toy-os-demo",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "project_id": "aimath0001",
+              "name": "AI Math Foundations Workspace",
+              "type": "project",
+              "repo_path": "D:\\人工智能数学基础",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "project_id": "platform_464dac2a0b",
+              "name": "Optimize task scheduler from agent experience",
+              "type": "platform",
+              "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\optimize-task-scheduler-from-agent-experience",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "project_id": "platform_b9e5c175ad",
+              "name": "Continue ToyOS kernel branch work with mainline context reuse",
+              "type": "platform",
+              "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\continue-toyos-kernel-branch-work-with-mainline-context-reuse",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "project_id": "platform_900f86db07",
+              "name": "Continue ToyOS kernel branch work with mainline context reuse",
+              "type": "platform",
+              "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\continue-toyos-kernel-branch-work-with-mainline-context-reuse",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "project_id": "platform_8632991421",
+              "name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+              "type": "platform",
+              "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "project_id": "platform_884b16cef2",
+              "name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+              "type": "platform",
+              "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "project_id": "platform_850e026ee3",
+              "name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+              "type": "platform",
+              "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+              "domains": [
+                "kernel"
+              ]
+            }
+          ],
+          "cross_project_edges": [
+            {
+              "from": "79120c5dbb",
+              "to": "aimath0001",
+              "kind": "domain-overlap",
+              "domains": [
+                "factory",
+                "kernel"
+              ]
+            },
+            {
+              "from": "79120c5dbb",
+              "to": "platform_464dac2a0b",
+              "kind": "domain-overlap",
+              "domains": [
+                "factory",
+                "kernel"
+              ]
+            },
+            {
+              "from": "79120c5dbb",
+              "to": "platform_b9e5c175ad",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "79120c5dbb",
+              "to": "platform_900f86db07",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "79120c5dbb",
+              "to": "platform_8632991421",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "79120c5dbb",
+              "to": "platform_884b16cef2",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "79120c5dbb",
+              "to": "platform_850e026ee3",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "aimath0001",
+              "to": "79120c5dbb",
+              "kind": "domain-overlap",
+              "domains": [
+                "factory",
+                "kernel"
+              ]
+            },
+            {
+              "from": "aimath0001",
+              "to": "platform_464dac2a0b",
+              "kind": "domain-overlap",
+              "domains": [
+                "factory",
+                "kernel"
+              ]
+            },
+            {
+              "from": "aimath0001",
+              "to": "platform_b9e5c175ad",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "aimath0001",
+              "to": "platform_900f86db07",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "aimath0001",
+              "to": "platform_8632991421",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel",
+                "math"
+              ]
+            },
+            {
+              "from": "aimath0001",
+              "to": "platform_884b16cef2",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel",
+                "math"
+              ]
+            },
+            {
+              "from": "aimath0001",
+              "to": "platform_850e026ee3",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel",
+                "math"
+              ]
+            },
+            {
+              "from": "platform_464dac2a0b",
+              "to": "79120c5dbb",
+              "kind": "domain-overlap",
+              "domains": [
+                "factory",
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_464dac2a0b",
+              "to": "aimath0001",
+              "kind": "domain-overlap",
+              "domains": [
+                "factory",
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_464dac2a0b",
+              "to": "platform_b9e5c175ad",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_464dac2a0b",
+              "to": "platform_900f86db07",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_464dac2a0b",
+              "to": "platform_8632991421",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_464dac2a0b",
+              "to": "platform_884b16cef2",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_464dac2a0b",
+              "to": "platform_850e026ee3",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_b9e5c175ad",
+              "to": "79120c5dbb",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_b9e5c175ad",
+              "to": "aimath0001",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_b9e5c175ad",
+              "to": "platform_464dac2a0b",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_b9e5c175ad",
+              "to": "platform_900f86db07",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_b9e5c175ad",
+              "to": "platform_8632991421",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_b9e5c175ad",
+              "to": "platform_884b16cef2",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_b9e5c175ad",
+              "to": "platform_850e026ee3",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_900f86db07",
+              "to": "79120c5dbb",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_900f86db07",
+              "to": "aimath0001",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_900f86db07",
+              "to": "platform_464dac2a0b",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_900f86db07",
+              "to": "platform_b9e5c175ad",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_900f86db07",
+              "to": "platform_8632991421",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_900f86db07",
+              "to": "platform_884b16cef2",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_900f86db07",
+              "to": "platform_850e026ee3",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_8632991421",
+              "to": "79120c5dbb",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_8632991421",
+              "to": "aimath0001",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel",
+                "math"
+              ]
+            },
+            {
+              "from": "platform_8632991421",
+              "to": "platform_464dac2a0b",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_8632991421",
+              "to": "platform_b9e5c175ad",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_8632991421",
+              "to": "platform_900f86db07",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_8632991421",
+              "to": "platform_884b16cef2",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel",
+                "math"
+              ]
+            },
+            {
+              "from": "platform_8632991421",
+              "to": "platform_850e026ee3",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel",
+                "math"
+              ]
+            },
+            {
+              "from": "platform_884b16cef2",
+              "to": "79120c5dbb",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_884b16cef2",
+              "to": "aimath0001",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel",
+                "math"
+              ]
+            },
+            {
+              "from": "platform_884b16cef2",
+              "to": "platform_464dac2a0b",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_884b16cef2",
+              "to": "platform_b9e5c175ad",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_884b16cef2",
+              "to": "platform_900f86db07",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_884b16cef2",
+              "to": "platform_8632991421",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel",
+                "math"
+              ]
+            },
+            {
+              "from": "platform_884b16cef2",
+              "to": "platform_850e026ee3",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel",
+                "math"
+              ]
+            },
+            {
+              "from": "platform_850e026ee3",
+              "to": "79120c5dbb",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_850e026ee3",
+              "to": "aimath0001",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel",
+                "math"
+              ]
+            },
+            {
+              "from": "platform_850e026ee3",
+              "to": "platform_464dac2a0b",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_850e026ee3",
+              "to": "platform_b9e5c175ad",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_850e026ee3",
+              "to": "platform_900f86db07",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_850e026ee3",
+              "to": "platform_8632991421",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel",
+                "math"
+              ]
+            },
+            {
+              "from": "platform_850e026ee3",
+              "to": "platform_884b16cef2",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel",
+                "math"
+              ]
+            }
+          ],
+          "cross_project_count": 8
+        }
+      },
+      "owner_department": "engineering_department",
+      "support_departments": [
+        "qa_department"
+      ],
+      "review_departments": [
+        "engineering_department",
+        "qa_department"
+      ],
+      "patch_required": false,
+      "capability_context": {
+        "capability_id": "fix_bug",
+        "recommended_tools": [
+          "read_file",
+          "search_code",
+          "patch_apply",
+          "run_tests"
+        ],
+        "success_conditions": [
+          "bug_reproduced_or_understood",
+          "patch_applied",
+          "verification_passed"
+        ]
+      },
+      "department_workers": {
+        "engineering_department": "coder",
+        "qa_department": "shell"
+      },
+      "worker": "reviewer",
+      "selection_reason": "role-default:reviewer->reviewer+team-owner:architecture_team->reviewer",
+      "worker_success_rate": 9.8918,
+      "skill_matches": [
+        "completed_1554",
+        "completed_1804"
+      ],
+      "execution_mode": "governance",
+      "execution_lane": "host-control",
+      "worker_vm_preferred": false,
+      "result": {
+        "summary": "Node bypassed because component coordination is disabled under lean_execution.",
+        "disabled_component": "coordination"
+      },
+      "completed_at": "2026-03-12T19:42:40.342390Z"
+    },
+    {
+      "id": "project_sync_aimath0001",
+      "title": "Align project AI Math Foundations Workspace for Support mainline branch delivery",
+      "role": "reviewer",
+      "prompt": "Update compatibility plan, interfaces, tests, and rollout steps for project AI Math Foundations Workspace in support of: Support mainline branch delivery",
+      "dependencies": [
+        "cross_project_coordination"
+      ],
+      "status": "completed",
+      "task_id": null,
+      "team": "architecture_team",
+      "owned_modules": [],
+      "kind": "cross-project-work-package",
+      "module_focus": [
+        "tools.prepare_self_patch_branch",
+        "tools.codex_control",
+        "tools.branch_context",
+        "tools.rnd_delivery_pipeline",
+        "app.git_service",
+        "tools.scheduling_kernel",
+        "tools.self_patch_loop",
+        "tools.branch_workboard"
+      ],
+      "owner_teams": [
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.prepare_self_patch_branch",
+          "tools.codex_control",
+          "tools.branch_context",
+          "tools.rnd_delivery_pipeline",
+          "app.git_service",
+          "tools.scheduling_kernel",
+          "tools.self_patch_loop",
+          "tools.branch_workboard"
+        ],
+        "owner_teams": [
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.prepare_self_patch_branch",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.codex_control",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.branch_context",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.rnd_delivery_pipeline",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "app.git_service",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.scheduling_kernel",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.self_patch_loop",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.branch_workboard",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "dependency_impact": {
+        "updated_at": "2026-03-12T18:51:00.826405Z",
+        "request": "Support mainline branch delivery",
+        "focus_modules": [
+          "tools.prepare_self_patch_branch",
+          "tools.codex_control",
+          "tools.branch_context",
+          "tools.rnd_delivery_pipeline",
+          "app.git_service",
+          "tools.scheduling_kernel",
+          "tools.self_patch_loop",
+          "tools.branch_workboard"
+        ],
+        "impacted_modules": [
+          {
+            "module": "app.git_service",
+            "depth": 0,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "tools.branch_context",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.branch_workboard",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "tools.codex_control",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.prepare_self_patch_branch",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.rnd_delivery_pipeline",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "tools.scheduling_kernel",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.self_patch_loop",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "app.context_service",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "app.orchestrator",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.automation_lab",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.brain_loop",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "tools.company_os",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.decision_engine",
+            "depth": 1,
+            "owner_team": "architecture_team",
+            "layer": "task_graph_planner",
+            "dependents": 1
+          },
+          {
+            "module": "tools.meta_factory_control",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "architecture_engine",
+            "dependents": 3
+          },
+          {
+            "module": "app.main",
+            "depth": 2,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "runtime.executor",
+            "depth": 2,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.factory_daemon",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.platform_verification_sweep",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "verification",
+            "dependents": 1
+          },
+          {
+            "module": "tools.self_model",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.verification_engine",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "verification",
+            "dependents": 4
+          }
+        ],
+        "affected_teams": [
+          "architecture_team",
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "affected_layers": [
+          "architecture_engine",
+          "task_graph_planner",
+          "unclassified",
+          "verification"
+        ],
+        "verification_scope": [
+          "app.context_service",
+          "app.git_service",
+          "app.main",
+          "app.orchestrator",
+          "runtime.executor",
+          "tools.automation_lab",
+          "tools.brain_loop",
+          "tools.branch_context",
+          "tools.branch_workboard",
+          "tools.company_os",
+          "tools.decision_engine",
+          "tools.meta_factory_control",
+          "tools.platform_verification_sweep",
+          "tools.rnd_delivery_pipeline",
+          "tools.scheduling_kernel",
+          "tools.self_model",
+          "tools.verification_engine"
+        ]
+      },
+      "project_impact": {
+        "project": {
+          "project_id": "aimath0001",
+          "name": "AI Math Foundations Workspace",
+          "type": "project",
+          "repo_path": "D:\\人工智能数学基础",
+          "domains": [
+            "kernel"
+          ]
+        },
+        "all": {
+          "updated_at": "2026-03-12T18:51:00.831207Z",
+          "request": "Support mainline branch delivery",
+          "query_domains": [
+            "kernel"
+          ],
+          "related_projects": [
+            {
+              "project_id": "79120c5dbb",
+              "name": "ToyOS Kernel",
+              "type": "project",
+              "repo_path": "D:\\codex\\generated\\toy-os-demo",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "project_id": "aimath0001",
+              "name": "AI Math Foundations Workspace",
+              "type": "project",
+              "repo_path": "D:\\人工智能数学基础",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "project_id": "platform_464dac2a0b",
+              "name": "Optimize task scheduler from agent experience",
+              "type": "platform",
+              "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\optimize-task-scheduler-from-agent-experience",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "project_id": "platform_b9e5c175ad",
+              "name": "Continue ToyOS kernel branch work with mainline context reuse",
+              "type": "platform",
+              "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\continue-toyos-kernel-branch-work-with-mainline-context-reuse",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "project_id": "platform_900f86db07",
+              "name": "Continue ToyOS kernel branch work with mainline context reuse",
+              "type": "platform",
+              "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\continue-toyos-kernel-branch-work-with-mainline-context-reuse",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "project_id": "platform_8632991421",
+              "name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+              "type": "platform",
+              "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "project_id": "platform_884b16cef2",
+              "name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+              "type": "platform",
+              "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "project_id": "platform_850e026ee3",
+              "name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+              "type": "platform",
+              "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+              "domains": [
+                "kernel"
+              ]
+            }
+          ],
+          "cross_project_edges": [
+            {
+              "from": "79120c5dbb",
+              "to": "aimath0001",
+              "kind": "domain-overlap",
+              "domains": [
+                "factory",
+                "kernel"
+              ]
+            },
+            {
+              "from": "79120c5dbb",
+              "to": "platform_464dac2a0b",
+              "kind": "domain-overlap",
+              "domains": [
+                "factory",
+                "kernel"
+              ]
+            },
+            {
+              "from": "79120c5dbb",
+              "to": "platform_b9e5c175ad",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "79120c5dbb",
+              "to": "platform_900f86db07",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "79120c5dbb",
+              "to": "platform_8632991421",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "79120c5dbb",
+              "to": "platform_884b16cef2",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "79120c5dbb",
+              "to": "platform_850e026ee3",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "aimath0001",
+              "to": "79120c5dbb",
+              "kind": "domain-overlap",
+              "domains": [
+                "factory",
+                "kernel"
+              ]
+            },
+            {
+              "from": "aimath0001",
+              "to": "platform_464dac2a0b",
+              "kind": "domain-overlap",
+              "domains": [
+                "factory",
+                "kernel"
+              ]
+            },
+            {
+              "from": "aimath0001",
+              "to": "platform_b9e5c175ad",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "aimath0001",
+              "to": "platform_900f86db07",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "aimath0001",
+              "to": "platform_8632991421",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel",
+                "math"
+              ]
+            },
+            {
+              "from": "aimath0001",
+              "to": "platform_884b16cef2",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel",
+                "math"
+              ]
+            },
+            {
+              "from": "aimath0001",
+              "to": "platform_850e026ee3",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel",
+                "math"
+              ]
+            },
+            {
+              "from": "platform_464dac2a0b",
+              "to": "79120c5dbb",
+              "kind": "domain-overlap",
+              "domains": [
+                "factory",
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_464dac2a0b",
+              "to": "aimath0001",
+              "kind": "domain-overlap",
+              "domains": [
+                "factory",
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_464dac2a0b",
+              "to": "platform_b9e5c175ad",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_464dac2a0b",
+              "to": "platform_900f86db07",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_464dac2a0b",
+              "to": "platform_8632991421",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_464dac2a0b",
+              "to": "platform_884b16cef2",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_464dac2a0b",
+              "to": "platform_850e026ee3",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_b9e5c175ad",
+              "to": "79120c5dbb",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_b9e5c175ad",
+              "to": "aimath0001",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_b9e5c175ad",
+              "to": "platform_464dac2a0b",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_b9e5c175ad",
+              "to": "platform_900f86db07",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_b9e5c175ad",
+              "to": "platform_8632991421",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_b9e5c175ad",
+              "to": "platform_884b16cef2",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_b9e5c175ad",
+              "to": "platform_850e026ee3",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_900f86db07",
+              "to": "79120c5dbb",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_900f86db07",
+              "to": "aimath0001",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_900f86db07",
+              "to": "platform_464dac2a0b",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_900f86db07",
+              "to": "platform_b9e5c175ad",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_900f86db07",
+              "to": "platform_8632991421",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_900f86db07",
+              "to": "platform_884b16cef2",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_900f86db07",
+              "to": "platform_850e026ee3",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_8632991421",
+              "to": "79120c5dbb",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_8632991421",
+              "to": "aimath0001",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel",
+                "math"
+              ]
+            },
+            {
+              "from": "platform_8632991421",
+              "to": "platform_464dac2a0b",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_8632991421",
+              "to": "platform_b9e5c175ad",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_8632991421",
+              "to": "platform_900f86db07",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_8632991421",
+              "to": "platform_884b16cef2",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel",
+                "math"
+              ]
+            },
+            {
+              "from": "platform_8632991421",
+              "to": "platform_850e026ee3",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel",
+                "math"
+              ]
+            },
+            {
+              "from": "platform_884b16cef2",
+              "to": "79120c5dbb",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_884b16cef2",
+              "to": "aimath0001",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel",
+                "math"
+              ]
+            },
+            {
+              "from": "platform_884b16cef2",
+              "to": "platform_464dac2a0b",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_884b16cef2",
+              "to": "platform_b9e5c175ad",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_884b16cef2",
+              "to": "platform_900f86db07",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_884b16cef2",
+              "to": "platform_8632991421",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel",
+                "math"
+              ]
+            },
+            {
+              "from": "platform_884b16cef2",
+              "to": "platform_850e026ee3",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel",
+                "math"
+              ]
+            },
+            {
+              "from": "platform_850e026ee3",
+              "to": "79120c5dbb",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_850e026ee3",
+              "to": "aimath0001",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel",
+                "math"
+              ]
+            },
+            {
+              "from": "platform_850e026ee3",
+              "to": "platform_464dac2a0b",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_850e026ee3",
+              "to": "platform_b9e5c175ad",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_850e026ee3",
+              "to": "platform_900f86db07",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_850e026ee3",
+              "to": "platform_8632991421",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel",
+                "math"
+              ]
+            },
+            {
+              "from": "platform_850e026ee3",
+              "to": "platform_884b16cef2",
+              "kind": "domain-overlap",
+              "domains": [
+                "kernel",
+                "math"
+              ]
+            }
+          ],
+          "cross_project_count": 8
+        }
+      },
+      "owner_department": "engineering_department",
+      "support_departments": [
+        "qa_department"
+      ],
+      "review_departments": [
+        "engineering_department",
+        "qa_department"
+      ],
+      "patch_required": false,
+      "capability_context": {
+        "capability_id": "fix_bug",
+        "recommended_tools": [
+          "read_file",
+          "search_code",
+          "patch_apply",
+          "run_tests"
+        ],
+        "success_conditions": [
+          "bug_reproduced_or_understood",
+          "patch_applied",
+          "verification_passed"
+        ]
+      },
+      "department_workers": {
+        "engineering_department": "coder",
+        "qa_department": "shell"
+      },
+      "result": {
+        "summary": "Node bypassed because component coordination is disabled under lean_execution.",
+        "disabled_component": "coordination"
+      },
+      "completed_at": "2026-03-12T19:42:40.342390Z"
+    },
+    {
+      "id": "module_tools_prepare_self_patch_branch",
+      "title": "Implement module tools.prepare_self_patch_branch",
+      "role": "ops",
+      "prompt": "Implement or refine module tools.prepare_self_patch_branch for the current engineering goal.",
+      "dependencies": [
+        "engineering_plan"
+      ],
+      "status": "completed",
+      "task_id": null,
+      "team": "infrastructure_team",
+      "owned_modules": [
+        "tools.prepare_self_patch_branch"
+      ],
+      "kind": "module-implementation",
+      "module_focus": [
+        "tools.prepare_self_patch_branch"
+      ],
+      "owner_teams": [
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.prepare_self_patch_branch"
+        ],
+        "owner_teams": [
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.prepare_self_patch_branch",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "owner": "ops",
+      "layer": "unclassified",
+      "owner_department": "engineering_department",
+      "support_departments": [
+        "qa_department"
+      ],
+      "review_departments": [
+        "engineering_department",
+        "qa_department"
+      ],
+      "capability_context": {
+        "capability_id": "fix_bug",
+        "recommended_tools": [
+          "read_file",
+          "search_code",
+          "patch_apply",
+          "run_tests"
+        ],
+        "success_conditions": [
+          "bug_reproduced_or_understood",
+          "patch_applied",
+          "verification_passed"
+        ]
+      },
+      "department_workers": {
+        "engineering_department": "coder",
+        "qa_department": "shell"
+      },
+      "worker": "docker",
+      "selection_reason": "role-default:ops->docker+team-owner:infrastructure_team->docker",
+      "worker_success_rate": 0.075,
+      "skill_matches": [
+        "completed_1554",
+        "completed_1804",
+        "task_12345678"
+      ],
+      "execution_mode": "production",
+      "execution_lane": "host-control",
+      "worker_vm_preferred": false
+    },
+    {
+      "id": "module_tools_codex_control",
+      "title": "Implement module tools.codex_control",
+      "role": "ops",
+      "prompt": "Implement or refine module tools.codex_control for the current engineering goal.",
+      "dependencies": [
+        "engineering_plan"
+      ],
+      "status": "completed",
+      "task_id": null,
+      "team": "infrastructure_team",
+      "owned_modules": [
+        "tools.codex_control"
+      ],
+      "kind": "module-implementation",
+      "module_focus": [
+        "tools.codex_control"
+      ],
+      "owner_teams": [
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.codex_control"
+        ],
+        "owner_teams": [
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.codex_control",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "owner": "ops",
+      "layer": "unclassified",
+      "owner_department": "engineering_department",
+      "support_departments": [
+        "qa_department"
+      ],
+      "review_departments": [
+        "engineering_department",
+        "qa_department"
+      ],
+      "capability_context": {
+        "capability_id": "fix_bug",
+        "recommended_tools": [
+          "read_file",
+          "search_code",
+          "patch_apply",
+          "run_tests"
+        ],
+        "success_conditions": [
+          "bug_reproduced_or_understood",
+          "patch_applied",
+          "verification_passed"
+        ]
+      },
+      "department_workers": {
+        "engineering_department": "coder",
+        "qa_department": "shell"
+      },
+      "worker": "docker",
+      "selection_reason": "role-default:ops->docker+team-owner:infrastructure_team->docker",
+      "worker_success_rate": 0.075,
+      "skill_matches": [
+        "completed_1554",
+        "completed_1804",
+        "task_12345678"
+      ],
+      "execution_mode": "production",
+      "execution_lane": "host-control",
+      "worker_vm_preferred": false
+    },
+    {
+      "id": "module_tools_branch_context",
+      "title": "Implement module tools.branch_context",
+      "role": "ops",
+      "prompt": "Implement or refine module tools.branch_context for the current engineering goal.",
+      "dependencies": [
+        "engineering_plan"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "team": "infrastructure_team",
+      "owned_modules": [
+        "tools.branch_context"
+      ],
+      "kind": "module-implementation",
+      "module_focus": [
+        "tools.branch_context"
+      ],
+      "owner_teams": [
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.branch_context"
+        ],
+        "owner_teams": [
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.branch_context",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "owner": "ops",
+      "layer": "unclassified",
+      "owner_department": "engineering_department",
+      "support_departments": [
+        "qa_department"
+      ],
+      "review_departments": [
+        "engineering_department",
+        "qa_department"
+      ],
+      "capability_context": {
+        "capability_id": "fix_bug",
+        "recommended_tools": [
+          "read_file",
+          "search_code",
+          "patch_apply",
+          "run_tests"
+        ],
+        "success_conditions": [
+          "bug_reproduced_or_understood",
+          "patch_applied",
+          "verification_passed"
+        ]
+      },
+      "department_workers": {
+        "engineering_department": "coder",
+        "qa_department": "shell"
+      },
+      "worker": "docker",
+      "selection_reason": "role-default:ops->docker+team-owner:infrastructure_team->docker",
+      "worker_success_rate": 0.075,
+      "skill_matches": [
+        "completed_1554",
+        "completed_1804",
+        "task_12345678"
+      ],
+      "execution_mode": "production",
+      "execution_lane": "host-control",
+      "worker_vm_preferred": false
+    },
+    {
+      "id": "module_tools_rnd_delivery_pipeline",
+      "title": "Implement module tools.rnd_delivery_pipeline",
+      "role": "ops",
+      "prompt": "Implement or refine module tools.rnd_delivery_pipeline for the current engineering goal.",
+      "dependencies": [
+        "engineering_plan"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "team": "infrastructure_team",
+      "owned_modules": [
+        "tools.rnd_delivery_pipeline"
+      ],
+      "kind": "module-implementation",
+      "module_focus": [
+        "tools.rnd_delivery_pipeline"
+      ],
+      "owner_teams": [
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.rnd_delivery_pipeline"
+        ],
+        "owner_teams": [
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.rnd_delivery_pipeline",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "owner": "ops",
+      "layer": "unclassified",
+      "owner_department": "engineering_department",
+      "support_departments": [
+        "qa_department"
+      ],
+      "review_departments": [
+        "engineering_department",
+        "qa_department"
+      ],
+      "capability_context": {
+        "capability_id": "fix_bug",
+        "recommended_tools": [
+          "read_file",
+          "search_code",
+          "patch_apply",
+          "run_tests"
+        ],
+        "success_conditions": [
+          "bug_reproduced_or_understood",
+          "patch_applied",
+          "verification_passed"
+        ]
+      },
+      "department_workers": {
+        "engineering_department": "coder",
+        "qa_department": "shell"
+      }
+    },
+    {
+      "id": "module_app_git_service",
+      "title": "Implement module app.git_service",
+      "role": "coder",
+      "prompt": "Implement or refine module app.git_service for the current engineering goal.",
+      "dependencies": [
+        "engineering_plan"
+      ],
+      "status": "completed",
+      "task_id": null,
+      "team": "backend_team",
+      "owned_modules": [
+        "app.git_service"
+      ],
+      "kind": "module-implementation",
+      "module_focus": [
+        "app.git_service"
+      ],
+      "owner_teams": [
+        "backend_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "app.git_service"
+        ],
+        "owner_teams": [
+          "backend_team"
+        ],
+        "ownership": [
+          {
+            "module": "app.git_service",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "owner": "coder",
+      "layer": "unclassified",
+      "owner_department": "engineering_department",
+      "support_departments": [
+        "qa_department"
+      ],
+      "review_departments": [
+        "engineering_department",
+        "qa_department"
+      ],
+      "capability_context": {
+        "capability_id": "fix_bug",
+        "recommended_tools": [
+          "read_file",
+          "search_code",
+          "patch_apply",
+          "run_tests"
+        ],
+        "success_conditions": [
+          "bug_reproduced_or_understood",
+          "patch_applied",
+          "verification_passed"
+        ]
+      },
+      "department_workers": {
+        "engineering_department": "coder",
+        "qa_department": "shell"
+      }
+    },
+    {
+      "id": "module_tools_scheduling_kernel",
+      "title": "Implement module tools.scheduling_kernel",
+      "role": "ops",
+      "prompt": "Implement or refine module tools.scheduling_kernel for the current engineering goal.",
+      "dependencies": [
+        "engineering_plan"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "team": "infrastructure_team",
+      "owned_modules": [
+        "tools.scheduling_kernel"
+      ],
+      "kind": "module-implementation",
+      "module_focus": [
+        "tools.scheduling_kernel"
+      ],
+      "owner_teams": [
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.scheduling_kernel"
+        ],
+        "owner_teams": [
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.scheduling_kernel",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "owner": "ops",
+      "layer": "unclassified",
+      "owner_department": "engineering_department",
+      "support_departments": [
+        "qa_department"
+      ],
+      "review_departments": [
+        "engineering_department",
+        "qa_department"
+      ],
+      "capability_context": {
+        "capability_id": "fix_bug",
+        "recommended_tools": [
+          "read_file",
+          "search_code",
+          "patch_apply",
+          "run_tests"
+        ],
+        "success_conditions": [
+          "bug_reproduced_or_understood",
+          "patch_applied",
+          "verification_passed"
+        ]
+      },
+      "department_workers": {
+        "engineering_department": "coder",
+        "qa_department": "shell"
+      }
+    },
+    {
+      "id": "module_tools_self_patch_loop",
+      "title": "Implement module tools.self_patch_loop",
+      "role": "ops",
+      "prompt": "Implement or refine module tools.self_patch_loop for the current engineering goal.",
+      "dependencies": [
+        "engineering_plan"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "team": "infrastructure_team",
+      "owned_modules": [
+        "tools.self_patch_loop"
+      ],
+      "kind": "module-implementation",
+      "module_focus": [
+        "tools.self_patch_loop"
+      ],
+      "owner_teams": [
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.self_patch_loop"
+        ],
+        "owner_teams": [
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.self_patch_loop",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "owner": "ops",
+      "layer": "unclassified",
+      "owner_department": "engineering_department",
+      "support_departments": [
+        "qa_department"
+      ],
+      "review_departments": [
+        "engineering_department",
+        "qa_department"
+      ],
+      "capability_context": {
+        "capability_id": "fix_bug",
+        "recommended_tools": [
+          "read_file",
+          "search_code",
+          "patch_apply",
+          "run_tests"
+        ],
+        "success_conditions": [
+          "bug_reproduced_or_understood",
+          "patch_applied",
+          "verification_passed"
+        ]
+      },
+      "department_workers": {
+        "engineering_department": "coder",
+        "qa_department": "shell"
+      }
+    },
+    {
+      "id": "module_tools_branch_workboard",
+      "title": "Implement module tools.branch_workboard",
+      "role": "ops",
+      "prompt": "Implement or refine module tools.branch_workboard for the current engineering goal.",
+      "dependencies": [
+        "module_tools_branch_context"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "team": "infrastructure_team",
+      "owned_modules": [
+        "tools.branch_workboard"
+      ],
+      "kind": "module-implementation",
+      "module_focus": [
+        "tools.branch_workboard"
+      ],
+      "owner_teams": [
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.branch_workboard"
+        ],
+        "owner_teams": [
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.branch_workboard",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "owner": "ops",
+      "layer": "unclassified",
+      "owner_department": "engineering_department",
+      "support_departments": [
+        "qa_department"
+      ],
+      "review_departments": [
+        "engineering_department",
+        "qa_department"
+      ],
+      "capability_context": {
+        "capability_id": "fix_bug",
+        "recommended_tools": [
+          "read_file",
+          "search_code",
+          "patch_apply",
+          "run_tests"
+        ],
+        "success_conditions": [
+          "bug_reproduced_or_understood",
+          "patch_applied",
+          "verification_passed"
+        ]
+      },
+      "department_workers": {
+        "engineering_department": "coder",
+        "qa_department": "shell"
+      }
+    },
+    {
+      "id": "verification_gate",
+      "title": "Run verification and architecture validation for Support mainline branch delivery",
+      "role": "tester",
+      "prompt": "Run CI, tests, and architecture validation for: Support mainline branch delivery",
+      "dependencies": [
+        "module_tools_prepare_self_patch_branch",
+        "module_tools_codex_control",
+        "module_tools_branch_context",
+        "module_tools_rnd_delivery_pipeline",
+        "module_app_git_service",
+        "module_tools_scheduling_kernel",
+        "module_tools_self_patch_loop",
+        "module_tools_branch_workboard",
+        "cross_project_coordination",
+        "project_sync_79120c5dbb",
+        "project_sync_aimath0001"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "team": "testing_team",
+      "owned_modules": [
+        "tools.prepare_self_patch_branch",
+        "tools.codex_control",
+        "tools.branch_context",
+        "tools.rnd_delivery_pipeline",
+        "app.git_service",
+        "tools.scheduling_kernel",
+        "tools.self_patch_loop",
+        "tools.branch_workboard"
+      ],
+      "kind": "verification",
+      "module_focus": [
+        "tools.prepare_self_patch_branch",
+        "tools.codex_control",
+        "tools.branch_context",
+        "tools.rnd_delivery_pipeline",
+        "app.git_service",
+        "tools.scheduling_kernel",
+        "tools.self_patch_loop",
+        "tools.branch_workboard"
+      ],
+      "owner_teams": [
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.prepare_self_patch_branch",
+          "tools.codex_control",
+          "tools.branch_context",
+          "tools.rnd_delivery_pipeline",
+          "app.git_service",
+          "tools.scheduling_kernel",
+          "tools.self_patch_loop",
+          "tools.branch_workboard"
+        ],
+        "owner_teams": [
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.prepare_self_patch_branch",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.codex_control",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.branch_context",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.rnd_delivery_pipeline",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "app.git_service",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.scheduling_kernel",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.self_patch_loop",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.branch_workboard",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "dependency_impact": {
+        "updated_at": "2026-03-12T18:51:00.826405Z",
+        "request": "Support mainline branch delivery",
+        "focus_modules": [
+          "tools.prepare_self_patch_branch",
+          "tools.codex_control",
+          "tools.branch_context",
+          "tools.rnd_delivery_pipeline",
+          "app.git_service",
+          "tools.scheduling_kernel",
+          "tools.self_patch_loop",
+          "tools.branch_workboard"
+        ],
+        "impacted_modules": [
+          {
+            "module": "app.git_service",
+            "depth": 0,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "tools.branch_context",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.branch_workboard",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "tools.codex_control",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.prepare_self_patch_branch",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.rnd_delivery_pipeline",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "tools.scheduling_kernel",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.self_patch_loop",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "app.context_service",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "app.orchestrator",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.automation_lab",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.brain_loop",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "tools.company_os",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.decision_engine",
+            "depth": 1,
+            "owner_team": "architecture_team",
+            "layer": "task_graph_planner",
+            "dependents": 1
+          },
+          {
+            "module": "tools.meta_factory_control",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "architecture_engine",
+            "dependents": 3
+          },
+          {
+            "module": "app.main",
+            "depth": 2,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "runtime.executor",
+            "depth": 2,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.factory_daemon",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.platform_verification_sweep",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "verification",
+            "dependents": 1
+          },
+          {
+            "module": "tools.self_model",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.verification_engine",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "verification",
+            "dependents": 4
+          }
+        ],
+        "affected_teams": [
+          "architecture_team",
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "affected_layers": [
+          "architecture_engine",
+          "task_graph_planner",
+          "unclassified",
+          "verification"
+        ],
+        "verification_scope": [
+          "app.context_service",
+          "app.git_service",
+          "app.main",
+          "app.orchestrator",
+          "runtime.executor",
+          "tools.automation_lab",
+          "tools.brain_loop",
+          "tools.branch_context",
+          "tools.branch_workboard",
+          "tools.company_os",
+          "tools.decision_engine",
+          "tools.meta_factory_control",
+          "tools.platform_verification_sweep",
+          "tools.rnd_delivery_pipeline",
+          "tools.scheduling_kernel",
+          "tools.self_model",
+          "tools.verification_engine"
+        ]
+      },
+      "project_impact": {
+        "updated_at": "2026-03-12T18:51:00.831207Z",
+        "request": "Support mainline branch delivery",
+        "query_domains": [
+          "kernel"
+        ],
+        "related_projects": [
+          {
+            "project_id": "79120c5dbb",
+            "name": "ToyOS Kernel",
+            "type": "project",
+            "repo_path": "D:\\codex\\generated\\toy-os-demo",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "project_id": "aimath0001",
+            "name": "AI Math Foundations Workspace",
+            "type": "project",
+            "repo_path": "D:\\人工智能数学基础",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "project_id": "platform_464dac2a0b",
+            "name": "Optimize task scheduler from agent experience",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\optimize-task-scheduler-from-agent-experience",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "project_id": "platform_b9e5c175ad",
+            "name": "Continue ToyOS kernel branch work with mainline context reuse",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\continue-toyos-kernel-branch-work-with-mainline-context-reuse",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "project_id": "platform_900f86db07",
+            "name": "Continue ToyOS kernel branch work with mainline context reuse",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\continue-toyos-kernel-branch-work-with-mainline-context-reuse",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "project_id": "platform_8632991421",
+            "name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "project_id": "platform_884b16cef2",
+            "name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "project_id": "platform_850e026ee3",
+            "name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+            "domains": [
+              "kernel"
+            ]
+          }
+        ],
+        "cross_project_edges": [
+          {
+            "from": "79120c5dbb",
+            "to": "aimath0001",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "79120c5dbb",
+            "to": "platform_464dac2a0b",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "79120c5dbb",
+            "to": "platform_b9e5c175ad",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "79120c5dbb",
+            "to": "platform_900f86db07",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "79120c5dbb",
+            "to": "platform_8632991421",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "79120c5dbb",
+            "to": "platform_884b16cef2",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "79120c5dbb",
+            "to": "platform_850e026ee3",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "aimath0001",
+            "to": "79120c5dbb",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "aimath0001",
+            "to": "platform_464dac2a0b",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "aimath0001",
+            "to": "platform_b9e5c175ad",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "aimath0001",
+            "to": "platform_900f86db07",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "aimath0001",
+            "to": "platform_8632991421",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "aimath0001",
+            "to": "platform_884b16cef2",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "aimath0001",
+            "to": "platform_850e026ee3",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "platform_464dac2a0b",
+            "to": "79120c5dbb",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_464dac2a0b",
+            "to": "aimath0001",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_464dac2a0b",
+            "to": "platform_b9e5c175ad",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_464dac2a0b",
+            "to": "platform_900f86db07",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_464dac2a0b",
+            "to": "platform_8632991421",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_464dac2a0b",
+            "to": "platform_884b16cef2",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_464dac2a0b",
+            "to": "platform_850e026ee3",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_b9e5c175ad",
+            "to": "79120c5dbb",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_b9e5c175ad",
+            "to": "aimath0001",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_b9e5c175ad",
+            "to": "platform_464dac2a0b",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_b9e5c175ad",
+            "to": "platform_900f86db07",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_b9e5c175ad",
+            "to": "platform_8632991421",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_b9e5c175ad",
+            "to": "platform_884b16cef2",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_b9e5c175ad",
+            "to": "platform_850e026ee3",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_900f86db07",
+            "to": "79120c5dbb",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_900f86db07",
+            "to": "aimath0001",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_900f86db07",
+            "to": "platform_464dac2a0b",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_900f86db07",
+            "to": "platform_b9e5c175ad",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_900f86db07",
+            "to": "platform_8632991421",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_900f86db07",
+            "to": "platform_884b16cef2",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_900f86db07",
+            "to": "platform_850e026ee3",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_8632991421",
+            "to": "79120c5dbb",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_8632991421",
+            "to": "aimath0001",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "platform_8632991421",
+            "to": "platform_464dac2a0b",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_8632991421",
+            "to": "platform_b9e5c175ad",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_8632991421",
+            "to": "platform_900f86db07",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_8632991421",
+            "to": "platform_884b16cef2",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "platform_8632991421",
+            "to": "platform_850e026ee3",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "platform_884b16cef2",
+            "to": "79120c5dbb",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_884b16cef2",
+            "to": "aimath0001",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "platform_884b16cef2",
+            "to": "platform_464dac2a0b",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_884b16cef2",
+            "to": "platform_b9e5c175ad",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_884b16cef2",
+            "to": "platform_900f86db07",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_884b16cef2",
+            "to": "platform_8632991421",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "platform_884b16cef2",
+            "to": "platform_850e026ee3",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "platform_850e026ee3",
+            "to": "79120c5dbb",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_850e026ee3",
+            "to": "aimath0001",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "platform_850e026ee3",
+            "to": "platform_464dac2a0b",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_850e026ee3",
+            "to": "platform_b9e5c175ad",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_850e026ee3",
+            "to": "platform_900f86db07",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_850e026ee3",
+            "to": "platform_8632991421",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          },
+          {
+            "from": "platform_850e026ee3",
+            "to": "platform_884b16cef2",
+            "kind": "domain-overlap",
+            "domains": [
+              "kernel",
+              "math"
+            ]
+          }
+        ],
+        "cross_project_count": 8
+      },
+      "patch_required": true,
+      "capability_context": {
+        "capability_id": "fix_bug",
+        "recommended_tools": [
+          "read_file",
+          "search_code",
+          "patch_apply",
+          "run_tests"
+        ],
+        "success_conditions": [
+          "bug_reproduced_or_understood",
+          "patch_applied",
+          "verification_passed"
+        ]
+      },
+      "owner_department": "engineering_department",
+      "support_departments": [
+        "qa_department"
+      ],
+      "review_departments": [
+        "engineering_department",
+        "qa_department"
+      ],
+      "department_workers": {
+        "engineering_department": "coder",
+        "qa_department": "shell"
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "task_id": "c3a6bac078e1441e877f3fc39b245d48",
+  "task_title": "Auto Debug Loop",
+  "task_status": "timed_out",
+  "started_at": "2026-04-02T23:00:11.081809Z",
+  "updated_at": "2026-04-03T12:48:36.773784Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "c3a6bac078e1441e877f3fc39b245d48-terminal-record",
+      "step_title": "Auto Debug Loop",
+      "action": "task_terminal_record",
+      "ok": false,
+      "at": "2026-04-03T12:48:36.773784Z",
+      "status": "timed_out",
+      "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+      "error": null,
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ],
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-02T23:00:11.368034Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "c3a6bac078e1441e877f3fc39b245d48",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "governance",
+        "queue_name": "build_test",
+        "task_type": "build_fix"
+      }
+    ],
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

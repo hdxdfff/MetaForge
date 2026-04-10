@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "id": "evo_20260403_001",
+      "type": "self_repair",
+      "trigger": "artifact_regression_validator_false_negative",
+      "target": "tools/artifact_regression_validator.py",
+      "action": "broadened artifact report parsing to accept existing real-artifact formats and qemu smoke reports",
+      "verification": {
+        "py_compile": "pass",
+        "validator_smoke": "pass"
+      },
+      "result": "success",
+      "artifact_path": "D:\\codex\\generated\\stage5-evolution-evidence-20260403",
+      "created_at": "2026-04-03T15:02:00Z",
+      "completed_at": "2026-04-03T15:05:00Z"
+    },
+    {
+      "id": "evo_20260403_002",
+      "type": "capability_expansion",
+      "trigger": "stage5_infrastructure_gap",
+      "target": "tools/artifact_regression_validator.py",
+      "action": "added a dedicated artifact regression validator and run wrappers for Stage 5 evaluation",
+      "verification": {
+        "py_compile": "pass",
+        "stage5_evaluator": "pass"
+      },
+      "result": "success",
+      "artifact_path": "D:\\codex\\generated\\stage5-evolution-evidence-20260403",
+      "created_at": "2026-04-03T15:02:00Z",
+      "completed_at": "2026-04-03T15:05:00Z"
+    },
+    {
+      "id": "evo_20260403_279fad03",
+      "type": "self_repair",
+      "trigger": "stage5_self_repair_workflow",
+      "target": "stage5-self-repair-runtime-20260403",
+      "action": "generated stage5-self-repair-runtime-20260403",
+      "verification": {
+        "py_compile": "pass",
+        "self_test": "pass",
+        "execution": "pass"
+      },
+      "result": "success",
+      "artifact_path": "D:\\codex\\generated\\stage5-self-repair-runtime-20260403",
+      "created_at": "2026-04-03T15:18:09.273899Z",
+      "completed_at": "2026-04-03T15:18:09.273899Z"
+    },
+    {
+      "id": "evo_20260403_a86c2017",
+      "type": "self_repair",
+      "trigger": "stage5_self_repair_workflow",
+      "target": "stage5-self-repair-verification-20260403",
+      "action": "generated stage5-self-repair-verification-20260403",
+      "verification": {
+        "py_compile": "pass",
+        "self_test": "pass",
+        "execution": "pass"
+      },
+      "result": "success",
+      "artifact_path": "D:\\codex\\generated\\stage5-self-repair-verification-20260403",
+      "created_at": "2026-04-03T15:18:22.002389Z",
+      "completed_at": "2026-04-03T15:18:22.002389Z"
+    },
+    {
+      "id": "evo_20260403_193c3d9d",
+      "type": "capability_expansion",
+      "trigger": "stage5_capability_expansion_workflow",
+      "target": "stage5-capability-validator-20260403",
+      "action": "generated stage5-capability-validator-20260403",
+      "verification": {
+        "py_compile": "pass",
+        "self_test": "pass",
+        "execution": "pass"
+      },
+      "result": "success",
+      "artifact_path": "D:\\codex\\generated\\stage5-capability-validator-20260403",
+      "created_at": "2026-04-03T15:18:34.106590Z",
+      "completed_at": "2026-04-03T15:18:34.106590Z"
+    },
+    {
+      "id": "evo_20260403_7fa550e9",
+      "type": "capability_expansion",
+      "trigger": "stage5_capability_expansion_workflow",
+      "target": "stage5-capability-repairbundle-20260403",
+      "action": "generated stage5-capability-repairbundle-20260403",
+      "verification": {
+        "py_compile": "pass",
+        "self_test": "pass",
+        "execution": "pass"
+      },
+      "result": "success",
+      "artifact_path": "D:\\codex\\generated\\stage5-capability-repairbundle-20260403",
+      "created_at": "2026-04-03T15:18:45.806817Z",
+      "completed_at": "2026-04-03T15:18:45.806817Z"
+    }
+  ]
+}

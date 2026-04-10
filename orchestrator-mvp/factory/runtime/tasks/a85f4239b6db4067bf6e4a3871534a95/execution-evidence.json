@@ -1,0 +1,168 @@
+{
+  "steps": [
+    {
+      "step_id": "64221992",
+      "step_title": "Understand task",
+      "action": "planner_step",
+      "ok": true,
+      "at": "2026-03-28T22:07:41.584916Z",
+      "worker": "planner",
+      "phase": "understand",
+      "route_model": "deepseek-reasoner",
+      "route_provider": "reasoning",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 473,
+        "line_count": 4,
+        "stored_raw": false
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "2c7f661e",
+      "step_title": "Draft solution",
+      "action": "coder_step",
+      "ok": true,
+      "at": "2026-03-28T22:08:18.823171Z",
+      "worker": "coder",
+      "phase": "draft",
+      "route_model": "deepseek-chat",
+      "route_provider": "cheap",
+      "output_ref": {
+        "artifact_id": "ctx_d96b825672f5",
+        "task_id": "a85f4239b6db4067bf6e4a3871534a95",
+        "step_id": "2c7f661e",
+        "channel": "coder-output",
+        "title": "Draft solution output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\a85f4239b6db4067bf6e4a3871534a95\\2c7f661e-coder-output-ctx_d96b825672f5.txt",
+        "size_chars": 5003,
+        "line_count": 177,
+        "created_at": "2026-03-28T22:08:14.441737Z",
+        "metadata": {
+          "worker": "coder",
+          "phase": "draft",
+          "route_model": "deepseek-chat",
+          "route_provider": "cheap"
+        }
+      },
+      "output_stats": {
+        "channel": "coder-output",
+        "char_count": 5003,
+        "line_count": 177,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "1b00883f",
+      "step_title": "Execute validation",
+      "action": "docker_step",
+      "ok": true,
+      "at": "2026-03-28T22:08:59.974489Z",
+      "worker": "docker",
+      "phase": "execute",
+      "route_model": "deepseek-chat",
+      "route_provider": "runtime",
+      "output_ref": {
+        "artifact_id": "ctx_e0c8d816461e",
+        "task_id": "a85f4239b6db4067bf6e4a3871534a95",
+        "step_id": "1b00883f",
+        "channel": "docker-output",
+        "title": "Execute validation output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\a85f4239b6db4067bf6e4a3871534a95\\1b00883f-docker-output-ctx_e0c8d816461e.txt",
+        "size_chars": 34,
+        "line_count": 2,
+        "created_at": "2026-03-28T22:08:54.174170Z",
+        "metadata": {
+          "worker": "docker",
+          "phase": "execute",
+          "route_model": "deepseek-chat",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "docker-output",
+        "char_count": 34,
+        "line_count": 2,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "4d1c2664",
+      "step_title": "Issue patch decision",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-03-28T22:09:39.162870Z",
+      "worker": "reviewer",
+      "phase": "verify",
+      "route_model": "deepseek-chat",
+      "route_provider": "cheap",
+      "output_ref": {
+        "artifact_id": "ctx_1a807ead2ca5",
+        "task_id": "a85f4239b6db4067bf6e4a3871534a95",
+        "step_id": "4d1c2664",
+        "channel": "reviewer-output",
+        "title": "Issue patch decision output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\a85f4239b6db4067bf6e4a3871534a95\\4d1c2664-reviewer-output-ctx_1a807ead2ca5.txt",
+        "size_chars": 1000,
+        "line_count": 12,
+        "created_at": "2026-03-28T22:09:32.731314Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "verify",
+          "route_model": "deepseek-chat",
+          "route_provider": "cheap"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 1000,
+        "line_count": 12,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "0843c097",
+      "step_title": "Revise next action",
+      "action": "planner_step",
+      "ok": true,
+      "at": "2026-03-28T22:10:31.403915Z",
+      "worker": "planner",
+      "phase": "revise",
+      "route_model": "deepseek-reasoner",
+      "route_provider": "reasoning",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 266,
+        "line_count": 4,
+        "stored_raw": false
+      },
+      "probe_attempts": 0
+    }
+  ],
+  "task_id": "a85f4239b6db4067bf6e4a3871534a95",
+  "task_title": null,
+  "task_status": "completed",
+  "started_at": "2026-03-28T22:06:23.123123Z",
+  "updated_at": "2026-03-28T22:10:40.077195Z",
+  "completed": true,
+  "result": {
+    "summary": "Fallback plan generated locally because planner remote access is unavailable.",
+    "completed_steps": 5,
+    "context_used_chars": 705,
+    "cheap_calls_used": 2,
+    "cheap_chars_used": 6145,
+    "escalation_count": 0,
+    "execution_mode": "governance",
+    "production_evidence": {
+      "mode": "governance",
+      "status": "not-required"
+    },
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\a85f4239b6db4067bf6e4a3871534a95\\execution-evidence.json",
+    "execution_evidence_step_count": 5
+  }
+}

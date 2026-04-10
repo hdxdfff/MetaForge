@@ -1,0 +1,12 @@
+{
+  "artifact_id": "stage5-evolution-evidence-20260403",
+  "executed": true,
+  "success": true,
+  "exit_code": 0,
+  "command": [
+    "C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "D:\\codex\\generated\\stage5-evolution-evidence-20260403\\run_demo.py"
+  ],
+  "stdout": "{\"status\": \"ok\", \"artifact_id\": \"stage5-evolution-evidence-20260403\", \"message\": \"Provide a runnable evolution evidence bundle that can self-test and summarize Stage 5 progression.\", \"args\": []}",
+  "stderr": ""
+}

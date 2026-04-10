@@ -1,0 +1,20 @@
+{
+  "artifact_id": "metaforge-ai-factory",
+  "type": "report",
+  "version": "0.1.0",
+  "artifact_path": "D:/codex/generated/metaforge-ai-factory",
+  "entrypoint": "run_demo.py",
+  "evidence": [
+    "build-report.json",
+    "test-report.json",
+    "execution-report.json"
+  ],
+  "buildable": true,
+  "runnable": true,
+  "test_passed": true,
+  "reproducible": true,
+  "category": "report",
+  "title": "MetaForge AI factory handoff bundle",
+  "message": "Provide a runnable handoff bundle that can self-test and emit evidence for the AI factory recursion plan.",
+  "sha256": "c4789d888e7f331e5a6ed105e57b0d9eca501d3e0c7efaa8af941c4e29af410e"
+}

@@ -1,0 +1,67 @@
+[
+  {
+    "id": "local-assistant-testing",
+    "name": "Local Assistant Development Capability",
+    "scope": "cross-dialog",
+    "summary": "The assistant can handle most course labs, general coding, workspace migration, database exercises, computer-network labs, partial self-upgrades, repeated local testing, and real-browser webpage reading, mainline ToyOS implementation with local runtimes and cheap workers, keeping premium-model use focused on architecture, theory gaps, data risk, security boundaries, and hard failures. It can also scan a new workspace, infer the local stack, and suggest a low-cost execution path before invoking premium models. It now also structures work as a software delivery pipeline with requirements, roles, rules, git workflow hints, and validation checkpoints.",
+    "capabilities": [
+      "Read public or login-gated webpages through a real local Edge or Chrome process when browser automation is permitted",
+      "Capture page title, body text, links, and optional screenshots through the browser bridge",
+      "Read assignment prompts and restate exact requirements before editing",
+      "Inventory new local folders and migrate them into resources, project memory, and reusable task templates",
+      "Locate target files and produce minimal patches for xv6 and other course labs",
+      "Handle common multi-language coding tasks with small verified patches",
+      "Prepare SQL queries, migrations, and schema updates for MySQL- or openGauss-oriented tasks",
+      "Run computer-network labs with local socket, packet, and HTTP tools",
+      "Compile and build local projects in WSL",
+      "Run repeated QEMU smoke tests for OS kernels",
+      "Capture debug logs and compare pass/fail markers",
+      "Draft concise experiment reports and answer explanations from observed results",
+      "Approve at most one cheap post-failure probe before pausing",
+      "Apply low-risk self-upgrades to prompts, templates, test scripts, capability manifests, and UI text",
+      "Act as the main implementation worker for ToyOS under WSL and QEMU guardrails",
+      "Escalate only failed, ambiguous, or high-risk cases to the core planner",
+      "Generate local deployment starter files and release checklists before cloud credentials are available",
+      "Inspect local MySQL, openGauss, Docker, and SQL tooling before escalating database tasks",
+      "Read network keepalive logs and surface current proxy and queue state in the UI",
+      "Generate markdown lab reports with embedded local screenshots from observed experiment results",
+      "Derive structured task contracts with requirements, deliverables, constraints, acceptance criteria, and risks",
+      "Assign product, architect, coder, tester, reviewer, ops, and supervisor roles to a task",
+      "Evaluate basic rule-engine checks before execution and expose git workflow expectations",
+      "Run a cheap-first meta-factory maintenance loop and persist factory state plus self-upgrade candidates",
+      "Expose factory status so the user can drive the platform from a single control surface",
+      "Generate isolated systems into workspace/{project} from reusable system templates",
+      "Evaluate generated systems against template manifests and repair missing required paths",
+      "Use a bounded generator/evaluator/fixer loop as the Layer 3 core instead of free-form generation",
+      "Run automated AI reliability checks for context boundaries, false premises, instruction-following, uncertainty handling, and freshness awareness"
+    ],
+    "execution_policy": {
+      "default_runtime": "WSL Ubuntu",
+      "default_vm": "QEMU i386",
+      "preferred_testing_mode": "virtual-machine",
+      "database_runtime": "MySQL CLI, local MySQL Server, or document-driven setup workflows when configured",
+      "network_runtime": "curl, ping, ss, tcpdump, Wireshark-compatible captures, and WSL networking tools",
+      "migration_runtime": "local folder inspection, resource registration, project memory, and reusable task templates",
+      "self_improvement_scope": "low-risk local assets only; no autonomous security, permission, or packet-capture privilege changes",
+      "cheap_worker_role": "course-lab-general-coding-repeat-test-migration-and-self-upgrade-worker",
+      "core_model_role": "failure analysis, theory clarification, data-risk review, security review, and architecture decisions",
+      "browser_runtime": "playwright-core bridge with local Edge or Chrome"
+    },
+    "known_entrypoints": [
+      "D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py",
+      "D:\\codex\\generated\\toy-os-demo\\tools\\generic_qemu_smoke.json",
+      "D:\\codex\\generated\\toy-os-demo\\Makefile::qemu-smoke",
+      "http://127.0.0.1:8787/api/resources",
+      "http://127.0.0.1:8787/api/projects",
+      "http://127.0.0.1:8787/api/dispatch",
+      "http://127.0.0.1:8787/api/capabilities",
+      "http://127.0.0.1:8787/api/task-templates",
+      "D:\\codex\\tools\\browser-automation\\read-page.ps1",
+      "D:\\codex\\orchestrator-mvp\\tools\\ai_test_automation.py"
+    ],
+    "updated_at": "2026-03-09T08:30:00Z",
+    "skills": [
+      "workspace-intake"
+    ]
+  }
+]

@@ -1,0 +1,124 @@
+{
+  "steps": [
+    {
+      "step_id": "9946bad8",
+      "step_title": "Awaiting raw request input",
+      "action": "planner_step",
+      "ok": true,
+      "at": "2026-04-02T20:33:12.180963Z",
+      "worker": "planner",
+      "phase": "intake",
+      "route_model": "deepseek-reasoner",
+      "route_provider": "reasoning",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 502,
+        "line_count": 4,
+        "stored_raw": false
+      },
+      "probe_attempts": 0
+    }
+  ],
+  "task_id": "fdbe5e99242049288db2ed59fbfe7e3b",
+  "task_title": "Analyze the current state",
+  "task_status": "released",
+  "started_at": "2026-04-02T20:19:47.073349Z",
+  "updated_at": "2026-04-02T20:48:34.417935Z",
+  "completed": true,
+  "result": {
+    "summary": "No raw request provided. Cannot derive requirements, architecture, or task breakdown without a specific task to process. Please provide the raw request to transform into a structured delivery flow.",
+    "completed_steps": 1,
+    "context_used_chars": 606,
+    "cheap_calls_used": 0,
+    "cheap_chars_used": 0,
+    "escalation_count": 0,
+    "execution_mode": "governance",
+    "execution_status": "execution_finished",
+    "production_evidence": {
+      "mode": "governance",
+      "status": "not-required"
+    },
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\fdbe5e99242049288db2ed59fbfe7e3b\\execution-evidence.json",
+    "execution_evidence_step_count": 1,
+    "verification_contract": {
+      "verification_level": "L1",
+      "required_checks": [
+        "contract_valid",
+        "build_success",
+        "tests_pass",
+        "artifact_manifest_present",
+        "evidence_fresh"
+      ],
+      "artifact_requirements": {
+        "must_register_artifact": true,
+        "must_have_timestamp": true,
+        "must_have_files": [],
+        "expected_outputs": []
+      },
+      "release_gate": "all_required_checks_pass",
+      "failure_policy": "return_to_planner",
+      "evidence_requirements": [],
+      "verification_notes": [
+        "Identify the smallest viable slice",
+        "Produce explicit verification output or a bounded failure report.",
+        "Keep governance work separate from implementation claims.",
+        "The response names concrete files, commands, or artifacts.",
+        "The response avoids generic summary language and states the minimal next action.",
+        "The response only asks for more context if the artifact spec or target path is missing."
+      ]
+    },
+    "verification_result": {
+      "status": "verified",
+      "passed": true,
+      "mode": "governance",
+      "verification_level": "L1",
+      "contract": {
+        "verification_level": "L1",
+        "required_checks": [
+          "contract_valid",
+          "build_success",
+          "tests_pass",
+          "artifact_manifest_present",
+          "evidence_fresh"
+        ],
+        "artifact_requirements": {
+          "must_register_artifact": true,
+          "must_have_timestamp": true,
+          "must_have_files": [],
+          "expected_outputs": []
+        },
+        "release_gate": "all_required_checks_pass",
+        "failure_policy": "return_to_planner",
+        "evidence_requirements": [],
+        "verification_notes": [
+          "Identify the smallest viable slice",
+          "Produce explicit verification output or a bounded failure report.",
+          "Keep governance work separate from implementation claims.",
+          "The response names concrete files, commands, or artifacts.",
+          "The response avoids generic summary language and states the minimal next action.",
+          "The response only asks for more context if the artifact spec or target path is missing."
+        ]
+      },
+      "evidence": {
+        "status": "verified",
+        "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\fdbe5e99242049288db2ed59fbfe7e3b\\execution-evidence.json",
+        "execution_evidence_present": true,
+        "required_checks": [
+          "contract_valid",
+          "build_success",
+          "tests_pass",
+          "artifact_manifest_present",
+          "evidence_fresh"
+        ],
+        "artifact_requirements": {
+          "must_register_artifact": true,
+          "must_have_timestamp": true,
+          "must_have_files": [],
+          "expected_outputs": []
+        }
+      }
+    },
+    "delivery_state": "released"
+  }
+}

@@ -1,0 +1,239 @@
+{
+  "version": "v1",
+  "executors": [
+    {
+      "executor_id": "opencode_executor",
+      "adapter": "OpencodeExecutorAdapter",
+      "enabled": true,
+      "mode": "development_executor",
+      "engine": "opencode",
+      "task_types": [
+        "build_fix",
+        "demo_rebuild",
+        "subsystem_refactor",
+        "architecture_migration",
+        "path_repair",
+        "unit_test_run"
+      ],
+      "risk_levels": [
+        "medium",
+        "high"
+      ],
+      "supports_parallel": true,
+      "supports_long_horizon": true
+    },
+    {
+      "executor_id": "codex_executor",
+      "adapter": "CodexExecutorAdapter",
+      "enabled": true,
+      "mode": "development_executor",
+      "engine": "opencode",
+      "alias_of": "opencode_executor",
+      "task_types": [
+        "build_fix",
+        "demo_rebuild",
+        "subsystem_refactor",
+        "architecture_migration",
+        "path_repair",
+        "unit_test_run"
+      ],
+      "risk_levels": [
+        "medium",
+        "high"
+      ],
+      "supports_parallel": true,
+      "supports_long_horizon": true
+    },
+    {
+      "executor_id": "aider_executor",
+      "adapter": "AiderExecutorAdapter",
+      "enabled": true,
+      "mode": "interactive_executor",
+      "engine": "aider",
+      "task_types": [
+        "build_fix",
+        "subsystem_refactor",
+        "path_repair",
+        "unit_test_run",
+        "doc_patch"
+      ],
+      "risk_levels": [
+        "low",
+        "medium"
+      ],
+      "supports_parallel": true,
+      "supports_long_horizon": false
+    },
+    {
+      "executor_id": "openhands_executor",
+      "adapter": "OpenHandsExecutorAdapter",
+      "enabled": true,
+      "mode": "long_running_executor",
+      "engine": "openhands",
+      "task_types": [
+        "new_artifact_bootstrap",
+        "new_demo_creation",
+        "architecture_migration",
+        "subsystem_refactor"
+      ],
+      "risk_levels": [
+        "medium",
+        "high"
+      ],
+      "supports_parallel": true,
+      "supports_long_horizon": true
+    },
+    {
+      "executor_id": "plandex_executor",
+      "adapter": "PlandexExecutorAdapter",
+      "enabled": true,
+      "mode": "long_running_executor",
+      "engine": "plandex",
+      "task_types": [
+        "demo_rebuild",
+        "package_validation",
+        "harness_regression_run",
+        "qemu_smoke_run"
+      ],
+      "risk_levels": [
+        "medium",
+        "high"
+      ],
+      "supports_parallel": true,
+      "supports_long_horizon": true
+    },
+    {
+      "executor_id": "goose_executor",
+      "adapter": "GooseExecutorAdapter",
+      "enabled": true,
+      "mode": "control_executor",
+      "engine": "goose",
+      "task_types": [
+        "report_refresh",
+        "registry_reconcile",
+        "evidence_collect",
+        "doc_patch",
+        "json_fix",
+        "config_fix",
+        "manifest_patch"
+      ],
+      "risk_levels": [
+        "low",
+        "medium"
+      ],
+      "supports_parallel": true,
+      "supports_long_horizon": false
+    },
+    {
+      "executor_id": "linkwork_executor",
+      "adapter": "LinkWorkExecutorAdapter",
+      "enabled": true,
+      "mode": "isolated_executor",
+      "engine": "linkwork",
+      "task_types": [
+        "handoff_doc_generate",
+        "artifact_evidence_packaging",
+        "structured_research_bundle",
+        "external_info_collect",
+        "tool_assisted_doc_generation",
+        "delivery_bundle_prepare",
+        "report_refresh",
+        "reviewer_role",
+        "reporter_role",
+        "operator_role"
+      ],
+      "risk_levels": [
+        "low",
+        "medium"
+      ],
+      "supports_parallel": true,
+      "supports_long_horizon": true
+    },
+    {
+      "executor_id": "continue_executor",
+      "adapter": "ContinueExecutorAdapter",
+      "enabled": true,
+      "mode": "review_executor",
+      "engine": "continue",
+      "task_types": [
+        "artifact_audit",
+        "independent_evidence_check",
+        "release_decision_review"
+      ],
+      "risk_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "supports_parallel": false,
+      "supports_long_horizon": false
+    },
+    {
+      "executor_id": "script_executor",
+      "adapter": "LocalScriptExecutorAdapter",
+      "task_types": [
+        "report_refresh",
+        "artifact_audit",
+        "registry_reconcile",
+        "evidence_collect",
+        "doc_patch",
+        "json_fix",
+        "config_fix",
+        "manifest_patch"
+      ],
+      "risk_levels": [
+        "low",
+        "medium"
+      ],
+      "supports_parallel": true,
+      "supports_long_horizon": false
+    },
+    {
+      "executor_id": "cheap_model_executor",
+      "adapter": "CheapModelExecutorAdapter",
+      "task_types": [
+        "doc_patch",
+        "json_fix",
+        "config_fix",
+        "manifest_patch",
+        "small_json_patch"
+      ],
+      "risk_levels": [
+        "low"
+      ],
+      "supports_parallel": true,
+      "supports_long_horizon": false
+    },
+    {
+      "executor_id": "human_review_executor",
+      "adapter": "HumanReviewExecutorAdapter",
+      "task_types": [
+        "release_decision_review",
+        "risk_approval",
+        "architecture_review"
+      ],
+      "risk_levels": [
+        "high"
+      ],
+      "supports_parallel": false,
+      "supports_long_horizon": false
+    },
+    {
+      "executor_id": "ci_executor",
+      "adapter": "CIExecutorAdapter",
+      "task_types": [
+        "artifact_audit",
+        "qemu_smoke_run",
+        "harness_regression_run",
+        "package_validation",
+        "independent_evidence_check"
+      ],
+      "risk_levels": [
+        "medium",
+        "high"
+      ],
+      "supports_parallel": true,
+      "supports_long_horizon": false
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "steps": [
+    {
+      "step_id": "task-terminal-record",
+      "step_title": "Auto-run binary classification lab from provided template",
+      "action": "task_terminal_record",
+      "ok": false,
+      "at": "2026-03-20T16:23:50.075311Z",
+      "status": "failed",
+      "summary": "",
+      "error": null,
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result"
+    }
+  ],
+  "task_id": "a6d77b10d2b84c1b8281532e475c1354",
+  "task_title": "Auto-run binary classification lab from provided template",
+  "task_status": "failed",
+  "completed": false,
+  "updated_at": "2026-03-20T16:23:55.320586Z",
+  "result": {
+    "state": "failed_execution",
+    "reason": "[WinError 5] 拒绝访问。",
+    "task_id": "a6d77b10d2b84c1b8281532e475c1354",
+    "repo_path": "D:\\codex\\generated\\ml-binary-classification-lab",
+    "execution_mode": "production",
+    "goal": "Auto-complete binary classification lab from template or surface blockers",
+    "cheap_calls_used": 0,
+    "cheap_chars_used": 0,
+    "escalation_count": 0,
+    "failed_steps": [],
+    "next_action_required": "Inspect execution evidence and rerun or replace the task; no approval hold was applied.",
+    "failure_pause_policy": "If a long task fails, allow at most one cheap-model-approved probe retry with bounded local cost. If cheap approval is missing, ambiguous, or the retry still fails, pause execution, return a structured error report, and wait for explicit core guidance.",
+    "pause_required": false,
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\a6d77b10d2b84c1b8281532e475c1354\\execution-evidence.json",
+    "execution_evidence_step_count": 1
+  }
+}

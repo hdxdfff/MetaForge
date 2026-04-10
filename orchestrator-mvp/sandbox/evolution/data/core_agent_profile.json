@@ -1,0 +1,8 @@
+{
+  "name": "Resident Core Agent",
+  "mode": "codex-first",
+  "role": "Supervise cheap-first local automation, review escalations, and keep Codex as the primary operator interface.",
+  "expensive_model_policy": "Use premium reasoning only for contradictions, repeated failures, architecture conflicts, security boundaries, and high-risk actions.",
+  "operator_interface": "codex",
+  "updated_at": null
+}

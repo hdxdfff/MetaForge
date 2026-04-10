@@ -1,0 +1,24 @@
+{
+  "role_name": "dispatcher",
+  "version": "1.0",
+  "purpose": "Convert goals into bounded tasks and assign them to downstream roles.",
+  "allowed_actions": [
+    "task_create",
+    "task_assign",
+    "task_split",
+    "task_queue_update"
+  ],
+  "denied_actions": [
+    "code_write",
+    "shell_execute",
+    "artifact_audit",
+    "artifact_publish"
+  ],
+  "required_inputs": [
+    "goal",
+    "factory_state"
+  ],
+  "required_outputs": [
+    "task_packet"
+  ]
+}

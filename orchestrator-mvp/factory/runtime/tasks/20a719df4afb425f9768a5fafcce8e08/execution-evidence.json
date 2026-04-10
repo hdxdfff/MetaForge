@@ -1,0 +1,71 @@
+{
+  "task_id": "20a719df4afb425f9768a5fafcce8e08",
+  "task_title": "Refresh ToyOS runnable artifact evidence",
+  "task_status": "timed_out",
+  "started_at": "2026-03-20T08:24:16.555487Z",
+  "updated_at": "2026-03-20T08:35:14.452107Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "9b00bd2d",
+      "step_title": "Understand artifact task",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-03-20T08:35:14.452107Z",
+      "phase": "understand",
+      "worker": "reviewer",
+      "status": "running",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "09962d02",
+      "step_title": "Draft artifact",
+      "action": "coder_step",
+      "ok": false,
+      "at": "2026-03-20T08:35:14.452107Z",
+      "phase": "draft",
+      "worker": "coder",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "0b021306",
+      "step_title": "Review artifact scope",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-03-20T08:35:14.452107Z",
+      "phase": "verify",
+      "worker": "reviewer",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "8f031d45",
+      "step_title": "State next action",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-03-20T08:35:14.452107Z",
+      "phase": "revise",
+      "worker": "reviewer",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    }
+  ],
+  "result": {
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

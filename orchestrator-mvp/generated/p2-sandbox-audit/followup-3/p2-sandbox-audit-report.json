@@ -1,0 +1,27 @@
+{
+  "status": "blocked",
+  "updated_at": "2026-04-03T19:26:09.793291Z",
+  "checks": {
+    "markdown_section_present": true,
+    "allow_p2_sandbox": false,
+    "industrial_allow_p2_sandbox": false,
+    "budget_pool": "P2",
+    "sandbox_lane": "p2_low_risk"
+  },
+  "target_files": [
+    "D:\\codex\\orchestrator-mvp\\data\\autonomy_control_plane_summary.md",
+    "D:\\codex\\orchestrator-mvp\\data\\autonomy_control_plane.json",
+    "D:\\codex\\orchestrator-mvp\\data\\industrial_operations.json"
+  ],
+  "smallest_gap": "The sandbox gate is intentionally closed by the industrial operations budget.",
+  "patch_plan": [
+    "Keep the P2 sandbox section in the summary markdown.",
+    "Keep allow_p2_sandbox aligned with the industrial operations gate.",
+    "Refresh the control-plane summary after any budget change."
+  ],
+  "validation_commands": [
+    "Get-Content \"D:\\codex\\orchestrator-mvp\\data\\autonomy_control_plane_summary.md\"",
+    "python D:\\codex\\orchestrator-mvp\\tools\\autonomy_control_plane.py"
+  ],
+  "residual_risk": "Sandbox lane remains intentionally narrow and budgeted."
+}

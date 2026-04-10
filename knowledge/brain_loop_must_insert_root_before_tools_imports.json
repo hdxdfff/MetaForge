@@ -1,0 +1,19 @@
+{
+  "id": "brain_loop_must_insert_root_before_tools_imports",
+  "created_at": "2026-03-29T01:17:00Z",
+  "scope": "daemon-control-imports",
+  "symptom": "factoryctl daemon-status and daemon-stop/start failed because tools.brain_loop imported tools.io_utils before adding D:\\codex\\orchestrator-mvp to sys.path, making module resolution depend on caller context.",
+  "impact": [
+    "daemon control commands could crash before reaching runtime status",
+    "control session maintenance became impossible even though the daemon itself was healthy",
+    "the failure surfaced only when codex_control imported factory_daemon through the CLI path"
+  ],
+  "fix": [
+    "insert ROOT and bundled site-packages onto sys.path before any tools.* imports in tools/brain_loop.py",
+    "keep utility imports after path bootstrap to make daemon startup context-independent"
+  ],
+  "validation": [
+    "py_compile passed for tools/brain_loop.py",
+    "factoryctl daemon-status returned a live running daemon summary after the patch"
+  ]
+}

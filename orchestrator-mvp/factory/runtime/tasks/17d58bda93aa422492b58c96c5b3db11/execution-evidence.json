@@ -1,0 +1,74 @@
+{
+  "steps": [
+    {
+      "step_id": "f78af3cc",
+      "step_title": "Write recovery smoke file",
+      "action": "write_smoke_file",
+      "ok": true,
+      "at": "2026-03-28T20:53:50.839845Z",
+      "path": "D:\\codex\\orchestrator-mvp\\data\\execution-recovery\\test.txt",
+      "size": 97
+    },
+    {
+      "step_id": "a0fdc289",
+      "step_title": "Probe direct LLM path",
+      "action": "direct_llm_call",
+      "ok": false,
+      "at": "2026-03-28T20:54:33.462064Z",
+      "provider": "cheap",
+      "model": "deepseek-chat",
+      "usage_before": 20,
+      "usage_after": 20,
+      "used_fallback": true,
+      "output_excerpt": "Provider error: APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "step_id": "942e7d6c",
+      "step_title": "Create runnable recovery artifact",
+      "action": "create_runnable_artifact",
+      "ok": true,
+      "at": "2026-03-28T20:55:02.416132Z",
+      "artifact_dir": "D:\\codex\\generated\\execution-recovery-demo",
+      "build_timestamp": "2026-03-28T20:54:57.583181Z",
+      "test_timestamp": "2026-03-28T20:54:59.756778Z",
+      "execution_timestamp": "2026-03-28T20:55:02.365372Z"
+    },
+    {
+      "step_id": "f78af3cc",
+      "step_title": "Write recovery smoke file",
+      "action": "write_smoke_file",
+      "ok": true,
+      "at": "2026-03-28T21:00:41.516818Z",
+      "path": "D:\\codex\\orchestrator-mvp\\data\\execution-recovery\\test.txt",
+      "size": 97
+    },
+    {
+      "step_id": "f78af3cc",
+      "step_title": "Write recovery smoke file",
+      "action": "write_smoke_file",
+      "ok": true,
+      "at": "2026-03-28T21:19:18.366950Z",
+      "path": "D:\\codex\\orchestrator-mvp\\data\\execution-recovery\\test.txt",
+      "size": 97
+    },
+    {
+      "step_id": "a0fdc289",
+      "step_title": "Probe direct LLM path",
+      "action": "direct_llm_call",
+      "ok": false,
+      "at": "2026-03-28T21:21:10.497185Z",
+      "provider": "cheap",
+      "model": "deepseek-chat",
+      "usage_before": 20,
+      "usage_after": 20,
+      "used_fallback": true,
+      "output_excerpt": "Provider error: APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    }
+  ],
+  "task_id": "17d58bda93aa422492b58c96c5b3db11",
+  "task_title": "Execution recovery: smoke and runnable artifact",
+  "task_status": "running",
+  "started_at": "2026-03-28T20:51:26.205403Z",
+  "updated_at": "2026-03-28T21:21:10.497185Z",
+  "completed": false
+}

@@ -1,0 +1,19 @@
+﻿{
+  "capability_id": "design_architecture",
+  "version": 1,
+  "domain": "system_design",
+  "summary": "Define architecture boundaries, interfaces, and execution slices for a target system.",
+  "goal_types": ["architecture_upgrade", "build_platform", "capability_upgrade"],
+  "keywords": ["architecture", "design", "interface", "boundary", "system", "protocol"],
+  "inputs": ["system_goal", "constraints", "existing_modules"],
+  "steps": [
+    {"id": "map_constraints", "title": "Map constraints", "role": "architect", "tools": ["read_file", "search_code"]},
+    {"id": "define_interfaces", "title": "Define interfaces", "role": "architect", "tools": ["read_file", "write_file"]},
+    {"id": "slice_execution_work", "title": "Slice execution work", "role": "product", "tools": ["read_file"]},
+    {"id": "validate_architecture", "title": "Validate architecture", "role": "tester", "tools": ["run_tests", "read_file"]}
+  ],
+  "tools": ["read_file", "write_file", "run_tests"],
+  "success_conditions": ["interfaces_defined", "execution_slices_ready", "architecture_validated"],
+  "fallbacks": ["narrow_interface_scope", "record_open_questions"],
+  "reusable_for": ["system_refactor", "architecture_planning", "boundary_definition"]
+}

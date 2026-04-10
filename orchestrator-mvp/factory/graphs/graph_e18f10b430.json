@@ -1,0 +1,822 @@
+{
+  "graph_id": "graph_e18f10b430",
+  "goal_id": "goal_depdag_smoke",
+  "target": "Strengthen agent orchestration capability",
+  "type": "engineering_system",
+  "created_at": "2026-03-10T11:56:45.626541Z",
+  "updated_at": "2026-03-10T11:56:45.626541Z",
+  "status": "ready",
+  "meta": {
+    "goal_scale": "engineering-os",
+    "architecture_rules": [
+      "agents cannot import runtime",
+      "router must be stateless",
+      "runtime modules cannot depend on app transport handlers",
+      "tools may depend on runtime and state, but not app HTTP layer",
+      "verification must gate promotion of architecture-affecting changes"
+    ],
+    "agent_teams": [
+      "architecture_team",
+      "backend_team",
+      "infrastructure_team",
+      "testing_team"
+    ],
+    "code_graph_focus": {
+      "module_focus": [
+        "agents.coder_agent",
+        "agents.deploy_agent",
+        "agents.test_agent",
+        "app.network_agent",
+        "app.models",
+        "runtime.scheduler",
+        "app.orchestrator",
+        "tools.codex_control"
+      ],
+      "owner_teams": [
+        "architecture_team",
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "layers": [
+        "agent_teams",
+        "unclassified"
+      ],
+      "matched_modules": [
+        {
+          "module": "agents.coder_agent",
+          "owner_team": "backend_team",
+          "owner": "coder",
+          "layer": "unclassified",
+          "dependency_count": 0,
+          "dependents": 0,
+          "internal_imports": []
+        },
+        {
+          "module": "agents.deploy_agent",
+          "owner_team": "backend_team",
+          "owner": "coder",
+          "layer": "unclassified",
+          "dependency_count": 0,
+          "dependents": 0,
+          "internal_imports": []
+        },
+        {
+          "module": "agents.test_agent",
+          "owner_team": "backend_team",
+          "owner": "coder",
+          "layer": "unclassified",
+          "dependency_count": 0,
+          "dependents": 0,
+          "internal_imports": []
+        },
+        {
+          "module": "app.network_agent",
+          "owner_team": "backend_team",
+          "owner": "coder",
+          "layer": "unclassified",
+          "dependency_count": 0,
+          "dependents": 1,
+          "internal_imports": []
+        },
+        {
+          "module": "app.models",
+          "owner_team": "backend_team",
+          "owner": "coder",
+          "layer": "unclassified",
+          "dependency_count": 0,
+          "dependents": 9,
+          "internal_imports": []
+        },
+        {
+          "module": "runtime.scheduler",
+          "owner_team": "architecture_team",
+          "owner": "planner",
+          "layer": "agent_teams",
+          "dependency_count": 0,
+          "dependents": 2,
+          "internal_imports": []
+        },
+        {
+          "module": "app.orchestrator",
+          "owner_team": "backend_team",
+          "owner": "coder",
+          "layer": "unclassified",
+          "dependency_count": 12,
+          "dependents": 0,
+          "internal_imports": [
+            "app.context_service",
+            "app.git_service",
+            "app.model_router",
+            "app.models",
+            "app.openai_client",
+            "app.resource_registry",
+            "app.worker_adapters",
+            "tools.capability_registry",
+            "tools.code_knowledge_graph",
+            "tools.distillation",
+            "tools.tool_registry",
+            "tools.vm_orchestrator"
+          ]
+        },
+        {
+          "module": "tools.codex_control",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified",
+          "dependency_count": 33,
+          "dependents": 0,
+          "internal_imports": [
+            "app.main",
+            "runtime.goal_manager",
+            "runtime.platform_generator",
+            "runtime.scheduler",
+            "runtime.taskgraph_engine",
+            "state.store",
+            "tools.ai_guard",
+            "tools.architecture_validator",
+            "tools.autonomy_score",
+            "tools.brain_loop",
+            "tools.brain_snapshot",
+            "tools.capability_registry",
+            "tools.code_knowledge_graph",
+            "tools.context_kernel",
+            "tools.experiment_evaluator",
+            "tools.experiment_executor",
+            "tools.experiment_planner",
+            "tools.factory_daemon",
+            "tools.goal_registry",
+            "tools.knowledge_engine",
+            "tools.memory_system",
+            "tools.meta_factory_control",
+            "tools.module_ownership",
+            "tools.platform_registry",
+            "tools.privilege_policy",
+            "tools.runtime_maintenance",
+            "tools.session_guard",
+            "tools.skill_training_loop",
+            "tools.soak_validation",
+            "tools.taskgraph_compiler",
+            "tools.tool_registry",
+            "tools.verification_engine",
+            "tools.vm_orchestrator"
+          ]
+        }
+      ]
+    }
+  },
+  "nodes": [
+    {
+      "id": "architecture_contract",
+      "title": "Define architecture contract for Strengthen agent orchestration capability",
+      "role": "architect",
+      "prompt": "Define architecture boundaries, interfaces, and ownership for: Strengthen agent orchestration capability",
+      "dependencies": [],
+      "status": "pending",
+      "task_id": null,
+      "team": "architecture_team",
+      "owned_modules": [
+        "brain",
+        "runtime.scheduler",
+        "tools.taskgraph_compiler",
+        "agents.coder_agent",
+        "agents.deploy_agent",
+        "agents.test_agent",
+        "app.network_agent",
+        "app.models",
+        "app.orchestrator",
+        "tools.codex_control"
+      ],
+      "kind": "architecture",
+      "module_focus": [
+        "agents.coder_agent",
+        "agents.deploy_agent",
+        "agents.test_agent",
+        "app.network_agent",
+        "app.models",
+        "runtime.scheduler",
+        "app.orchestrator",
+        "tools.codex_control"
+      ],
+      "owner_teams": [
+        "architecture_team",
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "agents.coder_agent",
+          "agents.deploy_agent",
+          "agents.test_agent",
+          "app.network_agent",
+          "app.models",
+          "runtime.scheduler",
+          "app.orchestrator",
+          "tools.codex_control"
+        ],
+        "owner_teams": [
+          "architecture_team",
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "agents.coder_agent",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "agents.deploy_agent",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "agents.test_agent",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "app.network_agent",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "app.models",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "runtime.scheduler",
+            "owner_team": "architecture_team",
+            "owner": "planner",
+            "layer": "agent_teams"
+          },
+          {
+            "module": "app.orchestrator",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.codex_control",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false
+    },
+    {
+      "id": "engineering_plan",
+      "title": "Plan engineering task graph for Strengthen agent orchestration capability",
+      "role": "product",
+      "prompt": "Produce the engineering task graph, interface map, and implementation slices for: Strengthen agent orchestration capability",
+      "dependencies": [
+        "architecture_contract"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "team": "architecture_team",
+      "owned_modules": [
+        "agents.coder_agent",
+        "agents.deploy_agent",
+        "agents.test_agent",
+        "app.network_agent",
+        "app.models",
+        "runtime.scheduler",
+        "app.orchestrator",
+        "tools.codex_control"
+      ],
+      "kind": "planning",
+      "module_focus": [
+        "agents.coder_agent",
+        "agents.deploy_agent",
+        "agents.test_agent",
+        "app.network_agent",
+        "app.models",
+        "runtime.scheduler",
+        "app.orchestrator",
+        "tools.codex_control"
+      ],
+      "owner_teams": [
+        "architecture_team",
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "agents.coder_agent",
+          "agents.deploy_agent",
+          "agents.test_agent",
+          "app.network_agent",
+          "app.models",
+          "runtime.scheduler",
+          "app.orchestrator",
+          "tools.codex_control"
+        ],
+        "owner_teams": [
+          "architecture_team",
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "agents.coder_agent",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "agents.deploy_agent",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "agents.test_agent",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "app.network_agent",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "app.models",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "runtime.scheduler",
+            "owner_team": "architecture_team",
+            "owner": "planner",
+            "layer": "agent_teams"
+          },
+          {
+            "module": "app.orchestrator",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.codex_control",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false
+    },
+    {
+      "id": "module_agents_coder_agent",
+      "title": "Implement module agents.coder_agent",
+      "role": "coder",
+      "prompt": "Implement or refine module agents.coder_agent for the current engineering goal.",
+      "dependencies": [
+        "engineering_plan"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "team": "backend_team",
+      "owned_modules": [
+        "agents.coder_agent"
+      ],
+      "kind": "module-implementation",
+      "module_focus": [
+        "agents.coder_agent"
+      ],
+      "owner_teams": [
+        "backend_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "agents.coder_agent"
+        ],
+        "owner_teams": [
+          "backend_team"
+        ],
+        "ownership": [
+          {
+            "module": "agents.coder_agent",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "owner": "coder",
+      "layer": "unclassified"
+    },
+    {
+      "id": "module_agents_deploy_agent",
+      "title": "Implement module agents.deploy_agent",
+      "role": "coder",
+      "prompt": "Implement or refine module agents.deploy_agent for the current engineering goal.",
+      "dependencies": [
+        "engineering_plan"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "team": "backend_team",
+      "owned_modules": [
+        "agents.deploy_agent"
+      ],
+      "kind": "module-implementation",
+      "module_focus": [
+        "agents.deploy_agent"
+      ],
+      "owner_teams": [
+        "backend_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "agents.deploy_agent"
+        ],
+        "owner_teams": [
+          "backend_team"
+        ],
+        "ownership": [
+          {
+            "module": "agents.deploy_agent",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "owner": "coder",
+      "layer": "unclassified"
+    },
+    {
+      "id": "module_agents_test_agent",
+      "title": "Implement module agents.test_agent",
+      "role": "coder",
+      "prompt": "Implement or refine module agents.test_agent for the current engineering goal.",
+      "dependencies": [
+        "engineering_plan"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "team": "backend_team",
+      "owned_modules": [
+        "agents.test_agent"
+      ],
+      "kind": "module-implementation",
+      "module_focus": [
+        "agents.test_agent"
+      ],
+      "owner_teams": [
+        "backend_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "agents.test_agent"
+        ],
+        "owner_teams": [
+          "backend_team"
+        ],
+        "ownership": [
+          {
+            "module": "agents.test_agent",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "owner": "coder",
+      "layer": "unclassified"
+    },
+    {
+      "id": "module_app_network_agent",
+      "title": "Implement module app.network_agent",
+      "role": "coder",
+      "prompt": "Implement or refine module app.network_agent for the current engineering goal.",
+      "dependencies": [
+        "engineering_plan"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "team": "backend_team",
+      "owned_modules": [
+        "app.network_agent"
+      ],
+      "kind": "module-implementation",
+      "module_focus": [
+        "app.network_agent"
+      ],
+      "owner_teams": [
+        "backend_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "app.network_agent"
+        ],
+        "owner_teams": [
+          "backend_team"
+        ],
+        "ownership": [
+          {
+            "module": "app.network_agent",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "owner": "coder",
+      "layer": "unclassified"
+    },
+    {
+      "id": "module_app_models",
+      "title": "Implement module app.models",
+      "role": "coder",
+      "prompt": "Implement or refine module app.models for the current engineering goal.",
+      "dependencies": [
+        "engineering_plan"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "team": "backend_team",
+      "owned_modules": [
+        "app.models"
+      ],
+      "kind": "module-implementation",
+      "module_focus": [
+        "app.models"
+      ],
+      "owner_teams": [
+        "backend_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "app.models"
+        ],
+        "owner_teams": [
+          "backend_team"
+        ],
+        "ownership": [
+          {
+            "module": "app.models",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "owner": "coder",
+      "layer": "unclassified"
+    },
+    {
+      "id": "module_runtime_scheduler",
+      "title": "Implement module runtime.scheduler",
+      "role": "architect",
+      "prompt": "Implement or refine module runtime.scheduler for the current engineering goal.",
+      "dependencies": [
+        "engineering_plan"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "team": "architecture_team",
+      "owned_modules": [
+        "runtime.scheduler"
+      ],
+      "kind": "module-implementation",
+      "module_focus": [
+        "runtime.scheduler"
+      ],
+      "owner_teams": [
+        "architecture_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "runtime.scheduler"
+        ],
+        "owner_teams": [
+          "architecture_team"
+        ],
+        "ownership": [
+          {
+            "module": "runtime.scheduler",
+            "owner_team": "architecture_team",
+            "owner": "planner",
+            "layer": "agent_teams"
+          }
+        ]
+      },
+      "patch_required": false,
+      "owner": "planner",
+      "layer": "agent_teams"
+    },
+    {
+      "id": "module_app_orchestrator",
+      "title": "Implement module app.orchestrator",
+      "role": "coder",
+      "prompt": "Implement or refine module app.orchestrator for the current engineering goal.",
+      "dependencies": [
+        "module_app_models"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "team": "backend_team",
+      "owned_modules": [
+        "app.orchestrator"
+      ],
+      "kind": "module-implementation",
+      "module_focus": [
+        "app.orchestrator"
+      ],
+      "owner_teams": [
+        "backend_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "app.orchestrator"
+        ],
+        "owner_teams": [
+          "backend_team"
+        ],
+        "ownership": [
+          {
+            "module": "app.orchestrator",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "owner": "coder",
+      "layer": "unclassified"
+    },
+    {
+      "id": "module_tools_codex_control",
+      "title": "Implement module tools.codex_control",
+      "role": "ops",
+      "prompt": "Implement or refine module tools.codex_control for the current engineering goal.",
+      "dependencies": [
+        "module_runtime_scheduler"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "team": "infrastructure_team",
+      "owned_modules": [
+        "tools.codex_control"
+      ],
+      "kind": "module-implementation",
+      "module_focus": [
+        "tools.codex_control"
+      ],
+      "owner_teams": [
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.codex_control"
+        ],
+        "owner_teams": [
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.codex_control",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "owner": "ops",
+      "layer": "unclassified"
+    },
+    {
+      "id": "verification_gate",
+      "title": "Run verification and architecture validation for Strengthen agent orchestration capability",
+      "role": "tester",
+      "prompt": "Run CI, tests, and architecture validation for: Strengthen agent orchestration capability",
+      "dependencies": [
+        "module_agents_coder_agent",
+        "module_agents_deploy_agent",
+        "module_agents_test_agent",
+        "module_app_network_agent",
+        "module_app_models",
+        "module_runtime_scheduler",
+        "module_app_orchestrator",
+        "module_tools_codex_control"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "team": "testing_team",
+      "owned_modules": [
+        "agents.coder_agent",
+        "agents.deploy_agent",
+        "agents.test_agent",
+        "app.network_agent",
+        "app.models",
+        "runtime.scheduler",
+        "app.orchestrator",
+        "tools.codex_control"
+      ],
+      "kind": "verification",
+      "module_focus": [
+        "agents.coder_agent",
+        "agents.deploy_agent",
+        "agents.test_agent",
+        "app.network_agent",
+        "app.models",
+        "runtime.scheduler",
+        "app.orchestrator",
+        "tools.codex_control"
+      ],
+      "owner_teams": [
+        "architecture_team",
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "agents.coder_agent",
+          "agents.deploy_agent",
+          "agents.test_agent",
+          "app.network_agent",
+          "app.models",
+          "runtime.scheduler",
+          "app.orchestrator",
+          "tools.codex_control"
+        ],
+        "owner_teams": [
+          "architecture_team",
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "agents.coder_agent",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "agents.deploy_agent",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "agents.test_agent",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "app.network_agent",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "app.models",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "runtime.scheduler",
+            "owner_team": "architecture_team",
+            "owner": "planner",
+            "layer": "agent_teams"
+          },
+          {
+            "module": "app.orchestrator",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.codex_control",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": true
+    }
+  ]
+}

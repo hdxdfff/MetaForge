@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "topic": "orchestrator_harness_split",
+  "summary": "MetaForge separates orchestration from delivery governance.",
+  "orchestrator_responsibilities": [
+    "goal intake",
+    "task decomposition",
+    "executor dispatch",
+    "context reduction",
+    "queue management"
+  ],
+  "harness_responsibilities": [
+    "contract validation",
+    "evidence validation",
+    "risk classification",
+    "release gating",
+    "rollback eligibility",
+    "audit ledger integrity"
+  ],
+  "shared_constraints": [
+    "context separation",
+    "evidence required for pass",
+    "no pass without evaluation",
+    "incident classification preserved separately from runtime continuity"
+  ],
+  "incident_classification": "quality_plane_regression_without_runtime_continuity_loss",
+  "default_governance_states": [
+    "planned",
+    "dispatched",
+    "generating",
+    "candidate_ready",
+    "evaluating",
+    "pass",
+    "fail"
+  ],
+  "last_updated": "2026-03-29"
+}

@@ -1,0 +1,1756 @@
+﻿{
+  "id": "a6d77b10d2b84c1b8281532e475c1354",
+  "prompt": "?Operate only on D:\\codex\\generated\\ml-binary-classification-lab.\nDo not modify the control layer, MetaForge OS runtime, unrelated workspaces, or the original file D:\\xwechat_files\\wxid_wraikhyxu4wp22_ee1d\\msg\\file\\2026-03\\ʵ��ģ��.docx.\nTask: build a bounded auto-run package for the binary classification lab defined by the supplied template. The package must cover logistic regression, linear SVM, and perceptron binary classification with SGD-style training, plus a report structure aligned to the template.\nRequired artifact: documentation delta.\nValidation: if a usable local dataset is found, run the experiment and record the execution command, the dataset used, and the measured test accuracy for each model. If no usable dataset is found, perform static verification only and state that limitation explicitly.\nControl tier: chore-only.\nIf safe implementation is not possible or required data is missing, downgrade to a blocker-first result instead of inventing metrics or analysis.\nWrite the result to D:\\codex\\generated\\ml-binary-classification-lab\\BINARY_CLASSIFICATION_AUTORUN_RESULT.md.\nThe result must include: source template path, local data discovery result, execution or blocker status, exact validation notes, and the next operator action if blocked.",
+  "title": "Auto-run binary classification lab from provided template",
+  "repo_path": "D:\\codex\\generated\\ml-binary-classification-lab",
+  "goal": "Auto-complete binary classification lab from template or surface blockers",
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": null,
+  "auto_approve": true,
+  "context_mode": "standard",
+  "max_context_chars": 1600,
+  "allow_resource_scan": true,
+  "allow_repo_status": true,
+  "capability_route": null,
+  "platform_context": {},
+  "vm_template": {
+    "template_id": "test_template",
+    "name": "Ubuntu Test Template",
+    "role": "test",
+    "cpus": 2,
+    "memory_mb": 3072,
+    "preinstalled_tools": [
+      "git",
+      "python",
+      "pytest",
+      "qemu-system-i386"
+    ],
+    "backend": "qemu-test",
+    "reason": "Matched test/regression keywords."
+  },
+  "vm_context": {
+    "mode": "vm-first",
+    "selected_template": {
+      "template_id": "test_template",
+      "name": "Ubuntu Test Template",
+      "role": "test",
+      "cpus": 2,
+      "memory_mb": 3072,
+      "preinstalled_tools": [
+        "git",
+        "python",
+        "pytest",
+        "qemu-system-i386"
+      ],
+      "backend": "qemu-test",
+      "reason": "Matched test/regression keywords."
+    },
+    "placement": "worker-vm",
+    "policy": {
+      "lane": "worker-vm",
+      "worker_vm_preferred": true,
+      "worker_vm_required": true,
+      "heavy_worker": false,
+      "reason": "vm-template-selected"
+    }
+  },
+  "execution_mode": "production",
+  "preferred_worker": null,
+  "scheduler_hint": {
+    "goal_target": "Auto-complete binary classification lab from template or surface blockers",
+    "module_focus": [
+      "tools.automation_lab",
+      "tools.codex_control",
+      "app.main",
+      "app.orchestrator",
+      "tools.kernel_mode"
+    ],
+    "owner_teams": [
+      "backend_team",
+      "infrastructure_team"
+    ],
+    "layers": [
+      "unclassified"
+    ],
+    "graph_matches": [
+      {
+        "module": "tools.automation_lab",
+        "owner_team": "infrastructure_team",
+        "owner": "ops",
+        "layer": "unclassified",
+        "dependency_count": 9,
+        "dependents": 1,
+        "internal_imports": [
+          "tools.ai_testing_compat",
+          "tools.autonomy_state",
+          "tools.global_policy_engine",
+          "tools.io_utils",
+          "tools.organization_workboard",
+          "tools.release_operations",
+          "tools.rnd_asset_governance",
+          "tools.rnd_delivery_pipeline",
+          "tools.rnd_department"
+        ]
+      },
+      {
+        "module": "tools.codex_control",
+        "owner_team": "infrastructure_team",
+        "owner": "ops",
+        "layer": "unclassified",
+        "dependency_count": 2,
+        "dependents": 0,
+        "internal_imports": [
+          "tools.session_guard",
+          "tools.taskgraph_compiler"
+        ]
+      },
+      {
+        "module": "app.main",
+        "owner_team": "backend_team",
+        "owner": "coder",
+        "layer": "unclassified",
+        "dependency_count": 11,
+        "dependents": 2,
+        "internal_imports": [
+          "app.config",
+          "app.models",
+          "app.network_agent",
+          "app.provider_gateway",
+          "tools.execution_trace",
+          "tools.goal_registry",
+          "tools.goal_runtime",
+          "tools.goal_storage_audit",
+          "tools.io_utils",
+          "tools.security_status",
+          "tools.vm_orchestrator"
+        ]
+      },
+      {
+        "module": "app.orchestrator",
+        "owner_team": "backend_team",
+        "owner": "coder",
+        "layer": "unclassified",
+        "dependency_count": 25,
+        "dependents": 0,
+        "internal_imports": [
+          "app.config",
+          "app.context_service",
+          "app.git_service",
+          "app.llm_service",
+          "app.model_router",
+          "app.models",
+          "app.openai_client",
+          "app.prompt_guard",
+          "app.resource_registry",
+          "app.safety_agent",
+          "app.worker_adapters",
+          "tools.artifact_audit",
+          "tools.capability_registry",
+          "tools.code_knowledge_graph",
+          "tools.context_builder",
+          "tools.context_kernel",
+          "tools.distillation",
+          "tools.goal_runtime",
+          "tools.io_utils",
+          "tools.kernel_mode",
+          "tools.privilege_policy",
+          "tools.security_audit",
+          "tools.tool_policy",
+          "tools.tool_registry",
+          "tools.vm_orchestrator"
+        ]
+      },
+      {
+        "module": "tools.kernel_mode",
+        "owner_team": "infrastructure_team",
+        "owner": "ops",
+        "layer": "unclassified",
+        "dependency_count": 2,
+        "dependents": 10,
+        "internal_imports": [
+          "tools.control_plane_policy",
+          "tools.io_utils"
+        ]
+      }
+    ],
+    "strategy_applied": false,
+    "strategy_explored": true,
+    "strategy_reason": "exploration_budget",
+    "strategy_revision": 435
+  },
+  "context_package": {
+    "task": "Auto-complete binary classification lab from template or surface blockers",
+    "task_type": "implementation",
+    "repo_path": "D:\\codex\\generated\\ml-binary-classification-lab",
+    "module_focus": [
+      "tools.automation_lab",
+      "tools.codex_control",
+      "app.main",
+      "app.orchestrator",
+      "tools.kernel_mode"
+    ],
+    "dependency_modules": [],
+    "owner_teams": [
+      "backend_team",
+      "infrastructure_team"
+    ],
+    "layers": [
+      "unclassified"
+    ],
+    "project_context": {},
+    "knowledge_hints": {
+      "preferred_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension",
+        "kv_cache_manager",
+        "local_llm_runner",
+        "token_streaming"
+      ],
+      "preferred_workers": [
+        "reviewer",
+        "coder",
+        "supervisor"
+      ],
+      "repo_learning": {
+        "updated_at": "2026-03-20T16:17:14.183239Z",
+        "embedding": {
+          "provider": "local",
+          "model": "BAAI/bge-small-en-v1.5",
+          "dimensions": 128,
+          "backend": "hashed-local",
+          "ready": true
+        },
+        "graph_modules": 161,
+        "chunk_count": 144,
+        "top_modules": [
+          {
+            "module": "tools.brain_loop",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\brain_loop.py"
+          },
+          {
+            "module": "tools.factory_daemon",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\factory_daemon.py"
+          },
+          {
+            "module": "tools.meta_factory_control",
+            "layer": "architecture_engine",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\meta_factory_control.py"
+          },
+          {
+            "module": "app.orchestrator",
+            "layer": "unclassified",
+            "owner_team": "backend_team",
+            "path": "D:\\codex\\orchestrator-mvp\\app\\orchestrator.py"
+          },
+          {
+            "module": "tools.decision_engine",
+            "layer": "task_graph_planner",
+            "owner_team": "architecture_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\decision_engine.py"
+          },
+          {
+            "module": "app.main",
+            "layer": "unclassified",
+            "owner_team": "backend_team",
+            "path": "D:\\codex\\orchestrator-mvp\\app\\main.py"
+          },
+          {
+            "module": "tools.verification_engine",
+            "layer": "verification",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\verification_engine.py"
+          },
+          {
+            "module": "tools.taskgraph_compiler",
+            "layer": "architecture_engine",
+            "owner_team": "architecture_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\taskgraph_compiler.py"
+          },
+          {
+            "module": "app.worker_adapters",
+            "layer": "unclassified",
+            "owner_team": "backend_team",
+            "path": "D:\\codex\\orchestrator-mvp\\app\\worker_adapters.py"
+          },
+          {
+            "module": "tools.automation_lab",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\automation_lab.py"
+          },
+          {
+            "module": "tools.change_request_analyzer",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\change_request_analyzer.py"
+          },
+          {
+            "module": "tools.company_os",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\company_os.py"
+          }
+        ],
+        "learned_repositories": [
+          {
+            "repo_id": "gh-dc17f0f4fb",
+            "full_name": "Significant-Gravitas/AutoGPT",
+            "local_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+            "language_mix": [
+              {
+                "language": ".json",
+                "files": 1076
+              },
+              {
+                "language": "Python",
+                "files": 914
+              },
+              {
+                "language": "TypeScript",
+                "files": 911
+              },
+              {
+                "language": "Markdown",
+                "files": 320
+              },
+              {
+                "language": ".yml",
+                "files": 43
+              },
+              {
+                "language": ".yaml",
+                "files": 23
+              }
+            ],
+            "key_files": [
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\README.md"
+            ],
+            "sampled_files": [
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\docs\\integrations\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\classic\\forge\\forge\\components\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\backend\\load-tests\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\classic\\original_autogpt\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\frontend\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\frontend\\package.json",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\README.md"
+            ],
+            "capabilities": [
+              "local_llm_runner",
+              "token_streaming",
+              "kv_cache_manager",
+              "agent_orchestration",
+              "tool_execution",
+              "workflow_planning"
+            ],
+            "architecture_summary": "# AutoGPT: Build, Deploy, and Run AI Agents\n\n[![Discord Follow](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscord.com%2Fapi%2Finvites%2Fautogpt%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&label=total%20members&logo=discord&logoColor=white&color=7289da)](https://discord.gg/autogpt) &ensp;\n[![Twitter Follow](https://img.shields.io/twitter/follow/Auto_GPT?style=social)](https://twitter.com/Auto_GPT) &ensp;\n\n<!-- Keep these links. Translations will automatically update with the README. -->\n[Deutsch](https://zdoc.app/de/Significant-Gravitas/AutoGPT) | \n[Espa?ol](https:",
+            "experiment_plan": {
+              "sandbox_required": true,
+              "recommended_commands": [],
+              "can_run_without_dependency_install": false
+            },
+            "chunk_count": 24
+          }
+        ],
+        "learned_repository_count": 1,
+        "extracted_capabilities": [
+          "agent_orchestration",
+          "kv_cache_manager",
+          "local_llm_runner",
+          "token_streaming",
+          "tool_execution",
+          "workflow_planning"
+        ],
+        "github_learning": {
+          "updated_at": "2026-03-20T16:17:14.183239Z",
+          "enabled": true,
+          "topics": [
+            "agent",
+            "llm",
+            "compiler",
+            "kernel",
+            "robotics",
+            "distributed-system",
+            "inference"
+          ],
+          "languages": [
+            "Python",
+            "TypeScript",
+            "Rust",
+            "C++",
+            "C",
+            "Go"
+          ],
+          "managed_repo_count": 10,
+          "ready_repo_count": 1,
+          "candidate_repo_count": 9,
+          "scan_candidate_count": 10,
+          "top_candidates": [
+            {
+              "full_name": "langchain-ai/langchain",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\langchain-ai-langchain",
+              "score": 41262.1142,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "ggerganov/llama.cpp",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\ggerganov-llama.cpp",
+              "score": 30857.5689,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "OpenInterpreter/open-interpreter",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\OpenInterpreter-open-interpreter",
+              "score": 23252.3854,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "microsoft/autogen",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\microsoft-autogen",
+              "score": 16454.9498,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "vllm-project/vllm",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\vllm-project-vllm",
+              "score": 15260.6594,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "ray-project/ray",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\ray-project-ray",
+              "score": 14451.3379,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "crewAIInc/crewAI",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\crewAIInc-crewAI",
+              "score": 12846.5735,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "dask/dask",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\dask-dask",
+              "score": 5243.0283,
+              "learning_status": "candidate"
+            }
+          ]
+        }
+      }
+    },
+    "dialogue_hints": {
+      "active_handoff": {
+        "session_id": "asset-20260314-071552",
+        "source": "metaforge-assetize",
+        "title": "MetaForge dialogue asset 20260314-071552",
+        "workspace": "D:\\codex",
+        "summary": "continue bounded dispatch with validation-first policy",
+        "topics": [
+          "dialogue-compaction",
+          "metaforge-handoff"
+        ],
+        "constraints": [
+          "explicit validation notes required for all delivery claims"
+        ],
+        "decisions": [
+          "continue bounded dispatch with validation-first policy"
+        ],
+        "tags": [],
+        "artifacts": [
+          "D:\\codex\\dialogue-assets\\dialogue-memory-20260314-071552.json",
+          "D:\\codex\\dialogue-assets\\dialogue-handoff-20260314-071552.json",
+          "D:\\codex\\dialogue-assets\\dialogue-asset-note-20260314-071552.md"
+        ],
+        "message_count": 0,
+        "last_user_message": "",
+        "last_assistant_message": "",
+        "updated_at": "2026-03-13T23:15:52.993887Z",
+        "created_at": "2026-03-13T23:15:52.993887Z"
+      },
+      "recent_topics": [
+        "dialogue-compaction",
+        "metaforge-handoff",
+        "codex-memory",
+        "metaforge"
+      ],
+      "shared_constraints": [
+        "explicit validation notes required for all delivery claims",
+        "Explicit validation is required before claiming delivery."
+      ],
+      "recent_decisions": [
+        "continue bounded dispatch with validation-first policy",
+        "Use local dialogue ledger as the shared memory bridge."
+      ],
+      "recent_sessions": [
+        {
+          "session_id": "asset-20260314-071552",
+          "source": "metaforge-assetize",
+          "title": "MetaForge dialogue asset 20260314-071552",
+          "workspace": "D:\\codex",
+          "summary": "continue bounded dispatch with validation-first policy",
+          "topics": [
+            "dialogue-compaction",
+            "metaforge-handoff"
+          ],
+          "constraints": [
+            "explicit validation notes required for all delivery claims"
+          ],
+          "decisions": [
+            "continue bounded dispatch with validation-first policy"
+          ],
+          "tags": [],
+          "artifacts": [
+            "D:\\codex\\dialogue-assets\\dialogue-memory-20260314-071552.json",
+            "D:\\codex\\dialogue-assets\\dialogue-handoff-20260314-071552.json",
+            "D:\\codex\\dialogue-assets\\dialogue-asset-note-20260314-071552.md"
+          ],
+          "message_count": 0,
+          "last_user_message": "",
+          "last_assistant_message": "",
+          "updated_at": "2026-03-13T23:15:52.993887Z",
+          "created_at": "2026-03-13T23:15:52.993887Z"
+        },
+        {
+          "session_id": "asset-20260314-061947",
+          "source": "metaforge-assetize",
+          "title": "MetaForge dialogue asset 20260314-061947",
+          "workspace": "D:\\codex",
+          "summary": "continue bounded dispatch with validation-first policy",
+          "topics": [
+            "dialogue-compaction",
+            "metaforge-handoff"
+          ],
+          "constraints": [
+            "explicit validation notes required for all delivery claims"
+          ],
+          "decisions": [
+            "continue bounded dispatch with validation-first policy"
+          ],
+          "tags": [],
+          "artifacts": [
+            "D:\\codex\\dialogue-assets\\dialogue-memory-20260314-061947.json",
+            "D:\\codex\\dialogue-assets\\dialogue-handoff-20260314-061947.json",
+            "D:\\codex\\dialogue-assets\\dialogue-asset-note-20260314-061947.md"
+          ],
+          "message_count": 0,
+          "last_user_message": "",
+          "last_assistant_message": "",
+          "updated_at": "2026-03-13T22:19:48.421529Z",
+          "created_at": "2026-03-13T22:19:48.421529Z"
+        },
+        {
+          "session_id": "codex-shared-memory-20260314",
+          "source": "codex",
+          "title": "Codex MetaForge shared memory rollout",
+          "workspace": "D:\\codex",
+          "summary": "���� Codex ���ضԻ����䲢���� MetaForge ���� memory snapshot��",
+          "topics": [
+            "codex-memory",
+            "metaforge"
+          ],
+          "constraints": [
+            "Explicit validation is required before claiming delivery."
+          ],
+          "decisions": [
+            "Use local dialogue ledger as the shared memory bridge."
+          ],
+          "tags": [],
+          "artifacts": [],
+          "message_count": 2,
+          "last_user_message": "����Ҫ��codex�������Ľ������ش��������� ʵ��codex���жԻ���MetaForgeϵͳ����",
+          "last_assistant_message": "�������� memory/context ��ܽ������ع���Ի����䣬��������� MetaForge snapshot �� context package��",
+          "updated_at": "2026-03-13T22:16:20.602058Z",
+          "created_at": "2026-03-13T22:16:20.602058Z"
+        }
+      ]
+    },
+    "strategy": {
+      "applied": false,
+      "explored": true,
+      "reason": "exploration_budget",
+      "pattern_id": null,
+      "pattern_score": null,
+      "preferred_worker": null,
+      "tools_used": [],
+      "tool_actions": [],
+      "structure_summary": null,
+      "memory_revision": 435,
+      "hint_lines": [],
+      "exploration_ratio": 0.2,
+      "candidate_count": 0
+    },
+    "verification_scope": {
+      "modules": [
+        "tools.automation_lab",
+        "tools.codex_control",
+        "app.main",
+        "app.orchestrator",
+        "tools.kernel_mode"
+      ],
+      "teams": [
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "layers": [
+        "unclassified"
+      ]
+    },
+    "current_plan": [
+      "Task type: implementation",
+      "Primary modules: tools.automation_lab, tools.codex_control, app.main, app.orchestrator, tools.kernel_mode",
+      "Dependency expansion: none",
+      "Owner teams: backend_team, infrastructure_team",
+      "Layers: unclassified",
+      "Scheduler owner teams: backend_team, infrastructure_team",
+      "Scheduler layers: unclassified",
+      "Strategy mode: exploration path retained this cycle"
+    ],
+    "summary_blocks": [
+      "Task type: implementation\nPrimary modules: tools.automation_lab, tools.codex_control, app.main, app.orchestrator, tools.kernel_mode\nDependency expansion: none\nOwner teams: backend_team, infrastructure_team\nLayers: unclassified\nScheduler owner teams: backend_team, infrastructure_team\nScheduler layers: unclassified\nStrategy mode: exploration path retained this cycle",
+      "Failure pattern: unknown_failure -> investigate\nFailure pattern: Task failed after execution error. -> investigate\nPreferred capabilities: agent_orchestration, webapp_generation, deploy_scaffold, tool_extension, kv_cache_manager\nPreferred workers: reviewer, coder, supervisor\nTop capability reputation: agent_orchestration, webapp_generation, deploy_scaffold, tool_extension\nTop worker reputation: reviewer, coder, supervisor\nRepo learning modules=161 chunks=144",
+      "Active dialogue summary: continue bounded dispatch with validation-first policy\nShared dialogue topics: dialogue-compaction, metaforge-handoff, codex-memory, metaforge\nShared dialogue constraints: explicit validation notes required for all delivery claims; Explicit validation is required before claiming delivery.\nShared dialogue decisions: continue bounded dispatch with validation-first policy; Use local dialogue ledger as the shared memory bridge."
+    ],
+    "budget_chars": 1600
+  },
+  "tool_route": {
+    "request": "Auto-complete binary classification lab from template or surface blockers",
+    "selected": null,
+    "candidates": [],
+    "tool_count": 16
+  },
+  "execution_lane": "worker-vm",
+  "worker_vm_policy": {
+    "lane": "worker-vm",
+    "worker_vm_preferred": true,
+    "worker_vm_required": true,
+    "heavy_worker": false,
+    "reason": "vm-template-selected"
+  },
+  "prompt_guard": {
+    "decision": "allow",
+    "risk_level": "low",
+    "sanitized_prompt": "?Operate only on D:\\codex\\generated\\ml-binary-classification-lab.\nDo not modify the control layer, MetaForge OS runtime, unrelated workspaces, or the original file D:\\xwechat_files\\wxid_wraikhyxu4wp22_ee1d\\msg\\file\\2026-03\\ʵ��ģ��.docx.\nTask: build a bounded auto-run package for the binary classification lab defined by the supplied template. The package must cover logistic regression, linear SVM, and perceptron binary classification with SGD-style training, plus a report structure aligned to the template.\nRequired artifact: documentation delta.\nValidation: if a usable local dataset is found, run the experiment and record the execution command, the dataset used, and the measured test accuracy for each model. If no usable dataset is found, perform static verification only and state that limitation explicitly.\nControl tier: chore-only.\nIf safe implementation is not possible or required data is missing, downgrade to a blocker-first result instead of inventing metrics or analysis.\nWrite the result to D:\\codex\\generated\\ml-binary-classification-lab\\BINARY_CLASSIFICATION_AUTORUN_RESULT.md.\nThe result must include: source template path, local data discovery result, execution or blocker status, exact validation notes, and the next operator action if blocked.",
+    "matched_rules": [],
+    "reason_summary": "Prompt accepted.",
+    "metadata": {
+      "project_id": null,
+      "repo_id": null,
+      "caller": "codex-experiment",
+      "repo_path": "D:\\codex\\generated\\ml-binary-classification-lab"
+    }
+  },
+  "tool_policy": {
+    "version": 1,
+    "role": "observer",
+    "allowed_actions": [
+      "read_audit",
+      "read_policy",
+      "read_repo"
+    ],
+    "denied_actions": [
+      "docker_exec",
+      "file_write_core",
+      "git_push",
+      "install_package",
+      "shell_exec"
+    ],
+    "approval_required": [],
+    "auto_approve": true,
+    "repo_path": "D:\\codex\\generated\\ml-binary-classification-lab",
+    "execution_lane": "worker-vm",
+    "selected_tool": {}
+  },
+  "security_review": {
+    "verdict": "review",
+    "hold_before_execution": false,
+    "sandbox_required": false,
+    "required_controls": [
+      "workspace_scope_review"
+    ],
+    "reasons": [
+      "Task targets a path outside the normal workspace roots."
+    ],
+    "reviewer": "safety_agent"
+  },
+  "artifact_spec": {
+    "artifact_id": "ml-binary-classification-lab",
+    "artifact_type": "operator_digest",
+    "type": "operator_digest",
+    "output": "BINARY_CLASSIFICATION_AUTORUN_RESULT.md",
+    "entrypoint": "BINARY_CLASSIFICATION_AUTORUN_RESULT.md",
+    "deliverables": [
+      "operator_digest"
+    ],
+    "expected_outputs": [
+      "operator_digest"
+    ],
+    "required_artifacts": [
+      "BINARY_CLASSIFICATION_AUTORUN_RESULT.md"
+    ],
+    "evidence": [
+      "BINARY_CLASSIFICATION_AUTORUN_RESULT.md"
+    ],
+    "verification": {
+      "build_required": false,
+      "tests_required": false
+    },
+    "registry": "artifact_registry",
+    "test_command": null,
+    "min_fresh_artifacts": 1
+  },
+  "product_design": {
+    "summary": "",
+    "user_stories": [],
+    "api_surfaces": [],
+    "pages_or_flows": [],
+    "risks": []
+  },
+  "architecture_design": {
+    "summary": "",
+    "stack": [],
+    "modules": [],
+    "data_components": [],
+    "deploy_units": []
+  },
+  "quality_plan": {
+    "unit_tests": [],
+    "integration_tests": [],
+    "e2e_tests": [],
+    "static_checks": [],
+    "security_checks": []
+  },
+  "deployment_plan": {
+    "summary": "",
+    "artifacts": [],
+    "ci_steps": [],
+    "blockers": []
+  },
+  "monitoring_plan": {
+    "signals": [],
+    "alert_rules": [],
+    "maintenance_loops": []
+  },
+  "contract": {
+    "requirements": [
+      "?Operate only on D:\\codex\\generated\\ml-binary-classification-lab.\nDo not modify the control layer, MetaForge OS runtime, unrelated workspaces, or the original file D:\\xwechat_files\\wxid_wraikhyxu4wp22_ee1d\\msg\\file\\2026-",
+      "Operate in production mode."
+    ],
+    "deliverables": [
+      "Auto-complete binary classification lab from template or surface blockers",
+      "Refresh production evidence, not just prose.",
+      "Artifact: BINARY_CLASSIFICATION_AUTORUN_RESULT.md",
+      "Changes scoped to D:\\codex\\generated\\ml-binary-classification-lab"
+    ],
+    "acceptance_criteria": [
+      "Auto-complete binary classification lab from template or surface blockers",
+      "Produce explicit verification output or a bounded failure report.",
+      "Do not treat documentation-only progress as production completion.",
+      "Task is invalid unless the declared artifact set is refreshed and verifiable."
+    ],
+    "constraints": [
+      "Prefer local tools and cheap workers first.",
+      "Keep changes minimal and reversible.",
+      "Follow the configured development/test loop.",
+      "Production work must refresh runtime or build artifacts when an evidence contract exists."
+    ],
+    "risks": [],
+    "artifact_spec": {
+      "artifact_id": "ml-binary-classification-lab",
+      "artifact_type": "operator_digest",
+      "type": "operator_digest",
+      "output": "BINARY_CLASSIFICATION_AUTORUN_RESULT.md",
+      "entrypoint": "BINARY_CLASSIFICATION_AUTORUN_RESULT.md",
+      "deliverables": [
+        "operator_digest"
+      ],
+      "expected_outputs": [
+        "operator_digest"
+      ],
+      "required_artifacts": [
+        "BINARY_CLASSIFICATION_AUTORUN_RESULT.md"
+      ],
+      "evidence": [
+        "BINARY_CLASSIFICATION_AUTORUN_RESULT.md"
+      ],
+      "verification": {
+        "build_required": false,
+        "tests_required": false
+      },
+      "registry": "artifact_registry",
+      "test_command": null,
+      "min_fresh_artifacts": 1
+    }
+  },
+  "agent_assignments": [
+    {
+      "role": "product",
+      "responsibility": "Restate requirements, scope, and acceptance criteria.",
+      "status": "planned"
+    },
+    {
+      "role": "architect",
+      "responsibility": "Keep module boundaries and runtime choices coherent.",
+      "status": "planned"
+    },
+    {
+      "role": "coder",
+      "responsibility": "Implement the smallest safe change set.",
+      "status": "planned"
+    },
+    {
+      "role": "tester",
+      "responsibility": "Run local, VM, or deterministic validation.",
+      "status": "planned"
+    },
+    {
+      "role": "reviewer",
+      "responsibility": "Check risks, regressions, and rule compliance.",
+      "status": "planned"
+    },
+    {
+      "role": "ops",
+      "responsibility": "Prepare git/deploy/release checks for repository changes.",
+      "status": "planned"
+    },
+    {
+      "role": "supervisor",
+      "responsibility": "Track task state, escalation, and pause conditions.",
+      "status": "planned"
+    }
+  ],
+  "rule_checks": [
+    {
+      "name": "feature_branch_required",
+      "status": "pass",
+      "detail": "Repository changes should avoid main-branch direct edits."
+    },
+    {
+      "name": "tests_required_before_done",
+      "status": "pass",
+      "detail": "Tasks should end with local validation or a structured failure report."
+    },
+    {
+      "name": "destructive_change_gate",
+      "status": "pass",
+      "detail": "No destructive keyword detected."
+    },
+    {
+      "name": "high_risk_domain_gate",
+      "status": "pass",
+      "detail": "No special approval domain detected."
+    }
+  ],
+  "git_workflow": {
+    "enabled": true,
+    "repo_registered": false,
+    "branch_required": true,
+    "branch_name": "codex/a6d77b10",
+    "commit_required": true,
+    "pr_required": true,
+    "status_summary": "Repository path present but not registered in orchestrator."
+  },
+  "context_envelope": null,
+  "cheap_lane": {
+    "calls_used": 0,
+    "chars_used": 0,
+    "blocked": false,
+    "block_reason": null,
+    "repeated_output_count": 0,
+    "last_worker": null,
+    "last_output_fingerprint": null
+  },
+  "escalation_count": 0,
+  "status": "failed",
+  "created_at": "2026-03-20T16:23:39.111022Z",
+  "updated_at": "2026-03-20T16:23:52.602769Z",
+  "plan": [],
+  "events": [
+    {
+      "timestamp": "2026-03-20T16:23:39.111022Z",
+      "level": "info",
+      "message": "Task accepted by orchestrator.",
+      "data": {}
+    },
+    {
+      "timestamp": "2026-03-20T16:23:44.841008Z",
+      "level": "info",
+      "message": "Task dispatched through unified API.",
+      "data": {
+        "caller": "codex-experiment",
+        "project_id": null,
+        "repo_id": null,
+        "policy_version": "9",
+        "capability_route": null,
+        "platform_context": {},
+        "vm_template": {
+          "template_id": "test_template",
+          "name": "Ubuntu Test Template",
+          "role": "test",
+          "cpus": 2,
+          "memory_mb": 3072,
+          "preinstalled_tools": [
+            "git",
+            "python",
+            "pytest",
+            "qemu-system-i386"
+          ],
+          "backend": "qemu-test",
+          "reason": "Matched test/regression keywords."
+        },
+        "vm_context": {
+          "mode": "vm-first",
+          "selected_template": {
+            "template_id": "test_template",
+            "name": "Ubuntu Test Template",
+            "role": "test",
+            "cpus": 2,
+            "memory_mb": 3072,
+            "preinstalled_tools": [
+              "git",
+              "python",
+              "pytest",
+              "qemu-system-i386"
+            ],
+            "backend": "qemu-test",
+            "reason": "Matched test/regression keywords."
+          },
+          "placement": "worker-vm",
+          "policy": {
+            "lane": "worker-vm",
+            "worker_vm_preferred": true,
+            "worker_vm_required": true,
+            "heavy_worker": false,
+            "reason": "vm-template-selected"
+          }
+        },
+        "tool_route": {
+          "request": "Auto-complete binary classification lab from template or surface blockers",
+          "selected": null,
+          "candidates": [],
+          "tool_count": 16
+        },
+        "execution_mode": "production",
+        "execution_lane": "worker-vm",
+        "worker_vm_policy": {
+          "lane": "worker-vm",
+          "worker_vm_preferred": true,
+          "worker_vm_required": true,
+          "heavy_worker": false,
+          "reason": "vm-template-selected"
+        },
+        "code_graph_focus": {
+          "module_focus": [
+            "tools.automation_lab",
+            "tools.codex_control",
+            "app.main",
+            "app.orchestrator",
+            "tools.kernel_mode"
+          ],
+          "owner_teams": [
+            "backend_team",
+            "infrastructure_team"
+          ],
+          "layers": [
+            "unclassified"
+          ],
+          "matched_modules": [
+            {
+              "module": "tools.automation_lab",
+              "owner_team": "infrastructure_team",
+              "owner": "ops",
+              "layer": "unclassified",
+              "dependency_count": 9,
+              "dependents": 1,
+              "internal_imports": [
+                "tools.ai_testing_compat",
+                "tools.autonomy_state",
+                "tools.global_policy_engine",
+                "tools.io_utils",
+                "tools.organization_workboard",
+                "tools.release_operations",
+                "tools.rnd_asset_governance",
+                "tools.rnd_delivery_pipeline",
+                "tools.rnd_department"
+              ]
+            },
+            {
+              "module": "tools.codex_control",
+              "owner_team": "infrastructure_team",
+              "owner": "ops",
+              "layer": "unclassified",
+              "dependency_count": 2,
+              "dependents": 0,
+              "internal_imports": [
+                "tools.session_guard",
+                "tools.taskgraph_compiler"
+              ]
+            },
+            {
+              "module": "app.main",
+              "owner_team": "backend_team",
+              "owner": "coder",
+              "layer": "unclassified",
+              "dependency_count": 11,
+              "dependents": 2,
+              "internal_imports": [
+                "app.config",
+                "app.models",
+                "app.network_agent",
+                "app.provider_gateway",
+                "tools.execution_trace",
+                "tools.goal_registry",
+                "tools.goal_runtime",
+                "tools.goal_storage_audit",
+                "tools.io_utils",
+                "tools.security_status",
+                "tools.vm_orchestrator"
+              ]
+            },
+            {
+              "module": "app.orchestrator",
+              "owner_team": "backend_team",
+              "owner": "coder",
+              "layer": "unclassified",
+              "dependency_count": 25,
+              "dependents": 0,
+              "internal_imports": [
+                "app.config",
+                "app.context_service",
+                "app.git_service",
+                "app.llm_service",
+                "app.model_router",
+                "app.models",
+                "app.openai_client",
+                "app.prompt_guard",
+                "app.resource_registry",
+                "app.safety_agent",
+                "app.worker_adapters",
+                "tools.artifact_audit",
+                "tools.capability_registry",
+                "tools.code_knowledge_graph",
+                "tools.context_builder",
+                "tools.context_kernel",
+                "tools.distillation",
+                "tools.goal_runtime",
+                "tools.io_utils",
+                "tools.kernel_mode",
+                "tools.privilege_policy",
+                "tools.security_audit",
+                "tools.tool_policy",
+                "tools.tool_registry",
+                "tools.vm_orchestrator"
+              ]
+            },
+            {
+              "module": "tools.kernel_mode",
+              "owner_team": "infrastructure_team",
+              "owner": "ops",
+              "layer": "unclassified",
+              "dependency_count": 2,
+              "dependents": 10,
+              "internal_imports": [
+                "tools.control_plane_policy",
+                "tools.io_utils"
+              ]
+            }
+          ]
+        },
+        "scheduler_hint": {
+          "goal_target": "Auto-complete binary classification lab from template or surface blockers",
+          "module_focus": [
+            "tools.automation_lab",
+            "tools.codex_control",
+            "app.main",
+            "app.orchestrator",
+            "tools.kernel_mode"
+          ],
+          "owner_teams": [
+            "backend_team",
+            "infrastructure_team"
+          ],
+          "layers": [
+            "unclassified"
+          ],
+          "graph_matches": [
+            {
+              "module": "tools.automation_lab",
+              "owner_team": "infrastructure_team",
+              "owner": "ops",
+              "layer": "unclassified",
+              "dependency_count": 9,
+              "dependents": 1,
+              "internal_imports": [
+                "tools.ai_testing_compat",
+                "tools.autonomy_state",
+                "tools.global_policy_engine",
+                "tools.io_utils",
+                "tools.organization_workboard",
+                "tools.release_operations",
+                "tools.rnd_asset_governance",
+                "tools.rnd_delivery_pipeline",
+                "tools.rnd_department"
+              ]
+            },
+            {
+              "module": "tools.codex_control",
+              "owner_team": "infrastructure_team",
+              "owner": "ops",
+              "layer": "unclassified",
+              "dependency_count": 2,
+              "dependents": 0,
+              "internal_imports": [
+                "tools.session_guard",
+                "tools.taskgraph_compiler"
+              ]
+            },
+            {
+              "module": "app.main",
+              "owner_team": "backend_team",
+              "owner": "coder",
+              "layer": "unclassified",
+              "dependency_count": 11,
+              "dependents": 2,
+              "internal_imports": [
+                "app.config",
+                "app.models",
+                "app.network_agent",
+                "app.provider_gateway",
+                "tools.execution_trace",
+                "tools.goal_registry",
+                "tools.goal_runtime",
+                "tools.goal_storage_audit",
+                "tools.io_utils",
+                "tools.security_status",
+                "tools.vm_orchestrator"
+              ]
+            },
+            {
+              "module": "app.orchestrator",
+              "owner_team": "backend_team",
+              "owner": "coder",
+              "layer": "unclassified",
+              "dependency_count": 25,
+              "dependents": 0,
+              "internal_imports": [
+                "app.config",
+                "app.context_service",
+                "app.git_service",
+                "app.llm_service",
+                "app.model_router",
+                "app.models",
+                "app.openai_client",
+                "app.prompt_guard",
+                "app.resource_registry",
+                "app.safety_agent",
+                "app.worker_adapters",
+                "tools.artifact_audit",
+                "tools.capability_registry",
+                "tools.code_knowledge_graph",
+                "tools.context_builder",
+                "tools.context_kernel",
+                "tools.distillation",
+                "tools.goal_runtime",
+                "tools.io_utils",
+                "tools.kernel_mode",
+                "tools.privilege_policy",
+                "tools.security_audit",
+                "tools.tool_policy",
+                "tools.tool_registry",
+                "tools.vm_orchestrator"
+              ]
+            },
+            {
+              "module": "tools.kernel_mode",
+              "owner_team": "infrastructure_team",
+              "owner": "ops",
+              "layer": "unclassified",
+              "dependency_count": 2,
+              "dependents": 10,
+              "internal_imports": [
+                "tools.control_plane_policy",
+                "tools.io_utils"
+              ]
+            }
+          ],
+          "strategy_applied": false,
+          "strategy_explored": true,
+          "strategy_reason": "exploration_budget",
+          "strategy_revision": 435
+        },
+        "context_package": {
+          "task": "Auto-complete binary classification lab from template or surface blockers",
+          "task_type": "implementation",
+          "repo_path": "D:\\codex\\generated\\ml-binary-classification-lab",
+          "module_focus": [
+            "tools.automation_lab",
+            "tools.codex_control",
+            "app.main",
+            "app.orchestrator",
+            "tools.kernel_mode"
+          ],
+          "dependency_modules": [],
+          "owner_teams": [
+            "backend_team",
+            "infrastructure_team"
+          ],
+          "layers": [
+            "unclassified"
+          ],
+          "project_context": {},
+          "knowledge_hints": {
+            "preferred_capabilities": [
+              "agent_orchestration",
+              "webapp_generation",
+              "deploy_scaffold",
+              "tool_extension",
+              "kv_cache_manager",
+              "local_llm_runner",
+              "token_streaming"
+            ],
+            "preferred_workers": [
+              "reviewer",
+              "coder",
+              "supervisor"
+            ],
+            "repo_learning": {
+              "updated_at": "2026-03-20T16:17:14.183239Z",
+              "embedding": {
+                "provider": "local",
+                "model": "BAAI/bge-small-en-v1.5",
+                "dimensions": 128,
+                "backend": "hashed-local",
+                "ready": true
+              },
+              "graph_modules": 161,
+              "chunk_count": 144,
+              "top_modules": [
+                {
+                  "module": "tools.brain_loop",
+                  "layer": "unclassified",
+                  "owner_team": "infrastructure_team",
+                  "path": "D:\\codex\\orchestrator-mvp\\tools\\brain_loop.py"
+                },
+                {
+                  "module": "tools.factory_daemon",
+                  "layer": "unclassified",
+                  "owner_team": "infrastructure_team",
+                  "path": "D:\\codex\\orchestrator-mvp\\tools\\factory_daemon.py"
+                },
+                {
+                  "module": "tools.meta_factory_control",
+                  "layer": "architecture_engine",
+                  "owner_team": "infrastructure_team",
+                  "path": "D:\\codex\\orchestrator-mvp\\tools\\meta_factory_control.py"
+                },
+                {
+                  "module": "app.orchestrator",
+                  "layer": "unclassified",
+                  "owner_team": "backend_team",
+                  "path": "D:\\codex\\orchestrator-mvp\\app\\orchestrator.py"
+                },
+                {
+                  "module": "tools.decision_engine",
+                  "layer": "task_graph_planner",
+                  "owner_team": "architecture_team",
+                  "path": "D:\\codex\\orchestrator-mvp\\tools\\decision_engine.py"
+                },
+                {
+                  "module": "app.main",
+                  "layer": "unclassified",
+                  "owner_team": "backend_team",
+                  "path": "D:\\codex\\orchestrator-mvp\\app\\main.py"
+                },
+                {
+                  "module": "tools.verification_engine",
+                  "layer": "verification",
+                  "owner_team": "infrastructure_team",
+                  "path": "D:\\codex\\orchestrator-mvp\\tools\\verification_engine.py"
+                },
+                {
+                  "module": "tools.taskgraph_compiler",
+                  "layer": "architecture_engine",
+                  "owner_team": "architecture_team",
+                  "path": "D:\\codex\\orchestrator-mvp\\tools\\taskgraph_compiler.py"
+                },
+                {
+                  "module": "app.worker_adapters",
+                  "layer": "unclassified",
+                  "owner_team": "backend_team",
+                  "path": "D:\\codex\\orchestrator-mvp\\app\\worker_adapters.py"
+                },
+                {
+                  "module": "tools.automation_lab",
+                  "layer": "unclassified",
+                  "owner_team": "infrastructure_team",
+                  "path": "D:\\codex\\orchestrator-mvp\\tools\\automation_lab.py"
+                },
+                {
+                  "module": "tools.change_request_analyzer",
+                  "layer": "unclassified",
+                  "owner_team": "infrastructure_team",
+                  "path": "D:\\codex\\orchestrator-mvp\\tools\\change_request_analyzer.py"
+                },
+                {
+                  "module": "tools.company_os",
+                  "layer": "unclassified",
+                  "owner_team": "infrastructure_team",
+                  "path": "D:\\codex\\orchestrator-mvp\\tools\\company_os.py"
+                }
+              ],
+              "learned_repositories": [
+                {
+                  "repo_id": "gh-dc17f0f4fb",
+                  "full_name": "Significant-Gravitas/AutoGPT",
+                  "local_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+                  "language_mix": [
+                    {
+                      "language": ".json",
+                      "files": 1076
+                    },
+                    {
+                      "language": "Python",
+                      "files": 914
+                    },
+                    {
+                      "language": "TypeScript",
+                      "files": 911
+                    },
+                    {
+                      "language": "Markdown",
+                      "files": 320
+                    },
+                    {
+                      "language": ".yml",
+                      "files": 43
+                    },
+                    {
+                      "language": ".yaml",
+                      "files": 23
+                    }
+                  ],
+                  "key_files": [
+                    "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\README.md"
+                  ],
+                  "sampled_files": [
+                    "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\docs\\integrations\\README.md",
+                    "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\README.md",
+                    "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\classic\\forge\\forge\\components\\README.md",
+                    "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\backend\\load-tests\\README.md",
+                    "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\classic\\original_autogpt\\README.md",
+                    "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\frontend\\README.md",
+                    "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\frontend\\package.json",
+                    "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\README.md"
+                  ],
+                  "capabilities": [
+                    "local_llm_runner",
+                    "token_streaming",
+                    "kv_cache_manager",
+                    "agent_orchestration",
+                    "tool_execution",
+                    "workflow_planning"
+                  ],
+                  "architecture_summary": "# AutoGPT: Build, Deploy, and Run AI Agents\n\n[![Discord Follow](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscord.com%2Fapi%2Finvites%2Fautogpt%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&label=total%20members&logo=discord&logoColor=white&color=7289da)](https://discord.gg/autogpt) &ensp;\n[![Twitter Follow](https://img.shields.io/twitter/follow/Auto_GPT?style=social)](https://twitter.com/Auto_GPT) &ensp;\n\n<!-- Keep these links. Translations will automatically update with the README. -->\n[Deutsch](https://zdoc.app/de/Significant-Gravitas/AutoGPT) | \n[Espa?ol](https:",
+                  "experiment_plan": {
+                    "sandbox_required": true,
+                    "recommended_commands": [],
+                    "can_run_without_dependency_install": false
+                  },
+                  "chunk_count": 24
+                }
+              ],
+              "learned_repository_count": 1,
+              "extracted_capabilities": [
+                "agent_orchestration",
+                "kv_cache_manager",
+                "local_llm_runner",
+                "token_streaming",
+                "tool_execution",
+                "workflow_planning"
+              ],
+              "github_learning": {
+                "updated_at": "2026-03-20T16:17:14.183239Z",
+                "enabled": true,
+                "topics": [
+                  "agent",
+                  "llm",
+                  "compiler",
+                  "kernel",
+                  "robotics",
+                  "distributed-system",
+                  "inference"
+                ],
+                "languages": [
+                  "Python",
+                  "TypeScript",
+                  "Rust",
+                  "C++",
+                  "C",
+                  "Go"
+                ],
+                "managed_repo_count": 10,
+                "ready_repo_count": 1,
+                "candidate_repo_count": 9,
+                "scan_candidate_count": 10,
+                "top_candidates": [
+                  {
+                    "full_name": "langchain-ai/langchain",
+                    "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\langchain-ai-langchain",
+                    "score": 41262.1142,
+                    "learning_status": "candidate"
+                  },
+                  {
+                    "full_name": "ggerganov/llama.cpp",
+                    "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\ggerganov-llama.cpp",
+                    "score": 30857.5689,
+                    "learning_status": "candidate"
+                  },
+                  {
+                    "full_name": "OpenInterpreter/open-interpreter",
+                    "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\OpenInterpreter-open-interpreter",
+                    "score": 23252.3854,
+                    "learning_status": "candidate"
+                  },
+                  {
+                    "full_name": "microsoft/autogen",
+                    "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\microsoft-autogen",
+                    "score": 16454.9498,
+                    "learning_status": "candidate"
+                  },
+                  {
+                    "full_name": "vllm-project/vllm",
+                    "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\vllm-project-vllm",
+                    "score": 15260.6594,
+                    "learning_status": "candidate"
+                  },
+                  {
+                    "full_name": "ray-project/ray",
+                    "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\ray-project-ray",
+                    "score": 14451.3379,
+                    "learning_status": "candidate"
+                  },
+                  {
+                    "full_name": "crewAIInc/crewAI",
+                    "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\crewAIInc-crewAI",
+                    "score": 12846.5735,
+                    "learning_status": "candidate"
+                  },
+                  {
+                    "full_name": "dask/dask",
+                    "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\dask-dask",
+                    "score": 5243.0283,
+                    "learning_status": "candidate"
+                  }
+                ]
+              }
+            }
+          },
+          "dialogue_hints": {
+            "active_handoff": {
+              "session_id": "asset-20260314-071552",
+              "source": "metaforge-assetize",
+              "title": "MetaForge dialogue asset 20260314-071552",
+              "workspace": "D:\\codex",
+              "summary": "continue bounded dispatch with validation-first policy",
+              "topics": [
+                "dialogue-compaction",
+                "metaforge-handoff"
+              ],
+              "constraints": [
+                "explicit validation notes required for all delivery claims"
+              ],
+              "decisions": [
+                "continue bounded dispatch with validation-first policy"
+              ],
+              "tags": [],
+              "artifacts": [
+                "D:\\codex\\dialogue-assets\\dialogue-memory-20260314-071552.json",
+                "D:\\codex\\dialogue-assets\\dialogue-handoff-20260314-071552.json",
+                "D:\\codex\\dialogue-assets\\dialogue-asset-note-20260314-071552.md"
+              ],
+              "message_count": 0,
+              "last_user_message": "",
+              "last_assistant_message": "",
+              "updated_at": "2026-03-13T23:15:52.993887Z",
+              "created_at": "2026-03-13T23:15:52.993887Z"
+            },
+            "recent_topics": [
+              "dialogue-compaction",
+              "metaforge-handoff",
+              "codex-memory",
+              "metaforge"
+            ],
+            "shared_constraints": [
+              "explicit validation notes required for all delivery claims",
+              "Explicit validation is required before claiming delivery."
+            ],
+            "recent_decisions": [
+              "continue bounded dispatch with validation-first policy",
+              "Use local dialogue ledger as the shared memory bridge."
+            ],
+            "recent_sessions": [
+              {
+                "session_id": "asset-20260314-071552",
+                "source": "metaforge-assetize",
+                "title": "MetaForge dialogue asset 20260314-071552",
+                "workspace": "D:\\codex",
+                "summary": "continue bounded dispatch with validation-first policy",
+                "topics": [
+                  "dialogue-compaction",
+                  "metaforge-handoff"
+                ],
+                "constraints": [
+                  "explicit validation notes required for all delivery claims"
+                ],
+                "decisions": [
+                  "continue bounded dispatch with validation-first policy"
+                ],
+                "tags": [],
+                "artifacts": [
+                  "D:\\codex\\dialogue-assets\\dialogue-memory-20260314-071552.json",
+                  "D:\\codex\\dialogue-assets\\dialogue-handoff-20260314-071552.json",
+                  "D:\\codex\\dialogue-assets\\dialogue-asset-note-20260314-071552.md"
+                ],
+                "message_count": 0,
+                "last_user_message": "",
+                "last_assistant_message": "",
+                "updated_at": "2026-03-13T23:15:52.993887Z",
+                "created_at": "2026-03-13T23:15:52.993887Z"
+              },
+              {
+                "session_id": "asset-20260314-061947",
+                "source": "metaforge-assetize",
+                "title": "MetaForge dialogue asset 20260314-061947",
+                "workspace": "D:\\codex",
+                "summary": "continue bounded dispatch with validation-first policy",
+                "topics": [
+                  "dialogue-compaction",
+                  "metaforge-handoff"
+                ],
+                "constraints": [
+                  "explicit validation notes required for all delivery claims"
+                ],
+                "decisions": [
+                  "continue bounded dispatch with validation-first policy"
+                ],
+                "tags": [],
+                "artifacts": [
+                  "D:\\codex\\dialogue-assets\\dialogue-memory-20260314-061947.json",
+                  "D:\\codex\\dialogue-assets\\dialogue-handoff-20260314-061947.json",
+                  "D:\\codex\\dialogue-assets\\dialogue-asset-note-20260314-061947.md"
+                ],
+                "message_count": 0,
+                "last_user_message": "",
+                "last_assistant_message": "",
+                "updated_at": "2026-03-13T22:19:48.421529Z",
+                "created_at": "2026-03-13T22:19:48.421529Z"
+              },
+              {
+                "session_id": "codex-shared-memory-20260314",
+                "source": "codex",
+                "title": "Codex MetaForge shared memory rollout",
+                "workspace": "D:\\codex",
+                "summary": "���� Codex ���ضԻ����䲢���� MetaForge ���� memory snapshot��",
+                "topics": [
+                  "codex-memory",
+                  "metaforge"
+                ],
+                "constraints": [
+                  "Explicit validation is required before claiming delivery."
+                ],
+                "decisions": [
+                  "Use local dialogue ledger as the shared memory bridge."
+                ],
+                "tags": [],
+                "artifacts": [],
+                "message_count": 2,
+                "last_user_message": "����Ҫ��codex�������Ľ������ش��������� ʵ��codex���жԻ���MetaForgeϵͳ����",
+                "last_assistant_message": "�������� memory/context ��ܽ������ع���Ի����䣬��������� MetaForge snapshot �� context package��",
+                "updated_at": "2026-03-13T22:16:20.602058Z",
+                "created_at": "2026-03-13T22:16:20.602058Z"
+              }
+            ]
+          },
+          "strategy": {
+            "applied": false,
+            "explored": true,
+            "reason": "exploration_budget",
+            "pattern_id": null,
+            "pattern_score": null,
+            "preferred_worker": null,
+            "tools_used": [],
+            "tool_actions": [],
+            "structure_summary": null,
+            "memory_revision": 435,
+            "hint_lines": [],
+            "exploration_ratio": 0.2,
+            "candidate_count": 0
+          },
+          "verification_scope": {
+            "modules": [
+              "tools.automation_lab",
+              "tools.codex_control",
+              "app.main",
+              "app.orchestrator",
+              "tools.kernel_mode"
+            ],
+            "teams": [
+              "backend_team",
+              "infrastructure_team"
+            ],
+            "layers": [
+              "unclassified"
+            ]
+          },
+          "current_plan": [
+            "Task type: implementation",
+            "Primary modules: tools.automation_lab, tools.codex_control, app.main, app.orchestrator, tools.kernel_mode",
+            "Dependency expansion: none",
+            "Owner teams: backend_team, infrastructure_team",
+            "Layers: unclassified",
+            "Scheduler owner teams: backend_team, infrastructure_team",
+            "Scheduler layers: unclassified",
+            "Strategy mode: exploration path retained this cycle"
+          ],
+          "summary_blocks": [
+            "Task type: implementation\nPrimary modules: tools.automation_lab, tools.codex_control, app.main, app.orchestrator, tools.kernel_mode\nDependency expansion: none\nOwner teams: backend_team, infrastructure_team\nLayers: unclassified\nScheduler owner teams: backend_team, infrastructure_team\nScheduler layers: unclassified\nStrategy mode: exploration path retained this cycle",
+            "Failure pattern: unknown_failure -> investigate\nFailure pattern: Task failed after execution error. -> investigate\nPreferred capabilities: agent_orchestration, webapp_generation, deploy_scaffold, tool_extension, kv_cache_manager\nPreferred workers: reviewer, coder, supervisor\nTop capability reputation: agent_orchestration, webapp_generation, deploy_scaffold, tool_extension\nTop worker reputation: reviewer, coder, supervisor\nRepo learning modules=161 chunks=144",
+            "Active dialogue summary: continue bounded dispatch with validation-first policy\nShared dialogue topics: dialogue-compaction, metaforge-handoff, codex-memory, metaforge\nShared dialogue constraints: explicit validation notes required for all delivery claims; Explicit validation is required before claiming delivery.\nShared dialogue decisions: continue bounded dispatch with validation-first policy; Use local dialogue ledger as the shared memory bridge."
+          ],
+          "budget_chars": 1600
+        },
+        "prompt_guard": {
+          "decision": "allow",
+          "risk_level": "low",
+          "sanitized_prompt": "?Operate only on D:\\codex\\generated\\ml-binary-classification-lab.\nDo not modify the control layer, MetaForge OS runtime, unrelated workspaces, or the original file D:\\xwechat_files\\wxid_wraikhyxu4wp22_ee1d\\msg\\file\\2026-03\\ʵ��ģ��.docx.\nTask: build a bounded auto-run package for the binary classification lab defined by the supplied template. The package must cover logistic regression, linear SVM, and perceptron binary classification with SGD-style training, plus a report structure aligned to the template.\nRequired artifact: documentation delta.\nValidation: if a usable local dataset is found, run the experiment and record the execution command, the dataset used, and the measured test accuracy for each model. If no usable dataset is found, perform static verification only and state that limitation explicitly.\nControl tier: chore-only.\nIf safe implementation is not possible or required data is missing, downgrade to a blocker-first result instead of inventing metrics or analysis.\nWrite the result to D:\\codex\\generated\\ml-binary-classification-lab\\BINARY_CLASSIFICATION_AUTORUN_RESULT.md.\nThe result must include: source template path, local data discovery result, execution or blocker status, exact validation notes, and the next operator action if blocked.",
+          "matched_rules": [],
+          "reason_summary": "Prompt accepted.",
+          "metadata": {
+            "project_id": null,
+            "repo_id": null,
+            "caller": "codex-experiment",
+            "repo_path": "D:\\codex\\generated\\ml-binary-classification-lab"
+          }
+        },
+        "tool_policy": {
+          "version": 1,
+          "role": "observer",
+          "allowed_actions": [
+            "read_audit",
+            "read_policy",
+            "read_repo"
+          ],
+          "denied_actions": [
+            "docker_exec",
+            "file_write_core",
+            "git_push",
+            "install_package",
+            "shell_exec"
+          ],
+          "approval_required": [],
+          "auto_approve": true,
+          "repo_path": "D:\\codex\\generated\\ml-binary-classification-lab",
+          "execution_lane": "worker-vm",
+          "selected_tool": {}
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-20T16:23:50.075311Z",
+      "level": "info",
+      "message": "Task planning started.",
+      "data": {
+        "requirements": [
+          "?Operate only on D:\\codex\\generated\\ml-binary-classification-lab.\nDo not modify the control layer, MetaForge OS runtime, unrelated workspaces, or the original file D:\\xwechat_files\\wxid_wraikhyxu4wp22_ee1d\\msg\\file\\2026-",
+          "Operate in production mode."
+        ],
+        "deliverables": [
+          "Auto-complete binary classification lab from template or surface blockers",
+          "Refresh production evidence, not just prose.",
+          "Artifact: BINARY_CLASSIFICATION_AUTORUN_RESULT.md",
+          "Changes scoped to D:\\codex\\generated\\ml-binary-classification-lab"
+        ],
+        "acceptance_criteria": [
+          "Auto-complete binary classification lab from template or surface blockers",
+          "Produce explicit verification output or a bounded failure report.",
+          "Do not treat documentation-only progress as production completion.",
+          "Task is invalid unless the declared artifact set is refreshed and verifiable."
+        ],
+        "product_design": {
+          "summary": "",
+          "user_stories": [],
+          "api_surfaces": [],
+          "pages_or_flows": [],
+          "risks": []
+        },
+        "architecture_design": {
+          "summary": "",
+          "stack": [],
+          "modules": [],
+          "data_components": [],
+          "deploy_units": []
+        },
+        "quality_plan": {
+          "unit_tests": [],
+          "integration_tests": [],
+          "e2e_tests": [],
+          "static_checks": [],
+          "security_checks": []
+        },
+        "deployment_plan": {
+          "summary": "",
+          "artifacts": [],
+          "ci_steps": [],
+          "blockers": []
+        },
+        "monitoring_plan": {
+          "signals": [],
+          "alert_rules": [],
+          "maintenance_loops": []
+        },
+        "rule_checks": [
+          {
+            "name": "feature_branch_required",
+            "status": "pass",
+            "detail": "Repository changes should avoid main-branch direct edits."
+          },
+          {
+            "name": "tests_required_before_done",
+            "status": "pass",
+            "detail": "Tasks should end with local validation or a structured failure report."
+          },
+          {
+            "name": "destructive_change_gate",
+            "status": "pass",
+            "detail": "No destructive keyword detected."
+          },
+          {
+            "name": "high_risk_domain_gate",
+            "status": "pass",
+            "detail": "No special approval domain detected."
+          }
+        ],
+        "git_workflow": {
+          "enabled": true,
+          "repo_registered": false,
+          "branch_required": true,
+          "branch_name": "codex/a6d77b10",
+          "commit_required": true,
+          "pr_required": true,
+          "status_summary": "Repository path present but not registered in orchestrator."
+        }
+      }
+    }
+  ],
+  "result": {
+    "checkpoint_error": "[WinError 5] �ܾ����ʡ�"
+  }
+}

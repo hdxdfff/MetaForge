@@ -1,0 +1,35 @@
+{
+  "updated_at": "2026-03-29T15:14:26+08:00",
+  "profile": "interaction_only",
+  "rule": "control_requests_must_route_to_external_control_shells",
+  "intent": "Control and dispatch requests should not fall back to local OpenCode/Codex shells in interaction_only mode.",
+  "control_request_terms": [
+    "dispatch",
+    "status",
+    "control",
+    "approve",
+    "reject",
+    "session",
+    "派发",
+    "状态",
+    "控制",
+    "批准",
+    "拒绝",
+    "会话"
+  ],
+  "preferred_control_surfaces": [
+    "Goose",
+    "Continue"
+  ],
+  "launch_contract": {
+    "goose_command": "goose run -i -",
+    "stdin_encoding": "utf-8"
+  },
+  "enforced_layers": [
+    "tools.tool_stack"
+  ],
+  "validation_paths": [
+    "D:\\codex\\orchestrator-mvp\\tools\\tool_stack.py",
+    "D:\\codex\\orchestrator-mvp\\dist\\AICommandConsole\\_internal\\tools\\tool_stack.py"
+  ]
+}

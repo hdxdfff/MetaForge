@@ -1,0 +1,72 @@
+{
+  "steps": [
+    {
+      "step_id": "d8e098b6",
+      "step_title": "Write smoke evidence",
+      "action": "write_smoke_file",
+      "ok": true,
+      "at": "2026-03-29T11:34:49.216788Z",
+      "path": "D:\\codex\\orchestrator-mvp\\data\\execution-recovery\\test.txt",
+      "size": 97
+    }
+  ],
+  "task_id": "286b63878bfc439d8526aee110974df6",
+  "task_title": "Delivery smoke verification",
+  "task_status": "failed",
+  "started_at": "2026-03-29T11:34:41.815734Z",
+  "updated_at": "2026-03-29T11:36:28.341196Z",
+  "completed": false,
+  "result": {
+    "state": "failed_execution",
+    "reason": "Audit output schema rejected for doc_patch/coder: Coder audit output missing required structured sections.",
+    "task_id": "286b63878bfc439d8526aee110974df6",
+    "repo_path": "D:\\codex\\generated\\toy-os-demo",
+    "execution_mode": "governance",
+    "goal": null,
+    "cheap_calls_used": 1,
+    "cheap_chars_used": 4925,
+    "escalation_count": 1,
+    "failed_steps": [
+      {
+        "step_id": "d8e098b6",
+        "title": "Write smoke evidence",
+        "phase": "smoke",
+        "worker": "coder",
+        "command": "internal://recovery/write-smoke-file",
+        "output": "Write smoke evidence failure: 106 chars, 1 non-empty lines.\nHead:\n- Audit output schema rejected for doc_patch/coder: Coder audit output missing required structured sections.",
+        "output_ref": {},
+        "output_stats": {
+          "channel": "error-output",
+          "char_count": 106,
+          "line_count": 1,
+          "stored_raw": false
+        },
+        "probe_attempts": 0,
+        "max_probe_attempts": 1,
+        "last_diagnosis": "Diagnosis for Write smoke evidence: 914 chars, 30 non-empty lines.\nHead:\n- Cheap lane escalation triggered.\n- Original worker: reviewer\n- Escalation model: kimi-k2.5\n- Reason: Structured output validation failed for research/governance audit work.\nTail:\n- - next_action\n- Provider error: APITimeoutError: Request timed out.\n- Provider error: APITimeoutError: Request timed out.\nRaw artifact: ctx_a6170b28bc6b",
+        "last_diagnosis_ref": {
+          "artifact_id": "ctx_a6170b28bc6b",
+          "task_id": "286b63878bfc439d8526aee110974df6",
+          "step_id": "d8e098b6",
+          "channel": "diagnosis-output",
+          "title": "Diagnosis for Write smoke evidence",
+          "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\286b63878bfc439d8526aee110974df6\\d8e098b6-diagnosis-output-ctx_a6170b28bc6b.txt",
+          "size_chars": 914,
+          "line_count": 30,
+          "created_at": "2026-03-29T11:36:24.794316Z",
+          "metadata": {
+            "worker": "reviewer",
+            "phase": "check",
+            "route_model": "kimi-k2.5",
+            "route_provider": "openai"
+          }
+        }
+      }
+    ],
+    "next_action_required": "Inspect execution evidence and rerun or replace the task; no approval hold was applied.",
+    "failure_pause_policy": "If a long task fails, allow at most one cheap-model-approved probe retry with bounded local cost. If cheap approval is missing, ambiguous, or the retry still fails, pause execution, return a structured error report, and wait for explicit core guidance.",
+    "pause_required": false,
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\286b63878bfc439d8526aee110974df6\\execution-evidence.json",
+    "execution_evidence_step_count": 1
+  }
+}

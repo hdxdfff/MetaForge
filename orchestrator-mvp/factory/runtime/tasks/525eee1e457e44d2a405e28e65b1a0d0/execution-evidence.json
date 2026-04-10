@@ -1,0 +1,150 @@
+{
+  "steps": [
+    {
+      "step_id": "0ed675a3",
+      "step_title": "Understand task",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-03-20T05:02:31.266543Z",
+      "worker": "reviewer",
+      "phase": "understand",
+      "route_model": "gpt-5.4-pro",
+      "route_provider": "openai",
+      "output_ref": {
+        "artifact_id": "ctx_1b9beb1cb28d",
+        "task_id": "525eee1e457e44d2a405e28e65b1a0d0",
+        "step_id": "0ed675a3",
+        "channel": "reviewer-output",
+        "title": "Understand task output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\525eee1e457e44d2a405e28e65b1a0d0\\0ed675a3-reviewer-output-ctx_1b9beb1cb28d.txt",
+        "size_chars": 1109,
+        "line_count": 31,
+        "created_at": "2026-03-20T05:02:17.094580Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "understand",
+          "route_model": "gpt-5.4-pro",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 1109,
+        "line_count": 31,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "b0ec6be0",
+      "step_title": "Draft solution",
+      "action": "coder_step",
+      "ok": true,
+      "at": "2026-03-20T05:05:09.871017Z",
+      "worker": "coder",
+      "phase": "draft",
+      "route_model": "gpt-5.4-pro",
+      "route_provider": "openai",
+      "output_ref": {
+        "artifact_id": "ctx_d1cdbefd2f42",
+        "task_id": "525eee1e457e44d2a405e28e65b1a0d0",
+        "step_id": "b0ec6be0",
+        "channel": "coder-output",
+        "title": "Draft solution output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\525eee1e457e44d2a405e28e65b1a0d0\\b0ec6be0-coder-output-ctx_d1cdbefd2f42.txt",
+        "size_chars": 1171,
+        "line_count": 25,
+        "created_at": "2026-03-20T05:04:47.019110Z",
+        "metadata": {
+          "worker": "coder",
+          "phase": "draft",
+          "route_model": "gpt-5.4-pro",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "coder-output",
+        "char_count": 1171,
+        "line_count": 25,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "a6cea290",
+      "step_title": "Execute validation",
+      "action": "shell_step",
+      "ok": true,
+      "at": "2026-03-20T05:06:35.603045Z",
+      "worker": "shell",
+      "phase": "execute",
+      "route_model": "deepseek-chat",
+      "route_provider": "runtime",
+      "output_ref": {
+        "artifact_id": "ctx_7bbc82a152dd",
+        "task_id": "525eee1e457e44d2a405e28e65b1a0d0",
+        "step_id": "a6cea290",
+        "channel": "shell-output",
+        "title": "Execute validation output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\525eee1e457e44d2a405e28e65b1a0d0\\a6cea290-shell-output-ctx_7bbc82a152dd.txt",
+        "size_chars": 352,
+        "line_count": 11,
+        "created_at": "2026-03-20T05:06:21.150639Z",
+        "metadata": {
+          "worker": "shell",
+          "phase": "execute",
+          "route_model": "deepseek-chat",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "shell-output",
+        "char_count": 352,
+        "line_count": 11,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "ce62f6dd",
+      "step_title": "Verify result",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-03-20T05:08:46.952428Z",
+      "worker": "reviewer",
+      "phase": "verify",
+      "route_model": "deepseek-chat",
+      "route_provider": "cheap",
+      "output_ref": {
+        "artifact_id": "ctx_cc808a0904ab",
+        "task_id": "525eee1e457e44d2a405e28e65b1a0d0",
+        "step_id": "ce62f6dd",
+        "channel": "reviewer-output",
+        "title": "Verify result output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\525eee1e457e44d2a405e28e65b1a0d0\\ce62f6dd-reviewer-output-ctx_cc808a0904ab.txt",
+        "size_chars": 1690,
+        "line_count": 30,
+        "created_at": "2026-03-20T05:08:13.582157Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "verify",
+          "route_model": "deepseek-chat",
+          "route_provider": "cheap"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 1690,
+        "line_count": 30,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    }
+  ],
+  "task_id": "525eee1e457e44d2a405e28e65b1a0d0",
+  "task_title": "Implement module runtime.scheduler",
+  "task_status": "running",
+  "started_at": "2026-03-20T04:54:41.120540Z",
+  "updated_at": "2026-03-20T05:08:46.952428Z",
+  "completed": false
+}

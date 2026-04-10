@@ -1,0 +1,239 @@
+{
+  "task_id": "9a4052335717452da34e4a8138545719",
+  "task_status": "running",
+  "phase": "step-running",
+  "updated_at": "2026-04-02T18:41:37.739695Z",
+  "heartbeat_at": "2026-04-02T18:41:37.739695Z",
+  "repo_path": "D:\\codex",
+  "goal": "Implement the bounded change",
+  "goal_id": "goal_5c12485392",
+  "graph_id": "graph_222cc400a2",
+  "node_id": "analyze_runtime_fault",
+  "scheduled_by": "factory-daemon.replenisher",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\9a4052335717452da34e4a8138545719",
+  "step_id": "05cb05db",
+  "step_title": "Spawn decomposition subtasks",
+  "step_status": "running",
+  "worker": "planner",
+  "probe_attempts": 0,
+  "title": "Implement the bounded change",
+  "prompt": "Execute capability step 'Analyze runtime fault' for: Unblock Restore ToyOS real artifact delivery: Run baseline runtime test loop for Restore ToyOS real artifact delivery",
+  "scheduler_hint": {
+    "goal_primary": "Restore ToyOS real artifact delivery",
+    "goal_mode": "toyos_priority_mode",
+    "goal_target": "Unblock Restore ToyOS real artifact delivery: Run baseline runtime test loop for Restore ToyOS real artifact delivery",
+    "goal_id": "goal_5c12485392",
+    "graph_id": "graph_222cc400a2",
+    "node_id": "analyze_runtime_fault",
+    "node_title": "Analyze runtime fault for Unblock Restore ToyOS real artifact delivery: Run baseline runtime test loop for Restore ToyOS real artifact delivery",
+    "task_type": "exploration_intake",
+    "queue_name": "exploration",
+    "verification_level": "L1",
+    "max_runtime_seconds": 900,
+    "retry_limit": 0,
+    "rollback_rule": "return_to_planner",
+    "template_id": "build_toolchain_repair",
+    "admission_mode": "normal",
+    "handling_mode": "toyos_replenishment",
+    "automation_source": "failure_backlog_automation",
+    "decomposition_child": true,
+    "decomposition_parent_task_id": "91d37c28ef184e34a3de0e049f1640c8",
+    "decomposition_root_task_id": "91d37c28ef184e34a3de0e049f1640c8",
+    "decomposition_depth": 1,
+    "max_decomposition_depth": 2,
+    "decomposition_child_index": 2,
+    "decomposition_allow_children": true,
+    "decomposition_path_kind": "branch",
+    "decomposition_shared_dependency_group": "91d37c28ef184e34a3de0e049f1640c8",
+    "decomposition_repair_for": null,
+    "decomposition_dependencies": [
+      "Analyze the current state"
+    ],
+    "admission_lane": "exploration",
+    "admission_reason": "artifact_spec_missing",
+    "requested_execution_mode": "production",
+    "dependency_task_ids": [
+      "0dead6687d5f4832bffaaa66b926e3bf"
+    ],
+    "dependency_count": 1
+  },
+  "context_package": {},
+  "plan": [
+    {
+      "id": "05cb05db",
+      "title": "Spawn decomposition subtasks",
+      "status": "running",
+      "worker": "planner",
+      "phase": "decompose"
+    },
+    {
+      "id": "bfeabaf6",
+      "title": "Wait for child task completion",
+      "status": "pending",
+      "worker": "planner",
+      "phase": "decompose"
+    },
+    {
+      "id": "f60827eb",
+      "title": "Aggregate decomposition results",
+      "status": "pending",
+      "worker": "reviewer",
+      "phase": "verify"
+    }
+  ],
+  "verification_signals": [
+    {
+      "timestamp": "2026-04-02T18:40:43.348864Z",
+      "kind": "admission_diverted",
+      "success": true,
+      "task_id": "9a4052335717452da34e4a8138545719",
+      "admission_lane": "exploration",
+      "admission_reason": "artifact_spec_missing",
+      "execution_mode": "research",
+      "queue_name": "exploration",
+      "task_type": "exploration_intake"
+    }
+  ],
+  "verification_signal_count": 1,
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-02T18:40:43.348864Z",
+        "kind": "admission_diverted",
+        "success": true,
+        "task_id": "9a4052335717452da34e4a8138545719",
+        "admission_lane": "exploration",
+        "admission_reason": "artifact_spec_missing",
+        "execution_mode": "research",
+        "queue_name": "exploration",
+        "task_type": "exploration_intake"
+      }
+    ],
+    "decomposition": {
+      "summary": "Fallback decomposition for: Execute capability step 'Analyze runtime fault' for: Unblock Restore ToyOS real artifact delivery: Run baseline runtime ",
+      "strategy": "bounded multi-layer split with analysis, execution, and verification branches",
+      "subtasks": [
+        {
+          "title": "Analyze the current state",
+          "prompt": "Inspect the current repository state and isolate the smallest workable slice for: Execute capability step 'Analyze runtime fault' for: Unblock Restore ToyOS real artifact delivery: Run baseline runtime test loop for Restore ToyOS real artifact delivery",
+          "goal": "Identify the smallest viable slice",
+          "task_type": "report_refresh",
+          "path_kind": "shared",
+          "queue_name": "fastlane",
+          "verification_level": "L1",
+          "preferred_worker": "reviewer",
+          "execution_mode": "governance",
+          "execution_lane": "host-control",
+          "decompose_children": false,
+          "shared_dependency_group": "91d37c28ef184e34a3de0e049f1640c8",
+          "repair_for": null,
+          "inputs": [],
+          "outputs": [
+            "analysis note"
+          ],
+          "dependencies": [],
+          "acceptance_criteria": [
+            "The smallest feasible slice is identified."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        },
+        {
+          "title": "Implement the bounded change",
+          "prompt": "Make the smallest safe implementation or repair needed for: Execute capability step 'Analyze runtime fault' for: Unblock Restore ToyOS real artifact delivery: Run baseline runtime test loop for Restore ToyOS real artifact delivery",
+          "goal": "Implement the bounded change",
+          "task_type": "build_fix",
+          "path_kind": "branch",
+          "queue_name": "build_test",
+          "verification_level": "L2",
+          "preferred_worker": "coder",
+          "execution_mode": "production",
+          "execution_lane": "vm-first",
+          "decompose_children": true,
+          "shared_dependency_group": "91d37c28ef184e34a3de0e049f1640c8",
+          "repair_for": null,
+          "inputs": [
+            "analysis note"
+          ],
+          "outputs": [
+            "bounded patch"
+          ],
+          "dependencies": [
+            "Analyze the current state"
+          ],
+          "acceptance_criteria": [
+            "A bounded implementation exists."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        },
+        {
+          "title": "Validate the result",
+          "prompt": "Run the narrowest useful validation for the bounded change: Execute capability step 'Analyze runtime fault' for: Unblock Restore ToyOS real artifact delivery: Run baseline runtime test loop for Restore ToyOS real artifact delivery",
+          "goal": "Validate the change",
+          "task_type": "unit_test_run",
+          "path_kind": "repair",
+          "queue_name": "build_test",
+          "verification_level": "L2",
+          "preferred_worker": "docker",
+          "execution_mode": "production",
+          "execution_lane": "vm-first",
+          "decompose_children": false,
+          "shared_dependency_group": "91d37c28ef184e34a3de0e049f1640c8",
+          "repair_for": "Analyze the current state",
+          "inputs": [
+            "bounded patch"
+          ],
+          "outputs": [
+            "validation evidence"
+          ],
+          "dependencies": [
+            "Analyze the current state",
+            "Implement the bounded change"
+          ],
+          "acceptance_criteria": [
+            "Validation evidence is recorded."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        }
+      ],
+      "dag": {
+        "shared_nodes": [
+          "Analyze the current state"
+        ],
+        "branch_nodes": [
+          "Implement the bounded change"
+        ],
+        "repair_nodes": [
+          "Validate the result"
+        ],
+        "optional_nodes": [],
+        "speculative_nodes": [],
+        "blocked_nodes": [],
+        "edges": [
+          {
+            "from": "Analyze the current state",
+            "to": "Implement the bounded change",
+            "kind": "branch"
+          },
+          {
+            "from": "Analyze the current state",
+            "to": "Validate the result",
+            "kind": "repair"
+          },
+          {
+            "from": "Implement the bounded change",
+            "to": "Validate the result",
+            "kind": "repair"
+          }
+        ],
+        "shared_dependency_group": "91d37c28ef184e34a3de0e049f1640c8"
+      },
+      "depth": 1,
+      "max_depth": 2,
+      "mode": "multi_layer"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Daemon streaming rollout must fix import blockers and cache control-plane reads",
+  "updated_at": "2026-03-21T00:00:00Z",
+  "problem": "High-frequency daemon rollouts can be blocked by unrelated syntax errors in modules imported through app.main, and per-tick control-plane reads make sub-second ticks impossible.",
+  "signals": [
+    "factory_daemon starts but controller commands crash on import",
+    "daemon-status fails with SyntaxError from app.orchestrator or tool modules",
+    "tick logs show guard/recovery/tool-health dominating cycle time"
+  ],
+  "fix": [
+    "repair import-blocking syntax errors before assessing daemon runtime",
+    "cache guard, recovery, economics, autonomy and tool-health on most ticks",
+    "publish factory state and AI runtime on a cadence instead of every tick",
+    "run self_model asynchronously after the tick rather than inline"
+  ],
+  "validation": [
+    "py_compile for touched modules",
+    "daemon-status shows interval_seconds=1.0 and cycle advances",
+    "tick log shows cached=true on non-refresh cycles"
+  ]
+}

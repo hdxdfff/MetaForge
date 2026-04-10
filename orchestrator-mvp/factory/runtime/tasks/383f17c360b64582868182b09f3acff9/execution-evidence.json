@@ -1,0 +1,335 @@
+{
+  "steps": [
+    {
+      "step_id": "28534d2d",
+      "step_title": "Write recovery smoke file",
+      "action": "write_smoke_file",
+      "ok": true,
+      "at": "2026-03-20T10:03:28.733232Z",
+      "path": "D:\\codex\\orchestrator-mvp\\data\\execution-recovery\\test.txt",
+      "size": 97
+    },
+    {
+      "step_id": "69f9ebec",
+      "step_title": "Probe direct LLM path",
+      "action": "direct_llm_call",
+      "ok": false,
+      "at": "2026-03-20T10:04:43.531745Z",
+      "provider": "cheap",
+      "model": "deepseek-chat",
+      "usage_before": 489,
+      "usage_after": 489,
+      "used_fallback": true,
+      "output_excerpt": "Provider error: APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "step_id": "48e885e1",
+      "step_title": "Create runnable recovery artifact",
+      "action": "create_runnable_artifact",
+      "ok": true,
+      "at": "2026-03-20T10:05:33.380990Z",
+      "artifact_dir": "D:\\codex\\generated\\execution-recovery-demo",
+      "build_timestamp": "2026-03-20T10:05:32.862673Z",
+      "test_timestamp": "2026-03-20T10:05:32.990057Z",
+      "execution_timestamp": "2026-03-20T10:05:33.302211Z"
+    },
+    {
+      "step_id": "e5a85ab8",
+      "step_title": "Verify recovery artifact",
+      "action": "verify_runnable_artifact",
+      "ok": true,
+      "at": "2026-03-20T10:07:12.145418Z",
+      "artifact_id": "execution-recovery-demo",
+      "latest_evidence_at": "2026-03-20T10:05:33.302211Z",
+      "dashboard_status": "pass"
+    },
+    {
+      "step_id": "28534d2d",
+      "step_title": "Write recovery smoke file",
+      "action": "write_smoke_file",
+      "ok": true,
+      "at": "2026-03-20T10:23:35.735660Z",
+      "path": "D:\\codex\\orchestrator-mvp\\data\\execution-recovery\\test.txt",
+      "size": 97
+    },
+    {
+      "step_id": "69f9ebec",
+      "step_title": "Probe direct LLM path",
+      "action": "direct_llm_call",
+      "ok": false,
+      "at": "2026-03-20T10:24:45.330730Z",
+      "provider": "cheap",
+      "model": "deepseek-chat",
+      "usage_before": 491,
+      "usage_after": 491,
+      "used_fallback": true,
+      "output_excerpt": "Provider error: APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "step_id": "48e885e1",
+      "step_title": "Create runnable recovery artifact",
+      "action": "create_runnable_artifact",
+      "ok": true,
+      "at": "2026-03-20T10:25:52.367762Z",
+      "artifact_dir": "D:\\codex\\generated\\execution-recovery-demo",
+      "build_timestamp": "2026-03-20T10:25:50.351952Z",
+      "test_timestamp": "2026-03-20T10:25:50.788809Z",
+      "execution_timestamp": "2026-03-20T10:25:51.896353Z"
+    },
+    {
+      "step_id": "e5a85ab8",
+      "step_title": "Verify recovery artifact",
+      "action": "verify_runnable_artifact",
+      "ok": true,
+      "at": "2026-03-20T10:27:35.118678Z",
+      "artifact_id": "execution-recovery-demo",
+      "latest_evidence_at": "2026-03-20T10:25:51.896353Z",
+      "dashboard_status": "pass"
+    },
+    {
+      "step_id": "28534d2d",
+      "step_title": "Write recovery smoke file",
+      "action": "write_smoke_file",
+      "ok": true,
+      "at": "2026-03-20T10:38:38.756625Z",
+      "path": "D:\\codex\\orchestrator-mvp\\data\\execution-recovery\\test.txt",
+      "size": 97
+    },
+    {
+      "step_id": "69f9ebec",
+      "step_title": "Probe direct LLM path",
+      "action": "direct_llm_call",
+      "ok": false,
+      "at": "2026-03-20T10:39:41.322449Z",
+      "provider": "cheap",
+      "model": "deepseek-chat",
+      "usage_before": 491,
+      "usage_after": 491,
+      "used_fallback": true,
+      "output_excerpt": "Provider error: APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "step_id": "48e885e1",
+      "step_title": "Create runnable recovery artifact",
+      "action": "create_runnable_artifact",
+      "ok": true,
+      "at": "2026-03-20T10:41:01.822404Z",
+      "artifact_dir": "D:\\codex\\generated\\execution-recovery-demo",
+      "build_timestamp": "2026-03-20T10:41:00.472807Z",
+      "test_timestamp": "2026-03-20T10:41:00.876503Z",
+      "execution_timestamp": "2026-03-20T10:41:01.325419Z"
+    },
+    {
+      "step_id": "e5a85ab8",
+      "step_title": "Verify recovery artifact",
+      "action": "verify_runnable_artifact",
+      "ok": true,
+      "at": "2026-03-20T10:42:27.441729Z",
+      "artifact_id": "execution-recovery-demo",
+      "latest_evidence_at": "2026-03-20T10:41:01.325419Z",
+      "dashboard_status": "pass"
+    },
+    {
+      "step_id": "28534d2d",
+      "step_title": "Write recovery smoke file",
+      "action": "write_smoke_file",
+      "ok": true,
+      "at": "2026-03-20T11:03:02.636902Z",
+      "path": "D:\\codex\\orchestrator-mvp\\data\\execution-recovery\\test.txt",
+      "size": 97
+    },
+    {
+      "step_id": "69f9ebec",
+      "step_title": "Probe direct LLM path",
+      "action": "direct_llm_call",
+      "ok": false,
+      "at": "2026-03-20T11:03:58.036304Z",
+      "provider": "cheap",
+      "model": "deepseek-chat",
+      "usage_before": 493,
+      "usage_after": 493,
+      "used_fallback": true,
+      "output_excerpt": "Provider error: APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "step_id": "48e885e1",
+      "step_title": "Create runnable recovery artifact",
+      "action": "create_runnable_artifact",
+      "ok": true,
+      "at": "2026-03-20T11:04:59.738238Z",
+      "artifact_dir": "D:\\codex\\generated\\execution-recovery-demo",
+      "build_timestamp": "2026-03-20T11:04:59.270032Z",
+      "test_timestamp": "2026-03-20T11:04:59.449814Z",
+      "execution_timestamp": "2026-03-20T11:04:59.619054Z"
+    },
+    {
+      "step_id": "28534d2d",
+      "step_title": "Write recovery smoke file",
+      "action": "write_smoke_file",
+      "ok": true,
+      "at": "2026-03-20T11:05:58.192274Z",
+      "path": "D:\\codex\\orchestrator-mvp\\data\\execution-recovery\\test.txt",
+      "size": 97
+    },
+    {
+      "step_id": "e5a85ab8",
+      "step_title": "Verify recovery artifact",
+      "action": "verify_runnable_artifact",
+      "ok": true,
+      "at": "2026-03-20T11:06:05.822389Z",
+      "artifact_id": "execution-recovery-demo",
+      "latest_evidence_at": "2026-03-20T11:04:59.619054Z",
+      "dashboard_status": "pass"
+    },
+    {
+      "step_id": "69f9ebec",
+      "step_title": "Probe direct LLM path",
+      "action": "direct_llm_call",
+      "ok": false,
+      "at": "2026-03-20T11:07:44.356803Z",
+      "provider": "cheap",
+      "model": "deepseek-chat",
+      "usage_before": 493,
+      "usage_after": 493,
+      "used_fallback": true,
+      "output_excerpt": "Provider error: APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+    },
+    {
+      "step_id": "48e885e1",
+      "step_title": "Create runnable recovery artifact",
+      "action": "create_runnable_artifact",
+      "ok": true,
+      "at": "2026-03-20T11:09:33.678498Z",
+      "artifact_dir": "D:\\codex\\generated\\execution-recovery-demo",
+      "build_timestamp": "2026-03-20T11:09:32.491026Z",
+      "test_timestamp": "2026-03-20T11:09:32.881664Z",
+      "execution_timestamp": "2026-03-20T11:09:33.656477Z"
+    },
+    {
+      "step_id": "e5a85ab8",
+      "step_title": "Verify recovery artifact",
+      "action": "verify_runnable_artifact",
+      "ok": true,
+      "at": "2026-03-20T11:12:01.773459Z",
+      "artifact_id": "execution-recovery-demo",
+      "latest_evidence_at": "2026-03-20T11:09:33.656477Z",
+      "dashboard_status": "pass"
+    }
+  ],
+  "task_id": "383f17c360b64582868182b09f3acff9",
+  "task_title": "Execution recovery: smoke and runnable artifact",
+  "task_status": "completed",
+  "started_at": "2026-03-20T10:00:16.568741Z",
+  "updated_at": "2026-03-20T11:13:09.514621Z",
+  "completed": true,
+  "result": {
+    "summary": "Resumed from saved task plan.",
+    "completed_steps": 4,
+    "context_used_chars": 586,
+    "cheap_calls_used": 0,
+    "cheap_chars_used": 0,
+    "escalation_count": 0,
+    "execution_mode": "production",
+    "production_evidence": {
+      "mode": "production",
+      "status": "verified",
+      "artifact_spec": {
+        "artifact_id": "execution-recovery-demo",
+        "artifact_type": "demo",
+        "type": "demo",
+        "output": "generated\\execution-recovery-demo",
+        "entrypoint": "generated\\execution-recovery-demo\\run_demo.py",
+        "deliverables": [
+          "generated\\execution-recovery-demo\\run_demo.py",
+          "generated\\execution-recovery-demo\\build-report.json",
+          "generated\\execution-recovery-demo\\test-report.json",
+          "generated\\execution-recovery-demo\\execution-report.json",
+          "generated\\execution-recovery-demo\\artifact_manifest.json",
+          "generated\\execution-recovery-demo\\build.sh",
+          "generated\\execution-recovery-demo\\Dockerfile.build"
+        ],
+        "expected_outputs": [
+          "generated\\execution-recovery-demo\\run_demo.py",
+          "generated\\execution-recovery-demo\\build-report.json",
+          "generated\\execution-recovery-demo\\test-report.json",
+          "generated\\execution-recovery-demo\\execution-report.json",
+          "generated\\execution-recovery-demo\\artifact_manifest.json",
+          "generated\\execution-recovery-demo\\build.sh",
+          "generated\\execution-recovery-demo\\Dockerfile.build"
+        ],
+        "required_artifacts": [
+          "generated\\execution-recovery-demo\\run_demo.py",
+          "generated\\execution-recovery-demo\\build-report.json",
+          "generated\\execution-recovery-demo\\test-report.json",
+          "generated\\execution-recovery-demo\\execution-report.json",
+          "generated\\execution-recovery-demo\\artifact_manifest.json",
+          "generated\\execution-recovery-demo\\build.sh",
+          "generated\\execution-recovery-demo\\Dockerfile.build"
+        ],
+        "evidence": [
+          "build-report.json",
+          "test-report.json",
+          "execution-report.json"
+        ],
+        "verification": {
+          "build_required": true,
+          "tests_required": true,
+          "runtime_required": true
+        },
+        "registry": "artifact_registry",
+        "test_command": "run_demo.py --self-test",
+        "min_fresh_artifacts": 7
+      },
+      "required_count": 7,
+      "min_fresh_artifacts": 7,
+      "fresh_artifacts": [
+        {
+          "path": "D:\\codex\\generated\\execution-recovery-demo\\run_demo.py",
+          "size": 446,
+          "mtime": "2026-03-20T11:09:31.761222Z",
+          "observed_at": "2026-03-20T11:09:31.761222Z"
+        },
+        {
+          "path": "D:\\codex\\generated\\execution-recovery-demo\\build-report.json",
+          "size": 357,
+          "mtime": "2026-03-20T11:09:32.583072Z",
+          "observed_at": "2026-03-20T11:09:32.491026Z"
+        },
+        {
+          "path": "D:\\codex\\generated\\execution-recovery-demo\\test-report.json",
+          "size": 350,
+          "mtime": "2026-03-20T11:09:32.959159Z",
+          "observed_at": "2026-03-20T11:09:32.881664Z"
+        },
+        {
+          "path": "D:\\codex\\generated\\execution-recovery-demo\\execution-report.json",
+          "size": 423,
+          "mtime": "2026-03-20T11:09:33.663004Z",
+          "observed_at": "2026-03-20T11:09:33.656477Z"
+        },
+        {
+          "path": "D:\\codex\\generated\\execution-recovery-demo\\artifact_manifest.json",
+          "size": 491,
+          "mtime": "2026-03-20T11:09:33.671958Z",
+          "observed_at": "2026-03-20T11:09:33.656477Z"
+        },
+        {
+          "path": "D:\\codex\\generated\\execution-recovery-demo\\build.sh",
+          "size": 51,
+          "mtime": "2026-03-20T11:09:31.808689Z",
+          "observed_at": "2026-03-20T11:09:31.808689Z"
+        },
+        {
+          "path": "D:\\codex\\generated\\execution-recovery-demo\\Dockerfile.build",
+          "size": 104,
+          "mtime": "2026-03-20T11:09:31.853988Z",
+          "observed_at": "2026-03-20T11:09:31.853988Z"
+        }
+      ],
+      "stale_artifacts": [],
+      "missing_artifacts": []
+    },
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\383f17c360b64582868182b09f3acff9\\execution-evidence.json",
+    "execution_evidence_step_count": 20
+  }
+}

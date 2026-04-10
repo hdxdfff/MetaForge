@@ -1,0 +1,12 @@
+{
+  "artifact_id": "blocked-to-done-ledger-evidence",
+  "executed": true,
+  "success": true,
+  "exit_code": 0,
+  "command": [
+    "D:\\codex\\tools\\python311-embed\\python.exe",
+    "D:\\codex\\generated\\blocked-to-done-ledger-evidence\\run_demo.py"
+  ],
+  "stdout": "{\"status\": \"ok\", \"artifact_id\": \"blocked-to-done-ledger-evidence\", \"message\": \"transition ledger evidence\", \"args\": []}",
+  "stderr": ""
+}

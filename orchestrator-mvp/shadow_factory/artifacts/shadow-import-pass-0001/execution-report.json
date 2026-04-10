@@ -1,0 +1,8 @@
+{
+  "task_id": "shadow-import-pass-0001",
+  "executed_at": "2026-03-28T21:14:20Z",
+  "artifact_checked": "D:\\codex\\orchestrator-mvp\\shadow_factory\\artifacts\\shadow-import-pass-0001\\dummy-artifact.txt",
+  "shadow_mode": true,
+  "run_mode": "generic",
+  "status": "pass"
+}

@@ -1,0 +1,174 @@
+[
+  {
+    "project_id": "79120c5dbb",
+    "name": "ToyOS Kernel",
+    "repo_path": "D:\\codex\\generated\\toy-os-demo",
+    "summary": "Kernel prototype under active assistant-led development with TinyFS, syscalls, scheduler, QEMU-verified boot, and reusable VM smoke testing.",
+    "kernel": {
+      "project_goals": [
+        "Keep the default ToyOS boot path stable under repeated QEMU smoke and soak tests.",
+        "Evolve ToyOS toward a stronger thesis-grade x86 teaching kernel with user mode, syscalls, scheduling, and filesystem support.",
+        "Prefer incremental subsystem upgrades that preserve a working kernel after each verified change."
+      ],
+      "technical_constraints": [
+        "Default verification must remain WSL plus QEMU based before any bare-metal claims.",
+        "Kernel changes should preserve a compiling and bootable default path after each patch.",
+        "High-risk architectural changes should be isolated and verified before enabling them in the stable boot path."
+      ],
+      "architecture_decisions": [
+        "Treat the current default path as a stable ring3-plus-syscall teaching kernel rather than a production OS.",
+        "Keep paging implemented but disabled in the default boot path until full context restoration is ready.",
+        "Use TinyFS over a RAM-backed block device and keep QEMU regression as the primary runtime truth source."
+      ],
+      "architecture_notes": [
+        "Prefer WSL builds and QEMU validation before any core-model escalation",
+        "Keep expensive planning minimal and local testing frequent",
+        "Use debugcon markers for low-cost boot diagnostics",
+        "Treat the assistant as the primary implementation worker for routine ToyOS development"
+      ],
+      "working_agreements": [
+        "Use local tools first",
+        "Keep ToyOS compiling after each change",
+        "Run VM smoke tests before claiming runtime stability",
+        "Escalate to the core model only for failed tests, unsafe low-level transitions, or structural kernel changes",
+        "Prefer small verified patches over large speculative rewrites"
+      ],
+      "recent_decisions": [
+        "Use TinyFS on top of ramdisk",
+        "Use generic_test_runner.py for repeated local regression runs",
+        "Default ToyOS runtime verification to QEMU rather than bare metal",
+        "Treat assistant-led WSL plus QEMU workflow as the default development path"
+      ]
+    }
+  },
+  {
+    "project_id": "networklab01",
+    "name": "Computer Network Lab",
+    "repo_path": "D:\\计算机网络",
+    "summary": "Local computer-network course workspace with Wireshark tooling, HTTP lab materials, and packet-analysis oriented experiments.",
+    "kernel": {
+      "project_goals": [
+        "Support reproducible computer-network lab execution with local packet capture and protocol analysis.",
+        "Generate experiment records, command logs, and report-ready summaries from network lab work."
+      ],
+      "technical_constraints": [
+        "Prefer local packet and HTTP tooling over premium-model reasoning whenever possible.",
+        "Treat Wireshark, dumpcap, and direct command evidence as the source of truth."
+      ],
+      "architecture_decisions": [
+        "Network-lab tasks should default to local validation and report drafting.",
+        "Escalation should be reserved for protocol ambiguity, unsafe actions, or contradictory local traces."
+      ],
+      "architecture_notes": [
+        "Prefer local packet and HTTP tooling before premium-model reasoning",
+        "Treat Wireshark and dumpcap outputs as primary evidence",
+        "Use WSL or local scripts for socket and protocol experiments"
+      ],
+      "working_agreements": [
+        "Restate experiment requirements before acting",
+        "Capture exact commands, traces, and observations",
+        "Escalate only protocol ambiguity, unsafe actions, or contradictory local results"
+      ],
+      "recent_decisions": [
+        "Wireshark bundle detected under the workspace",
+        "Network labs should default to local validation and report drafting"
+      ]
+    }
+  },
+  {
+    "project_id": "dblab00001",
+    "name": "Database Systems Lab",
+    "repo_path": "D:\\数据库系统",
+    "summary": "Database course workspace centered on lab documents and openGauss-oriented setup requirements, with runtime configuration still in progress.",
+    "kernel": {
+      "project_goals": [
+        "Turn lab requirements into a reproducible database systems environment.",
+        "Support SQL experiments, environment validation, and report generation from local lab assets."
+      ],
+      "technical_constraints": [
+        "Use lab documents as the source of truth for setup and runtime requirements.",
+        "Avoid destructive schema or data actions without explicit approval."
+      ],
+      "architecture_decisions": [
+        "Prefer deterministic SQL, documented setup steps, and local database tools when configured.",
+        "Escalate only runtime gaps, destructive schema actions, or contradictory query behavior."
+      ],
+      "architecture_notes": [
+        "Prefer deterministic SQL, documented setup steps, and local database tools when configured",
+        "Use lab documents as the source of truth for environment requirements",
+        "Escalate only runtime gaps, destructive schema actions, or contradictory query behavior"
+      ],
+      "working_agreements": [
+        "Read the lab document before editing or installing",
+        "Check existing local database runtimes before downloading new ones",
+        "Summarize missing dependencies and safest next actions clearly"
+      ],
+      "recent_decisions": [
+        "openGauss, gsql, and Data Studio requirements were identified from lab materials",
+        "Java and Data Studio build dependencies were partially downloaded locally"
+      ]
+    }
+  },
+  {
+    "project_id": "frontend001",
+    "name": "Frontend Study Workspace",
+    "repo_path": "D:\\前端学习资料",
+    "summary": "Static frontend learning materials with HTML exercises, PPT assets, and day-based practice folders.",
+    "kernel": {
+      "project_goals": [
+        "Preserve source learning materials while creating derived runnable examples and exercises.",
+        "Support migration of study materials into structured frontend practice tasks."
+      ],
+      "technical_constraints": [
+        "Source course assets should remain intact and unchanged whenever possible.",
+        "Derived examples should be created separately from original archives."
+      ],
+      "architecture_decisions": [
+        "Treat this workspace as a reading-and-practice source rather than a production app repository.",
+        "Prefer local static inspection and small runnable examples."
+      ],
+      "architecture_notes": [
+        "Prefer local static inspection and small runnable examples",
+        "Use this workspace for HTML, CSS, and JavaScript practice migration"
+      ],
+      "working_agreements": [
+        "Preserve original course materials",
+        "Create derived examples or exercises instead of mutating source archives when possible"
+      ],
+      "recent_decisions": [
+        "Day-based static materials were detected in the workspace"
+      ]
+    }
+  },
+  {
+    "project_id": "aimath0001",
+    "name": "AI Math Foundations Workspace",
+    "repo_path": "D:\\人工智能数学基础",
+    "summary": "Document-heavy workspace with optimization, matrix analysis, and math teaching materials suitable for reading, note extraction, and assignment support.",
+    "kernel": {
+      "project_goals": [
+        "Support reading, note extraction, and assignment assistance from local math teaching materials.",
+        "Turn document-heavy content into structured summaries and reusable study kernels."
+      ],
+      "technical_constraints": [
+        "Treat local PDFs and slides as the authoritative source.",
+        "Keep generated notes separate from original teaching files."
+      ],
+      "architecture_decisions": [
+        "Use reading-first flows instead of runtime-first automation for this workspace.",
+        "Prefer document extraction, summarization, and problem-structure analysis."
+      ],
+      "architecture_notes": [
+        "Prefer document extraction, summarization, and problem-structure analysis",
+        "Treat this workspace as reading-first, not runtime-first"
+      ],
+      "working_agreements": [
+        "Use local PDFs and slides as the source of truth",
+        "Keep generated notes separate from original teaching files"
+      ],
+      "recent_decisions": [
+        "Math PDFs and related teaching assets were detected in the workspace"
+      ]
+    }
+  }
+]

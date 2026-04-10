@@ -1,0 +1,17 @@
+{
+  "cheap_first": true,
+  "max_strong_model_ratio": 0.15,
+  "max_reasoning_model_ratio": 0.6,
+  "max_parallel_tasks": 3,
+  "safe_tasks_only": true,
+  "stop_when_no_safe_tasks": true,
+  "upgrade_priority": [
+    "runtime_stability",
+    "cheap_prompt_improvement",
+    "skill_training",
+    "scheduler_optimization",
+    "capability_generation",
+    "experimental_platform_generation"
+  ],
+  "premium_frozen": false
+}

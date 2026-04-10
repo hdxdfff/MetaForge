@@ -1,0 +1,27 @@
+{
+  "task_id": "31d97462534543479ad53b691b8ad49e",
+  "task_title": "Build current runnable baseline for Restore ToyOS real artifact delivery",
+  "task_status": "timed_out",
+  "started_at": "2026-03-29T01:09:02.943795Z",
+  "updated_at": "2026-03-29T01:09:17.766872Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "31d97462534543479ad53b691b8ad49e-terminal-record",
+      "step_title": "Build current runnable baseline for Restore ToyOS real artifact delivery",
+      "action": "task_terminal_record",
+      "ok": false,
+      "at": "2026-03-29T01:09:17.766872Z",
+      "status": "timed_out",
+      "summary": "first_artifact_timeout_after_3_ticks",
+      "error": "first_artifact_timeout_after_3_ticks",
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ],
+  "result": {
+    "summary": "first_artifact_timeout_after_3_ticks",
+    "error": "first_artifact_timeout_after_3_ticks"
+  }
+}

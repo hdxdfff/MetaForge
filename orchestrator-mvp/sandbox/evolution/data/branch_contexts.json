@@ -1,0 +1,1319 @@
+{
+  "updated_at": "2026-03-11T09:53:35.147688Z",
+  "contexts": {
+    "toyos-branch": {
+      "branch_name": "toyos-branch",
+      "target": "Continue ToyOS kernel branch work with mainline context reuse",
+      "updated_at": "2026-03-10T19:51:05.097668Z",
+      "source_session": "toyos-branch-session",
+      "department": "engineering_department",
+      "repo_path": "D:\\codex\\orchestrator-mvp",
+      "project": {
+        "project_id": "metafactory-core",
+        "name": "Meta Factory Core",
+        "summary": "Core AI software engineering operating system, automation lab, routing, scheduler, policy, knowledge, verification, and runtime control workspace.",
+        "compact_context": {
+          "project_goals": [
+            "Maintain and evolve the AI software engineering operating system and automation lab.",
+            "Strengthen routing, scheduling, knowledge, verification, and cheap-first execution.",
+            "Support branch dialogs that reuse mainline context and factory outputs."
+          ],
+          "technical_constraints": [
+            "Prefer cheap-first execution and local tools before premium reasoning.",
+            "Preserve stable autonomy and verification gates while evolving capabilities.",
+            "Treat Codex as control surface and persistent state as the memory source of truth."
+          ],
+          "architecture_decisions": [
+            "The meta-factory is the mainline system for engineering OS and automation lab work.",
+            "Branch work should reuse mainline context packages instead of relying on chat history.",
+            "Knowledge, routing, scheduling, policy, and verification changes belong to the meta-factory core."
+          ],
+          "working_agreements": [
+            "Keep control plane, runtime, and memory layers explicit.",
+            "Use structured context packages for branch and change-request work.",
+            "Prefer runtime-native repair, verification, and policy-governed evolution."
+          ],
+          "recent_decisions": [
+            "Global policy, context builder, code graph, and experiment loop are active parts of the mainline system.",
+            "Current focus capabilities: agent_orchestration, webapp_generation, deploy_scaffold, tool_extension.",
+            "Preferred workers: reviewer."
+          ]
+        }
+      },
+      "global_policy": {
+        "focus_capabilities": [
+          "agent_orchestration",
+          "webapp_generation",
+          "deploy_scaffold",
+          "tool_extension"
+        ],
+        "resource_budget": {
+          "runtime_tasks": 0.4,
+          "experiments": 0.3,
+          "capability_building": 0.2,
+          "maintenance": 0.1
+        },
+        "experiment_portfolio": {
+          "routing-heuristics": 0.3,
+          "prompt-specialization": 0.2,
+          "recovery-patterns": 0.15,
+          "goal-seeding": 0.175,
+          "pattern-rollout": 0.175
+        },
+        "worker_bias_policy": {
+          "reviewer": 0.3,
+          "coder": 0.12,
+          "docker": 0.02,
+          "shell": 0.12
+        }
+      },
+      "knowledge_hints": {
+        "preferred_capabilities": [
+          "agent_orchestration",
+          "webapp_generation",
+          "deploy_scaffold",
+          "tool_extension"
+        ],
+        "preferred_workers": [
+          "reviewer"
+        ],
+        "repo_learning": {
+          "updated_at": "2026-03-10T19:50:29.305793Z",
+          "embedding": {
+            "provider": "local",
+            "model": "BAAI/bge-small-en-v1.5",
+            "dimensions": 128,
+            "backend": "hashed-local",
+            "ready": true
+          },
+          "graph_modules": 116,
+          "chunk_count": 116,
+          "top_modules": [
+            {
+              "module": "tools.codex_control",
+              "layer": "unclassified",
+              "owner_team": "infrastructure_team",
+              "path": "D:\\codex\\orchestrator-mvp\\tools\\codex_control.py"
+            },
+            {
+              "module": "tools.brain_loop",
+              "layer": "unclassified",
+              "owner_team": "infrastructure_team",
+              "path": "D:\\codex\\orchestrator-mvp\\tools\\brain_loop.py"
+            },
+            {
+              "module": "tools.factory_daemon",
+              "layer": "unclassified",
+              "owner_team": "infrastructure_team",
+              "path": "D:\\codex\\orchestrator-mvp\\tools\\factory_daemon.py"
+            },
+            {
+              "module": "tools.meta_factory_control",
+              "layer": "architecture_engine",
+              "owner_team": "infrastructure_team",
+              "path": "D:\\codex\\orchestrator-mvp\\tools\\meta_factory_control.py"
+            },
+            {
+              "module": "app.orchestrator",
+              "layer": "unclassified",
+              "owner_team": "backend_team",
+              "path": "D:\\codex\\orchestrator-mvp\\app\\orchestrator.py"
+            },
+            {
+              "module": "tools.decision_engine",
+              "layer": "task_graph_planner",
+              "owner_team": "architecture_team",
+              "path": "D:\\codex\\orchestrator-mvp\\tools\\decision_engine.py"
+            },
+            {
+              "module": "tools.change_request_analyzer",
+              "layer": "unclassified",
+              "owner_team": "infrastructure_team",
+              "path": "D:\\codex\\orchestrator-mvp\\tools\\change_request_analyzer.py"
+            },
+            {
+              "module": "tools.taskgraph_compiler",
+              "layer": "architecture_engine",
+              "owner_team": "architecture_team",
+              "path": "D:\\codex\\orchestrator-mvp\\tools\\taskgraph_compiler.py"
+            },
+            {
+              "module": "tools.verification_engine",
+              "layer": "verification",
+              "owner_team": "infrastructure_team",
+              "path": "D:\\codex\\orchestrator-mvp\\tools\\verification_engine.py"
+            },
+            {
+              "module": "app.worker_adapters",
+              "layer": "unclassified",
+              "owner_team": "backend_team",
+              "path": "D:\\codex\\orchestrator-mvp\\app\\worker_adapters.py"
+            },
+            {
+              "module": "app.main",
+              "layer": "unclassified",
+              "owner_team": "backend_team",
+              "path": "D:\\codex\\orchestrator-mvp\\app\\main.py"
+            },
+            {
+              "module": "app.openai_client",
+              "layer": "unclassified",
+              "owner_team": "backend_team",
+              "path": "D:\\codex\\orchestrator-mvp\\app\\openai_client.py"
+            }
+          ]
+        }
+      },
+      "context_package": {
+        "task": "Continue ToyOS kernel branch work with mainline context reuse",
+        "task_type": "implementation",
+        "repo_path": "D:\\codex\\orchestrator-mvp",
+        "module_focus": [
+          "tools.branch_context",
+          "tools.context_kernel",
+          "tools.prepare_self_patch_branch",
+          "tools.branch_workboard",
+          "tools.codex_control"
+        ],
+        "dependency_modules": [],
+        "owner_teams": [
+          "infrastructure_team"
+        ],
+        "layers": [
+          "unclassified"
+        ],
+        "project_context": {},
+        "knowledge_hints": {
+          "preferred_capabilities": [
+            "agent_orchestration",
+            "webapp_generation",
+            "deploy_scaffold",
+            "tool_extension"
+          ],
+          "preferred_workers": [
+            "reviewer"
+          ],
+          "repo_learning": {
+            "updated_at": "2026-03-10T19:50:29.305793Z",
+            "embedding": {
+              "provider": "local",
+              "model": "BAAI/bge-small-en-v1.5",
+              "dimensions": 128,
+              "backend": "hashed-local",
+              "ready": true
+            },
+            "graph_modules": 116,
+            "chunk_count": 116,
+            "top_modules": [
+              {
+                "module": "tools.codex_control",
+                "layer": "unclassified",
+                "owner_team": "infrastructure_team",
+                "path": "D:\\codex\\orchestrator-mvp\\tools\\codex_control.py"
+              },
+              {
+                "module": "tools.brain_loop",
+                "layer": "unclassified",
+                "owner_team": "infrastructure_team",
+                "path": "D:\\codex\\orchestrator-mvp\\tools\\brain_loop.py"
+              },
+              {
+                "module": "tools.factory_daemon",
+                "layer": "unclassified",
+                "owner_team": "infrastructure_team",
+                "path": "D:\\codex\\orchestrator-mvp\\tools\\factory_daemon.py"
+              },
+              {
+                "module": "tools.meta_factory_control",
+                "layer": "architecture_engine",
+                "owner_team": "infrastructure_team",
+                "path": "D:\\codex\\orchestrator-mvp\\tools\\meta_factory_control.py"
+              },
+              {
+                "module": "app.orchestrator",
+                "layer": "unclassified",
+                "owner_team": "backend_team",
+                "path": "D:\\codex\\orchestrator-mvp\\app\\orchestrator.py"
+              },
+              {
+                "module": "tools.decision_engine",
+                "layer": "task_graph_planner",
+                "owner_team": "architecture_team",
+                "path": "D:\\codex\\orchestrator-mvp\\tools\\decision_engine.py"
+              },
+              {
+                "module": "tools.change_request_analyzer",
+                "layer": "unclassified",
+                "owner_team": "infrastructure_team",
+                "path": "D:\\codex\\orchestrator-mvp\\tools\\change_request_analyzer.py"
+              },
+              {
+                "module": "tools.taskgraph_compiler",
+                "layer": "architecture_engine",
+                "owner_team": "architecture_team",
+                "path": "D:\\codex\\orchestrator-mvp\\tools\\taskgraph_compiler.py"
+              },
+              {
+                "module": "tools.verification_engine",
+                "layer": "verification",
+                "owner_team": "infrastructure_team",
+                "path": "D:\\codex\\orchestrator-mvp\\tools\\verification_engine.py"
+              },
+              {
+                "module": "app.worker_adapters",
+                "layer": "unclassified",
+                "owner_team": "backend_team",
+                "path": "D:\\codex\\orchestrator-mvp\\app\\worker_adapters.py"
+              },
+              {
+                "module": "app.main",
+                "layer": "unclassified",
+                "owner_team": "backend_team",
+                "path": "D:\\codex\\orchestrator-mvp\\app\\main.py"
+              },
+              {
+                "module": "app.openai_client",
+                "layer": "unclassified",
+                "owner_team": "backend_team",
+                "path": "D:\\codex\\orchestrator-mvp\\app\\openai_client.py"
+              }
+            ]
+          }
+        },
+        "verification_scope": {
+          "modules": [
+            "tools.branch_context",
+            "tools.context_kernel",
+            "tools.prepare_self_patch_branch",
+            "tools.branch_workboard",
+            "tools.codex_control"
+          ],
+          "teams": [
+            "infrastructure_team"
+          ],
+          "layers": [
+            "unclassified"
+          ]
+        },
+        "current_plan": [
+          "Task type: implementation",
+          "Primary modules: tools.branch_context, tools.context_kernel, tools.prepare_self_patch_branch, tools.branch_workboard, tools.codex_control",
+          "Dependency expansion: none",
+          "Owner teams: infrastructure_team",
+          "Layers: unclassified"
+        ],
+        "summary_blocks": [
+          "Task type: implementation\nPrimary modules: tools.branch_context, tools.context_kernel, tools.prepare_self_patch_branch, tools.branch_workboard, tools.codex_control\nDependency expansion: none\nOwner teams: infrastructure_team\nLayers: unclassified",
+          "Preferred capabilities: agent_orchestration, webapp_generation, deploy_scaffold, tool_extension\nPreferred workers: reviewer\nTop capability reputation: agent_orchestration, webapp_generation, deploy_scaffold, tool_extension\nTop worker reputation: reviewer\nRepo learning modules=116 chunks=116"
+        ],
+        "budget_chars": 3200
+      }
+    },
+    "knowledge-branch": {
+      "branch_name": "knowledge-branch",
+      "target": "Deepen repo learning and knowledge routing reuse",
+      "updated_at": "2026-03-10T19:51:05.186255Z",
+      "source_session": "knowledge-branch-session",
+      "department": "research_department",
+      "repo_path": "D:\\codex\\orchestrator-mvp",
+      "project": {
+        "project_id": "metafactory-core",
+        "name": "Meta Factory Core",
+        "summary": "Core AI software engineering operating system, automation lab, routing, scheduler, policy, knowledge, verification, and runtime control workspace.",
+        "compact_context": {
+          "project_goals": [
+            "Maintain and evolve the AI software engineering operating system and automation lab.",
+            "Strengthen routing, scheduling, knowledge, verification, and cheap-first execution.",
+            "Support branch dialogs that reuse mainline context and factory outputs."
+          ],
+          "technical_constraints": [
+            "Prefer cheap-first execution and local tools before premium reasoning.",
+            "Preserve stable autonomy and verification gates while evolving capabilities.",
+            "Treat Codex as control surface and persistent state as the memory source of truth."
+          ],
+          "architecture_decisions": [
+            "The meta-factory is the mainline system for engineering OS and automation lab work.",
+            "Branch work should reuse mainline context packages instead of relying on chat history.",
+            "Knowledge, routing, scheduling, policy, and verification changes belong to the meta-factory core."
+          ],
+          "working_agreements": [
+            "Keep control plane, runtime, and memory layers explicit.",
+            "Use structured context packages for branch and change-request work.",
+            "Prefer runtime-native repair, verification, and policy-governed evolution."
+          ],
+          "recent_decisions": [
+            "Global policy, context builder, code graph, and experiment loop are active parts of the mainline system.",
+            "Current focus capabilities: agent_orchestration, webapp_generation, deploy_scaffold, tool_extension.",
+            "Preferred workers: reviewer."
+          ]
+        }
+      },
+      "global_policy": {
+        "focus_capabilities": [
+          "agent_orchestration",
+          "webapp_generation",
+          "deploy_scaffold",
+          "tool_extension"
+        ],
+        "resource_budget": {
+          "runtime_tasks": 0.4,
+          "experiments": 0.3,
+          "capability_building": 0.2,
+          "maintenance": 0.1
+        },
+        "experiment_portfolio": {
+          "routing-heuristics": 0.3,
+          "prompt-specialization": 0.2,
+          "recovery-patterns": 0.15,
+          "goal-seeding": 0.175,
+          "pattern-rollout": 0.175
+        },
+        "worker_bias_policy": {
+          "reviewer": 0.3,
+          "coder": 0.12,
+          "docker": 0.02,
+          "shell": 0.12
+        }
+      },
+      "knowledge_hints": {
+        "preferred_capabilities": [
+          "agent_orchestration",
+          "webapp_generation",
+          "deploy_scaffold",
+          "tool_extension"
+        ],
+        "preferred_workers": [
+          "reviewer"
+        ],
+        "repo_learning": {
+          "updated_at": "2026-03-10T19:50:29.305793Z",
+          "embedding": {
+            "provider": "local",
+            "model": "BAAI/bge-small-en-v1.5",
+            "dimensions": 128,
+            "backend": "hashed-local",
+            "ready": true
+          },
+          "graph_modules": 116,
+          "chunk_count": 116,
+          "top_modules": [
+            {
+              "module": "tools.codex_control",
+              "layer": "unclassified",
+              "owner_team": "infrastructure_team",
+              "path": "D:\\codex\\orchestrator-mvp\\tools\\codex_control.py"
+            },
+            {
+              "module": "tools.brain_loop",
+              "layer": "unclassified",
+              "owner_team": "infrastructure_team",
+              "path": "D:\\codex\\orchestrator-mvp\\tools\\brain_loop.py"
+            },
+            {
+              "module": "tools.factory_daemon",
+              "layer": "unclassified",
+              "owner_team": "infrastructure_team",
+              "path": "D:\\codex\\orchestrator-mvp\\tools\\factory_daemon.py"
+            },
+            {
+              "module": "tools.meta_factory_control",
+              "layer": "architecture_engine",
+              "owner_team": "infrastructure_team",
+              "path": "D:\\codex\\orchestrator-mvp\\tools\\meta_factory_control.py"
+            },
+            {
+              "module": "app.orchestrator",
+              "layer": "unclassified",
+              "owner_team": "backend_team",
+              "path": "D:\\codex\\orchestrator-mvp\\app\\orchestrator.py"
+            },
+            {
+              "module": "tools.decision_engine",
+              "layer": "task_graph_planner",
+              "owner_team": "architecture_team",
+              "path": "D:\\codex\\orchestrator-mvp\\tools\\decision_engine.py"
+            },
+            {
+              "module": "tools.change_request_analyzer",
+              "layer": "unclassified",
+              "owner_team": "infrastructure_team",
+              "path": "D:\\codex\\orchestrator-mvp\\tools\\change_request_analyzer.py"
+            },
+            {
+              "module": "tools.taskgraph_compiler",
+              "layer": "architecture_engine",
+              "owner_team": "architecture_team",
+              "path": "D:\\codex\\orchestrator-mvp\\tools\\taskgraph_compiler.py"
+            },
+            {
+              "module": "tools.verification_engine",
+              "layer": "verification",
+              "owner_team": "infrastructure_team",
+              "path": "D:\\codex\\orchestrator-mvp\\tools\\verification_engine.py"
+            },
+            {
+              "module": "app.worker_adapters",
+              "layer": "unclassified",
+              "owner_team": "backend_team",
+              "path": "D:\\codex\\orchestrator-mvp\\app\\worker_adapters.py"
+            },
+            {
+              "module": "app.main",
+              "layer": "unclassified",
+              "owner_team": "backend_team",
+              "path": "D:\\codex\\orchestrator-mvp\\app\\main.py"
+            },
+            {
+              "module": "app.openai_client",
+              "layer": "unclassified",
+              "owner_team": "backend_team",
+              "path": "D:\\codex\\orchestrator-mvp\\app\\openai_client.py"
+            }
+          ]
+        }
+      },
+      "context_package": {
+        "task": "Deepen repo learning and knowledge routing reuse",
+        "task_type": "implementation",
+        "repo_path": "D:\\codex\\orchestrator-mvp",
+        "module_focus": [
+          "tools.repo_learning_engine",
+          "tools.decision_engine",
+          "app.git_service",
+          "tools.codex_control",
+          "app.models"
+        ],
+        "dependency_modules": [],
+        "owner_teams": [
+          "architecture_team",
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "layers": [
+          "task_graph_planner",
+          "unclassified"
+        ],
+        "project_context": {},
+        "knowledge_hints": {
+          "preferred_capabilities": [
+            "agent_orchestration",
+            "webapp_generation",
+            "deploy_scaffold",
+            "tool_extension"
+          ],
+          "preferred_workers": [
+            "reviewer"
+          ],
+          "repo_learning": {
+            "updated_at": "2026-03-10T19:50:29.305793Z",
+            "embedding": {
+              "provider": "local",
+              "model": "BAAI/bge-small-en-v1.5",
+              "dimensions": 128,
+              "backend": "hashed-local",
+              "ready": true
+            },
+            "graph_modules": 116,
+            "chunk_count": 116,
+            "top_modules": [
+              {
+                "module": "tools.codex_control",
+                "layer": "unclassified",
+                "owner_team": "infrastructure_team",
+                "path": "D:\\codex\\orchestrator-mvp\\tools\\codex_control.py"
+              },
+              {
+                "module": "tools.brain_loop",
+                "layer": "unclassified",
+                "owner_team": "infrastructure_team",
+                "path": "D:\\codex\\orchestrator-mvp\\tools\\brain_loop.py"
+              },
+              {
+                "module": "tools.factory_daemon",
+                "layer": "unclassified",
+                "owner_team": "infrastructure_team",
+                "path": "D:\\codex\\orchestrator-mvp\\tools\\factory_daemon.py"
+              },
+              {
+                "module": "tools.meta_factory_control",
+                "layer": "architecture_engine",
+                "owner_team": "infrastructure_team",
+                "path": "D:\\codex\\orchestrator-mvp\\tools\\meta_factory_control.py"
+              },
+              {
+                "module": "app.orchestrator",
+                "layer": "unclassified",
+                "owner_team": "backend_team",
+                "path": "D:\\codex\\orchestrator-mvp\\app\\orchestrator.py"
+              },
+              {
+                "module": "tools.decision_engine",
+                "layer": "task_graph_planner",
+                "owner_team": "architecture_team",
+                "path": "D:\\codex\\orchestrator-mvp\\tools\\decision_engine.py"
+              },
+              {
+                "module": "tools.change_request_analyzer",
+                "layer": "unclassified",
+                "owner_team": "infrastructure_team",
+                "path": "D:\\codex\\orchestrator-mvp\\tools\\change_request_analyzer.py"
+              },
+              {
+                "module": "tools.taskgraph_compiler",
+                "layer": "architecture_engine",
+                "owner_team": "architecture_team",
+                "path": "D:\\codex\\orchestrator-mvp\\tools\\taskgraph_compiler.py"
+              },
+              {
+                "module": "tools.verification_engine",
+                "layer": "verification",
+                "owner_team": "infrastructure_team",
+                "path": "D:\\codex\\orchestrator-mvp\\tools\\verification_engine.py"
+              },
+              {
+                "module": "app.worker_adapters",
+                "layer": "unclassified",
+                "owner_team": "backend_team",
+                "path": "D:\\codex\\orchestrator-mvp\\app\\worker_adapters.py"
+              },
+              {
+                "module": "app.main",
+                "layer": "unclassified",
+                "owner_team": "backend_team",
+                "path": "D:\\codex\\orchestrator-mvp\\app\\main.py"
+              },
+              {
+                "module": "app.openai_client",
+                "layer": "unclassified",
+                "owner_team": "backend_team",
+                "path": "D:\\codex\\orchestrator-mvp\\app\\openai_client.py"
+              }
+            ]
+          }
+        },
+        "verification_scope": {
+          "modules": [
+            "tools.repo_learning_engine",
+            "tools.decision_engine",
+            "app.git_service",
+            "tools.codex_control",
+            "app.models"
+          ],
+          "teams": [
+            "architecture_team",
+            "backend_team",
+            "infrastructure_team"
+          ],
+          "layers": [
+            "task_graph_planner",
+            "unclassified"
+          ]
+        },
+        "current_plan": [
+          "Task type: implementation",
+          "Primary modules: tools.repo_learning_engine, tools.decision_engine, app.git_service, tools.codex_control, app.models",
+          "Dependency expansion: none",
+          "Owner teams: architecture_team, backend_team, infrastructure_team",
+          "Layers: task_graph_planner, unclassified"
+        ],
+        "summary_blocks": [
+          "Task type: implementation\nPrimary modules: tools.repo_learning_engine, tools.decision_engine, app.git_service, tools.codex_control, app.models\nDependency expansion: none\nOwner teams: architecture_team, backend_team, infrastructure_team\nLayers: task_graph_planner, unclassified",
+          "Preferred capabilities: agent_orchestration, webapp_generation, deploy_scaffold, tool_extension\nPreferred workers: reviewer\nTop capability reputation: agent_orchestration, webapp_generation, deploy_scaffold, tool_extension\nTop worker reputation: reviewer\nRepo learning modules=116 chunks=116"
+        ],
+        "budget_chars": 3200
+      }
+    },
+    "capability-branch": {
+      "branch_name": "capability-branch",
+      "target": "Strengthen capability distillation pipeline",
+      "updated_at": "2026-03-11T09:53:35.076475Z",
+      "source_session": "capability-branch-session",
+      "department": "engineering_department",
+      "lane_role": "capability_branch",
+      "shares_mainline_context": true,
+      "repo_path": "D:\\codex\\orchestrator-mvp",
+      "project": {
+        "project_id": "metafactory-core",
+        "name": "Meta Factory Core",
+        "summary": "Core AI software engineering operating system, automation lab, routing, scheduler, policy, knowledge, verification, and runtime control workspace.",
+        "compact_context": {
+          "project_goals": [
+            "Maintain and evolve the AI software engineering operating system and automation lab.",
+            "Strengthen routing, scheduling, knowledge, verification, and cheap-first execution.",
+            "Support branch dialogs that reuse mainline context and factory outputs."
+          ],
+          "technical_constraints": [
+            "Prefer cheap-first execution and local tools before premium reasoning.",
+            "Preserve stable autonomy and verification gates while evolving capabilities.",
+            "Treat Codex as control surface and persistent state as the memory source of truth."
+          ],
+          "architecture_decisions": [
+            "The meta-factory is the mainline system for engineering OS and automation lab work.",
+            "Branch work should reuse mainline context packages instead of relying on chat history.",
+            "Knowledge, routing, scheduling, policy, and verification changes belong to the meta-factory core."
+          ],
+          "working_agreements": [
+            "Keep control plane, runtime, and memory layers explicit.",
+            "Use structured context packages for branch and change-request work.",
+            "Prefer runtime-native repair, verification, and policy-governed evolution."
+          ],
+          "recent_decisions": [
+            "Global policy, context builder, code graph, and experiment loop are active parts of the mainline system.",
+            "Current focus capabilities: agent_orchestration, webapp_generation, deploy_scaffold, tool_extension.",
+            "Preferred workers: reviewer."
+          ]
+        }
+      },
+      "global_policy": {
+        "focus_capabilities": [
+          "agent_orchestration",
+          "webapp_generation",
+          "deploy_scaffold",
+          "tool_extension"
+        ],
+        "resource_budget": {
+          "runtime_tasks": 0.35,
+          "experiments": 0.2,
+          "capability_building": 0.15,
+          "maintenance": 0.2
+        },
+        "experiment_portfolio": {
+          "routing-heuristics": 0.35,
+          "prompt-specialization": 0.2,
+          "recovery-patterns": 0.2,
+          "goal-seeding": 0.125,
+          "pattern-rollout": 0.125
+        },
+        "worker_bias_policy": {
+          "reviewer": 0.3,
+          "coder": 0.12,
+          "docker": 0.03,
+          "shell": 0.12
+        }
+      },
+      "knowledge_hints": {
+        "preferred_capabilities": [
+          "agent_orchestration",
+          "webapp_generation",
+          "deploy_scaffold",
+          "tool_extension"
+        ],
+        "preferred_workers": [
+          "reviewer"
+        ],
+        "repo_learning": {
+          "updated_at": "2026-03-11T09:52:48.288184Z",
+          "embedding": {
+            "provider": "local",
+            "model": "BAAI/bge-small-en-v1.5",
+            "dimensions": 128,
+            "backend": "hashed-local",
+            "ready": true
+          },
+          "graph_modules": 116,
+          "chunk_count": 116,
+          "top_modules": [
+            {
+              "module": "tools.codex_control",
+              "layer": "unclassified",
+              "owner_team": "infrastructure_team",
+              "path": "D:\\codex\\orchestrator-mvp\\tools\\codex_control.py"
+            },
+            {
+              "module": "tools.brain_loop",
+              "layer": "unclassified",
+              "owner_team": "infrastructure_team",
+              "path": "D:\\codex\\orchestrator-mvp\\tools\\brain_loop.py"
+            },
+            {
+              "module": "tools.factory_daemon",
+              "layer": "unclassified",
+              "owner_team": "infrastructure_team",
+              "path": "D:\\codex\\orchestrator-mvp\\tools\\factory_daemon.py"
+            },
+            {
+              "module": "tools.meta_factory_control",
+              "layer": "architecture_engine",
+              "owner_team": "infrastructure_team",
+              "path": "D:\\codex\\orchestrator-mvp\\tools\\meta_factory_control.py"
+            },
+            {
+              "module": "app.orchestrator",
+              "layer": "unclassified",
+              "owner_team": "backend_team",
+              "path": "D:\\codex\\orchestrator-mvp\\app\\orchestrator.py"
+            },
+            {
+              "module": "tools.decision_engine",
+              "layer": "task_graph_planner",
+              "owner_team": "architecture_team",
+              "path": "D:\\codex\\orchestrator-mvp\\tools\\decision_engine.py"
+            },
+            {
+              "module": "tools.change_request_analyzer",
+              "layer": "unclassified",
+              "owner_team": "infrastructure_team",
+              "path": "D:\\codex\\orchestrator-mvp\\tools\\change_request_analyzer.py"
+            },
+            {
+              "module": "tools.taskgraph_compiler",
+              "layer": "architecture_engine",
+              "owner_team": "architecture_team",
+              "path": "D:\\codex\\orchestrator-mvp\\tools\\taskgraph_compiler.py"
+            },
+            {
+              "module": "tools.verification_engine",
+              "layer": "verification",
+              "owner_team": "infrastructure_team",
+              "path": "D:\\codex\\orchestrator-mvp\\tools\\verification_engine.py"
+            },
+            {
+              "module": "app.worker_adapters",
+              "layer": "unclassified",
+              "owner_team": "backend_team",
+              "path": "D:\\codex\\orchestrator-mvp\\app\\worker_adapters.py"
+            },
+            {
+              "module": "app.main",
+              "layer": "unclassified",
+              "owner_team": "backend_team",
+              "path": "D:\\codex\\orchestrator-mvp\\app\\main.py"
+            },
+            {
+              "module": "app.openai_client",
+              "layer": "unclassified",
+              "owner_team": "backend_team",
+              "path": "D:\\codex\\orchestrator-mvp\\app\\openai_client.py"
+            }
+          ]
+        }
+      },
+      "mainline_state": {
+        "control_layer": {
+          "status": "constrained",
+          "quality_score": null,
+          "patch_gate_status": null
+        },
+        "engineering_os": {
+          "status": null,
+          "patch_ready_count": null,
+          "verification_status": null
+        },
+        "autonomy": {
+          "stage": "stage4_confirmed",
+          "score": 0.7954,
+          "stable_autonomy": null
+        },
+        "automation_lab": {
+          "status": "active",
+          "maturity_status": "developing",
+          "maturity_score": 0.72
+        }
+      },
+      "shared_context_refs": {
+        "project_context_compaction": "D:\\codex\\orchestrator-mvp\\data\\project_context_compaction.json",
+        "global_policy_state": "D:\\codex\\orchestrator-mvp\\data\\global_policy_state.json",
+        "knowledge_base": "D:\\codex\\orchestrator-mvp\\data\\knowledge_base.json",
+        "control_layer_status": "D:\\codex\\orchestrator-mvp\\data\\control_layer_status.json",
+        "engineering_os_status": "D:\\codex\\orchestrator-mvp\\data\\engineering_os_status.json",
+        "autonomy_score": "D:\\codex\\orchestrator-mvp\\data\\autonomy_score.json",
+        "automation_lab_status": "D:\\codex\\orchestrator-mvp\\data\\automation_lab_status.json"
+      },
+      "context_package": {
+        "task": "Strengthen capability distillation pipeline",
+        "task_type": "implementation",
+        "repo_path": "D:\\codex\\orchestrator-mvp",
+        "module_focus": [
+          "tools.capability_distillation",
+          "tools.distillation",
+          "app.models",
+          "tools.experiment_executor",
+          "runtime.scheduler"
+        ],
+        "dependency_modules": [],
+        "owner_teams": [
+          "architecture_team",
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "layers": [
+          "agent_teams",
+          "unclassified"
+        ],
+        "project_context": {},
+        "knowledge_hints": {
+          "preferred_capabilities": [
+            "agent_orchestration",
+            "webapp_generation",
+            "deploy_scaffold",
+            "tool_extension"
+          ],
+          "preferred_workers": [
+            "reviewer"
+          ],
+          "repo_learning": {
+            "updated_at": "2026-03-11T09:52:48.288184Z",
+            "embedding": {
+              "provider": "local",
+              "model": "BAAI/bge-small-en-v1.5",
+              "dimensions": 128,
+              "backend": "hashed-local",
+              "ready": true
+            },
+            "graph_modules": 116,
+            "chunk_count": 116,
+            "top_modules": [
+              {
+                "module": "tools.codex_control",
+                "layer": "unclassified",
+                "owner_team": "infrastructure_team",
+                "path": "D:\\codex\\orchestrator-mvp\\tools\\codex_control.py"
+              },
+              {
+                "module": "tools.brain_loop",
+                "layer": "unclassified",
+                "owner_team": "infrastructure_team",
+                "path": "D:\\codex\\orchestrator-mvp\\tools\\brain_loop.py"
+              },
+              {
+                "module": "tools.factory_daemon",
+                "layer": "unclassified",
+                "owner_team": "infrastructure_team",
+                "path": "D:\\codex\\orchestrator-mvp\\tools\\factory_daemon.py"
+              },
+              {
+                "module": "tools.meta_factory_control",
+                "layer": "architecture_engine",
+                "owner_team": "infrastructure_team",
+                "path": "D:\\codex\\orchestrator-mvp\\tools\\meta_factory_control.py"
+              },
+              {
+                "module": "app.orchestrator",
+                "layer": "unclassified",
+                "owner_team": "backend_team",
+                "path": "D:\\codex\\orchestrator-mvp\\app\\orchestrator.py"
+              },
+              {
+                "module": "tools.decision_engine",
+                "layer": "task_graph_planner",
+                "owner_team": "architecture_team",
+                "path": "D:\\codex\\orchestrator-mvp\\tools\\decision_engine.py"
+              },
+              {
+                "module": "tools.change_request_analyzer",
+                "layer": "unclassified",
+                "owner_team": "infrastructure_team",
+                "path": "D:\\codex\\orchestrator-mvp\\tools\\change_request_analyzer.py"
+              },
+              {
+                "module": "tools.taskgraph_compiler",
+                "layer": "architecture_engine",
+                "owner_team": "architecture_team",
+                "path": "D:\\codex\\orchestrator-mvp\\tools\\taskgraph_compiler.py"
+              },
+              {
+                "module": "tools.verification_engine",
+                "layer": "verification",
+                "owner_team": "infrastructure_team",
+                "path": "D:\\codex\\orchestrator-mvp\\tools\\verification_engine.py"
+              },
+              {
+                "module": "app.worker_adapters",
+                "layer": "unclassified",
+                "owner_team": "backend_team",
+                "path": "D:\\codex\\orchestrator-mvp\\app\\worker_adapters.py"
+              },
+              {
+                "module": "app.main",
+                "layer": "unclassified",
+                "owner_team": "backend_team",
+                "path": "D:\\codex\\orchestrator-mvp\\app\\main.py"
+              },
+              {
+                "module": "app.openai_client",
+                "layer": "unclassified",
+                "owner_team": "backend_team",
+                "path": "D:\\codex\\orchestrator-mvp\\app\\openai_client.py"
+              }
+            ]
+          }
+        },
+        "verification_scope": {
+          "modules": [
+            "tools.capability_distillation",
+            "tools.distillation",
+            "app.models",
+            "tools.experiment_executor",
+            "runtime.scheduler"
+          ],
+          "teams": [
+            "architecture_team",
+            "backend_team",
+            "infrastructure_team"
+          ],
+          "layers": [
+            "agent_teams",
+            "unclassified"
+          ]
+        },
+        "current_plan": [
+          "Task type: implementation",
+          "Primary modules: tools.capability_distillation, tools.distillation, app.models, tools.experiment_executor, runtime.scheduler",
+          "Dependency expansion: none",
+          "Owner teams: architecture_team, backend_team, infrastructure_team",
+          "Layers: agent_teams, unclassified"
+        ],
+        "summary_blocks": [
+          "Task type: implementation\nPrimary modules: tools.capability_distillation, tools.distillation, app.models, tools.experiment_executor, runtime.scheduler\nDependency expansion: none\nOwner teams: architecture_team, backend_team, infrastructure_team\nLayers: agent_teams, unclassified",
+          "Preferred capabilities: agent_orchestration, webapp_generation, deploy_scaffold, tool_extension\nPreferred workers: reviewer\nTop capability reputation: agent_orchestration, webapp_generation, deploy_scaffold, tool_extension\nTop worker reputation: reviewer\nRepo learning modules=116 chunks=116"
+        ],
+        "budget_chars": 3200
+      }
+    },
+    "test-branch": {
+      "branch_name": "test-branch",
+      "target": "Expand verification regression coverage",
+      "updated_at": "2026-03-11T09:53:35.146687Z",
+      "source_session": "test-branch-session",
+      "department": "qa_department",
+      "lane_role": "testing_branch",
+      "shares_mainline_context": true,
+      "repo_path": "D:\\codex\\orchestrator-mvp",
+      "project": {
+        "project_id": "metafactory-core",
+        "name": "Meta Factory Core",
+        "summary": "Core AI software engineering operating system, automation lab, routing, scheduler, policy, knowledge, verification, and runtime control workspace.",
+        "compact_context": {
+          "project_goals": [
+            "Maintain and evolve the AI software engineering operating system and automation lab.",
+            "Strengthen routing, scheduling, knowledge, verification, and cheap-first execution.",
+            "Support branch dialogs that reuse mainline context and factory outputs."
+          ],
+          "technical_constraints": [
+            "Prefer cheap-first execution and local tools before premium reasoning.",
+            "Preserve stable autonomy and verification gates while evolving capabilities.",
+            "Treat Codex as control surface and persistent state as the memory source of truth."
+          ],
+          "architecture_decisions": [
+            "The meta-factory is the mainline system for engineering OS and automation lab work.",
+            "Branch work should reuse mainline context packages instead of relying on chat history.",
+            "Knowledge, routing, scheduling, policy, and verification changes belong to the meta-factory core."
+          ],
+          "working_agreements": [
+            "Keep control plane, runtime, and memory layers explicit.",
+            "Use structured context packages for branch and change-request work.",
+            "Prefer runtime-native repair, verification, and policy-governed evolution."
+          ],
+          "recent_decisions": [
+            "Global policy, context builder, code graph, and experiment loop are active parts of the mainline system.",
+            "Current focus capabilities: agent_orchestration, webapp_generation, deploy_scaffold, tool_extension.",
+            "Preferred workers: reviewer."
+          ]
+        }
+      },
+      "global_policy": {
+        "focus_capabilities": [
+          "agent_orchestration",
+          "webapp_generation",
+          "deploy_scaffold",
+          "tool_extension"
+        ],
+        "resource_budget": {
+          "runtime_tasks": 0.35,
+          "experiments": 0.2,
+          "capability_building": 0.15,
+          "maintenance": 0.2
+        },
+        "experiment_portfolio": {
+          "routing-heuristics": 0.35,
+          "prompt-specialization": 0.2,
+          "recovery-patterns": 0.2,
+          "goal-seeding": 0.125,
+          "pattern-rollout": 0.125
+        },
+        "worker_bias_policy": {
+          "reviewer": 0.3,
+          "coder": 0.12,
+          "docker": 0.03,
+          "shell": 0.12
+        }
+      },
+      "knowledge_hints": {
+        "preferred_capabilities": [
+          "agent_orchestration",
+          "webapp_generation",
+          "deploy_scaffold",
+          "tool_extension"
+        ],
+        "preferred_workers": [
+          "reviewer"
+        ],
+        "repo_learning": {
+          "updated_at": "2026-03-11T09:52:48.288184Z",
+          "embedding": {
+            "provider": "local",
+            "model": "BAAI/bge-small-en-v1.5",
+            "dimensions": 128,
+            "backend": "hashed-local",
+            "ready": true
+          },
+          "graph_modules": 116,
+          "chunk_count": 116,
+          "top_modules": [
+            {
+              "module": "tools.codex_control",
+              "layer": "unclassified",
+              "owner_team": "infrastructure_team",
+              "path": "D:\\codex\\orchestrator-mvp\\tools\\codex_control.py"
+            },
+            {
+              "module": "tools.brain_loop",
+              "layer": "unclassified",
+              "owner_team": "infrastructure_team",
+              "path": "D:\\codex\\orchestrator-mvp\\tools\\brain_loop.py"
+            },
+            {
+              "module": "tools.factory_daemon",
+              "layer": "unclassified",
+              "owner_team": "infrastructure_team",
+              "path": "D:\\codex\\orchestrator-mvp\\tools\\factory_daemon.py"
+            },
+            {
+              "module": "tools.meta_factory_control",
+              "layer": "architecture_engine",
+              "owner_team": "infrastructure_team",
+              "path": "D:\\codex\\orchestrator-mvp\\tools\\meta_factory_control.py"
+            },
+            {
+              "module": "app.orchestrator",
+              "layer": "unclassified",
+              "owner_team": "backend_team",
+              "path": "D:\\codex\\orchestrator-mvp\\app\\orchestrator.py"
+            },
+            {
+              "module": "tools.decision_engine",
+              "layer": "task_graph_planner",
+              "owner_team": "architecture_team",
+              "path": "D:\\codex\\orchestrator-mvp\\tools\\decision_engine.py"
+            },
+            {
+              "module": "tools.change_request_analyzer",
+              "layer": "unclassified",
+              "owner_team": "infrastructure_team",
+              "path": "D:\\codex\\orchestrator-mvp\\tools\\change_request_analyzer.py"
+            },
+            {
+              "module": "tools.taskgraph_compiler",
+              "layer": "architecture_engine",
+              "owner_team": "architecture_team",
+              "path": "D:\\codex\\orchestrator-mvp\\tools\\taskgraph_compiler.py"
+            },
+            {
+              "module": "tools.verification_engine",
+              "layer": "verification",
+              "owner_team": "infrastructure_team",
+              "path": "D:\\codex\\orchestrator-mvp\\tools\\verification_engine.py"
+            },
+            {
+              "module": "app.worker_adapters",
+              "layer": "unclassified",
+              "owner_team": "backend_team",
+              "path": "D:\\codex\\orchestrator-mvp\\app\\worker_adapters.py"
+            },
+            {
+              "module": "app.main",
+              "layer": "unclassified",
+              "owner_team": "backend_team",
+              "path": "D:\\codex\\orchestrator-mvp\\app\\main.py"
+            },
+            {
+              "module": "app.openai_client",
+              "layer": "unclassified",
+              "owner_team": "backend_team",
+              "path": "D:\\codex\\orchestrator-mvp\\app\\openai_client.py"
+            }
+          ]
+        }
+      },
+      "mainline_state": {
+        "control_layer": {
+          "status": "constrained",
+          "quality_score": null,
+          "patch_gate_status": null
+        },
+        "engineering_os": {
+          "status": null,
+          "patch_ready_count": null,
+          "verification_status": null
+        },
+        "autonomy": {
+          "stage": "stage4_confirmed",
+          "score": 0.7954,
+          "stable_autonomy": null
+        },
+        "automation_lab": {
+          "status": "active",
+          "maturity_status": "developing",
+          "maturity_score": 0.72
+        }
+      },
+      "shared_context_refs": {
+        "project_context_compaction": "D:\\codex\\orchestrator-mvp\\data\\project_context_compaction.json",
+        "global_policy_state": "D:\\codex\\orchestrator-mvp\\data\\global_policy_state.json",
+        "knowledge_base": "D:\\codex\\orchestrator-mvp\\data\\knowledge_base.json",
+        "control_layer_status": "D:\\codex\\orchestrator-mvp\\data\\control_layer_status.json",
+        "engineering_os_status": "D:\\codex\\orchestrator-mvp\\data\\engineering_os_status.json",
+        "autonomy_score": "D:\\codex\\orchestrator-mvp\\data\\autonomy_score.json",
+        "automation_lab_status": "D:\\codex\\orchestrator-mvp\\data\\automation_lab_status.json"
+      },
+      "context_package": {
+        "task": "Expand verification regression coverage",
+        "task_type": "implementation",
+        "repo_path": "D:\\codex\\orchestrator-mvp",
+        "module_focus": [
+          "tools.soak_validation",
+          "tools.quality_system",
+          "tools.platform_verification_sweep",
+          "tools.verification_engine",
+          "tools.architecture_validator"
+        ],
+        "dependency_modules": [],
+        "owner_teams": [
+          "architecture_team",
+          "infrastructure_team"
+        ],
+        "layers": [
+          "architecture_engine",
+          "verification"
+        ],
+        "project_context": {},
+        "knowledge_hints": {
+          "preferred_capabilities": [
+            "agent_orchestration",
+            "webapp_generation",
+            "deploy_scaffold",
+            "tool_extension"
+          ],
+          "preferred_workers": [
+            "reviewer"
+          ],
+          "repo_learning": {
+            "updated_at": "2026-03-11T09:52:48.288184Z",
+            "embedding": {
+              "provider": "local",
+              "model": "BAAI/bge-small-en-v1.5",
+              "dimensions": 128,
+              "backend": "hashed-local",
+              "ready": true
+            },
+            "graph_modules": 116,
+            "chunk_count": 116,
+            "top_modules": [
+              {
+                "module": "tools.codex_control",
+                "layer": "unclassified",
+                "owner_team": "infrastructure_team",
+                "path": "D:\\codex\\orchestrator-mvp\\tools\\codex_control.py"
+              },
+              {
+                "module": "tools.brain_loop",
+                "layer": "unclassified",
+                "owner_team": "infrastructure_team",
+                "path": "D:\\codex\\orchestrator-mvp\\tools\\brain_loop.py"
+              },
+              {
+                "module": "tools.factory_daemon",
+                "layer": "unclassified",
+                "owner_team": "infrastructure_team",
+                "path": "D:\\codex\\orchestrator-mvp\\tools\\factory_daemon.py"
+              },
+              {
+                "module": "tools.meta_factory_control",
+                "layer": "architecture_engine",
+                "owner_team": "infrastructure_team",
+                "path": "D:\\codex\\orchestrator-mvp\\tools\\meta_factory_control.py"
+              },
+              {
+                "module": "app.orchestrator",
+                "layer": "unclassified",
+                "owner_team": "backend_team",
+                "path": "D:\\codex\\orchestrator-mvp\\app\\orchestrator.py"
+              },
+              {
+                "module": "tools.decision_engine",
+                "layer": "task_graph_planner",
+                "owner_team": "architecture_team",
+                "path": "D:\\codex\\orchestrator-mvp\\tools\\decision_engine.py"
+              },
+              {
+                "module": "tools.change_request_analyzer",
+                "layer": "unclassified",
+                "owner_team": "infrastructure_team",
+                "path": "D:\\codex\\orchestrator-mvp\\tools\\change_request_analyzer.py"
+              },
+              {
+                "module": "tools.taskgraph_compiler",
+                "layer": "architecture_engine",
+                "owner_team": "architecture_team",
+                "path": "D:\\codex\\orchestrator-mvp\\tools\\taskgraph_compiler.py"
+              },
+              {
+                "module": "tools.verification_engine",
+                "layer": "verification",
+                "owner_team": "infrastructure_team",
+                "path": "D:\\codex\\orchestrator-mvp\\tools\\verification_engine.py"
+              },
+              {
+                "module": "app.worker_adapters",
+                "layer": "unclassified",
+                "owner_team": "backend_team",
+                "path": "D:\\codex\\orchestrator-mvp\\app\\worker_adapters.py"
+              },
+              {
+                "module": "app.main",
+                "layer": "unclassified",
+                "owner_team": "backend_team",
+                "path": "D:\\codex\\orchestrator-mvp\\app\\main.py"
+              },
+              {
+                "module": "app.openai_client",
+                "layer": "unclassified",
+                "owner_team": "backend_team",
+                "path": "D:\\codex\\orchestrator-mvp\\app\\openai_client.py"
+              }
+            ]
+          }
+        },
+        "verification_scope": {
+          "modules": [
+            "tools.soak_validation",
+            "tools.quality_system",
+            "tools.platform_verification_sweep",
+            "tools.verification_engine",
+            "tools.architecture_validator"
+          ],
+          "teams": [
+            "architecture_team",
+            "infrastructure_team"
+          ],
+          "layers": [
+            "architecture_engine",
+            "verification"
+          ]
+        },
+        "current_plan": [
+          "Task type: implementation",
+          "Primary modules: tools.soak_validation, tools.quality_system, tools.platform_verification_sweep, tools.verification_engine, tools.architecture_validator",
+          "Dependency expansion: none",
+          "Owner teams: architecture_team, infrastructure_team",
+          "Layers: architecture_engine, verification"
+        ],
+        "summary_blocks": [
+          "Task type: implementation\nPrimary modules: tools.soak_validation, tools.quality_system, tools.platform_verification_sweep, tools.verification_engine, tools.architecture_validator\nDependency expansion: none\nOwner teams: architecture_team, infrastructure_team\nLayers: architecture_engine, verification",
+          "Preferred capabilities: agent_orchestration, webapp_generation, deploy_scaffold, tool_extension\nPreferred workers: reviewer\nTop capability reputation: agent_orchestration, webapp_generation, deploy_scaffold, tool_extension\nTop worker reputation: reviewer\nRepo learning modules=116 chunks=116"
+        ],
+        "budget_chars": 3200
+      }
+    }
+  }
+}

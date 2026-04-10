@@ -1,0 +1,12 @@
+{
+  "updated_at": "2026-03-12T07:09:37.250062Z",
+  "runtime_ok": false,
+  "verification_ok": false,
+  "control_ok": false,
+  "blocked_patch_count": 0,
+  "promoted_to_candidate": [],
+  "promoted_to_ready": [],
+  "status": "idle",
+  "ready_count": 3,
+  "candidate_count": 0
+}

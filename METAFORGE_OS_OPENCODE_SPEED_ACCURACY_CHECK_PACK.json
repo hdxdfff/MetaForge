@@ -1,0 +1,85 @@
+{
+  "name": "OpenCode speed and accuracy check",
+  "version": 1,
+  "source": "D:\\codex\\METAFORGE_OS_OPENCODE_BOOTSTRAP.md",
+  "tasks": [
+    {
+      "task_id": "opencode-speed-accuracy-check-001",
+      "lane": "research-lane",
+      "caller": "codex-control",
+      "project_id": null,
+      "repo_path": "D:\\codex",
+      "goal": "Measure the response speed and answer accuracy of the current OpenCode entry setup.",
+      "prompt": "Measure the response speed and answer accuracy of the current OpenCode entry setup. Use the fast entry if available, compare it with the full entry when feasible, and evaluate both against a fixed prompt suite covering system identity, workspace awareness, control-shell boundary, default model policy, and route recommendation. Record startup latency if observable, first-response latency, total completion time, and correctness for each prompt. Return a concise report with per-prompt timings, exact answers, pass/fail notes, and one bounded next-step recommendation. Do not modify runtime internals or unrelated files.",
+      "task_type": "artifact_audit",
+      "queue_name": "fastlane",
+      "verification_level": "L1",
+      "max_runtime_seconds": 1800,
+      "retry_limit": 1,
+      "rollback_rule": "mark_failed_and_requeue_split",
+      "execution_mode": "research",
+      "default_allow_resource_scan": true,
+      "default_allow_repo_status": true,
+      "inputs": {
+        "benchmark_focus": [
+          "speed",
+          "accuracy"
+        ],
+        "entry_points": [
+          "D:\\codex\\opencode-fast.cmd",
+          "D:\\codex\\opencode.cmd"
+        ],
+        "prompt_suite": [
+          "What system am I operating in?",
+          "What workspace should default interactive work use?",
+          "What is the control boundary for OpenCode?",
+          "Which model is the default for quick checks?",
+          "How should a control request be routed?"
+        ],
+        "truth_sources": [
+          "D:\\codex\\METAFORGE_OS_OPENCODE_BOOTSTRAP.md",
+          "D:\\codex\\OPENCODE-CLINE.md",
+          "D:\\codex\\METAFORGE_OS_EXECUTOR_DIVISION.md"
+        ]
+      },
+      "constraints": [
+        "Do not modify runtime internals.",
+        "Do not change model configuration.",
+        "Do not edit unrelated workspaces.",
+        "Keep the task bounded to measurement and reporting.",
+        "If measurement is partial, state the limitation explicitly."
+      ],
+      "expected_outputs": [
+        "A concise report with speed and accuracy measurements.",
+        "Per-prompt correctness notes.",
+        "A bounded next-step recommendation."
+      ],
+      "artifact_spec": {
+        "artifact_type": "report",
+        "type": "report",
+        "output": "D:\\codex\\generated\\control-plane-checks\\opencode_speed_accuracy_report.md",
+        "entrypoint": "D:\\codex\\generated\\control-plane-checks\\opencode_speed_accuracy_report.md",
+        "deliverables": [
+          "concise report with speed and accuracy measurements",
+          "per-prompt correctness notes",
+          "bounded next-step recommendation"
+        ],
+        "expected_outputs": [
+          "D:\\codex\\generated\\control-plane-checks\\opencode_speed_accuracy_report.md"
+        ],
+        "required_artifacts": [
+          "D:\\codex\\generated\\control-plane-checks\\opencode_speed_accuracy_report.md"
+        ],
+        "evidence": [
+          "D:\\codex\\generated\\control-plane-checks\\opencode_speed_accuracy_report.md"
+        ],
+        "verification": {
+          "build_required": false,
+          "tests_required": false
+        },
+        "registry": "artifact_registry",
+        "min_fresh_artifacts": 1
+      }
+    }
+  ]
+}

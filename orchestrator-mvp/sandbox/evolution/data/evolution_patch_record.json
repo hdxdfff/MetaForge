@@ -1,0 +1,18 @@
+{
+  "updated_at": "2026-03-12T07:09:26.087233Z",
+  "status": "prepared",
+  "branch": "codex/evolution-20260312t070926",
+  "candidate_count": 9,
+  "targets": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "notes": "Patch branch prepared logically; actual git branch creation is handled by the API layer when a repo is available."
+}

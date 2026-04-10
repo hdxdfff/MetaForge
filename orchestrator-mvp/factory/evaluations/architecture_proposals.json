@@ -1,0 +1,10 @@
+[
+  {
+    "id": "arch-2026-03-12T070-market",
+    "created_at": "2026-03-12T07:08:59.411173Z",
+    "reason": "At least one agent underperforms in the market.",
+    "proposal": "Run parallel cheap-worker competition before reviewer selection on targeted tasks.",
+    "expected_gain": "better cheap-lane output selection",
+    "status": "proposed"
+  }
+]

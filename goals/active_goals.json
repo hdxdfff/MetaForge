@@ -1,0 +1,59 @@
+﻿[
+  {
+    "goal_id": "toyos-goal-paging-stage1",
+    "project": "ToyOS",
+    "priority": "P1",
+    "status": "active",
+    "goal": "Bring up a guarded paging Stage 1 path without breaking the default stable boot contract.",
+    "workspace": "D:\\codex\\generated\\toy-os-demo",
+    "subtasks": [
+      "Document page-table layout, CR0/CR3 assumptions, and ring3 return constraints.",
+      "Introduce a gated paging smoke path with explicit debug markers and panic-safe fallback.",
+      "Add a paging-enabled QEMU smoke test that remains outside the default stable path."
+    ],
+    "acceptance": [
+      "Default boot path remains green.",
+      "Guarded paging path reaches post-enable debug marker.",
+      "Result is reflected in knowledge/discovered_issues.json and validation patterns."
+    ],
+    "last_updated": "2026-03-11T00:00:00Z"
+  },
+  {
+    "goal_id": "toyos-goal-syscall-hardening",
+    "project": "ToyOS",
+    "priority": "P1",
+    "status": "active",
+    "goal": "Harden the syscall interface so paging-era user pointer validation can be introduced safely.",
+    "workspace": "D:\\codex\\generated\\toy-os-demo",
+    "subtasks": [
+      "Define a user-buffer validation API that can run as a permissive stub before paging is enabled.",
+      "Apply the validation path to filesystem-related syscalls first.",
+      "Add regression notes or tests for illegal syscall numbers and invalid parameters."
+    ],
+    "acceptance": [
+      "Filesystem-facing syscalls use a common validation entrypoint.",
+      "Invalid parameters fail predictably.",
+      "The ABI notes stay aligned with kernel behavior."
+    ],
+    "last_updated": "2026-03-11T00:00:00Z"
+  },
+  {
+    "goal_id": "toyos-goal-regression-expansion",
+    "project": "ToyOS",
+    "priority": "P2",
+    "status": "active",
+    "goal": "Expand ToyOS regression coverage beyond boot-only smoke checks.",
+    "workspace": "D:\\codex\\generated\\toy-os-demo",
+    "subtasks": [
+      "Promote user-probe markers into explicit assertions.",
+      "Add manual-to-automated shell and filesystem coverage where feasible.",
+      "Track experimental regressions separately from stable-path regressions."
+    ],
+    "acceptance": [
+      "Automated tests verify more than ordered boot markers.",
+      "Stable and experimental regressions are separated.",
+      "Regression expectations are documented in a way the self-improvement loop can consume."
+    ],
+    "last_updated": "2026-03-11T00:00:00Z"
+  }
+]

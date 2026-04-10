@@ -1,0 +1,23 @@
+repos:
+  - repo: local
+    hooks:
+      - id: ruff-check
+        name: ruff-check
+        entry: python tools/python_tooling.py ruff-check --fix
+        language: system
+        types_or: [python, pyi]
+      - id: ruff-format
+        name: ruff-format
+        entry: python tools/python_tooling.py ruff-format
+        language: system
+        types_or: [python, pyi]
+      - id: qa-check
+        name: qa-check
+        entry: python tools/python_tooling.py qa
+        language: system
+        pass_filenames: false
+      - id: compileall-app
+        name: compileall-app
+        entry: python -m compileall app tools
+        language: system
+        pass_filenames: false

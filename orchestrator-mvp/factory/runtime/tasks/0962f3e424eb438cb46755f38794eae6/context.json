@@ -1,0 +1,57 @@
+{
+  "task_id": "0962f3e424eb438cb46755f38794eae6",
+  "task_status": "completed",
+  "phase": "completed",
+  "updated_at": "2026-03-19T15:13:10.676314Z",
+  "heartbeat_at": "2026-03-19T15:13:10.676314Z",
+  "repo_path": "D:\\codex",
+  "goal": "Recover stable execution output",
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": "factory-daemon.recovery",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\0962f3e424eb438cb46755f38794eae6",
+  "completed_steps": 4,
+  "title": "Execution recovery: smoke and runnable artifact",
+  "prompt": "Execution recovery task: produce a real completed task and a runnable artifact.",
+  "scheduler_hint": {
+    "recovery_task": true,
+    "scheduled_by": "factory-daemon.recovery",
+    "factory_pool": "ops",
+    "execution_mode": "production",
+    "title": "Execution recovery: smoke and runnable artifact"
+  },
+  "context_package": {},
+  "plan": [
+    {
+      "id": "ba5921ec",
+      "title": "Write recovery smoke file",
+      "status": "completed",
+      "worker": "shell",
+      "phase": "execute"
+    },
+    {
+      "id": "09f57587",
+      "title": "Probe direct LLM path",
+      "status": "completed",
+      "worker": "shell",
+      "phase": "execute"
+    },
+    {
+      "id": "35635ab0",
+      "title": "Create runnable recovery artifact",
+      "status": "completed",
+      "worker": "shell",
+      "phase": "execute"
+    },
+    {
+      "id": "d5800cf2",
+      "title": "Verify recovery artifact",
+      "status": "completed",
+      "worker": "shell",
+      "phase": "verify"
+    }
+  ],
+  "result": {}
+}

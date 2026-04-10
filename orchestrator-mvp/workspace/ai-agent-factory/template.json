@@ -1,0 +1,21 @@
+{
+  "template_id": "ai-agent",
+  "description": "Multi-agent system starter with agents, tools, memory, and orchestration folders.",
+  "required_paths": [
+    "README.md",
+    "agents",
+    "tools",
+    "memory",
+    "orchestration"
+  ],
+  "generator_outputs": [
+    "agent scaffold",
+    "tool scaffold",
+    "memory scaffold"
+  ],
+  "evaluation_checks": [
+    "required paths present",
+    "manifest exists",
+    "readme exists"
+  ]
+}

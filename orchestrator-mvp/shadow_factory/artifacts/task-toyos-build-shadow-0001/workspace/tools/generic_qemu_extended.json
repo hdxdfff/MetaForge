@@ -1,0 +1,104 @@
+{
+  "name": "ToyOS QEMU Extended Regression Suite",
+  "report": "build/generic-qemu-extended-report.json",
+  "tests": [
+    {
+      "name": "qemu_shell_probe_assertions",
+      "cwd": ".",
+      "shell": true,
+      "command": "rm -f build/qemu-debug.log && timeout 20s qemu-system-i386 -kernel build/kernel.bin -display none -debugcon file:build/qemu-debug.log -global isa-debugcon.iobase=0xe9 -no-reboot -no-shutdown || true",
+      "timeout_seconds": 30,
+      "rounds": 3,
+      "required_passes": 3,
+      "allow_timeout": false,
+      "expected_returncodes": [
+        0
+      ],
+      "log_files": [
+        "build/qemu-debug.log"
+      ],
+      "ordered_pass_markers": true,
+      "min_log_size": 200,
+      "pass_markers": [
+        "ToyOS: shell probe complete",
+        "ToyOS: scheduler rounds completed",
+        "ToyOS: kernel services online"
+      ],
+      "fail_markers": [
+        "PANIC:",
+        "*** KERNEL PANIC ***"
+      ]
+    },
+    {
+      "name": "qemu_filesystem_multiwriter_assertions",
+      "cwd": ".",
+      "shell": true,
+      "command": "rm -f build/qemu-debug.log && timeout 20s qemu-system-i386 -kernel build/kernel.bin -display none -debugcon file:build/qemu-debug.log -global isa-debugcon.iobase=0xe9 -no-reboot -no-shutdown || true",
+      "timeout_seconds": 30,
+      "rounds": 3,
+      "required_passes": 3,
+      "allow_timeout": false,
+      "expected_returncodes": [
+        0
+      ],
+      "log_files": [
+        "build/qemu-debug.log"
+      ],
+      "ordered_pass_markers": true,
+      "min_log_size": 380,
+      "pass_markers": [
+        "ToyOS: fs writer A write",
+        "ToyOS: fs writer B write",
+        "ToyOS: fs writer A verified",
+        "ToyOS: fs writer B verified",
+        "ToyOS: fs multi verify start",
+        "ToyOS: fs multi verify complete",
+        "ToyOS: kernel services online"
+      ],
+      "fail_markers": [
+        "PANIC:",
+        "*** KERNEL PANIC ***",
+        "fs writer ramfs mismatch",
+        "fs writer tinyfs mismatch",
+        "fs multi verify ramfs a failed",
+        "fs multi verify ramfs b failed",
+        "fs multi verify tinyfs a failed",
+        "fs multi verify tinyfs b failed"
+      ]
+    },
+    {
+      "name": "qemu_filesystem_mixed_assertions",
+      "cwd": ".",
+      "shell": true,
+      "command": "rm -f build/qemu-debug.log && timeout 20s qemu-system-i386 -kernel build/kernel.bin -display none -debugcon file:build/qemu-debug.log -global isa-debugcon.iobase=0xe9 -no-reboot -no-shutdown || true",
+      "timeout_seconds": 30,
+      "rounds": 3,
+      "required_passes": 3,
+      "allow_timeout": false,
+      "expected_returncodes": [
+        0
+      ],
+      "log_files": [
+        "build/qemu-debug.log"
+      ],
+      "ordered_pass_markers": true,
+      "min_log_size": 420,
+      "pass_markers": [
+        "ToyOS: fs writer A verified",
+        "ToyOS: fs writer B verified",
+        "ToyOS: fs mixed probe start",
+        "ToyOS: fs mixed probe phase1",
+        "ToyOS: fs mixed probe complete",
+        "ToyOS: kernel services online"
+      ],
+      "fail_markers": [
+        "PANIC:",
+        "*** KERNEL PANIC ***",
+        "ToyOS: fs mixed probe ramfs a fault",
+        "ToyOS: fs mixed probe tinyfs a fault",
+        "ToyOS: fs mixed probe ramfs b fault",
+        "ToyOS: fs mixed probe tinyfs b fault"
+      ]
+    }
+  ]
+}

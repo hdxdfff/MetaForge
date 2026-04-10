@@ -1,0 +1,14 @@
+{
+  "artifact_id": "execution-recovery-demo",
+  "build_success": true,
+  "build_ready": true,
+  "build_timestamp": "2026-04-04T17:13:17.435781Z",
+  "command": [
+    "D:\\codex\\tools\\python311-embed\\python.exe",
+    "-m",
+    "py_compile",
+    "D:\\codex\\generated\\execution-recovery-demo\\run_demo.py"
+  ],
+  "stdout": "",
+  "stderr": ""
+}

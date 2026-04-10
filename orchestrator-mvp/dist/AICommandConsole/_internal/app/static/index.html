@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>人工智能工厂控制台</title>
+  <link rel="icon" type="image/svg+xml" href="/static/app-icon.svg">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar panel">
+      <div class="sidebar-brand">
+        <img src="/static/app-icon.svg" alt="人工智能工厂控制台">
+        <div>
+          <p class="eyebrow">开源主控界面</p>
+          <h1>人工智能工厂控制台</h1>
+          <p class="lede">横板工作台 · 任务 · 执行器 · 验证 · 证据</p>
+        </div>
+      </div>
+
+      <div class="sidebar-stack">
+        <section class="sidebar-card">
+          <div class="section-head compact">
+            <h2>实时状态</h2>
+            <span id="connection-pill" class="pill subtle-pill">连接中</span>
+          </div>
+          <div class="stack compact-stack">
+            <div class="mini-metric"><span>工厂</span><strong id="factory-status">-</strong></div>
+            <div class="mini-metric"><span>控制层</span><strong id="control-layer-status">-</strong></div>
+            <div class="mini-metric"><span>队列深度</span><strong id="queue-depth">-</strong></div>
+            <div class="mini-metric"><span>质量门</span><strong id="quality-gate">-</strong></div>
+          </div>
+        </section>
+
+        <section class="sidebar-card">
+          <div class="section-head compact">
+            <h2>导航</h2>
+          </div>
+          <nav class="sidebar-nav" aria-label="控制台导航">
+            <button type="button" class="menu-link" data-view="overview">总览</button>
+            <div class="menu-group">
+              <p class="menu-heading">运行</p>
+              <button type="button" class="menu-link" data-view="mission">命令与队列</button>
+              <button type="button" class="menu-link" data-view="runtime">执行器</button>
+            </div>
+            <div class="menu-group">
+              <p class="menu-heading">质量</p>
+              <button type="button" class="menu-link" data-view="quality">验证与产物</button>
+            </div>
+            <div class="menu-group">
+              <p class="menu-heading">证据</p>
+              <button type="button" class="menu-link" data-view="evidence">原始数据</button>
+            </div>
+          </nav>
+        </section>
+
+      </div>
+    </aside>
+
+    <div class="content">
+      <header class="topbar panel">
+        <div class="topbar-copy">
+          <p class="eyebrow">开源管理台骨架</p>
+          <h2>控制台总览</h2>
+          <p class="lede">当前状态优先，按需下钻任务命令、执行器和证据。</p>
+        </div>
+        <div class="topbar-tools">
+          <label class="topbar-search" for="global-search">
+            <span>搜索</span>
+            <input id="global-search" type="search" placeholder="搜索任务、执行器、产物或目标">
+          </label>
+          <div class="topbar-actions">
+            <button id="refresh-btn" class="ghost-btn" type="button">刷新</button>
+            <span id="session-pill" class="pill subtle-pill">会话未知</span>
+            <span id="mode-pill" class="pill subtle-pill">模式未知</span>
+          </div>
+        </div>
+      </header>
+
+      <main class="main-grid">
+        <section id="overview" class="panel overview-panel page-pane" data-view="overview">
+          <div class="section-head">
+            <div>
+              <h2>总览</h2>
+              <p class="section-copy">优先看系统是否活着、任务是否在跑、是否有阻塞、以及今天是否产出了可验证结果。</p>
+            </div>
+            <div id="global-badges" class="badge-row"></div>
+          </div>
+          <div id="kpi-strip" class="kpi-strip"></div>
+          <div class="hero-grid">
+            <article id="current-mission-card" class="hero-card spotlight drill-card" data-drill-type="goal" data-drill-value="Restore ToyOS real artifact delivery" tabindex="0" role="button" aria-label="当前任务钻取">
+              <p class="eyebrow">当前任务</p>
+              <h3 id="current-mission">-</h3>
+              <p id="current-mission-copy" class="section-copy">-</p>
+              <div id="current-mission-meta" class="mission-meta"></div>
+              <div id="current-mission-actions" class="mission-actions"></div>
+            </article>
+            <article class="hero-card drill-card" data-drill-type="running" tabindex="0" role="button" aria-label="运行态钻取">
+              <p class="eyebrow">运行态</p>
+              <h3 id="active-runtime">-</h3>
+              <p id="active-runtime-copy" class="section-copy">-</p>
+            </article>
+            <article class="hero-card blocker-card drill-card" data-drill-type="problem" tabindex="0" role="button" aria-label="阻塞点钻取">
+              <p class="eyebrow">阻塞点</p>
+              <h3 id="blocker-count">-</h3>
+              <p id="blocker-copy" class="section-copy">-</p>
+              <div id="blocker-meta" class="mission-meta"></div>
+              <div class="mission-actions">
+                <button type="button" class="ghost-btn" data-action="focus-queue">查看队列</button>
+                <button type="button" class="ghost-btn" data-action="open-incident">打开最新事件</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="mission" class="panel command-panel page-pane" data-view="mission">
+          <div class="section-head">
+            <div>
+              <h2>命令面板</h2>
+              <p class="section-copy">派发新任务、接纳目标或切到安全模式，所有控制动作都在这一块完成。</p>
+            </div>
+            <div class="badge-row">
+              <span class="pill subtle-pill">派发</span>
+              <span class="pill subtle-pill">接纳</span>
+              <span class="pill subtle-pill">安全模式</span>
+            </div>
+          </div>
+          <form id="command-form" class="command-form">
+            <label>
+              任务描述
+              <textarea id="command_prompt" rows="5" placeholder="检查工厂控制面，并实现下一项安全改进。"></textarea>
+            </label>
+            <div class="form-grid two-up">
+              <label>
+                目标
+                <input id="command_goal" type="text" placeholder="清理开放错误升级">
+              </label>
+              <label>
+                仓库路径
+                <input id="command_repo_path" type="text" value="D:\codex\generated\toy-os-demo">
+              </label>
+            </div>
+            <div class="form-grid three-up">
+              <label>
+                项目编号
+                <input id="command_project_id" type="text" placeholder="可选">
+              </label>
+              <label>
+                上下文模式
+                <select id="command_context_mode">
+                  <option value="lean">轻量</option>
+                  <option value="standard" selected>标准</option>
+                  <option value="deep">深度</option>
+                </select>
+              </label>
+              <label>
+                验证等级
+                <select id="command_verification_level">
+                  <option value="">自动</option>
+                  <option value="L1">L1</option>
+                  <option value="L2">L2</option>
+                  <option value="L3">L3</option>
+                </select>
+              </label>
+            </div>
+            <label class="toggle-row">
+              <input id="command_auto_approve" type="checkbox">
+              <span>允许对低风险工作自动批准</span>
+            </label>
+            <div class="action-row">
+              <button id="dispatch-btn" type="submit" class="primary-btn">派发任务</button>
+              <button id="admit-goal-btn" type="button" class="ghost-btn">接纳目标</button>
+              <button id="clear-command-btn" type="button" class="ghost-btn">清空</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="panel support-strip page-pane" data-view="mission">
+          <article class="support-card panel">
+            <div class="section-head compact">
+              <h2>操作栏</h2>
+            </div>
+            <div class="action-stack compact-actions">
+              <button data-action="toggle-pause" class="primary-btn" type="button">暂停 / 恢复</button>
+              <button data-action="safe-mode" class="ghost-btn" type="button">进入安全模式</button>
+              <button data-action="run-verification" class="ghost-btn" type="button">运行验证</button>
+            </div>
+          </article>
+
+          <article class="support-card panel">
+            <div class="section-head compact">
+              <h2>状态摘要</h2>
+            </div>
+            <div class="stack compact-stack">
+              <div id="signal-list" class="list-stack"></div>
+              <div id="operator-notes" class="stack"></div>
+            </div>
+          </article>
+        </section>
+
+        <section id="queue" class="panel page-pane" data-view="mission">
+          <div class="section-head">
+            <div>
+              <h2>队列与派发</h2>
+              <p class="section-copy">查看待处理、运行中、阻塞和已完成任务，并直接下钻到选中项。</p>
+            </div>
+            <div id="queue-filter-row" class="filter-row"></div>
+          </div>
+          <div class="split-grid">
+            <div>
+              <div class="queue-table-head">
+                <span>任务</span>
+                <span>状态</span>
+                <span>仓库</span>
+                <span>执行器</span>
+                <span>更新时间</span>
+              </div>
+              <div id="queue-list" class="queue-table-body"></div>
+              <div id="queue-pager" class="pager"></div>
+            </div>
+            <div class="detail-column">
+              <div class="detail-toolbar">
+                <div>
+                  <p class="eyebrow">已选任务</p>
+                  <h3 id="task-title">未选择</h3>
+                </div>
+                <span id="task-status" class="pill subtle-pill">空闲</span>
+              </div>
+              <div id="task-detail" class="detail-panel empty-state">从队列中选择一个任务，可以查看计划、信号、证据和结果。</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="executors" class="panel page-pane" data-view="runtime">
+          <div class="section-head">
+            <div>
+              <h2>执行器</h2>
+              <p class="section-copy">查看每个执行器通道的可用性、当前工作与性能提示。</p>
+            </div>
+            <span id="executor-summary-pill" class="pill subtle-pill">加载中</span>
+          </div>
+          <div id="executor-load-strip" class="metric-grid compact"></div>
+          <div id="executor-note" class="section-copy executor-note"></div>
+          <div class="executor-surface">
+            <div class="executor-table-head">
+              <span>通道</span>
+              <span>模式</span>
+              <span>引擎</span>
+              <span>健康</span>
+              <span>任务类型</span>
+              <span>活动</span>
+            </div>
+            <div id="executor-grid" class="executor-table-body"></div>
+          </div>
+        </section>
+
+        <section id="verification" class="panel page-pane" data-view="quality">
+          <div class="section-head">
+            <div>
+              <h2>验证中心</h2>
+              <p class="section-copy">查看运行阻塞、就绪状态、事件，以及让判断成立的证据。</p>
+            </div>
+            <span id="verification-pill" class="pill subtle-pill">加载中</span>
+          </div>
+          <div class="split-grid">
+            <div>
+              <div id="verification-summary" class="card-grid"></div>
+            </div>
+            <div>
+            <div class="section-head compact">
+              <h3>事件</h3>
+              <button id="open-incident-btn" type="button" class="ghost-btn">打开最新事件</button>
+            </div>
+            <div id="incident-list" class="list-stack"></div>
+            <div id="incident-pager" class="pager"></div>
+          </div>
+        </div>
+      </section>
+
+        <section id="artifacts" class="panel page-pane" data-view="quality">
+          <div class="section-head">
+            <div>
+              <h2>产物注册表</h2>
+              <p class="section-copy">只展示真正有价值、且证据足够可信的输出。</p>
+            </div>
+            <span id="artifact-summary-pill" class="pill subtle-pill">加载中</span>
+          </div>
+          <div id="artifact-list" class="card-grid artifact-grid"></div>
+          <div id="artifact-pager" class="pager"></div>
+        </section>
+
+        <section id="events" class="panel page-pane" data-view="quality">
+          <div class="section-head">
+            <div>
+              <h2>事件时间线</h2>
+              <p class="section-copy">最近一段时间内的决策、恢复和状态变化。</p>
+            </div>
+            <span id="event-summary-pill" class="pill subtle-pill">加载中</span>
+          </div>
+          <div id="timeline-list" class="timeline-list"></div>
+          <div id="event-pager" class="pager"></div>
+        </section>
+
+        <details id="evidence" class="panel evidence-panel page-pane" data-view="evidence">
+          <summary>
+            <div>
+              <p class="eyebrow">证据抽屉</p>
+              <h2>原始状态与日志</h2>
+            </div>
+            <span class="pill subtle-pill">展开</span>
+          </summary>
+          <div class="evidence-grid">
+            <div>
+              <h3>快照数据</h3>
+              <pre id="raw-snapshot" class="code-block"></pre>
+            </div>
+            <div>
+              <h3>所选任务数据</h3>
+              <pre id="raw-task" class="code-block"></pre>
+            </div>
+          </div>
+        </details>
+      </main>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

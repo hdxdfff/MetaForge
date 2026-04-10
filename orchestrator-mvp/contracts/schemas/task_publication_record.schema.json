@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Task Publication Record",
+  "type": "object",
+  "required": [
+    "publication_id",
+    "status",
+    "title",
+    "prompt",
+    "task_type",
+    "verification_level",
+    "created_at",
+    "updated_at"
+  ],
+  "properties": {
+    "publication_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "approved", "published", "rejected"]
+    },
+    "title": {
+      "type": "string"
+    },
+    "prompt": {
+      "type": "string"
+    },
+    "task_type": {
+      "type": "string"
+    },
+    "verification_level": {
+      "type": "string"
+    },
+    "repo_path": {
+      "type": ["string", "null"]
+    },
+    "project_id": {
+      "type": ["string", "null"]
+    },
+    "goal": {
+      "type": ["string", "null"]
+    },
+    "goal_id": {
+      "type": ["string", "null"]
+    },
+    "graph_id": {
+      "type": ["string", "null"]
+    },
+    "node_id": {
+      "type": ["string", "null"]
+    },
+    "goal_admission": {
+      "type": "object"
+    },
+    "scheduled_by": {
+      "type": "string"
+    },
+    "auto_approve": {
+      "type": "boolean"
+    },
+    "task_id": {
+      "type": ["string", "null"]
+    },
+    "approved_by": {
+      "type": ["string", "null"]
+    },
+    "approved_at": {
+      "type": ["string", "null"]
+    },
+    "published_by": {
+      "type": ["string", "null"]
+    },
+    "published_at": {
+      "type": ["string", "null"]
+    },
+    "approval_notes": {
+      "type": ["string", "null"]
+    },
+    "publication_notes": {
+      "type": ["string", "null"]
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

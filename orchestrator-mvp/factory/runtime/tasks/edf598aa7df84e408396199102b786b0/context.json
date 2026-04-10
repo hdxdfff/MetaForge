@@ -1,0 +1,220 @@
+{
+  "task_id": "edf598aa7df84e408396199102b786b0",
+  "task_status": "running",
+  "phase": "step-running",
+  "updated_at": "2026-04-03T17:39:31.319956Z",
+  "heartbeat_at": "2026-04-03T17:39:31.319956Z",
+  "repo_path": "D:\\codex",
+  "goal": "Restore ToyOS real artifact delivery",
+  "goal_id": "goal_42e8cd07d0",
+  "graph_id": "graph_c9ae2e2b6e",
+  "node_id": "bootstrap_test",
+  "scheduled_by": "factory-daemon.replenisher",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\edf598aa7df84e408396199102b786b0",
+  "step_id": "c2209313",
+  "step_title": "Spawn decomposition subtasks",
+  "step_status": "running",
+  "worker": "planner",
+  "probe_attempts": 0,
+  "title": "Run baseline runtime test loop for Restore ToyOS real artifact delivery",
+  "prompt": "Run the baseline runtime or QEMU validation path for Restore ToyOS real artifact delivery, capture boot or execution output, and refresh machine-readable reports before patch work starts.",
+  "scheduler_hint": {
+    "goal_primary": "Restore ToyOS real artifact delivery",
+    "goal_mode": "toyos_priority_mode",
+    "goal_target": "Restore ToyOS real artifact delivery",
+    "goal_id": "goal_42e8cd07d0",
+    "graph_id": "graph_c9ae2e2b6e",
+    "node_id": "bootstrap_test",
+    "node_title": "Run baseline runtime test loop for Restore ToyOS real artifact delivery",
+    "task_type": "build_fix",
+    "queue_name": "build_test",
+    "verification_level": "L2",
+    "max_runtime_seconds": 2400,
+    "retry_limit": 1,
+    "rollback_rule": "mark_failed_and_requeue_split",
+    "template_id": "build_toolchain_repair",
+    "admission_mode": "normal",
+    "budget_pool": "P0",
+    "handling_mode": "toyos_replenishment",
+    "automation_source": "failure_backlog_automation"
+  },
+  "context_package": {},
+  "plan": [
+    {
+      "id": "c2209313",
+      "title": "Spawn decomposition subtasks",
+      "status": "running",
+      "worker": "planner",
+      "phase": "decompose"
+    },
+    {
+      "id": "9d9bd587",
+      "title": "Wait for child task completion",
+      "status": "pending",
+      "worker": "planner",
+      "phase": "decompose"
+    },
+    {
+      "id": "ac2d456a",
+      "title": "Aggregate decomposition results",
+      "status": "pending",
+      "worker": "reviewer",
+      "phase": "verify"
+    }
+  ],
+  "verification_signals": [
+    {
+      "timestamp": "2026-04-03T17:39:15.117111Z",
+      "kind": "admission_accepted",
+      "success": true,
+      "task_id": "edf598aa7df84e408396199102b786b0",
+      "admission_lane": null,
+      "admission_reason": null,
+      "execution_mode": "production",
+      "queue_name": "build_test",
+      "task_type": "build_fix"
+    }
+  ],
+  "verification_signal_count": 1,
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-03T17:39:15.117111Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "edf598aa7df84e408396199102b786b0",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "production",
+        "queue_name": "build_test",
+        "task_type": "build_fix"
+      }
+    ],
+    "decomposition": {
+      "summary": "Fallback decomposition for: Run the baseline runtime or QEMU validation path for Restore ToyOS real artifact delivery, capture boot or execution out",
+      "strategy": "bounded multi-layer split with analysis, execution, and verification branches",
+      "subtasks": [
+        {
+          "title": "Analyze the current state",
+          "prompt": "Inspect the current repository state and isolate the smallest workable slice for: Run the baseline runtime or QEMU validation path for Restore ToyOS real artifact delivery, capture boot or execution output, and refresh machine-readable reports before patch work starts.",
+          "goal": "Identify the smallest viable slice",
+          "task_type": "report_refresh",
+          "path_kind": "shared",
+          "queue_name": "fastlane",
+          "verification_level": "L1",
+          "preferred_worker": "reviewer",
+          "execution_mode": "governance",
+          "execution_lane": "host-control",
+          "decompose_children": false,
+          "shared_dependency_group": "edf598aa7df84e408396199102b786b0",
+          "repair_for": null,
+          "inputs": [],
+          "outputs": [
+            "analysis note"
+          ],
+          "dependencies": [],
+          "acceptance_criteria": [
+            "The smallest feasible slice is identified."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        },
+        {
+          "title": "Implement the bounded change",
+          "prompt": "Make the smallest safe implementation or repair needed for: Run the baseline runtime or QEMU validation path for Restore ToyOS real artifact delivery, capture boot or execution output, and refresh machine-readable reports before patch work starts.",
+          "goal": "Implement the bounded change",
+          "task_type": "build_fix",
+          "path_kind": "branch",
+          "queue_name": "build_test",
+          "verification_level": "L2",
+          "preferred_worker": "coder",
+          "execution_mode": "production",
+          "execution_lane": "vm-first",
+          "decompose_children": true,
+          "shared_dependency_group": "edf598aa7df84e408396199102b786b0",
+          "repair_for": null,
+          "inputs": [
+            "analysis note"
+          ],
+          "outputs": [
+            "bounded patch"
+          ],
+          "dependencies": [
+            "Analyze the current state"
+          ],
+          "acceptance_criteria": [
+            "A bounded implementation exists."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        },
+        {
+          "title": "Validate the result",
+          "prompt": "Run the narrowest useful validation for the bounded change: Run the baseline runtime or QEMU validation path for Restore ToyOS real artifact delivery, capture boot or execution output, and refresh machine-readable reports before patch work starts.",
+          "goal": "Validate the change",
+          "task_type": "unit_test_run",
+          "path_kind": "repair",
+          "queue_name": "build_test",
+          "verification_level": "L2",
+          "preferred_worker": "docker",
+          "execution_mode": "production",
+          "execution_lane": "vm-first",
+          "decompose_children": false,
+          "shared_dependency_group": "edf598aa7df84e408396199102b786b0",
+          "repair_for": "Analyze the current state",
+          "inputs": [
+            "bounded patch"
+          ],
+          "outputs": [
+            "validation evidence"
+          ],
+          "dependencies": [
+            "Analyze the current state",
+            "Implement the bounded change"
+          ],
+          "acceptance_criteria": [
+            "Validation evidence is recorded."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        }
+      ],
+      "dag": {
+        "shared_nodes": [
+          "Analyze the current state"
+        ],
+        "branch_nodes": [
+          "Implement the bounded change"
+        ],
+        "repair_nodes": [
+          "Validate the result"
+        ],
+        "optional_nodes": [],
+        "speculative_nodes": [],
+        "blocked_nodes": [],
+        "edges": [
+          {
+            "from": "Analyze the current state",
+            "to": "Implement the bounded change",
+            "kind": "branch"
+          },
+          {
+            "from": "Analyze the current state",
+            "to": "Validate the result",
+            "kind": "repair"
+          },
+          {
+            "from": "Implement the bounded change",
+            "to": "Validate the result",
+            "kind": "repair"
+          }
+        ],
+        "shared_dependency_group": "edf598aa7df84e408396199102b786b0"
+      },
+      "depth": 0,
+      "max_depth": 2,
+      "mode": "multi_layer"
+    }
+  }
+}

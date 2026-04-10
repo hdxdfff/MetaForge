@@ -1,0 +1,41 @@
+[
+  {
+    "worker": "reviewer",
+    "completed": 3,
+    "failed": 0,
+    "waiting_approval": 0,
+    "running": 0,
+    "last_task_id": "cd2dcfe1bcb944dda4ea7c34a0d2604b",
+    "last_goal": "Strengthen webapp generation capability",
+    "last_repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\build-ai-video-factory",
+    "last_status": "completed",
+    "last_updated_at": "2026-03-11T16:04:27.450844Z",
+    "success_rate": 1.0
+  },
+  {
+    "worker": "shell",
+    "completed": 3,
+    "failed": 0,
+    "waiting_approval": 0,
+    "running": 0,
+    "last_task_id": "cd2dcfe1bcb944dda4ea7c34a0d2604b",
+    "last_goal": "Strengthen webapp generation capability",
+    "last_repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\build-ai-video-factory",
+    "last_status": "completed",
+    "last_updated_at": "2026-03-11T16:04:27.450844Z",
+    "success_rate": 1.0
+  },
+  {
+    "worker": "supervisor",
+    "completed": 0,
+    "failed": 0,
+    "waiting_approval": 1,
+    "running": 0,
+    "last_task_id": "facb1f1a2cca4c0884ff7c61c4dd4dfb",
+    "last_goal": "Stabilize primary AI test provider path",
+    "last_repo_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+    "last_status": "timed_out",
+    "last_updated_at": "2026-03-12T01:32:14.680491Z",
+    "success_rate": 0.0
+  }
+]

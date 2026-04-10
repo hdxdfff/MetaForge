@@ -1,0 +1,2128 @@
+[2026-03-09 13:44:36] Factory daemon started pid=42240 interval=5s
+[2026-03-09 13:44:36] tick=1 meta=False evolution=False
+[2026-03-09 13:44:43] tick=2 meta=True evolution=False
+[2026-03-09 13:44:49] tick=3 meta=False evolution=True
+[2026-03-09 13:47:01] Factory daemon started pid=32208 interval=60s
+[2026-03-09 13:47:01] tick=1 meta=False evolution=False
+[2026-03-09 13:48:01] tick=2 meta=False evolution=False
+[2026-03-09 13:49:01] tick=3 meta=False evolution=False
+[2026-03-09 13:50:01] tick=4 meta=False evolution=False
+[2026-03-09 13:51:03] tick=5 meta=True evolution=False
+[2026-03-09 13:52:03] tick=6 meta=False evolution=False
+[2026-03-09 13:53:03] tick=7 meta=False evolution=False
+[2026-03-09 13:54:03] tick=8 meta=False evolution=False
+[2026-03-09 13:55:03] tick=9 meta=False evolution=False
+[2026-03-09 13:56:06] tick=10 meta=True evolution=True
+[2026-03-09 13:57:06] tick=11 meta=False evolution=False
+[2026-03-09 13:58:06] tick=12 meta=False evolution=False
+[2026-03-09 13:59:06] tick=13 meta=False evolution=False
+[2026-03-09 14:00:06] tick=14 meta=False evolution=False
+[2026-03-09 14:01:07] tick=15 meta=True evolution=False
+[2026-03-09 14:02:07] tick=16 meta=False evolution=False
+[2026-03-09 14:03:07] tick=17 meta=False evolution=False
+[2026-03-09 14:04:07] tick=18 meta=False evolution=False
+[2026-03-09 14:05:08] tick=19 meta=False evolution=False
+[2026-03-09 14:06:10] tick=20 meta=True evolution=True
+[2026-03-09 14:07:10] tick=21 meta=False evolution=False
+[2026-03-09 14:08:10] tick=22 meta=False evolution=False
+[2026-03-09 14:09:10] tick=23 meta=False evolution=False
+[2026-03-09 14:10:10] tick=24 meta=False evolution=False
+[2026-03-09 14:11:12] tick=25 meta=True evolution=False
+[2026-03-09 14:12:12] tick=26 meta=False evolution=False
+[2026-03-09 14:13:12] tick=27 meta=False evolution=False
+[2026-03-09 14:14:12] tick=28 meta=False evolution=False
+[2026-03-09 14:15:12] tick=29 meta=False evolution=False
+[2026-03-09 14:16:15] tick=30 meta=True evolution=True
+[2026-03-09 14:17:15] tick=31 meta=False evolution=False
+[2026-03-09 14:18:15] tick=32 meta=False evolution=False
+[2026-03-09 14:19:15] tick=33 meta=False evolution=False
+[2026-03-09 14:20:15] tick=34 meta=False evolution=False
+[2026-03-09 14:21:16] tick=35 meta=True evolution=False
+[2026-03-09 14:22:16] tick=36 meta=False evolution=False
+[2026-03-09 14:23:16] tick=37 meta=False evolution=False
+[2026-03-09 14:24:16] tick=38 meta=False evolution=False
+[2026-03-09 14:25:17] tick=39 meta=False evolution=False
+[2026-03-09 14:26:19] tick=40 meta=True evolution=True
+[2026-03-09 14:27:19] tick=41 meta=False evolution=False
+[2026-03-09 14:28:19] tick=42 meta=False evolution=False
+[2026-03-09 14:29:19] tick=43 meta=False evolution=False
+[2026-03-09 14:30:19] tick=44 meta=False evolution=False
+[2026-03-09 14:31:21] tick=45 meta=True evolution=False
+[2026-03-09 14:32:21] tick=46 meta=False evolution=False
+[2026-03-09 14:33:21] tick=47 meta=False evolution=False
+[2026-03-09 14:34:21] tick=48 meta=False evolution=False
+[2026-03-09 14:35:21] tick=49 meta=False evolution=False
+[2026-03-09 14:36:23] tick=50 meta=True evolution=True
+[2026-03-09 14:37:23] tick=51 meta=False evolution=False
+[2026-03-09 14:38:23] tick=52 meta=False evolution=False
+[2026-03-09 14:39:23] tick=53 meta=False evolution=False
+[2026-03-09 14:40:23] tick=54 meta=False evolution=False
+[2026-03-09 14:41:25] tick=55 meta=True evolution=False
+[2026-03-09 14:42:25] tick=56 meta=False evolution=False
+[2026-03-09 14:43:25] tick=57 meta=False evolution=False
+[2026-03-09 14:44:25] tick=58 meta=False evolution=False
+[2026-03-09 14:45:25] tick=59 meta=False evolution=False
+[2026-03-09 14:46:28] tick=60 meta=True evolution=True
+[2026-03-09 14:47:28] tick=61 meta=False evolution=False
+[2026-03-09 14:50:05] Factory daemon started pid=23924 interval=60s
+[2026-03-09 14:50:05] tick=1 meta=False evolution=False
+[2026-03-09 14:59:37] Factory daemon started pid=36820 interval=60s
+[2026-03-09 14:59:37] tick=1 meta=False evolution=False
+[2026-03-09 15:09:37] Factory daemon started pid=7132 interval=60s
+[2026-03-09 15:09:37] tick=1 meta=False evolution=False
+[2026-03-09 15:10:51] Factory daemon started pid=25628 interval=60s
+[2026-03-09 15:10:51] tick=1 meta=False evolution=False
+[2026-03-09 17:10:05] Factory daemon started pid=33144 interval=60s
+[2026-03-09 17:10:05] tick=1 meta=False evolution=False
+[2026-03-09 17:11:05] tick=2 meta=False evolution=False
+[2026-03-09 17:12:05] tick=3 meta=False evolution=False
+[2026-03-09 17:13:05] tick=4 meta=False evolution=False
+[2026-03-09 17:14:07] tick=5 meta=True evolution=False
+[2026-03-09 17:15:07] tick=6 meta=False evolution=False
+[2026-03-09 17:16:07] tick=7 meta=False evolution=False
+[2026-03-09 17:17:07] tick=8 meta=False evolution=False
+[2026-03-09 17:18:08] tick=9 meta=False evolution=False
+[2026-03-09 17:19:10] tick=10 meta=True evolution=True
+[2026-03-09 17:20:10] tick=11 meta=False evolution=False
+[2026-03-09 17:21:10] tick=12 meta=False evolution=False
+[2026-03-09 17:22:10] tick=13 meta=False evolution=False
+[2026-03-09 17:23:10] tick=14 meta=False evolution=False
+[2026-03-09 17:24:14] tick=15 meta=True evolution=False
+[2026-03-09 17:25:14] tick=16 meta=False evolution=False
+[2026-03-09 17:26:14] tick=17 meta=False evolution=False
+[2026-03-09 17:27:14] tick=18 meta=False evolution=False
+[2026-03-09 17:28:14] tick=19 meta=False evolution=False
+[2026-03-09 17:29:14] tick=20 meta=True evolution=True
+[2026-03-09 17:30:14] tick=21 meta=False evolution=False
+[2026-03-09 17:31:15] tick=22 meta=False evolution=False
+[2026-03-09 17:32:15] tick=23 meta=False evolution=False
+[2026-03-09 17:33:15] tick=24 meta=False evolution=False
+[2026-03-09 17:34:15] tick=25 meta=True evolution=False
+[2026-03-09 17:35:15] tick=26 meta=False evolution=False
+[2026-03-09 17:36:15] tick=27 meta=False evolution=False
+[2026-03-09 17:37:15] tick=28 meta=False evolution=False
+[2026-03-09 17:38:16] tick=29 meta=False evolution=False
+[2026-03-09 17:39:16] tick=30 meta=True evolution=True
+[2026-03-09 17:40:16] tick=31 meta=False evolution=False
+[2026-03-09 17:41:16] tick=32 meta=False evolution=False
+[2026-03-09 17:42:16] tick=33 meta=False evolution=False
+[2026-03-09 17:43:17] tick=34 meta=False evolution=False
+[2026-03-09 17:44:17] tick=35 meta=True evolution=False
+[2026-03-09 17:45:17] tick=36 meta=False evolution=False
+[2026-03-09 17:46:17] tick=37 meta=False evolution=False
+[2026-03-09 17:47:17] tick=38 meta=False evolution=False
+[2026-03-09 17:48:18] tick=39 meta=False evolution=False
+[2026-03-09 17:49:18] tick=40 meta=True evolution=True
+[2026-03-09 17:50:18] tick=41 meta=False evolution=False
+[2026-03-09 17:51:18] tick=42 meta=False evolution=False
+[2026-03-09 17:52:19] tick=43 meta=False evolution=False
+[2026-03-09 17:53:19] tick=44 meta=False evolution=False
+[2026-03-09 17:54:19] tick=45 meta=True evolution=False
+[2026-03-09 17:55:19] tick=46 meta=False evolution=False
+[2026-03-09 17:56:20] tick=47 meta=False evolution=False
+[2026-03-09 17:57:20] tick=48 meta=False evolution=False
+[2026-03-09 17:58:20] tick=49 meta=False evolution=False
+[2026-03-09 17:59:20] tick=50 meta=True evolution=True
+[2026-03-09 18:00:21] tick=51 meta=False evolution=False
+[2026-03-09 18:01:21] tick=52 meta=False evolution=False
+[2026-03-09 18:02:21] tick=53 meta=False evolution=False
+[2026-03-09 18:03:21] tick=54 meta=False evolution=False
+[2026-03-09 18:04:22] tick=55 meta=True evolution=False
+[2026-03-09 18:05:22] tick=56 meta=False evolution=False
+[2026-03-09 18:06:22] tick=57 meta=False evolution=False
+[2026-03-09 18:07:22] tick=58 meta=False evolution=False
+[2026-03-09 18:08:22] tick=59 meta=False evolution=False
+[2026-03-09 18:09:23] tick=60 meta=True evolution=True
+[2026-03-09 18:10:23] tick=61 meta=False evolution=False
+[2026-03-09 18:11:23] tick=62 meta=False evolution=False
+[2026-03-09 18:12:23] tick=63 meta=False evolution=False
+[2026-03-09 18:13:23] tick=64 meta=False evolution=False
+[2026-03-09 18:14:24] tick=65 meta=True evolution=False
+[2026-03-09 18:15:24] tick=66 meta=False evolution=False
+[2026-03-09 18:16:24] tick=67 meta=False evolution=False
+[2026-03-09 18:17:24] tick=68 meta=False evolution=False
+[2026-03-09 18:18:24] tick=69 meta=False evolution=False
+[2026-03-09 18:19:24] tick=70 meta=True evolution=True
+[2026-03-09 18:20:25] tick=71 meta=False evolution=False
+[2026-03-09 18:21:25] tick=72 meta=False evolution=False
+[2026-03-09 18:22:25] tick=73 meta=False evolution=False
+[2026-03-09 18:23:25] tick=74 meta=False evolution=False
+[2026-03-09 18:24:25] tick=75 meta=True evolution=False
+[2026-03-09 18:25:25] tick=76 meta=False evolution=False
+[2026-03-09 18:26:26] tick=77 meta=False evolution=False
+[2026-03-09 18:27:26] tick=78 meta=False evolution=False
+[2026-03-09 18:28:26] tick=79 meta=False evolution=False
+[2026-03-09 18:29:26] tick=80 meta=True evolution=True
+[2026-03-09 18:30:26] tick=81 meta=False evolution=False
+[2026-03-09 18:31:26] tick=82 meta=False evolution=False
+[2026-03-09 18:32:26] tick=83 meta=False evolution=False
+[2026-03-09 18:33:26] tick=84 meta=False evolution=False
+[2026-03-09 18:34:26] tick=85 meta=True evolution=False
+[2026-03-09 18:35:26] tick=86 meta=False evolution=False
+[2026-03-09 18:36:26] tick=87 meta=False evolution=False
+[2026-03-09 18:37:27] tick=88 meta=False evolution=False
+[2026-03-09 18:38:27] tick=89 meta=False evolution=False
+[2026-03-09 18:39:27] tick=90 meta=True evolution=True
+[2026-03-09 18:40:27] tick=91 meta=False evolution=False
+[2026-03-09 18:41:27] tick=92 meta=False evolution=False
+[2026-03-09 18:42:27] tick=93 meta=False evolution=False
+[2026-03-09 18:42:54] Factory daemon started pid=33820 interval=60s
+[2026-03-09 18:42:54] tick=1 meta=False evolution=False
+[2026-03-09 18:43:54] tick=2 meta=False evolution=False
+[2026-03-09 18:44:54] tick=3 meta=False evolution=False
+[2026-03-09 18:45:54] tick=4 meta=False evolution=False
+[2026-03-09 18:46:54] tick=5 meta=True evolution=False
+[2026-03-09 18:47:16] Factory daemon started pid=34124 interval=60s
+[2026-03-09 18:47:16] tick=1 meta=False evolution=False
+[2026-03-09 18:48:16] tick=2 meta=False evolution=False
+[2026-03-09 18:49:16] tick=3 meta=False evolution=False
+[2026-03-09 18:50:17] tick=4 meta=False evolution=False
+[2026-03-09 18:51:17] tick=5 meta=True evolution=False
+[2026-03-09 18:52:17] tick=6 meta=False evolution=False
+[2026-03-09 18:53:17] tick=7 meta=False evolution=False
+[2026-03-09 18:54:17] tick=8 meta=False evolution=False
+[2026-03-09 18:55:18] tick=9 meta=False evolution=False
+[2026-03-09 18:56:18] tick=10 meta=True evolution=True
+[2026-03-09 18:56:49] Factory daemon started pid=7272 interval=60s
+[2026-03-09 18:59:04] tick=1 meta=False evolution=False
+[2026-03-09 19:00:04] tick=2 meta=False evolution=False
+[2026-03-09 19:01:04] tick=3 meta=False evolution=False
+[2026-03-09 19:02:04] tick=4 meta=False evolution=False
+[2026-03-09 19:03:07] tick=5 meta=True evolution=False
+[2026-03-09 19:06:32] tick=6 meta=False evolution=False
+[2026-03-09 19:08:49] tick=7 meta=False evolution=False
+[2026-03-09 19:09:49] tick=8 meta=False evolution=False
+[2026-03-09 19:10:49] tick=9 meta=False evolution=False
+[2026-03-09 19:11:52] tick=10 meta=True evolution=True
+[2026-03-09 19:12:52] tick=11 meta=False evolution=False
+[2026-03-09 19:13:52] tick=12 meta=False evolution=False
+[2026-03-09 19:14:52] tick=13 meta=False evolution=False
+[2026-03-09 19:15:52] tick=14 meta=False evolution=False
+[2026-03-09 19:16:54] tick=15 meta=True evolution=False
+[2026-03-09 19:17:54] tick=16 meta=False evolution=False
+[2026-03-09 19:18:54] tick=17 meta=False evolution=False
+[2026-03-09 19:19:55] tick=18 meta=False evolution=False
+[2026-03-09 19:20:55] tick=19 meta=False evolution=False
+[2026-03-09 19:21:58] tick=20 meta=True evolution=True
+[2026-03-09 19:22:58] tick=21 meta=False evolution=False
+[2026-03-09 19:23:58] tick=22 meta=False evolution=False
+[2026-03-09 19:24:58] tick=23 meta=False evolution=False
+[2026-03-09 19:25:58] tick=24 meta=False evolution=False
+[2026-03-09 19:27:01] tick=25 meta=True evolution=False
+[2026-03-09 19:28:01] tick=26 meta=False evolution=False
+[2026-03-09 19:29:01] tick=27 meta=False evolution=False
+[2026-03-09 19:30:01] tick=28 meta=False evolution=False
+[2026-03-09 19:31:01] tick=29 meta=False evolution=False
+[2026-03-09 19:32:04] tick=30 meta=True evolution=True
+[2026-03-09 19:33:04] tick=31 meta=False evolution=False
+[2026-03-09 19:34:04] tick=32 meta=False evolution=False
+[2026-03-09 19:35:04] tick=33 meta=False evolution=False
+[2026-03-09 19:36:04] tick=34 meta=False evolution=False
+[2026-03-09 19:37:06] tick=35 meta=True evolution=False
+[2026-03-09 19:38:49] Factory daemon started pid=42944 interval=60s
+[2026-03-09 19:40:10] tick=1 meta=False evolution=False
+[2026-03-09 19:41:10] tick=2 meta=False evolution=False
+[2026-03-09 19:42:10] tick=3 meta=False evolution=False
+[2026-03-09 19:43:10] tick=4 meta=False evolution=False
+[2026-03-09 19:44:12] tick=5 meta=True evolution=False
+[2026-03-09 19:45:12] tick=6 meta=False evolution=False
+[2026-03-09 19:46:12] tick=7 meta=False evolution=False
+[2026-03-09 19:47:12] tick=8 meta=False evolution=False
+[2026-03-09 19:48:56] Factory daemon started pid=16940 interval=60s
+[2026-03-09 19:50:23] tick=1 meta=False evolution=False
+[2026-03-09 19:51:23] tick=2 meta=False evolution=False
+[2026-03-09 19:52:24] tick=3 meta=False evolution=False
+[2026-03-09 19:53:24] tick=4 meta=False evolution=False
+[2026-03-09 19:54:26] tick=5 meta=True evolution=False
+[2026-03-09 19:55:26] tick=6 meta=False evolution=False
+[2026-03-09 19:56:26] tick=7 meta=False evolution=False
+[2026-03-09 19:57:26] tick=8 meta=False evolution=False
+[2026-03-09 19:58:26] tick=9 meta=False evolution=False
+[2026-03-09 19:59:30] tick=10 meta=True evolution=True
+[2026-03-09 20:00:30] tick=11 meta=False evolution=False
+[2026-03-09 20:01:30] tick=12 meta=False evolution=False
+[2026-03-09 20:02:30] tick=13 meta=False evolution=False
+[2026-03-09 20:03:30] tick=14 meta=False evolution=False
+[2026-03-09 20:04:32] tick=15 meta=True evolution=False
+[2026-03-09 20:05:32] tick=16 meta=False evolution=False
+[2026-03-09 20:06:33] tick=17 meta=False evolution=False
+[2026-03-09 20:07:33] tick=18 meta=False evolution=False
+[2026-03-09 20:08:33] tick=19 meta=False evolution=False
+[2026-03-09 20:09:36] tick=20 meta=True evolution=True
+[2026-03-09 20:10:36] tick=21 meta=False evolution=False
+[2026-03-09 20:11:36] tick=22 meta=False evolution=False
+[2026-03-09 20:12:07] Factory daemon started pid=29316 interval=60s
+[2026-03-09 20:12:07] tick=1 meta=False evolution=False
+[2026-03-09 20:13:08] tick=2 meta=False evolution=False
+[2026-03-09 20:14:08] tick=3 meta=False evolution=False
+[2026-03-09 20:15:08] tick=4 meta=False evolution=False
+[2026-03-09 20:16:10] tick=5 meta=True evolution=False
+[2026-03-09 20:17:10] tick=6 meta=False evolution=False
+[2026-03-09 20:18:10] tick=7 meta=False evolution=False
+[2026-03-09 20:19:10] tick=8 meta=False evolution=False
+[2026-03-09 20:20:10] tick=9 meta=False evolution=False
+[2026-03-09 20:21:13] tick=10 meta=True evolution=True
+[2026-03-09 20:22:14] tick=11 meta=False evolution=False
+[2026-03-09 20:23:14] tick=12 meta=False evolution=False
+[2026-03-09 20:24:14] tick=13 meta=False evolution=False
+[2026-03-09 20:25:14] tick=14 meta=False evolution=False
+[2026-03-09 20:26:16] tick=15 meta=True evolution=False
+[2026-03-09 20:27:17] tick=16 meta=False evolution=False
+[2026-03-09 20:28:17] tick=17 meta=False evolution=False
+[2026-03-09 20:29:17] tick=18 meta=False evolution=False
+[2026-03-09 20:30:17] tick=19 meta=False evolution=False
+[2026-03-09 20:31:20] tick=20 meta=True evolution=True
+[2026-03-09 20:32:20] tick=21 meta=False evolution=False
+[2026-03-09 20:33:20] tick=22 meta=False evolution=False
+[2026-03-09 20:34:21] tick=23 meta=False evolution=False
+[2026-03-09 20:35:21] tick=24 meta=False evolution=False
+[2026-03-09 20:36:23] tick=25 meta=True evolution=False
+[2026-03-09 20:37:23] tick=26 meta=False evolution=False
+[2026-03-09 20:38:24] tick=27 meta=False evolution=False
+[2026-03-09 20:39:24] tick=28 meta=False evolution=False
+[2026-03-09 20:40:24] tick=29 meta=False evolution=False
+[2026-03-09 20:41:27] tick=30 meta=True evolution=True
+[2026-03-09 20:42:27] tick=31 meta=False evolution=False
+[2026-03-09 20:43:28] tick=32 meta=False evolution=False
+[2026-03-09 20:44:28] tick=33 meta=False evolution=False
+[2026-03-09 20:45:28] tick=34 meta=False evolution=False
+[2026-03-09 20:46:31] tick=35 meta=True evolution=False
+[2026-03-09 20:47:31] tick=36 meta=False evolution=False
+[2026-03-09 20:48:31] tick=37 meta=False evolution=False
+[2026-03-09 20:49:31] tick=38 meta=False evolution=False
+[2026-03-09 20:50:32] tick=39 meta=False evolution=False
+[2026-03-09 20:51:35] tick=40 meta=True evolution=True
+[2026-03-09 20:52:35] tick=41 meta=False evolution=False
+[2026-03-09 20:53:35] tick=42 meta=False evolution=False
+[2026-03-09 20:54:35] tick=43 meta=False evolution=False
+[2026-03-09 20:55:36] tick=44 meta=False evolution=False
+[2026-03-09 20:56:38] tick=45 meta=True evolution=False
+[2026-03-09 20:57:38] tick=46 meta=False evolution=False
+[2026-03-09 20:58:38] tick=47 meta=False evolution=False
+[2026-03-09 20:59:39] tick=48 meta=False evolution=False
+[2026-03-09 21:00:39] tick=49 meta=False evolution=False
+[2026-03-09 21:01:42] tick=50 meta=True evolution=True
+[2026-03-09 21:02:42] tick=51 meta=False evolution=False
+[2026-03-09 21:03:43] tick=52 meta=False evolution=False
+[2026-03-09 21:04:43] tick=53 meta=False evolution=False
+[2026-03-09 21:05:43] tick=54 meta=False evolution=False
+[2026-03-09 21:06:45] tick=55 meta=True evolution=False
+[2026-03-09 21:07:46] tick=56 meta=False evolution=False
+[2026-03-09 21:08:46] tick=57 meta=False evolution=False
+[2026-03-09 21:09:46] tick=58 meta=False evolution=False
+[2026-03-09 21:10:46] tick=59 meta=False evolution=False
+[2026-03-09 21:11:49] tick=60 meta=True evolution=True
+[2026-03-09 21:12:50] tick=61 meta=False evolution=False
+[2026-03-09 21:13:50] tick=62 meta=False evolution=False
+[2026-03-09 21:14:50] tick=63 meta=False evolution=False
+[2026-03-09 21:15:50] tick=64 meta=False evolution=False
+[2026-03-09 21:16:53] tick=65 meta=True evolution=False
+[2026-03-09 21:17:53] tick=66 meta=False evolution=False
+[2026-03-09 21:18:53] tick=67 meta=False evolution=False
+[2026-03-09 21:19:53] tick=68 meta=False evolution=False
+[2026-03-09 21:20:54] tick=69 meta=False evolution=False
+[2026-03-09 21:21:57] tick=70 meta=True evolution=True
+[2026-03-09 21:22:57] tick=71 meta=False evolution=False
+[2026-03-09 21:23:57] tick=72 meta=False evolution=False
+[2026-03-09 21:24:57] tick=73 meta=False evolution=False
+[2026-03-09 21:25:58] tick=74 meta=False evolution=False
+[2026-03-09 21:27:00] tick=75 meta=True evolution=False
+[2026-03-09 21:28:00] tick=76 meta=False evolution=False
+[2026-03-09 21:29:00] tick=77 meta=False evolution=False
+[2026-03-09 21:30:01] tick=78 meta=False evolution=False
+[2026-03-09 21:31:01] tick=79 meta=False evolution=False
+[2026-03-09 21:32:04] tick=80 meta=True evolution=True
+[2026-03-09 21:33:04] tick=81 meta=False evolution=False
+[2026-03-09 21:34:04] tick=82 meta=False evolution=False
+[2026-03-09 21:35:05] tick=83 meta=False evolution=False
+[2026-03-09 21:36:05] tick=84 meta=False evolution=False
+[2026-03-09 21:37:07] tick=85 meta=True evolution=False
+[2026-03-09 21:38:07] tick=86 meta=False evolution=False
+[2026-03-09 21:39:07] tick=87 meta=False evolution=False
+[2026-03-09 21:40:08] tick=88 meta=False evolution=False
+[2026-03-09 21:41:08] tick=89 meta=False evolution=False
+[2026-03-09 21:42:11] tick=90 meta=True evolution=True
+[2026-03-09 21:43:11] tick=91 meta=False evolution=False
+[2026-03-09 21:44:12] tick=92 meta=False evolution=False
+[2026-03-09 21:45:12] tick=93 meta=False evolution=False
+[2026-03-09 21:46:12] tick=94 meta=False evolution=False
+[2026-03-09 21:47:14] tick=95 meta=True evolution=False
+[2026-03-09 21:48:14] tick=96 meta=False evolution=False
+[2026-03-09 21:49:14] tick=97 meta=False evolution=False
+[2026-03-09 21:50:15] tick=98 meta=False evolution=False
+[2026-03-09 21:51:15] tick=99 meta=False evolution=False
+[2026-03-09 21:52:17] tick=100 meta=True evolution=True
+[2026-03-09 21:53:18] tick=101 meta=False evolution=False
+[2026-03-09 21:54:18] tick=102 meta=False evolution=False
+[2026-03-09 21:55:18] tick=103 meta=False evolution=False
+[2026-03-09 21:56:18] tick=104 meta=False evolution=False
+[2026-03-09 21:57:20] tick=105 meta=True evolution=False
+[2026-03-09 21:58:20] tick=106 meta=False evolution=False
+[2026-03-09 21:59:20] tick=107 meta=False evolution=False
+[2026-03-09 22:00:20] tick=108 meta=False evolution=False
+[2026-03-09 22:01:20] tick=109 meta=False evolution=False
+[2026-03-09 22:02:23] tick=110 meta=True evolution=True
+[2026-03-09 22:03:23] tick=111 meta=False evolution=False
+[2026-03-09 22:04:23] tick=112 meta=False evolution=False
+[2026-03-09 22:05:24] tick=113 meta=False evolution=False
+[2026-03-09 22:06:24] tick=114 meta=False evolution=False
+[2026-03-09 22:07:26] tick=115 meta=True evolution=False
+[2026-03-09 22:08:27] tick=116 meta=False evolution=False
+[2026-03-09 22:09:27] tick=117 meta=False evolution=False
+[2026-03-09 22:10:27] tick=118 meta=False evolution=False
+[2026-03-09 22:11:27] tick=119 meta=False evolution=False
+[2026-03-09 22:12:31] tick=120 meta=True evolution=True
+[2026-03-09 22:13:31] tick=121 meta=False evolution=False
+[2026-03-09 22:14:31] tick=122 meta=False evolution=False
+[2026-03-09 22:15:31] tick=123 meta=False evolution=False
+[2026-03-09 22:16:32] tick=124 meta=False evolution=False
+[2026-03-09 22:18:59] tick=125 meta=True evolution=False
+[2026-03-10 10:01:28] tick=126 meta=False evolution=False
+[2026-03-10 10:03:54] tick=127 meta=False evolution=False
+[2026-03-10 10:06:17] tick=128 meta=False evolution=False
+[2026-03-10 10:08:39] tick=129 meta=False evolution=False
+[2026-03-10 10:09:42] tick=130 meta=True evolution=True
+[2026-03-10 10:10:42] tick=131 meta=False evolution=False
+[2026-03-10 10:11:42] tick=132 meta=False evolution=False
+[2026-03-10 10:12:43] tick=133 meta=False evolution=False
+[2026-03-10 10:13:43] tick=134 meta=False evolution=False
+[2026-03-10 10:14:45] tick=135 meta=True evolution=False
+[2026-03-10 11:00:17] tick=136 meta=False evolution=False
+[2026-03-10 11:01:17] tick=137 meta=False evolution=False
+[2026-03-10 11:02:17] tick=138 meta=False evolution=False
+[2026-03-10 11:03:17] tick=139 meta=False evolution=False
+[2026-03-10 11:04:20] tick=140 meta=True evolution=True
+[2026-03-10 11:05:20] tick=141 meta=False evolution=False
+[2026-03-10 11:06:20] tick=142 meta=False evolution=False
+[2026-03-10 11:07:20] tick=143 meta=False evolution=False
+[2026-03-10 11:08:20] tick=144 meta=False evolution=False
+[2026-03-10 11:09:22] tick=145 meta=True evolution=False
+[2026-03-10 11:10:22] tick=146 meta=False evolution=False
+[2026-03-10 11:11:22] tick=147 meta=False evolution=False
+[2026-03-10 11:12:22] tick=148 meta=False evolution=False
+[2026-03-10 11:13:22] tick=149 meta=False evolution=False
+[2026-03-10 11:14:25] tick=150 meta=True evolution=True
+[2026-03-10 11:59:54] tick=151 meta=False evolution=False
+[2026-03-10 12:00:54] tick=152 meta=False evolution=False
+[2026-03-10 12:01:54] tick=153 meta=False evolution=False
+[2026-03-10 12:02:54] tick=154 meta=False evolution=False
+[2026-03-10 12:03:56] tick=155 meta=True evolution=False
+[2026-03-10 12:04:56] tick=156 meta=False evolution=False
+[2026-03-10 12:05:57] tick=157 meta=False evolution=False
+[2026-03-10 12:06:57] tick=158 meta=False evolution=False
+[2026-03-10 12:07:57] tick=159 meta=False evolution=False
+[2026-03-10 12:08:59] tick=160 meta=True evolution=True
+[2026-03-10 12:10:00] tick=161 meta=False evolution=False
+[2026-03-10 12:12:35] tick=162 meta=False evolution=False
+[2026-03-10 12:13:35] tick=163 meta=False evolution=False
+[2026-03-10 13:15:32] tick=164 meta=False evolution=False
+[2026-03-10 13:16:35] tick=165 meta=True evolution=False
+[2026-03-10 13:19:05] tick=166 meta=False evolution=False
+[2026-03-10 13:20:05] tick=167 meta=False evolution=False
+[2026-03-10 13:22:38] tick=168 meta=False evolution=False
+[2026-03-10 13:23:38] tick=169 meta=False evolution=False
+[2026-03-10 13:26:09] tick=170 meta=True evolution=True
+[2026-03-10 13:27:09] tick=171 meta=False evolution=False
+[2026-03-10 13:28:09] tick=172 meta=False evolution=False
+[2026-03-10 13:29:09] tick=173 meta=False evolution=False
+[2026-03-10 14:14:40] tick=174 meta=False evolution=False
+[2026-03-10 14:15:41] tick=175 meta=True evolution=False
+[2026-03-10 14:16:42] tick=176 meta=False evolution=False
+[2026-03-10 14:17:42] tick=177 meta=False evolution=False
+[2026-03-10 14:18:42] tick=178 meta=False evolution=False
+[2026-03-10 14:19:42] tick=179 meta=False evolution=False
+[2026-03-10 14:20:45] tick=180 meta=True evolution=True
+[2026-03-10 14:21:45] tick=181 meta=False evolution=False
+[2026-03-10 14:22:45] tick=182 meta=False evolution=False
+[2026-03-10 14:23:45] tick=183 meta=False evolution=False
+[2026-03-10 14:24:45] tick=184 meta=False evolution=False
+[2026-03-10 14:25:47] tick=185 meta=True evolution=False
+[2026-03-10 14:26:48] tick=186 meta=False evolution=False
+[2026-03-10 14:27:48] tick=187 meta=False evolution=False
+[2026-03-10 14:28:49] tick=188 meta=False evolution=False
+[2026-03-10 14:29:49] tick=189 meta=False evolution=False
+[2026-03-10 14:30:52] tick=190 meta=True evolution=True
+[2026-03-10 14:31:52] tick=191 meta=False evolution=False
+[2026-03-10 14:32:53] tick=192 meta=False evolution=False
+[2026-03-10 14:33:53] tick=193 meta=False evolution=False
+[2026-03-10 14:34:53] tick=194 meta=False evolution=False
+[2026-03-10 14:35:56] tick=195 meta=True evolution=False
+[2026-03-10 14:36:56] tick=196 meta=False evolution=False
+[2026-03-10 14:37:57] tick=197 meta=False evolution=False
+[2026-03-10 14:38:57] tick=198 meta=False evolution=False
+[2026-03-10 14:39:57] tick=199 meta=False evolution=False
+[2026-03-10 14:41:01] tick=200 meta=True evolution=True
+[2026-03-10 14:42:01] tick=201 meta=False evolution=False
+[2026-03-10 14:43:01] tick=202 meta=False evolution=False
+[2026-03-10 14:44:02] tick=203 meta=False evolution=False
+[2026-03-10 14:45:02] tick=204 meta=False evolution=False
+[2026-03-10 14:46:04] tick=205 meta=True evolution=False
+[2026-03-10 14:47:05] tick=206 meta=False evolution=False
+[2026-03-10 14:48:05] tick=207 meta=False evolution=False
+[2026-03-10 14:49:05] tick=208 meta=False evolution=False
+[2026-03-10 14:50:05] tick=209 meta=False evolution=False
+[2026-03-10 14:51:09] tick=210 meta=True evolution=True
+[2026-03-10 14:52:09] tick=211 meta=False evolution=False
+[2026-03-10 14:53:09] tick=212 meta=False evolution=False
+[2026-03-10 14:54:09] tick=213 meta=False evolution=False
+[2026-03-10 14:55:10] tick=214 meta=False evolution=False
+[2026-03-10 14:56:12] tick=215 meta=True evolution=False
+[2026-03-10 14:57:12] tick=216 meta=False evolution=False
+[2026-03-10 14:58:12] tick=217 meta=False evolution=False
+[2026-03-10 14:59:12] tick=218 meta=False evolution=False
+[2026-03-10 15:00:12] tick=219 meta=False evolution=False
+[2026-03-10 15:01:16] tick=220 meta=True evolution=True
+[2026-03-10 15:02:16] tick=221 meta=False evolution=False
+[2026-03-10 15:03:17] tick=222 meta=False evolution=False
+[2026-03-10 15:04:17] tick=223 meta=False evolution=False
+[2026-03-10 15:05:17] tick=224 meta=False evolution=False
+[2026-03-10 15:06:20] tick=225 meta=True evolution=False
+[2026-03-10 15:07:20] tick=226 meta=False evolution=False
+[2026-03-10 15:08:20] tick=227 meta=False evolution=False
+[2026-03-10 15:09:20] tick=228 meta=False evolution=False
+[2026-03-10 15:10:20] tick=229 meta=False evolution=False
+[2026-03-10 15:11:23] tick=230 meta=True evolution=True
+[2026-03-10 15:12:23] tick=231 meta=False evolution=False
+[2026-03-10 15:13:23] tick=232 meta=False evolution=False
+[2026-03-10 15:14:23] tick=233 meta=False evolution=False
+[2026-03-10 15:15:23] tick=234 meta=False evolution=False
+[2026-03-10 15:16:25] tick=235 meta=True evolution=False
+[2026-03-10 15:17:26] tick=236 meta=False evolution=False
+[2026-03-10 15:18:26] tick=237 meta=False evolution=False
+[2026-03-10 15:19:26] tick=238 meta=False evolution=False
+[2026-03-10 15:20:26] tick=239 meta=False evolution=False
+[2026-03-10 15:21:30] tick=240 meta=True evolution=True
+[2026-03-10 15:22:30] tick=241 meta=False evolution=False
+[2026-03-10 15:23:31] tick=242 meta=False evolution=False
+[2026-03-10 15:24:31] tick=243 meta=False evolution=False
+[2026-03-10 15:25:31] tick=244 meta=False evolution=False
+[2026-03-10 15:26:33] tick=245 meta=True evolution=False
+[2026-03-10 15:27:33] tick=246 meta=False evolution=False
+[2026-03-10 15:28:33] tick=247 meta=False evolution=False
+[2026-03-10 15:30:47] tick=248 meta=False evolution=False
+[2026-03-10 15:31:47] tick=249 meta=False evolution=False
+[2026-03-10 15:34:04] tick=250 meta=True evolution=True
+[2026-03-10 15:35:04] tick=251 meta=False evolution=False
+[2026-03-10 15:36:04] tick=252 meta=False evolution=False
+[2026-03-10 15:37:04] tick=253 meta=False evolution=False
+[2026-03-10 15:38:02] Factory daemon started pid=9748 interval=60s
+[2026-03-10 15:38:02] tick=1 meta=False evolution=False
+[2026-03-10 15:39:29] Factory daemon started pid=39500 interval=60s
+[2026-03-10 15:39:29] tick=1 meta=False evolution=False
+[2026-03-10 15:40:29] tick=2 meta=False evolution=False
+[2026-03-10 15:41:29] tick=3 meta=False evolution=False
+[2026-03-10 15:42:29] tick=4 meta=False evolution=False
+[2026-03-10 15:43:29] tick=5 meta=True evolution=False
+[2026-03-10 15:44:29] tick=6 meta=False evolution=False
+[2026-03-10 15:45:29] tick=7 meta=False evolution=False
+[2026-03-10 15:46:29] tick=8 meta=False evolution=False
+[2026-03-10 15:47:29] tick=9 meta=False evolution=False
+[2026-03-10 15:48:29] tick=10 meta=True evolution=True
+[2026-03-10 15:49:29] tick=11 meta=False evolution=False
+[2026-03-10 15:50:29] tick=12 meta=False evolution=False
+[2026-03-10 15:51:30] tick=13 meta=False evolution=False
+[2026-03-10 15:52:30] tick=14 meta=False evolution=False
+[2026-03-10 15:53:30] tick=15 meta=True evolution=False
+[2026-03-10 15:54:30] tick=16 meta=False evolution=False
+[2026-03-10 15:55:31] tick=17 meta=False evolution=False
+[2026-03-10 15:56:31] tick=18 meta=False evolution=False
+[2026-03-10 15:57:31] tick=19 meta=False evolution=False
+[2026-03-10 15:58:31] tick=20 meta=True evolution=True
+[2026-03-10 15:59:31] tick=21 meta=False evolution=False
+[2026-03-10 16:00:32] tick=22 meta=False evolution=False
+[2026-03-10 16:01:32] tick=23 meta=False evolution=False
+[2026-03-10 16:02:32] tick=24 meta=False evolution=False
+[2026-03-10 16:03:32] tick=25 meta=True evolution=False
+[2026-03-10 16:04:33] tick=26 meta=False evolution=False
+[2026-03-10 16:05:33] tick=27 meta=False evolution=False
+[2026-03-10 16:06:33] tick=28 meta=False evolution=False
+[2026-03-10 16:07:33] tick=29 meta=False evolution=False
+[2026-03-10 16:08:34] tick=30 meta=True evolution=True
+[2026-03-10 16:09:34] tick=31 meta=False evolution=False
+[2026-03-10 16:10:34] tick=32 meta=False evolution=False
+[2026-03-10 16:11:34] tick=33 meta=False evolution=False
+[2026-03-10 16:12:34] tick=34 meta=False evolution=False
+[2026-03-10 16:13:35] tick=35 meta=True evolution=False
+[2026-03-10 16:14:35] tick=36 meta=False evolution=False
+[2026-03-10 16:15:35] tick=37 meta=False evolution=False
+[2026-03-10 16:16:35] tick=38 meta=False evolution=False
+[2026-03-10 16:17:37] Factory daemon started pid=31384 interval=60s
+[2026-03-10 16:17:37] tick=1 meta=False evolution=False
+[2026-03-10 16:18:37] tick=2 meta=False evolution=False
+[2026-03-10 16:19:37] tick=3 meta=False evolution=False
+[2026-03-10 16:20:38] tick=4 meta=False evolution=False
+[2026-03-10 16:21:40] tick=5 meta=True evolution=False
+[2026-03-10 16:22:40] tick=6 meta=False evolution=False
+[2026-03-10 16:23:41] tick=7 meta=False evolution=False
+[2026-03-10 16:24:41] tick=8 meta=False evolution=False
+[2026-03-10 16:25:41] tick=9 meta=False evolution=False
+[2026-03-10 16:26:45] tick=10 meta=True evolution=True
+[2026-03-10 16:27:45] tick=11 meta=False evolution=False
+[2026-03-10 16:28:45] tick=12 meta=False evolution=False
+[2026-03-10 16:29:45] tick=13 meta=False evolution=False
+[2026-03-10 16:30:45] tick=14 meta=False evolution=False
+[2026-03-10 16:31:47] tick=15 meta=True evolution=False
+[2026-03-10 16:32:47] tick=16 meta=False evolution=False
+[2026-03-10 16:33:44] Factory daemon started pid=41804 interval=60s
+[2026-03-10 16:33:44] tick=1 meta=False evolution=False
+[2026-03-10 17:21:52] Factory daemon started pid=22232 interval=60s
+[2026-03-10 17:22:35] tick=1 meta=False evolution=False
+[2026-03-10 17:23:36] tick=2 meta=False evolution=False
+[2026-03-10 17:24:25] Factory daemon started pid=49080 interval=60s
+[2026-03-10 17:24:25] tick=1 meta=False evolution=False
+[2026-03-10 17:25:26] tick=2 meta=False evolution=False
+[2026-03-10 17:26:27] tick=3 meta=False evolution=False
+[2026-03-10 17:27:28] tick=4 meta=False evolution=False
+[2026-03-10 17:28:31] tick=5 meta=True evolution=False
+[2026-03-10 17:29:32] tick=6 meta=False evolution=False
+[2026-03-10 17:30:32] tick=7 meta=False evolution=False
+[2026-03-10 17:31:33] tick=8 meta=False evolution=False
+[2026-03-10 17:32:33] tick=9 meta=False evolution=False
+[2026-03-10 17:33:36] tick=10 meta=True evolution=True
+[2026-03-10 17:34:37] tick=11 meta=False evolution=False
+[2026-03-10 17:35:37] tick=12 meta=False evolution=False
+[2026-03-10 17:36:37] tick=13 meta=False evolution=False
+[2026-03-10 17:37:37] tick=14 meta=False evolution=False
+[2026-03-10 17:38:40] tick=15 meta=True evolution=False
+[2026-03-10 17:39:40] tick=16 meta=False evolution=False
+[2026-03-10 17:40:41] tick=17 meta=False evolution=False
+[2026-03-10 17:41:41] tick=18 meta=False evolution=False
+[2026-03-10 17:42:41] tick=19 meta=False evolution=False
+[2026-03-10 17:43:45] tick=20 meta=True evolution=True
+[2026-03-10 17:44:45] tick=21 meta=False evolution=False
+[2026-03-10 17:45:45] tick=22 meta=False evolution=False
+[2026-03-10 17:46:45] tick=23 meta=False evolution=False
+[2026-03-10 17:47:46] tick=24 meta=False evolution=False
+[2026-03-10 17:48:48] error tick=25: SyntaxError: unterminated string literal (detected at line 108) (<unknown>, line 108)
+[2026-03-10 17:49:48] error tick=26: SyntaxError: unterminated string literal (detected at line 108) (<unknown>, line 108)
+[2026-03-10 17:50:48] tick=27 meta=False evolution=False
+[2026-03-10 17:51:48] tick=28 meta=False evolution=False
+[2026-03-10 17:52:49] tick=29 meta=False evolution=False
+[2026-03-10 17:53:52] tick=30 meta=True evolution=True
+[2026-03-10 17:54:52] tick=31 meta=False evolution=False
+[2026-03-10 17:55:53] tick=32 meta=False evolution=False
+[2026-03-10 17:56:53] tick=33 meta=False evolution=False
+[2026-03-10 17:57:54] tick=34 meta=False evolution=False
+[2026-03-10 17:58:58] tick=35 meta=True evolution=False
+[2026-03-10 17:59:59] tick=36 meta=False evolution=False
+[2026-03-10 18:01:00] tick=37 meta=False evolution=False
+[2026-03-10 18:02:01] tick=38 meta=False evolution=False
+[2026-03-10 18:03:02] tick=39 meta=False evolution=False
+[2026-03-10 18:04:07] tick=40 meta=True evolution=True
+[2026-03-10 18:05:08] tick=41 meta=False evolution=False
+[2026-03-10 18:06:09] tick=42 meta=False evolution=False
+[2026-03-10 18:07:10] tick=43 meta=False evolution=False
+[2026-03-10 18:08:10] tick=44 meta=False evolution=False
+[2026-03-10 18:09:14] tick=45 meta=True evolution=False
+[2026-03-10 18:10:15] tick=46 meta=False evolution=False
+[2026-03-10 18:11:15] tick=47 meta=False evolution=False
+[2026-03-10 18:12:15] tick=48 meta=False evolution=False
+[2026-03-10 18:13:16] tick=49 meta=False evolution=False
+[2026-03-10 18:14:20] tick=50 meta=True evolution=True
+[2026-03-10 18:15:22] tick=51 meta=False evolution=False
+[2026-03-10 18:16:22] tick=52 meta=False evolution=False
+[2026-03-10 18:17:23] tick=53 meta=False evolution=False
+[2026-03-10 18:18:24] tick=54 meta=False evolution=False
+[2026-03-10 18:19:26] tick=55 meta=True evolution=False
+[2026-03-10 18:20:27] tick=56 meta=False evolution=False
+[2026-03-10 18:21:27] error tick=57: SyntaxError: unmatched ')' (<unknown>, line 35)
+[2026-03-10 18:22:27] tick=58 meta=False evolution=False
+[2026-03-10 18:23:28] tick=59 meta=False evolution=False
+[2026-03-10 18:24:31] tick=60 meta=True evolution=True
+[2026-03-10 18:25:32] tick=61 meta=False evolution=False
+[2026-03-10 18:26:33] tick=62 meta=False evolution=False
+[2026-03-10 18:27:34] tick=63 meta=False evolution=False
+[2026-03-10 18:28:35] tick=64 meta=False evolution=False
+[2026-03-10 18:29:38] error tick=65: SyntaxError: unterminated string literal (detected at line 1259) (<unknown>, line 1259)
+[2026-03-10 18:30:39] tick=66 meta=False evolution=False
+[2026-03-10 18:31:40] tick=67 meta=False evolution=False
+[2026-03-10 18:32:41] tick=68 meta=False evolution=False
+[2026-03-10 18:33:42] tick=69 meta=False evolution=False
+[2026-03-10 18:34:47] tick=70 meta=True evolution=True
+[2026-03-10 18:35:47] tick=71 meta=False evolution=False
+[2026-03-10 18:36:48] tick=72 meta=False evolution=False
+[2026-03-10 18:37:49] tick=73 meta=False evolution=False
+[2026-03-10 18:38:51] tick=74 meta=False evolution=False
+[2026-03-10 18:39:54] tick=75 meta=True evolution=False
+[2026-03-10 18:40:55] tick=76 meta=False evolution=False
+[2026-03-10 18:41:56] tick=77 meta=False evolution=False
+[2026-03-10 18:42:57] tick=78 meta=False evolution=False
+[2026-03-10 18:43:58] tick=79 meta=False evolution=False
+[2026-03-10 18:45:01] tick=80 meta=True evolution=True
+[2026-03-10 18:46:02] tick=81 meta=False evolution=False
+[2026-03-10 18:47:03] tick=82 meta=False evolution=False
+[2026-03-10 18:48:04] tick=83 meta=False evolution=False
+[2026-03-10 18:49:05] tick=84 meta=False evolution=False
+[2026-03-10 18:50:09] tick=85 meta=True evolution=False
+[2026-03-10 18:51:10] tick=86 meta=False evolution=False
+[2026-03-10 18:52:11] tick=87 meta=False evolution=False
+[2026-03-10 18:53:11] tick=88 meta=False evolution=False
+[2026-03-10 18:54:12] tick=89 meta=False evolution=False
+[2026-03-10 18:55:17] tick=90 meta=True evolution=True
+[2026-03-10 18:56:18] tick=91 meta=False evolution=False
+[2026-03-10 18:57:19] tick=92 meta=False evolution=False
+[2026-03-10 18:58:20] tick=93 meta=False evolution=False
+[2026-03-10 18:59:20] tick=94 meta=False evolution=False
+[2026-03-10 19:00:24] tick=95 meta=True evolution=False
+[2026-03-10 19:01:24] tick=96 meta=False evolution=False
+[2026-03-10 19:02:24] tick=97 meta=False evolution=False
+[2026-03-10 19:03:25] tick=98 meta=False evolution=False
+[2026-03-10 19:04:25] tick=99 meta=False evolution=False
+[2026-03-10 19:05:28] tick=100 meta=True evolution=True
+[2026-03-10 19:06:29] tick=101 meta=False evolution=False
+[2026-03-10 19:07:29] tick=102 meta=False evolution=False
+[2026-03-10 19:08:30] tick=103 meta=False evolution=False
+[2026-03-10 19:09:30] tick=104 meta=False evolution=False
+[2026-03-10 19:10:34] tick=105 meta=True evolution=False
+[2026-03-10 19:11:35] tick=106 meta=False evolution=False
+[2026-03-10 19:12:35] tick=107 meta=False evolution=False
+[2026-03-10 19:13:36] tick=108 meta=False evolution=False
+[2026-03-10 19:14:37] tick=109 meta=False evolution=False
+[2026-03-10 19:15:41] tick=110 meta=True evolution=True
+[2026-03-10 19:16:41] tick=111 meta=False evolution=False
+[2026-03-10 19:17:36] Factory daemon started pid=18484 interval=60s
+[2026-03-10 19:17:36] tick=1 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 19:18:37] tick=2 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 19:19:39] tick=3 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 19:21:55] tick=4 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 19:22:58] tick=5 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-10 19:23:58] tick=6 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 19:24:59] tick=7 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 19:25:59] tick=8 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 19:27:00] tick=9 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 19:28:07] tick=10 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-10 19:29:09] tick=11 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 19:30:12] tick=12 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 19:31:12] tick=13 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 19:32:15] tick=14 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 19:33:19] tick=15 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-10 19:34:19] tick=16 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 19:35:20] tick=17 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 19:36:22] tick=18 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 19:37:25] tick=19 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 19:38:28] tick=20 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-10 19:39:30] tick=21 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 19:40:31] tick=22 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 19:41:31] tick=23 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 19:42:39] Factory daemon started pid=35656 interval=60s
+[2026-03-10 19:42:39] tick=1 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 19:43:40] tick=2 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 19:45:51] tick=3 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 19:46:52] tick=4 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 19:49:06] tick=5 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-10 19:50:08] tick=6 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 19:51:09] tick=7 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 19:52:09] tick=8 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 19:53:10] tick=9 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 19:54:14] tick=10 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-10 19:55:15] tick=11 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 19:56:15] tick=12 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 19:57:16] tick=13 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 19:58:17] tick=14 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 19:59:21] tick=15 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-10 20:00:22] tick=16 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 20:01:22] tick=17 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 20:02:23] tick=18 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 20:03:24] tick=19 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 20:04:33] tick=20 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-10 20:05:36] tick=21 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 20:06:39] tick=22 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 20:07:42] tick=23 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 20:09:52] tick=24 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 20:10:57] tick=25 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-10 20:11:58] tick=26 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 20:12:58] tick=27 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 20:13:59] tick=28 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 20:15:00] tick=29 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 20:18:30] tick=30 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-10 20:19:34] tick=31 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 20:20:37] tick=32 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 20:21:38] tick=33 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 20:22:42] tick=34 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 20:23:51] tick=35 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-10 20:24:59] tick=36 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 20:26:02] tick=37 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 20:27:06] tick=38 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 20:28:09] tick=39 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 20:29:19] tick=40 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-10 20:30:21] tick=41 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 20:31:21] tick=42 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 20:32:22] tick=43 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 20:33:26] tick=44 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 20:34:36] tick=45 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-10 20:35:36] tick=46 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 20:36:37] tick=47 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 20:37:38] tick=48 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 20:39:47] tick=49 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 20:40:51] tick=50 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-10 20:41:55] tick=51 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 20:42:54] Factory daemon started pid=45264 interval=60s
+[2026-03-10 20:45:10] Factory daemon started pid=48248 interval=60s
+[2026-03-10 20:47:24] tick=1 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 20:50:42] tick=2 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 20:51:43] tick=3 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 20:52:45] tick=4 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 20:53:49] tick=5 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-10 20:54:51] tick=6 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 20:55:52] tick=7 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 20:56:53] tick=8 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 20:57:54] tick=9 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 20:59:06] tick=10 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-10 21:00:11] tick=11 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 21:01:17] tick=12 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 21:02:22] tick=13 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 21:03:26] tick=14 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 21:04:38] tick=15 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-10 21:05:44] tick=16 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 21:06:50] tick=17 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 21:07:54] tick=18 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 21:09:00] tick=19 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 21:10:05] tick=20 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-10 21:11:06] tick=21 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 21:12:07] tick=22 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 21:13:08] tick=23 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 21:14:09] tick=24 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 21:15:14] tick=25 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-10 21:16:15] tick=26 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 21:17:17] tick=27 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 21:18:18] tick=28 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 21:19:23] tick=29 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 21:20:34] tick=30 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-10 21:21:35] tick=31 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 21:22:41] tick=32 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 21:23:47] tick=33 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 21:24:52] tick=34 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 21:26:04] tick=35 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-10 21:27:10] tick=36 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 21:28:16] tick=37 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 21:29:21] tick=38 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-10 21:30:30] tick=39 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 21:31:41] tick=40 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-10 21:32:47] tick=41 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 21:33:57] tick=42 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 21:35:02] tick=43 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 21:36:08] tick=44 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 21:37:12] tick=45 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-10 21:38:18] tick=46 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 21:39:24] tick=47 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 21:40:33] tick=48 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 21:41:39] tick=49 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 21:42:46] tick=50 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-10 21:43:49] tick=51 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 21:44:50] tick=52 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 21:45:51] tick=53 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 21:46:54] tick=54 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 21:47:58] tick=55 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-10 21:48:59] tick=56 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 21:50:02] tick=57 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 21:51:03] tick=58 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 21:52:04] tick=59 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 21:53:09] tick=60 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-10 21:54:10] tick=61 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 21:55:12] tick=62 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 21:56:14] tick=63 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 21:57:16] tick=64 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 21:58:19] tick=65 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-10 21:59:22] tick=66 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 22:00:23] tick=67 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:01:25] tick=68 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:02:27] tick=69 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 22:03:32] tick=70 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:04:37] tick=71 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:05:43] tick=72 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 22:06:49] tick=73 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:07:50] tick=74 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:09:02] tick=75 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-10 22:10:07] tick=76 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:11:13] tick=77 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:12:22] tick=78 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 22:13:24] tick=79 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:14:28] tick=80 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:15:31] tick=81 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 22:16:37] tick=82 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:17:43] tick=83 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:18:54] tick=84 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 22:20:05] tick=85 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:21:06] tick=86 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:22:09] tick=87 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 22:23:11] tick=88 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:24:12] tick=89 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:25:17] tick=90 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-10 22:26:18] tick=91 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:27:20] tick=92 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:28:03] Factory daemon started pid=19248 interval=60s
+[2026-03-10 22:28:04] tick=1 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:31:03] Factory daemon started pid=40392 interval=2s
+[2026-03-10 22:31:05] tick=1 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:31:08] tick=2 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:31:13] tick=3 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 22:31:17] tick=4 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:31:22] tick=5 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:31:28] tick=6 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 22:31:31] tick=7 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:31:34] tick=8 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:31:40] tick=9 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 22:31:45] tick=10 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:31:49] tick=11 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:31:54] tick=12 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 22:31:57] tick=13 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:32:01] tick=14 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:34:49] Factory daemon started pid=11052 interval=60s
+[2026-03-10 22:34:50] tick=1 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:39:26] Factory daemon started pid=19064 interval=2s
+[2026-03-10 22:39:27] tick=1 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:39:31] tick=2 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:40:33] Factory daemon started pid=46028 interval=2s
+[2026-03-10 22:40:35] tick=1 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:41:19] Factory daemon started pid=33052 interval=2s
+[2026-03-10 22:41:21] tick=1 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:41:24] tick=2 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:41:29] tick=3 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 22:41:33] tick=4 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:43:13] Factory daemon started pid=21352 interval=60s
+[2026-03-10 22:43:15] tick=1 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:44:23] tick=2 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:45:36] tick=3 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 22:46:43] tick=4 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:47:47] tick=5 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:48:58] tick=6 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 22:50:06] tick=7 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:51:13] tick=8 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:52:25] tick=9 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 22:53:37] tick=10 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:54:45] tick=11 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:55:57] tick=12 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 22:57:04] tick=13 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:58:12] tick=14 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 22:59:28] tick=15 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-10 23:00:35] tick=16 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 23:01:43] tick=17 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 23:02:56] tick=18 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 23:04:04] tick=19 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 23:05:16] tick=20 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-10 23:06:26] tick=21 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 23:07:32] tick=22 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 23:08:40] tick=23 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 23:09:52] tick=24 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 23:11:04] tick=25 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-10 23:12:11] tick=26 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 23:13:23] tick=27 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 23:14:29] tick=28 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 23:15:37] tick=29 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 23:16:42] tick=30 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-10 23:17:43] tick=31 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 23:18:45] tick=32 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 23:19:57] tick=33 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 23:21:05] tick=34 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 23:22:17] tick=35 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-10 23:23:30] tick=36 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 23:24:37] tick=37 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 23:25:45] tick=38 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 23:26:58] tick=39 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 23:28:10] tick=40 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-10 23:29:12] tick=41 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 23:30:15] tick=42 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 23:31:16] tick=43 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 23:32:17] tick=44 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 23:33:31] tick=45 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-10 23:34:39] tick=46 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 23:35:47] tick=47 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 23:36:54] tick=48 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 23:37:57] tick=49 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 23:39:02] tick=50 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-10 23:40:05] tick=51 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 23:41:06] tick=52 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 23:42:08] tick=53 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 23:43:20] tick=54 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 23:44:24] tick=55 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-10 23:45:32] tick=56 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 23:46:43] tick=57 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 23:47:45] tick=58 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 23:48:52] tick=59 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 23:50:04] tick=60 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-10 23:51:11] tick=61 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 23:52:19] tick=62 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 23:53:31] tick=63 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 23:54:38] tick=64 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 23:55:42] tick=65 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-10 23:56:55] tick=66 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-10 23:58:02] tick=67 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-10 23:59:03] tick=68 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 00:00:13] tick=69 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 00:01:25] tick=70 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 00:02:33] tick=71 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 00:03:45] tick=72 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 00:04:53] tick=73 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 00:05:54] tick=74 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 00:07:09] tick=75 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 00:08:17] tick=76 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 00:09:25] tick=77 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 00:10:28] tick=78 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 00:11:29] tick=79 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 00:12:34] tick=80 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 00:13:46] tick=81 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 00:14:54] tick=82 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 00:16:01] tick=83 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 00:17:12] tick=84 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 00:18:16] tick=85 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 00:19:24] tick=86 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 00:20:30] tick=87 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 00:21:31] tick=88 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 00:22:33] tick=89 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 00:23:38] tick=90 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 00:24:41] tick=91 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 00:25:49] tick=92 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 00:26:52] tick=93 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 00:27:54] tick=94 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 00:29:06] tick=95 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 00:30:18] tick=96 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 00:31:20] tick=97 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 00:32:28] tick=98 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 00:33:41] tick=99 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 00:34:53] tick=100 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 00:36:01] tick=101 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 00:37:14] tick=102 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 00:38:14] error tick=103: SyntaxError: unterminated string literal (detected at line 36) (<unknown>, line 36)
+[2026-03-11 00:39:14] error tick=104: SyntaxError: unterminated string literal (detected at line 36) (<unknown>, line 36)
+[2026-03-11 00:40:19] tick=105 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 00:41:21] tick=106 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 00:42:29] tick=107 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 00:43:42] tick=108 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 00:44:50] tick=109 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 00:45:54] tick=110 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 00:46:57] tick=111 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 00:48:05] tick=112 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 00:49:13] tick=113 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 00:50:16] tick=114 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 00:51:21] tick=115 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 00:52:22] tick=116 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 00:53:25] tick=117 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 00:54:33] tick=118 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 00:55:34] tick=119 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 00:56:40] tick=120 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 00:57:41] tick=121 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 00:58:43] tick=122 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 00:59:46] tick=123 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:00:48] tick=124 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:01:52] tick=125 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:02:55] tick=126 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:03:56] tick=127 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:05:04] tick=128 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:06:17] tick=129 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:07:29] tick=130 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:08:37] tick=131 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:09:45] tick=132 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:10:52] tick=133 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:12:00] tick=134 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:13:05] tick=135 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:14:13] tick=136 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:15:15] tick=137 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:16:26] tick=138 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:17:34] tick=139 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:18:45] tick=140 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:19:58] tick=141 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:21:07] tick=142 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:22:14] tick=143 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:23:27] tick=144 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:24:38] tick=145 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:25:46] tick=146 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:26:50] tick=147 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:27:32] Factory daemon started pid=42316 interval=60s
+[2026-03-11 01:27:34] tick=1 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:28:55] Factory daemon started pid=45408 interval=60s
+[2026-03-11 01:28:56] tick=1 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:35:16] Factory daemon started pid=30444 interval=2s
+[2026-03-11 01:35:19] tick=1 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:35:29] tick=2 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:35:43] tick=3 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:35:46] tick=4 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:35:52] tick=5 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:36:05] tick=6 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:36:15] tick=7 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:36:25] tick=8 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:36:27] Factory daemon started pid=30904 interval=60s
+[2026-03-11 01:36:40] tick=9 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:36:54] tick=10 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:37:01] tick=11 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:37:12] tick=12 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:37:21] tick=13 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:37:29] tick=14 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:37:42] tick=15 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:37:52] tick=16 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:38:02] tick=17 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:38:17] tick=18 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:38:27] tick=19 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:38:41] tick=20 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:38:56] tick=21 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:39:05] tick=22 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:39:09] tick=23 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:39:14] tick=24 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:39:20] tick=25 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:39:24] tick=26 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:39:29] tick=27 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:39:33] tick=28 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:39:36] tick=29 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:39:43] tick=30 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:39:47] tick=31 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:39:51] tick=32 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:39:56] tick=33 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:40:00] tick=34 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:40:06] tick=35 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:40:11] tick=36 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:40:15] tick=37 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:40:18] tick=38 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:40:23] tick=39 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:40:30] tick=40 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:40:33] tick=41 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:40:39] tick=42 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:40:42] tick=43 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:40:46] tick=44 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:40:53] tick=45 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:40:57] tick=46 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:41:00] tick=47 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:41:05] tick=48 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:41:09] tick=49 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:41:15] tick=50 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:41:20] tick=51 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:41:24] tick=52 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:41:27] tick=53 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:41:33] tick=54 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:41:38] tick=55 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:41:42] tick=56 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:41:47] tick=57 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:41:51] tick=58 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:41:55] tick=59 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:42:01] tick=60 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:42:05] tick=61 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:42:09] tick=62 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:42:14] tick=63 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:42:17] tick=64 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:42:23] tick=65 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:42:28] tick=66 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:42:32] tick=67 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:42:36] tick=68 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:42:41] tick=69 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:42:47] tick=70 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:42:50] tick=71 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:42:56] tick=72 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:42:59] tick=73 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:43:03] tick=74 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:43:09] tick=75 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:43:13] tick=76 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:43:17] tick=77 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:43:22] tick=78 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:43:26] tick=79 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:43:32] tick=80 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:43:37] tick=81 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:43:40] tick=82 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:43:44] tick=83 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:43:49] tick=84 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:43:55] tick=85 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:43:59] tick=86 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:44:04] tick=87 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:44:08] tick=88 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:44:12] tick=89 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:44:18] tick=90 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:44:23] tick=91 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:44:26] tick=92 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:44:32] tick=93 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:44:36] tick=94 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:44:42] tick=95 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:44:47] tick=96 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:44:51] tick=97 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:44:55] tick=98 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:45:00] tick=99 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:45:06] tick=100 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:45:10] tick=101 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:45:15] tick=102 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:45:19] tick=103 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:45:23] tick=104 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:45:30] tick=105 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:45:34] tick=106 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:45:37] tick=107 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:45:43] tick=108 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:45:46] tick=109 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:45:52] tick=110 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:45:57] tick=111 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:46:01] tick=112 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:46:05] tick=113 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:46:10] tick=114 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:46:16] tick=115 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:46:19] tick=116 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:46:25] tick=117 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:46:28] tick=118 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:46:32] tick=119 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:46:39] tick=120 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:46:43] tick=121 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:46:46] tick=122 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:46:52] tick=123 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:46:56] tick=124 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:47:02] tick=125 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:47:07] tick=126 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:47:11] tick=127 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:47:14] tick=128 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:47:19] tick=129 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:47:25] tick=130 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:47:29] tick=131 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:47:34] tick=132 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:47:38] tick=133 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:47:41] tick=134 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:47:48] tick=135 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:47:52] tick=136 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:47:55] tick=137 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:48:01] tick=138 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:48:04] tick=139 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:48:10] tick=140 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:48:15] tick=141 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:48:19] tick=142 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:48:23] tick=143 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:48:28] tick=144 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:48:33] tick=145 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:48:37] tick=146 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:48:42] error tick=147: SyntaxError: invalid syntax (<unknown>, line 158)
+[2026-03-11 01:48:44] error tick=148: SyntaxError: invalid syntax (<unknown>, line 158)
+[2026-03-11 01:48:46] error tick=149: SyntaxError: invalid syntax (<unknown>, line 158)
+[2026-03-11 01:48:49] error tick=150: SyntaxError: invalid syntax (<unknown>, line 158)
+[2026-03-11 01:48:51] error tick=151: SyntaxError: invalid syntax (<unknown>, line 158)
+[2026-03-11 01:48:53] error tick=152: SyntaxError: invalid syntax (<unknown>, line 158)
+[2026-03-11 01:48:56] error tick=153: SyntaxError: invalid syntax (<unknown>, line 158)
+[2026-03-11 01:48:58] error tick=154: SyntaxError: invalid syntax (<unknown>, line 158)
+[2026-03-11 01:49:02] error tick=155: SyntaxError: invalid syntax (<unknown>, line 158)
+[2026-03-11 01:49:04] error tick=156: SyntaxError: invalid syntax (<unknown>, line 158)
+[2026-03-11 01:49:06] error tick=157: SyntaxError: invalid syntax (<unknown>, line 158)
+[2026-03-11 01:49:09] error tick=158: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:49:11] error tick=159: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:49:15] error tick=160: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:49:17] error tick=161: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:49:19] error tick=162: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:49:21] error tick=163: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:49:24] error tick=164: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:49:26] error tick=165: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:49:28] error tick=166: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:49:30] error tick=167: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:49:32] error tick=168: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:49:35] error tick=169: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:49:39] error tick=170: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:49:41] error tick=171: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:49:43] error tick=172: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:49:45] error tick=173: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:49:47] error tick=174: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:49:51] error tick=175: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:49:54] error tick=176: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:49:56] error tick=177: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:49:58] error tick=178: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:50:00] error tick=179: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:50:02] error tick=180: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:50:05] error tick=181: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:50:07] error tick=182: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:50:09] error tick=183: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:50:11] error tick=184: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:50:15] error tick=185: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:50:17] error tick=186: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:50:20] error tick=187: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:50:22] error tick=188: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:50:24] error tick=189: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:50:28] error tick=190: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:50:30] error tick=191: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:50:32] error tick=192: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:50:35] error tick=193: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:50:37] error tick=194: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:50:39] error tick=195: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:50:41] error tick=196: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:50:44] error tick=197: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:50:46] error tick=198: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:50:48] error tick=199: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:50:52] error tick=200: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:50:54] error tick=201: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:50:56] error tick=202: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:50:59] error tick=203: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:51:01] error tick=204: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:51:05] error tick=205: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:51:07] error tick=206: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:51:09] error tick=207: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:51:11] error tick=208: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:51:14] error tick=209: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:51:16] error tick=210: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:51:18] error tick=211: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:51:20] error tick=212: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:51:23] error tick=213: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:51:25] error tick=214: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:51:29] error tick=215: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:51:31] error tick=216: SyntaxError: invalid syntax (<unknown>, line 10)
+[2026-03-11 01:51:35] tick=217 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:51:38] tick=218 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:51:44] tick=219 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:51:49] tick=220 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:51:53] tick=221 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:51:59] tick=222 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:52:02] tick=223 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:52:06] tick=224 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:52:13] tick=225 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:52:17] tick=226 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:52:20] tick=227 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:52:26] tick=228 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:52:29] tick=229 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:52:36] tick=230 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:52:41] tick=231 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:52:45] tick=232 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:52:48] tick=233 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:52:54] tick=234 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:53:00] tick=235 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:53:03] tick=236 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:53:08] tick=237 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:53:12] tick=238 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:53:16] tick=239 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:53:23] tick=240 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:53:26] tick=241 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:53:30] tick=242 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:53:36] tick=243 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:53:39] tick=244 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:53:46] tick=245 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:53:51] tick=246 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:53:55] tick=247 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:53:58] tick=248 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:54:04] tick=249 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:54:10] tick=250 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:54:14] tick=251 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:54:19] tick=252 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:54:23] tick=253 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:54:27] tick=254 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:54:34] tick=255 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 01:56:57] Factory daemon started pid=2228 interval=60s
+[2026-03-11 01:56:58] tick=1 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:58:00] tick=2 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 01:59:03] tick=3 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 02:00:05] tick=4 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 02:01:10] tick=5 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 02:02:23] tick=6 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 02:03:31] tick=7 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 02:04:33] tick=8 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 02:05:46] tick=9 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 02:07:00] tick=10 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 02:08:01] tick=11 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 02:09:15] tick=12 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 02:10:24] tick=13 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 02:11:32] tick=14 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 02:12:48] tick=15 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 02:13:50] tick=16 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 02:14:58] tick=17 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 02:16:12] tick=18 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 02:17:13] tick=19 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 02:18:27] tick=20 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 02:19:39] tick=21 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 02:20:47] tick=22 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 02:20:59] Factory daemon started pid=49812 interval=60s
+[2026-03-11 02:21:00] tick=1 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 02:22:09] tick=2 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 02:23:17] tick=3 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 02:24:26] tick=4 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 02:25:42] tick=5 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 02:26:44] error tick=6: SyntaxError: unmatched '}' (<unknown>, line 240)
+[2026-03-11 02:27:52] tick=7 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 02:29:00] tick=8 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 02:30:02] tick=9 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 02:31:18] tick=10 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 02:32:26] tick=11 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 02:33:41] tick=12 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 02:34:49] tick=13 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 02:35:58] tick=14 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 02:37:04] tick=15 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 02:38:13] tick=16 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 02:39:21] tick=17 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 02:40:25] tick=18 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 02:41:26] tick=19 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 02:42:31] tick=20 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 02:43:44] tick=21 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 02:44:54] tick=22 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 02:46:02] tick=23 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 02:47:16] tick=24 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 02:48:20] tick=25 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 02:49:22] tick=26 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 02:50:25] tick=27 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 02:51:27] tick=28 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 02:52:28] tick=29 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 02:53:33] tick=30 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 02:54:35] tick=31 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 02:55:37] tick=32 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 02:56:40] tick=33 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 02:57:41] tick=34 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 02:58:46] tick=35 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 02:59:49] tick=36 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 03:00:51] tick=37 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 03:01:52] tick=38 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 03:02:55] tick=39 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 03:04:00] tick=40 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 03:05:02] tick=41 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 03:06:05] tick=42 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 03:07:07] tick=43 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 03:08:08] tick=44 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 03:09:14] tick=45 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 03:10:15] tick=46 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 03:11:17] tick=47 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 03:12:20] tick=48 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 03:13:22] tick=49 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 03:14:26] tick=50 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 03:15:30] tick=51 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 03:16:31] tick=52 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 03:17:33] tick=53 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 03:18:37] tick=54 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 03:19:42] tick=55 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 03:20:44] tick=56 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 03:21:47] tick=57 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 03:22:48] tick=58 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 03:23:50] tick=59 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 03:24:55] tick=60 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 03:25:57] tick=61 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 03:26:59] tick=62 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 03:28:02] tick=63 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 03:29:04] tick=64 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 03:30:09] tick=65 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 03:31:12] tick=66 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 03:32:14] tick=67 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 03:33:16] tick=68 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 03:35:27] tick=69 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 03:36:32] tick=70 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 03:38:48] tick=71 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 03:41:02] tick=72 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 03:42:04] tick=73 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 03:43:06] tick=74 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 03:44:12] tick=75 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 03:45:14] tick=76 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 03:46:16] tick=77 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 03:47:20] tick=78 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 03:48:22] tick=79 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 03:49:26] tick=80 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 03:50:30] tick=81 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 03:53:54] tick=82 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 03:54:56] tick=83 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 03:56:00] tick=84 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 03:57:05] tick=85 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 03:58:07] tick=86 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 03:59:11] tick=87 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 04:00:14] tick=88 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:01:16] tick=89 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:02:21] tick=90 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 04:03:23] tick=91 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:04:25] tick=92 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:05:29] tick=93 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 04:06:31] tick=94 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:07:36] tick=95 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:08:40] tick=96 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 04:09:42] tick=97 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:10:43] tick=98 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:11:47] tick=99 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 04:12:52] tick=100 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:13:54] tick=101 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:14:58] tick=102 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 04:16:00] tick=103 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:17:02] tick=104 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:18:07] tick=105 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 04:19:10] tick=106 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:20:11] tick=107 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:21:15] tick=108 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 04:22:17] tick=109 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:23:22] tick=110 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:24:26] tick=111 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 04:25:28] tick=112 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:26:30] tick=113 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:27:34] tick=114 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 04:28:39] tick=115 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:29:40] tick=116 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:30:44] tick=117 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 04:31:46] tick=118 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:32:48] tick=119 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:33:54] tick=120 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 04:34:56] tick=121 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:35:58] tick=122 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:37:01] tick=123 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 04:38:03] tick=124 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:39:08] tick=125 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:40:12] tick=126 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 04:41:13] tick=127 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:42:15] tick=128 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:43:19] tick=129 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 04:44:24] tick=130 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:45:26] tick=131 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:46:30] tick=132 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 04:47:32] tick=133 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:48:34] tick=134 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:49:40] tick=135 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 04:50:42] tick=136 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:51:44] tick=137 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:52:48] tick=138 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 04:53:50] tick=139 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:54:54] tick=140 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:55:58] tick=141 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 04:57:00] tick=142 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:58:02] tick=143 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 04:59:06] tick=144 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 05:00:11] tick=145 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:01:13] tick=146 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:02:17] tick=147 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 05:03:19] tick=148 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:04:21] tick=149 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:05:27] tick=150 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 05:06:28] tick=151 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:07:30] tick=152 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:08:34] tick=153 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 05:09:36] tick=154 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:10:41] tick=155 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:11:45] tick=156 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 05:12:47] tick=157 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:13:49] tick=158 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:14:53] tick=159 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 05:15:57] tick=160 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:16:59] tick=161 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:18:03] tick=162 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 05:19:05] tick=163 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:20:07] tick=164 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:21:13] tick=165 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 05:22:15] tick=166 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:23:17] tick=167 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:24:20] tick=168 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 05:25:22] tick=169 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:26:27] tick=170 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:27:31] tick=171 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 05:28:33] tick=172 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:29:35] tick=173 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:30:39] tick=174 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 05:31:44] tick=175 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:32:46] tick=176 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:33:50] tick=177 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 05:34:52] tick=178 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:35:54] tick=179 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:37:00] tick=180 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 05:38:02] tick=181 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:39:04] tick=182 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:40:08] tick=183 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 05:41:10] tick=184 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:42:14] tick=185 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:43:18] tick=186 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 05:44:20] tick=187 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:45:22] tick=188 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:46:25] tick=189 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 05:47:30] tick=190 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:48:32] tick=191 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:49:36] tick=192 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 05:50:37] tick=193 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:51:39] tick=194 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:52:45] tick=195 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 05:53:47] tick=196 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:54:49] tick=197 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:55:53] tick=198 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 05:56:55] tick=199 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:58:00] tick=200 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 05:59:04] tick=201 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 06:00:05] tick=202 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 06:01:07] tick=203 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 06:02:11] tick=204 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 06:03:16] tick=205 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 06:04:18] tick=206 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 06:05:21] tick=207 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 06:06:23] tick=208 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 06:07:25] tick=209 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 06:08:30] tick=210 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 06:09:32] tick=211 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 06:10:34] tick=212 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 06:11:38] tick=213 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 06:12:40] tick=214 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 06:13:44] tick=215 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 06:14:48] tick=216 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 06:15:50] tick=217 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 06:16:52] tick=218 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 06:17:56] tick=219 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 06:19:00] tick=220 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 06:20:03] tick=221 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 06:21:06] tick=222 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 06:22:08] tick=223 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 06:23:10] tick=224 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 06:24:16] tick=225 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 06:25:18] tick=226 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 06:26:19] tick=227 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 06:27:23] tick=228 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 06:28:25] tick=229 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 06:29:29] tick=230 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 06:30:33] tick=231 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 06:31:35] tick=232 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 06:32:37] tick=233 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 07:14:32] tick=234 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 07:15:36] tick=235 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 07:16:38] tick=236 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 07:17:42] tick=237 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 07:18:44] tick=238 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 07:19:46] tick=239 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 07:20:52] tick=240 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 07:21:53] tick=241 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 07:22:55] tick=242 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 07:23:59] tick=243 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 07:25:01] tick=244 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 07:26:14] tick=245 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 07:27:27] tick=246 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 07:28:35] tick=247 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 07:29:44] tick=248 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 07:30:57] tick=249 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 07:32:10] tick=250 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 07:33:19] tick=251 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 07:34:32] tick=252 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 07:35:41] tick=253 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 07:36:49] tick=254 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 07:38:04] tick=255 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 07:39:13] tick=256 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 07:40:20] tick=257 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 07:41:30] tick=258 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 07:42:37] tick=259 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 07:43:48] tick=260 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 07:44:57] tick=261 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 07:45:59] tick=262 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 07:47:01] tick=263 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 07:48:04] tick=264 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 07:49:16] tick=265 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 07:50:24] tick=266 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 07:51:36] tick=267 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 07:52:43] tick=268 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 07:53:52] tick=269 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 07:55:07] tick=270 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 07:56:15] tick=271 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 07:57:23] tick=272 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 07:58:35] tick=273 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 07:59:43] tick=274 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 08:00:57] tick=275 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 08:02:09] tick=276 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 08:03:17] tick=277 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 08:53:47] tick=278 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 08:54:50] tick=279 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 08:55:54] tick=280 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 08:56:55] tick=281 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 08:57:58] tick=282 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 08:59:00] tick=283 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 09:00:02] tick=284 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 09:01:07] tick=285 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 09:02:09] tick=286 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 09:03:10] tick=287 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 09:04:13] tick=288 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 09:05:15] tick=289 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 09:06:19] tick=290 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 09:07:22] tick=291 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 09:08:24] tick=292 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 09:59:37] tick=293 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 10:00:39] tick=294 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 10:01:44] tick=295 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 10:02:46] tick=296 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:03:48] tick=297 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:04:50] tick=298 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:05:52] tick=299 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:06:58] tick=300 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 10:07:59] tick=301 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:09:01] tick=302 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:10:03] tick=303 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:11:05] tick=304 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:12:11] tick=305 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 10:13:13] tick=306 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:14:14] tick=307 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:15:16] tick=308 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:16:18] tick=309 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:17:23] tick=310 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 10:18:25] tick=311 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:19:27] tick=312 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:20:28] tick=313 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:21:30] tick=314 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:22:36] tick=315 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 10:23:37] tick=316 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:24:39] tick=317 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:25:41] tick=318 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:26:42] tick=319 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:27:48] tick=320 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 10:28:50] tick=321 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:29:51] tick=322 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:30:53] tick=323 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:31:55] tick=324 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:33:00] tick=325 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 10:34:02] tick=326 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:35:04] tick=327 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:36:05] tick=328 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:37:07] tick=329 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:38:12] tick=330 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 10:39:14] tick=331 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:40:16] tick=332 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:41:18] tick=333 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:42:19] tick=334 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:43:25] tick=335 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 10:44:27] tick=336 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:45:29] tick=337 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:46:31] tick=338 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:47:32] tick=339 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:48:38] tick=340 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 10:49:39] tick=341 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:50:41] tick=342 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:51:43] tick=343 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:52:44] tick=344 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:53:50] tick=345 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 10:54:52] tick=346 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:55:53] tick=347 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:56:55] tick=348 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:57:57] tick=349 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 10:59:02] tick=350 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 11:00:04] tick=351 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 11:01:06] tick=352 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 11:02:07] tick=353 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 11:03:09] tick=354 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 11:04:15] tick=355 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 11:05:16] tick=356 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 11:32:13] tick=357 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 11:33:15] tick=358 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 11:34:17] tick=359 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 11:35:22] tick=360 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 11:36:24] tick=361 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 11:37:25] tick=362 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 11:38:27] tick=363 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 11:39:29] tick=364 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 11:40:34] tick=365 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 11:41:36] tick=366 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 11:42:37] tick=367 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 11:43:39] tick=368 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 11:44:41] tick=369 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 11:45:46] tick=370 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 11:46:48] tick=371 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 11:47:50] tick=372 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 11:48:51] tick=373 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 11:49:53] tick=374 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 11:50:59] tick=375 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 11:52:00] tick=376 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 11:53:02] tick=377 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 11:54:04] tick=378 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 11:55:06] tick=379 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 11:56:11] tick=380 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 11:57:13] tick=381 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 11:58:14] tick=382 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 11:59:16] tick=383 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:00:18] tick=384 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:01:36] Factory daemon started pid=24336 interval=60s
+[2026-03-11 12:01:38] tick=1 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:02:47] tick=2 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:03:55] tick=3 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:05:06] tick=4 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:06:21] tick=5 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 12:07:29] tick=6 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:08:37] tick=7 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:09:50] tick=8 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:10:58] tick=9 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:12:12] tick=10 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 12:13:21] tick=11 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:14:31] tick=12 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:15:40] tick=13 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:16:48] tick=14 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:18:04] tick=15 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 12:19:15] tick=16 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:20:23] tick=17 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:21:32] tick=18 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:22:42] tick=19 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:23:58] tick=20 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 12:25:07] tick=21 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:26:15] tick=22 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:27:24] tick=23 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:28:35] tick=24 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:29:51] tick=25 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 12:30:59] tick=26 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:32:08] tick=27 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:33:19] tick=28 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:34:28] tick=29 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:35:45] tick=30 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 12:36:54] tick=31 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:38:05] tick=32 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:39:12] tick=33 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:40:21] tick=34 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:41:37] tick=35 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 12:43:02] tick=36 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:44:12] tick=37 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:45:22] tick=38 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:46:33] tick=39 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:47:53] tick=40 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 12:49:03] tick=41 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:50:13] tick=42 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:51:23] tick=43 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:52:36] tick=44 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:53:53] tick=45 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 12:55:03] tick=46 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:56:13] tick=47 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:57:25] tick=48 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:58:35] tick=49 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 12:59:52] tick=50 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 13:01:02] tick=51 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 13:02:14] tick=52 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 13:03:25] tick=53 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 13:04:36] tick=54 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 13:05:54] tick=55 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 13:07:06] tick=56 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 13:08:16] tick=57 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 13:09:25] tick=58 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 13:10:35] tick=59 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 13:11:55] tick=60 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 13:13:05] tick=61 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 13:14:14] tick=62 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 13:15:24] tick=63 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 13:16:36] tick=64 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 13:17:54] tick=65 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 13:19:03] tick=66 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 13:20:13] tick=67 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 13:21:24] tick=68 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 13:22:34] tick=69 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 13:23:52] tick=70 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 13:25:01] tick=71 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 13:26:14] tick=72 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 13:27:25] tick=73 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 13:28:36] tick=74 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 13:29:55] tick=75 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 13:31:10] tick=76 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 13:32:19] tick=77 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 13:33:28] tick=78 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 13:34:38] tick=79 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 13:35:58] tick=80 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 13:37:08] tick=81 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 13:38:17] tick=82 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 13:39:27] tick=83 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 13:40:38] tick=84 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 13:41:54] tick=85 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 13:43:03] tick=86 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 13:44:11] tick=87 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 13:45:24] tick=88 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 13:46:33] tick=89 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 14:29:49] tick=90 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 14:30:51] tick=91 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 14:32:02] tick=92 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 14:33:10] tick=93 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 14:34:19] tick=94 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 14:35:34] tick=95 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 14:36:45] tick=96 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 14:37:53] tick=97 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 14:39:02] tick=98 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 14:40:10] tick=99 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 14:41:27] tick=100 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 14:42:36] tick=101 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 14:43:45] tick=102 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 15:29:40] tick=103 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 15:30:43] tick=104 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 15:32:01] tick=105 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 15:33:10] tick=106 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 15:34:19] tick=107 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 15:35:30] tick=108 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 15:36:39] tick=109 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 15:37:55] tick=110 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 15:39:04] tick=111 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 15:40:16] tick=112 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 15:41:25] tick=113 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 15:42:34] tick=114 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 15:43:50] tick=115 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 15:45:01] tick=116 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 16:40:36] tick=117 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 16:41:44] tick=118 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 16:42:54] tick=119 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 16:44:12] tick=120 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 16:45:20] tick=121 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 16:46:30] tick=122 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 16:47:38] tick=123 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 16:48:49] tick=124 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 16:50:04] tick=125 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 16:51:14] tick=126 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 16:52:23] tick=127 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 16:53:43] tick=128 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 16:54:53] tick=129 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 16:56:09] tick=130 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 16:57:19] tick=131 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 16:58:30] tick=132 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 16:59:39] tick=133 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 17:00:48] tick=134 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 17:02:04] tick=135 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 17:03:15] tick=136 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 17:04:24] tick=137 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 17:18:25] tick=138 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 17:19:35] tick=139 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 17:20:54] tick=140 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 17:22:03] tick=141 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 17:23:12] tick=142 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 17:24:20] tick=143 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 17:25:31] tick=144 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 17:26:48] tick=145 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 17:27:58] tick=146 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 17:29:08] tick=147 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 17:30:20] tick=148 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 17:31:29] tick=149 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 17:32:47] tick=150 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 17:33:56] tick=151 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 17:35:08] tick=152 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 17:36:18] tick=153 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 17:37:28] tick=154 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 17:38:45] tick=155 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 17:39:56] tick=156 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 17:41:06] tick=157 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 17:42:15] tick=158 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 17:43:24] tick=159 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 17:44:43] tick=160 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 17:45:52] tick=161 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 17:47:01] tick=162 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 17:48:10] tick=163 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 17:49:20] tick=164 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 17:50:36] tick=165 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 17:51:45] tick=166 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 17:52:54] tick=167 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 17:57:35] tick=168 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 18:00:10] tick=169 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 18:01:27] tick=170 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 18:02:37] tick=171 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 18:03:49] tick=172 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 18:04:58] tick=173 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 18:06:08] tick=174 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 18:07:24] tick=175 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 18:08:36] tick=176 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 18:09:45] tick=177 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 18:10:54] tick=178 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 18:12:05] tick=179 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 18:13:22] tick=180 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 18:14:31] tick=181 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 18:15:40] tick=182 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 18:16:49] tick=183 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 18:18:01] tick=184 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 18:19:17] tick=185 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 18:20:27] tick=186 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 18:21:36] tick=187 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 18:22:47] tick=188 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 18:23:57] tick=189 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 18:25:14] tick=190 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 18:26:25] tick=191 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 18:27:37] tick=192 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 18:28:46] tick=193 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 18:29:56] tick=194 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 18:31:11] tick=195 meta=True evolution=True meta_every=5 evolution_every=3
+[2026-03-11 18:32:21] tick=196 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 18:33:31] tick=197 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 18:34:48] tick=198 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 18:35:58] tick=199 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 18:37:15] tick=200 meta=True evolution=False meta_every=5 evolution_every=3
+[2026-03-11 18:38:30] tick=201 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 18:39:39] tick=202 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 18:40:49] tick=203 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 18:42:04] tick=204 meta=False evolution=True meta_every=5 evolution_every=3
+[2026-03-11 18:43:20] tick=205 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 18:44:29] tick=206 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 18:45:38] tick=207 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 18:46:19] Factory daemon started pid=13244 interval=60s
+[2026-03-11 18:46:21] tick=1 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 18:47:23] tick=2 meta=False evolution=False meta_every=5 evolution_every=3
+[2026-03-11 18:48:25] tick=3 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 18:49:28] tick=4 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 18:50:33] tick=5 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 18:50:34] Factory daemon started pid=25436 interval=60s
+[2026-03-11 18:51:35] tick=6 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 18:52:38] tick=7 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 18:55:59] tick=1 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 19:02:25] tick=2 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 19:08:49] tick=3 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 19:15:15] tick=4 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 19:21:43] tick=5 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 19:28:10] tick=6 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 19:34:45] tick=7 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 19:41:03] tick=8 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 19:47:42] tick=9 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 19:51:07] tick=10 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 19:57:12] tick=11 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 20:03:53] tick=12 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 20:10:31] tick=13 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 20:16:55] tick=14 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 20:23:41] tick=15 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 20:30:21] tick=16 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 20:36:59] tick=17 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 20:43:35] tick=18 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 20:50:13] tick=19 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 20:57:01] tick=20 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 21:03:20] tick=21 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 21:09:58] tick=22 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 21:16:35] tick=23 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 21:23:16] tick=24 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 21:30:01] tick=25 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 21:58:47] tick=26 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 22:05:13] tick=27 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 22:11:39] tick=28 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 22:18:04] tick=29 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 22:24:32] tick=30 meta=True evolution=True meta_every=5 evolution_every=5
+[2026-03-11 22:30:56] error tick=31: SyntaxError: invalid syntax (<unknown>, line 28)
+[2026-03-11 22:31:57] error tick=32: SyntaxError: invalid syntax (<unknown>, line 28)
+[2026-03-11 22:38:22] tick=33 meta=False evolution=False meta_every=5 evolution_every=5
+[2026-03-11 22:40:25] Factory daemon started pid=5868 interval=60s
+[2026-03-11 22:40:31] tick=1 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=1
+[2026-03-11 22:41:36] tick=2 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=2
+[2026-03-11 22:42:41] tick=3 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=True ai_testing_failures=3
+[2026-03-11 22:44:40] tick=4 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=0
+[2026-03-11 22:45:53] tick=5 meta=True evolution=True meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=0
+[2026-03-11 22:47:00] tick=6 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=0
+[2026-03-11 22:48:05] tick=7 meta=False evolution=False meta_every=5 evolution_every=3 ai_testing_alert=False ai_testing_failures=0
+[2026-03-11 22:49:12] tick=8 meta=False evolution=False meta_every=5 evolution_every=3 ai_testing_alert=False ai_testing_failures=0
+[2026-03-11 22:50:21] tick=9 meta=False evolution=True meta_every=5 evolution_every=3 ai_testing_alert=False ai_testing_failures=0
+[2026-03-11 22:52:16] tick=10 meta=True evolution=False meta_every=5 evolution_every=3 ai_testing_alert=False ai_testing_failures=1
+[2026-03-11 22:53:22] tick=11 meta=False evolution=False meta_every=5 evolution_every=3 ai_testing_alert=False ai_testing_failures=2
+[2026-03-11 22:55:16] tick=12 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=0
+[2026-03-11 22:56:22] tick=13 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=0
+[2026-03-11 22:57:28] tick=14 meta=False evolution=False meta_every=5 evolution_every=3 ai_testing_alert=False ai_testing_failures=0
+[2026-03-11 22:58:38] tick=15 meta=True evolution=True meta_every=5 evolution_every=3 ai_testing_alert=False ai_testing_failures=0
+[2026-03-11 22:59:45] tick=16 meta=False evolution=False meta_every=5 evolution_every=3 ai_testing_alert=False ai_testing_failures=0
+[2026-03-11 23:00:51] tick=17 meta=False evolution=False meta_every=5 evolution_every=3 ai_testing_alert=False ai_testing_failures=0
+[2026-03-11 23:02:01] tick=18 meta=False evolution=True meta_every=5 evolution_every=3 ai_testing_alert=False ai_testing_failures=0
+[2026-03-11 23:03:08] tick=19 meta=False evolution=False meta_every=5 evolution_every=3 ai_testing_alert=False ai_testing_failures=0
+[2026-03-11 23:05:09] tick=20 meta=True evolution=True meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=1
+[2026-03-11 23:06:18] tick=21 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=2
+[2026-03-11 23:07:21] tick=22 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=True ai_testing_failures=3
+[2026-03-11 23:08:25] tick=23 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=True ai_testing_failures=4
+[2026-03-11 23:10:17] tick=24 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=0
+[2026-03-11 23:11:27] tick=25 meta=True evolution=True meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=0
+[2026-03-11 23:12:31] tick=26 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=0
+[2026-03-11 23:13:34] tick=27 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=0
+[2026-03-11 23:14:38] tick=28 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=0
+[2026-03-11 23:15:42] tick=29 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=0
+[2026-03-11 23:17:38] tick=30 meta=True evolution=True meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=1
+[2026-03-11 23:18:42] tick=31 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=2
+[2026-03-11 23:19:45] error tick=32: SyntaxError: invalid syntax (<unknown>, line 338)
+[2026-03-11 23:21:04] tick=33 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=True ai_testing_failures=3
+[2026-03-11 23:22:25] tick=34 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=True ai_testing_failures=4
+[2026-03-11 23:24:01] tick=35 meta=True evolution=True meta_every=5 evolution_every=5 ai_testing_alert=True ai_testing_failures=5
+[2026-03-11 23:26:10] tick=36 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=0
+[2026-03-11 23:27:14] tick=37 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=0
+[2026-03-11 23:28:18] tick=38 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=0
+[2026-03-11 23:29:22] tick=39 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=0
+[2026-03-11 23:31:44] tick=40 meta=True evolution=True meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=1
+[2026-03-11 23:32:48] tick=41 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=2
+[2026-03-11 23:33:52] tick=42 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=True ai_testing_failures=3
+[2026-03-11 23:35:00] tick=43 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=True ai_testing_failures=4
+[2026-03-11 23:37:04] tick=44 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=0
+[2026-03-11 23:38:24] tick=45 meta=True evolution=True meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=1
+[2026-03-11 23:39:28] tick=46 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=2
+[2026-03-11 23:40:32] tick=47 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=True ai_testing_failures=3
+[2026-03-11 23:42:27] tick=48 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=True ai_testing_failures=4
+[2026-03-11 23:44:32] tick=49 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=0
+[2026-03-11 23:46:34] tick=50 meta=True evolution=True meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=1
+[2026-03-11 23:47:41] tick=51 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=2
+[2026-03-11 23:48:42] error tick=52: SyntaxError: unterminated string literal (detected at line 456) (<unknown>, line 456)
+[2026-03-11 23:49:49] tick=53 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=0
+[2026-03-11 23:51:04] tick=54 meta=False evolution=True meta_every=5 evolution_every=3 ai_testing_alert=False ai_testing_failures=0
+[2026-03-11 23:52:26] tick=55 meta=True evolution=True meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=0
+[2026-03-11 23:53:34] tick=56 meta=False evolution=False meta_every=5 evolution_every=3 ai_testing_alert=False ai_testing_failures=0
+[2026-03-11 23:54:42] tick=57 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=0
+[2026-03-11 23:55:48] tick=58 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=0
+[2026-03-11 23:56:55] tick=59 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=0
+[2026-03-11 23:57:56] error tick=60: SyntaxError: unterminated string literal (detected at line 511) (<unknown>, line 511)
+[2026-03-11 23:59:03] tick=61 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=0
+[2026-03-12 00:00:14] tick=62 meta=False evolution=False meta_every=5 evolution_every=3 ai_testing_alert=False ai_testing_failures=0
+[2026-03-12 00:01:18] tick=63 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=0
+[2026-03-12 00:02:20] error tick=64: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 00:03:27] error tick=65: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 00:04:27] error tick=66: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 00:05:28] error tick=67: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 00:06:29] error tick=68: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 00:07:30] error tick=69: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 00:09:23] error tick=70: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 00:10:24] error tick=71: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 00:11:25] error tick=72: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 00:12:25] error tick=73: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 00:13:26] error tick=74: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 00:14:33] error tick=75: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 00:15:34] error tick=76: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 00:16:34] error tick=77: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 00:17:35] error tick=78: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 00:18:35] error tick=79: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 00:19:39] error tick=80: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 00:20:42] error tick=81: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 00:21:44] error tick=82: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 00:22:46] error tick=83: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 00:23:50] error tick=84: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 00:24:59] error tick=85: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 00:26:02] error tick=86: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 00:27:04] error tick=87: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 00:28:08] error tick=88: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 00:29:10] error tick=89: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 00:30:19] error tick=90: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 00:31:21] error tick=91: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 00:32:25] error tick=92: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 00:33:28] error tick=93: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 09:30:05] error tick=94: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 09:31:13] error tick=95: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 09:32:17] error tick=96: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 09:33:22] error tick=97: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 09:34:27] error tick=98: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 09:35:32] error tick=99: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 09:36:36] error tick=100: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 09:37:41] error tick=101: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 09:38:46] error tick=102: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 09:39:51] error tick=103: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 09:40:55] error tick=104: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 09:42:01] error tick=105: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 09:43:06] error tick=106: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 09:44:11] error tick=107: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 10:44:44] error tick=108: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 10:45:45] error tick=109: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 10:46:50] error tick=110: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 10:47:55] error tick=111: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 10:48:59] error tick=112: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 10:50:04] error tick=113: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 10:51:09] error tick=114: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 10:52:14] error tick=115: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 10:53:18] error tick=116: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 10:54:23] error tick=117: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 10:55:28] error tick=118: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 10:56:33] error tick=119: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 10:57:37] error tick=120: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 10:58:42] error tick=121: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 10:59:47] error tick=122: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 12:00:19] error tick=123: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 12:01:23] error tick=124: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 12:02:28] error tick=125: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 12:03:33] error tick=126: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 12:04:38] error tick=127: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 12:05:42] error tick=128: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 12:06:47] error tick=129: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 12:07:52] error tick=130: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 12:08:56] error tick=131: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 12:10:00] error tick=132: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 12:11:05] error tick=133: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 12:12:10] error tick=134: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 12:13:15] error tick=135: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 12:14:19] error tick=136: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 12:59:49] error tick=137: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 13:00:50] error tick=138: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 13:01:55] error tick=139: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 13:02:59] error tick=140: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 13:04:04] error tick=141: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 13:05:09] error tick=142: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 13:06:14] error tick=143: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 13:07:18] error tick=144: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 13:08:23] error tick=145: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 13:09:28] error tick=146: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 13:10:33] error tick=147: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 13:11:37] error tick=148: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 13:12:42] error tick=149: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 13:13:47] error tick=150: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 13:14:52] error tick=151: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 14:15:24] error tick=152: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 14:16:28] error tick=153: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 14:17:33] error tick=154: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 14:18:38] error tick=155: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 14:19:42] error tick=156: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 14:20:47] error tick=157: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 14:21:52] error tick=158: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 14:22:57] error tick=159: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 14:24:01] error tick=160: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 14:25:06] error tick=161: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 14:26:11] error tick=162: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 14:27:15] error tick=163: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 14:28:19] error tick=164: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 14:29:24] error tick=165: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 14:51:02] error tick=166: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 14:52:04] error tick=167: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 14:53:05] error tick=168: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 14:54:06] error tick=169: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 14:55:07] error tick=170: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 14:56:07] error tick=171: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 14:57:09] error tick=172: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 14:58:10] error tick=173: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 14:59:10] error tick=174: SyntaxError: unterminated string literal (detected at line 530) (<unknown>, line 530)
+[2026-03-12 15:01:36] tick=175 meta=True evolution=True meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=1
+[2026-03-12 15:03:33] tick=176 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=False ai_testing_failures=2
+[2026-03-12 15:04:48] tick=177 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=True ai_testing_failures=3
+[2026-03-12 15:05:56] tick=178 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=True ai_testing_failures=4
+[2026-03-12 15:07:04] tick=179 meta=False evolution=False meta_every=5 evolution_every=5 ai_testing_alert=True ai_testing_failures=5

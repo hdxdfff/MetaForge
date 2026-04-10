@@ -1,0 +1,22 @@
+﻿{
+  "id": "factory_daemon_recovery_must_not_use_inprocess_testclient",
+  "created_at": "2026-03-20T10:22:00Z",
+  "kind": "daemon_bootstrap_pattern",
+  "summary": "Factory daemon startup should call execution recovery directly instead of routing through FastAPI TestClient, or the first tick can stall behind in-process request teardown while recovery task threads persist state.",
+  "symptoms": [
+    "daemon status stays at cycle=1 with last_tick_at=null after startup",
+    "foreground tick() appears to hang before the first heartbeat update",
+    "faulthandler stack shows factory_daemon tick blocked in client.post('/api/recovery/ensure') while background recovery task persists tasks.json"
+  ],
+  "preferred_fix": {
+    "strategy": "call orchestrator.ensure_execution_recovery() directly from factory_daemon instead of using TestClient for in-process recovery bootstrap",
+    "scope": [
+      "tools.factory_daemon"
+    ]
+  },
+  "evidence": [
+    "D:/codex/orchestrator-mvp/tools/factory_daemon.py",
+    "D:/codex/orchestrator-mvp/data/factory_daemon_state.json",
+    "D:/codex/orchestrator-mvp/data/factory_daemon.log"
+  ]
+}

@@ -1,0 +1,378 @@
+{
+  "task_id": "ae704ac213fa4e778c41c305d8afa2c8",
+  "task_status": "released",
+  "phase": "verification-passed",
+  "updated_at": "2026-04-02T21:25:38.978395Z",
+  "heartbeat_at": "2026-04-02T21:25:38.978395Z",
+  "repo_path": "D:\\codex\\orchestrator-mvp",
+  "goal": "Finish routine coding work with small verified patches and local execution.",
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": "runtime.failure_backlog_automation",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\ae704ac213fa4e778c41c305d8afa2c8",
+  "completed_steps": 3,
+  "verification_result": {
+    "status": "verified",
+    "passed": true,
+    "mode": "governance",
+    "verification_level": "L2",
+    "contract": {
+      "verification_level": "L2",
+      "required_checks": [
+        "contract_valid",
+        "build_success",
+        "tests_pass",
+        "smoke_pass",
+        "artifact_manifest_present",
+        "evidence_fresh",
+        "release_checklist"
+      ],
+      "artifact_requirements": {
+        "must_register_artifact": true,
+        "must_have_timestamp": true,
+        "must_have_files": [],
+        "expected_outputs": []
+      },
+      "release_gate": "all_required_checks_pass",
+      "failure_policy": "return_to_planner",
+      "evidence_requirements": [],
+      "verification_notes": [
+        "Finish routine coding work with small verified patches and local execution.",
+        "Produce explicit verification output or a bounded failure report.",
+        "Keep governance work separate from implementation claims."
+      ]
+    },
+    "evidence": {
+      "status": "verified",
+      "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\ae704ac213fa4e778c41c305d8afa2c8\\execution-evidence.json",
+      "execution_evidence_present": true,
+      "required_checks": [
+        "contract_valid",
+        "build_success",
+        "tests_pass",
+        "smoke_pass",
+        "artifact_manifest_present",
+        "evidence_fresh",
+        "release_checklist"
+      ],
+      "artifact_requirements": {
+        "must_register_artifact": true,
+        "must_have_timestamp": true,
+        "must_have_files": [],
+        "expected_outputs": []
+      }
+    }
+  },
+  "delivery_state": "released",
+  "title": "General Coding Change",
+  "prompt": "Inspect the relevant code, make a minimal coherent patch, run local tests or linters, and summarize what changed and what remains risky.",
+  "scheduler_hint": {
+    "automation_source": "failure_backlog_automation",
+    "template_id": "general-coding",
+    "template_category": "development",
+    "cluster_key": "recover stable execution output",
+    "cluster_count": 201,
+    "cluster_status": "attention",
+    "handling_mode": "generic_saturation",
+    "dispatch_now": true,
+    "admission_mode": "normal",
+    "scheduled_by": "runtime.failure_backlog_automation"
+  },
+  "context_package": {},
+  "plan": [
+    {
+      "id": "5258f07f",
+      "title": "Spawn decomposition subtasks",
+      "status": "completed",
+      "worker": "planner",
+      "phase": "decompose"
+    },
+    {
+      "id": "b9c21cc8",
+      "title": "Wait for child task completion",
+      "status": "completed",
+      "worker": "planner",
+      "phase": "decompose"
+    },
+    {
+      "id": "76c9ee85",
+      "title": "Aggregate decomposition results",
+      "status": "completed",
+      "worker": "reviewer",
+      "phase": "verify"
+    }
+  ],
+  "verification_signals": [
+    {
+      "timestamp": "2026-04-02T20:14:26.613774Z",
+      "kind": "admission_accepted",
+      "success": true,
+      "task_id": "ae704ac213fa4e778c41c305d8afa2c8",
+      "admission_lane": null,
+      "admission_reason": null,
+      "execution_mode": "governance",
+      "queue_name": "build_test",
+      "task_type": "build_fix"
+    },
+    {
+      "timestamp": "2026-04-02T20:19:38.796138Z",
+      "kind": "decomposition_spawned",
+      "success": true,
+      "task_id": "ae704ac213fa4e778c41c305d8afa2c8",
+      "child_task_count": 3,
+      "child_task_ids": [
+        "31fb77c74bd841e48e5c82826d8ac5ff",
+        "ab25e9966ecb4563a0199b72ff895688",
+        "8fe731d94507446fb59d42d8f613f38d"
+      ],
+      "dag": {
+        "shared_nodes": [
+          "Analyze the current state"
+        ],
+        "branch_nodes": [
+          "Implement the bounded change"
+        ],
+        "repair_nodes": [
+          "Validate the result"
+        ],
+        "optional_nodes": [],
+        "speculative_nodes": [],
+        "blocked_nodes": [],
+        "edges": [
+          {
+            "from": "Analyze the current state",
+            "to": "Implement the bounded change",
+            "kind": "branch"
+          },
+          {
+            "from": "Analyze the current state",
+            "to": "Validate the result",
+            "kind": "repair"
+          },
+          {
+            "from": "Implement the bounded change",
+            "to": "Validate the result",
+            "kind": "repair"
+          }
+        ],
+        "shared_dependency_group": "ae704ac213fa4e778c41c305d8afa2c8",
+        "child_dependency_ids": {
+          "31fb77c74bd841e48e5c82826d8ac5ff": [],
+          "ab25e9966ecb4563a0199b72ff895688": [
+            "31fb77c74bd841e48e5c82826d8ac5ff"
+          ],
+          "8fe731d94507446fb59d42d8f613f38d": [
+            "31fb77c74bd841e48e5c82826d8ac5ff",
+            "ab25e9966ecb4563a0199b72ff895688"
+          ]
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-02T20:23:51.668434Z",
+      "kind": "step_completed",
+      "success": true,
+      "task_id": "ae704ac213fa4e778c41c305d8afa2c8",
+      "step_id": "5258f07f",
+      "step_title": "Spawn decomposition subtasks",
+      "worker": "planner",
+      "phase": "decompose",
+      "route_model": "internal-recovery",
+      "route_provider": "runtime",
+      "elapsed_ms": 427344,
+      "output_ref": {
+        "artifact_id": "ctx_91c1ee705f6a",
+        "task_id": "ae704ac213fa4e778c41c305d8afa2c8",
+        "step_id": "5258f07f",
+        "channel": "planner-output",
+        "title": "Spawn decomposition subtasks output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\ae704ac213fa4e778c41c305d8afa2c8\\5258f07f-planner-output-ctx_91c1ee705f6a.json",
+        "size_chars": 960,
+        "line_count": 34,
+        "created_at": "2026-04-02T20:23:05.588679Z",
+        "metadata": {
+          "worker": "planner",
+          "phase": "decompose",
+          "route_model": "internal-recovery",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 960,
+        "line_count": 34,
+        "stored_raw": true
+      }
+    },
+    {
+      "timestamp": "2026-04-02T21:04:01.884042Z",
+      "kind": "step_completed",
+      "success": true,
+      "task_id": "ae704ac213fa4e778c41c305d8afa2c8",
+      "step_id": "b9c21cc8",
+      "step_title": "Wait for child task completion",
+      "worker": "planner",
+      "phase": "decompose",
+      "route_model": "internal-recovery",
+      "route_provider": "runtime",
+      "elapsed_ms": 2201421,
+      "output_ref": {
+        "artifact_id": "ctx_99843b487f52",
+        "task_id": "ae704ac213fa4e778c41c305d8afa2c8",
+        "step_id": "b9c21cc8",
+        "channel": "planner-output",
+        "title": "Wait for child task completion output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\ae704ac213fa4e778c41c305d8afa2c8\\b9c21cc8-planner-output-ctx_99843b487f52.json",
+        "size_chars": 18317,
+        "line_count": 454,
+        "created_at": "2026-04-02T21:02:47.001141Z",
+        "metadata": {
+          "worker": "planner",
+          "phase": "decompose",
+          "route_model": "internal-recovery",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 18317,
+        "line_count": 454,
+        "stored_raw": true
+      }
+    },
+    {
+      "timestamp": "2026-04-02T21:13:40.268278Z",
+      "kind": "step_completed",
+      "success": true,
+      "task_id": "ae704ac213fa4e778c41c305d8afa2c8",
+      "step_id": "76c9ee85",
+      "step_title": "Aggregate decomposition results",
+      "worker": "reviewer",
+      "phase": "verify",
+      "route_model": "internal-recovery",
+      "route_provider": "runtime",
+      "elapsed_ms": 329327,
+      "output_ref": {
+        "artifact_id": "ctx_833138ef9a45",
+        "task_id": "ae704ac213fa4e778c41c305d8afa2c8",
+        "step_id": "76c9ee85",
+        "channel": "reviewer-output",
+        "title": "Aggregate decomposition results output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\ae704ac213fa4e778c41c305d8afa2c8\\76c9ee85-reviewer-output-ctx_833138ef9a45.json",
+        "size_chars": 1145,
+        "line_count": 35,
+        "created_at": "2026-04-02T21:12:06.017004Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "verify",
+          "route_model": "internal-recovery",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 1145,
+        "line_count": 35,
+        "stored_raw": true
+      }
+    }
+  ],
+  "verification_signal_count": 5,
+  "result": {
+    "summary": "Fallback decomposition for: Inspect the relevant code, make a minimal coherent patch, run local tests or linters, and summarize what changed and wha",
+    "completed_steps": 3,
+    "context_used_chars": 647,
+    "cheap_calls_used": 0,
+    "cheap_chars_used": 0,
+    "escalation_count": 0,
+    "execution_mode": "governance",
+    "execution_status": "execution_finished",
+    "production_evidence": {
+      "mode": "governance",
+      "status": "not-required"
+    },
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\ae704ac213fa4e778c41c305d8afa2c8\\execution-evidence.json",
+    "execution_evidence_step_count": 3,
+    "verification_contract": {
+      "verification_level": "L2",
+      "required_checks": [
+        "contract_valid",
+        "build_success",
+        "tests_pass",
+        "smoke_pass",
+        "artifact_manifest_present",
+        "evidence_fresh",
+        "release_checklist"
+      ],
+      "artifact_requirements": {
+        "must_register_artifact": true,
+        "must_have_timestamp": true,
+        "must_have_files": [],
+        "expected_outputs": []
+      },
+      "release_gate": "all_required_checks_pass",
+      "failure_policy": "return_to_planner",
+      "evidence_requirements": [],
+      "verification_notes": [
+        "Finish routine coding work with small verified patches and local execution.",
+        "Produce explicit verification output or a bounded failure report.",
+        "Keep governance work separate from implementation claims."
+      ]
+    },
+    "verification_result": {
+      "status": "verified",
+      "passed": true,
+      "mode": "governance",
+      "verification_level": "L2",
+      "contract": {
+        "verification_level": "L2",
+        "required_checks": [
+          "contract_valid",
+          "build_success",
+          "tests_pass",
+          "smoke_pass",
+          "artifact_manifest_present",
+          "evidence_fresh",
+          "release_checklist"
+        ],
+        "artifact_requirements": {
+          "must_register_artifact": true,
+          "must_have_timestamp": true,
+          "must_have_files": [],
+          "expected_outputs": []
+        },
+        "release_gate": "all_required_checks_pass",
+        "failure_policy": "return_to_planner",
+        "evidence_requirements": [],
+        "verification_notes": [
+          "Finish routine coding work with small verified patches and local execution.",
+          "Produce explicit verification output or a bounded failure report.",
+          "Keep governance work separate from implementation claims."
+        ]
+      },
+      "evidence": {
+        "status": "verified",
+        "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\ae704ac213fa4e778c41c305d8afa2c8\\execution-evidence.json",
+        "execution_evidence_present": true,
+        "required_checks": [
+          "contract_valid",
+          "build_success",
+          "tests_pass",
+          "smoke_pass",
+          "artifact_manifest_present",
+          "evidence_fresh",
+          "release_checklist"
+        ],
+        "artifact_requirements": {
+          "must_register_artifact": true,
+          "must_have_timestamp": true,
+          "must_have_files": [],
+          "expected_outputs": []
+        }
+      }
+    },
+    "delivery_state": "released"
+  }
+}

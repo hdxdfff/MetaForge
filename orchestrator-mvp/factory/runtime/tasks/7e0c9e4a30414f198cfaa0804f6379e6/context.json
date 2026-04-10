@@ -1,0 +1,463 @@
+{
+  "task_id": "7e0c9e4a30414f198cfaa0804f6379e6",
+  "task_status": "waiting_approval",
+  "phase": "waiting_approval",
+  "updated_at": "2026-03-14T17:15:33.755743Z",
+  "heartbeat_at": "2026-03-14T17:15:33.755743Z",
+  "repo_path": "D:\\codex\\orchestrator-mvp",
+  "goal": null,
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": null,
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\7e0c9e4a30414f198cfaa0804f6379e6",
+  "error": "WSL command failed with code 1: w\u0000s\u0000l\u0000:\u0000 \u0000�hKm0R \u0000l\u0000o\u0000c\u0000a\u0000l\u0000h\u0000o\u0000s\u0000t\u0000 \u0000�N\u0006tM�n\f�FO*g\\��P0R \u0000W\u0000S\u0000L\u0000\u00020N\u0000A\u0000T\u0000 \u0000!j\u000f_\u000bN�v \u0000W\u0000S\u0000L\u0000 \u0000\rN/e\u0001c \u0000l\u0000o\u0000c\u0000a\u0000l\u0000h\u0000o\u0000s\u0000t\u0000 \u0000�N\u0006t\u00020\r\u0000\n\u0000bash: line 1: pytest: command not found",
+  "title": null,
+  "prompt": "Create D:\\codex\\generated\\token-efficiency-sample-run.md. Summarize the current cheap-vs-reasoning routing policy from app/model_router.py and list the validation commands to refresh usage and autonomy metrics. Only write that file. Do not modify runtime code. Keep the artifact under 120 words.",
+  "scheduler_hint": {
+    "module_focus": [
+      "tools.codex_control",
+      "tools.kernel_mode",
+      "tools.self_patch_loop",
+      "app.main",
+      "app.orchestrator"
+    ],
+    "owner_teams": [
+      "backend_team",
+      "infrastructure_team"
+    ],
+    "layers": [
+      "unclassified"
+    ],
+    "graph_matches": [
+      {
+        "module": "tools.codex_control",
+        "owner_team": "infrastructure_team",
+        "owner": "ops",
+        "layer": "unclassified",
+        "dependency_count": 2,
+        "dependents": 0,
+        "internal_imports": [
+          "tools.session_guard",
+          "tools.taskgraph_compiler"
+        ]
+      },
+      {
+        "module": "tools.kernel_mode",
+        "owner_team": "infrastructure_team",
+        "owner": "ops",
+        "layer": "unclassified",
+        "dependency_count": 2,
+        "dependents": 10,
+        "internal_imports": [
+          "tools.control_plane_policy",
+          "tools.io_utils"
+        ]
+      },
+      {
+        "module": "tools.self_patch_loop",
+        "owner_team": "infrastructure_team",
+        "owner": "ops",
+        "layer": "unclassified",
+        "dependency_count": 3,
+        "dependents": 0,
+        "internal_imports": [
+          "tools.execution_trace",
+          "tools.module_ownership",
+          "tools.privilege_policy"
+        ]
+      },
+      {
+        "module": "app.main",
+        "owner_team": "backend_team",
+        "owner": "coder",
+        "layer": "unclassified",
+        "dependency_count": 11,
+        "dependents": 2,
+        "internal_imports": [
+          "app.config",
+          "app.io_utils",
+          "app.models",
+          "app.network_agent",
+          "app.orchestrator",
+          "app.provider_gateway",
+          "tools.execution_trace",
+          "tools.goal_registry",
+          "tools.goal_runtime",
+          "tools.goal_storage_audit",
+          "tools.security_status"
+        ]
+      },
+      {
+        "module": "app.orchestrator",
+        "owner_team": "backend_team",
+        "owner": "coder",
+        "layer": "unclassified",
+        "dependency_count": 23,
+        "dependents": 1,
+        "internal_imports": [
+          "app.context_service",
+          "app.git_service",
+          "app.io_utils",
+          "app.model_router",
+          "app.models",
+          "app.openai_client",
+          "app.prompt_guard",
+          "app.resource_registry",
+          "app.safety_agent",
+          "app.worker_adapters",
+          "tools.artifact_audit",
+          "tools.capability_registry",
+          "tools.code_knowledge_graph",
+          "tools.context_builder",
+          "tools.context_kernel",
+          "tools.distillation",
+          "tools.goal_runtime",
+          "tools.kernel_mode",
+          "tools.privilege_policy",
+          "tools.security_audit",
+          "tools.tool_policy",
+          "tools.tool_registry",
+          "tools.vm_orchestrator"
+        ]
+      }
+    ]
+  },
+  "context_package": {
+    "task": "Create D:\\codex\\generated\\token-efficiency-sample-run.md. Summarize the current cheap-vs-reasoning routing policy from app/model_router.py and list the validation commands to refresh usage and autonomy metrics. Only write that file. Do not modify runtime code. Keep the artifact under 120 words.",
+    "task_type": "verification",
+    "repo_path": "D:\\codex\\orchestrator-mvp",
+    "module_focus": [
+      "tools.codex_control",
+      "tools.kernel_mode",
+      "tools.self_patch_loop",
+      "app.main",
+      "app.orchestrator"
+    ],
+    "dependency_modules": [],
+    "owner_teams": [
+      "backend_team",
+      "infrastructure_team"
+    ],
+    "layers": [
+      "unclassified"
+    ],
+    "project_context": {},
+    "knowledge_hints": {
+      "preferred_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension",
+        "kv_cache_manager",
+        "local_llm_runner",
+        "token_streaming"
+      ],
+      "preferred_workers": [
+        "reviewer",
+        "coder",
+        "supervisor"
+      ],
+      "repo_learning": {
+        "updated_at": "2026-03-14T17:10:56.322847Z",
+        "embedding": {
+          "provider": "local",
+          "model": "BAAI/bge-small-en-v1.5",
+          "dimensions": 128,
+          "backend": "hashed-local",
+          "ready": true
+        },
+        "graph_modules": 156,
+        "chunk_count": 144,
+        "top_modules": [
+          {
+            "module": "tools.brain_loop",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\brain_loop.py"
+          },
+          {
+            "module": "tools.factory_daemon",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\factory_daemon.py"
+          },
+          {
+            "module": "tools.meta_factory_control",
+            "layer": "architecture_engine",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\meta_factory_control.py"
+          },
+          {
+            "module": "app.orchestrator",
+            "layer": "unclassified",
+            "owner_team": "backend_team",
+            "path": "D:\\codex\\orchestrator-mvp\\app\\orchestrator.py"
+          },
+          {
+            "module": "tools.decision_engine",
+            "layer": "task_graph_planner",
+            "owner_team": "architecture_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\decision_engine.py"
+          },
+          {
+            "module": "app.main",
+            "layer": "unclassified",
+            "owner_team": "backend_team",
+            "path": "D:\\codex\\orchestrator-mvp\\app\\main.py"
+          },
+          {
+            "module": "tools.verification_engine",
+            "layer": "verification",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\verification_engine.py"
+          },
+          {
+            "module": "tools.taskgraph_compiler",
+            "layer": "architecture_engine",
+            "owner_team": "architecture_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\taskgraph_compiler.py"
+          },
+          {
+            "module": "app.worker_adapters",
+            "layer": "unclassified",
+            "owner_team": "backend_team",
+            "path": "D:\\codex\\orchestrator-mvp\\app\\worker_adapters.py"
+          },
+          {
+            "module": "tools.automation_lab",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\automation_lab.py"
+          },
+          {
+            "module": "tools.change_request_analyzer",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\change_request_analyzer.py"
+          },
+          {
+            "module": "tools.company_os",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\company_os.py"
+          }
+        ],
+        "learned_repositories": [
+          {
+            "repo_id": "gh-dc17f0f4fb",
+            "full_name": "Significant-Gravitas/AutoGPT",
+            "local_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+            "language_mix": [
+              {
+                "language": ".json",
+                "files": 1076
+              },
+              {
+                "language": "Python",
+                "files": 914
+              },
+              {
+                "language": "TypeScript",
+                "files": 911
+              },
+              {
+                "language": "Markdown",
+                "files": 320
+              },
+              {
+                "language": ".yml",
+                "files": 43
+              },
+              {
+                "language": ".yaml",
+                "files": 23
+              }
+            ],
+            "key_files": [
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\README.md"
+            ],
+            "sampled_files": [
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\docs\\integrations\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\classic\\forge\\forge\\components\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\backend\\load-tests\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\classic\\original_autogpt\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\frontend\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\frontend\\package.json",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\README.md"
+            ],
+            "capabilities": [
+              "local_llm_runner",
+              "token_streaming",
+              "kv_cache_manager",
+              "agent_orchestration",
+              "tool_execution",
+              "workflow_planning"
+            ],
+            "architecture_summary": "# AutoGPT: Build, Deploy, and Run AI Agents\n\n[![Discord Follow](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscord.com%2Fapi%2Finvites%2Fautogpt%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&label=total%20members&logo=discord&logoColor=white&color=7289da)](https://discord.gg/autogpt) &ensp;\n[![Twitter Follow](https://img.shields.io/twitter/follow/Auto_GPT?style=social)](https://twitter.com/Auto_GPT) &ensp;\n\n<!-- Keep these links. Translations will automatically update with the README. -->\n[Deutsch](https://zdoc.app/de/Significant-Gravitas/AutoGPT) | \n[Español](https:",
+            "experiment_plan": {
+              "sandbox_required": true,
+              "recommended_commands": [],
+              "can_run_without_dependency_install": false
+            },
+            "chunk_count": 24
+          }
+        ],
+        "learned_repository_count": 1,
+        "extracted_capabilities": [
+          "agent_orchestration",
+          "kv_cache_manager",
+          "local_llm_runner",
+          "token_streaming",
+          "tool_execution",
+          "workflow_planning"
+        ],
+        "github_learning": {
+          "updated_at": "2026-03-14T17:10:56.322847Z",
+          "enabled": true,
+          "topics": [
+            "agent",
+            "llm",
+            "compiler",
+            "kernel",
+            "robotics",
+            "distributed-system",
+            "inference"
+          ],
+          "languages": [
+            "Python",
+            "TypeScript",
+            "Rust",
+            "C++",
+            "C",
+            "Go"
+          ],
+          "managed_repo_count": 10,
+          "ready_repo_count": 1,
+          "candidate_repo_count": 9,
+          "scan_candidate_count": 10,
+          "top_candidates": [
+            {
+              "full_name": "langchain-ai/langchain",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\langchain-ai-langchain",
+              "score": 41262.1142,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "ggerganov/llama.cpp",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\ggerganov-llama.cpp",
+              "score": 30857.5689,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "OpenInterpreter/open-interpreter",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\OpenInterpreter-open-interpreter",
+              "score": 23252.3854,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "microsoft/autogen",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\microsoft-autogen",
+              "score": 16454.9498,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "vllm-project/vllm",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\vllm-project-vllm",
+              "score": 15260.6594,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "ray-project/ray",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\ray-project-ray",
+              "score": 14451.3379,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "crewAIInc/crewAI",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\crewAIInc-crewAI",
+              "score": 12846.5735,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "dask/dask",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\dask-dask",
+              "score": 5243.0283,
+              "learning_status": "candidate"
+            }
+          ]
+        }
+      }
+    },
+    "verification_scope": {
+      "modules": [
+        "tools.codex_control",
+        "tools.kernel_mode",
+        "tools.self_patch_loop",
+        "app.main",
+        "app.orchestrator"
+      ],
+      "teams": [
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "layers": [
+        "unclassified"
+      ]
+    },
+    "current_plan": [
+      "Task type: verification",
+      "Primary modules: tools.codex_control, tools.kernel_mode, tools.self_patch_loop, app.main, app.orchestrator",
+      "Dependency expansion: none",
+      "Owner teams: backend_team, infrastructure_team",
+      "Layers: unclassified",
+      "Scheduler owner teams: backend_team, infrastructure_team",
+      "Scheduler layers: unclassified"
+    ],
+    "summary_blocks": [
+      "Task type: verification\nPrimary modules: tools.codex_control, tools.kernel_mode, tools.self_patch_loop, app.main, app.orchestrator\nDependency expansion: none\nOwner teams: backend_team, infrastructure_team\nLayers: unclassified\nScheduler owner teams: backend_team, infrastructure_team\nScheduler layers: unclassified",
+      "Preferred capabilities: agent_orchestration, webapp_generation, deploy_scaffold, tool_extension, kv_cache_manager\nPreferred workers: reviewer, coder, supervisor\nTop capability reputation: agent_orchestration, webapp_generation, deploy_scaffold, tool_extension\nTop worker reputation: reviewer, coder, supervisor\nRepo learning modules=156 chunks=144"
+    ],
+    "budget_chars": 1600
+  },
+  "plan": [
+    {
+      "id": "c2731e46",
+      "title": "Understand task",
+      "status": "completed",
+      "worker": "reviewer",
+      "phase": "understand"
+    },
+    {
+      "id": "b102e3c3",
+      "title": "Draft solution",
+      "status": "completed",
+      "worker": "coder",
+      "phase": "draft"
+    },
+    {
+      "id": "fc8b07e2",
+      "title": "Execute validation",
+      "status": "failed",
+      "worker": "shell",
+      "phase": "execute"
+    },
+    {
+      "id": "9094ad1a",
+      "title": "Verify result",
+      "status": "pending",
+      "worker": "reviewer",
+      "phase": "verify"
+    },
+    {
+      "id": "84f6b752",
+      "title": "Revise next action",
+      "status": "pending",
+      "worker": "reviewer",
+      "phase": "revise"
+    }
+  ],
+  "result": {}
+}

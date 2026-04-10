@@ -1,0 +1,257 @@
+{
+  "task_id": "65f8de21760243ca94a9949b4601f350",
+  "task_status": "failed",
+  "phase": "failed",
+  "updated_at": "2026-04-02T18:35:51.495055Z",
+  "heartbeat_at": "2026-04-02T18:35:51.495055Z",
+  "repo_path": "D:\\codex",
+  "goal": "Unblock Restore ToyOS real artifact delivery: Run baseline runtime test loop for Restore ToyOS real artifact delivery",
+  "goal_id": "goal_5c12485392",
+  "graph_id": "graph_222cc400a2",
+  "node_id": "collect_runtime_signals",
+  "scheduled_by": "factory-daemon.replenisher",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\65f8de21760243ca94a9949b4601f350",
+  "error": "<asyncio.locks.Lock object at 0x000001FDB6803210 [unlocked, waiters:1]> is bound to a different event loop",
+  "title": "Collect runtime signals for Unblock Restore ToyOS real artifact delivery: Run baseline runtime test loop for Restore ToyOS real artifact delivery",
+  "prompt": "Execute capability step 'Collect runtime signals' for: Unblock Restore ToyOS real artifact delivery: Run baseline runtime test loop for Restore ToyOS real artifact delivery",
+  "scheduler_hint": {
+    "goal_primary": "Restore ToyOS real artifact delivery",
+    "goal_mode": "toyos_priority_mode",
+    "goal_target": "Unblock Restore ToyOS real artifact delivery: Run baseline runtime test loop for Restore ToyOS real artifact delivery",
+    "goal_id": "goal_5c12485392",
+    "graph_id": "graph_222cc400a2",
+    "node_id": "collect_runtime_signals",
+    "node_title": "Collect runtime signals for Unblock Restore ToyOS real artifact delivery: Run baseline runtime test loop for Restore ToyOS real artifact delivery",
+    "task_type": "build_fix",
+    "queue_name": "build_test",
+    "verification_level": "L2",
+    "max_runtime_seconds": 2400,
+    "retry_limit": 1,
+    "rollback_rule": "mark_failed_and_requeue_split",
+    "template_id": "build_toolchain_repair",
+    "admission_mode": "normal",
+    "handling_mode": "toyos_replenishment",
+    "automation_source": "failure_backlog_automation"
+  },
+  "context_package": {},
+  "plan": [
+    {
+      "id": "3e2adfde",
+      "title": "Spawn decomposition subtasks",
+      "status": "failed",
+      "worker": "planner",
+      "phase": "decompose"
+    },
+    {
+      "id": "d5eb482e",
+      "title": "Wait for child task completion",
+      "status": "pending",
+      "worker": "planner",
+      "phase": "decompose"
+    },
+    {
+      "id": "e7e03006",
+      "title": "Aggregate decomposition results",
+      "status": "pending",
+      "worker": "reviewer",
+      "phase": "verify"
+    }
+  ],
+  "verification_signals": [
+    {
+      "timestamp": "2026-04-02T18:32:58.775348Z",
+      "kind": "admission_accepted",
+      "success": true,
+      "task_id": "65f8de21760243ca94a9949b4601f350",
+      "admission_lane": null,
+      "admission_reason": null,
+      "execution_mode": "production",
+      "queue_name": "build_test",
+      "task_type": "build_fix"
+    },
+    {
+      "timestamp": "2026-04-02T18:33:58.055228Z",
+      "kind": "step_failed",
+      "success": false,
+      "task_id": "65f8de21760243ca94a9949b4601f350",
+      "step_id": "3e2adfde",
+      "step_title": "Spawn decomposition subtasks",
+      "worker": "planner",
+      "phase": "decompose",
+      "route_model": "internal-recovery",
+      "route_provider": "runtime",
+      "elapsed_ms": 37202,
+      "error": "<asyncio.locks.Lock object at 0x000001FDB6803210 [unlocked, waiters:1]> is bound to a different event loop",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "error-output",
+        "char_count": 106,
+        "line_count": 1,
+        "stored_raw": false
+      }
+    }
+  ],
+  "verification_signal_count": 2,
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-02T18:32:58.775348Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "65f8de21760243ca94a9949b4601f350",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "production",
+        "queue_name": "build_test",
+        "task_type": "build_fix"
+      },
+      {
+        "timestamp": "2026-04-02T18:33:58.055228Z",
+        "kind": "step_failed",
+        "success": false,
+        "task_id": "65f8de21760243ca94a9949b4601f350",
+        "step_id": "3e2adfde",
+        "step_title": "Spawn decomposition subtasks",
+        "worker": "planner",
+        "phase": "decompose",
+        "route_model": "internal-recovery",
+        "route_provider": "runtime",
+        "elapsed_ms": 37202,
+        "error": "<asyncio.locks.Lock object at 0x000001FDB6803210 [unlocked, waiters:1]> is bound to a different event loop",
+        "output_ref": {},
+        "output_stats": {
+          "channel": "error-output",
+          "char_count": 106,
+          "line_count": 1,
+          "stored_raw": false
+        }
+      }
+    ],
+    "decomposition": {
+      "summary": "Fallback decomposition for: Execute capability step 'Collect runtime signals' for: Unblock Restore ToyOS real artifact delivery: Run baseline runtim",
+      "strategy": "bounded multi-layer split with analysis, execution, and verification branches",
+      "subtasks": [
+        {
+          "title": "Analyze the current state",
+          "prompt": "Inspect the current repository state and isolate the smallest workable slice for: Execute capability step 'Collect runtime signals' for: Unblock Restore ToyOS real artifact delivery: Run baseline runtime test loop for Restore ToyOS real artifact delivery",
+          "goal": "Identify the smallest viable slice",
+          "task_type": "report_refresh",
+          "path_kind": "shared",
+          "queue_name": "fastlane",
+          "verification_level": "L1",
+          "preferred_worker": "reviewer",
+          "execution_mode": "governance",
+          "execution_lane": "host-control",
+          "decompose_children": false,
+          "shared_dependency_group": "65f8de21760243ca94a9949b4601f350",
+          "repair_for": null,
+          "inputs": [],
+          "outputs": [
+            "analysis note"
+          ],
+          "dependencies": [],
+          "acceptance_criteria": [
+            "The smallest feasible slice is identified."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        },
+        {
+          "title": "Implement the bounded change",
+          "prompt": "Make the smallest safe implementation or repair needed for: Execute capability step 'Collect runtime signals' for: Unblock Restore ToyOS real artifact delivery: Run baseline runtime test loop for Restore ToyOS real artifact delivery",
+          "goal": "Implement the bounded change",
+          "task_type": "build_fix",
+          "path_kind": "branch",
+          "queue_name": "build_test",
+          "verification_level": "L2",
+          "preferred_worker": "coder",
+          "execution_mode": "production",
+          "execution_lane": "vm-first",
+          "decompose_children": true,
+          "shared_dependency_group": "65f8de21760243ca94a9949b4601f350",
+          "repair_for": null,
+          "inputs": [
+            "analysis note"
+          ],
+          "outputs": [
+            "bounded patch"
+          ],
+          "dependencies": [
+            "Analyze the current state"
+          ],
+          "acceptance_criteria": [
+            "A bounded implementation exists."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        },
+        {
+          "title": "Validate the result",
+          "prompt": "Run the narrowest useful validation for the bounded change: Execute capability step 'Collect runtime signals' for: Unblock Restore ToyOS real artifact delivery: Run baseline runtime test loop for Restore ToyOS real artifact delivery",
+          "goal": "Validate the change",
+          "task_type": "unit_test_run",
+          "path_kind": "repair",
+          "queue_name": "build_test",
+          "verification_level": "L2",
+          "preferred_worker": "docker",
+          "execution_mode": "production",
+          "execution_lane": "vm-first",
+          "decompose_children": false,
+          "shared_dependency_group": "65f8de21760243ca94a9949b4601f350",
+          "repair_for": "Analyze the current state",
+          "inputs": [
+            "bounded patch"
+          ],
+          "outputs": [
+            "validation evidence"
+          ],
+          "dependencies": [
+            "Analyze the current state",
+            "Implement the bounded change"
+          ],
+          "acceptance_criteria": [
+            "Validation evidence is recorded."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        }
+      ],
+      "dag": {
+        "shared_nodes": [
+          "Analyze the current state"
+        ],
+        "branch_nodes": [
+          "Implement the bounded change"
+        ],
+        "repair_nodes": [
+          "Validate the result"
+        ],
+        "optional_nodes": [],
+        "speculative_nodes": [],
+        "blocked_nodes": [],
+        "edges": [
+          {
+            "from": "Analyze the current state",
+            "to": "Implement the bounded change",
+            "kind": "branch"
+          },
+          {
+            "from": "Analyze the current state",
+            "to": "Validate the result",
+            "kind": "repair"
+          },
+          {
+            "from": "Implement the bounded change",
+            "to": "Validate the result",
+            "kind": "repair"
+          }
+        ],
+        "shared_dependency_group": "65f8de21760243ca94a9949b4601f350"
+      },
+      "depth": 0,
+      "max_depth": 2,
+      "mode": "multi_layer"
+    }
+  }
+}

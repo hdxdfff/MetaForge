@@ -1,0 +1,36 @@
+{
+  "memory_id": "mem_memory_quality_scorecard_v1_001",
+  "memory_type": "decision",
+  "title": "Memory quality scorecard v1 is the operational acceptance gate for long-term memory",
+  "summary": "Memory quality must be evaluated by write quality, recall hit rate, behavior binding, and anti-drift, and the scorecard must surface in standard health and control views.",
+  "scope": {
+    "system": "metaforge",
+    "workspace": "D:\\codex\\orchestrator-mvp",
+    "component": ["tools/memory_quality_scorecard.py", "tools/tool_health_audit.py", "tools/meta_factory_control.py", "tools/codex_control.py"]
+  },
+  "tags": ["memory", "scorecard", "recall", "binding", "anti-drift", "health"],
+  "authority": "verified",
+  "status": "active",
+  "source_refs": [
+    "data/memory_objects.jsonl",
+    "data/memory_candidates.jsonl",
+    "data/dialogue_memory.json",
+    "data/identity_kernel.json"
+  ],
+  "evidence_refs": [
+    "data/memory_quality_scorecard.json",
+    "factoryctl.cmd memory-quality-scorecard"
+  ],
+  "created_at": "2026-04-02T17:11:12Z",
+  "updated_at": "2026-04-02T17:11:12Z",
+  "last_verified_at": "2026-04-02T17:11:12Z",
+  "validity": {
+    "kind": "revalidate_on_change",
+    "trigger": ["memory_objects_changed", "memory_candidates_changed", "identity_kernel_changed", "context_builder_changed"],
+    "expires_at": null
+  },
+  "reuse_score": 0.94,
+  "priority": "high",
+  "superseded_by": null,
+  "conflicts_with": []
+}

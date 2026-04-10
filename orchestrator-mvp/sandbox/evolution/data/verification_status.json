@@ -1,0 +1,323 @@
+{
+  "updated_at": "2026-03-12T07:09:55.778039Z",
+  "compileall": {
+    "command": [
+      "D:\\codex\\tools\\python311-embed\\python.exe",
+      "-m",
+      "compileall",
+      "D:\\codex\\orchestrator-mvp\\app",
+      "D:\\codex\\orchestrator-mvp\\runtime",
+      "D:\\codex\\orchestrator-mvp\\tools",
+      "D:\\codex\\orchestrator-mvp\\agents",
+      "D:\\codex\\orchestrator-mvp\\state"
+    ],
+    "returncode": 0,
+    "passed": true,
+    "stdout_tail": [
+      "Listing 'D:\\\\codex\\\\orchestrator-mvp\\\\app'...",
+      "Listing 'D:\\\\codex\\\\orchestrator-mvp\\\\app\\\\static'...",
+      "Listing 'D:\\\\codex\\\\orchestrator-mvp\\\\runtime'...",
+      "Listing 'D:\\\\codex\\\\orchestrator-mvp\\\\runtime\\\\policy'...",
+      "Listing 'D:\\\\codex\\\\orchestrator-mvp\\\\tools'...",
+      "Listing 'D:\\\\codex\\\\orchestrator-mvp\\\\agents'...",
+      "Listing 'D:\\\\codex\\\\orchestrator-mvp\\\\state'..."
+    ],
+    "stderr_tail": []
+  },
+  "code_graph": {
+    "module_count": 124,
+    "edge_count": 255,
+    "layers": [
+      "agent_teams",
+      "architecture_engine",
+      "task_graph_planner",
+      "unclassified",
+      "verification"
+    ],
+    "passed": true
+  },
+  "architecture": {
+    "updated_at": "2026-03-12T07:09:55.379942Z",
+    "blueprint_system": "AI Factory OS",
+    "module_results": [
+      {
+        "module": "taskgraph_engine",
+        "exists": true,
+        "aliases": [
+          "runtime.taskgraph_engine",
+          "tools.taskgraph_compiler"
+        ]
+      },
+      {
+        "module": "agent_runtime",
+        "exists": true,
+        "aliases": [
+          "runtime",
+          "app.worker_adapters",
+          "app.orchestrator"
+        ]
+      },
+      {
+        "module": "tool_system",
+        "exists": true,
+        "aliases": [
+          "tools.tool_registry",
+          "tools.capability_registry",
+          "tools.vm_orchestrator"
+        ]
+      },
+      {
+        "module": "evolution_engine",
+        "exists": true,
+        "aliases": [
+          "tools.evolution_control",
+          "tools.experiment_planner",
+          "tools.experiment_executor",
+          "tools.experiment_evaluator"
+        ]
+      },
+      {
+        "module": "product_generator",
+        "exists": true,
+        "aliases": [
+          "runtime.platform_generator",
+          "tools.generate_system_workspace"
+        ]
+      },
+      {
+        "module": "context_kernel",
+        "exists": true,
+        "aliases": [
+          "tools.context_kernel"
+        ]
+      },
+      {
+        "module": "resident_core_agent",
+        "exists": true,
+        "aliases": [
+          "tools.codex_control",
+          "tools.meta_factory_control"
+        ]
+      },
+      {
+        "module": "architecture_engine",
+        "exists": true,
+        "aliases": [
+          "tools.architecture_validator",
+          "tools.code_knowledge_graph"
+        ]
+      },
+      {
+        "module": "code_knowledge_graph",
+        "exists": true,
+        "aliases": [
+          "tools.code_knowledge_graph"
+        ]
+      },
+      {
+        "module": "verification_engine",
+        "exists": true,
+        "aliases": [
+          "tools.verification_engine",
+          "tools.quality_system",
+          "tools.soak_validation"
+        ]
+      }
+    ],
+    "missing_modules": [],
+    "rule_results": [
+      {
+        "rule": "agents cannot import runtime",
+        "passed": true,
+        "violations": []
+      },
+      {
+        "rule": "router should avoid embedded persistence",
+        "passed": true,
+        "violations": []
+      },
+      {
+        "rule": "runtime modules cannot depend on app transport handlers",
+        "passed": true,
+        "violations": []
+      },
+      {
+        "rule": "tools may depend on runtime and state, but not app HTTP layer",
+        "passed": true,
+        "violations": []
+      },
+      {
+        "rule": "verification must gate promotion of architecture-affecting changes",
+        "passed": true,
+        "violations": []
+      },
+      {
+        "rule": "engineering modules should have an owner team",
+        "passed": true,
+        "violations": []
+      }
+    ],
+    "status": "pass",
+    "violation_count": 0
+  },
+  "quality": {
+    "status": "attention",
+    "overall_score": 0.6354,
+    "passed": false
+  },
+  "platform_runtime": {
+    "platform_count": 17,
+    "unhealthy_count": 0,
+    "passed": true
+  },
+  "tool_health": {
+    "status": "pass",
+    "issue_count": 0,
+    "issues": [],
+    "blocking_issues": [],
+    "passed": true,
+    "history_recent_count": 10,
+    "recent_failures": [
+      {
+        "updated_at": "2026-03-12T06:56:07.966233Z",
+        "status": "attention",
+        "issues": [
+          "daemon-not-running"
+        ],
+        "daemon": {
+          "status": "error",
+          "cycle": 171,
+          "last_tick_at": "2026-03-12T06:56:07.963136Z"
+        },
+        "control_layer_status": "operator_attention",
+        "quality_status": "candidate",
+        "autonomy_stage": "stage4_confirmed"
+      },
+      {
+        "updated_at": "2026-03-12T06:59:10.978010Z",
+        "status": "attention",
+        "issues": [
+          "daemon-not-running"
+        ],
+        "daemon": {
+          "status": "error",
+          "cycle": 174,
+          "last_tick_at": "2026-03-12T06:59:10.975009Z"
+        },
+        "control_layer_status": "operator_attention",
+        "quality_status": "attention",
+        "autonomy_stage": "stage4_confirmed"
+      },
+      {
+        "updated_at": "2026-03-12T07:04:48.876183Z",
+        "status": "attention",
+        "issues": [
+          "daemon-not-running"
+        ],
+        "daemon": {
+          "status": "operator_attention",
+          "cycle": 177,
+          "last_tick_at": "2026-03-12T07:04:48.838131Z"
+        },
+        "control_layer_status": "operator_attention",
+        "quality_status": "attention",
+        "autonomy_stage": "stage4_confirmed"
+      },
+      {
+        "updated_at": "2026-03-12T07:05:56.253863Z",
+        "status": "attention",
+        "issues": [
+          "daemon-not-running"
+        ],
+        "daemon": {
+          "status": "operator_attention",
+          "cycle": 178,
+          "last_tick_at": "2026-03-12T07:05:56.245595Z"
+        },
+        "control_layer_status": "operator_attention",
+        "quality_status": "attention",
+        "autonomy_stage": "stage4_confirmed"
+      },
+      {
+        "updated_at": "2026-03-12T07:07:04.667237Z",
+        "status": "attention",
+        "issues": [
+          "daemon-not-running"
+        ],
+        "daemon": {
+          "status": "operator_attention",
+          "cycle": 179,
+          "last_tick_at": "2026-03-12T07:07:04.659241Z"
+        },
+        "control_layer_status": "operator_attention",
+        "quality_status": "attention",
+        "autonomy_stage": "stage4_confirmed"
+      }
+    ]
+  },
+  "task_runtime": {
+    "active_tasks": 1,
+    "failed_tasks": 13,
+    "open_error_escalations": 1,
+    "healthy": false
+  },
+  "verification_scope": {
+    "module_count": 13,
+    "team_count": 6,
+    "project_count": 11,
+    "graph_node_count": 0,
+    "modules": [
+      "app.config",
+      "tools.ai_test_automation",
+      "tools.decision_engine",
+      "tools.factory_daemon",
+      "tools.goal_runtime",
+      "tools.quality_system",
+      "tools.release_operations",
+      "tools.runtime_maintenance",
+      "tools.self_patch_loop",
+      "tools.task_state_tools",
+      "tools.telemetry_store",
+      "tools.tool_health_audit",
+      "tools.verification_engine"
+    ],
+    "teams": [
+      "architecture_team",
+      "backend_team",
+      "infrastructure_team",
+      "layer:architecture_engine",
+      "layer:unclassified",
+      "layer:verification"
+    ],
+    "projects": [
+      "79120c5dbb",
+      "aimath0001",
+      "dblab00001",
+      "platform_009b511d6b",
+      "platform_38c67a4233",
+      "platform_464dac2a0b",
+      "platform_79a3e0e03e",
+      "platform_8590e6bcbe",
+      "platform_8855699f64",
+      "platform_d33a56cc79",
+      "platform_fa6557b2cd"
+    ]
+  },
+  "patch_gate": {
+    "status": "attention",
+    "passed": false,
+    "reasons": [
+      "quality"
+    ]
+  },
+  "runtime_health": {
+    "status": "attention",
+    "passed": false
+  },
+  "status": "attention",
+  "control_layer_refresh": {
+    "attempted": true,
+    "status": "operator_attention",
+    "updated_at": "2026-03-12T07:09:59.442292Z"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "task_id": "1a4860555b224f34877d4a5e33b77a70",
+  "task_status": "waiting_approval",
+  "phase": "waiting_approval",
+  "updated_at": "2026-03-29T17:34:22.918643Z",
+  "heartbeat_at": "2026-03-29T17:34:22.918643Z",
+  "repo_path": null,
+  "goal": "Execute the next action",
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": "smoke-test",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\1a4860555b224f34877d4a5e33b77a70",
+  "error": "Audit output schema rejected for doc_patch/coder: Coder audit output missing required structured sections.",
+  "title": "Execute the next bounded action",
+  "prompt": "Validate tri-state task publication flow via draft approve publish.",
+  "scheduler_hint": {
+    "publication_mode": "structured",
+    "publication_source": "task-publication",
+    "task_type": "report_refresh",
+    "verification_level": "L1",
+    "decomposition_child": true,
+    "decomposition_parent_task_id": "d4249df785d743f092542bfcaf965e7d",
+    "decomposition_root_task_id": "d4249df785d743f092542bfcaf965e7d",
+    "decomposition_depth": 1,
+    "max_decomposition_depth": 2,
+    "decomposition_child_index": 2,
+    "decomposition_allow_children": false
+  },
+  "context_package": {},
+  "plan": [
+    {
+      "id": "f9e549ad",
+      "title": "Understand task",
+      "status": "completed",
+      "worker": "planner",
+      "phase": "understand"
+    },
+    {
+      "id": "2e3d3f1d",
+      "title": "Draft solution",
+      "status": "failed",
+      "worker": "coder",
+      "phase": "draft"
+    },
+    {
+      "id": "cbf80d3e",
+      "title": "Execute validation",
+      "status": "pending",
+      "worker": "docker",
+      "phase": "execute"
+    },
+    {
+      "id": "eb09001a",
+      "title": "Issue patch decision",
+      "status": "pending",
+      "worker": "reviewer",
+      "phase": "verify"
+    },
+    {
+      "id": "38948666",
+      "title": "Revise next action",
+      "status": "pending",
+      "worker": "planner",
+      "phase": "revise"
+    }
+  ],
+  "result": {}
+}

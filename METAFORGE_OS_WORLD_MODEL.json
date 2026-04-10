@@ -1,0 +1,38 @@
+﻿{
+  "world_scope": "local-first development environment with optional network-mediated execution",
+  "workspace_root": "D:\\codex",
+  "primary_workspaces": [
+    "D:\\codex\\generated\\toy-os-demo",
+    "D:\\codex\\orchestrator-mvp"
+  ],
+  "runtime_surfaces": [
+    "powershell",
+    "factoryctl controller",
+    "orchestrator state store",
+    "local files",
+    "optional WSL",
+    "optional QEMU",
+    "optional Docker"
+  ],
+  "tooling_expectations": {
+    "python": "available",
+    "powershell": "available",
+    "git": "not guaranteed on PATH",
+    "wsl": "partially available",
+    "qemu": "expected through worker-vm or local toolchain",
+    "docker": "available in platform telemetry"
+  },
+  "sources_of_truth": {
+    "identity": "D:\\codex\\METAFORGE_OS_SYSTEM_IDENTITY.json",
+    "live_state": "D:\\codex\\orchestrator-mvp\\data",
+    "operator_policy": "D:\\codex\\METAFORGE-OS.md",
+    "kpi_policy": "D:\\codex\\METAFORGE_OS_KPI_POLICY.md"
+  },
+  "environment_questions": {
+    "internet_reachable": "not assumed; verify at runtime if needed",
+    "controller_available": "expected through D:\\codex\\factoryctl.cmd",
+    "provider_workspaces_exist": "yes",
+    "target_workspace_integrity_required": "yes for bounded branch work"
+  },
+  "last_updated": "2026-03-11"
+}

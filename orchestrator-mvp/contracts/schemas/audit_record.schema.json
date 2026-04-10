@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Audit Record",
+  "type": "object",
+  "required": [
+    "audit_id",
+    "task_id",
+    "verdict",
+    "score",
+    "issues",
+    "evidence",
+    "audited_at"
+  ],
+  "properties": {
+    "audit_id": {
+      "type": "string"
+    },
+    "task_id": {
+      "type": "string"
+    },
+    "verdict": {
+      "type": "string",
+      "enum": [
+        "pass",
+        "fail",
+        "warning"
+      ]
+    },
+    "score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "required": [
+        "build_report",
+        "execution_report",
+        "artifact_paths"
+      ],
+      "properties": {
+        "build_report": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "execution_report": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "artifact_paths": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "reproducible": {
+      "type": "boolean"
+    },
+    "shadow_mode": {
+      "type": "boolean"
+    },
+    "audited_at": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "steps": [
+    {
+      "step_id": "a69fedbd",
+      "step_title": "Understand task",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-03-20T00:18:09.694825Z",
+      "worker": "reviewer",
+      "phase": "understand",
+      "route_model": "deepseek-chat",
+      "route_provider": "cheap",
+      "output_ref": {
+        "artifact_id": "ctx_7b75049a0c5b",
+        "task_id": "50fa7c3e028d4b6798eb0e3cbbb5ef12",
+        "step_id": "a69fedbd",
+        "channel": "reviewer-output",
+        "title": "Understand task output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\50fa7c3e028d4b6798eb0e3cbbb5ef12\\a69fedbd-reviewer-output-ctx_7b75049a0c5b.txt",
+        "size_chars": 2159,
+        "line_count": 34,
+        "created_at": "2026-03-20T00:18:02.551559Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "understand",
+          "route_model": "deepseek-chat",
+          "route_provider": "cheap"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 2159,
+        "line_count": 34,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "3872c2ff",
+      "step_title": "Draft solution",
+      "action": "coder_step",
+      "ok": true,
+      "at": "2026-03-20T00:20:04.388569Z",
+      "worker": "coder",
+      "phase": "draft",
+      "route_model": "gpt-5.4-pro",
+      "route_provider": "openai",
+      "output_ref": {
+        "artifact_id": "ctx_d39bc51b8f0f",
+        "task_id": "50fa7c3e028d4b6798eb0e3cbbb5ef12",
+        "step_id": "3872c2ff",
+        "channel": "coder-output",
+        "title": "Draft solution output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\50fa7c3e028d4b6798eb0e3cbbb5ef12\\3872c2ff-coder-output-ctx_d39bc51b8f0f.txt",
+        "size_chars": 1171,
+        "line_count": 25,
+        "created_at": "2026-03-20T00:19:42.674497Z",
+        "metadata": {
+          "worker": "coder",
+          "phase": "draft",
+          "route_model": "gpt-5.4-pro",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "coder-output",
+        "char_count": 1171,
+        "line_count": 25,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "07c46fd7",
+      "step_title": "Execute validation",
+      "action": "shell_step",
+      "ok": true,
+      "at": "2026-03-20T00:21:31.758549Z",
+      "worker": "shell",
+      "phase": "execute",
+      "route_model": "deepseek-chat",
+      "route_provider": "runtime",
+      "output_ref": {
+        "artifact_id": "ctx_eede786072a7",
+        "task_id": "50fa7c3e028d4b6798eb0e3cbbb5ef12",
+        "step_id": "07c46fd7",
+        "channel": "shell-output",
+        "title": "Execute validation output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\50fa7c3e028d4b6798eb0e3cbbb5ef12\\07c46fd7-shell-output-ctx_eede786072a7.txt",
+        "size_chars": 351,
+        "line_count": 11,
+        "created_at": "2026-03-20T00:21:18.919798Z",
+        "metadata": {
+          "worker": "shell",
+          "phase": "execute",
+          "route_model": "deepseek-chat",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "shell-output",
+        "char_count": 351,
+        "line_count": 11,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "dd3dfcc1",
+      "step_title": "Verify result",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-03-20T00:23:20.611076Z",
+      "worker": "reviewer",
+      "phase": "verify",
+      "route_model": "gpt-5.4-pro",
+      "route_provider": "openai",
+      "output_ref": {
+        "artifact_id": "ctx_5fb6c994ba98",
+        "task_id": "50fa7c3e028d4b6798eb0e3cbbb5ef12",
+        "step_id": "dd3dfcc1",
+        "channel": "reviewer-output",
+        "title": "Verify result output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\50fa7c3e028d4b6798eb0e3cbbb5ef12\\dd3dfcc1-reviewer-output-ctx_5fb6c994ba98.txt",
+        "size_chars": 1091,
+        "line_count": 31,
+        "created_at": "2026-03-20T00:23:07.813786Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "verify",
+          "route_model": "gpt-5.4-pro",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 1091,
+        "line_count": 31,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "f3b29ee6",
+      "step_title": "Revise next action",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-03-20T00:24:24.707814Z",
+      "worker": "reviewer",
+      "phase": "revise",
+      "route_model": "deepseek-reasoner",
+      "route_provider": "reasoning",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 586,
+        "line_count": 9,
+        "stored_raw": false
+      },
+      "probe_attempts": 0
+    }
+  ],
+  "task_id": "50fa7c3e028d4b6798eb0e3cbbb5ef12",
+  "task_title": "Align project ToyOS Kernel for Expand tool extension coverage",
+  "task_status": "completed",
+  "started_at": "2026-03-20T00:14:14.615899Z",
+  "updated_at": "2026-03-20T00:24:45.774222Z",
+  "completed": true,
+  "result": {
+    "summary": "Fallback plan generated locally because planner remote access is unavailable.",
+    "completed_steps": 5,
+    "context_used_chars": 602,
+    "cheap_calls_used": 4,
+    "cheap_chars_used": 3983,
+    "escalation_count": 2,
+    "execution_mode": "governance",
+    "production_evidence": {
+      "mode": "governance",
+      "status": "not-required"
+    },
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\50fa7c3e028d4b6798eb0e3cbbb5ef12\\execution-evidence.json",
+    "execution_evidence_step_count": 5
+  }
+}

@@ -1,0 +1,1477 @@
+{
+  "updated_at": "2026-03-10T23:44:24.847249Z",
+  "request": "Enable full autonomous operation: unfreeze premium models, increase max_active_tasks to 12, set max_strong_model_ratio to 0.15, enable brain-loop auto-approval",
+  "classification": {
+    "category": "incremental",
+    "flags": {
+      "architecture_change": false,
+      "constraint_change": false,
+      "goal_change": false,
+      "bugfix_change": false,
+      "scope_change": false
+    }
+  },
+  "risk_level": "medium",
+  "risk_score": 0.59,
+  "matched_projects": [
+    {
+      "project_id": "79120c5dbb",
+      "name": "ToyOS Kernel",
+      "repo_path": "D:\\codex\\generated\\toy-os-demo",
+      "score": 5
+    },
+    {
+      "project_id": "frontend001",
+      "name": "Frontend Study Workspace",
+      "repo_path": "D:\\前端学习资料",
+      "score": 4
+    },
+    {
+      "project_id": "dblab00001",
+      "name": "Database Systems Lab",
+      "repo_path": "D:\\数据库系统",
+      "score": 3
+    },
+    {
+      "project_id": "aimath0001",
+      "name": "AI Math Foundations Workspace",
+      "repo_path": "D:\\人工智能数学基础",
+      "score": 2
+    },
+    {
+      "project_id": "networklab01",
+      "name": "Computer Network Lab",
+      "repo_path": "D:\\计算机网络",
+      "score": 2
+    }
+  ],
+  "graph_focus": {
+    "module_focus": [
+      "app.models",
+      "tools.codex_control",
+      "tools.brain_loop",
+      "runtime.brain_loop",
+      "tools.autonomy_score",
+      "tools.organization_model",
+      "tools.skill_training_loop",
+      "tools.agent_market_loop"
+    ],
+    "owner_teams": [
+      "backend_team",
+      "infrastructure_team"
+    ],
+    "layers": [
+      "unclassified"
+    ],
+    "matched_modules": [
+      {
+        "module": "app.models",
+        "owner_team": "backend_team",
+        "owner": "coder",
+        "layer": "unclassified",
+        "dependency_count": 0,
+        "dependents": 9,
+        "internal_imports": []
+      },
+      {
+        "module": "tools.codex_control",
+        "owner_team": "infrastructure_team",
+        "owner": "ops",
+        "layer": "unclassified",
+        "dependency_count": 50,
+        "dependents": 0,
+        "internal_imports": [
+          "app.main",
+          "runtime.goal_manager",
+          "runtime.platform_generator",
+          "runtime.scheduler",
+          "runtime.taskgraph_engine",
+          "state.store",
+          "tools.ai_guard",
+          "tools.architecture_validator",
+          "tools.automation_lab",
+          "tools.autonomy_score",
+          "tools.brain_loop",
+          "tools.brain_snapshot",
+          "tools.branch_workboard",
+          "tools.capability_registry",
+          "tools.change_request_analyzer",
+          "tools.code_knowledge_graph",
+          "tools.company_os",
+          "tools.context_cache",
+          "tools.context_kernel",
+          "tools.coordination_runtime",
+          "tools.cross_project_coordination",
+          "tools.dependency_impact_engine",
+          "tools.environment_repair_lane",
+          "tools.experiment_evaluator",
+          "tools.experiment_executor",
+          "tools.experiment_planner",
+          "tools.factory_daemon",
+          "tools.goal_registry",
+          "tools.knowledge_engine",
+          "tools.memory_system",
+          "tools.meta_factory_control",
+          "tools.module_ownership",
+          "tools.module_ownership_graph",
+          "tools.organization_model",
+          "tools.organization_workboard",
+          "tools.platform_registry",
+          "tools.privilege_policy",
+          "tools.project_graph",
+          "tools.release_operations",
+          "tools.release_train_runtime",
+          "tools.replan_engine",
+          "tools.runtime_maintenance",
+          "tools.session_guard",
+          "tools.skill_training_loop",
+          "tools.soak_validation",
+          "tools.taskgraph_compiler",
+          "tools.tool_health_audit",
+          "tools.tool_registry",
+          "tools.verification_engine",
+          "tools.vm_orchestrator"
+        ]
+      },
+      {
+        "module": "tools.brain_loop",
+        "owner_team": "infrastructure_team",
+        "owner": "ops",
+        "layer": "unclassified",
+        "dependency_count": 29,
+        "dependents": 3,
+        "internal_imports": [
+          "app.main",
+          "runtime.platform_generator",
+          "runtime.scheduler",
+          "tools.ai_guard",
+          "tools.capability_distillation",
+          "tools.context_kernel",
+          "tools.coordination_runtime",
+          "tools.cross_project_coordination",
+          "tools.decision_engine",
+          "tools.experiment_evaluator",
+          "tools.experiment_executor",
+          "tools.experiment_planner",
+          "tools.global_policy_engine",
+          "tools.goal_registry",
+          "tools.knowledge_engine",
+          "tools.memory_system",
+          "tools.module_ownership",
+          "tools.platform_registry",
+          "tools.platform_verification_sweep",
+          "tools.privilege_policy",
+          "tools.prompt_improvement_sweep",
+          "tools.release_operations",
+          "tools.release_train_runtime",
+          "tools.runtime_maintenance",
+          "tools.scheduler_optimization_sweep",
+          "tools.task_state_tools",
+          "tools.taskgraph_compiler",
+          "tools.tool_health_audit",
+          "tools.verification_engine"
+        ]
+      },
+      {
+        "module": "runtime.brain_loop",
+        "owner_team": "backend_team",
+        "owner": "coder",
+        "layer": "unclassified",
+        "dependency_count": 2,
+        "dependents": 0,
+        "internal_imports": [
+          "runtime.executor",
+          "tools.release_train_runtime"
+        ]
+      },
+      {
+        "module": "tools.autonomy_score",
+        "owner_team": "infrastructure_team",
+        "owner": "ops",
+        "layer": "unclassified",
+        "dependency_count": 0,
+        "dependents": 7,
+        "internal_imports": []
+      },
+      {
+        "module": "tools.organization_model",
+        "owner_team": "infrastructure_team",
+        "owner": "ops",
+        "layer": "unclassified",
+        "dependency_count": 0,
+        "dependents": 7,
+        "internal_imports": []
+      },
+      {
+        "module": "tools.skill_training_loop",
+        "owner_team": "infrastructure_team",
+        "owner": "ops",
+        "layer": "unclassified",
+        "dependency_count": 0,
+        "dependents": 1,
+        "internal_imports": []
+      },
+      {
+        "module": "tools.agent_market_loop",
+        "owner_team": "infrastructure_team",
+        "owner": "ops",
+        "layer": "unclassified",
+        "dependency_count": 1,
+        "dependents": 0,
+        "internal_imports": [
+          "tools.execution_trace"
+        ]
+      }
+    ]
+  },
+  "context_package": {
+    "task": "Enable full autonomous operation: unfreeze premium models, increase max_active_tasks to 12, set max_strong_model_ratio to 0.15, enable brain-loop auto-approval",
+    "task_type": "implementation",
+    "repo_path": "D:\\codex\\generated\\toy-os-demo",
+    "module_focus": [
+      "app.models",
+      "tools.codex_control",
+      "tools.brain_loop",
+      "runtime.brain_loop",
+      "tools.autonomy_score",
+      "tools.organization_model"
+    ],
+    "dependency_modules": [],
+    "owner_teams": [
+      "backend_team",
+      "infrastructure_team"
+    ],
+    "layers": [
+      "unclassified"
+    ],
+    "project_context": {},
+    "knowledge_hints": {
+      "preferred_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension"
+      ],
+      "preferred_workers": [
+        "reviewer"
+      ],
+      "repo_learning": {
+        "updated_at": "2026-03-10T23:43:43.020837Z",
+        "embedding": {
+          "provider": "local",
+          "model": "BAAI/bge-small-en-v1.5",
+          "dimensions": 128,
+          "backend": "hashed-local",
+          "ready": true
+        },
+        "graph_modules": 116,
+        "chunk_count": 116,
+        "top_modules": [
+          {
+            "module": "tools.codex_control",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\codex_control.py"
+          },
+          {
+            "module": "tools.brain_loop",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\brain_loop.py"
+          },
+          {
+            "module": "tools.factory_daemon",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\factory_daemon.py"
+          },
+          {
+            "module": "tools.meta_factory_control",
+            "layer": "architecture_engine",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\meta_factory_control.py"
+          },
+          {
+            "module": "app.orchestrator",
+            "layer": "unclassified",
+            "owner_team": "backend_team",
+            "path": "D:\\codex\\orchestrator-mvp\\app\\orchestrator.py"
+          },
+          {
+            "module": "tools.decision_engine",
+            "layer": "task_graph_planner",
+            "owner_team": "architecture_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\decision_engine.py"
+          },
+          {
+            "module": "tools.change_request_analyzer",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\change_request_analyzer.py"
+          },
+          {
+            "module": "tools.taskgraph_compiler",
+            "layer": "architecture_engine",
+            "owner_team": "architecture_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\taskgraph_compiler.py"
+          },
+          {
+            "module": "tools.verification_engine",
+            "layer": "verification",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\verification_engine.py"
+          },
+          {
+            "module": "app.worker_adapters",
+            "layer": "unclassified",
+            "owner_team": "backend_team",
+            "path": "D:\\codex\\orchestrator-mvp\\app\\worker_adapters.py"
+          },
+          {
+            "module": "app.main",
+            "layer": "unclassified",
+            "owner_team": "backend_team",
+            "path": "D:\\codex\\orchestrator-mvp\\app\\main.py"
+          },
+          {
+            "module": "app.openai_client",
+            "layer": "unclassified",
+            "owner_team": "backend_team",
+            "path": "D:\\codex\\orchestrator-mvp\\app\\openai_client.py"
+          }
+        ]
+      }
+    },
+    "verification_scope": {
+      "modules": [
+        "app.models",
+        "tools.codex_control",
+        "tools.brain_loop",
+        "runtime.brain_loop",
+        "tools.autonomy_score",
+        "tools.organization_model"
+      ],
+      "teams": [
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "layers": [
+        "unclassified"
+      ]
+    },
+    "current_plan": [
+      "Task type: implementation",
+      "Primary modules: app.models, tools.codex_control, tools.brain_loop, runtime.brain_loop, tools.autonomy_score, tools.organization_model",
+      "Dependency expansion: none",
+      "Owner teams: backend_team, infrastructure_team",
+      "Layers: unclassified"
+    ],
+    "summary_blocks": [
+      "Task type: implementation\nPrimary modules: app.models, tools.codex_control, tools.brain_loop, runtime.brain_loop, tools.autonomy_score, tools.organization_model\nDependency expansion: none\nOwner teams: backend_team, infrastructure_team\nLayers: unclassified",
+      "Preferred capabilities: agent_orchestration, webapp_generation, deploy_scaffold, tool_extension\nPreferred workers: reviewer\nTop capability reputation: agent_orchestration, webapp_generation, deploy_scaffold, tool_extension\nTop worker reputation: reviewer\nRepo learning modules=116 chunks=116"
+    ],
+    "budget_chars": 2400
+  },
+  "dependency_impact": {
+    "updated_at": "2026-03-10T23:44:24.408791Z",
+    "request": "Enable full autonomous operation: unfreeze premium models, increase max_active_tasks to 12, set max_strong_model_ratio to 0.15, enable brain-loop auto-approval",
+    "focus_modules": [
+      "app.models",
+      "tools.codex_control",
+      "tools.brain_loop",
+      "runtime.brain_loop",
+      "tools.autonomy_score",
+      "tools.organization_model",
+      "tools.skill_training_loop",
+      "tools.agent_market_loop"
+    ],
+    "impacted_modules": [
+      {
+        "module": "app.models",
+        "depth": 0,
+        "owner_team": "backend_team",
+        "layer": "unclassified",
+        "dependents": 9
+      },
+      {
+        "module": "runtime.brain_loop",
+        "depth": 0,
+        "owner_team": "backend_team",
+        "layer": "unclassified",
+        "dependents": 0
+      },
+      {
+        "module": "tools.agent_market_loop",
+        "depth": 0,
+        "owner_team": "infrastructure_team",
+        "layer": "unclassified",
+        "dependents": 0
+      },
+      {
+        "module": "tools.autonomy_score",
+        "depth": 0,
+        "owner_team": "infrastructure_team",
+        "layer": "unclassified",
+        "dependents": 7
+      },
+      {
+        "module": "tools.brain_loop",
+        "depth": 0,
+        "owner_team": "infrastructure_team",
+        "layer": "unclassified",
+        "dependents": 3
+      },
+      {
+        "module": "tools.codex_control",
+        "depth": 0,
+        "owner_team": "infrastructure_team",
+        "layer": "unclassified",
+        "dependents": 0
+      },
+      {
+        "module": "tools.organization_model",
+        "depth": 0,
+        "owner_team": "infrastructure_team",
+        "layer": "unclassified",
+        "dependents": 7
+      },
+      {
+        "module": "tools.skill_training_loop",
+        "depth": 0,
+        "owner_team": "infrastructure_team",
+        "layer": "unclassified",
+        "dependents": 1
+      },
+      {
+        "module": "app.budget_manager",
+        "depth": 1,
+        "owner_team": "backend_team",
+        "layer": "unclassified",
+        "dependents": 1
+      },
+      {
+        "module": "app.context_service",
+        "depth": 1,
+        "owner_team": "backend_team",
+        "layer": "unclassified",
+        "dependents": 1
+      },
+      {
+        "module": "app.git_service",
+        "depth": 1,
+        "owner_team": "backend_team",
+        "layer": "unclassified",
+        "dependents": 2
+      },
+      {
+        "module": "app.main",
+        "depth": 1,
+        "owner_team": "backend_team",
+        "layer": "unclassified",
+        "dependents": 3
+      },
+      {
+        "module": "app.model_router",
+        "depth": 1,
+        "owner_team": "backend_team",
+        "layer": "unclassified",
+        "dependents": 3
+      },
+      {
+        "module": "app.openai_client",
+        "depth": 1,
+        "owner_team": "backend_team",
+        "layer": "unclassified",
+        "dependents": 1
+      },
+      {
+        "module": "app.orchestrator",
+        "depth": 1,
+        "owner_team": "backend_team",
+        "layer": "unclassified",
+        "dependents": 0
+      },
+      {
+        "module": "app.resource_registry",
+        "depth": 1,
+        "owner_team": "backend_team",
+        "layer": "unclassified",
+        "dependents": 2
+      },
+      {
+        "module": "app.worker_adapters",
+        "depth": 1,
+        "owner_team": "backend_team",
+        "layer": "unclassified",
+        "dependents": 1
+      },
+      {
+        "module": "runtime.executor",
+        "depth": 1,
+        "owner_team": "backend_team",
+        "layer": "unclassified",
+        "dependents": 1
+      },
+      {
+        "module": "tools.branch_context",
+        "depth": 1,
+        "owner_team": "infrastructure_team",
+        "layer": "unclassified",
+        "dependents": 1
+      },
+      {
+        "module": "tools.branch_workboard",
+        "depth": 1,
+        "owner_team": "infrastructure_team",
+        "layer": "unclassified",
+        "dependents": 3
+      },
+      {
+        "module": "tools.decision_engine",
+        "depth": 1,
+        "owner_team": "architecture_team",
+        "layer": "task_graph_planner",
+        "dependents": 1
+      },
+      {
+        "module": "tools.distillation",
+        "depth": 1,
+        "owner_team": "infrastructure_team",
+        "layer": "unclassified",
+        "dependents": 1
+      },
+      {
+        "module": "tools.factory_daemon",
+        "depth": 1,
+        "owner_team": "infrastructure_team",
+        "layer": "unclassified",
+        "dependents": 1
+      },
+      {
+        "module": "tools.generate_system_workspace",
+        "depth": 1,
+        "owner_team": "infrastructure_team",
+        "layer": "unclassified",
+        "dependents": 0
+      },
+      {
+        "module": "tools.meta_factory_control",
+        "depth": 1,
+        "owner_team": "infrastructure_team",
+        "layer": "architecture_engine",
+        "dependents": 3
+      },
+      {
+        "module": "tools.module_ownership",
+        "depth": 1,
+        "owner_team": "infrastructure_team",
+        "layer": "unclassified",
+        "dependents": 8
+      },
+      {
+        "module": "tools.module_ownership_graph",
+        "depth": 1,
+        "owner_team": "infrastructure_team",
+        "layer": "unclassified",
+        "dependents": 5
+      },
+      {
+        "module": "tools.taskgraph_compiler",
+        "depth": 1,
+        "owner_team": "architecture_team",
+        "layer": "architecture_engine",
+        "dependents": 3
+      },
+      {
+        "module": "app.llm_service",
+        "depth": 2,
+        "owner_team": "backend_team",
+        "layer": "unclassified",
+        "dependents": 1
+      },
+      {
+        "module": "runtime.taskgraph_engine",
+        "depth": 2,
+        "owner_team": "backend_team",
+        "layer": "task_graph_planner",
+        "dependents": 1
+      },
+      {
+        "module": "tools.change_request_analyzer",
+        "depth": 2,
+        "owner_team": "infrastructure_team",
+        "layer": "unclassified",
+        "dependents": 2
+      },
+      {
+        "module": "tools.platform_verification_sweep",
+        "depth": 2,
+        "owner_team": "infrastructure_team",
+        "layer": "verification",
+        "dependents": 1
+      },
+      {
+        "module": "tools.replan_engine",
+        "depth": 2,
+        "owner_team": "infrastructure_team",
+        "layer": "unclassified",
+        "dependents": 1
+      },
+      {
+        "module": "tools.verification_engine",
+        "depth": 2,
+        "owner_team": "infrastructure_team",
+        "layer": "verification",
+        "dependents": 5
+      }
+    ],
+    "affected_teams": [
+      "architecture_team",
+      "backend_team",
+      "infrastructure_team"
+    ],
+    "affected_layers": [
+      "architecture_engine",
+      "task_graph_planner",
+      "unclassified",
+      "verification"
+    ],
+    "verification_scope": [
+      "app.budget_manager",
+      "app.context_service",
+      "app.git_service",
+      "app.llm_service",
+      "app.main",
+      "app.model_router",
+      "app.models",
+      "app.openai_client",
+      "app.resource_registry",
+      "app.worker_adapters",
+      "runtime.executor",
+      "runtime.taskgraph_engine",
+      "tools.autonomy_score",
+      "tools.brain_loop",
+      "tools.branch_context",
+      "tools.branch_workboard",
+      "tools.change_request_analyzer",
+      "tools.decision_engine",
+      "tools.distillation",
+      "tools.factory_daemon",
+      "tools.meta_factory_control",
+      "tools.module_ownership",
+      "tools.module_ownership_graph",
+      "tools.organization_model",
+      "tools.platform_verification_sweep",
+      "tools.replan_engine",
+      "tools.skill_training_loop",
+      "tools.taskgraph_compiler",
+      "tools.verification_engine"
+    ]
+  },
+  "project_impact": {
+    "updated_at": "2026-03-10T23:44:24.409791Z",
+    "request": "Enable full autonomous operation: unfreeze premium models, increase max_active_tasks to 12, set max_strong_model_ratio to 0.15, enable brain-loop auto-approval",
+    "query_domains": [
+      "factory"
+    ],
+    "related_projects": [
+      {
+        "project_id": "79120c5dbb",
+        "name": "ToyOS Kernel",
+        "type": "project",
+        "repo_path": "D:\\codex\\generated\\toy-os-demo",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "project_id": "dblab00001",
+        "name": "Database Systems Lab",
+        "type": "project",
+        "repo_path": "D:\\数据库系统",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "project_id": "aimath0001",
+        "name": "AI Math Foundations Workspace",
+        "type": "project",
+        "repo_path": "D:\\人工智能数学基础",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "project_id": "platform_d33a56cc79",
+        "name": "AI Research Factory",
+        "type": "platform",
+        "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\ai-research-factory",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "project_id": "platform_8855699f64",
+        "name": "AI Agent Factory",
+        "type": "platform",
+        "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\ai-agent-factory",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "project_id": "platform_009b511d6b",
+        "name": "build ai-video-factory",
+        "type": "platform",
+        "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\build-ai-video-factory",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "project_id": "platform_8590e6bcbe",
+        "name": "AI Web Platform Factory",
+        "type": "platform",
+        "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\ai-web-platform-factory",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "project_id": "platform_79a3e0e03e",
+        "name": "Improve cheap agent prompts",
+        "type": "platform",
+        "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\improve-cheap-agent-prompts",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "project_id": "platform_464dac2a0b",
+        "name": "Optimize task scheduler from agent experience",
+        "type": "platform",
+        "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\optimize-task-scheduler-from-agent-experience",
+        "domains": [
+          "factory"
+        ]
+      }
+    ],
+    "cross_project_edges": [
+      {
+        "from": "79120c5dbb",
+        "to": "dblab00001",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "79120c5dbb",
+        "to": "aimath0001",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory",
+          "kernel"
+        ]
+      },
+      {
+        "from": "79120c5dbb",
+        "to": "platform_d33a56cc79",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "79120c5dbb",
+        "to": "platform_8855699f64",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "79120c5dbb",
+        "to": "platform_009b511d6b",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "79120c5dbb",
+        "to": "platform_8590e6bcbe",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "79120c5dbb",
+        "to": "platform_79a3e0e03e",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "79120c5dbb",
+        "to": "platform_464dac2a0b",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory",
+          "kernel"
+        ]
+      },
+      {
+        "from": "dblab00001",
+        "to": "79120c5dbb",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "dblab00001",
+        "to": "aimath0001",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "dblab00001",
+        "to": "platform_d33a56cc79",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "dblab00001",
+        "to": "platform_8855699f64",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "dblab00001",
+        "to": "platform_009b511d6b",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "dblab00001",
+        "to": "platform_8590e6bcbe",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "dblab00001",
+        "to": "platform_79a3e0e03e",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "dblab00001",
+        "to": "platform_464dac2a0b",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "aimath0001",
+        "to": "79120c5dbb",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory",
+          "kernel"
+        ]
+      },
+      {
+        "from": "aimath0001",
+        "to": "dblab00001",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "aimath0001",
+        "to": "platform_d33a56cc79",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "aimath0001",
+        "to": "platform_8855699f64",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "aimath0001",
+        "to": "platform_009b511d6b",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "aimath0001",
+        "to": "platform_8590e6bcbe",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "aimath0001",
+        "to": "platform_79a3e0e03e",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "aimath0001",
+        "to": "platform_464dac2a0b",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory",
+          "kernel"
+        ]
+      },
+      {
+        "from": "platform_d33a56cc79",
+        "to": "79120c5dbb",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_d33a56cc79",
+        "to": "dblab00001",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_d33a56cc79",
+        "to": "aimath0001",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_d33a56cc79",
+        "to": "platform_8855699f64",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_d33a56cc79",
+        "to": "platform_009b511d6b",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_d33a56cc79",
+        "to": "platform_8590e6bcbe",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_d33a56cc79",
+        "to": "platform_79a3e0e03e",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_d33a56cc79",
+        "to": "platform_464dac2a0b",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_8855699f64",
+        "to": "79120c5dbb",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_8855699f64",
+        "to": "dblab00001",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_8855699f64",
+        "to": "aimath0001",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_8855699f64",
+        "to": "platform_d33a56cc79",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_8855699f64",
+        "to": "platform_009b511d6b",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_8855699f64",
+        "to": "platform_8590e6bcbe",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_8855699f64",
+        "to": "platform_79a3e0e03e",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_8855699f64",
+        "to": "platform_464dac2a0b",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_009b511d6b",
+        "to": "79120c5dbb",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_009b511d6b",
+        "to": "dblab00001",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_009b511d6b",
+        "to": "aimath0001",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_009b511d6b",
+        "to": "platform_d33a56cc79",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_009b511d6b",
+        "to": "platform_8855699f64",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_009b511d6b",
+        "to": "platform_8590e6bcbe",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_009b511d6b",
+        "to": "platform_79a3e0e03e",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_009b511d6b",
+        "to": "platform_464dac2a0b",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_8590e6bcbe",
+        "to": "79120c5dbb",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_8590e6bcbe",
+        "to": "dblab00001",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_8590e6bcbe",
+        "to": "aimath0001",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_8590e6bcbe",
+        "to": "platform_d33a56cc79",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_8590e6bcbe",
+        "to": "platform_8855699f64",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_8590e6bcbe",
+        "to": "platform_009b511d6b",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_8590e6bcbe",
+        "to": "platform_79a3e0e03e",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_8590e6bcbe",
+        "to": "platform_464dac2a0b",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_79a3e0e03e",
+        "to": "79120c5dbb",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_79a3e0e03e",
+        "to": "dblab00001",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_79a3e0e03e",
+        "to": "aimath0001",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_79a3e0e03e",
+        "to": "platform_d33a56cc79",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_79a3e0e03e",
+        "to": "platform_8855699f64",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_79a3e0e03e",
+        "to": "platform_009b511d6b",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_79a3e0e03e",
+        "to": "platform_8590e6bcbe",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_79a3e0e03e",
+        "to": "platform_464dac2a0b",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_464dac2a0b",
+        "to": "79120c5dbb",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory",
+          "kernel"
+        ]
+      },
+      {
+        "from": "platform_464dac2a0b",
+        "to": "dblab00001",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_464dac2a0b",
+        "to": "aimath0001",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory",
+          "kernel"
+        ]
+      },
+      {
+        "from": "platform_464dac2a0b",
+        "to": "platform_d33a56cc79",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_464dac2a0b",
+        "to": "platform_8855699f64",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_464dac2a0b",
+        "to": "platform_009b511d6b",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_464dac2a0b",
+        "to": "platform_8590e6bcbe",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      },
+      {
+        "from": "platform_464dac2a0b",
+        "to": "platform_79a3e0e03e",
+        "kind": "domain-overlap",
+        "domains": [
+          "factory"
+        ]
+      }
+    ],
+    "cross_project_count": 9
+  },
+  "ownership_review_scope": {
+    "module_focus": [
+      "app.models",
+      "tools.codex_control",
+      "tools.brain_loop",
+      "runtime.brain_loop",
+      "tools.autonomy_score",
+      "tools.organization_model",
+      "tools.skill_training_loop",
+      "tools.agent_market_loop",
+      "app.budget_manager",
+      "app.context_service"
+    ],
+    "owner_teams": [
+      "architecture_team",
+      "backend_team",
+      "infrastructure_team"
+    ],
+    "reviewer_teams": [
+      "architecture_team",
+      "backend_team",
+      "infrastructure_team"
+    ],
+    "merge_policy": {
+      "required_reviewer_teams": [
+        "architecture_team",
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "required_departments": [
+        "architecture_department",
+        "engineering_department",
+        "operations_department"
+      ],
+      "requires_owner_review": true,
+      "requires_architecture_validation": false,
+      "manual_modules": []
+    }
+  },
+  "related_goals": [
+    {
+      "goal_id": "goal_0d868eb1e0",
+      "target": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "status": "completed",
+      "type": "build_product"
+    },
+    {
+      "goal_id": "goal_b3300303ea",
+      "target": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "status": "completed",
+      "type": "build_product"
+    },
+    {
+      "goal_id": "goal_5a360e88f2",
+      "target": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "status": "completed",
+      "type": "build_product"
+    },
+    {
+      "goal_id": "goal_8c879b998f",
+      "target": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "status": "completed",
+      "type": "build_product"
+    },
+    {
+      "goal_id": "goal_98f2ed410f",
+      "target": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "status": "completed",
+      "type": "build_product"
+    },
+    {
+      "goal_id": "goal_f4526bb18d",
+      "target": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "status": "completed",
+      "type": "build_product"
+    },
+    {
+      "goal_id": "goal_8c1a42c928",
+      "target": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "status": "completed",
+      "type": "build_product"
+    },
+    {
+      "goal_id": "goal_cc96a9c1e5",
+      "target": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "status": "completed",
+      "type": "build_product"
+    }
+  ],
+  "recommendation": {
+    "replan_required": true,
+    "requires_architecture_review": false,
+    "verification_scope": [
+      "app.budget_manager",
+      "app.context_service",
+      "app.git_service",
+      "app.llm_service",
+      "app.main",
+      "app.model_router",
+      "app.models",
+      "app.openai_client",
+      "app.resource_registry",
+      "app.worker_adapters",
+      "runtime.executor",
+      "runtime.taskgraph_engine",
+      "tools.autonomy_score",
+      "tools.brain_loop",
+      "tools.branch_context",
+      "tools.branch_workboard",
+      "tools.change_request_analyzer",
+      "tools.decision_engine",
+      "tools.distillation",
+      "tools.factory_daemon",
+      "tools.meta_factory_control",
+      "tools.module_ownership",
+      "tools.module_ownership_graph",
+      "tools.organization_model",
+      "tools.platform_verification_sweep",
+      "tools.replan_engine",
+      "tools.skill_training_loop",
+      "tools.taskgraph_compiler",
+      "tools.verification_engine"
+    ],
+    "focus_capabilities": [
+      "agent_orchestration",
+      "webapp_generation",
+      "deploy_scaffold",
+      "tool_extension"
+    ],
+    "next_mode": "direct-execution"
+  }
+}

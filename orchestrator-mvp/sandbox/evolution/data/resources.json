@@ -1,0 +1,201 @@
+[
+  {
+    "id": "wsl-ubuntu",
+    "name": "Ubuntu WSL",
+    "kind": "runtime",
+    "status": "available",
+    "location": "Ubuntu",
+    "metadata": {
+      "backend": "wsl"
+    }
+  },
+  {
+    "id": "open-interpreter",
+    "name": "Open Interpreter",
+    "kind": "tool",
+    "status": "available",
+    "location": "D:\\codex\\open-interpreter.cmd",
+    "metadata": {}
+  },
+  {
+    "id": "docker",
+    "name": "Docker",
+    "kind": "container",
+    "status": "available",
+    "location": "docker-desktop",
+    "metadata": {}
+  },
+  {
+    "id": "network-lab-workspace",
+    "name": "Computer Network Lab Workspace",
+    "kind": "runtime",
+    "status": "available",
+    "location": "D:\\计算机网络",
+    "metadata": {
+      "role": "network-course-workspace"
+    }
+  },
+  {
+    "id": "wireshark-bundle",
+    "name": "Wireshark Bundle",
+    "kind": "tool",
+    "status": "available",
+    "location": "D:\\计算机网络\\Wireshark\\Wireshark.exe",
+    "metadata": {
+      "role": "packet-analysis",
+      "family": "network"
+    }
+  },
+  {
+    "id": "tcpdump-cli",
+    "name": "tcpdump CLI",
+    "kind": "tool",
+    "status": "optional",
+    "location": "D:\\计算机网络\\Wireshark\\dumpcap.exe",
+    "metadata": {
+      "role": "packet-capture",
+      "family": "network"
+    }
+  },
+  {
+    "id": "curl-cli",
+    "name": "curl CLI",
+    "kind": "tool",
+    "status": "available",
+    "location": "curl",
+    "metadata": {
+      "role": "http-client",
+      "family": "network"
+    }
+  },
+  {
+    "id": "database-lab-workspace",
+    "name": "Database Systems Lab Workspace",
+    "kind": "runtime",
+    "status": "available",
+    "location": "D:\\数据库系统",
+    "metadata": {
+      "role": "database-course-workspace",
+      "note": "documents detected; runtime not yet confirmed"
+    }
+  },
+  {
+    "id": "frontend-study-workspace",
+    "name": "Frontend Study Workspace",
+    "kind": "runtime",
+    "status": "available",
+    "location": "D:\\前端学习资料",
+    "metadata": {
+      "role": "frontend-course-workspace"
+    }
+  },
+  {
+    "id": "ai-math-workspace",
+    "name": "AI Math Foundations Workspace",
+    "kind": "runtime",
+    "status": "available",
+    "location": "D:\\人工智能数学基础",
+    "metadata": {
+      "role": "math-course-workspace"
+    }
+  },
+  {
+    "id": "mysql-cli",
+    "name": "MySQL CLI",
+    "kind": "tool",
+    "status": "optional",
+    "location": "mysql",
+    "metadata": {
+      "role": "database-client",
+      "family": "mysql"
+    }
+  },
+  {
+    "id": "mysql-server",
+    "name": "MySQL Server",
+    "kind": "runtime",
+    "status": "optional",
+    "location": "localhost:3306",
+    "metadata": {
+      "role": "database-runtime",
+      "family": "mysql"
+    }
+  },
+  {
+    "id": "cline",
+    "name": "Cline",
+    "kind": "ide",
+    "status": "available",
+    "location": "VS Code",
+    "metadata": {}
+  },
+  {
+    "id": "autogpt",
+    "name": "AutoGPT Classic",
+    "kind": "tool",
+    "status": "available",
+    "location": "D:\\codex\\agents\\autogpt-classic",
+    "metadata": {}
+  },
+  {
+    "id": "crewai",
+    "name": "CrewAI Starter",
+    "kind": "tool",
+    "status": "available",
+    "location": "D:\\codex\\agents\\crewai-starter",
+    "metadata": {}
+  },
+  {
+    "id": "planner-openai",
+    "name": "GPT Planner",
+    "kind": "model",
+    "status": "configured",
+    "location": "OpenAI",
+    "metadata": {
+      "role": "planner"
+    }
+  },
+  {
+    "id": "cheap-lane",
+    "name": "Cheap Model Lane",
+    "kind": "model",
+    "status": "optional",
+    "location": "OpenAI-compatible",
+    "metadata": {
+      "role": "coder-reviewer-summary"
+    }
+  },
+  {
+    "id": "browser-automation-bridge",
+    "name": "Browser Automation Bridge",
+    "kind": "tool",
+    "status": "available",
+    "location": "D:\\codex\\tools\\browser-automation\\read-page.ps1",
+    "metadata": {
+      "role": "real-browser-reading",
+      "browser": "edge-or-chrome",
+      "family": "playwright-core"
+    }
+  },
+  {
+    "id": "release-records",
+    "name": "Release Records",
+    "kind": "runtime",
+    "status": "available",
+    "location": "D:\\codex\\orchestrator-mvp\\data\release_records.json",
+    "metadata": {
+      "role": "release-history"
+    }
+  },
+  {
+    "id": "deploy-target-local",
+    "name": "Local Deploy Target",
+    "kind": "runtime",
+    "status": "optional",
+    "location": "local-workspace",
+    "metadata": {
+      "role": "deploy-target",
+      "scope": "local"
+    }
+  }
+]

@@ -1,0 +1,158 @@
+{
+  "task_id": "211aaa176cae4a2fa00e16ae7a7032e6",
+  "task_status": "failed",
+  "phase": "failed",
+  "updated_at": "2026-04-02T19:01:57.337966Z",
+  "heartbeat_at": "2026-04-02T19:01:57.337966Z",
+  "repo_path": "D:\\codex\\orchestrator-mvp",
+  "goal": "Implement the bounded change",
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": "runtime.failure_backlog_automation",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\211aaa176cae4a2fa00e16ae7a7032e6",
+  "error": "Command contains denied pattern: format",
+  "title": "Implement the bounded change",
+  "prompt": "Audit the throughput blueprint against the current controller code, identify the smallest queue admission and WIP gaps, and produce a bounded implementation note or patch plan.",
+  "scheduler_hint": {
+    "automation_source": "failure_backlog_automation",
+    "template_id": "throughput-policy-audit",
+    "template_category": "governance",
+    "cluster_key": "strengthen agent orchestration capability",
+    "cluster_count": 161,
+    "cluster_status": "attention",
+    "handling_mode": "control_plane_stabilization",
+    "dispatch_now": false,
+    "admission_mode": "degraded",
+    "scheduled_by": "runtime.failure_backlog_automation",
+    "decomposition_child": true,
+    "decomposition_parent_task_id": "bdc3903b94c6427cb908126d105c1889",
+    "decomposition_root_task_id": "2a1bf9a87f1c4144a0e4753e47cdaea9",
+    "decomposition_depth": 2,
+    "max_decomposition_depth": 2,
+    "decomposition_child_index": 2,
+    "decomposition_allow_children": true,
+    "decomposition_path_kind": "branch",
+    "decomposition_shared_dependency_group": "2a1bf9a87f1c4144a0e4753e47cdaea9",
+    "decomposition_repair_for": null,
+    "decomposition_dependencies": [
+      "Analyze the current state"
+    ],
+    "admission_lane": "exploration",
+    "admission_reason": "artifact_spec_missing",
+    "requested_execution_mode": "production",
+    "task_type": "exploration_intake",
+    "queue_name": "exploration",
+    "verification_level": "L1",
+    "max_runtime_seconds": 900,
+    "retry_limit": 0,
+    "rollback_rule": "return_to_planner",
+    "dependency_task_ids": [
+      "1da8c67c897d42bf8173086fdf9218bf"
+    ],
+    "dependency_count": 1
+  },
+  "context_package": {},
+  "plan": [
+    {
+      "id": "6b138baa",
+      "title": "Explore repository structure and locate blueprint + controller",
+      "status": "failed",
+      "worker": "shell",
+      "phase": "discovery"
+    },
+    {
+      "id": "8036e603",
+      "title": "Read throughput blueprint and controller code",
+      "status": "pending",
+      "worker": "coder",
+      "phase": "analysis"
+    },
+    {
+      "id": "37d765c0",
+      "title": "Identify queue admission and WIP gaps",
+      "status": "pending",
+      "worker": "planner",
+      "phase": "analysis"
+    },
+    {
+      "id": "e6cefc47",
+      "title": "Produce bounded implementation plan",
+      "status": "pending",
+      "worker": "planner",
+      "phase": "planning"
+    }
+  ],
+  "verification_signals": [
+    {
+      "timestamp": "2026-04-02T18:54:52.489931Z",
+      "kind": "admission_accepted",
+      "success": true,
+      "task_id": "211aaa176cae4a2fa00e16ae7a7032e6",
+      "admission_lane": null,
+      "admission_reason": null,
+      "execution_mode": "production",
+      "queue_name": "build_test",
+      "task_type": "build_fix"
+    },
+    {
+      "timestamp": "2026-04-02T18:59:43.996923Z",
+      "kind": "step_failed",
+      "success": false,
+      "task_id": "211aaa176cae4a2fa00e16ae7a7032e6",
+      "step_id": "6b138baa",
+      "step_title": "Explore repository structure and locate blueprint + controller",
+      "worker": "shell",
+      "phase": "discovery",
+      "route_model": "deepseek-chat",
+      "route_provider": "runtime",
+      "elapsed_ms": 71155,
+      "error": "Command contains denied pattern: format",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "error-output",
+        "char_count": 39,
+        "line_count": 1,
+        "stored_raw": false
+      }
+    }
+  ],
+  "verification_signal_count": 2,
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-02T18:54:52.489931Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "211aaa176cae4a2fa00e16ae7a7032e6",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "production",
+        "queue_name": "build_test",
+        "task_type": "build_fix"
+      },
+      {
+        "timestamp": "2026-04-02T18:59:43.996923Z",
+        "kind": "step_failed",
+        "success": false,
+        "task_id": "211aaa176cae4a2fa00e16ae7a7032e6",
+        "step_id": "6b138baa",
+        "step_title": "Explore repository structure and locate blueprint + controller",
+        "worker": "shell",
+        "phase": "discovery",
+        "route_model": "deepseek-chat",
+        "route_provider": "runtime",
+        "elapsed_ms": 71155,
+        "error": "Command contains denied pattern: format",
+        "output_ref": {},
+        "output_stats": {
+          "channel": "error-output",
+          "char_count": 39,
+          "line_count": 1,
+          "stored_raw": false
+        }
+      }
+    ]
+  }
+}

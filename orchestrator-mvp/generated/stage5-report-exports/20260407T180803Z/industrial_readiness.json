@@ -1,0 +1,156 @@
+{
+  "updated_at": "2026-04-07T17:54:02.883741Z",
+  "status": "attention",
+  "slo_registry_path": "D:\\codex\\orchestrator-mvp\\data\\production_slo_registry.json",
+  "incident_summary_path": "D:\\codex\\orchestrator-mvp\\data\\incident_ledger_summary.json",
+  "telemetry_path": "D:\\codex\\orchestrator-mvp\\data\\telemetry_events.json",
+  "queue_pressure_path": "D:\\codex\\orchestrator-mvp\\data\\queue_pressure_analysis.json",
+  "slo_compliance": {
+    "control_loop_success_rate": {
+      "status": "pass",
+      "value": 1.0,
+      "minimum": 0.995,
+      "maximum": null
+    },
+    "control_decision_latency_p95_seconds": {
+      "status": "pass",
+      "value": 0.205,
+      "minimum": null,
+      "maximum": 5.0
+    },
+    "task_start_latency_p95_minutes": {
+      "status": "pass",
+      "value": 6.5,
+      "minimum": null,
+      "maximum": 15.0
+    },
+    "task_success_rate_24h": {
+      "status": "fail",
+      "value": 0.0,
+      "minimum": 0.95,
+      "maximum": null
+    },
+    "real_artifact_pass_rate": {
+      "status": "fail",
+      "value": 0.0,
+      "minimum": 0.95,
+      "maximum": null
+    },
+    "artifact_regression_fail_rate": {
+      "status": "pass",
+      "value": 0.0,
+      "minimum": null,
+      "maximum": 0.05
+    },
+    "mttr_minutes": {
+      "status": "pass",
+      "value": 0.0,
+      "minimum": null,
+      "maximum": 30.0
+    },
+    "auto_recovery_success_rate": {
+      "status": "pass",
+      "value": 0.9941,
+      "minimum": 0.9,
+      "maximum": null
+    },
+    "failed_release_rollback_time_minutes": {
+      "status": "pass",
+      "value": 0.0,
+      "minimum": null,
+      "maximum": 10.0
+    },
+    "cost_per_real_artifact": {
+      "status": "unknown",
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "reason": "missing measurement"
+    }
+  },
+  "live_context": {
+    "stage5_status": "confirmed",
+    "control_layer_status": "stable",
+    "autonomy_stage": "stage4_confirmed",
+    "active_queue_pressure": "low",
+    "historical_failure_debt_count": 95,
+    "historical_failure_debt_severity": "high",
+    "amplifier_success_conversion_rate": 0.0,
+    "industrial_operations_status": "normal",
+    "release_freeze": false,
+    "budget_suppression": {
+      "goal_backlog": {
+        "budget_suppressed_candidate_count": 0,
+        "budget_gate_closed": false,
+        "goal_health": "starved",
+        "last_replenishment_result": "replenishment_failed"
+      },
+      "artifact_growth": {
+        "status": "budget_closed",
+        "created_items": 0,
+        "skipped_due_to_budget": 0,
+        "budget_closed": true
+      },
+      "capability_builder": {
+        "status": "budget_closed",
+        "open_items_created": 0,
+        "budget_closed": true
+      },
+      "p2_sandbox": {
+        "status": "budget_closed",
+        "created_items": 4,
+        "budget_closed": true
+      },
+      "failure_backlog_automation": {
+        "created_count": 0,
+        "toyos_created_count": 0,
+        "budget_suppressed_candidate_count": 0
+      }
+    },
+    "autonomy_control_plane_status": "pass",
+    "autonomy_control_plane_closed_pools": [
+      "P2"
+    ]
+  },
+  "telemetry_summary": {
+    "event_count": 0,
+    "task_success_rate": 0.2175,
+    "cheap_calls_total": 181,
+    "core_escalations_total": 172,
+    "control_trace_count": 66
+  },
+  "economics_summary": {
+    "source": "D:\\codex\\orchestrator-mvp\\data\\economics_engine_status.json",
+    "cost_per_real_artifact": null,
+    "rollback_measurement": {
+      "value": 0.0,
+      "source": "drill",
+      "measured_at": null
+    }
+  },
+  "incident_summary": {
+    "updated_at": "2026-04-07T17:54:02.873574Z",
+    "status": "pass",
+    "incident_count": 507,
+    "open_incident_count": 3,
+    "closed_incident_count": 504,
+    "severity_counts": {
+      "medium": 504
+    },
+    "domain_counts": {
+      "config": 504
+    },
+    "auto_repair_success_count": 504,
+    "auto_recovery_success_rate": 0.9941,
+    "mttr_minutes_p50": 0.0,
+    "mttr_minutes_p95": 0.02,
+    "ledger_path": "D:\\codex\\orchestrator-mvp\\data\\incident_ledger.json"
+  },
+  "coverage_notes": [
+    "Unknown measurements are treated as non-compliant for release decisions.",
+    "This report is a production governance view, not a replacement for live metrics collection.",
+    "SLO thresholds intentionally start conservative until each plane has live measurements.",
+    "Rollback is accepted from a dedicated rollback drill when no live failed-release rollback exists yet.",
+    "Industrial operations are tracked separately so freeze/degrade policy can tighten without masking readiness state."
+  ]
+}

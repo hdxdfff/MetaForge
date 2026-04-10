@@ -1,0 +1,93 @@
+﻿{
+  "plan_id": "recursive-memory-6h-20260312",
+  "updated_at": "2026-03-12T22:45:00+08:00",
+  "workspace": "D:\\codex",
+  "delivery_dir": "D:\\codex\\generated\\metaforge-ai-factory",
+  "timebox_hours": 6,
+  "objective": "Deliver a bounded recursive memory MVP plan and supporting evidence without broad controller mutation.",
+  "start_state": {
+    "engineering_os": "pass",
+    "control_layer": "constrained",
+    "daemon_status": "readable-with-runtime-error",
+    "ai_testing": "pass"
+  },
+  "phases": [
+    {
+      "id": "phase-0-runtime",
+      "hours": 1.0,
+      "goal": "Stabilize or tightly bound current daemon runtime issue.",
+      "outputs": [
+        "recursive_memory_runtime_blockers.md"
+      ],
+      "validation": [
+        "powershell -ExecutionPolicy Bypass -File D:\\codex\\factoryctl.ps1 daemon-status",
+        "powershell -ExecutionPolicy Bypass -File D:\\codex\\factoryctl.ps1 control-layer-status"
+      ]
+    },
+    {
+      "id": "phase-1-pipeline",
+      "hours": 1.5,
+      "goal": "Define event and episode schemas plus source mapping.",
+      "outputs": [
+        "recursive_memory_event_schema.json",
+        "recursive_memory_episode_schema.json",
+        "recursive_memory_pipeline_map.md"
+      ],
+      "validation": [
+        "file presence check",
+        "json parse check"
+      ]
+    },
+    {
+      "id": "phase-2-reflection",
+      "hours": 1.5,
+      "goal": "Define reflection contract, consolidation thresholds, and strategy injection points.",
+      "outputs": [
+        "recursive_memory_reflection_contract.json",
+        "recursive_memory_consolidation_rules.md",
+        "recursive_memory_injection_points.md"
+      ],
+      "validation": [
+        "field completeness review",
+        "cross-check against current tools and status artifacts"
+      ]
+    },
+    {
+      "id": "phase-3-mvp-backlog",
+      "hours": 1.5,
+      "goal": "Create dispatchable low-risk backlog and patch target map.",
+      "outputs": [
+        "recursive_memory_mvp_backlog.json",
+        "recursive_memory_patch_targets.md",
+        "recursive_memory_validation_plan.md"
+      ],
+      "validation": [
+        "json parse check",
+        "cheapest-first validation review"
+      ]
+    },
+    {
+      "id": "phase-4-readout",
+      "hours": 0.5,
+      "goal": "Summarize outcomes and residual risks.",
+      "outputs": [
+        "recursive_memory_readout.md",
+        "recursive_memory_risks.md"
+      ],
+      "validation": [
+        "artifact presence check"
+      ]
+    }
+  ],
+  "success_conditions": [
+    "At least 8 artifacts are created under the delivery directory.",
+    "A machine-readable backlog exists.",
+    "The loop experience -> reflection -> consolidation -> strategy injection is explicit.",
+    "Status command readability is preserved."
+  ],
+  "guardrails": [
+    "No broad controller-core mutation.",
+    "No privilege policy changes.",
+    "Prefer bounded tooling fixes plus generated evidence."
+  ]
+}

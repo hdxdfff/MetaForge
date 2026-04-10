@@ -1,0 +1,108 @@
+{
+  "system": "AI Factory OS",
+  "mode": "codex-first",
+  "protocol": "AMFP-3 bounded",
+  "topology": [
+    "Codex Chat",
+    "Factory Controller",
+    "Factory State",
+    "Agents"
+  ],
+  "controller": {
+    "entrypoints": [
+      "tools/codex_control.py",
+      "D:/codex/factoryctl.cmd"
+    ],
+    "state_sources": [
+      "data/context_kernel.json",
+      "data/hot_context.json",
+      "data/escalation_inbox.json",
+      "data/tasks.json",
+      "data/core_agent_profile.json"
+    ]
+  },
+  "modules": [
+    "taskgraph_engine",
+    "agent_runtime",
+    "tool_system",
+    "evolution_engine",
+    "product_generator",
+    "context_kernel",
+    "resident_core_agent",
+    "architecture_engine",
+    "code_knowledge_graph",
+    "verification_engine"
+  ],
+  "agents": [
+    "planner",
+    "coder",
+    "tester",
+    "reviewer",
+    "ops",
+    "supervisor"
+  ],
+  "execution_policy": {
+    "cheap_first": true,
+    "premium_only_for": [
+      "contradictions",
+      "repeated failures",
+      "architecture conflicts",
+      "security boundaries",
+      "high-risk actions"
+    ],
+    "chat_is_not_state": true
+  },
+  "last_updated": "2026-03-09",
+  "scale_profile": "engineering-os",
+  "architecture": {
+    "layers": [
+      "meta_brain",
+      "architecture_engine",
+      "task_graph_planner",
+      "agent_teams",
+      "code_graph",
+      "verification"
+    ],
+    "rules": [
+      "agents cannot import runtime",
+      "router must be stateless",
+      "runtime modules cannot depend on app transport handlers",
+      "tools may depend on runtime and state, but not app HTTP layer",
+      "verification must gate promotion of architecture-affecting changes"
+    ]
+  },
+  "agent_teams": {
+    "architecture_team": {
+      "owner": "planner",
+      "modules": [
+        "brain",
+        "runtime.scheduler",
+        "tools.taskgraph_compiler"
+      ]
+    },
+    "backend_team": {
+      "owner": "coder",
+      "modules": [
+        "app",
+        "runtime",
+        "agents"
+      ]
+    },
+    "infrastructure_team": {
+      "owner": "ops",
+      "modules": [
+        "tools.vm_orchestrator",
+        "tools.verification_engine",
+        "tools.platform_registry"
+      ]
+    },
+    "testing_team": {
+      "owner": "tester",
+      "modules": [
+        "tests",
+        "tools.quality_system",
+        "tools.soak_validation"
+      ]
+    }
+  }
+}

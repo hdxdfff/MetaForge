@@ -1,0 +1,21 @@
+{
+  "type": "failure_fix",
+  "title": "ToyOS build proof must come from a successful container build",
+  "symptom": "ToyOS build evidence could look active on the host while the production audit still treated the artifact as non-real or build-proof missing.",
+  "root_cause": "Host-side wrapper execution can fall back into Windows-native tool resolution and emit misleading failure logs; the audit only becomes trustworthy after a fresh successful build run that produces build-report.json, build/build.log, build/kernel.bin, and artifact.sha256 with newer mtimes.",
+  "fix": [
+    "Use the Docker-managed ToyOS build image when host toolchain availability is uncertain.",
+    "Require a successful build report plus fresh kernel and checksum artifacts before claiming ToyOS is a real product artifact.",
+    "Re-run artifact_audit after the build to confirm products_real and focus_artifact_real are updated from live evidence."
+  ],
+  "validation": [
+    "docker build -t toyos-managed-toolchain -f Dockerfile.build .",
+    "docker run --rm -v D:\\codex:/codex -w /codex/generated/toy-os-demo toyos-managed-toolchain bash -lc 'python3 /codex/orchestrator-mvp/tools/build_toy_os.py --target /codex/generated/toy-os-demo --managed-backend docker'",
+    "python -m tools.artifact_audit => products_real: 1, focus_artifact_real: true, focus_artifact_valuable: true"
+  ],
+  "applies_to": [
+    "D:\\codex\\orchestrator-mvp\\tools\\build_toy_os.py",
+    "D:\\codex\\orchestrator-mvp\\tools\\system_toolchain.py",
+    "D:\\codex\\generated\\toy-os-demo\\toyos-delivery-closure-report.md"
+  ]
+}

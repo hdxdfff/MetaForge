@@ -1,0 +1,72 @@
+{
+  "run_id": "hrn_20260328_001",
+  "goal_id": "toyos_syscall_write_v1",
+  "product": "toy-os-demo",
+  "feature_name": "minimal_syscall_write",
+  "feature_type": "kernel_feature",
+  "task_type": "harness_atomic_feature",
+  "source_goal": "Validate the existing minimal syscall write path with an independent harness and runtime evidence.",
+  "allowed_paths": [
+    "generated/toy-os-demo/kernel/**",
+    "generated/toy-os-demo/user/**",
+    "generated/toy-os-demo/tests/**",
+    "generated/toy-os-demo/docs/**"
+  ],
+  "forbidden_paths": [
+    "generated/toy-os-demo/toolchain/**",
+    "generated/toy-os-demo/bootloader/**",
+    "generated/toy-os-demo/network/**"
+  ],
+  "max_files_to_change": 12,
+  "deliverables": [
+    "kernel-side syscall dispatcher support for write",
+    "a minimal user-side invocation path",
+    "one automated smoke test or reproducible run path",
+    "updated developer note"
+  ],
+  "definition_of_done": [
+    "project builds successfully",
+    "qemu smoke run completes without crash",
+    "syscall path is exercised in runtime evidence",
+    "all required evidence files are produced"
+  ],
+  "acceptance_checks": [
+    {
+      "id": "build_success",
+      "type": "command_exit_code",
+      "command": "D:\\codex\\tools\\python311-embed\\python.exe D:\\codex\\generated\\toy-os-demo\\tools\\system_toolchain.py build",
+      "expected_exit_code": 0
+    },
+    {
+      "id": "qemu_smoke",
+      "type": "command_exit_code",
+      "command": "D:\\codex\\tools\\python311-embed\\python.exe D:\\codex\\generated\\toy-os-demo\\tools\\system_toolchain.py qemu-smoke",
+      "expected_exit_code": 0
+    },
+    {
+      "id": "output_contains_marker",
+      "type": "file_contains",
+      "file": "factory/runtime/harness_runs/hrn_20260328_001/evidence/qemu-output.txt",
+      "must_contain": [
+        "SYSCALL: entered"
+      ]
+    }
+  ],
+  "required_evidence": [
+    "evidence/build-report.json",
+    "evidence/qemu-smoke-report.json",
+    "evidence/qemu-output.txt",
+    "generator_report.json",
+    "evaluation_report.json"
+  ],
+  "why_this_feature": "Existing syscall path gives a low-risk atomic baseline with real runtime markers.",
+  "deferred_items": [
+    "file descriptor abstraction",
+    "buffer validation hardening",
+    "multi-process syscall table cleanup"
+  ],
+  "risk_notes": [
+    "QEMU smoke depends on Docker-backed toolchain availability.",
+    "Marker validation depends on qemu-debug.log remaining stable."
+  ]
+}

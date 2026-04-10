@@ -1,0 +1,78 @@
+{
+  "steps": [
+    {
+      "step_id": "7f8a6e0d",
+      "step_title": "Write recovery smoke file",
+      "action": "write_smoke_file",
+      "ok": true,
+      "at": "2026-03-19T14:41:13.889510Z",
+      "path": "D:\\codex\\orchestrator-mvp\\data\\execution-recovery\\test.txt",
+      "size": 97
+    },
+    {
+      "step_id": "07816ad5",
+      "step_title": "Probe direct LLM path",
+      "action": "internal://recovery/llm-smoke",
+      "ok": false,
+      "at": "2026-03-19T14:41:17.514026Z",
+      "error": "Direct LLM recovery probe returned fallback or empty output."
+    }
+  ],
+  "task_id": "10e9dde396cf46f793fb75800528e585",
+  "task_title": "Execution recovery: smoke and runnable artifact",
+  "task_status": "failed",
+  "started_at": "2026-03-19T14:41:09.638427Z",
+  "updated_at": "2026-03-19T14:41:21.369352Z",
+  "completed": false,
+  "result": {
+    "state": "failed_execution",
+    "reason": "Direct LLM recovery probe returned fallback or empty output.",
+    "task_id": "10e9dde396cf46f793fb75800528e585",
+    "repo_path": "D:\\codex",
+    "execution_mode": "production",
+    "goal": "Recover stable execution output",
+    "cheap_calls_used": 1,
+    "cheap_chars_used": 1151,
+    "escalation_count": 1,
+    "failed_steps": [
+      {
+        "step_id": "07816ad5",
+        "title": "Probe direct LLM path",
+        "phase": "execute",
+        "worker": "shell",
+        "command": "internal://recovery/llm-smoke",
+        "output": "Probe direct LLM path failure: 60 chars, 1 non-empty lines.\nHead:\n- Direct LLM recovery probe returned fallback or empty output.",
+        "output_ref": {},
+        "output_stats": {
+          "channel": "error-output",
+          "char_count": 60,
+          "line_count": 1,
+          "stored_raw": false
+        },
+        "probe_attempts": 0,
+        "max_probe_attempts": 1,
+        "last_diagnosis": "Diagnosis for Probe direct LLM path: 1095 chars, 31 non-empty lines.\nHead:\n- Cheap lane escalation triggered.\n- Original worker: reviewer\n- Escalation model: gpt-5.4-pro\n- Reason: Cheap worker fallback or loop detected.\nTail:\n- - regression risks\n- - escalation triggers\n- Provider error: APIConnectionError: Connection error.\nRaw artifact: ctx_aa365e0e83b8",
+        "last_diagnosis_ref": {
+          "artifact_id": "ctx_aa365e0e83b8",
+          "task_id": "10e9dde396cf46f793fb75800528e585",
+          "step_id": "07816ad5",
+          "channel": "diagnosis-output",
+          "title": "Diagnosis for Probe direct LLM path",
+          "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\10e9dde396cf46f793fb75800528e585\\07816ad5-diagnosis-output-ctx_aa365e0e83b8.txt",
+          "size_chars": 1095,
+          "line_count": 31,
+          "created_at": "2026-03-19T14:41:19.663061Z",
+          "metadata": {
+            "worker": "reviewer",
+            "phase": "check",
+            "route_model": "gpt-5.4-pro",
+            "route_provider": "openai"
+          }
+        }
+      }
+    ],
+    "next_action_required": "Inspect execution evidence and rerun or replace the task; no approval hold was applied.",
+    "failure_pause_policy": "If a long task fails, allow at most one cheap-model-approved probe retry with bounded local cost. If cheap approval is missing, ambiguous, or the retry still fails, pause execution, return a structured error report, and wait for explicit core guidance.",
+    "pause_required": false
+  }
+}

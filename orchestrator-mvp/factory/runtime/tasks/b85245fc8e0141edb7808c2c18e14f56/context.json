@@ -1,0 +1,87 @@
+{
+  "task_id": "b85245fc8e0141edb7808c2c18e14f56",
+  "task_status": "failed",
+  "phase": "failed",
+  "updated_at": "2026-04-02T19:15:28.182624Z",
+  "heartbeat_at": "2026-04-02T19:15:28.182624Z",
+  "repo_path": "D:\\codex\\orchestrator-mvp",
+  "goal": "Implement the bounded change",
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": "runtime.failure_backlog_automation",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\b85245fc8e0141edb7808c2c18e14f56",
+  "error": "Invalid production plan: reviewer step 'Validate and release' lacks artifact input.",
+  "title": "Implement the bounded change",
+  "prompt": "Turn a raw request into a structured delivery flow: derive requirements, architecture notes, task dependencies, role assignments, rule checks, git workflow expectations, implementation steps, validation steps, and release blockers.",
+  "scheduler_hint": {
+    "automation_source": "failure_backlog_automation",
+    "template_id": "software-factory",
+    "template_category": "governance",
+    "cluster_key": "recover stable execution output",
+    "cluster_count": 212,
+    "cluster_status": "attention",
+    "handling_mode": "generic_saturation",
+    "dispatch_now": true,
+    "admission_mode": "normal",
+    "scheduled_by": "runtime.failure_backlog_automation",
+    "decomposition_child": true,
+    "decomposition_parent_task_id": "7866e82d6f2e419aaa6d133ea008099b",
+    "decomposition_root_task_id": "03baad7a355f48cc9a8461c0695042fe",
+    "decomposition_depth": 2,
+    "max_decomposition_depth": 2,
+    "decomposition_child_index": 2,
+    "decomposition_allow_children": true,
+    "decomposition_path_kind": "branch",
+    "decomposition_shared_dependency_group": "03baad7a355f48cc9a8461c0695042fe",
+    "decomposition_repair_for": null,
+    "decomposition_dependencies": [
+      "Analyze the current state"
+    ],
+    "admission_lane": "exploration",
+    "admission_reason": "artifact_spec_missing",
+    "requested_execution_mode": "production",
+    "task_type": "exploration_intake",
+    "queue_name": "exploration",
+    "verification_level": "L1",
+    "max_runtime_seconds": 900,
+    "retry_limit": 0,
+    "rollback_rule": "return_to_planner",
+    "dependency_task_ids": [
+      "9e4143fdffb241f1bb96218e66587996"
+    ],
+    "dependency_count": 1
+  },
+  "context_package": {},
+  "plan": [],
+  "verification_signals": [
+    {
+      "timestamp": "2026-04-02T19:13:42.091911Z",
+      "kind": "admission_accepted",
+      "success": true,
+      "task_id": "b85245fc8e0141edb7808c2c18e14f56",
+      "admission_lane": null,
+      "admission_reason": null,
+      "execution_mode": "production",
+      "queue_name": "build_test",
+      "task_type": "build_fix"
+    }
+  ],
+  "verification_signal_count": 1,
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-02T19:13:42.091911Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "b85245fc8e0141edb7808c2c18e14f56",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "production",
+        "queue_name": "build_test",
+        "task_type": "build_fix"
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+﻿{
+  "id": "artifact_recentness_must_fallback_to_evidence_file_mtime",
+  "created_at": "2026-03-20T10:05:00Z",
+  "kind": "artifact_audit_pattern",
+  "summary": "When generated evidence files omit explicit timestamps, artifact freshness must fall back to the evidence file modification time or recent real artifacts will be undercounted.",
+  "symptoms": [
+    "artifact is verified real and valuable but artifacts_produced_last_24h stays 0",
+    "build_success=true and qemu_all_passed=true while build_timestamp/latest_evidence_at are null",
+    "container-generated reports contain execution proof without updated_at or build_timestamp fields"
+  ],
+  "preferred_fix": {
+    "strategy": "derive build/test/execution/qemu timestamps from report payload fields first, then fall back to the report file mtime",
+    "scope": [
+      "tools.artifact_audit"
+    ]
+  },
+  "evidence": [
+    "D:/codex/orchestrator-mvp/tools/artifact_audit.py",
+    "D:/codex/orchestrator-mvp/data/artifact_registry.json",
+    "D:/codex/orchestrator-mvp/data/reality_dashboard.json",
+    "D:/codex/generated/toy-os-demo/build-report.json",
+    "D:/codex/generated/toy-os-demo/build/generic-qemu-smoke-report.json"
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "steps": [
+    {
+      "step_id": "5a112cca",
+      "step_title": "Create recovery artifact",
+      "action": "create_runnable_artifact",
+      "ok": true,
+      "at": "2026-03-29T11:37:52.507244Z",
+      "artifact_dir": "D:\\codex\\generated\\execution-recovery-demo",
+      "build_timestamp": "2026-03-29T11:37:52.347954Z",
+      "test_timestamp": "2026-03-29T11:37:52.432646Z",
+      "execution_timestamp": "2026-03-29T11:37:52.504440Z"
+    },
+    {
+      "step_id": "c04f7961",
+      "step_title": "Verify recovery artifact",
+      "action": "verify_runnable_artifact",
+      "ok": true,
+      "at": "2026-03-29T11:37:56.582081Z",
+      "artifact_id": "execution-recovery-demo",
+      "latest_evidence_at": "2026-03-29T11:37:52.504440Z",
+      "dashboard_status": "attention"
+    }
+  ],
+  "task_id": "9b6ac2a6ef454799bbc343decd32feaa",
+  "task_title": "Delivery smoke artifact flow",
+  "task_status": "released",
+  "started_at": "2026-03-29T11:37:43.043230Z",
+  "updated_at": "2026-03-29T11:38:02.603261Z",
+  "completed": true,
+  "result": {
+    "summary": "Resumed from saved task plan.",
+    "completed_steps": 2,
+    "context_used_chars": 572,
+    "cheap_calls_used": 0,
+    "cheap_chars_used": 0,
+    "escalation_count": 0,
+    "execution_mode": "governance",
+    "execution_status": "execution_finished",
+    "production_evidence": {
+      "mode": "governance",
+      "status": "not-required"
+    },
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\9b6ac2a6ef454799bbc343decd32feaa\\execution-evidence.json",
+    "execution_evidence_step_count": 2,
+    "verification_contract": {
+      "verification_level": "L1",
+      "required_checks": [
+        "contract_valid",
+        "build_success",
+        "tests_pass",
+        "artifact_manifest_present",
+        "evidence_fresh"
+      ],
+      "artifact_requirements": {
+        "must_register_artifact": true,
+        "must_have_timestamp": true,
+        "must_have_files": [],
+        "expected_outputs": []
+      },
+      "release_gate": "all_required_checks_pass",
+      "failure_policy": "return_to_planner",
+      "evidence_requirements": [],
+      "verification_notes": [
+        "Deliver a locally verified result.",
+        "Produce explicit verification output or a bounded failure report.",
+        "Keep governance work separate from implementation claims."
+      ]
+    },
+    "verification_result": {
+      "status": "verified",
+      "passed": true,
+      "mode": "governance",
+      "verification_level": "L1",
+      "contract": {
+        "verification_level": "L1",
+        "required_checks": [
+          "contract_valid",
+          "build_success",
+          "tests_pass",
+          "artifact_manifest_present",
+          "evidence_fresh"
+        ],
+        "artifact_requirements": {
+          "must_register_artifact": true,
+          "must_have_timestamp": true,
+          "must_have_files": [],
+          "expected_outputs": []
+        },
+        "release_gate": "all_required_checks_pass",
+        "failure_policy": "return_to_planner",
+        "evidence_requirements": [],
+        "verification_notes": [
+          "Deliver a locally verified result.",
+          "Produce explicit verification output or a bounded failure report.",
+          "Keep governance work separate from implementation claims."
+        ]
+      },
+      "evidence": {
+        "status": "verified",
+        "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\9b6ac2a6ef454799bbc343decd32feaa\\execution-evidence.json",
+        "execution_evidence_present": true,
+        "required_checks": [
+          "contract_valid",
+          "build_success",
+          "tests_pass",
+          "artifact_manifest_present",
+          "evidence_fresh"
+        ],
+        "artifact_requirements": {
+          "must_register_artifact": true,
+          "must_have_timestamp": true,
+          "must_have_files": [],
+          "expected_outputs": []
+        }
+      }
+    },
+    "delivery_state": "released"
+  }
+}

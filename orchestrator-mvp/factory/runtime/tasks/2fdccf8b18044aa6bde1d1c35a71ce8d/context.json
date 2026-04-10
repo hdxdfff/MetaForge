@@ -1,0 +1,212 @@
+{
+  "task_id": "2fdccf8b18044aa6bde1d1c35a71ce8d",
+  "task_status": "running",
+  "phase": "step-running",
+  "updated_at": "2026-04-02T21:03:54.061362Z",
+  "heartbeat_at": "2026-04-02T21:03:54.061362Z",
+  "repo_path": "D:\\codex\\orchestrator-mvp",
+  "goal": "Let cheap workers handle routine debugging first and escalate only when repeated failures or risky changes appear.",
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": "runtime.failure_backlog_automation",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\2fdccf8b18044aa6bde1d1c35a71ce8d",
+  "step_id": "4e12b536",
+  "step_title": "Spawn decomposition subtasks",
+  "step_status": "running",
+  "worker": "planner",
+  "probe_attempts": 0,
+  "title": "Auto Debug Loop",
+  "prompt": "Reproduce the failure locally, capture the exact command and error, isolate the smallest failing area, propose the smallest safe fix, rerun the narrowest relevant validation step, and stop after bounded retries with a structured debug summary.",
+  "scheduler_hint": {
+    "automation_source": "failure_backlog_automation",
+    "template_id": "auto-debug",
+    "template_category": "debug",
+    "cluster_key": "recover stable execution output",
+    "cluster_count": 186,
+    "cluster_status": "attention",
+    "handling_mode": "generic_saturation",
+    "dispatch_now": true,
+    "admission_mode": "normal",
+    "scheduled_by": "runtime.failure_backlog_automation"
+  },
+  "context_package": {},
+  "plan": [
+    {
+      "id": "4e12b536",
+      "title": "Spawn decomposition subtasks",
+      "status": "running",
+      "worker": "planner",
+      "phase": "decompose"
+    },
+    {
+      "id": "7cd87953",
+      "title": "Wait for child task completion",
+      "status": "pending",
+      "worker": "planner",
+      "phase": "decompose"
+    },
+    {
+      "id": "53df7f9d",
+      "title": "Aggregate decomposition results",
+      "status": "pending",
+      "worker": "reviewer",
+      "phase": "verify"
+    }
+  ],
+  "verification_signals": [
+    {
+      "timestamp": "2026-04-02T20:59:17.210945Z",
+      "kind": "admission_accepted",
+      "success": true,
+      "task_id": "2fdccf8b18044aa6bde1d1c35a71ce8d",
+      "admission_lane": null,
+      "admission_reason": null,
+      "execution_mode": "governance",
+      "queue_name": "build_test",
+      "task_type": "build_fix"
+    }
+  ],
+  "verification_signal_count": 1,
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-02T20:59:17.210945Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "2fdccf8b18044aa6bde1d1c35a71ce8d",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "governance",
+        "queue_name": "build_test",
+        "task_type": "build_fix"
+      }
+    ],
+    "decomposition": {
+      "summary": "Fallback decomposition for: Reproduce the failure locally, capture the exact command and error, isolate the smallest failing area, propose the small",
+      "strategy": "bounded multi-layer split with analysis, execution, and verification branches",
+      "subtasks": [
+        {
+          "title": "Analyze the current state",
+          "prompt": "Inspect the current repository state and isolate the smallest workable slice for: Reproduce the failure locally, capture the exact command and error, isolate the smallest failing area, propose the smallest safe fix, rerun the narrowest relevant validation step, and stop after bounded retries with a structured debug summary.",
+          "goal": "Identify the smallest viable slice",
+          "task_type": "report_refresh",
+          "path_kind": "shared",
+          "queue_name": "fastlane",
+          "verification_level": "L1",
+          "preferred_worker": "reviewer",
+          "execution_mode": "governance",
+          "execution_lane": "host-control",
+          "decompose_children": false,
+          "shared_dependency_group": "2fdccf8b18044aa6bde1d1c35a71ce8d",
+          "repair_for": null,
+          "inputs": [],
+          "outputs": [
+            "analysis note"
+          ],
+          "dependencies": [],
+          "acceptance_criteria": [
+            "The smallest feasible slice is identified."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        },
+        {
+          "title": "Implement the bounded change",
+          "prompt": "Make the smallest safe implementation or repair needed for: Reproduce the failure locally, capture the exact command and error, isolate the smallest failing area, propose the smallest safe fix, rerun the narrowest relevant validation step, and stop after bounded retries with a structured debug summary.",
+          "goal": "Implement the bounded change",
+          "task_type": "build_fix",
+          "path_kind": "branch",
+          "queue_name": "build_test",
+          "verification_level": "L2",
+          "preferred_worker": "coder",
+          "execution_mode": "production",
+          "execution_lane": "vm-first",
+          "decompose_children": true,
+          "shared_dependency_group": "2fdccf8b18044aa6bde1d1c35a71ce8d",
+          "repair_for": null,
+          "inputs": [
+            "analysis note"
+          ],
+          "outputs": [
+            "bounded patch"
+          ],
+          "dependencies": [
+            "Analyze the current state"
+          ],
+          "acceptance_criteria": [
+            "A bounded implementation exists."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        },
+        {
+          "title": "Validate the result",
+          "prompt": "Run the narrowest useful validation for the bounded change: Reproduce the failure locally, capture the exact command and error, isolate the smallest failing area, propose the smallest safe fix, rerun the narrowest relevant validation step, and stop after bounded retries with a structured debug summary.",
+          "goal": "Validate the change",
+          "task_type": "unit_test_run",
+          "path_kind": "repair",
+          "queue_name": "build_test",
+          "verification_level": "L2",
+          "preferred_worker": "docker",
+          "execution_mode": "production",
+          "execution_lane": "vm-first",
+          "decompose_children": false,
+          "shared_dependency_group": "2fdccf8b18044aa6bde1d1c35a71ce8d",
+          "repair_for": "Analyze the current state",
+          "inputs": [
+            "bounded patch"
+          ],
+          "outputs": [
+            "validation evidence"
+          ],
+          "dependencies": [
+            "Analyze the current state",
+            "Implement the bounded change"
+          ],
+          "acceptance_criteria": [
+            "Validation evidence is recorded."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        }
+      ],
+      "dag": {
+        "shared_nodes": [
+          "Analyze the current state"
+        ],
+        "branch_nodes": [
+          "Implement the bounded change"
+        ],
+        "repair_nodes": [
+          "Validate the result"
+        ],
+        "optional_nodes": [],
+        "speculative_nodes": [],
+        "blocked_nodes": [],
+        "edges": [
+          {
+            "from": "Analyze the current state",
+            "to": "Implement the bounded change",
+            "kind": "branch"
+          },
+          {
+            "from": "Analyze the current state",
+            "to": "Validate the result",
+            "kind": "repair"
+          },
+          {
+            "from": "Implement the bounded change",
+            "to": "Validate the result",
+            "kind": "repair"
+          }
+        ],
+        "shared_dependency_group": "2fdccf8b18044aa6bde1d1c35a71ce8d"
+      },
+      "depth": 0,
+      "max_depth": 2,
+      "mode": "multi_layer"
+    }
+  }
+}

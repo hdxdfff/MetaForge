@@ -1,0 +1,274 @@
+{
+  "version": "v2",
+  "primary_interactive_surface": "Aider",
+  "control_shells": [
+    "OpenCode",
+    "Goose"
+  ],
+  "control_plane": "MetaForge",
+  "long_task_executors": [
+    "OpenHands",
+    "Plandex",
+    "LinkWork"
+  ],
+  "development_executors": [
+    "OpenCode",
+    "Aider"
+  ],
+  "inspection_surface": "Continue",
+  "final_verification_boundary": [
+    "Verification",
+    "Artifact"
+  ],
+  "executor_responsibilities": [
+    {
+      "executor_id": "opencode_executor",
+      "surface": "OpenCode",
+      "task_types": [
+        "build_fix",
+        "demo_rebuild",
+        "subsystem_refactor",
+        "architecture_migration",
+        "path_repair",
+        "unit_test_run"
+      ],
+      "role": "controller-backed development execution"
+    },
+    {
+      "executor_id": "codex_executor",
+      "surface": "Codex",
+      "task_types": [
+        "build_fix",
+        "demo_rebuild",
+        "subsystem_refactor",
+        "architecture_migration",
+        "path_repair",
+        "unit_test_run"
+      ],
+      "role": "legacy alias for OpenCode-backed development execution"
+    },
+    {
+      "executor_id": "linkwork_executor",
+      "surface": "LinkWork",
+      "task_types": [
+        "handoff_doc_generate",
+        "artifact_evidence_packaging",
+        "structured_research_bundle",
+        "external_info_collect",
+        "tool_assisted_doc_generation",
+        "delivery_bundle_prepare",
+        "report_refresh"
+      ],
+      "role": "isolated execution pool for standardized handoff bundles"
+    },
+    {
+      "executor_id": "aider_executor",
+      "surface": "Aider",
+      "task_types": [
+        "build_fix",
+        "subsystem_refactor",
+        "path_repair",
+        "unit_test_run",
+        "doc_patch"
+      ],
+      "role": "short interactive edits"
+    },
+    {
+      "executor_id": "goose_executor",
+      "surface": "Goose",
+      "task_types": [
+        "report_refresh",
+        "registry_reconcile",
+        "evidence_collect",
+        "doc_patch",
+        "json_fix",
+        "config_fix",
+        "manifest_patch"
+      ],
+      "role": "control, dispatch, and script maintenance"
+    },
+    {
+      "executor_id": "openhands_executor",
+      "surface": "OpenHands",
+      "task_types": [
+        "new_artifact_bootstrap",
+        "new_demo_creation",
+        "architecture_migration",
+        "subsystem_refactor"
+      ],
+      "role": "long-running implementation"
+    },
+    {
+      "executor_id": "plandex_executor",
+      "surface": "Plandex",
+      "task_types": [
+        "demo_rebuild",
+        "package_validation",
+        "harness_regression_run",
+        "qemu_smoke_run"
+      ],
+      "role": "long-running rebuild and validation"
+    },
+    {
+      "executor_id": "continue_executor",
+      "surface": "Continue",
+      "task_types": [
+        "artifact_audit",
+        "independent_evidence_check",
+        "release_decision_review"
+      ],
+      "role": "review and independent inspection"
+    },
+    {
+      "executor_id": "ci_executor",
+      "surface": "CI",
+      "task_types": [
+        "artifact_audit",
+        "qemu_smoke_run",
+        "harness_regression_run",
+        "package_validation",
+        "independent_evidence_check"
+      ],
+      "role": "automated verification"
+    },
+    {
+      "executor_id": "human_review_executor",
+      "surface": "Human",
+      "task_types": [
+        "release_decision_review",
+        "risk_approval",
+        "architecture_review"
+      ],
+      "role": "final human gate"
+    }
+  ],
+  "routing": [
+    {
+      "task_shape": "ToyOS evidence refresh",
+      "keywords": [
+        "evidence chain",
+        "build-report.json",
+        "generic-qemu-smoke-report.json",
+        "score-report.json",
+        "verification summary",
+        "confirm build-report",
+        "current reports"
+      ],
+      "preferred_surface": "Continue",
+      "fallback_surface": "Goose",
+      "launch_mode": "review",
+      "dispatchable": false
+    },
+    {
+      "task_shape": "short interactive edit",
+      "keywords": [
+        "edit",
+        "fix",
+        "patch",
+        "refactor",
+        "code",
+        "build",
+        "test"
+      ],
+      "preferred_surface": "Aider",
+      "fallback_surface": "Goose",
+      "launch_mode": "message",
+      "dispatchable": true
+    },
+    {
+      "task_shape": "script maintenance and registry work",
+      "keywords": [
+        "report refresh",
+        "report",
+        "registry reconcile",
+        "registry",
+        "evidence collect",
+        "evidence",
+        "doc patch",
+        "json fix",
+        "json",
+        "config fix",
+        "config",
+        "manifest patch",
+        "manifest"
+      ],
+      "preferred_surface": "Goose",
+      "fallback_surface": "Continue",
+      "launch_mode": "control",
+      "dispatchable": true
+    },
+    {
+      "task_shape": "long agentic implementation",
+      "keywords": [
+        "long",
+        "multi-step",
+        "agent",
+        "workflow",
+        "execute",
+        "run"
+      ],
+      "preferred_surface": "OpenHands",
+      "fallback_surface": "Plandex",
+      "launch_mode": "server",
+      "dispatchable": true
+    },
+    {
+      "task_shape": "isolated LinkWork bundle",
+      "keywords": [
+        "handoff",
+        "bundle",
+        "evidence pack",
+        "delivery bundle",
+        "structured research bundle",
+        "role pool",
+        "isolated executor"
+      ],
+      "preferred_surface": "LinkWork",
+      "fallback_surface": "Goose",
+      "launch_mode": "message",
+      "dispatchable": true
+    },
+    {
+      "task_shape": "controlled management and dispatch",
+      "keywords": [
+        "dispatch",
+        "status",
+        "control",
+        "approve",
+        "reject",
+        "session"
+      ],
+      "preferred_surface": "Goose",
+      "fallback_surface": "Continue",
+      "launch_mode": "control",
+      "dispatchable": true
+    },
+    {
+      "task_shape": "code review and PR inspection",
+      "keywords": [
+        "review",
+        "pr",
+        "inspect",
+        "diff",
+        "check"
+      ],
+      "preferred_surface": "Continue",
+      "fallback_surface": "Goose",
+      "launch_mode": "review",
+      "dispatchable": true
+    },
+    {
+      "task_shape": "final acceptance",
+      "keywords": [
+        "verify",
+        "verification",
+        "artifact",
+        "acceptance"
+      ],
+      "preferred_surface": "Verification / Artifact",
+      "fallback_surface": "Continue",
+      "launch_mode": "verify",
+      "dispatchable": false
+    }
+  ]
+}

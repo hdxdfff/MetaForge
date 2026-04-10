@@ -1,0 +1,157 @@
+{
+  "updated_at": "2026-03-12T07:09:59.526218Z",
+  "department_count": 5,
+  "top_departments": [
+    "engineering_department",
+    "qa_department",
+    "architecture_department",
+    "research_department",
+    "operations_department"
+  ],
+  "departments": {
+    "architecture_department": {
+      "project_count": 11,
+      "projects": [
+        "79120c5dbb",
+        "aimath0001",
+        "dblab00001",
+        "platform_009b511d6b",
+        "platform_38c67a4233",
+        "platform_464dac2a0b",
+        "platform_79a3e0e03e",
+        "platform_8590e6bcbe",
+        "platform_8855699f64",
+        "platform_d33a56cc79",
+        "platform_fa6557b2cd"
+      ],
+      "active_goal_count": 1,
+      "active_goals": [
+        "Strengthen agent orchestration capability"
+      ],
+      "active_task_count": 0,
+      "pending_review_count": 0,
+      "coordination_count": 5,
+      "default_worker": "reviewer",
+      "focus": [
+        "architecture_validation",
+        "module_ownership",
+        "cross_project_coordination"
+      ],
+      "priority_rank": 3
+    },
+    "engineering_department": {
+      "project_count": 22,
+      "projects": [
+        "79120c5dbb",
+        "aimath0001",
+        "dblab00001",
+        "frontend001",
+        "networklab01",
+        "platform_009b511d6b",
+        "platform_38c67a4233",
+        "platform_3f9a992241",
+        "platform_464dac2a0b",
+        "platform_4f5397914e",
+        "platform_79a3e0e03e",
+        "platform_83ed536a57"
+      ],
+      "active_goal_count": 2,
+      "active_goals": [
+        "Expand tool extension coverage",
+        "Strengthen agent orchestration capability"
+      ],
+      "active_task_count": 0,
+      "pending_review_count": 0,
+      "coordination_count": 5,
+      "default_worker": "coder",
+      "focus": [
+        "agent_orchestration",
+        "webapp_generation",
+        "tool_extension"
+      ],
+      "priority_rank": 1
+    },
+    "operations_department": {
+      "project_count": 3,
+      "projects": [
+        "frontend001",
+        "networklab01",
+        "platform_e09cfd3561"
+      ],
+      "active_goal_count": 0,
+      "active_goals": [],
+      "active_task_count": 0,
+      "pending_review_count": 0,
+      "coordination_count": 1,
+      "default_worker": "docker",
+      "focus": [
+        "deploy_scaffold",
+        "runtime_stability",
+        "worker_vm_execution"
+      ],
+      "priority_rank": 5
+    },
+    "qa_department": {
+      "project_count": 22,
+      "projects": [
+        "79120c5dbb",
+        "aimath0001",
+        "dblab00001",
+        "frontend001",
+        "networklab01",
+        "platform_009b511d6b",
+        "platform_38c67a4233",
+        "platform_3f9a992241",
+        "platform_464dac2a0b",
+        "platform_4f5397914e",
+        "platform_79a3e0e03e",
+        "platform_83ed536a57"
+      ],
+      "active_goal_count": 2,
+      "active_goals": [
+        "Expand tool extension coverage",
+        "Strengthen agent orchestration capability"
+      ],
+      "active_task_count": 0,
+      "pending_review_count": 0,
+      "coordination_count": 5,
+      "default_worker": "shell",
+      "focus": [
+        "verification",
+        "runtime_health",
+        "patch_gate"
+      ],
+      "priority_rank": 2
+    },
+    "research_department": {
+      "project_count": 11,
+      "projects": [
+        "79120c5dbb",
+        "aimath0001",
+        "dblab00001",
+        "platform_009b511d6b",
+        "platform_38c67a4233",
+        "platform_464dac2a0b",
+        "platform_79a3e0e03e",
+        "platform_8590e6bcbe",
+        "platform_8855699f64",
+        "platform_d33a56cc79",
+        "platform_fa6557b2cd"
+      ],
+      "active_goal_count": 1,
+      "active_goals": [
+        "Strengthen agent orchestration capability"
+      ],
+      "active_task_count": 0,
+      "pending_review_count": 0,
+      "coordination_count": 5,
+      "default_worker": "reviewer",
+      "focus": [
+        "experiments",
+        "distillation",
+        "knowledge_growth"
+      ],
+      "priority_rank": 4
+    }
+  }
+}

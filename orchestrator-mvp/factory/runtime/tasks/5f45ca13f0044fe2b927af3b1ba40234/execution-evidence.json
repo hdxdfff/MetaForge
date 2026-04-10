@@ -1,0 +1,28 @@
+{
+  "task_id": "5f45ca13f0044fe2b927af3b1ba40234",
+  "task_title": "Implement module agents.deploy_agent",
+  "task_status": "timed_out",
+  "started_at": "2026-03-19T03:42:19.625474Z",
+  "updated_at": "2026-03-19T03:50:05.240468Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "5f45ca13f0044fe2b927af3b1ba40234-terminal-record",
+      "step_title": "Implement module agents.deploy_agent",
+      "action": "task_terminal_record",
+      "ok": false,
+      "at": "2026-03-19T03:50:05.240468Z",
+      "status": "timed_out",
+      "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+      "error": null,
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ],
+  "result": {
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

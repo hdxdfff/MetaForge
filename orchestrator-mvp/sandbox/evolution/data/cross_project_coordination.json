@@ -1,0 +1,263 @@
+{
+  "updated_at": "2026-03-12T07:09:57.825226Z",
+  "candidate_count": 80,
+  "selected": [
+    {
+      "coordination_id": "79120c5dbb__aimath0001",
+      "target": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "projects": [
+        {
+          "project_id": "79120c5dbb",
+          "name": "ToyOS Kernel",
+          "type": "project"
+        },
+        {
+          "project_id": "aimath0001",
+          "name": "AI Math Foundations Workspace",
+          "type": "project"
+        }
+      ],
+      "domains": [
+        "factory",
+        "kernel"
+      ],
+      "departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "work_packages": [
+        {
+          "project_id": "79120c5dbb",
+          "name": "ToyOS Kernel",
+          "owner_department": "architecture_department",
+          "support_departments": [
+            "engineering_department",
+            "qa_department",
+            "research_department"
+          ],
+          "action": "Align interfaces, tests, and rollout notes for ToyOS Kernel"
+        },
+        {
+          "project_id": "aimath0001",
+          "name": "AI Math Foundations Workspace",
+          "owner_department": "architecture_department",
+          "support_departments": [
+            "engineering_department",
+            "qa_department",
+            "research_department"
+          ],
+          "action": "Align interfaces, tests, and rollout notes for AI Math Foundations Workspace"
+        }
+      ],
+      "score": 0.83,
+      "notes": "Cross-project coordination candidate based on shared domains: factory, kernel."
+    },
+    {
+      "coordination_id": "79120c5dbb__platform_464dac2a0b",
+      "target": "Coordinate ToyOS Kernel with Optimize task scheduler from agent experience",
+      "projects": [
+        {
+          "project_id": "79120c5dbb",
+          "name": "ToyOS Kernel",
+          "type": "project"
+        },
+        {
+          "project_id": "platform_464dac2a0b",
+          "name": "Optimize task scheduler from agent experience",
+          "type": "platform"
+        }
+      ],
+      "domains": [
+        "factory",
+        "kernel"
+      ],
+      "departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "work_packages": [
+        {
+          "project_id": "79120c5dbb",
+          "name": "ToyOS Kernel",
+          "owner_department": "architecture_department",
+          "support_departments": [
+            "engineering_department",
+            "qa_department",
+            "research_department"
+          ],
+          "action": "Align interfaces, tests, and rollout notes for ToyOS Kernel"
+        },
+        {
+          "project_id": "platform_464dac2a0b",
+          "name": "Optimize task scheduler from agent experience",
+          "owner_department": "architecture_department",
+          "support_departments": [
+            "engineering_department",
+            "qa_department",
+            "research_department"
+          ],
+          "action": "Align interfaces, tests, and rollout notes for Optimize task scheduler from agent experience"
+        }
+      ],
+      "score": 0.83,
+      "notes": "Cross-project coordination candidate based on shared domains: factory, kernel."
+    },
+    {
+      "coordination_id": "aimath0001__platform_464dac2a0b",
+      "target": "Coordinate AI Math Foundations Workspace with Optimize task scheduler from agent experience",
+      "projects": [
+        {
+          "project_id": "aimath0001",
+          "name": "AI Math Foundations Workspace",
+          "type": "project"
+        },
+        {
+          "project_id": "platform_464dac2a0b",
+          "name": "Optimize task scheduler from agent experience",
+          "type": "platform"
+        }
+      ],
+      "domains": [
+        "factory",
+        "kernel"
+      ],
+      "departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "work_packages": [
+        {
+          "project_id": "aimath0001",
+          "name": "AI Math Foundations Workspace",
+          "owner_department": "architecture_department",
+          "support_departments": [
+            "engineering_department",
+            "qa_department",
+            "research_department"
+          ],
+          "action": "Align interfaces, tests, and rollout notes for AI Math Foundations Workspace"
+        },
+        {
+          "project_id": "platform_464dac2a0b",
+          "name": "Optimize task scheduler from agent experience",
+          "owner_department": "architecture_department",
+          "support_departments": [
+            "engineering_department",
+            "qa_department",
+            "research_department"
+          ],
+          "action": "Align interfaces, tests, and rollout notes for Optimize task scheduler from agent experience"
+        }
+      ],
+      "score": 0.83,
+      "notes": "Cross-project coordination candidate based on shared domains: factory, kernel."
+    },
+    {
+      "coordination_id": "aimath0001__platform_8632991421",
+      "target": "Coordinate AI Math Foundations Workspace with Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "projects": [
+        {
+          "project_id": "aimath0001",
+          "name": "AI Math Foundations Workspace",
+          "type": "project"
+        },
+        {
+          "project_id": "platform_8632991421",
+          "name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+          "type": "platform"
+        }
+      ],
+      "domains": [
+        "kernel",
+        "math"
+      ],
+      "departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "work_packages": [
+        {
+          "project_id": "aimath0001",
+          "name": "AI Math Foundations Workspace",
+          "owner_department": "architecture_department",
+          "support_departments": [
+            "engineering_department",
+            "qa_department",
+            "research_department"
+          ],
+          "action": "Align interfaces, tests, and rollout notes for AI Math Foundations Workspace"
+        },
+        {
+          "project_id": "platform_8632991421",
+          "name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+          "owner_department": "engineering_department",
+          "support_departments": [
+            "qa_department"
+          ],
+          "action": "Align interfaces, tests, and rollout notes for Coordinate ToyOS Kernel with AI Math Foundations Workspace"
+        }
+      ],
+      "score": 0.83,
+      "notes": "Cross-project coordination candidate based on shared domains: kernel, math."
+    },
+    {
+      "coordination_id": "aimath0001__networklab01",
+      "target": "Coordinate AI Math Foundations Workspace with Computer Network Lab",
+      "projects": [
+        {
+          "project_id": "aimath0001",
+          "name": "AI Math Foundations Workspace",
+          "type": "project"
+        },
+        {
+          "project_id": "networklab01",
+          "name": "Computer Network Lab",
+          "type": "project"
+        }
+      ],
+      "domains": [
+        "math"
+      ],
+      "departments": [
+        "architecture_department",
+        "engineering_department",
+        "operations_department",
+        "qa_department",
+        "research_department"
+      ],
+      "work_packages": [
+        {
+          "project_id": "aimath0001",
+          "name": "AI Math Foundations Workspace",
+          "owner_department": "architecture_department",
+          "support_departments": [
+            "engineering_department",
+            "qa_department",
+            "research_department"
+          ],
+          "action": "Align interfaces, tests, and rollout notes for AI Math Foundations Workspace"
+        },
+        {
+          "project_id": "networklab01",
+          "name": "Computer Network Lab",
+          "owner_department": "operations_department",
+          "support_departments": [
+            "engineering_department",
+            "qa_department"
+          ],
+          "action": "Align interfaces, tests, and rollout notes for Computer Network Lab"
+        }
+      ],
+      "score": 0.78,
+      "notes": "Cross-project coordination candidate based on shared domains: math."
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "steps": [
+    {
+      "step_id": "e0b45cdd",
+      "step_title": "Understand task",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-03-19T21:56:05.863340Z",
+      "worker": "reviewer",
+      "phase": "understand",
+      "route_model": "deepseek-chat",
+      "route_provider": "cheap",
+      "output_ref": {
+        "artifact_id": "ctx_d5b8df6bcaf2",
+        "task_id": "2fa4e97a018b4fcb8a365ebad55aae37",
+        "step_id": "e0b45cdd",
+        "channel": "reviewer-output",
+        "title": "Understand task output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\2fa4e97a018b4fcb8a365ebad55aae37\\e0b45cdd-reviewer-output-ctx_d5b8df6bcaf2.txt",
+        "size_chars": 1236,
+        "line_count": 16,
+        "created_at": "2026-03-19T21:56:04.711853Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "understand",
+          "route_model": "deepseek-chat",
+          "route_provider": "cheap"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 1236,
+        "line_count": 16,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "132bc80d",
+      "step_title": "Draft solution",
+      "action": "coder_step",
+      "ok": true,
+      "at": "2026-03-19T21:56:55.653413Z",
+      "worker": "coder",
+      "phase": "draft",
+      "route_model": "gpt-5.4-pro",
+      "route_provider": "openai",
+      "output_ref": {
+        "artifact_id": "ctx_0f7b5ea08f0a",
+        "task_id": "2fa4e97a018b4fcb8a365ebad55aae37",
+        "step_id": "132bc80d",
+        "channel": "coder-output",
+        "title": "Draft solution output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\2fa4e97a018b4fcb8a365ebad55aae37\\132bc80d-coder-output-ctx_0f7b5ea08f0a.txt",
+        "size_chars": 1171,
+        "line_count": 25,
+        "created_at": "2026-03-19T21:56:51.685492Z",
+        "metadata": {
+          "worker": "coder",
+          "phase": "draft",
+          "route_model": "gpt-5.4-pro",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "coder-output",
+        "char_count": 1171,
+        "line_count": 25,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "a3c1dbd5",
+      "step_title": "Execute validation",
+      "action": "shell_step",
+      "ok": true,
+      "at": "2026-03-19T21:57:12.191883Z",
+      "worker": "shell",
+      "phase": "execute",
+      "route_model": "deepseek-chat",
+      "route_provider": "runtime",
+      "output_ref": {
+        "artifact_id": "ctx_032e475ee782",
+        "task_id": "2fa4e97a018b4fcb8a365ebad55aae37",
+        "step_id": "a3c1dbd5",
+        "channel": "shell-output",
+        "title": "Execute validation output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\2fa4e97a018b4fcb8a365ebad55aae37\\a3c1dbd5-shell-output-ctx_032e475ee782.txt",
+        "size_chars": 351,
+        "line_count": 11,
+        "created_at": "2026-03-19T21:57:10.905968Z",
+        "metadata": {
+          "worker": "shell",
+          "phase": "execute",
+          "route_model": "deepseek-chat",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "shell-output",
+        "char_count": 351,
+        "line_count": 11,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "4b98e81b",
+      "step_title": "Verify result",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-03-19T21:57:55.436921Z",
+      "worker": "reviewer",
+      "phase": "verify",
+      "route_model": "gpt-5.4-pro",
+      "route_provider": "openai",
+      "output_ref": {
+        "artifact_id": "ctx_dcb876346a7a",
+        "task_id": "2fa4e97a018b4fcb8a365ebad55aae37",
+        "step_id": "4b98e81b",
+        "channel": "reviewer-output",
+        "title": "Verify result output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\2fa4e97a018b4fcb8a365ebad55aae37\\4b98e81b-reviewer-output-ctx_dcb876346a7a.txt",
+        "size_chars": 1091,
+        "line_count": 31,
+        "created_at": "2026-03-19T21:57:54.163948Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "verify",
+          "route_model": "gpt-5.4-pro",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 1091,
+        "line_count": 31,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "0d6adee7",
+      "step_title": "Revise next action",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-03-19T21:58:19.216489Z",
+      "worker": "reviewer",
+      "phase": "revise",
+      "route_model": "deepseek-reasoner",
+      "route_provider": "reasoning",
+      "output_ref": {
+        "artifact_id": "ctx_2584c35f1171",
+        "task_id": "2fa4e97a018b4fcb8a365ebad55aae37",
+        "step_id": "0d6adee7",
+        "channel": "reviewer-output",
+        "title": "Revise next action output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\2fa4e97a018b4fcb8a365ebad55aae37\\0d6adee7-reviewer-output-ctx_2584c35f1171.txt",
+        "size_chars": 949,
+        "line_count": 13,
+        "created_at": "2026-03-19T21:58:17.779684Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "revise",
+          "route_model": "deepseek-reasoner",
+          "route_provider": "reasoning"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 949,
+        "line_count": 13,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    }
+  ],
+  "task_id": "2fa4e97a018b4fcb8a365ebad55aae37",
+  "task_title": "Align project ToyOS Kernel for Expand tool extension coverage",
+  "task_status": "completed",
+  "started_at": "2026-03-19T21:52:26.977038Z",
+  "updated_at": "2026-03-19T21:58:21.920426Z",
+  "completed": true,
+  "result": {
+    "summary": "Fallback plan generated locally because planner remote access is unavailable.",
+    "completed_steps": 5,
+    "context_used_chars": 602,
+    "cheap_calls_used": 4,
+    "cheap_chars_used": 3423,
+    "escalation_count": 2,
+    "execution_mode": "governance",
+    "production_evidence": {
+      "mode": "governance",
+      "status": "not-required"
+    },
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\2fa4e97a018b4fcb8a365ebad55aae37\\execution-evidence.json",
+    "execution_evidence_step_count": 5
+  }
+}

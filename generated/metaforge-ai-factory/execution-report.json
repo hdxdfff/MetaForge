@@ -1,0 +1,12 @@
+{
+  "artifact_id": "metaforge-ai-factory",
+  "executed": true,
+  "success": true,
+  "exit_code": 0,
+  "command": [
+    "C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "D:\\codex\\generated\\metaforge-ai-factory\\run_demo.py"
+  ],
+  "stdout": "{\"status\": \"ok\", \"artifact_id\": \"metaforge-ai-factory\", \"message\": \"Provide a runnable handoff bundle that can self-test and emit evidence for the AI factory recursion plan.\", \"args\": []}",
+  "stderr": ""
+}

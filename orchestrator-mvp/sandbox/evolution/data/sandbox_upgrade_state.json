@@ -1,0 +1,10 @@
+{
+  "updated_at": "2026-03-12T07:09:31.006060Z",
+  "candidate_count": 9,
+  "sandbox_root": "D:\\codex\\orchestrator-mvp\\sandbox\\evolution",
+  "mirrored_paths": [
+    "D:\\codex\\orchestrator-mvp\\sandbox\\evolution\\templates",
+    "D:\\codex\\orchestrator-mvp\\sandbox\\evolution\\data"
+  ],
+  "status": "ready"
+}

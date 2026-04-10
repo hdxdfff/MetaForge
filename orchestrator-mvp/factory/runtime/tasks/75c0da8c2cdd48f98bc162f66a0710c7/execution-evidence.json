@@ -1,0 +1,28 @@
+{
+  "task_id": "75c0da8c2cdd48f98bc162f66a0710c7",
+  "task_title": "Implement module tools.autonomy_state",
+  "task_status": "timed_out",
+  "started_at": "2026-03-21T02:07:46.504451Z",
+  "updated_at": "2026-03-21T02:14:24.643526Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "75c0da8c2cdd48f98bc162f66a0710c7-terminal-record",
+      "step_title": "Implement module tools.autonomy_state",
+      "action": "task_terminal_record",
+      "ok": false,
+      "at": "2026-03-21T02:14:24.643526Z",
+      "status": "timed_out",
+      "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+      "error": null,
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ],
+  "result": {
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

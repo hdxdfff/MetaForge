@@ -1,0 +1,16 @@
+{
+  "artifact_id": "p2-sandbox-audit-report",
+  "type": "audit",
+  "version": "1.0.0",
+  "buildable": true,
+  "runnable": true,
+  "test_passed": false,
+  "reproducible": true,
+  "artifact_path": "D:\\codex\\orchestrator-mvp\\generated\\p2-sandbox-audit\\followup-3",
+  "entrypoint": "p2-sandbox-audit-runner.py",
+  "evidence": [
+    "p2-sandbox-audit-report.json",
+    "p2-sandbox-audit-report.md"
+  ],
+  "updated_at": "2026-04-03T19:26:09.793291Z"
+}

@@ -1,0 +1,57 @@
+{
+  "task_id": "5846a4791bbb430fbeccdac12d8d574e",
+  "task_title": "Implement module tools.scheduling_kernel",
+  "task_status": "timed_out",
+  "started_at": "2026-03-29T00:59:55.713473Z",
+  "updated_at": "2026-03-29T01:05:48.320471Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "851b21d0",
+      "step_title": "Refresh bootstrap build evidence",
+      "action": "docker_step",
+      "ok": false,
+      "at": "2026-03-29T01:05:48.320471Z",
+      "phase": "execute",
+      "worker": "docker",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "a0b2dded",
+      "step_title": "Run bootstrap validation sweep",
+      "action": "docker_step",
+      "ok": false,
+      "at": "2026-03-29T01:05:48.320471Z",
+      "phase": "verify",
+      "worker": "docker",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "470d59fa",
+      "step_title": "Audit bootstrap evidence",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-03-29T01:05:48.320471Z",
+      "phase": "review",
+      "worker": "reviewer",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    }
+  ],
+  "result": {
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

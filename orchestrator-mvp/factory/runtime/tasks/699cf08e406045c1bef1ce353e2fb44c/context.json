@@ -1,0 +1,471 @@
+{
+  "task_id": "699cf08e406045c1bef1ce353e2fb44c",
+  "task_status": "running",
+  "phase": "step-running",
+  "updated_at": "2026-03-12T16:36:10.008534Z",
+  "repo_path": "D:\\codex\\orchestrator-mvp",
+  "goal": "Improve deployment scaffold automation",
+  "goal_id": "goal_8f70cb2618",
+  "graph_id": "graph_5a4f32c59c",
+  "node_id": "module_app_orchestrator",
+  "scheduled_by": "runtime.scheduler",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\699cf08e406045c1bef1ce353e2fb44c",
+  "step_id": "a69046e1",
+  "step_title": "Understand task",
+  "step_status": "running",
+  "worker": "reviewer",
+  "probe_attempts": 0,
+  "title": "Implement module app.orchestrator",
+  "prompt": "Implement or refine module app.orchestrator for the current engineering goal.",
+  "scheduler_hint": {
+    "goal_id": "goal_8f70cb2618",
+    "graph_id": "graph_5a4f32c59c",
+    "node_id": "module_app_orchestrator",
+    "goal_target": "Improve deployment scaffold automation",
+    "node_title": "Implement module app.orchestrator",
+    "selection_reason": "role-default:coder->coder+team-owner:backend_team->coder",
+    "worker_success_rate": 1.013,
+    "skill_matches": [
+      "completed_1804",
+      "completed_1554",
+      "task_12345678"
+    ],
+    "scheduled_by": "runtime.scheduler",
+    "execution_mode": "production",
+    "execution_lane": "host-control",
+    "worker_vm_preferred": false,
+    "module_focus": [
+      "app.orchestrator"
+    ],
+    "owner_teams": [
+      "backend_team"
+    ],
+    "module_ownership": {
+      "module_focus": [
+        "app.orchestrator"
+      ],
+      "owner_teams": [
+        "backend_team"
+      ],
+      "ownership": [
+        {
+          "module": "app.orchestrator",
+          "owner_team": "backend_team",
+          "owner": "coder",
+          "layer": "unclassified"
+        }
+      ]
+    },
+    "patch_required": false,
+    "patch_target_teams": [
+      "backend_team"
+    ],
+    "timeslice_seconds": 60,
+    "effective_priority": 1.8747,
+    "priority_components": {
+      "goal_weight": 0.7925,
+      "urgency": 1.0,
+      "stagnation_penalty": 0.0022,
+      "resource_bonus": 0.08,
+      "effective_priority": 1.8747
+    },
+    "focus_mode": false,
+    "checkpoint_hint": {
+      "path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\module_app_orchestrator",
+      "mode": "task-directory"
+    },
+    "scheduler_reason": "goal_weight=0.79 urgency=1.00 aging=0.00 resource=0.08",
+    "layers": [
+      "unclassified"
+    ],
+    "graph_matches": [
+      {
+        "module": "tools.generate_test_scaffold",
+        "owner_team": "infrastructure_team",
+        "owner": "ops",
+        "layer": "unclassified",
+        "dependency_count": 0,
+        "dependents": 0,
+        "internal_imports": []
+      },
+      {
+        "module": "tools.prepare_deployment",
+        "owner_team": "infrastructure_team",
+        "owner": "ops",
+        "layer": "unclassified",
+        "dependency_count": 0,
+        "dependents": 0,
+        "internal_imports": []
+      },
+      {
+        "module": "tools.ai_test_automation",
+        "owner_team": "infrastructure_team",
+        "owner": "ops",
+        "layer": "unclassified",
+        "dependency_count": 4,
+        "dependents": 7,
+        "internal_imports": [
+          "app.config",
+          "tools.autonomy_score",
+          "tools.io_utils",
+          "tools.release_train_runtime"
+        ]
+      },
+      {
+        "module": "app.models",
+        "owner_team": "backend_team",
+        "owner": "coder",
+        "layer": "unclassified",
+        "dependency_count": 0,
+        "dependents": 11,
+        "internal_imports": []
+      },
+      {
+        "module": "tools.prompt_improvement_sweep",
+        "owner_team": "infrastructure_team",
+        "owner": "ops",
+        "layer": "unclassified",
+        "dependency_count": 1,
+        "dependents": 1,
+        "internal_imports": [
+          "tools.io_utils"
+        ]
+      }
+    ]
+  },
+  "context_package": {
+    "task": "Improve deployment scaffold automation",
+    "task_type": "implementation",
+    "repo_path": "D:\\codex\\orchestrator-mvp",
+    "module_focus": [
+      "tools.generate_test_scaffold",
+      "tools.prepare_deployment",
+      "tools.ai_test_automation",
+      "app.models",
+      "tools.prompt_improvement_sweep"
+    ],
+    "dependency_modules": [],
+    "owner_teams": [
+      "backend_team",
+      "infrastructure_team"
+    ],
+    "layers": [
+      "unclassified"
+    ],
+    "project_context": {},
+    "knowledge_hints": {
+      "preferred_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension",
+        "kv_cache_manager",
+        "local_llm_runner",
+        "token_streaming"
+      ],
+      "preferred_workers": [
+        "reviewer"
+      ],
+      "repo_learning": {
+        "updated_at": "2026-03-12T11:11:26.410288Z",
+        "embedding": {
+          "provider": "local",
+          "model": "BAAI/bge-small-en-v1.5",
+          "dimensions": 128,
+          "backend": "hashed-local",
+          "ready": true
+        },
+        "graph_modules": 137,
+        "chunk_count": 144,
+        "top_modules": [
+          {
+            "module": "tools.brain_loop",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\brain_loop.py"
+          },
+          {
+            "module": "tools.meta_factory_control",
+            "layer": "architecture_engine",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\meta_factory_control.py"
+          },
+          {
+            "module": "tools.factory_daemon",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\factory_daemon.py"
+          },
+          {
+            "module": "app.orchestrator",
+            "layer": "unclassified",
+            "owner_team": "backend_team",
+            "path": "D:\\codex\\orchestrator-mvp\\app\\orchestrator.py"
+          },
+          {
+            "module": "tools.decision_engine",
+            "layer": "task_graph_planner",
+            "owner_team": "architecture_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\decision_engine.py"
+          },
+          {
+            "module": "app.main",
+            "layer": "unclassified",
+            "owner_team": "backend_team",
+            "path": "D:\\codex\\orchestrator-mvp\\app\\main.py"
+          },
+          {
+            "module": "app.worker_adapters",
+            "layer": "unclassified",
+            "owner_team": "backend_team",
+            "path": "D:\\codex\\orchestrator-mvp\\app\\worker_adapters.py"
+          },
+          {
+            "module": "tools.automation_lab",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\automation_lab.py"
+          },
+          {
+            "module": "tools.change_request_analyzer",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\change_request_analyzer.py"
+          },
+          {
+            "module": "tools.verification_engine",
+            "layer": "verification",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\verification_engine.py"
+          },
+          {
+            "module": "tools.taskgraph_compiler",
+            "layer": "architecture_engine",
+            "owner_team": "architecture_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\taskgraph_compiler.py"
+          },
+          {
+            "module": "tools.company_os",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\company_os.py"
+          }
+        ],
+        "learned_repositories": [
+          {
+            "repo_id": "gh-dc17f0f4fb",
+            "full_name": "Significant-Gravitas/AutoGPT",
+            "local_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+            "language_mix": [
+              {
+                "language": ".json",
+                "files": 1076
+              },
+              {
+                "language": "Python",
+                "files": 914
+              },
+              {
+                "language": "TypeScript",
+                "files": 911
+              },
+              {
+                "language": "Markdown",
+                "files": 320
+              },
+              {
+                "language": ".yml",
+                "files": 43
+              },
+              {
+                "language": ".yaml",
+                "files": 23
+              }
+            ],
+            "key_files": [
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\README.md"
+            ],
+            "sampled_files": [
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\docs\\integrations\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\classic\\forge\\forge\\components\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\backend\\load-tests\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\classic\\original_autogpt\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\frontend\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\frontend\\package.json",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\README.md"
+            ],
+            "capabilities": [
+              "local_llm_runner",
+              "token_streaming",
+              "kv_cache_manager",
+              "agent_orchestration",
+              "tool_execution",
+              "workflow_planning"
+            ],
+            "architecture_summary": "# AutoGPT: Build, Deploy, and Run AI Agents\n\n[![Discord Follow](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscord.com%2Fapi%2Finvites%2Fautogpt%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&label=total%20members&logo=discord&logoColor=white&color=7289da)](https://discord.gg/autogpt) &ensp;\n[![Twitter Follow](https://img.shields.io/twitter/follow/Auto_GPT?style=social)](https://twitter.com/Auto_GPT) &ensp;\n\n<!-- Keep these links. Translations will automatically update with the README. -->\n[Deutsch](https://zdoc.app/de/Significant-Gravitas/AutoGPT) | \n[Español](https:",
+            "experiment_plan": {
+              "sandbox_required": true,
+              "recommended_commands": [],
+              "can_run_without_dependency_install": false
+            },
+            "chunk_count": 24
+          }
+        ],
+        "learned_repository_count": 1,
+        "extracted_capabilities": [
+          "agent_orchestration",
+          "kv_cache_manager",
+          "local_llm_runner",
+          "token_streaming",
+          "tool_execution",
+          "workflow_planning"
+        ],
+        "github_learning": {
+          "updated_at": "2026-03-12T11:11:26.410288Z",
+          "enabled": true,
+          "topics": [
+            "agent",
+            "llm",
+            "compiler",
+            "kernel",
+            "robotics",
+            "distributed-system",
+            "inference"
+          ],
+          "languages": [
+            "Python",
+            "TypeScript",
+            "Rust",
+            "C++",
+            "C",
+            "Go"
+          ],
+          "managed_repo_count": 10,
+          "ready_repo_count": 1,
+          "candidate_repo_count": 9,
+          "scan_candidate_count": 10,
+          "top_candidates": [
+            {
+              "full_name": "langchain-ai/langchain",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\langchain-ai-langchain",
+              "score": 41262.1142,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "ggerganov/llama.cpp",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\ggerganov-llama.cpp",
+              "score": 30857.5689,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "OpenInterpreter/open-interpreter",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\OpenInterpreter-open-interpreter",
+              "score": 23252.3854,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "microsoft/autogen",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\microsoft-autogen",
+              "score": 16454.9498,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "vllm-project/vllm",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\vllm-project-vllm",
+              "score": 15260.6594,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "ray-project/ray",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\ray-project-ray",
+              "score": 14451.3379,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "crewAIInc/crewAI",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\crewAIInc-crewAI",
+              "score": 12846.5735,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "dask/dask",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\dask-dask",
+              "score": 5243.0283,
+              "learning_status": "candidate"
+            }
+          ]
+        }
+      }
+    },
+    "verification_scope": {
+      "modules": [
+        "tools.generate_test_scaffold",
+        "tools.prepare_deployment",
+        "tools.ai_test_automation",
+        "app.models",
+        "tools.prompt_improvement_sweep"
+      ],
+      "teams": [
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "layers": [
+        "unclassified"
+      ]
+    },
+    "current_plan": [
+      "Task type: implementation",
+      "Primary modules: tools.generate_test_scaffold, tools.prepare_deployment, tools.ai_test_automation, app.models, tools.prompt_improvement_sweep",
+      "Dependency expansion: none",
+      "Owner teams: backend_team, infrastructure_team",
+      "Layers: unclassified",
+      "Scheduler owner teams: backend_team",
+      "Scheduler layers: unclassified"
+    ],
+    "summary_blocks": [
+      "Task type: implementation\nPrimary modules: tools.generate_test_scaffold, tools.prepare_deployment, tools.ai_test_automation, app.models, tools.prompt_improvement_sweep\nDependency expansion: none\nOwner teams: backend_team, infrastructure_team\nLayers: unclassified\nScheduler owner teams: backend_team\nScheduler layers: unclassified",
+      "Preferred capabilities: agent_orchestration, webapp_generation, deploy_scaffold, tool_extension, kv_cache_manager\nPreferred workers: reviewer\nTop capability reputation: agent_orchestration, webapp_generation, deploy_scaffold, tool_extension\nTop worker reputation: reviewer\nRepo learning modules=137 chunks=144"
+    ],
+    "budget_chars": 1600
+  },
+  "plan": [
+    {
+      "id": "a69046e1",
+      "title": "Understand task",
+      "status": "running",
+      "worker": "reviewer",
+      "phase": "understand"
+    },
+    {
+      "id": "777e7347",
+      "title": "Draft solution",
+      "status": "pending",
+      "worker": "coder",
+      "phase": "draft"
+    },
+    {
+      "id": "2c0d8f90",
+      "title": "Execute validation",
+      "status": "pending",
+      "worker": "shell",
+      "phase": "execute"
+    },
+    {
+      "id": "bcbb2461",
+      "title": "Verify result",
+      "status": "pending",
+      "worker": "reviewer",
+      "phase": "verify"
+    },
+    {
+      "id": "21a6680f",
+      "title": "Revise next action",
+      "status": "pending",
+      "worker": "reviewer",
+      "phase": "revise"
+    }
+  ],
+  "result": {}
+}

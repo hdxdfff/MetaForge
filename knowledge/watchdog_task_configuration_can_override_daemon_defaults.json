@@ -1,0 +1,22 @@
+{
+  "id": "watchdog_task_configuration_can_override_daemon_defaults",
+  "created_at": "2026-03-21T01:38:00+08:00",
+  "scope": "metaforge_factory_runtime",
+  "symptom": [
+    "daemon code defaults and startup scripts are set to 1s interval",
+    "new daemon processes still restart with interval=60 and evolution_every=3"
+  ],
+  "root_cause": "The installed Windows scheduled watchdog task retained old command-line arguments and kept restarting ensure-factory-daemon.ps1 with stale interval and cadence values.",
+  "detection": [
+    "Query MetaForge-FactoryDaemon-Watchdog with schtasks /Query /V /FO LIST",
+    "Inspect Task To Run for explicit -Interval/-EvolutionEvery arguments"
+  ],
+  "resolution": [
+    "Reinstall the scheduled watchdog task with explicit current arguments",
+    "Do not rely on code defaults alone when an external scheduler is installed"
+  ],
+  "evidence": {
+    "old_watchdog_command": "powershell -ExecutionPolicy Bypass -File D:\\codex\\orchestrator-mvp\\ensure-factory-daemon.ps1 -Interval 60 -MetaEvery 5 -EvolutionEvery 3 -StaleAfterSeconds 240",
+    "new_watchdog_command": "powershell -ExecutionPolicy Bypass -File D:\\codex\\orchestrator-mvp\\ensure-factory-daemon.ps1 -Interval 1 -MetaEvery 5 -EvolutionEvery 10 -StaleAfterSeconds 600"
+  }
+}

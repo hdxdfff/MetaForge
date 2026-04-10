@@ -1,0 +1,19 @@
+﻿{
+  "id": "daemon_start_must_spawn_detached_process_on_windows_under_operator_shell",
+  "title": "Daemon start must detach the child process from the operator shell on Windows",
+  "kind": "runtime_pattern",
+  "recorded_at": "2026-03-21T20:00:00+08:00",
+  "symptoms": [
+    "daemon-start returns a new pid but the process exits when the launcher shell ends",
+    "state file shows cycle=0 or cycle=1 with no lasting heartbeat"
+  ],
+  "root_cause": "PowerShell Start-Process from the operator shell did not reliably detach the daemon from the parent job lifetime.",
+  "fix": [
+    "Launch factory_daemon.py through a detached subprocess with DETACHED_PROCESS and CREATE_NEW_PROCESS_GROUP",
+    "Verify the returned pid against factory_daemon_state.json before reporting success"
+  ],
+  "evidence": [
+    "D:/codex/orchestrator-mvp/start-factory-daemon.ps1",
+    "D:/codex/orchestrator-mvp/tools/codex_control.py"
+  ]
+}

@@ -1,0 +1,1898 @@
+{
+  "updated_at": "2026-03-12T07:10:02.850259Z",
+  "module_count": 124,
+  "teams": {
+    "backend_team": {
+      "owner": "coder",
+      "module_count": 24,
+      "critical_modules": 0,
+      "layers": [
+        "task_graph_planner",
+        "unclassified"
+      ]
+    },
+    "architecture_team": {
+      "owner": "planner",
+      "module_count": 6,
+      "critical_modules": 4,
+      "layers": [
+        "agent_teams",
+        "architecture_engine",
+        "task_graph_planner"
+      ]
+    },
+    "infrastructure_team": {
+      "owner": "ops",
+      "module_count": 92,
+      "critical_modules": 3,
+      "layers": [
+        "architecture_engine",
+        "task_graph_planner",
+        "unclassified",
+        "verification"
+      ]
+    }
+  },
+  "modules": [
+    {
+      "module": "app.budget_manager",
+      "owner_team": "backend_team",
+      "owner": "coder",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\app\\budget_manager.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 2,
+      "dependents": 1
+    },
+    {
+      "module": "app.config",
+      "owner_team": "backend_team",
+      "owner": "coder",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\app\\config.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 1,
+      "dependents": 11
+    },
+    {
+      "module": "app.context_service",
+      "owner_team": "backend_team",
+      "owner": "coder",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\app\\context_service.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 3,
+      "dependents": 1
+    },
+    {
+      "module": "app.git_service",
+      "owner_team": "backend_team",
+      "owner": "coder",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\app\\git_service.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 2,
+      "dependents": 2
+    },
+    {
+      "module": "app.llm_service",
+      "owner_team": "backend_team",
+      "owner": "coder",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\app\\llm_service.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 3,
+      "dependents": 1
+    },
+    {
+      "module": "app.main",
+      "owner_team": "backend_team",
+      "owner": "coder",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\app\\main.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 8,
+      "dependents": 2
+    },
+    {
+      "module": "app.models",
+      "owner_team": "backend_team",
+      "owner": "coder",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\app\\models.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 9
+    },
+    {
+      "module": "app.model_router",
+      "owner_team": "backend_team",
+      "owner": "coder",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\app\\model_router.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 2,
+      "dependents": 3
+    },
+    {
+      "module": "app.network_agent",
+      "owner_team": "backend_team",
+      "owner": "coder",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\app\\network_agent.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 1
+    },
+    {
+      "module": "app.openai_client",
+      "owner_team": "backend_team",
+      "owner": "coder",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\app\\openai_client.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 4,
+      "dependents": 1
+    },
+    {
+      "module": "app.orchestrator",
+      "owner_team": "backend_team",
+      "owner": "coder",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\app\\orchestrator.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 14,
+      "dependents": 1
+    },
+    {
+      "module": "app.resource_registry",
+      "owner_team": "backend_team",
+      "owner": "coder",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\app\\resource_registry.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 1,
+      "dependents": 2
+    },
+    {
+      "module": "app.worker_adapters",
+      "owner_team": "backend_team",
+      "owner": "coder",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\app\\worker_adapters.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 6,
+      "dependents": 1
+    },
+    {
+      "module": "app.__init__",
+      "owner_team": "backend_team",
+      "owner": "coder",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\app\\__init__.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 0
+    },
+    {
+      "module": "runtime.brain_loop",
+      "owner_team": "backend_team",
+      "owner": "coder",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\runtime\\brain_loop.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 2,
+      "dependents": 0
+    },
+    {
+      "module": "runtime.executor",
+      "owner_team": "backend_team",
+      "owner": "coder",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\runtime\\executor.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 1,
+      "dependents": 1
+    },
+    {
+      "module": "runtime.goal_manager",
+      "owner_team": "backend_team",
+      "owner": "coder",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\runtime\\goal_manager.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 3,
+      "dependents": 1
+    },
+    {
+      "module": "runtime.platform_generator",
+      "owner_team": "backend_team",
+      "owner": "coder",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\runtime\\platform_generator.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 3,
+      "dependents": 1
+    },
+    {
+      "module": "runtime.scheduler",
+      "owner_team": "architecture_team",
+      "owner": "planner",
+      "layer": "agent_teams",
+      "path": "D:\\codex\\orchestrator-mvp\\runtime\\scheduler.py",
+      "review_policy": {
+        "mode": "manual",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": true
+      },
+      "dependency_count": 1,
+      "dependents": 1
+    },
+    {
+      "module": "runtime.taskgraph_engine",
+      "owner_team": "backend_team",
+      "owner": "coder",
+      "layer": "task_graph_planner",
+      "path": "D:\\codex\\orchestrator-mvp\\runtime\\taskgraph_engine.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": true
+      },
+      "dependency_count": 1,
+      "dependents": 0
+    },
+    {
+      "module": "runtime.__init__",
+      "owner_team": "backend_team",
+      "owner": "coder",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\runtime\\__init__.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 0
+    },
+    {
+      "module": "tools.agent_market_loop",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\agent_market_loop.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 1,
+      "dependents": 0
+    },
+    {
+      "module": "tools.ai_guard",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\ai_guard.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 2
+    },
+    {
+      "module": "tools.ai_test_automation",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\ai_test_automation.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 3,
+      "dependents": 7
+    },
+    {
+      "module": "tools.approve_self_patch",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\approve_self_patch.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 0
+    },
+    {
+      "module": "tools.architecture_search",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\architecture_search.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 1,
+      "dependents": 0
+    },
+    {
+      "module": "tools.architecture_validator",
+      "owner_team": "architecture_team",
+      "owner": "planner",
+      "layer": "architecture_engine",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\architecture_validator.py",
+      "review_policy": {
+        "mode": "manual",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": true
+      },
+      "dependency_count": 1,
+      "dependents": 3
+    },
+    {
+      "module": "tools.automation_lab",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\automation_lab.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 5,
+      "dependents": 1
+    },
+    {
+      "module": "tools.autonomy_score",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\autonomy_score.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 2
+    },
+    {
+      "module": "tools.autonomy_state",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\autonomy_state.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 5
+    },
+    {
+      "module": "tools.brain_loop",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\brain_loop.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 34,
+      "dependents": 2
+    },
+    {
+      "module": "tools.brain_snapshot",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\brain_snapshot.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 0
+    },
+    {
+      "module": "tools.branch_context",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\branch_context.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 2,
+      "dependents": 1
+    },
+    {
+      "module": "tools.branch_workboard",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\branch_workboard.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 4,
+      "dependents": 2
+    },
+    {
+      "module": "tools.build_toy_os",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\build_toy_os.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 0
+    },
+    {
+      "module": "tools.capability_distillation",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\capability_distillation.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 1
+    },
+    {
+      "module": "tools.capability_registry",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\capability_registry.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 1,
+      "dependents": 2
+    },
+    {
+      "module": "tools.change_request_analyzer",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\change_request_analyzer.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 8,
+      "dependents": 1
+    },
+    {
+      "module": "tools.codex_control",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\codex_control.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 2,
+      "dependents": 0
+    },
+    {
+      "module": "tools.code_knowledge_graph",
+      "owner_team": "architecture_team",
+      "owner": "planner",
+      "layer": "architecture_engine",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\code_knowledge_graph.py",
+      "review_policy": {
+        "mode": "manual",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": true
+      },
+      "dependency_count": 0,
+      "dependents": 10
+    },
+    {
+      "module": "tools.company_os",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\company_os.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 2,
+      "dependents": 1
+    },
+    {
+      "module": "tools.context_builder",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\context_builder.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 2,
+      "dependents": 5
+    },
+    {
+      "module": "tools.context_cache",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\context_cache.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 1
+    },
+    {
+      "module": "tools.context_kernel",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\context_kernel.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 1,
+      "dependents": 2
+    },
+    {
+      "module": "tools.coordination_runtime",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\coordination_runtime.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 2
+    },
+    {
+      "module": "tools.cross_project_coordination",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\cross_project_coordination.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 5
+    },
+    {
+      "module": "tools.db_runtime_check",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\db_runtime_check.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 0
+    },
+    {
+      "module": "tools.decision_engine",
+      "owner_team": "architecture_team",
+      "owner": "planner",
+      "layer": "task_graph_planner",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\decision_engine.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": true
+      },
+      "dependency_count": 13,
+      "dependents": 1
+    },
+    {
+      "module": "tools.dependency_impact_engine",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\dependency_impact_engine.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 1,
+      "dependents": 3
+    },
+    {
+      "module": "tools.dispatch_task",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\dispatch_task.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 1,
+      "dependents": 0
+    },
+    {
+      "module": "tools.distillation",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\distillation.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 1,
+      "dependents": 1
+    },
+    {
+      "module": "tools.embedding_engine",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\embedding_engine.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 1,
+      "dependents": 2
+    },
+    {
+      "module": "tools.environment_repair_lane",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\environment_repair_lane.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 3,
+      "dependents": 2
+    },
+    {
+      "module": "tools.evaluate_system_workspace",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\evaluate_system_workspace.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 1,
+      "dependents": 0
+    },
+    {
+      "module": "tools.evaluator_loop",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\evaluator_loop.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 1,
+      "dependents": 0
+    },
+    {
+      "module": "tools.evolution_control",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\evolution_control.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 0
+    },
+    {
+      "module": "tools.evolution_history_recorder",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\evolution_history_recorder.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 0
+    },
+    {
+      "module": "tools.execution_trace",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\execution_trace.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 14
+    },
+    {
+      "module": "tools.experiment_evaluator",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\experiment_evaluator.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 2
+    },
+    {
+      "module": "tools.experiment_executor",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\experiment_executor.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 2
+    },
+    {
+      "module": "tools.experiment_planner",
+      "owner_team": "architecture_team",
+      "owner": "planner",
+      "layer": "task_graph_planner",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\experiment_planner.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": true
+      },
+      "dependency_count": 0,
+      "dependents": 3
+    },
+    {
+      "module": "tools.factory_daemon",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\factory_daemon.py",
+      "review_policy": {
+        "mode": "manual",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": true
+      },
+      "dependency_count": 25,
+      "dependents": 0
+    },
+    {
+      "module": "tools.factory_self_report",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\factory_self_report.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 1,
+      "dependents": 1
+    },
+    {
+      "module": "tools.fix_system_workspace",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\fix_system_workspace.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 1,
+      "dependents": 0
+    },
+    {
+      "module": "tools.generate_lab_report",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\generate_lab_report.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 0
+    },
+    {
+      "module": "tools.generate_system_workspace",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\generate_system_workspace.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 2,
+      "dependents": 0
+    },
+    {
+      "module": "tools.generate_test_scaffold",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\generate_test_scaffold.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 0
+    },
+    {
+      "module": "tools.generate_toy_os",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\generate_toy_os.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 0
+    },
+    {
+      "module": "tools.generic_test_runner",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 0
+    },
+    {
+      "module": "tools.github_capability_library",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\github_capability_library.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 2
+    },
+    {
+      "module": "tools.github_learning_engine",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\github_learning_engine.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 2,
+      "dependents": 2
+    },
+    {
+      "module": "tools.global_policy_engine",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\global_policy_engine.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 2,
+      "dependents": 6
+    },
+    {
+      "module": "tools.goal_engine",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\goal_engine.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 3
+    },
+    {
+      "module": "tools.goal_registry",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "task_graph_planner",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\goal_registry.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": true
+      },
+      "dependency_count": 1,
+      "dependents": 7
+    },
+    {
+      "module": "tools.goal_runtime",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\goal_runtime.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 1,
+      "dependents": 12
+    },
+    {
+      "module": "tools.goal_storage_audit",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\goal_storage_audit.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 4
+    },
+    {
+      "module": "tools.knowledge_engine",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\knowledge_engine.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 4,
+      "dependents": 3
+    },
+    {
+      "module": "tools.maintenance_summary",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\maintenance_summary.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 0
+    },
+    {
+      "module": "tools.memory_system",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\memory_system.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 1,
+      "dependents": 1
+    },
+    {
+      "module": "tools.meta_factory_control",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "architecture_engine",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\meta_factory_control.py",
+      "review_policy": {
+        "mode": "manual",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": true
+      },
+      "dependency_count": 23,
+      "dependents": 3
+    },
+    {
+      "module": "tools.meta_factory_loop",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\meta_factory_loop.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 1,
+      "dependents": 0
+    },
+    {
+      "module": "tools.module_ownership",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\module_ownership.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 3,
+      "dependents": 8
+    },
+    {
+      "module": "tools.module_ownership_graph",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\module_ownership_graph.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 1,
+      "dependents": 4
+    },
+    {
+      "module": "tools.network_keepalive",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\network_keepalive.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 2,
+      "dependents": 0
+    },
+    {
+      "module": "tools.organization_model",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\organization_model.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 6
+    },
+    {
+      "module": "tools.organization_workboard",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\organization_workboard.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 3
+    },
+    {
+      "module": "tools.platform_registry",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\platform_registry.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 1,
+      "dependents": 7
+    },
+    {
+      "module": "tools.platform_verification_sweep",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "verification",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\platform_verification_sweep.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": true
+      },
+      "dependency_count": 3,
+      "dependents": 1
+    },
+    {
+      "module": "tools.prepare_deployment",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\prepare_deployment.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 0
+    },
+    {
+      "module": "tools.prepare_self_patch_branch",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\prepare_self_patch_branch.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 1,
+      "dependents": 0
+    },
+    {
+      "module": "tools.privilege_policy",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\privilege_policy.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 2
+    },
+    {
+      "module": "tools.product_discovery",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\product_discovery.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 1,
+      "dependents": 0
+    },
+    {
+      "module": "tools.project_graph",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\project_graph.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 6
+    },
+    {
+      "module": "tools.promote_sandbox_candidate",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\promote_sandbox_candidate.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 1,
+      "dependents": 0
+    },
+    {
+      "module": "tools.prompt_improvement_sweep",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\prompt_improvement_sweep.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 1
+    },
+    {
+      "module": "tools.qa_check",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\qa_check.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 0
+    },
+    {
+      "module": "tools.quality_system",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "verification",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\quality_system.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": true
+      },
+      "dependency_count": 1,
+      "dependents": 3
+    },
+    {
+      "module": "tools.release_operations",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\release_operations.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 5
+    },
+    {
+      "module": "tools.release_train_runtime",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\release_train_runtime.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 2
+    },
+    {
+      "module": "tools.replan_engine",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\replan_engine.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 3,
+      "dependents": 0
+    },
+    {
+      "module": "tools.repo_learning_engine",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\repo_learning_engine.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 4,
+      "dependents": 1
+    },
+    {
+      "module": "tools.runtime_maintenance",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\runtime_maintenance.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 3,
+      "dependents": 3
+    },
+    {
+      "module": "tools.sandbox_upgrade_runner",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\sandbox_upgrade_runner.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 1,
+      "dependents": 0
+    },
+    {
+      "module": "tools.scheduler_optimization_sweep",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\scheduler_optimization_sweep.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 1
+    },
+    {
+      "module": "tools.score_toy_os",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\score_toy_os.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 6
+    },
+    {
+      "module": "tools.self_patch_loop",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\self_patch_loop.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 3,
+      "dependents": 0
+    },
+    {
+      "module": "tools.session_guard",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\session_guard.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 1
+    },
+    {
+      "module": "tools.skill_training_loop",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\skill_training_loop.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 0
+    },
+    {
+      "module": "tools.soak_validation",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "verification",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\soak_validation.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": true
+      },
+      "dependency_count": 0,
+      "dependents": 0
+    },
+    {
+      "module": "tools.taskgraph_compiler",
+      "owner_team": "architecture_team",
+      "owner": "planner",
+      "layer": "architecture_engine",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\taskgraph_compiler.py",
+      "review_policy": {
+        "mode": "manual",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": true
+      },
+      "dependency_count": 7,
+      "dependents": 3
+    },
+    {
+      "module": "tools.task_state_tools",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\task_state_tools.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 4
+    },
+    {
+      "module": "tools.telemetry_store",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\telemetry_store.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 1,
+      "dependents": 0
+    },
+    {
+      "module": "tools.tool_health_audit",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\tool_health_audit.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 1,
+      "dependents": 6
+    },
+    {
+      "module": "tools.tool_registry",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\tool_registry.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 2
+    },
+    {
+      "module": "tools.usage_tracker",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\usage_tracker.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 0
+    },
+    {
+      "module": "tools.verification_engine",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "verification",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\verification_engine.py",
+      "review_policy": {
+        "mode": "manual",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": true
+      },
+      "dependency_count": 8,
+      "dependents": 4
+    },
+    {
+      "module": "tools.vm_orchestrator",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\vm_orchestrator.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 2
+    },
+    {
+      "module": "tools.workspace_intake",
+      "owner_team": "infrastructure_team",
+      "owner": "ops",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\tools\\workspace_intake.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 0
+    },
+    {
+      "module": "agents.coder_agent",
+      "owner_team": "backend_team",
+      "owner": "coder",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\agents\\coder_agent.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 0
+    },
+    {
+      "module": "agents.deploy_agent",
+      "owner_team": "backend_team",
+      "owner": "coder",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\agents\\deploy_agent.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 0
+    },
+    {
+      "module": "agents.test_agent",
+      "owner_team": "backend_team",
+      "owner": "coder",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\agents\\test_agent.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 0
+    },
+    {
+      "module": "agents.__init__",
+      "owner_team": "backend_team",
+      "owner": "coder",
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\agents\\__init__.py",
+      "review_policy": {
+        "mode": "same-team-auto",
+        "requires_patch_submission": true,
+        "requires_owner_review": true,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 0
+    },
+    {
+      "module": "state.store",
+      "owner_team": null,
+      "owner": null,
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\state\\store.py",
+      "review_policy": {
+        "mode": "open",
+        "requires_patch_submission": false,
+        "requires_owner_review": false,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 5
+    },
+    {
+      "module": "state.__init__",
+      "owner_team": null,
+      "owner": null,
+      "layer": "unclassified",
+      "path": "D:\\codex\\orchestrator-mvp\\state\\__init__.py",
+      "review_policy": {
+        "mode": "open",
+        "requires_patch_submission": false,
+        "requires_owner_review": false,
+        "requires_architecture_validation": false
+      },
+      "dependency_count": 0,
+      "dependents": 0
+    }
+  ]
+}

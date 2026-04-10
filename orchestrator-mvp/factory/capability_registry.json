@@ -1,0 +1,1455 @@
+{
+  "updated_at": "2026-03-26T14:13:42.537100Z",
+  "capabilities": [
+    {
+      "provider_platform_id": "github-learning:gh-dc17f0f4fb",
+      "provider_name": "Significant-Gravitas/AutoGPT",
+      "workspace": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+      "registered_at": "2026-03-26T14:13:42.388997Z",
+      "version": 1,
+      "capability_id": "agent_orchestration",
+      "entrypoint": "D:\\codex\\orchestrator-mvp\\factory\\agents\\github_learning\\significant-gravitas-autogpt\\agent-orchestration.json",
+      "keywords": [
+        "agent",
+        "agent_orchestration",
+        "kv_cache_manager",
+        "local_llm_runner",
+        "orchestration",
+        "token_streaming",
+        "tool_execution",
+        "workflow_planning"
+      ],
+      "source": "github_learning",
+      "repo_id": "gh-dc17f0f4fb"
+    },
+    {
+      "provider_platform_id": "platform_2af0d9ba98",
+      "provider_name": "Strengthen agent orchestration capability",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-agent-orchestration-capability",
+      "registered_at": "2026-03-19T05:54:44.999136Z",
+      "version": 1,
+      "capability_id": "agent_orchestration",
+      "entrypoint": "orchestration",
+      "keywords": [
+        "agent",
+        "orchestrator",
+        "workflow",
+        "automation"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_38c67a4233",
+      "provider_name": "Strengthen agent orchestration capability",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-agent-orchestration-capability",
+      "registered_at": "2026-03-11T07:31:46.336804Z",
+      "version": 1,
+      "capability_id": "agent_orchestration",
+      "entrypoint": "orchestration",
+      "keywords": [
+        "agent",
+        "orchestrator",
+        "workflow",
+        "automation"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_464dac2a0b",
+      "provider_name": "Optimize task scheduler from agent experience",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\optimize-task-scheduler-from-agent-experience",
+      "registered_at": "2026-03-10T08:20:37.860082Z",
+      "version": 1,
+      "capability_id": "agent_orchestration",
+      "entrypoint": "orchestration",
+      "keywords": [
+        "agent",
+        "orchestrator",
+        "workflow",
+        "automation"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_4cb6cdb84e",
+      "provider_name": "Strengthen agent orchestration capability",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-agent-orchestration-capability",
+      "registered_at": "2026-03-20T07:37:07.152388Z",
+      "version": 1,
+      "capability_id": "agent_orchestration",
+      "entrypoint": "orchestration",
+      "keywords": [
+        "agent",
+        "orchestrator",
+        "workflow",
+        "automation"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_79a3e0e03e",
+      "provider_name": "Improve cheap agent prompts",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\improve-cheap-agent-prompts",
+      "registered_at": "2026-03-10T08:19:37.368305Z",
+      "version": 1,
+      "capability_id": "agent_orchestration",
+      "entrypoint": "orchestration",
+      "keywords": [
+        "agent",
+        "orchestrator",
+        "workflow",
+        "automation"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_8755b93ba0",
+      "provider_name": "Strengthen agent orchestration capability",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-agent-orchestration-capability",
+      "registered_at": "2026-03-14T16:28:18.316637Z",
+      "version": 1,
+      "capability_id": "agent_orchestration",
+      "entrypoint": "orchestration",
+      "keywords": [
+        "agent",
+        "orchestrator",
+        "workflow",
+        "automation"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_8855699f64",
+      "provider_name": "AI Agent Factory",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\ai-agent-factory",
+      "registered_at": "2026-03-09T06:22:35.779816Z",
+      "version": 1,
+      "capability_id": "agent_orchestration",
+      "entrypoint": "orchestration",
+      "keywords": [
+        "agent",
+        "orchestrator",
+        "workflow",
+        "automation"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_982e1ff1de",
+      "provider_name": "Strengthen agent orchestration capability",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-agent-orchestration-capability",
+      "registered_at": "2026-03-19T05:54:43.182200Z",
+      "version": 1,
+      "capability_id": "agent_orchestration",
+      "entrypoint": "orchestration",
+      "keywords": [
+        "agent",
+        "orchestrator",
+        "workflow",
+        "automation"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_b27f294ffe",
+      "provider_name": "Strengthen agent orchestration capability",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-agent-orchestration-capability",
+      "registered_at": "2026-03-20T07:37:09.059658Z",
+      "version": 1,
+      "capability_id": "agent_orchestration",
+      "entrypoint": "orchestration",
+      "keywords": [
+        "agent",
+        "orchestrator",
+        "workflow",
+        "automation"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_f4aa8bafd6",
+      "provider_name": "Strengthen agent orchestration capability",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-agent-orchestration-capability",
+      "registered_at": "2026-03-13T10:03:23.792295Z",
+      "version": 1,
+      "capability_id": "agent_orchestration",
+      "entrypoint": "orchestration",
+      "keywords": [
+        "agent",
+        "orchestrator",
+        "workflow",
+        "automation"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_fa6557b2cd",
+      "provider_name": "Strengthen agent orchestration capability",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-agent-orchestration-capability",
+      "registered_at": "2026-03-11T07:31:45.766693Z",
+      "version": 1,
+      "capability_id": "agent_orchestration",
+      "entrypoint": "orchestration",
+      "keywords": [
+        "agent",
+        "orchestrator",
+        "workflow",
+        "automation"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_009b511d6b",
+      "provider_name": "build ai-video-factory",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\build-ai-video-factory",
+      "registered_at": "2026-03-09T06:47:30.239764Z",
+      "version": 1,
+      "capability_id": "deploy_scaffold",
+      "entrypoint": "deploy",
+      "keywords": [
+        "deploy",
+        "release",
+        "docker",
+        "service"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_1d10c77bbf",
+      "provider_name": "Advance release train operations",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\advance-release-train-operations",
+      "registered_at": "2026-03-13T10:03:23.916453Z",
+      "version": 1,
+      "capability_id": "deploy_scaffold",
+      "entrypoint": "deploy",
+      "keywords": [
+        "deploy",
+        "release",
+        "docker",
+        "service"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_22e2a10330",
+      "provider_name": "Strengthen webapp generation capability",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-webapp-generation-capability",
+      "registered_at": "2026-03-14T10:49:26.467179Z",
+      "version": 1,
+      "capability_id": "deploy_scaffold",
+      "entrypoint": "deploy",
+      "keywords": [
+        "deploy",
+        "release",
+        "docker",
+        "service"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_2f39873e84",
+      "provider_name": "Ship deployable release artifact bundle",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\ship-deployable-release-artifact-bundle",
+      "registered_at": "2026-03-19T05:54:43.496471Z",
+      "version": 1,
+      "capability_id": "deploy_scaffold",
+      "entrypoint": "deploy",
+      "keywords": [
+        "deploy",
+        "release",
+        "docker",
+        "service"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_34b4031314",
+      "provider_name": "Expand tool extension coverage",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\expand-tool-extension-coverage",
+      "registered_at": "2026-03-14T16:28:18.566461Z",
+      "version": 1,
+      "capability_id": "deploy_scaffold",
+      "entrypoint": "deploy",
+      "keywords": [
+        "deploy",
+        "release",
+        "docker",
+        "service"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_38e98c09bc",
+      "provider_name": "Expand tool extension coverage",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\expand-tool-extension-coverage",
+      "registered_at": "2026-03-19T05:54:45.339852Z",
+      "version": 1,
+      "capability_id": "deploy_scaffold",
+      "entrypoint": "deploy",
+      "keywords": [
+        "deploy",
+        "release",
+        "docker",
+        "service"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_3f9a992241",
+      "provider_name": "Deepen repo learning and knowledge routing reuse",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\deepen-repo-learning-and-knowledge-routing-reuse",
+      "registered_at": "2026-03-11T07:31:46.716255Z",
+      "version": 1,
+      "capability_id": "deploy_scaffold",
+      "entrypoint": "deploy",
+      "keywords": [
+        "deploy",
+        "release",
+        "docker",
+        "service"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_4a565d61d5",
+      "provider_name": "ToyOS: Deepen the security module with a demonstrable AES encryption path",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\toyos-deepen-the-security-module-with-a-demonstrable-aes-encryption-path",
+      "registered_at": "2026-03-21T13:01:52.498318Z",
+      "version": 1,
+      "capability_id": "deploy_scaffold",
+      "entrypoint": "deploy",
+      "keywords": [
+        "deploy",
+        "release",
+        "docker",
+        "service"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_4f5397914e",
+      "provider_name": "Deepen repo learning and knowledge routing reuse",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\deepen-repo-learning-and-knowledge-routing-reuse",
+      "registered_at": "2026-03-11T07:31:47.253455Z",
+      "version": 1,
+      "capability_id": "deploy_scaffold",
+      "entrypoint": "deploy",
+      "keywords": [
+        "deploy",
+        "release",
+        "docker",
+        "service"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_59154940c0",
+      "provider_name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+      "registered_at": "2026-03-20T07:37:09.273208Z",
+      "version": 1,
+      "capability_id": "deploy_scaffold",
+      "entrypoint": "deploy",
+      "keywords": [
+        "deploy",
+        "release",
+        "docker",
+        "service"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_67936c2b39",
+      "provider_name": "Expand tool extension coverage",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\expand-tool-extension-coverage",
+      "registered_at": "2026-03-19T05:54:44.103796Z",
+      "version": 1,
+      "capability_id": "deploy_scaffold",
+      "entrypoint": "deploy",
+      "keywords": [
+        "deploy",
+        "release",
+        "docker",
+        "service"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_7a2f920e50",
+      "provider_name": "Ship deployable release artifact bundle",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\ship-deployable-release-artifact-bundle",
+      "registered_at": "2026-03-19T05:54:44.407114Z",
+      "version": 1,
+      "capability_id": "deploy_scaffold",
+      "entrypoint": "deploy",
+      "keywords": [
+        "deploy",
+        "release",
+        "docker",
+        "service"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_83ed536a57",
+      "provider_name": "Deepen repo learning and knowledge routing reuse",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\deepen-repo-learning-and-knowledge-routing-reuse",
+      "registered_at": "2026-03-11T07:31:46.938082Z",
+      "version": 1,
+      "capability_id": "deploy_scaffold",
+      "entrypoint": "deploy",
+      "keywords": [
+        "deploy",
+        "release",
+        "docker",
+        "service"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_850e026ee3",
+      "provider_name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+      "registered_at": "2026-03-12T09:00:03.545156Z",
+      "version": 1,
+      "capability_id": "deploy_scaffold",
+      "entrypoint": "deploy",
+      "keywords": [
+        "deploy",
+        "release",
+        "docker",
+        "service"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_8590e6bcbe",
+      "provider_name": "AI Web Platform Factory",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\ai-web-platform-factory",
+      "registered_at": "2026-03-09T06:47:30.359179Z",
+      "version": 1,
+      "capability_id": "deploy_scaffold",
+      "entrypoint": "deploy",
+      "keywords": [
+        "deploy",
+        "release",
+        "docker",
+        "service"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_8632991421",
+      "provider_name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+      "registered_at": "2026-03-11T07:31:47.419868Z",
+      "version": 1,
+      "capability_id": "deploy_scaffold",
+      "entrypoint": "deploy",
+      "keywords": [
+        "deploy",
+        "release",
+        "docker",
+        "service"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_884b16cef2",
+      "provider_name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+      "registered_at": "2026-03-12T08:12:56.915963Z",
+      "version": 1,
+      "capability_id": "deploy_scaffold",
+      "entrypoint": "deploy",
+      "keywords": [
+        "deploy",
+        "release",
+        "docker",
+        "service"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_8864b9faf3",
+      "provider_name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+      "registered_at": "2026-03-13T10:03:24.040800Z",
+      "version": 1,
+      "capability_id": "deploy_scaffold",
+      "entrypoint": "deploy",
+      "keywords": [
+        "deploy",
+        "release",
+        "docker",
+        "service"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_893798c8e5",
+      "provider_name": "ToyOS: Add a simple ELF loader and run externally compiled user programs",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\toyos-add-a-simple-elf-loader-and-run-externally-compiled-user-programs",
+      "registered_at": "2026-03-21T13:01:52.731046Z",
+      "version": 1,
+      "capability_id": "deploy_scaffold",
+      "entrypoint": "deploy",
+      "keywords": [
+        "deploy",
+        "release",
+        "docker",
+        "service"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_900f86db07",
+      "provider_name": "Continue ToyOS kernel branch work with mainline context reuse",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\continue-toyos-kernel-branch-work-with-mainline-context-reuse",
+      "registered_at": "2026-03-11T07:31:47.092400Z",
+      "version": 1,
+      "capability_id": "deploy_scaffold",
+      "entrypoint": "deploy",
+      "keywords": [
+        "deploy",
+        "release",
+        "docker",
+        "service"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_a507e53e57",
+      "provider_name": "Strengthen webapp generation capability",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-webapp-generation-capability",
+      "registered_at": "2026-03-19T05:54:42.838627Z",
+      "version": 1,
+      "capability_id": "deploy_scaffold",
+      "entrypoint": "deploy",
+      "keywords": [
+        "deploy",
+        "release",
+        "docker",
+        "service"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_b5a152e0f7",
+      "provider_name": "Expand tool extension coverage",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\expand-tool-extension-coverage",
+      "registered_at": "2026-03-19T05:54:44.693576Z",
+      "version": 1,
+      "capability_id": "deploy_scaffold",
+      "entrypoint": "deploy",
+      "keywords": [
+        "deploy",
+        "release",
+        "docker",
+        "service"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_b6fd416bd3",
+      "provider_name": "Coordinate AI Math Foundations Workspace with organization departments",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-ai-math-foundations-workspace-with-organization-departments",
+      "registered_at": "2026-03-12T08:44:58.662503Z",
+      "version": 1,
+      "capability_id": "deploy_scaffold",
+      "entrypoint": "deploy",
+      "keywords": [
+        "deploy",
+        "release",
+        "docker",
+        "service"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_b9e5c175ad",
+      "provider_name": "Continue ToyOS kernel branch work with mainline context reuse",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\continue-toyos-kernel-branch-work-with-mainline-context-reuse",
+      "registered_at": "2026-03-11T07:31:46.536361Z",
+      "version": 1,
+      "capability_id": "deploy_scaffold",
+      "entrypoint": "deploy",
+      "keywords": [
+        "deploy",
+        "release",
+        "docker",
+        "service"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_c303bfe0ca",
+      "provider_name": "Support mainline branch delivery",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\support-mainline-branch-delivery",
+      "registered_at": "2026-03-12T09:00:03.162329Z",
+      "version": 1,
+      "capability_id": "deploy_scaffold",
+      "entrypoint": "deploy",
+      "keywords": [
+        "deploy",
+        "release",
+        "docker",
+        "service"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_c3bb90675c",
+      "provider_name": "Expand tool extension coverage",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\expand-tool-extension-coverage",
+      "registered_at": "2026-03-11T07:31:46.162273Z",
+      "version": 1,
+      "capability_id": "deploy_scaffold",
+      "entrypoint": "deploy",
+      "keywords": [
+        "deploy",
+        "release",
+        "docker",
+        "service"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_cf3b6621a0",
+      "provider_name": "Ship deployable release artifact bundle",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\ship-deployable-release-artifact-bundle",
+      "registered_at": "2026-03-19T05:54:43.797745Z",
+      "version": 1,
+      "capability_id": "deploy_scaffold",
+      "entrypoint": "deploy",
+      "keywords": [
+        "deploy",
+        "release",
+        "docker",
+        "service"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_d71e64eed0",
+      "provider_name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+      "registered_at": "2026-03-14T10:49:26.836241Z",
+      "version": 1,
+      "capability_id": "deploy_scaffold",
+      "entrypoint": "deploy",
+      "keywords": [
+        "deploy",
+        "release",
+        "docker",
+        "service"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_df90392702",
+      "provider_name": "Expand capability routing patterns",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\expand-capability-routing-patterns",
+      "registered_at": "2026-03-10T07:29:33.821446Z",
+      "version": 1,
+      "capability_id": "deploy_scaffold",
+      "entrypoint": "deploy",
+      "keywords": [
+        "deploy",
+        "release",
+        "docker",
+        "service"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_e09cfd3561",
+      "provider_name": "Strengthen webapp generation capability",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-webapp-generation-capability",
+      "registered_at": "2026-03-11T07:31:45.966356Z",
+      "version": 1,
+      "capability_id": "deploy_scaffold",
+      "entrypoint": "deploy",
+      "keywords": [
+        "deploy",
+        "release",
+        "docker",
+        "service"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_f30e01dc23",
+      "provider_name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+      "registered_at": "2026-03-21T13:01:52.960204Z",
+      "version": 1,
+      "capability_id": "deploy_scaffold",
+      "entrypoint": "deploy",
+      "keywords": [
+        "deploy",
+        "release",
+        "docker",
+        "service"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_faa733ed1b",
+      "provider_name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+      "registered_at": "2026-03-14T16:28:18.843989Z",
+      "version": 1,
+      "capability_id": "deploy_scaffold",
+      "entrypoint": "deploy",
+      "keywords": [
+        "deploy",
+        "release",
+        "docker",
+        "service"
+      ]
+    },
+    {
+      "provider_platform_id": "github-learning:gh-dc17f0f4fb",
+      "provider_name": "Significant-Gravitas/AutoGPT",
+      "workspace": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+      "registered_at": "2026-03-26T14:13:42.261351Z",
+      "version": 1,
+      "capability_id": "kv_cache_manager",
+      "entrypoint": "D:\\codex\\orchestrator-mvp\\factory\\agents\\github_learning\\significant-gravitas-autogpt\\kv-cache-manager.json",
+      "keywords": [
+        "agent_orchestration",
+        "cache",
+        "kv",
+        "kv_cache_manager",
+        "local_llm_runner",
+        "manager",
+        "token_streaming",
+        "tool_execution",
+        "workflow_planning"
+      ],
+      "source": "github_learning",
+      "repo_id": "gh-dc17f0f4fb"
+    },
+    {
+      "provider_platform_id": "github-learning:gh-dc17f0f4fb",
+      "provider_name": "Significant-Gravitas/AutoGPT",
+      "workspace": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+      "registered_at": "2026-03-26T14:13:42.113863Z",
+      "version": 1,
+      "capability_id": "local_llm_runner",
+      "entrypoint": "D:\\codex\\orchestrator-mvp\\factory\\agents\\github_learning\\significant-gravitas-autogpt\\local-llm-runner.json",
+      "keywords": [
+        "agent_orchestration",
+        "kv_cache_manager",
+        "llm",
+        "local",
+        "local_llm_runner",
+        "runner",
+        "token_streaming",
+        "tool_execution",
+        "workflow_planning"
+      ],
+      "source": "github_learning",
+      "repo_id": "gh-dc17f0f4fb"
+    },
+    {
+      "provider_platform_id": "github-learning:gh-dc17f0f4fb",
+      "provider_name": "Significant-Gravitas/AutoGPT",
+      "workspace": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+      "registered_at": "2026-03-26T14:13:42.207809Z",
+      "version": 1,
+      "capability_id": "token_streaming",
+      "entrypoint": "D:\\codex\\orchestrator-mvp\\factory\\agents\\github_learning\\significant-gravitas-autogpt\\token-streaming.json",
+      "keywords": [
+        "agent_orchestration",
+        "kv_cache_manager",
+        "local_llm_runner",
+        "streaming",
+        "token",
+        "token_streaming",
+        "tool_execution",
+        "workflow_planning"
+      ],
+      "source": "github_learning",
+      "repo_id": "gh-dc17f0f4fb"
+    },
+    {
+      "provider_platform_id": "github-learning:gh-dc17f0f4fb",
+      "provider_name": "Significant-Gravitas/AutoGPT",
+      "workspace": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+      "registered_at": "2026-03-26T14:13:42.476120Z",
+      "version": 1,
+      "capability_id": "tool_execution",
+      "entrypoint": "D:\\codex\\orchestrator-mvp\\factory\\agents\\github_learning\\significant-gravitas-autogpt\\tool-execution.json",
+      "keywords": [
+        "agent_orchestration",
+        "execution",
+        "kv_cache_manager",
+        "local_llm_runner",
+        "token_streaming",
+        "tool",
+        "tool_execution",
+        "workflow_planning"
+      ],
+      "source": "github_learning",
+      "repo_id": "gh-dc17f0f4fb"
+    },
+    {
+      "provider_platform_id": "platform_2af0d9ba98",
+      "provider_name": "Strengthen agent orchestration capability",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-agent-orchestration-capability",
+      "registered_at": "2026-03-19T05:54:44.999136Z",
+      "version": 1,
+      "capability_id": "tool_extension",
+      "entrypoint": "tools",
+      "keywords": [
+        "tool",
+        "integration",
+        "plugin",
+        "extension"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_38c67a4233",
+      "provider_name": "Strengthen agent orchestration capability",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-agent-orchestration-capability",
+      "registered_at": "2026-03-11T07:31:46.336804Z",
+      "version": 1,
+      "capability_id": "tool_extension",
+      "entrypoint": "tools",
+      "keywords": [
+        "tool",
+        "integration",
+        "plugin",
+        "extension"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_464dac2a0b",
+      "provider_name": "Optimize task scheduler from agent experience",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\optimize-task-scheduler-from-agent-experience",
+      "registered_at": "2026-03-10T08:20:37.860082Z",
+      "version": 1,
+      "capability_id": "tool_extension",
+      "entrypoint": "tools",
+      "keywords": [
+        "tool",
+        "integration",
+        "plugin",
+        "extension"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_4cb6cdb84e",
+      "provider_name": "Strengthen agent orchestration capability",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-agent-orchestration-capability",
+      "registered_at": "2026-03-20T07:37:07.152388Z",
+      "version": 1,
+      "capability_id": "tool_extension",
+      "entrypoint": "tools",
+      "keywords": [
+        "tool",
+        "integration",
+        "plugin",
+        "extension"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_79a3e0e03e",
+      "provider_name": "Improve cheap agent prompts",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\improve-cheap-agent-prompts",
+      "registered_at": "2026-03-10T08:19:37.368305Z",
+      "version": 1,
+      "capability_id": "tool_extension",
+      "entrypoint": "tools",
+      "keywords": [
+        "tool",
+        "integration",
+        "plugin",
+        "extension"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_8755b93ba0",
+      "provider_name": "Strengthen agent orchestration capability",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-agent-orchestration-capability",
+      "registered_at": "2026-03-14T16:28:18.316637Z",
+      "version": 1,
+      "capability_id": "tool_extension",
+      "entrypoint": "tools",
+      "keywords": [
+        "tool",
+        "integration",
+        "plugin",
+        "extension"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_8855699f64",
+      "provider_name": "AI Agent Factory",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\ai-agent-factory",
+      "registered_at": "2026-03-09T06:22:35.779816Z",
+      "version": 1,
+      "capability_id": "tool_extension",
+      "entrypoint": "tools",
+      "keywords": [
+        "tool",
+        "integration",
+        "plugin",
+        "extension"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_982e1ff1de",
+      "provider_name": "Strengthen agent orchestration capability",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-agent-orchestration-capability",
+      "registered_at": "2026-03-19T05:54:43.182200Z",
+      "version": 1,
+      "capability_id": "tool_extension",
+      "entrypoint": "tools",
+      "keywords": [
+        "tool",
+        "integration",
+        "plugin",
+        "extension"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_b27f294ffe",
+      "provider_name": "Strengthen agent orchestration capability",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-agent-orchestration-capability",
+      "registered_at": "2026-03-20T07:37:09.059658Z",
+      "version": 1,
+      "capability_id": "tool_extension",
+      "entrypoint": "tools",
+      "keywords": [
+        "tool",
+        "integration",
+        "plugin",
+        "extension"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_f4aa8bafd6",
+      "provider_name": "Strengthen agent orchestration capability",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-agent-orchestration-capability",
+      "registered_at": "2026-03-13T10:03:23.792295Z",
+      "version": 1,
+      "capability_id": "tool_extension",
+      "entrypoint": "tools",
+      "keywords": [
+        "tool",
+        "integration",
+        "plugin",
+        "extension"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_fa6557b2cd",
+      "provider_name": "Strengthen agent orchestration capability",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-agent-orchestration-capability",
+      "registered_at": "2026-03-11T07:31:45.766693Z",
+      "version": 1,
+      "capability_id": "tool_extension",
+      "entrypoint": "tools",
+      "keywords": [
+        "tool",
+        "integration",
+        "plugin",
+        "extension"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_009b511d6b",
+      "provider_name": "build ai-video-factory",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\build-ai-video-factory",
+      "registered_at": "2026-03-09T06:47:30.239764Z",
+      "version": 1,
+      "capability_id": "webapp_generation",
+      "entrypoint": "frontend",
+      "keywords": [
+        "web",
+        "frontend",
+        "backend",
+        "site",
+        "app"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_1d10c77bbf",
+      "provider_name": "Advance release train operations",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\advance-release-train-operations",
+      "registered_at": "2026-03-13T10:03:23.916453Z",
+      "version": 1,
+      "capability_id": "webapp_generation",
+      "entrypoint": "frontend",
+      "keywords": [
+        "web",
+        "frontend",
+        "backend",
+        "site",
+        "app"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_22e2a10330",
+      "provider_name": "Strengthen webapp generation capability",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-webapp-generation-capability",
+      "registered_at": "2026-03-14T10:49:26.467179Z",
+      "version": 1,
+      "capability_id": "webapp_generation",
+      "entrypoint": "frontend",
+      "keywords": [
+        "web",
+        "frontend",
+        "backend",
+        "site",
+        "app"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_2f39873e84",
+      "provider_name": "Ship deployable release artifact bundle",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\ship-deployable-release-artifact-bundle",
+      "registered_at": "2026-03-19T05:54:43.496471Z",
+      "version": 1,
+      "capability_id": "webapp_generation",
+      "entrypoint": "frontend",
+      "keywords": [
+        "web",
+        "frontend",
+        "backend",
+        "site",
+        "app"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_34b4031314",
+      "provider_name": "Expand tool extension coverage",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\expand-tool-extension-coverage",
+      "registered_at": "2026-03-14T16:28:18.566461Z",
+      "version": 1,
+      "capability_id": "webapp_generation",
+      "entrypoint": "frontend",
+      "keywords": [
+        "web",
+        "frontend",
+        "backend",
+        "site",
+        "app"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_38e98c09bc",
+      "provider_name": "Expand tool extension coverage",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\expand-tool-extension-coverage",
+      "registered_at": "2026-03-19T05:54:45.339852Z",
+      "version": 1,
+      "capability_id": "webapp_generation",
+      "entrypoint": "frontend",
+      "keywords": [
+        "web",
+        "frontend",
+        "backend",
+        "site",
+        "app"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_3f9a992241",
+      "provider_name": "Deepen repo learning and knowledge routing reuse",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\deepen-repo-learning-and-knowledge-routing-reuse",
+      "registered_at": "2026-03-11T07:31:46.716255Z",
+      "version": 1,
+      "capability_id": "webapp_generation",
+      "entrypoint": "frontend",
+      "keywords": [
+        "web",
+        "frontend",
+        "backend",
+        "site",
+        "app"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_4a565d61d5",
+      "provider_name": "ToyOS: Deepen the security module with a demonstrable AES encryption path",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\toyos-deepen-the-security-module-with-a-demonstrable-aes-encryption-path",
+      "registered_at": "2026-03-21T13:01:52.498318Z",
+      "version": 1,
+      "capability_id": "webapp_generation",
+      "entrypoint": "frontend",
+      "keywords": [
+        "web",
+        "frontend",
+        "backend",
+        "site",
+        "app"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_4f5397914e",
+      "provider_name": "Deepen repo learning and knowledge routing reuse",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\deepen-repo-learning-and-knowledge-routing-reuse",
+      "registered_at": "2026-03-11T07:31:47.253455Z",
+      "version": 1,
+      "capability_id": "webapp_generation",
+      "entrypoint": "frontend",
+      "keywords": [
+        "web",
+        "frontend",
+        "backend",
+        "site",
+        "app"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_59154940c0",
+      "provider_name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+      "registered_at": "2026-03-20T07:37:09.273208Z",
+      "version": 1,
+      "capability_id": "webapp_generation",
+      "entrypoint": "frontend",
+      "keywords": [
+        "web",
+        "frontend",
+        "backend",
+        "site",
+        "app"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_67936c2b39",
+      "provider_name": "Expand tool extension coverage",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\expand-tool-extension-coverage",
+      "registered_at": "2026-03-19T05:54:44.103796Z",
+      "version": 1,
+      "capability_id": "webapp_generation",
+      "entrypoint": "frontend",
+      "keywords": [
+        "web",
+        "frontend",
+        "backend",
+        "site",
+        "app"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_7a2f920e50",
+      "provider_name": "Ship deployable release artifact bundle",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\ship-deployable-release-artifact-bundle",
+      "registered_at": "2026-03-19T05:54:44.407114Z",
+      "version": 1,
+      "capability_id": "webapp_generation",
+      "entrypoint": "frontend",
+      "keywords": [
+        "web",
+        "frontend",
+        "backend",
+        "site",
+        "app"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_83ed536a57",
+      "provider_name": "Deepen repo learning and knowledge routing reuse",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\deepen-repo-learning-and-knowledge-routing-reuse",
+      "registered_at": "2026-03-11T07:31:46.938082Z",
+      "version": 1,
+      "capability_id": "webapp_generation",
+      "entrypoint": "frontend",
+      "keywords": [
+        "web",
+        "frontend",
+        "backend",
+        "site",
+        "app"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_850e026ee3",
+      "provider_name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+      "registered_at": "2026-03-12T09:00:03.545156Z",
+      "version": 1,
+      "capability_id": "webapp_generation",
+      "entrypoint": "frontend",
+      "keywords": [
+        "web",
+        "frontend",
+        "backend",
+        "site",
+        "app"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_8590e6bcbe",
+      "provider_name": "AI Web Platform Factory",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\ai-web-platform-factory",
+      "registered_at": "2026-03-09T06:47:30.359179Z",
+      "version": 1,
+      "capability_id": "webapp_generation",
+      "entrypoint": "frontend",
+      "keywords": [
+        "web",
+        "frontend",
+        "backend",
+        "site",
+        "app"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_8632991421",
+      "provider_name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+      "registered_at": "2026-03-11T07:31:47.419868Z",
+      "version": 1,
+      "capability_id": "webapp_generation",
+      "entrypoint": "frontend",
+      "keywords": [
+        "web",
+        "frontend",
+        "backend",
+        "site",
+        "app"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_884b16cef2",
+      "provider_name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+      "registered_at": "2026-03-12T08:12:56.915963Z",
+      "version": 1,
+      "capability_id": "webapp_generation",
+      "entrypoint": "frontend",
+      "keywords": [
+        "web",
+        "frontend",
+        "backend",
+        "site",
+        "app"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_8864b9faf3",
+      "provider_name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+      "registered_at": "2026-03-13T10:03:24.040800Z",
+      "version": 1,
+      "capability_id": "webapp_generation",
+      "entrypoint": "frontend",
+      "keywords": [
+        "web",
+        "frontend",
+        "backend",
+        "site",
+        "app"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_893798c8e5",
+      "provider_name": "ToyOS: Add a simple ELF loader and run externally compiled user programs",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\toyos-add-a-simple-elf-loader-and-run-externally-compiled-user-programs",
+      "registered_at": "2026-03-21T13:01:52.731046Z",
+      "version": 1,
+      "capability_id": "webapp_generation",
+      "entrypoint": "frontend",
+      "keywords": [
+        "web",
+        "frontend",
+        "backend",
+        "site",
+        "app"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_900f86db07",
+      "provider_name": "Continue ToyOS kernel branch work with mainline context reuse",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\continue-toyos-kernel-branch-work-with-mainline-context-reuse",
+      "registered_at": "2026-03-11T07:31:47.092400Z",
+      "version": 1,
+      "capability_id": "webapp_generation",
+      "entrypoint": "frontend",
+      "keywords": [
+        "web",
+        "frontend",
+        "backend",
+        "site",
+        "app"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_a507e53e57",
+      "provider_name": "Strengthen webapp generation capability",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-webapp-generation-capability",
+      "registered_at": "2026-03-19T05:54:42.838627Z",
+      "version": 1,
+      "capability_id": "webapp_generation",
+      "entrypoint": "frontend",
+      "keywords": [
+        "web",
+        "frontend",
+        "backend",
+        "site",
+        "app"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_b5a152e0f7",
+      "provider_name": "Expand tool extension coverage",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\expand-tool-extension-coverage",
+      "registered_at": "2026-03-19T05:54:44.693576Z",
+      "version": 1,
+      "capability_id": "webapp_generation",
+      "entrypoint": "frontend",
+      "keywords": [
+        "web",
+        "frontend",
+        "backend",
+        "site",
+        "app"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_b6fd416bd3",
+      "provider_name": "Coordinate AI Math Foundations Workspace with organization departments",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-ai-math-foundations-workspace-with-organization-departments",
+      "registered_at": "2026-03-12T08:44:58.662503Z",
+      "version": 1,
+      "capability_id": "webapp_generation",
+      "entrypoint": "frontend",
+      "keywords": [
+        "web",
+        "frontend",
+        "backend",
+        "site",
+        "app"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_b9e5c175ad",
+      "provider_name": "Continue ToyOS kernel branch work with mainline context reuse",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\continue-toyos-kernel-branch-work-with-mainline-context-reuse",
+      "registered_at": "2026-03-11T07:31:46.536361Z",
+      "version": 1,
+      "capability_id": "webapp_generation",
+      "entrypoint": "frontend",
+      "keywords": [
+        "web",
+        "frontend",
+        "backend",
+        "site",
+        "app"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_c303bfe0ca",
+      "provider_name": "Support mainline branch delivery",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\support-mainline-branch-delivery",
+      "registered_at": "2026-03-12T09:00:03.162329Z",
+      "version": 1,
+      "capability_id": "webapp_generation",
+      "entrypoint": "frontend",
+      "keywords": [
+        "web",
+        "frontend",
+        "backend",
+        "site",
+        "app"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_c3bb90675c",
+      "provider_name": "Expand tool extension coverage",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\expand-tool-extension-coverage",
+      "registered_at": "2026-03-11T07:31:46.162273Z",
+      "version": 1,
+      "capability_id": "webapp_generation",
+      "entrypoint": "frontend",
+      "keywords": [
+        "web",
+        "frontend",
+        "backend",
+        "site",
+        "app"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_cf3b6621a0",
+      "provider_name": "Ship deployable release artifact bundle",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\ship-deployable-release-artifact-bundle",
+      "registered_at": "2026-03-19T05:54:43.797745Z",
+      "version": 1,
+      "capability_id": "webapp_generation",
+      "entrypoint": "frontend",
+      "keywords": [
+        "web",
+        "frontend",
+        "backend",
+        "site",
+        "app"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_d71e64eed0",
+      "provider_name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+      "registered_at": "2026-03-14T10:49:26.836241Z",
+      "version": 1,
+      "capability_id": "webapp_generation",
+      "entrypoint": "frontend",
+      "keywords": [
+        "web",
+        "frontend",
+        "backend",
+        "site",
+        "app"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_df90392702",
+      "provider_name": "Expand capability routing patterns",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\expand-capability-routing-patterns",
+      "registered_at": "2026-03-10T07:29:33.821446Z",
+      "version": 1,
+      "capability_id": "webapp_generation",
+      "entrypoint": "frontend",
+      "keywords": [
+        "web",
+        "frontend",
+        "backend",
+        "site",
+        "app"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_e09cfd3561",
+      "provider_name": "Strengthen webapp generation capability",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-webapp-generation-capability",
+      "registered_at": "2026-03-11T07:31:45.966356Z",
+      "version": 1,
+      "capability_id": "webapp_generation",
+      "entrypoint": "frontend",
+      "keywords": [
+        "web",
+        "frontend",
+        "backend",
+        "site",
+        "app"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_f30e01dc23",
+      "provider_name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+      "registered_at": "2026-03-21T13:01:52.960204Z",
+      "version": 1,
+      "capability_id": "webapp_generation",
+      "entrypoint": "frontend",
+      "keywords": [
+        "web",
+        "frontend",
+        "backend",
+        "site",
+        "app"
+      ]
+    },
+    {
+      "provider_platform_id": "platform_faa733ed1b",
+      "provider_name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+      "registered_at": "2026-03-14T16:28:18.843989Z",
+      "version": 1,
+      "capability_id": "webapp_generation",
+      "entrypoint": "frontend",
+      "keywords": [
+        "web",
+        "frontend",
+        "backend",
+        "site",
+        "app"
+      ]
+    },
+    {
+      "provider_platform_id": "github-learning:gh-dc17f0f4fb",
+      "provider_name": "Significant-Gravitas/AutoGPT",
+      "workspace": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+      "registered_at": "2026-03-26T14:13:42.537100Z",
+      "version": 1,
+      "capability_id": "workflow_planning",
+      "entrypoint": "D:\\codex\\orchestrator-mvp\\factory\\agents\\github_learning\\significant-gravitas-autogpt\\workflow-planning.json",
+      "keywords": [
+        "agent_orchestration",
+        "kv_cache_manager",
+        "local_llm_runner",
+        "planning",
+        "token_streaming",
+        "tool_execution",
+        "workflow",
+        "workflow_planning"
+      ],
+      "source": "github_learning",
+      "repo_id": "gh-dc17f0f4fb"
+    }
+  ]
+}

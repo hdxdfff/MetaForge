@@ -1,0 +1,19 @@
+﻿{
+  "capability_id": "debug_runtime",
+  "version": 1,
+  "domain": "debugging",
+  "summary": "Diagnose runtime health issues and apply bounded remediation.",
+  "goal_types": ["verification_upgrade", "capability_upgrade", "build_platform"],
+  "keywords": ["runtime", "daemon", "health", "stuck", "debug", "incident", "attention"],
+  "inputs": ["runtime_status", "logs", "workspace_context"],
+  "steps": [
+    {"id": "collect_runtime_signals", "title": "Collect runtime signals", "role": "ops", "tools": ["read_file", "shell_exec"]},
+    {"id": "analyze_runtime_fault", "title": "Analyze runtime fault", "role": "product", "tools": ["read_file", "search_code"]},
+    {"id": "apply_bounded_fix", "title": "Apply bounded fix", "role": "ops", "tools": ["patch_apply", "write_file", "shell_exec"]},
+    {"id": "recheck_runtime_health", "title": "Recheck runtime health", "role": "tester", "tools": ["run_tests", "shell_exec"]}
+  ],
+  "tools": ["read_file", "shell_exec", "patch_apply", "run_tests"],
+  "success_conditions": ["runtime_fault_classified", "health_signal_improved"],
+  "fallbacks": ["collect_artifacts", "defer_risky_change"],
+  "reusable_for": ["runtime_health_failure", "daemon_issue", "system_attention"]
+}

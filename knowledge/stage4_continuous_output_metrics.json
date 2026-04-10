@@ -1,0 +1,133 @@
+{
+  "memory_id": "mem_stage4_continuous_output_metrics_001",
+  "memory_type": "decision",
+  "title": "Stage 4 confirmed should be judged by sustained output metrics, not score alone",
+  "summary": "After the first confirmed Stage 4 baseline, the next control objective is sustained production. Track 24h and 72h windows for real artifact throughput, verified task throughput, cycle time, release output, recovery, and backlog replenishment, and treat blocked-to-done conversion as a ledger-backed metric rather than a snapshot inference.",
+  "scope": {
+    "system": "metaforge",
+    "workspace": "D:\\codex\\orchestrator-mvp",
+    "component": [
+      "tools/continuity_metrics.py",
+      "tools/artifact_audit.py",
+      "tools/meta_factory_control.py",
+      "tools/autonomy_score.py",
+      "data/continuity_metrics.json"
+    ]
+  },
+  "tags": [
+    "stage4_confirmed",
+    "continuity",
+    "throughput",
+    "artifact",
+    "recovery",
+    "backlog",
+    "24h",
+    "72h"
+  ],
+  "authority": "verified",
+  "status": "active",
+  "source_refs": [
+    "data/artifact_registry.json",
+    "data/reality_dashboard.json",
+    "data/release_operations_status.json",
+    "data/autonomy_score.json",
+    "data/control_layer_status.json",
+    "data/task_history.json",
+    "data/tasks.json",
+    "data/core_messages.json",
+    "data/factory_task_engine_status.json"
+  ],
+  "evidence_refs": [
+    "tools/continuity_metrics.py",
+    "data/continuity_metrics.json",
+    "generated/stage4-confirmed-baseline-20260403/snapshot-manifest.json",
+    "generated/stage4-confirmed-baseline-20260403/README.md"
+  ],
+  "created_at": "2026-04-03T14:40:00Z",
+  "updated_at": "2026-04-03T14:40:00Z",
+  "last_verified_at": "2026-04-03T14:40:00Z",
+  "validity": {
+    "kind": "revalidate_on_change",
+    "trigger": [
+      "artifact_registry_changed",
+      "reality_dashboard_changed",
+      "release_operations_changed",
+      "autonomy_score_changed",
+      "control_layer_changed",
+      "task_history_changed",
+      "tasks_changed",
+      "core_messages_changed",
+      "factory_task_engine_changed"
+    ],
+    "expires_at": null
+  },
+  "metric_windows": [
+    24,
+    72
+  ],
+  "metric_family": {
+    "real_artifact_throughput": {
+      "source": "artifact_registry.latest_evidence_at",
+      "definition": "Count real artifacts whose latest evidence falls within the window.",
+      "targets": {
+        "24h": 1,
+        "72h": 3
+      }
+    },
+    "verified_task_throughput": {
+      "source": "task_history + tasks",
+      "definition": "Count verified completed tasks in the window.",
+      "targets": {
+        "24h": 5,
+        "72h": 15
+      }
+    },
+    "median_task_cycle_time": {
+      "source": "tasks.created_at + tasks.updated_at",
+      "definition": "Median minutes from task creation to final completion/release.",
+      "targets": {
+        "24h_max_minutes": 60,
+        "72h_max_minutes": 90
+      }
+    },
+    "release_output": {
+      "source": "release_operations + task history",
+      "definition": "Released tasks and release readiness signals in the window.",
+      "targets": {
+        "24h": 1,
+        "72h": 2
+      }
+    },
+    "self_recovery": {
+      "source": "core_messages",
+      "definition": "Auto-resolved messages as a share of total error-recovery events in the window.",
+      "targets": {
+        "24h_min_rate": 0.75,
+        "72h_min_rate": 0.8
+      }
+    },
+    "backlog_replenishment": {
+      "source": "factory_task_engine_status",
+      "definition": "Active goal count and ready-node count indicating the system can keep feeding work.",
+      "targets": {
+        "24h": "nonzero_ready_nodes",
+        "72h": "stable_goal_replenishment"
+      }
+    },
+    "blocked_to_done_conversion": {
+      "source": "transition ledger",
+      "definition": "Tasks that moved from blocked/failed states into completed/released states.",
+      "targets": {
+        "24h": "ledger_required",
+        "72h": "ledger_required"
+      },
+      "status": "pending_ledger_upgrade"
+    }
+  },
+  "anti_gaming": [
+    "Do not infer blocked-to-done conversion from snapshot-only task history.",
+    "Do not count a higher autonomy score as output quality unless it is accompanied by fresh real artifacts.",
+    "Do not treat release readiness as sufficient if artifact registry or reality dashboard regresses.",
+    "Use 24h and 72h bands together; 24h alone can hide churn."
+  ]
+}
