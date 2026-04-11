@@ -403,6 +403,7 @@ def _signal_policy(
     soak_confirmed: bool,
     production_score: float,
     control_layer: dict[str, Any],
+    release_operations_snapshot: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     runtime_blockers: list[str] = []
     if runtime_critical:
@@ -419,12 +420,18 @@ def _signal_policy(
     release_gate_signals: list[str] = []
     control_policy = control_layer.get("control_policy") or {}
     release_policy = control_policy.get("release") or {}
-    release_operations = control_layer.get("release_operations") or {}
+    release_operations = release_operations_snapshot or control_layer.get("release_operations") or {}
     release_claim_policy = release_operations.get("release_claim_policy") or {}
+    release_claim_passed = bool(release_claim_policy.get("passed"))
     release_blocks = bool(
         release_claim_policy.get("blocks_release")
-        or release_policy.get("blocks_release")
-        or release_policy.get("blocks_promotion")
+        or (
+            not release_claim_passed
+            and (
+                release_policy.get("blocks_release")
+                or release_policy.get("status") == "blocked"
+            )
+        )
     )
     blocking_reasons = [
         str(item) for item in (release_claim_policy.get("blocking_reasons") or [])
@@ -446,7 +453,11 @@ def _signal_policy(
     )
 
 
-def run_autonomy_score(*, quality_snapshot: dict[str, Any] | None = None) -> dict[str, Any]:
+def run_autonomy_score(
+    *,
+    quality_snapshot: dict[str, Any] | None = None,
+    release_operations_snapshot: dict[str, Any] | None = None,
+) -> dict[str, Any]:
     daemon = _load_json(DAEMON, {})
     usage = _load_json(USAGE, {})
     tasks = _load_json(TASKS, [])
@@ -558,6 +569,7 @@ def run_autonomy_score(*, quality_snapshot: dict[str, Any] | None = None) -> dic
             soak_confirmed=bool(soak.get("confirmed")),
             production_score=production_score,
             control_layer=control_layer,
+            release_operations_snapshot=release_operations_snapshot,
         ),
         "decision": {
             "stable_autonomy": stage == "stage4_confirmed" and not runtime_critical,
