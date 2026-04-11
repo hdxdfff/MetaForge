@@ -12,6 +12,7 @@ DATA = ROOT / "data"
 FACTORY = ROOT / "factory"
 POLICY = DATA / "guard_policy.json"
 TASKS = DATA / "tasks.json"
+GOAL_STORAGE_AUDIT = DATA / "goal_storage_audit.json"
 CORE_MESSAGES = DATA / "core_messages.json"
 PLATFORMS = FACTORY / "platform_registry.json"
 USAGE = DATA / "usage_tracker.json"
@@ -120,6 +121,22 @@ def _task_metrics(tasks: list[dict[str, Any]]) -> dict[str, Any]:
     }
 
 
+def _goal_storage_task_queue() -> dict[str, Any]:
+    goal_storage = _load_json(GOAL_STORAGE_AUDIT, {})
+    task_queue = goal_storage.get('task_queue') or {}
+    return {
+        'status': goal_storage.get('status'),
+        'task_queue_confirmed': bool(goal_storage.get('task_queue_confirmed')),
+        'active_task_count': int(task_queue.get('active_task_count') or 0),
+        'managed_active_task_count': int(task_queue.get('managed_active_task_count') or 0),
+        'managed_active_tasks_with_goal_link': int(task_queue.get('managed_active_tasks_with_goal_link') or 0),
+        'managed_active_tasks_linked_to_existing_goal': int(task_queue.get('managed_active_tasks_linked_to_existing_goal') or 0),
+        'managed_active_tasks_broken_goal_link': list(task_queue.get('managed_active_tasks_broken_goal_link') or [])[:20],
+        'managed_active_tasks_without_goal_link': list(task_queue.get('managed_active_tasks_without_goal_link') or [])[:20],
+        'managed_active_tasks_without_node_link': list(task_queue.get('managed_active_tasks_without_node_link') or [])[:20],
+    }
+
+
 def _platform_metrics(platforms: list[dict[str, Any]]) -> dict[str, Any]:
     now = datetime.now(timezone.utc)
     last_day = now - timedelta(days=1)
@@ -211,6 +228,7 @@ def guard_snapshot() -> dict[str, Any]:
     kernel_mode = load_kernel_mode()
     lean_execution = str(kernel_mode.get("profile") or "") in {"lean_execution", "interaction_only"}
     tasks = _load_json(TASKS, [])
+    goal_storage_task_queue = _goal_storage_task_queue()
     messages = _load_json(CORE_MESSAGES, [])
     platforms = _load_json(PLATFORMS, {}).get('platforms', [])
     task_metrics = _task_metrics(tasks)
@@ -227,17 +245,22 @@ def guard_snapshot() -> dict[str, Any]:
     effective_ratio_source = str(usage_metrics.get('effective_ratio_source') or 'full_window')
 
     created_last_hour = int(task_metrics.get('created_last_hour_effective', task_metrics['created_last_hour']))
+    managed_active_tasks = int(goal_storage_task_queue.get('managed_active_task_count') or 0)
+    raw_active_tasks = int(task_metrics.get('active') or 0)
+    effective_active_tasks = managed_active_tasks if goal_storage_task_queue.get('task_queue_confirmed') else raw_active_tasks
     if created_last_hour >= int(policy.get('max_tasks_per_hour', 20)):
         max_active_tasks = int(policy.get('max_active_tasks', 8))
         max_queue_tasks = int(policy.get('max_queue_tasks', 20))
         # Burst creation should throttle orchestration, but only hard-block when the queue is already under pressure.
-        if not (lean_execution and task_metrics['active'] <= max_active_tasks and task_metrics['queued'] < max_queue_tasks):
+        if not (lean_execution and effective_active_tasks <= max_active_tasks and task_metrics['queued'] < max_queue_tasks):
             reasons.append('task creation rate exceeded')
             allow_brain_loop = False
             allow_meta = False
-    if task_metrics['active'] >= int(policy.get('max_active_tasks', 8)):
+    if effective_active_tasks >= int(policy.get('max_active_tasks', 8)):
         reasons.append('active task limit exceeded')
         allow_brain_loop = False
+    elif raw_active_tasks >= int(policy.get('max_active_tasks', 8)):
+        advisories.append('raw task rows exceed active limit but managed queue is below threshold')
     if task_metrics['queued'] >= int(policy.get('max_queue_tasks', 20)):
         reasons.append('queue length limit exceeded')
         allow_brain_loop = False
@@ -274,6 +297,12 @@ def guard_snapshot() -> dict[str, Any]:
         'allow_meta': allow_meta,
         'allow_evolution': allow_evolution,
         'tasks': task_metrics,
+        'goal_storage_task_queue': goal_storage_task_queue,
+        'task_pressure': {
+            'raw_active_tasks': raw_active_tasks,
+            'managed_active_tasks': managed_active_tasks,
+            'effective_active_tasks': effective_active_tasks,
+        },
         'platforms': platform_metrics,
         'usage': usage_metrics,
         'messages': message_metrics,
