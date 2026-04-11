@@ -42,6 +42,7 @@ PRODUCTION_FOCUS = DATA / "production_focus_status.json"
 TASKS = DATA / "tasks.json"
 STALE_RELEASE_HOURS = 24
 ACTIVE_TASK_STATUSES = {"queued", "planning", "running", "waiting_approval"}
+ROLLBACK_WINDOW_HOURS = 24
 
 
 def _utc() -> str:
@@ -327,6 +328,333 @@ def _delivery_ready_state_machine(
     }
 
 
+def _task_lane_bucket(task: dict[str, Any]) -> str:
+    execution_mode = str(task.get("execution_mode") or "").strip().lower()
+    verification_level = str(task.get("verification_level") or "").strip().lower()
+    task_type = str(task.get("task_type") or "").strip().lower()
+    admission_lane = str(task.get("admission_lane") or "").strip().lower()
+    if (
+        execution_mode in {"production", "runtime"}
+        or verification_level in {"release", "strict", "full"}
+        or task_type in {"deploy_production", "release_candidate", "runtime_patch", "self_repair"}
+        or "critical" in admission_lane
+    ):
+        return "critical"
+    if (
+        admission_lane in {"sandbox_low_risk", "capability_growth", "repair_first"}
+        or verification_level in {"smoke", "light", "quick"}
+    ):
+        return "fast"
+    return "standard"
+
+
+def _lane_pipeline_summary(tasks: list[dict[str, Any]]) -> dict[str, Any]:
+    latest_tasks = _latest_task_attempts([item for item in tasks if isinstance(item, dict)])
+    lanes: dict[str, dict[str, Any]] = {
+        "fast": {"task_count": 0, "active_count": 0, "terminal_count": 0, "statuses": {}},
+        "standard": {"task_count": 0, "active_count": 0, "terminal_count": 0, "statuses": {}},
+        "critical": {"task_count": 0, "active_count": 0, "terminal_count": 0, "statuses": {}},
+    }
+    for task in latest_tasks:
+        lane = _task_lane_bucket(task)
+        bucket = lanes[lane]
+        status = str(task.get("status") or "unknown").strip().lower()
+        bucket["task_count"] += 1
+        bucket["statuses"][status] = int(bucket["statuses"].get(status) or 0) + 1
+        if status in ACTIVE_TASK_STATUSES:
+            bucket["active_count"] += 1
+        else:
+            bucket["terminal_count"] += 1
+    next_action = "observe-only"
+    if lanes["critical"]["active_count"]:
+        next_action = "protect-critical-lane"
+    elif lanes["standard"]["active_count"]:
+        next_action = "drain-standard-lane"
+    elif lanes["fast"]["active_count"]:
+        next_action = "drain-fast-lane"
+    return {
+        "status": "active" if any(item["active_count"] for item in lanes.values()) else "idle",
+        "lane_count": len(lanes),
+        "lanes": lanes,
+        "next_action": next_action,
+    }
+
+
+def _promotion_lifecycle_summary(
+    *,
+    tasks: list[dict[str, Any]],
+    active_release_candidates: list[dict[str, Any]],
+    valid_release_candidates: list[dict[str, Any]],
+    recent_active_releases: list[dict[str, Any]],
+) -> dict[str, Any]:
+    latest_tasks = _latest_task_attempts([item for item in tasks if isinstance(item, dict)])
+    completed_candidates = [item for item in latest_tasks if _task_eligible_for_delivery_ready(item)]
+    delivery_ready_tasks = [item for item in latest_tasks if str(item.get("status") or "").strip().lower() == "delivery_ready"]
+    released_tasks = [item for item in latest_tasks if str(item.get("status") or "").strip().lower() == "released"]
+    rollback_eligible: list[dict[str, Any]] = []
+    now = datetime.now(timezone.utc)
+    for task in released_tasks:
+        updated_at = _parse_utc(task.get("updated_at") or task.get("created_at"))
+        rollback_rule = str(task.get("rollback_rule") or "").strip()
+        if rollback_rule:
+            rollback_eligible.append(task)
+            continue
+        if updated_at is not None and now - updated_at <= timedelta(hours=ROLLBACK_WINDOW_HOURS):
+            rollback_eligible.append(task)
+
+    if completed_candidates:
+        stage = "completed"
+        next_action = "promote-delivery-ready"
+    elif delivery_ready_tasks:
+        stage = "delivery_ready"
+        next_action = "prepare-release-candidate"
+    elif valid_release_candidates:
+        stage = "release_candidate"
+        next_action = "promote-release-candidate"
+    elif released_tasks:
+        stage = "released"
+        next_action = "observe-only"
+    else:
+        stage = "idle"
+        next_action = "observe-only"
+
+    return {
+        "status": "active" if stage != "idle" else "idle",
+        "current_stage": stage,
+        "next_action": next_action,
+        "counts": {
+            "completed": len(completed_candidates),
+            "delivery_ready": len(delivery_ready_tasks),
+            "release_candidate": len(active_release_candidates),
+            "released": len(released_tasks),
+            "rollback_eligible": len(rollback_eligible),
+        },
+        "recent_release_candidates": [
+            {
+                "id": item.get("id"),
+                "status": item.get("status"),
+                "repo_path": item.get("repo_path"),
+                "updated_at": item.get("updated_at"),
+            }
+            for item in recent_active_releases[:5]
+        ],
+        "rollback_window_hours": ROLLBACK_WINDOW_HOURS,
+    }
+
+
+def _task_release_record_id(task_id: str) -> str:
+    return f"task-release-{task_id}"
+
+
+def _production_focus_artifacts_for_task(task: dict[str, Any]) -> list[str]:
+    focus = _load_json(PRODUCTION_FOCUS, {}) or {}
+    if not isinstance(focus, dict):
+        return []
+    if not bool(focus.get("enabled") or focus.get("single_product_mode")):
+        return []
+    if str(task.get("execution_mode") or "").strip().lower() != "production":
+        return []
+    if not _task_repo_is_vm_authoritative(task):
+        return []
+    focus_required = [str(item).strip() for item in (focus.get("primary_required_artifacts") or []) if str(item).strip()]
+    if not focus_required:
+        return []
+    primary_artifact_path = str(focus.get("primary_artifact_path") or "").strip()
+    if not primary_artifact_path.startswith("generated/"):
+        return []
+    resolved_repo = str((resolved_delivery_evidence(task) or {}).get("repo_path") or task.get("repo_path") or "").strip()
+    normalized_repo = resolved_repo.rstrip("/")
+    if normalized_repo not in {"/workspace", "/srv", "/srv/orchestrator-mvp"}:
+        return []
+    return focus_required
+
+
+def _task_release_artifacts(task: dict[str, Any]) -> list[str]:
+    evidence = resolved_delivery_evidence(task) or {}
+    required = [str(item).strip() for item in (evidence.get("required_artifacts") or []) if str(item).strip()]
+    if required:
+        return required
+    artifact_spec = task.get("artifact_spec")
+    if not isinstance(artifact_spec, dict) or not artifact_spec:
+        artifact_spec = ((task.get("scheduler_hint") or {}).get("artifact_spec") or {})
+    required = [str(item).strip() for item in ((artifact_spec or {}).get("required_artifacts") or []) if str(item).strip()]
+    if required:
+        return required
+    return _production_focus_artifacts_for_task(task)
+
+
+def _task_release_artifact_source(task: dict[str, Any]) -> str:
+    evidence = resolved_delivery_evidence(task) or {}
+    if any(str(item).strip() for item in (evidence.get("required_artifacts") or [])):
+        return "delivery_evidence"
+    artifact_spec = task.get("artifact_spec")
+    if not isinstance(artifact_spec, dict) or not artifact_spec:
+        artifact_spec = ((task.get("scheduler_hint") or {}).get("artifact_spec") or {})
+    if any(str(item).strip() for item in ((artifact_spec or {}).get("required_artifacts") or [])):
+        return "task_artifact_spec"
+    if _production_focus_artifacts_for_task(task):
+        return "production_focus_fallback"
+    return "missing"
+
+
+def _normalized_release_repo_path(task: dict[str, Any], artifacts: list[str]) -> str:
+    repo_path = str((resolved_delivery_evidence(task) or {}).get("repo_path") or task.get("repo_path") or "").strip()
+    normalized_repo = repo_path.rstrip("/")
+    if normalized_repo in {"/workspace", "/srv/orchestrator-mvp"}:
+        return repo_path
+    if normalized_repo == "/srv":
+        if any(str(item).strip().startswith("generated/toy-os-demo") for item in artifacts):
+            return "/workspace"
+    return repo_path
+
+
+def _ensure_release_candidates(
+    *,
+    releases: list[dict[str, Any]],
+    tasks: list[dict[str, Any]],
+) -> dict[str, Any]:
+    now = _utc()
+    existing_by_task = {
+        str(item.get("source_task_id") or "").strip(): item
+        for item in releases
+        if isinstance(item, dict) and str(item.get("source_task_id") or "").strip()
+    }
+    created: list[str] = []
+    updated: list[str] = []
+    for task in tasks:
+        task_id = str(task.get("id") or "").strip()
+        if not task_id:
+            continue
+        if str(task.get("status") or "").strip().lower() != "delivery_ready":
+            continue
+        record = existing_by_task.get(task_id)
+        artifacts = _task_release_artifacts(task)
+        repo_path = _normalized_release_repo_path(task, artifacts)
+        if not repo_path or not artifacts:
+            continue
+        payload = {
+            "id": _task_release_record_id(task_id),
+            "created_at": now,
+            "updated_at": now,
+            "repo_id": task.get("project_id"),
+            "repo_path": repo_path,
+            "branch": task.get("branch") or ((task.get("result") or {}).get("branch")),
+            "artifacts": artifacts,
+            "blockers": [],
+            "status": "prepared",
+            "notes": "Auto-created from delivery_ready production task.",
+            "source_task_id": task_id,
+            "rollback_rule": task.get("rollback_rule"),
+            "artifact_source": _task_release_artifact_source(task),
+        }
+        if record is None:
+            releases.append(payload)
+            existing_by_task[task_id] = payload
+            created.append(task_id)
+            continue
+        changed = False
+        for key, value in payload.items():
+            if key == "created_at":
+                continue
+            if record.get(key) != value and key not in {"status", "notes"}:
+                record[key] = value
+                changed = True
+        if str(record.get("status") or "").strip().lower() not in {"candidate", "ready", "released", "archived"}:
+            if record.get("status") != "prepared":
+                record["status"] = "prepared"
+                changed = True
+        if changed:
+            record["updated_at"] = now
+            updated.append(task_id)
+    return {"created_count": len(created), "created_task_ids": created, "updated_count": len(updated), "updated_task_ids": updated}
+
+
+def _advance_release_records(
+    *,
+    releases: list[dict[str, Any]],
+    runtime_ok: bool,
+    verification_ok: bool,
+    control_ok: bool,
+    artifact_release_ok: bool,
+    blocked_patch_count: int,
+) -> dict[str, Any]:
+    now = _utc()
+    promoted: list[str] = []
+    readied: list[str] = []
+    if blocked_patch_count != 0 or not runtime_ok or not verification_ok or not control_ok or not artifact_release_ok:
+        return {"promoted_to_candidate": promoted, "promoted_to_ready": readied}
+    for item in releases:
+        if str(item.get("status") or "").strip().lower() != "prepared":
+            continue
+        evidence = validate_release_payload(item.get("repo_path"), item.get("artifacts") or [])
+        if not evidence.get("passed"):
+            continue
+        item["status"] = "candidate"
+        item["updated_at"] = now
+        item["notes"] = ((item.get("notes") or "") + " Promoted to candidate by delivery lifecycle runtime.").strip()
+        promoted.append(str(item.get("id") or ""))
+    for item in releases:
+        if str(item.get("status") or "").strip().lower() != "candidate":
+            continue
+        evidence = validate_release_payload(item.get("repo_path"), item.get("artifacts") or [])
+        if not evidence.get("passed"):
+            continue
+        item["status"] = "ready"
+        item["updated_at"] = now
+        item["released_at"] = now
+        item["notes"] = ((item.get("notes") or "") + " Promoted to ready by delivery lifecycle runtime.").strip()
+        readied.append(str(item.get("id") or ""))
+    return {"promoted_to_candidate": promoted, "promoted_to_ready": readied}
+
+
+def _sync_release_records_to_tasks(
+    *,
+    releases: list[dict[str, Any]],
+    tasks: list[dict[str, Any]],
+) -> dict[str, Any]:
+    now = _utc()
+    ready_by_task = {
+        str(item.get("source_task_id") or "").strip(): item
+        for item in releases
+        if isinstance(item, dict)
+        and str(item.get("source_task_id") or "").strip()
+        and str(item.get("status") or "").strip().lower() in {"ready", "released"}
+    }
+    updated: list[str] = []
+    for task in tasks:
+        task_id = str(task.get("id") or "").strip()
+        if not task_id or task_id not in ready_by_task:
+            continue
+        if str(task.get("status") or "").strip().lower() not in {"delivery_ready", "released"}:
+            continue
+        release_record = ready_by_task[task_id]
+        result = task.setdefault("result", {})
+        changed = False
+        desired_released_at = str(release_record.get("released_at") or now)
+        if str(task.get("status") or "").strip().lower() != "released":
+            task["status"] = "released"
+            changed = True
+        if result.get("delivery_state") != "released":
+            result["delivery_state"] = "released"
+            changed = True
+        if result.get("released_at") != desired_released_at:
+            result["released_at"] = desired_released_at
+            changed = True
+        if result.get("release_record_id") != release_record.get("id"):
+            result["release_record_id"] = release_record.get("id")
+            changed = True
+        rollback_until = _parse_utc(str(release_record.get("released_at") or now))
+        if rollback_until is not None:
+            rollback_until = rollback_until + timedelta(hours=ROLLBACK_WINDOW_HOURS)
+            if result.get("rollback_eligible_until") != rollback_until.isoformat().replace("+00:00", "Z"):
+                result["rollback_eligible_until"] = rollback_until.isoformat().replace("+00:00", "Z")
+                changed = True
+        if changed:
+            task["updated_at"] = now
+            updated.append(task_id)
+    return {"updated_count": len(updated), "task_ids": updated}
+
+
 
 def _control_release_ready(control: dict[str, Any]) -> bool:
     if str(control.get("status") or "unknown") == "operator_attention":
@@ -501,6 +829,7 @@ def run_release_operations_status() -> dict[str, Any]:
     governance_split = summarize_governance_contract(governance_contract)
     governance_gate_from_verification = (verification.get("governance_gate") or {}) if isinstance(verification, dict) else {}
     tasks = _load_json(TASKS, [])
+    release_candidate_sync = _ensure_release_candidates(releases=releases, tasks=tasks)
     governance_ok = bool(
         governance_gate_from_verification.get("passed")
         if governance_gate_from_verification
@@ -517,6 +846,7 @@ def run_release_operations_status() -> dict[str, Any]:
     archived_releases = [item for item in audited_releases if item.get('status') == 'archived']
     recent_active_releases = list(reversed(active_release_candidates))[:5]
     recent_archived_releases = list(reversed(archived_releases))[:5]
+    lane_pipeline = _lane_pipeline_summary(tasks)
     ready_patches = [item for item in patches if item.get("merge_status") == "ready"]
     blocked_patches = [
         item
@@ -652,6 +982,61 @@ def run_release_operations_status() -> dict[str, Any]:
         )
         release_tiers["mainline"]["requirements"]["delivery_gate_ok"] = delivery_gate_ok
         release_tiers["mainline"]["requirements"]["delivery_ready_count"] = delivery_ready_count
+    release_record_lifecycle = _advance_release_records(
+        releases=releases,
+        runtime_ok=runtime_ok,
+        verification_ok=verification_ok,
+        control_ok=control_ok,
+        artifact_release_ok=artifact_release_ok,
+        blocked_patch_count=len(blocked_patches),
+    )
+    task_release_sync = _sync_release_records_to_tasks(releases=releases, tasks=tasks)
+    if (
+        release_candidate_sync.get("created_count")
+        or release_candidate_sync.get("updated_count")
+        or release_record_lifecycle.get("promoted_to_candidate")
+        or release_record_lifecycle.get("promoted_to_ready")
+        or task_release_sync.get("updated_count")
+    ):
+        _save_json(RELEASES, releases)
+        if task_release_sync.get("updated_count"):
+            _save_json(TASKS, tasks)
+        audited_releases = _audit_release_records(releases)
+        release_candidates = [item for item in audited_releases if item.get("status") in {"prepared", "candidate", "ready"}]
+        stale_release_candidates = [item for item in release_candidates if _release_is_stale(item)]
+        active_release_candidates = [item for item in release_candidates if not _release_is_stale(item)]
+        valid_release_candidates = [item for item in active_release_candidates if (item.get("artifact_evidence") or {}).get("passed")]
+        invalid_release_candidates = [item for item in active_release_candidates if not (item.get("artifact_evidence") or {}).get("passed")]
+        stale_invalid_release_candidates = [item for item in stale_release_candidates if not (item.get("artifact_evidence") or {}).get("passed")]
+        archived_releases = [item for item in audited_releases if item.get('status') == 'archived']
+        recent_active_releases = list(reversed(active_release_candidates))[:5]
+        recent_archived_releases = list(reversed(archived_releases))[:5]
+        tasks = _load_json(TASKS, [])
+        lane_pipeline = _lane_pipeline_summary(tasks)
+        delivery_ready_state_machine = _delivery_ready_state_machine(
+            tasks=tasks,
+            runtime_ok=runtime_ok,
+            control_ok=control_ok,
+            artifact_release_ok=artifact_release_ok,
+            governance_ok=governance_ok,
+            release_gate=release_gate,
+            blocked_patches=blocked_patches,
+        )
+        delivery_ready_count = int((delivery_ready_state_machine.get("counts") or {}).get("delivery_ready") or 0)
+        delivery_gate_ok = delivery_ready_count > 0
+        release_tiers["mainline"]["status"] = (
+            "ready"
+            if verification_ok and control_ok and runtime_ok and ai_ok and artifact_release_ok and delivery_gate_ok
+            else "blocked"
+        )
+        release_tiers["mainline"]["requirements"]["delivery_gate_ok"] = delivery_gate_ok
+        release_tiers["mainline"]["requirements"]["delivery_ready_count"] = delivery_ready_count
+    promotion_lifecycle = _promotion_lifecycle_summary(
+        tasks=tasks,
+        active_release_candidates=active_release_candidates,
+        valid_release_candidates=valid_release_candidates,
+        recent_active_releases=recent_active_releases,
+    )
 
     readiness_checks = _release_readiness_checks(
         runtime_ok=runtime_ok,
@@ -752,9 +1137,16 @@ def run_release_operations_status() -> dict[str, Any]:
             "blocks_promotion": not delivery_ready_state_machine["promotion_allowed"],
             "blocking_reasons": delivery_ready_state_machine["global_blockers"],
             "next_action": delivery_ready_state_machine["next_action"],
-            "last_promotion_result": promotion_result,
+            "last_promotion_result": {
+                **promotion_result,
+                "release_candidate_sync": release_candidate_sync,
+                "release_record_lifecycle": release_record_lifecycle,
+                "task_release_sync": task_release_sync,
+            },
         },
         "delivery_ready_state_machine": delivery_ready_state_machine,
+        "promotion_lifecycle": promotion_lifecycle,
+        "lane_pipeline": lane_pipeline,
         "operations_readiness": {
             "runtime_ok": runtime_ok,
             "verification_ok": verification_ok,
