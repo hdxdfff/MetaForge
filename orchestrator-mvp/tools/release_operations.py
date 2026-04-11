@@ -705,6 +705,8 @@ def _release_readiness_checks(
     release_tiers: dict[str, dict[str, Any]],
     delivery_gate_ok: bool,
     delivery_ready_count: int,
+    released_count: int,
+    release_candidate_ready_count: int,
     daemon_alive: bool,
     brain_loop_ok: bool,
     task_engine_ok: bool,
@@ -728,7 +730,7 @@ def _release_readiness_checks(
         },
         {
             "name": "verification_gate",
-            "status": "pass" if verification_ok and release_gate.get("status") == "pass" and not release_gate.get("sample_failures") else "attention",
+            "status": "pass" if verification_ok and not release_gate.get("blocks_release") else "attention",
             "effect": "stage_gate_release_claims",
             "affects_runtime": False,
             "affects_release": True,
@@ -776,6 +778,8 @@ def _release_readiness_checks(
             "affects_reporting": True,
             "detail": {
                 "delivery_ready_count": delivery_ready_count,
+                "released_count": released_count,
+                "release_candidate_ready_count": release_candidate_ready_count,
                 "mainline_release_tier": release_tiers.get("mainline", {}).get("status"),
             },
             "next_action": "promote-delivery-ready" if not delivery_gate_ok else "observe-only",
@@ -949,7 +953,16 @@ def run_release_operations_status() -> dict[str, Any]:
         blocked_patches=blocked_patches,
     )
     delivery_ready_count = int((delivery_ready_state_machine.get("counts") or {}).get("delivery_ready") or 0)
-    delivery_gate_ok = delivery_ready_count > 0
+    released_count = int((delivery_ready_state_machine.get("counts") or {}).get("released") or 0)
+    release_candidate_ready_count = len(
+        [
+            item
+            for item in active_release_candidates
+            if str(item.get("status") or "").strip().lower() in {"candidate", "ready", "released"}
+            and bool((item.get("artifact_evidence") or {}).get("passed"))
+        ]
+    )
+    delivery_gate_ok = delivery_ready_count > 0 or released_count > 0 or release_candidate_ready_count > 0
     release_tiers["mainline"]["status"] = (
         "ready"
         if verification_ok and control_ok and runtime_ok and ai_ok and artifact_release_ok and delivery_gate_ok
@@ -974,7 +987,16 @@ def run_release_operations_status() -> dict[str, Any]:
             blocked_patches=blocked_patches,
         )
         delivery_ready_count = int((delivery_ready_state_machine.get("counts") or {}).get("delivery_ready") or 0)
-        delivery_gate_ok = delivery_ready_count > 0
+        released_count = int((delivery_ready_state_machine.get("counts") or {}).get("released") or 0)
+        release_candidate_ready_count = len(
+            [
+                item
+                for item in active_release_candidates
+                if str(item.get("status") or "").strip().lower() in {"candidate", "ready", "released"}
+                and bool((item.get("artifact_evidence") or {}).get("passed"))
+            ]
+        )
+        delivery_gate_ok = delivery_ready_count > 0 or released_count > 0 or release_candidate_ready_count > 0
         release_tiers["mainline"]["status"] = (
             "ready"
             if verification_ok and control_ok and runtime_ok and ai_ok and artifact_release_ok and delivery_gate_ok
@@ -1023,7 +1045,16 @@ def run_release_operations_status() -> dict[str, Any]:
             blocked_patches=blocked_patches,
         )
         delivery_ready_count = int((delivery_ready_state_machine.get("counts") or {}).get("delivery_ready") or 0)
-        delivery_gate_ok = delivery_ready_count > 0
+        released_count = int((delivery_ready_state_machine.get("counts") or {}).get("released") or 0)
+        release_candidate_ready_count = len(
+            [
+                item
+                for item in active_release_candidates
+                if str(item.get("status") or "").strip().lower() in {"candidate", "ready", "released"}
+                and bool((item.get("artifact_evidence") or {}).get("passed"))
+            ]
+        )
+        delivery_gate_ok = delivery_ready_count > 0 or released_count > 0 or release_candidate_ready_count > 0
         release_tiers["mainline"]["status"] = (
             "ready"
             if verification_ok and control_ok and runtime_ok and ai_ok and artifact_release_ok and delivery_gate_ok
@@ -1051,6 +1082,8 @@ def run_release_operations_status() -> dict[str, Any]:
         release_tiers=release_tiers,
         delivery_gate_ok=delivery_gate_ok,
         delivery_ready_count=delivery_ready_count,
+        released_count=released_count,
+        release_candidate_ready_count=release_candidate_ready_count,
         daemon_alive=daemon_alive,
         brain_loop_ok=brain_loop_ok,
         task_engine_ok=task_engine_ok,
