@@ -91,6 +91,7 @@ run_smoke_hygiene = _lazy_func('tools.runtime_maintenance', 'run_smoke_hygiene')
 run_schema_hygiene_smoke = _lazy_func('tools.schema_hygiene', 'run_schema_hygiene_smoke')
 run_self_improvement_status = _lazy_func('tools.self_patch_loop', 'self_improvement_status')
 run_guard = _lazy_func('tools.ai_guard', 'run_guard')
+run_fact_gate_convergence = _lazy_func('tools.fact_gate_convergence', 'run_fact_gate_convergence')
 run_control_layer = _lazy_func('tools.meta_factory_control', 'run_control_layer')
 run_quality = _lazy_func('tools.quality_system', 'run_quality')
 run_autonomy_score = _lazy_func('tools.autonomy_score', 'run_autonomy_score')
@@ -229,14 +230,19 @@ def _read_daemon_state_fallback():
     return _read_json_path(DATA / 'factory_daemon_state.json', {})
 
 
-def _delivery_summary_from_task_runtime(task_runtime: dict[str, Any] | None) -> dict[str, int]:
+def _delivery_summary_from_task_runtime(
+    task_runtime: dict[str, Any] | None,
+    release_operations: dict[str, Any] | None = None,
+) -> dict[str, int]:
     task_runtime = task_runtime or {}
     by_status = task_runtime.get('by_status') or {}
+    release_operations = release_operations or {}
+    delivery_counts = ((release_operations.get('delivery_ready_state_machine') or {}).get('counts') or {})
     return {
         'completed_tasks': int(by_status.get('completed') or 0) + int(by_status.get('released') or 0),
-        'delivery_ready_tasks': int(by_status.get('delivery_ready') or 0),
-        'released_tasks': int(by_status.get('released') or 0),
-        'verification_failed_tasks': int(by_status.get('verification_failed') or 0),
+        'delivery_ready_tasks': int(delivery_counts.get('delivery_ready') or by_status.get('delivery_ready') or 0),
+        'released_tasks': int(delivery_counts.get('released') or by_status.get('released') or 0),
+        'verification_failed_tasks': int(delivery_counts.get('verification_failed') or by_status.get('verification_failed') or 0),
     }
 
 
@@ -341,7 +347,8 @@ def _control_layer_summary_payload(payload):
         payload.get('task_runtime')
         or payload.get('delivery_summary')
         or factory_state.get('task_runtime')
-        or {}
+        or {},
+        release_operations,
     )
     return {
         'mode': 'cached_summary',
@@ -409,7 +416,11 @@ def _control_layer_summary_payload(payload):
             'readiness_checks': _preview_checks(release_operations.get('readiness_checks') or []),
             'promotion_gate': release_operations.get('promotion_gate') or {},
             'delivery_ready_state_machine': release_operations.get('delivery_ready_state_machine') or {},
+            'promotion_lifecycle': release_operations.get('promotion_lifecycle') or {},
+            'lane_pipeline': release_operations.get('lane_pipeline') or {},
         },
+        'change_attribution': payload.get('change_attribution') or {},
+        'self_repair_playbooks': payload.get('self_repair_playbooks') or {},
         'automation_lab': {
             'status': automation_lab.get('status'),
         },
@@ -1032,7 +1043,13 @@ def cmd_evolution_control(_args):
 
 
 def cmd_guard_status(_args):
-    out(run_guard())
+    payload = run_guard()
+    payload['fact_gate_convergence'] = run_fact_gate_convergence()
+    out(payload)
+
+
+def cmd_fact_gate_convergence(_args):
+    out(run_fact_gate_convergence())
 
 
 def cmd_control_layer_status(args):
@@ -1105,7 +1122,12 @@ def cmd_autonomy_score(args):
         return
     if args.refresh:
         quality_payload = run_quality()
-        out(run_autonomy_score(quality_snapshot=quality_payload))
+        run_verification()
+        release_ops = run_release_operations_status()
+        out(run_autonomy_score(
+            quality_snapshot=quality_payload,
+            release_operations_snapshot=release_ops,
+        ))
         return
     out(run_autonomy_score())
 
@@ -2425,6 +2447,7 @@ def build_parser():
     sub.add_parser('quality-status')
     sub.add_parser('evolution-control')
     sub.add_parser('guard-status')
+    sub.add_parser('fact-gate-convergence')
     p_control_layer_status = sub.add_parser('control-layer-status')
     p_control_layer_status.add_argument('--refresh', action='store_true')
     p_engineering_os_status = sub.add_parser('engineering-os-status')
@@ -2667,6 +2690,7 @@ def main():
         'quality-status': cmd_quality_status,
         'evolution-control': cmd_evolution_control,
         'guard-status': cmd_guard_status,
+        'fact-gate-convergence': cmd_fact_gate_convergence,
         'control-layer-status': cmd_control_layer_status,
         'engineering-os-status': cmd_engineering_os_status,
         'autonomy-score': cmd_autonomy_score,
