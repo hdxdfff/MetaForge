@@ -1962,15 +1962,31 @@ def _discover_daemon_container() -> str | None:
     if completed.returncode != 0:
         return None
     names = [line.strip() for line in completed.stdout.splitlines() if line.strip()]
-    preferred = [
-        name for name in names
-        if name == "orchestrator-mvp-orchestrator-1"
+
+    def _has_control_workspace(name: str) -> bool:
+        try:
+            probe = subprocess.run(
+                ["docker", "exec", name, "test", "-f", "/workspace/tools/codex_control.py"],
+                capture_output=True,
+                text=True,
+                check=False,
+            )
+        except Exception:
+            return False
+        return probe.returncode == 0
+
+    preferred_names = [
+        "orchestrator-mvp-orchestrator-1",
+        "orchestrator-mvp-controller-api-1",
+        "orchestrator-mvp-model-gateway-1",
     ]
-    if preferred:
-        return preferred[0]
+    for preferred_name in preferred_names:
+        if preferred_name in names and _has_control_workspace(preferred_name):
+            return preferred_name
+
     for name in names:
         lowered = name.lower()
-        if "orchestrator" in lowered and "mvp" in lowered:
+        if "orchestrator" in lowered and "mvp" in lowered and _has_control_workspace(name):
             return name
     return None
 
