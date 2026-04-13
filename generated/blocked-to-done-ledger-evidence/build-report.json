@@ -1,0 +1,13 @@
+{
+  "artifact_id": "blocked-to-done-ledger-evidence",
+  "build_success": true,
+  "build_ready": true,
+  "command": [
+    "D:\\codex\\tools\\python311-embed\\python.exe",
+    "-m",
+    "py_compile",
+    "D:\\codex\\generated\\blocked-to-done-ledger-evidence\\run_demo.py"
+  ],
+  "stdout": "",
+  "stderr": ""
+}

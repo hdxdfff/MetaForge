@@ -1,0 +1,561 @@
+{
+  "graph_id": "graph_77dd3a1353",
+  "goal_id": "goal_1fe0e4bb13",
+  "target": "Expand tool extension coverage",
+  "type": "build_product",
+  "created_at": "2026-03-10T12:08:42.797389Z",
+  "updated_at": "2026-03-12T18:59:12.899274Z",
+  "status": "completed",
+  "meta": {
+    "goal_scale": "engineering-os",
+    "architecture_rules": [
+      "agents cannot import runtime",
+      "router must be stateless",
+      "runtime modules cannot depend on app transport handlers",
+      "tools may depend on runtime and state, but not app HTTP layer",
+      "verification must gate promotion of architecture-affecting changes"
+    ],
+    "agent_teams": [
+      "architecture_team",
+      "backend_team",
+      "infrastructure_team",
+      "testing_team"
+    ],
+    "code_graph_focus": {
+      "module_focus": [
+        "tools.ai_guard",
+        "tools.automation_lab",
+        "tools.autonomy_score",
+        "tools.brain_snapshot",
+        "tools.build_toy_os",
+        "tools.capability_distillation",
+        "tools.code_knowledge_graph",
+        "tools.db_runtime_check"
+      ],
+      "owner_teams": [
+        "architecture_team",
+        "infrastructure_team"
+      ],
+      "layers": [
+        "architecture_engine",
+        "unclassified"
+      ],
+      "matched_modules": [
+        {
+          "module": "tools.ai_guard",
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependency_count": 0,
+          "dependents": 3
+        },
+        {
+          "module": "tools.automation_lab",
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependency_count": 0,
+          "dependents": 2
+        },
+        {
+          "module": "tools.autonomy_score",
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependency_count": 0,
+          "dependents": 3
+        },
+        {
+          "module": "tools.brain_snapshot",
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependency_count": 0,
+          "dependents": 1
+        },
+        {
+          "module": "tools.build_toy_os",
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependency_count": 0,
+          "dependents": 4
+        },
+        {
+          "module": "tools.capability_distillation",
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependency_count": 0,
+          "dependents": 1
+        },
+        {
+          "module": "tools.code_knowledge_graph",
+          "owner_team": "architecture_team",
+          "layer": "architecture_engine",
+          "dependency_count": 0,
+          "dependents": 8
+        },
+        {
+          "module": "tools.db_runtime_check",
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependency_count": 0,
+          "dependents": 0
+        }
+      ]
+    }
+  },
+  "nodes": [
+    {
+      "id": "architecture_contract",
+      "title": "Define architecture contract for Expand tool extension coverage",
+      "role": "architect",
+      "prompt": "Define architecture boundaries, interfaces, and ownership for: Expand tool extension coverage",
+      "dependencies": [],
+      "status": "completed",
+      "task_id": null,
+      "team": "architecture_team",
+      "owned_modules": [
+        "brain",
+        "runtime.scheduler",
+        "tools.taskgraph_compiler",
+        "tools.ai_guard",
+        "tools.automation_lab",
+        "tools.autonomy_score",
+        "tools.brain_snapshot",
+        "tools.build_toy_os",
+        "tools.capability_distillation",
+        "tools.code_knowledge_graph",
+        "tools.db_runtime_check"
+      ],
+      "kind": "architecture",
+      "module_focus": [
+        "tools.ai_guard",
+        "tools.automation_lab",
+        "tools.autonomy_score",
+        "tools.brain_snapshot",
+        "tools.build_toy_os",
+        "tools.capability_distillation",
+        "tools.code_knowledge_graph",
+        "tools.db_runtime_check"
+      ],
+      "owner_teams": [
+        "architecture_team",
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.ai_guard",
+          "tools.automation_lab",
+          "tools.autonomy_score",
+          "tools.brain_snapshot",
+          "tools.build_toy_os",
+          "tools.capability_distillation",
+          "tools.code_knowledge_graph",
+          "tools.db_runtime_check"
+        ],
+        "owner_teams": [
+          "architecture_team",
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.ai_guard",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.automation_lab",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.autonomy_score",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.brain_snapshot",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.build_toy_os",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.capability_distillation",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.code_knowledge_graph",
+            "owner_team": "architecture_team",
+            "owner": "planner",
+            "layer": "architecture_engine"
+          },
+          {
+            "module": "tools.db_runtime_check",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "worker": "reviewer",
+      "selection_reason": "role-default:architect->reviewer+team-owner:architecture_team->reviewer",
+      "worker_success_rate": 1.0292,
+      "skill_matches": [
+        "completed_1554",
+        "completed_1804"
+      ],
+      "execution_lane": "host-control",
+      "worker_vm_preferred": false,
+      "result": {
+        "summary": "Runtime-native architecture contract synthesized from project context kernel, code knowledge graph, ownership map, and global policy."
+      },
+      "completed_at": "2026-03-10T12:42:54.578988Z"
+    },
+    {
+      "id": "engineering_plan",
+      "title": "Plan engineering task graph for Expand tool extension coverage",
+      "role": "product",
+      "prompt": "Produce the engineering task graph, interface map, and implementation slices for: Expand tool extension coverage",
+      "dependencies": [
+        "architecture_contract"
+      ],
+      "status": "completed",
+      "task_id": null,
+      "team": "architecture_team",
+      "owned_modules": [
+        "brain",
+        "runtime.scheduler",
+        "tools.taskgraph_compiler",
+        "tools.ai_guard",
+        "tools.automation_lab",
+        "tools.autonomy_score",
+        "tools.brain_snapshot",
+        "tools.build_toy_os",
+        "tools.capability_distillation",
+        "tools.code_knowledge_graph",
+        "tools.db_runtime_check"
+      ],
+      "kind": "planning",
+      "module_focus": [
+        "tools.ai_guard",
+        "tools.automation_lab",
+        "tools.autonomy_score",
+        "tools.brain_snapshot",
+        "tools.build_toy_os",
+        "tools.capability_distillation",
+        "tools.code_knowledge_graph",
+        "tools.db_runtime_check"
+      ],
+      "owner_teams": [
+        "architecture_team",
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.ai_guard",
+          "tools.automation_lab",
+          "tools.autonomy_score",
+          "tools.brain_snapshot",
+          "tools.build_toy_os",
+          "tools.capability_distillation",
+          "tools.code_knowledge_graph",
+          "tools.db_runtime_check"
+        ],
+        "owner_teams": [
+          "architecture_team",
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.ai_guard",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.automation_lab",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.autonomy_score",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.brain_snapshot",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.build_toy_os",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.capability_distillation",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.code_knowledge_graph",
+            "owner_team": "architecture_team",
+            "owner": "planner",
+            "layer": "architecture_engine"
+          },
+          {
+            "module": "tools.db_runtime_check",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "result": {
+        "summary": "Runtime-native engineering plan synthesized from dependency-aware taskgraph and module ownership map."
+      },
+      "completed_at": "2026-03-10T12:42:54.578988Z"
+    },
+    {
+      "id": "backend_impl",
+      "title": "Implement backend/runtime modules for Expand tool extension coverage",
+      "role": "coder",
+      "prompt": "Implement backend/runtime modules for: Expand tool extension coverage",
+      "dependencies": [
+        "engineering_plan"
+      ],
+      "status": "completed",
+      "task_id": null,
+      "team": "backend_team",
+      "owned_modules": [
+        "app",
+        "runtime",
+        "agents"
+      ],
+      "kind": "implementation",
+      "module_focus": [],
+      "owner_teams": [
+        "architecture_team",
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [],
+        "owner_teams": [
+          "architecture_team",
+          "infrastructure_team"
+        ],
+        "ownership": []
+      },
+      "patch_required": true,
+      "patch_submission_id": "patch_0001",
+      "patch_submission_status": "merged",
+      "worker": "coder",
+      "selection_reason": "role-default:coder->coder+team-owner:backend_team->coder",
+      "worker_success_rate": 0.0,
+      "skill_matches": [
+        "completed_1554",
+        "completed_1804",
+        "task_12345678"
+      ],
+      "execution_lane": "host-control",
+      "worker_vm_preferred": false,
+      "patch_merge_status": "merged",
+      "patch_verification_status": "pass"
+    },
+    {
+      "id": "infra_impl",
+      "title": "Implement infrastructure/tooling modules for Expand tool extension coverage",
+      "role": "ops",
+      "prompt": "Implement infrastructure/tooling modules for: Expand tool extension coverage",
+      "dependencies": [
+        "engineering_plan"
+      ],
+      "status": "completed",
+      "task_id": null,
+      "team": "infrastructure_team",
+      "owned_modules": [
+        "tools.vm_orchestrator",
+        "tools.verification_engine",
+        "tools.platform_registry",
+        "tools.ai_guard",
+        "tools.automation_lab",
+        "tools.autonomy_score",
+        "tools.brain_snapshot",
+        "tools.build_toy_os",
+        "tools.capability_distillation",
+        "tools.code_knowledge_graph",
+        "tools.db_runtime_check"
+      ],
+      "kind": "infrastructure",
+      "module_focus": [
+        "tools.ai_guard",
+        "tools.automation_lab",
+        "tools.autonomy_score",
+        "tools.brain_snapshot",
+        "tools.build_toy_os",
+        "tools.capability_distillation",
+        "tools.code_knowledge_graph",
+        "tools.db_runtime_check"
+      ],
+      "owner_teams": [
+        "architecture_team",
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.ai_guard",
+          "tools.automation_lab",
+          "tools.autonomy_score",
+          "tools.brain_snapshot",
+          "tools.build_toy_os",
+          "tools.capability_distillation",
+          "tools.code_knowledge_graph",
+          "tools.db_runtime_check"
+        ],
+        "owner_teams": [
+          "architecture_team",
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.ai_guard",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.automation_lab",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.autonomy_score",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.brain_snapshot",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.build_toy_os",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.capability_distillation",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.code_knowledge_graph",
+            "owner_team": "architecture_team",
+            "owner": "planner",
+            "layer": "architecture_engine"
+          },
+          {
+            "module": "tools.db_runtime_check",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "worker": "docker",
+      "selection_reason": "role-default:ops->docker+team-owner:infrastructure_team->docker",
+      "worker_success_rate": 0.0,
+      "skill_matches": [
+        "completed_1554",
+        "completed_1804",
+        "task_12345678"
+      ],
+      "execution_lane": "host-control",
+      "worker_vm_preferred": false
+    },
+    {
+      "id": "verification_gate",
+      "title": "Run verification and architecture validation for Expand tool extension coverage",
+      "role": "tester",
+      "prompt": "Run CI, tests, and architecture validation for: Expand tool extension coverage",
+      "dependencies": [
+        "backend_impl",
+        "infra_impl"
+      ],
+      "status": "completed",
+      "task_id": null,
+      "team": "testing_team",
+      "owned_modules": [
+        "tests",
+        "tools.quality_system",
+        "tools.soak_validation"
+      ],
+      "kind": "verification",
+      "module_focus": [],
+      "owner_teams": [
+        "architecture_team",
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [],
+        "owner_teams": [
+          "architecture_team",
+          "infrastructure_team"
+        ],
+        "ownership": []
+      },
+      "patch_required": true,
+      "patch_submission_id": "patch_0002",
+      "patch_submission_status": "merged",
+      "patch_merge_status": "merged",
+      "patch_verification_status": "pass"
+    },
+    {
+      "id": "release_prep",
+      "title": "Prepare release plan for Expand tool extension coverage",
+      "role": "ops",
+      "prompt": "Prepare deployment and release checklist for: Expand tool extension coverage",
+      "dependencies": [
+        "verification_gate"
+      ],
+      "status": "completed",
+      "task_id": null,
+      "worker": "docker",
+      "selection_reason": "role-default:ops->docker",
+      "worker_success_rate": 0.045,
+      "skill_matches": [
+        "completed_1554",
+        "completed_1804"
+      ],
+      "execution_mode": "production",
+      "execution_lane": "host-control",
+      "worker_vm_preferred": false,
+      "result": {
+        "summary": "Node bypassed because component release_train is disabled under lean_execution.",
+        "disabled_component": "release_train"
+      },
+      "completed_at": "2026-03-12T19:42:40.319835Z",
+      "last_disabled_task_id": "24d1d7e7ef074d47ae7ac540d6186937"
+    }
+  ]
+}

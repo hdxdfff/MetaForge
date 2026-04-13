@@ -1,0 +1,1425 @@
+{
+  "updated_at": "2026-03-21T13:01:52.973622Z",
+  "platforms": [
+    {
+      "platform_id": "platform_d33a56cc79",
+      "goal_id": "manual-AI Research Factory",
+      "name": "AI Research Factory",
+      "template_id": "research-project",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\ai-research-factory",
+      "status": "generated",
+      "created_at": "2026-03-09T06:18:58.977229Z",
+      "updated_at": "2026-03-09T06:18:58.977229Z",
+      "required_paths": [
+        "README.md",
+        "notes",
+        "experiments",
+        "reports",
+        "data"
+      ],
+      "runtime": {
+        "backend": "workspace",
+        "last_checked": "2026-03-09T09:18:28.634861Z",
+        "last_run": null,
+        "health": "healthy",
+        "status": "ready",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_8855699f64",
+      "goal_id": "manual-AI Agent Factory",
+      "name": "AI Agent Factory",
+      "template_id": "ai-agent",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\ai-agent-factory",
+      "status": "generated",
+      "created_at": "2026-03-09T06:22:35.778806Z",
+      "updated_at": "2026-03-09T06:22:35.778806Z",
+      "required_paths": [
+        "README.md",
+        "agents",
+        "tools",
+        "memory",
+        "orchestration"
+      ],
+      "runtime": {
+        "backend": "workspace",
+        "last_checked": "2026-03-09T09:18:28.635861Z",
+        "last_run": null,
+        "health": "healthy",
+        "status": "ready",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_009b511d6b",
+      "goal_id": "goal_84adc26566",
+      "name": "build ai-video-factory",
+      "template_id": "webapp",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\build-ai-video-factory",
+      "status": "generated",
+      "created_at": "2026-03-09T06:47:30.236678Z",
+      "updated_at": "2026-03-09T06:47:30.237725Z",
+      "required_paths": [
+        "README.md",
+        "frontend",
+        "backend",
+        "docs",
+        "deploy"
+      ],
+      "runtime": {
+        "backend": "workspace",
+        "last_checked": "2026-03-09T09:18:28.635861Z",
+        "last_run": null,
+        "health": "healthy",
+        "status": "ready",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_8590e6bcbe",
+      "goal_id": "goal_7f471cb20d",
+      "name": "AI Web Platform Factory",
+      "template_id": "webapp",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\ai-web-platform-factory",
+      "status": "generated",
+      "created_at": "2026-03-09T06:47:30.358179Z",
+      "updated_at": "2026-03-09T06:47:30.358179Z",
+      "required_paths": [
+        "README.md",
+        "frontend",
+        "backend",
+        "docs",
+        "deploy"
+      ],
+      "runtime": {
+        "backend": "workspace",
+        "last_checked": "2026-03-09T09:18:28.635861Z",
+        "last_run": null,
+        "health": "healthy",
+        "status": "ready",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_df90392702",
+      "goal_id": "goal_7e8628c347",
+      "name": "Expand capability routing patterns",
+      "template_id": "webapp",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\expand-capability-routing-patterns",
+      "status": "generated",
+      "created_at": "2026-03-10T07:29:33.818932Z",
+      "updated_at": "2026-03-10T07:29:33.818932Z",
+      "required_paths": [
+        "README.md",
+        "frontend",
+        "backend",
+        "docs",
+        "deploy"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-10T07:29:33.818932Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_79a3e0e03e",
+      "goal_id": "goal_3a5bbd3882",
+      "name": "Improve cheap agent prompts",
+      "template_id": "ai-agent",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\improve-cheap-agent-prompts",
+      "status": "generated",
+      "created_at": "2026-03-10T08:19:37.356301Z",
+      "updated_at": "2026-03-10T08:19:37.356301Z",
+      "required_paths": [
+        "README.md",
+        "agents",
+        "tools",
+        "memory",
+        "orchestration"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-10T08:19:37.356301Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_464dac2a0b",
+      "goal_id": "goal_dfdcf384c3",
+      "name": "Optimize task scheduler from agent experience",
+      "template_id": "ai-agent",
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\optimize-task-scheduler-from-agent-experience",
+      "status": "generated",
+      "created_at": "2026-03-10T08:20:37.834091Z",
+      "updated_at": "2026-03-10T08:20:37.834091Z",
+      "required_paths": [
+        "README.md",
+        "agents",
+        "tools",
+        "memory",
+        "orchestration"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-10T08:20:37.834091Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_fa6557b2cd",
+      "goal_id": "goal_329e404697",
+      "name": "Strengthen agent orchestration capability",
+      "template_id": "ai-agent",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-agent-orchestration-capability",
+      "status": "generated",
+      "created_at": "2026-03-11T07:31:45.756699Z",
+      "updated_at": "2026-03-11T07:31:45.756699Z",
+      "required_paths": [
+        "README.md",
+        "agents",
+        "tools",
+        "memory",
+        "orchestration"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-11T07:31:45.756699Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_e09cfd3561",
+      "goal_id": "goal_a733428f6e",
+      "name": "Strengthen webapp generation capability",
+      "template_id": "webapp",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-webapp-generation-capability",
+      "status": "generated",
+      "created_at": "2026-03-11T07:31:45.932293Z",
+      "updated_at": "2026-03-11T07:31:45.932293Z",
+      "required_paths": [
+        "README.md",
+        "frontend",
+        "backend",
+        "docs",
+        "deploy"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-11T07:31:45.932293Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_c3bb90675c",
+      "goal_id": "goal_1fe0e4bb13",
+      "name": "Expand tool extension coverage",
+      "template_id": "webapp",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\expand-tool-extension-coverage",
+      "status": "generated",
+      "created_at": "2026-03-11T07:31:46.150239Z",
+      "updated_at": "2026-03-11T07:31:46.150239Z",
+      "required_paths": [
+        "README.md",
+        "frontend",
+        "backend",
+        "docs",
+        "deploy"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-11T07:31:46.150239Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_38c67a4233",
+      "goal_id": "goal_a2cbaa0d6f",
+      "name": "Strengthen agent orchestration capability",
+      "template_id": "ai-agent",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-agent-orchestration-capability",
+      "status": "generated",
+      "created_at": "2026-03-11T07:31:46.301807Z",
+      "updated_at": "2026-03-11T07:31:46.301807Z",
+      "required_paths": [
+        "README.md",
+        "agents",
+        "tools",
+        "memory",
+        "orchestration"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-11T07:31:46.301807Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_b9e5c175ad",
+      "goal_id": "goal_499a5e5ebe",
+      "name": "Continue ToyOS kernel branch work with mainline context reuse",
+      "template_id": "webapp",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\continue-toyos-kernel-branch-work-with-mainline-context-reuse",
+      "status": "generated",
+      "created_at": "2026-03-11T07:31:46.522290Z",
+      "updated_at": "2026-03-11T07:31:46.522290Z",
+      "required_paths": [
+        "README.md",
+        "frontend",
+        "backend",
+        "docs",
+        "deploy"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-11T07:31:46.522290Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_3f9a992241",
+      "goal_id": "goal_d688c6ccd3",
+      "name": "Deepen repo learning and knowledge routing reuse",
+      "template_id": "webapp",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\deepen-repo-learning-and-knowledge-routing-reuse",
+      "status": "generated",
+      "created_at": "2026-03-11T07:31:46.704756Z",
+      "updated_at": "2026-03-11T07:31:46.704756Z",
+      "required_paths": [
+        "README.md",
+        "frontend",
+        "backend",
+        "docs",
+        "deploy"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-11T07:31:46.704756Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_83ed536a57",
+      "goal_id": "goal_5a1c4ccecc",
+      "name": "Deepen repo learning and knowledge routing reuse",
+      "template_id": "webapp",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\deepen-repo-learning-and-knowledge-routing-reuse",
+      "status": "generated",
+      "created_at": "2026-03-11T07:31:46.921974Z",
+      "updated_at": "2026-03-11T07:31:46.921974Z",
+      "required_paths": [
+        "README.md",
+        "frontend",
+        "backend",
+        "docs",
+        "deploy"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-11T07:31:46.921974Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_900f86db07",
+      "goal_id": "goal_f4db59af39",
+      "name": "Continue ToyOS kernel branch work with mainline context reuse",
+      "template_id": "webapp",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\continue-toyos-kernel-branch-work-with-mainline-context-reuse",
+      "status": "generated",
+      "created_at": "2026-03-11T07:31:47.074423Z",
+      "updated_at": "2026-03-11T07:31:47.074423Z",
+      "required_paths": [
+        "README.md",
+        "frontend",
+        "backend",
+        "docs",
+        "deploy"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-11T07:31:47.074423Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_4f5397914e",
+      "goal_id": "goal_2dad50f276",
+      "name": "Deepen repo learning and knowledge routing reuse",
+      "template_id": "webapp",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\deepen-repo-learning-and-knowledge-routing-reuse",
+      "status": "generated",
+      "created_at": "2026-03-11T07:31:47.236459Z",
+      "updated_at": "2026-03-11T07:31:47.236459Z",
+      "required_paths": [
+        "README.md",
+        "frontend",
+        "backend",
+        "docs",
+        "deploy"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-11T07:31:47.236459Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_8632991421",
+      "goal_id": "goal_6365db6098",
+      "name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "template_id": "webapp",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+      "status": "generated",
+      "created_at": "2026-03-11T07:31:47.400572Z",
+      "updated_at": "2026-03-11T07:31:47.400572Z",
+      "required_paths": [
+        "README.md",
+        "frontend",
+        "backend",
+        "docs",
+        "deploy"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-11T07:31:47.400572Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_884b16cef2",
+      "goal_id": "goal_1c96e6debf",
+      "name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "template_id": "webapp",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension",
+        "kv_cache_manager",
+        "local_llm_runner"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+      "status": "generated",
+      "created_at": "2026-03-12T08:12:56.857853Z",
+      "updated_at": "2026-03-12T08:12:56.857853Z",
+      "required_paths": [
+        "README.md",
+        "frontend",
+        "backend",
+        "docs",
+        "deploy"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-12T08:12:56.857853Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_b6fd416bd3",
+      "goal_id": "goal_4ab8a416a4",
+      "name": "Coordinate AI Math Foundations Workspace with organization departments",
+      "template_id": "webapp",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension",
+        "kv_cache_manager",
+        "local_llm_runner"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-ai-math-foundations-workspace-with-organization-departments",
+      "status": "generated",
+      "created_at": "2026-03-12T08:44:58.594375Z",
+      "updated_at": "2026-03-12T08:44:58.594375Z",
+      "required_paths": [
+        "README.md",
+        "frontend",
+        "backend",
+        "docs",
+        "deploy"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-12T08:44:58.594375Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_c303bfe0ca",
+      "goal_id": "goal_2376059559",
+      "name": "Support mainline branch delivery",
+      "template_id": "webapp",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension",
+        "kv_cache_manager",
+        "local_llm_runner"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\support-mainline-branch-delivery",
+      "status": "generated",
+      "created_at": "2026-03-12T09:00:03.098746Z",
+      "updated_at": "2026-03-12T09:00:03.098746Z",
+      "required_paths": [
+        "README.md",
+        "frontend",
+        "backend",
+        "docs",
+        "deploy"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-12T09:00:03.098746Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_850e026ee3",
+      "goal_id": "goal_0d0a1c0c90",
+      "name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "template_id": "webapp",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension",
+        "kv_cache_manager",
+        "local_llm_runner"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+      "status": "generated",
+      "created_at": "2026-03-12T09:00:03.475099Z",
+      "updated_at": "2026-03-12T09:00:03.475099Z",
+      "required_paths": [
+        "README.md",
+        "frontend",
+        "backend",
+        "docs",
+        "deploy"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-12T09:00:03.475099Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_f4aa8bafd6",
+      "goal_id": "goal_12fd00833b",
+      "name": "Strengthen agent orchestration capability",
+      "template_id": "ai-agent",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension",
+        "kv_cache_manager",
+        "local_llm_runner"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-agent-orchestration-capability",
+      "status": "generated",
+      "created_at": "2026-03-13T10:03:23.784154Z",
+      "updated_at": "2026-03-13T10:03:23.784154Z",
+      "required_paths": [
+        "README.md",
+        "agents",
+        "tools",
+        "memory",
+        "orchestration"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-13T10:03:23.784154Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_1d10c77bbf",
+      "goal_id": "goal_19477a9704",
+      "name": "Advance release train operations",
+      "template_id": "webapp",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension",
+        "kv_cache_manager",
+        "local_llm_runner"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\advance-release-train-operations",
+      "status": "generated",
+      "created_at": "2026-03-13T10:03:23.909766Z",
+      "updated_at": "2026-03-13T10:03:23.909766Z",
+      "required_paths": [
+        "README.md",
+        "frontend",
+        "backend",
+        "docs",
+        "deploy"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-13T10:03:23.909766Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_8864b9faf3",
+      "goal_id": "goal_d072fcfd9d",
+      "name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "template_id": "webapp",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension",
+        "kv_cache_manager",
+        "local_llm_runner"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+      "status": "generated",
+      "created_at": "2026-03-13T10:03:24.031601Z",
+      "updated_at": "2026-03-13T10:03:24.031601Z",
+      "required_paths": [
+        "README.md",
+        "frontend",
+        "backend",
+        "docs",
+        "deploy"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-13T10:03:24.031601Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_22e2a10330",
+      "goal_id": "goal_3780818893",
+      "name": "Strengthen webapp generation capability",
+      "template_id": "webapp",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension",
+        "kv_cache_manager",
+        "local_llm_runner"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-webapp-generation-capability",
+      "status": "generated",
+      "created_at": "2026-03-14T10:49:26.440962Z",
+      "updated_at": "2026-03-14T10:49:26.440962Z",
+      "required_paths": [
+        "README.md",
+        "frontend",
+        "backend",
+        "docs",
+        "deploy"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-14T10:49:26.440962Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_d71e64eed0",
+      "goal_id": "goal_ffcdfe782e",
+      "name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "template_id": "webapp",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension",
+        "kv_cache_manager",
+        "local_llm_runner"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+      "status": "generated",
+      "created_at": "2026-03-14T10:49:26.750146Z",
+      "updated_at": "2026-03-14T10:49:26.750146Z",
+      "required_paths": [
+        "README.md",
+        "frontend",
+        "backend",
+        "docs",
+        "deploy"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-14T10:49:26.750146Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_8755b93ba0",
+      "goal_id": "goal_e083d72e45",
+      "name": "Strengthen agent orchestration capability",
+      "template_id": "ai-agent",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension",
+        "kv_cache_manager",
+        "local_llm_runner"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-agent-orchestration-capability",
+      "status": "generated",
+      "created_at": "2026-03-14T16:28:18.256045Z",
+      "updated_at": "2026-03-14T16:28:18.256045Z",
+      "required_paths": [
+        "README.md",
+        "agents",
+        "tools",
+        "memory",
+        "orchestration"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-14T16:28:18.256045Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_34b4031314",
+      "goal_id": "goal_5d7624d3cc",
+      "name": "Expand tool extension coverage",
+      "template_id": "webapp",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension",
+        "kv_cache_manager",
+        "local_llm_runner"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\expand-tool-extension-coverage",
+      "status": "generated",
+      "created_at": "2026-03-14T16:28:18.534913Z",
+      "updated_at": "2026-03-14T16:28:18.534913Z",
+      "required_paths": [
+        "README.md",
+        "frontend",
+        "backend",
+        "docs",
+        "deploy"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-14T16:28:18.534913Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_faa733ed1b",
+      "goal_id": "goal_835819179f",
+      "name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "template_id": "webapp",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension",
+        "kv_cache_manager",
+        "local_llm_runner"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+      "status": "generated",
+      "created_at": "2026-03-14T16:28:18.809923Z",
+      "updated_at": "2026-03-14T16:28:18.809923Z",
+      "required_paths": [
+        "README.md",
+        "frontend",
+        "backend",
+        "docs",
+        "deploy"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-14T16:28:18.809923Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_a507e53e57",
+      "goal_id": "goal_23a99eee18",
+      "name": "Strengthen webapp generation capability",
+      "template_id": "webapp",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension",
+        "kv_cache_manager",
+        "local_llm_runner"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-webapp-generation-capability",
+      "status": "generated",
+      "created_at": "2026-03-19T05:54:42.804742Z",
+      "updated_at": "2026-03-19T05:54:42.804742Z",
+      "required_paths": [
+        "README.md",
+        "frontend",
+        "backend",
+        "docs",
+        "deploy"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-19T05:54:42.804742Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_982e1ff1de",
+      "goal_id": "goal_68a766d3d6",
+      "name": "Strengthen agent orchestration capability",
+      "template_id": "ai-agent",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension",
+        "kv_cache_manager",
+        "local_llm_runner"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-agent-orchestration-capability",
+      "status": "generated",
+      "created_at": "2026-03-19T05:54:43.141960Z",
+      "updated_at": "2026-03-19T05:54:43.141960Z",
+      "required_paths": [
+        "README.md",
+        "agents",
+        "tools",
+        "memory",
+        "orchestration"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-19T05:54:43.141960Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_2f39873e84",
+      "goal_id": "goal_e82f4139ae",
+      "name": "Ship deployable release artifact bundle",
+      "template_id": "webapp",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension",
+        "kv_cache_manager",
+        "local_llm_runner"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\ship-deployable-release-artifact-bundle",
+      "status": "generated",
+      "created_at": "2026-03-19T05:54:43.453169Z",
+      "updated_at": "2026-03-19T05:54:43.453169Z",
+      "required_paths": [
+        "README.md",
+        "frontend",
+        "backend",
+        "docs",
+        "deploy"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-19T05:54:43.453169Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_cf3b6621a0",
+      "goal_id": "goal_5f416bc72b",
+      "name": "Ship deployable release artifact bundle",
+      "template_id": "webapp",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension",
+        "kv_cache_manager",
+        "local_llm_runner"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\ship-deployable-release-artifact-bundle",
+      "status": "generated",
+      "created_at": "2026-03-19T05:54:43.756220Z",
+      "updated_at": "2026-03-19T05:54:43.756220Z",
+      "required_paths": [
+        "README.md",
+        "frontend",
+        "backend",
+        "docs",
+        "deploy"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-19T05:54:43.756220Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_67936c2b39",
+      "goal_id": "goal_fea52b4e8f",
+      "name": "Expand tool extension coverage",
+      "template_id": "webapp",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension",
+        "kv_cache_manager",
+        "local_llm_runner"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\expand-tool-extension-coverage",
+      "status": "generated",
+      "created_at": "2026-03-19T05:54:44.064988Z",
+      "updated_at": "2026-03-19T05:54:44.064988Z",
+      "required_paths": [
+        "README.md",
+        "frontend",
+        "backend",
+        "docs",
+        "deploy"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-19T05:54:44.064988Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_7a2f920e50",
+      "goal_id": "goal_003413731b",
+      "name": "Ship deployable release artifact bundle",
+      "template_id": "webapp",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension",
+        "kv_cache_manager",
+        "local_llm_runner"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\ship-deployable-release-artifact-bundle",
+      "status": "generated",
+      "created_at": "2026-03-19T05:54:44.355633Z",
+      "updated_at": "2026-03-19T05:54:44.355633Z",
+      "required_paths": [
+        "README.md",
+        "frontend",
+        "backend",
+        "docs",
+        "deploy"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-19T05:54:44.356641Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_b5a152e0f7",
+      "goal_id": "goal_7b318aea48",
+      "name": "Expand tool extension coverage",
+      "template_id": "webapp",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension",
+        "kv_cache_manager",
+        "local_llm_runner"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\expand-tool-extension-coverage",
+      "status": "generated",
+      "created_at": "2026-03-19T05:54:44.653213Z",
+      "updated_at": "2026-03-19T05:54:44.653213Z",
+      "required_paths": [
+        "README.md",
+        "frontend",
+        "backend",
+        "docs",
+        "deploy"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-19T05:54:44.653213Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_2af0d9ba98",
+      "goal_id": "goal_39c1f4be5f",
+      "name": "Strengthen agent orchestration capability",
+      "template_id": "ai-agent",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension",
+        "kv_cache_manager",
+        "local_llm_runner"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-agent-orchestration-capability",
+      "status": "generated",
+      "created_at": "2026-03-19T05:54:44.956846Z",
+      "updated_at": "2026-03-19T05:54:44.956846Z",
+      "required_paths": [
+        "README.md",
+        "agents",
+        "tools",
+        "memory",
+        "orchestration"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-19T05:54:44.956846Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_38e98c09bc",
+      "goal_id": "goal_b3a4810042",
+      "name": "Expand tool extension coverage",
+      "template_id": "webapp",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension",
+        "kv_cache_manager",
+        "local_llm_runner"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\expand-tool-extension-coverage",
+      "status": "generated",
+      "created_at": "2026-03-19T05:54:45.270864Z",
+      "updated_at": "2026-03-19T05:54:45.270864Z",
+      "required_paths": [
+        "README.md",
+        "frontend",
+        "backend",
+        "docs",
+        "deploy"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-19T05:54:45.270864Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_4cb6cdb84e",
+      "goal_id": "goal_c4dec511fe",
+      "name": "Strengthen agent orchestration capability",
+      "template_id": "ai-agent",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension",
+        "kv_cache_manager",
+        "local_llm_runner"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-agent-orchestration-capability",
+      "status": "generated",
+      "created_at": "2026-03-20T07:37:06.121530Z",
+      "updated_at": "2026-03-20T07:37:06.121530Z",
+      "required_paths": [
+        "README.md",
+        "agents",
+        "tools",
+        "memory",
+        "orchestration"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-20T07:37:06.121530Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_b27f294ffe",
+      "goal_id": "goal_81ee77d1b0",
+      "name": "Strengthen agent orchestration capability",
+      "template_id": "ai-agent",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension",
+        "kv_cache_manager",
+        "local_llm_runner"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-agent-orchestration-capability",
+      "status": "generated",
+      "created_at": "2026-03-20T07:37:09.046658Z",
+      "updated_at": "2026-03-20T07:37:09.046658Z",
+      "required_paths": [
+        "README.md",
+        "agents",
+        "tools",
+        "memory",
+        "orchestration"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-20T07:37:09.046658Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_59154940c0",
+      "goal_id": "goal_7bfbfa0e41",
+      "name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "template_id": "webapp",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension",
+        "kv_cache_manager",
+        "local_llm_runner"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+      "status": "generated",
+      "created_at": "2026-03-20T07:37:09.260207Z",
+      "updated_at": "2026-03-20T07:37:09.260207Z",
+      "required_paths": [
+        "README.md",
+        "frontend",
+        "backend",
+        "docs",
+        "deploy"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-20T07:37:09.260207Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_4a565d61d5",
+      "goal_id": "goal_0fb542f1e0",
+      "name": "ToyOS: Deepen the security module with a demonstrable AES encryption path",
+      "template_id": "webapp",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension",
+        "kv_cache_manager",
+        "local_llm_runner"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\toyos-deepen-the-security-module-with-a-demonstrable-aes-encryption-path",
+      "status": "generated",
+      "created_at": "2026-03-21T13:01:52.474482Z",
+      "updated_at": "2026-03-21T13:01:52.474482Z",
+      "required_paths": [
+        "README.md",
+        "frontend",
+        "backend",
+        "docs",
+        "deploy"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-21T13:01:52.474482Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_893798c8e5",
+      "goal_id": "goal_040b928e04",
+      "name": "ToyOS: Add a simple ELF loader and run externally compiled user programs",
+      "template_id": "webapp",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension",
+        "kv_cache_manager",
+        "local_llm_runner"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\toyos-add-a-simple-elf-loader-and-run-externally-compiled-user-programs",
+      "status": "generated",
+      "created_at": "2026-03-21T13:01:52.716477Z",
+      "updated_at": "2026-03-21T13:01:52.716477Z",
+      "required_paths": [
+        "README.md",
+        "frontend",
+        "backend",
+        "docs",
+        "deploy"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-21T13:01:52.716477Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    },
+    {
+      "platform_id": "platform_f30e01dc23",
+      "goal_id": "goal_d8bdb069de",
+      "name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "template_id": "webapp",
+      "focus_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension",
+        "kv_cache_manager",
+        "local_llm_runner"
+      ],
+      "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+      "status": "generated",
+      "created_at": "2026-03-21T13:01:52.942925Z",
+      "updated_at": "2026-03-21T13:01:52.942925Z",
+      "required_paths": [
+        "README.md",
+        "frontend",
+        "backend",
+        "docs",
+        "deploy"
+      ],
+      "runtime": {
+        "status": "ready",
+        "health": "healthy",
+        "last_run": null,
+        "last_checked": "2026-03-21T13:01:52.942925Z",
+        "backend": "workspace",
+        "required_paths_present": 5,
+        "required_paths_total": 5
+      }
+    }
+  ]
+}

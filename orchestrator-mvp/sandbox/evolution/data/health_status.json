@@ -1,0 +1,109 @@
+{
+  "updated_at": "2026-03-12T07:08:13.867939Z",
+  "status": "healthy",
+  "reasons": [],
+  "allow_brain_loop": true,
+  "allow_meta": true,
+  "allow_evolution": true,
+  "tasks": {
+    "total": 17,
+    "active": 1,
+    "queued": 0,
+    "created_last_hour": 0
+  },
+  "platforms": {
+    "total": 17,
+    "created_last_day": 10
+  },
+  "usage": {
+    "updated_at": "2026-03-12T07:00:54.760074Z",
+    "window_hours": 24,
+    "recent_events": [
+      {
+        "at": "2026-03-11T09:55:38.492531Z",
+        "provider": "cheap",
+        "model": "deepseek-chat"
+      },
+      {
+        "at": "2026-03-11T09:57:23.031957Z",
+        "provider": "cheap",
+        "model": "deepseek-chat"
+      },
+      {
+        "at": "2026-03-11T10:00:02.434825Z",
+        "provider": "cheap",
+        "model": "deepseek-chat"
+      },
+      {
+        "at": "2026-03-11T15:01:55.399961Z",
+        "provider": "cheap",
+        "model": "deepseek-chat"
+      },
+      {
+        "at": "2026-03-11T15:02:22.081937Z",
+        "provider": "cheap",
+        "model": "deepseek-chat"
+      },
+      {
+        "at": "2026-03-11T15:44:00.888742Z",
+        "provider": "cheap",
+        "model": "deepseek-chat"
+      },
+      {
+        "at": "2026-03-11T15:44:28.109943Z",
+        "provider": "cheap",
+        "model": "deepseek-chat"
+      }
+    ],
+    "cheap_calls": 7,
+    "strong_calls": 0,
+    "strong_ratio": 0.0,
+    "max_strong_model_ratio": 0.0,
+    "strong_allowed": true
+  },
+  "messages": {
+    "open_errors": 1,
+    "open_warnings": 0
+  },
+  "policy": {
+    "max_tasks_per_hour": 20,
+    "max_platforms_per_day": 3,
+    "max_active_tasks": 8,
+    "max_queue_tasks": 20,
+    "max_strong_model_ratio": 0.0,
+    "max_error_escalations": 5,
+    "protect_core_paths": [
+      "D:\\codex\\orchestrator-mvp\\app",
+      "D:\\codex\\orchestrator-mvp\\runtime",
+      "D:\\codex\\orchestrator-mvp\\tools",
+      "D:\\codex\\orchestrator-mvp\\brain",
+      "D:\\codex\\orchestrator-mvp\\state"
+    ],
+    "workspace_paths": [
+      "D:\\codex\\orchestrator-mvp\\workspace",
+      "D:\\codex\\orchestrator-mvp\\factory\\workspace"
+    ],
+    "deny_learning_keywords": [
+      "miner",
+      "botnet",
+      "ransomware",
+      "keylogger",
+      "exploit",
+      "payload",
+      "credential stealer"
+    ],
+    "premium_frozen": true,
+    "quota_preserve_mode": true
+  },
+  "workspace_paths": [
+    "D:\\codex\\orchestrator-mvp\\workspace",
+    "D:\\codex\\orchestrator-mvp\\factory\\workspace"
+  ],
+  "core_paths": [
+    "D:\\codex\\orchestrator-mvp\\app",
+    "D:\\codex\\orchestrator-mvp\\runtime",
+    "D:\\codex\\orchestrator-mvp\\tools",
+    "D:\\codex\\orchestrator-mvp\\brain",
+    "D:\\codex\\orchestrator-mvp\\state"
+  ]
+}

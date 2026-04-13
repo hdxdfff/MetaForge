@@ -1,0 +1,250 @@
+{
+  "task_id": "cdf4d180a6624509b3edee57e53e1f1d",
+  "task_status": "failed",
+  "phase": "failed",
+  "updated_at": "2026-04-02T17:43:55.333901Z",
+  "heartbeat_at": "2026-04-02T17:43:55.333901Z",
+  "repo_path": "D:\\codex\\orchestrator-mvp",
+  "goal": "Finish routine coding work with small verified patches and local execution.",
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": "runtime.failure_backlog_automation",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\cdf4d180a6624509b3edee57e53e1f1d",
+  "error": "<asyncio.locks.Lock object at 0x000001FD9C79E990 [unlocked, waiters:1]> is bound to a different event loop",
+  "title": "General Coding Change",
+  "prompt": "Inspect the relevant code, make a minimal coherent patch, run local tests or linters, and summarize what changed and what remains risky.",
+  "scheduler_hint": {
+    "automation_source": "failure_backlog_automation",
+    "template_id": "general-coding",
+    "template_category": "development",
+    "cluster_key": "recover stable execution output",
+    "cluster_count": 215,
+    "cluster_status": "attention",
+    "handling_mode": "generic_saturation",
+    "dispatch_now": true,
+    "admission_mode": "normal",
+    "scheduled_by": "runtime.failure_backlog_automation"
+  },
+  "context_package": {},
+  "plan": [
+    {
+      "id": "d9de95fa",
+      "title": "Spawn decomposition subtasks",
+      "status": "failed",
+      "worker": "planner",
+      "phase": "decompose"
+    },
+    {
+      "id": "9a962252",
+      "title": "Wait for child task completion",
+      "status": "pending",
+      "worker": "planner",
+      "phase": "decompose"
+    },
+    {
+      "id": "8782eadc",
+      "title": "Aggregate decomposition results",
+      "status": "pending",
+      "worker": "reviewer",
+      "phase": "verify"
+    }
+  ],
+  "verification_signals": [
+    {
+      "timestamp": "2026-04-02T17:40:14.231845Z",
+      "kind": "admission_accepted",
+      "success": true,
+      "task_id": "cdf4d180a6624509b3edee57e53e1f1d",
+      "admission_lane": null,
+      "admission_reason": null,
+      "execution_mode": "governance",
+      "queue_name": "build_test",
+      "task_type": "build_fix"
+    },
+    {
+      "timestamp": "2026-04-02T17:41:55.095912Z",
+      "kind": "step_failed",
+      "success": false,
+      "task_id": "cdf4d180a6624509b3edee57e53e1f1d",
+      "step_id": "d9de95fa",
+      "step_title": "Spawn decomposition subtasks",
+      "worker": "planner",
+      "phase": "decompose",
+      "route_model": "internal-recovery",
+      "route_provider": "runtime",
+      "elapsed_ms": 21234,
+      "error": "<asyncio.locks.Lock object at 0x000001FD9C79E990 [unlocked, waiters:1]> is bound to a different event loop",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "error-output",
+        "char_count": 106,
+        "line_count": 1,
+        "stored_raw": false
+      }
+    }
+  ],
+  "verification_signal_count": 2,
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-02T17:40:14.231845Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "cdf4d180a6624509b3edee57e53e1f1d",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "governance",
+        "queue_name": "build_test",
+        "task_type": "build_fix"
+      },
+      {
+        "timestamp": "2026-04-02T17:41:55.095912Z",
+        "kind": "step_failed",
+        "success": false,
+        "task_id": "cdf4d180a6624509b3edee57e53e1f1d",
+        "step_id": "d9de95fa",
+        "step_title": "Spawn decomposition subtasks",
+        "worker": "planner",
+        "phase": "decompose",
+        "route_model": "internal-recovery",
+        "route_provider": "runtime",
+        "elapsed_ms": 21234,
+        "error": "<asyncio.locks.Lock object at 0x000001FD9C79E990 [unlocked, waiters:1]> is bound to a different event loop",
+        "output_ref": {},
+        "output_stats": {
+          "channel": "error-output",
+          "char_count": 106,
+          "line_count": 1,
+          "stored_raw": false
+        }
+      }
+    ],
+    "decomposition": {
+      "summary": "Fallback decomposition for: Inspect the relevant code, make a minimal coherent patch, run local tests or linters, and summarize what changed and wha",
+      "strategy": "bounded multi-layer split with analysis, execution, and verification branches",
+      "subtasks": [
+        {
+          "title": "Analyze the current state",
+          "prompt": "Inspect the current repository state and isolate the smallest workable slice for: Inspect the relevant code, make a minimal coherent patch, run local tests or linters, and summarize what changed and what remains risky.",
+          "goal": "Identify the smallest viable slice",
+          "task_type": "report_refresh",
+          "path_kind": "shared",
+          "queue_name": "fastlane",
+          "verification_level": "L1",
+          "preferred_worker": "reviewer",
+          "execution_mode": "governance",
+          "execution_lane": "host-control",
+          "decompose_children": false,
+          "shared_dependency_group": "cdf4d180a6624509b3edee57e53e1f1d",
+          "repair_for": null,
+          "inputs": [],
+          "outputs": [
+            "analysis note"
+          ],
+          "dependencies": [],
+          "acceptance_criteria": [
+            "The smallest feasible slice is identified."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        },
+        {
+          "title": "Implement the bounded change",
+          "prompt": "Make the smallest safe implementation or repair needed for: Inspect the relevant code, make a minimal coherent patch, run local tests or linters, and summarize what changed and what remains risky.",
+          "goal": "Implement the bounded change",
+          "task_type": "build_fix",
+          "path_kind": "branch",
+          "queue_name": "build_test",
+          "verification_level": "L2",
+          "preferred_worker": "coder",
+          "execution_mode": "production",
+          "execution_lane": "vm-first",
+          "decompose_children": true,
+          "shared_dependency_group": "cdf4d180a6624509b3edee57e53e1f1d",
+          "repair_for": null,
+          "inputs": [
+            "analysis note"
+          ],
+          "outputs": [
+            "bounded patch"
+          ],
+          "dependencies": [
+            "Analyze the current state"
+          ],
+          "acceptance_criteria": [
+            "A bounded implementation exists."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        },
+        {
+          "title": "Validate the result",
+          "prompt": "Run the narrowest useful validation for the bounded change: Inspect the relevant code, make a minimal coherent patch, run local tests or linters, and summarize what changed and what remains risky.",
+          "goal": "Validate the change",
+          "task_type": "unit_test_run",
+          "path_kind": "repair",
+          "queue_name": "build_test",
+          "verification_level": "L2",
+          "preferred_worker": "docker",
+          "execution_mode": "production",
+          "execution_lane": "vm-first",
+          "decompose_children": false,
+          "shared_dependency_group": "cdf4d180a6624509b3edee57e53e1f1d",
+          "repair_for": "Analyze the current state",
+          "inputs": [
+            "bounded patch"
+          ],
+          "outputs": [
+            "validation evidence"
+          ],
+          "dependencies": [
+            "Analyze the current state",
+            "Implement the bounded change"
+          ],
+          "acceptance_criteria": [
+            "Validation evidence is recorded."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        }
+      ],
+      "dag": {
+        "shared_nodes": [
+          "Analyze the current state"
+        ],
+        "branch_nodes": [
+          "Implement the bounded change"
+        ],
+        "repair_nodes": [
+          "Validate the result"
+        ],
+        "optional_nodes": [],
+        "speculative_nodes": [],
+        "blocked_nodes": [],
+        "edges": [
+          {
+            "from": "Analyze the current state",
+            "to": "Implement the bounded change",
+            "kind": "branch"
+          },
+          {
+            "from": "Analyze the current state",
+            "to": "Validate the result",
+            "kind": "repair"
+          },
+          {
+            "from": "Implement the bounded change",
+            "to": "Validate the result",
+            "kind": "repair"
+          }
+        ],
+        "shared_dependency_group": "cdf4d180a6624509b3edee57e53e1f1d"
+      },
+      "depth": 0,
+      "max_depth": 2,
+      "mode": "multi_layer"
+    }
+  }
+}

@@ -1,0 +1,454 @@
+{
+  "status": "pass",
+  "updated_at": "2026-04-05T14:08:03.424605Z",
+  "headline": {
+    "autonomy_stage": "stage3",
+    "control_status": "attention",
+    "release_status": "pass",
+    "industrial_operations_status": "normal",
+    "industrial_readiness_status": "attention",
+    "closed_pools": [
+      "P2"
+    ]
+  },
+  "what_can_auto_run": {
+    "auto_execute": {
+      "task_types": [
+        "status_check",
+        "report_refresh",
+        "dashboard_refresh"
+      ],
+      "reason": "Read-only governance work does not change system state.",
+      "approval": "AUTO"
+    },
+    "auto_execute_with_limits": {
+      "repair_first": {
+        "task_types": [
+          "self_repair",
+          "execution_repair",
+          "verification_repair",
+          "rollback_repair"
+        ],
+        "reason": "Repair tasks are allowed when repair-first mode is active and budgets remain.",
+        "approval": "AUTO-LIMIT",
+        "budget_pool": "P1"
+      },
+      "verification_and_smoke": {
+        "task_types": [
+          "artifact_audit",
+          "qemu_smoke_run",
+          "harness_regression_run",
+          "runtime_health_validation"
+        ],
+        "queues": [
+          "regression",
+          "fastlane"
+        ]
+      }
+    }
+  },
+  "what_needs_approval": {
+    "release": {
+      "task_types": [
+        "deploy_production",
+        "release_candidate",
+        "git_push",
+        "modify_controller",
+        "modify_agents",
+        "filesystem.delete",
+        "filesystem.write_core"
+      ],
+      "reason": "High-impact release and core mutations require manual approval.",
+      "approval": "MANUAL"
+    },
+    "core_mutation": {
+      "task_types": [
+        "modify_agents",
+        "modify_controller",
+        "filesystem.write_core",
+        "filesystem.delete"
+      ],
+      "queues": [
+        "governance",
+        "maintenance"
+      ]
+    },
+    "external_change": {
+      "task_types": [
+        "install_package",
+        "docker.run",
+        "cross_repo_change"
+      ],
+      "queues": [
+        "build_test",
+        "ops",
+        "deployment"
+      ]
+    }
+  },
+  "sandbox_controls": {
+    "allow_p2": false,
+    "allow_p2_sandbox": false,
+    "allow_p3": true,
+    "approval_mode": "AUTO-LIMIT"
+  },
+  "budget_caps": {
+    "task_pools": {
+      "limits": {
+        "P0": 4,
+        "P1": 2,
+        "P2": 1,
+        "P3": 1
+      },
+      "priority_order": [
+        "P0",
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    "daily_budgets": {
+      "self_repair_daily": 5,
+      "artifact_growth_daily": 2,
+      "capability_expansion_daily": 1,
+      "sandbox_p2_daily": 1,
+      "research_daily": 1
+    },
+    "usage_24h": {
+      "self_repair_daily": {
+        "limit": 5,
+        "used_24h": 3,
+        "remaining_24h": 2,
+        "headroom_ratio": 0.4,
+        "burn_rate": 0.6,
+        "window_basis": "rolling_24h_ledger",
+        "next_replenishment_at": null,
+        "source": "self_repair_ledger"
+      },
+      "artifact_growth_daily": {
+        "limit": 2,
+        "used_24h": 0,
+        "remaining_24h": 2,
+        "headroom_ratio": 1.0,
+        "burn_rate": 0.0,
+        "window_basis": "rolling_24h",
+        "next_replenishment_at": null
+      },
+      "capability_expansion_daily": {
+        "limit": 1,
+        "used_24h": 9,
+        "remaining_24h": 0,
+        "headroom_ratio": 0.0,
+        "burn_rate": 9.0,
+        "window_basis": "rolling_24h_ledger",
+        "next_replenishment_at": "2026-04-03T19:17:38.418652Z",
+        "source": "capability_expansion_ledger"
+      },
+      "sandbox_p2_daily": {
+        "limit": 1,
+        "used_24h": 4,
+        "remaining_24h": 0,
+        "headroom_ratio": 0.0,
+        "burn_rate": 4.0,
+        "window_basis": "rolling_24h",
+        "next_replenishment_at": "2026-04-04T19:03:58.835314Z"
+      },
+      "research_daily": {
+        "limit": 1,
+        "used_24h": 0,
+        "remaining_24h": 1,
+        "headroom_ratio": 1.0,
+        "burn_rate": 0.0,
+        "window_basis": "rolling_24h",
+        "next_replenishment_at": null
+      }
+    },
+    "replenishment": {
+      "self_repair_daily": {
+        "window_basis": "rolling_24h_ledger",
+        "next_replenishment_at": null,
+        "hours_until_replenishment": null,
+        "headroom_ratio": 0.4,
+        "burn_rate": 0.6,
+        "budget_exhausted": false
+      },
+      "artifact_growth_daily": {
+        "window_basis": "rolling_24h",
+        "next_replenishment_at": null,
+        "hours_until_replenishment": null,
+        "headroom_ratio": 1.0,
+        "burn_rate": 0.0,
+        "budget_exhausted": false
+      },
+      "capability_expansion_daily": {
+        "window_basis": "rolling_24h_ledger",
+        "next_replenishment_at": "2026-04-03T19:17:38.418652Z",
+        "hours_until_replenishment": 0.0,
+        "headroom_ratio": 0.0,
+        "burn_rate": 9.0,
+        "budget_exhausted": true
+      },
+      "sandbox_p2_daily": {
+        "window_basis": "rolling_24h",
+        "next_replenishment_at": "2026-04-04T19:03:58.835314Z",
+        "hours_until_replenishment": 23.77,
+        "headroom_ratio": 0.0,
+        "burn_rate": 4.0,
+        "budget_exhausted": true
+      },
+      "research_daily": {
+        "window_basis": "rolling_24h",
+        "next_replenishment_at": null,
+        "hours_until_replenishment": null,
+        "headroom_ratio": 1.0,
+        "burn_rate": 0.0,
+        "budget_exhausted": false
+      }
+    },
+    "open_pools": [
+      "P0",
+      "P1",
+      "P3"
+    ],
+    "closed_pools": [
+      "P2"
+    ]
+  },
+  "recovery_summary": {
+    "auto_recovery_success_rate": 0.9941,
+    "mttr_minutes": 0.0,
+    "failed_release_rollback_time_minutes": 0.0,
+    "freeze_triggered": false,
+    "release_gate_signal_count": 1
+  },
+  "human_controls": {
+    "editable_fields": [
+      "industrial_operations.budget_control.gates.allow_p2",
+      "industrial_operations.budget_control.gates.allow_p2_sandbox",
+      "industrial_operations.budget_control.gates.allow_p3",
+      "industrial_operations.budget_control.policy",
+      "control_policy.approvals",
+      "tool_policy.roles",
+      "session_policy.roles"
+    ],
+    "approval_required_for": [
+      "modify_controller",
+      "modify_agents",
+      "deploy_production",
+      "filesystem.write_core",
+      "filesystem.delete",
+      "git.push",
+      "install_package",
+      "docker.run"
+    ],
+    "operator_questions": [
+      "Can this task auto-execute?",
+      "Do we need approval?",
+      "Which budget pool does it consume?",
+      "What is the rollback plan?",
+      "What is the fuse condition?"
+    ]
+  },
+  "policy_files": {
+    "control_policy_path": "D:\\codex\\orchestrator-mvp\\data\\control_policy.json",
+    "approval_policy_path": "D:\\codex\\orchestrator-mvp\\data\\approval_policy.json",
+    "session_policy_path": "D:\\codex\\orchestrator-mvp\\data\\session_policy.json",
+    "tool_policy_path": "D:\\codex\\orchestrator-mvp\\data\\tool_policy.json",
+    "approvals": {
+      "deploy_production": {
+        "mode": "MANUAL"
+      },
+      "create_workspace": {
+        "mode": "AUTO"
+      },
+      "dispatch_low_risk_goal_nodes": {
+        "mode": "AUTO"
+      },
+      "modify_agents": {
+        "mode": "MANUAL"
+      },
+      "modify_controller": {
+        "mode": "MANUAL"
+      },
+      "resolve_warning_escalations": {
+        "mode": "AUTO"
+      },
+      "resolve_error_escalations": {
+        "mode": "AUTO"
+      },
+      "approved_patch": {
+        "mode": "MANUAL"
+      },
+      "filesystem.write_workspace": {
+        "mode": "AUTO-LIMIT",
+        "path_prefixes": [
+          "D:\\codex\\orchestrator-mvp\\workspace",
+          "D:\\codex\\orchestrator-mvp\\factory\\workspace"
+        ]
+      },
+      "filesystem.write_core": {
+        "mode": "MANUAL"
+      },
+      "filesystem.delete": {
+        "mode": "MANUAL"
+      },
+      "git.push": {
+        "mode": "AUTO-LIMIT",
+        "allowed_remotes": [
+          "origin",
+          "github",
+          "gitee"
+        ]
+      },
+      "install_package": {
+        "mode": "AUTO-LIMIT",
+        "allowlist": [
+          "numpy",
+          "torch",
+          "opencv-python",
+          "pytest",
+          "fastapi",
+          "uvicorn"
+        ]
+      },
+      "docker.run": {
+        "mode": "AUTO-LIMIT",
+        "allow_images": [
+          "python",
+          "node",
+          "postgres",
+          "redis",
+          "nginx"
+        ]
+      }
+    },
+    "tooling": {
+      "version": 1,
+      "default_role": "observer",
+      "worker_role_map": {
+        "coder": "coder",
+        "reviewer": "reviewer",
+        "tester": "tester",
+        "ops": "ops",
+        "shell": "ops",
+        "docker": "ops",
+        "planner": "supervisor"
+      },
+      "roles": {
+        "observer": {
+          "allow": [
+            "read_repo",
+            "read_policy",
+            "read_audit"
+          ],
+          "deny": [
+            "shell_exec",
+            "docker_exec",
+            "install_package",
+            "git_push",
+            "file_write_core"
+          ],
+          "approval_required": []
+        },
+        "coder": {
+          "allow": [
+            "read_repo",
+            "file_write_workspace",
+            "patch_workspace",
+            "run_tests"
+          ],
+          "deny": [
+            "file_write_core",
+            "install_package",
+            "git_push"
+          ],
+          "approval_required": [
+            "shell_exec",
+            "docker_exec"
+          ]
+        },
+        "tester": {
+          "allow": [
+            "read_repo",
+            "run_tests",
+            "shell_exec",
+            "file_write_workspace"
+          ],
+          "deny": [
+            "file_write_core",
+            "install_package",
+            "git_push"
+          ],
+          "approval_required": [
+            "docker_exec"
+          ]
+        },
+        "reviewer": {
+          "allow": [
+            "read_repo",
+            "read_policy",
+            "read_audit"
+          ],
+          "deny": [
+            "shell_exec",
+            "docker_exec",
+            "install_package",
+            "git_push",
+            "file_write_core"
+          ],
+          "approval_required": []
+        },
+        "ops": {
+          "allow": [
+            "read_repo",
+            "shell_exec",
+            "docker_exec",
+            "git_push",
+            "file_write_workspace"
+          ],
+          "deny": [
+            "file_write_core"
+          ],
+          "approval_required": [
+            "shell_exec",
+            "docker_exec",
+            "git_push",
+            "install_package"
+          ]
+        },
+        "supervisor": {
+          "allow": [
+            "read_repo",
+            "read_policy",
+            "read_audit",
+            "post_core_message"
+          ],
+          "deny": [
+            "shell_exec",
+            "docker_exec",
+            "install_package",
+            "git_push",
+            "file_write_core"
+          ],
+          "approval_required": []
+        },
+        "security": {
+          "allow": [
+            "read_policy",
+            "read_audit",
+            "post_core_message",
+            "veto_execution"
+          ],
+          "deny": [
+            "shell_exec",
+            "docker_exec",
+            "git_push",
+            "install_package",
+            "file_write_core"
+          ],
+          "approval_required": []
+        }
+      }
+    }
+  }
+}

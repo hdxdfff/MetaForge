@@ -1,0 +1,533 @@
+{
+  "task_id": "ead195423bef4e5190d70608fdcb787e",
+  "task_status": "running",
+  "phase": "step-running",
+  "updated_at": "2026-03-18T07:54:40.387666Z",
+  "heartbeat_at": "2026-03-18T07:54:40.387666Z",
+  "repo_path": "D:\\codex\\orchestrator-mvp",
+  "goal": "Strengthen agent orchestration capability",
+  "goal_id": "goal_81ee77d1b0",
+  "graph_id": "graph_2dc97e10f4",
+  "node_id": "module_agents_deploy_agent",
+  "scheduled_by": "runtime.scheduler",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\ead195423bef4e5190d70608fdcb787e",
+  "step_id": "531ec149",
+  "step_title": "Understand task",
+  "step_status": "running",
+  "worker": "reviewer",
+  "probe_attempts": 0,
+  "title": "Implement module agents.deploy_agent",
+  "prompt": "Implement or refine module agents.deploy_agent for the current engineering goal.",
+  "scheduler_hint": {
+    "goal_id": "goal_81ee77d1b0",
+    "graph_id": "graph_2dc97e10f4",
+    "node_id": "module_agents_deploy_agent",
+    "goal_target": "Strengthen agent orchestration capability",
+    "node_title": "Implement module agents.deploy_agent",
+    "selection_reason": "role-default:coder->coder+team-owner:backend_team->coder",
+    "worker_success_rate": 0.9408,
+    "skill_matches": [
+      "completed_1804",
+      "completed_1554",
+      "task_12345678",
+      "task_888601da"
+    ],
+    "scheduled_by": "runtime.scheduler",
+    "required_artifacts": [
+      "docker-compose.app.yml",
+      "deploy-template.yml",
+      "Dockerfile",
+      "artifact_manifest.json",
+      "reports/release-evidence.json",
+      "agents/deploy_agent.py"
+    ],
+    "min_fresh_artifacts": 3,
+    "artifact_spec": {
+      "artifact_id": "a5377205e918425ea2acee0201d4fc59",
+      "artifact_type": "software_component",
+      "type": "software_component",
+      "deliverables": [
+        "source_code",
+        "build_script",
+        "test_suite",
+        "deploy_bundle",
+        "release_evidence"
+      ],
+      "expected_outputs": [
+        "source_code",
+        "build_script",
+        "test_suite",
+        "deploy_bundle",
+        "release_evidence"
+      ],
+      "required_artifacts": [
+        "docker-compose.app.yml",
+        "deploy-template.yml",
+        "Dockerfile",
+        "artifact_manifest.json",
+        "reports/release-evidence.json",
+        "agents/deploy_agent.py"
+      ],
+      "evidence": [
+        "artifact_manifest.json",
+        "reports/release-evidence.json"
+      ],
+      "verification": {
+        "build_required": true,
+        "tests_required": true
+      },
+      "registry": "artifact_registry",
+      "test_command": "pytest",
+      "min_fresh_artifacts": 3
+    },
+    "execution_mode": "production",
+    "execution_lane": "host-control",
+    "worker_vm_preferred": false,
+    "module_focus": [
+      "agents.deploy_agent"
+    ],
+    "owner_teams": [
+      "backend_team"
+    ],
+    "module_ownership": {
+      "module_focus": [
+        "agents.deploy_agent"
+      ],
+      "owner_teams": [
+        "backend_team"
+      ],
+      "ownership": [
+        {
+          "module": "agents.deploy_agent",
+          "owner_team": "backend_team",
+          "owner": "coder",
+          "layer": "unclassified"
+        }
+      ]
+    },
+    "patch_required": false,
+    "patch_target_teams": [
+      "backend_team"
+    ],
+    "factory_pool": "production",
+    "factory_priority": "P0",
+    "priority_class": "runtime",
+    "release_tier": "mainline",
+    "assigned_department": "engineering_department",
+    "task_heartbeat_at": "2026-03-18T07:52:47.821469Z",
+    "timeslice_seconds": 60,
+    "effective_priority": 2.3563,
+    "priority_components": {
+      "goal_weight": 0.6166,
+      "urgency": 1.0,
+      "stagnation_penalty": 0.0497,
+      "resource_bonus": 0.08,
+      "priority_bonus": 0.35,
+      "pool_bonus": 0.18,
+      "release_bonus": 0.08,
+      "artifact_stage_bonus": 0.0,
+      "focus_bonus": 0.0,
+      "priority_band": "P0",
+      "factory_pool": "production",
+      "release_tier": "mainline",
+      "effective_priority": 2.3563
+    },
+    "focus_mode": false,
+    "checkpoint_hint": {
+      "path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\00fdb2774a434e9b8bbbcf1ba630772d",
+      "mode": "task-directory"
+    },
+    "scheduler_reason": "priority=P0 pool=production tier=mainline goal_weight=0.62 urgency=1.00 aging=0.05 resource=0.08 artifact_stage=0.00 focus=0.00",
+    "layers": [
+      "unclassified"
+    ],
+    "graph_matches": [
+      {
+        "module": "agents.coder_agent",
+        "owner_team": "backend_team",
+        "owner": "coder",
+        "layer": "unclassified",
+        "dependency_count": 0,
+        "dependents": 0,
+        "internal_imports": []
+      },
+      {
+        "module": "agents.deploy_agent",
+        "owner_team": "backend_team",
+        "owner": "coder",
+        "layer": "unclassified",
+        "dependency_count": 0,
+        "dependents": 0,
+        "internal_imports": []
+      },
+      {
+        "module": "agents.test_agent",
+        "owner_team": "backend_team",
+        "owner": "coder",
+        "layer": "unclassified",
+        "dependency_count": 0,
+        "dependents": 0,
+        "internal_imports": []
+      },
+      {
+        "module": "app.network_agent",
+        "owner_team": "backend_team",
+        "owner": "coder",
+        "layer": "unclassified",
+        "dependency_count": 1,
+        "dependents": 1,
+        "internal_imports": [
+          "app.io_utils"
+        ]
+      },
+      {
+        "module": "app.safety_agent",
+        "owner_team": "backend_team",
+        "owner": "coder",
+        "layer": "unclassified",
+        "dependency_count": 3,
+        "dependents": 1,
+        "internal_imports": [
+          "tools.ai_guard",
+          "tools.kernel_mode",
+          "tools.security_audit"
+        ]
+      }
+    ]
+  },
+  "context_package": {
+    "task": "Strengthen agent orchestration capability",
+    "task_type": "implementation",
+    "repo_path": "D:\\codex\\orchestrator-mvp",
+    "module_focus": [
+      "agents.coder_agent",
+      "agents.deploy_agent",
+      "agents.test_agent",
+      "app.network_agent",
+      "app.safety_agent"
+    ],
+    "dependency_modules": [],
+    "owner_teams": [
+      "backend_team"
+    ],
+    "layers": [
+      "unclassified"
+    ],
+    "project_context": {},
+    "knowledge_hints": {
+      "preferred_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension",
+        "kv_cache_manager",
+        "local_llm_runner",
+        "token_streaming"
+      ],
+      "preferred_workers": [
+        "reviewer",
+        "supervisor",
+        "coder"
+      ],
+      "repo_learning": {
+        "updated_at": "2026-03-12T19:50:31.432156Z",
+        "embedding": {
+          "provider": "local",
+          "model": "BAAI/bge-small-en-v1.5",
+          "dimensions": 128,
+          "backend": "hashed-local",
+          "ready": true
+        },
+        "graph_modules": 152,
+        "chunk_count": 144,
+        "top_modules": [
+          {
+            "module": "tools.brain_loop",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\brain_loop.py"
+          },
+          {
+            "module": "tools.factory_daemon",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\factory_daemon.py"
+          },
+          {
+            "module": "tools.meta_factory_control",
+            "layer": "architecture_engine",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\meta_factory_control.py"
+          },
+          {
+            "module": "app.orchestrator",
+            "layer": "unclassified",
+            "owner_team": "backend_team",
+            "path": "D:\\codex\\orchestrator-mvp\\app\\orchestrator.py"
+          },
+          {
+            "module": "tools.decision_engine",
+            "layer": "task_graph_planner",
+            "owner_team": "architecture_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\decision_engine.py"
+          },
+          {
+            "module": "app.main",
+            "layer": "unclassified",
+            "owner_team": "backend_team",
+            "path": "D:\\codex\\orchestrator-mvp\\app\\main.py"
+          },
+          {
+            "module": "tools.taskgraph_compiler",
+            "layer": "architecture_engine",
+            "owner_team": "architecture_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\taskgraph_compiler.py"
+          },
+          {
+            "module": "app.worker_adapters",
+            "layer": "unclassified",
+            "owner_team": "backend_team",
+            "path": "D:\\codex\\orchestrator-mvp\\app\\worker_adapters.py"
+          },
+          {
+            "module": "tools.automation_lab",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\automation_lab.py"
+          },
+          {
+            "module": "tools.change_request_analyzer",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\change_request_analyzer.py"
+          },
+          {
+            "module": "tools.verification_engine",
+            "layer": "verification",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\verification_engine.py"
+          },
+          {
+            "module": "tools.company_os",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\company_os.py"
+          }
+        ],
+        "learned_repositories": [
+          {
+            "repo_id": "gh-dc17f0f4fb",
+            "full_name": "Significant-Gravitas/AutoGPT",
+            "local_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+            "language_mix": [
+              {
+                "language": ".json",
+                "files": 1076
+              },
+              {
+                "language": "Python",
+                "files": 914
+              },
+              {
+                "language": "TypeScript",
+                "files": 911
+              },
+              {
+                "language": "Markdown",
+                "files": 320
+              },
+              {
+                "language": ".yml",
+                "files": 43
+              },
+              {
+                "language": ".yaml",
+                "files": 23
+              }
+            ],
+            "key_files": [
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\README.md"
+            ],
+            "sampled_files": [
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\docs\\integrations\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\classic\\forge\\forge\\components\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\backend\\load-tests\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\classic\\original_autogpt\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\frontend\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\frontend\\package.json",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\README.md"
+            ],
+            "capabilities": [
+              "local_llm_runner",
+              "token_streaming",
+              "kv_cache_manager",
+              "agent_orchestration",
+              "tool_execution",
+              "workflow_planning"
+            ],
+            "architecture_summary": "# AutoGPT: Build, Deploy, and Run AI Agents\n\n[![Discord Follow](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscord.com%2Fapi%2Finvites%2Fautogpt%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&label=total%20members&logo=discord&logoColor=white&color=7289da)](https://discord.gg/autogpt) &ensp;\n[![Twitter Follow](https://img.shields.io/twitter/follow/Auto_GPT?style=social)](https://twitter.com/Auto_GPT) &ensp;\n\n<!-- Keep these links. Translations will automatically update with the README. -->\n[Deutsch](https://zdoc.app/de/Significant-Gravitas/AutoGPT) | \n[Español](https:",
+            "experiment_plan": {
+              "sandbox_required": true,
+              "recommended_commands": [],
+              "can_run_without_dependency_install": false
+            },
+            "chunk_count": 24
+          }
+        ],
+        "learned_repository_count": 1,
+        "extracted_capabilities": [
+          "agent_orchestration",
+          "kv_cache_manager",
+          "local_llm_runner",
+          "token_streaming",
+          "tool_execution",
+          "workflow_planning"
+        ],
+        "github_learning": {
+          "updated_at": "2026-03-12T19:50:31.432156Z",
+          "enabled": true,
+          "topics": [
+            "agent",
+            "llm",
+            "compiler",
+            "kernel",
+            "robotics",
+            "distributed-system",
+            "inference"
+          ],
+          "languages": [
+            "Python",
+            "TypeScript",
+            "Rust",
+            "C++",
+            "C",
+            "Go"
+          ],
+          "managed_repo_count": 10,
+          "ready_repo_count": 1,
+          "candidate_repo_count": 9,
+          "scan_candidate_count": 10,
+          "top_candidates": [
+            {
+              "full_name": "langchain-ai/langchain",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\langchain-ai-langchain",
+              "score": 41262.1142,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "ggerganov/llama.cpp",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\ggerganov-llama.cpp",
+              "score": 30857.5689,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "OpenInterpreter/open-interpreter",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\OpenInterpreter-open-interpreter",
+              "score": 23252.3854,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "microsoft/autogen",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\microsoft-autogen",
+              "score": 16454.9498,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "vllm-project/vllm",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\vllm-project-vllm",
+              "score": 15260.6594,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "ray-project/ray",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\ray-project-ray",
+              "score": 14451.3379,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "crewAIInc/crewAI",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\crewAIInc-crewAI",
+              "score": 12846.5735,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "dask/dask",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\dask-dask",
+              "score": 5243.0283,
+              "learning_status": "candidate"
+            }
+          ]
+        }
+      }
+    },
+    "verification_scope": {
+      "modules": [
+        "agents.coder_agent",
+        "agents.deploy_agent",
+        "agents.test_agent",
+        "app.network_agent",
+        "app.safety_agent"
+      ],
+      "teams": [
+        "backend_team"
+      ],
+      "layers": [
+        "unclassified"
+      ]
+    },
+    "current_plan": [
+      "Task type: implementation",
+      "Primary modules: agents.coder_agent, agents.deploy_agent, agents.test_agent, app.network_agent, app.safety_agent",
+      "Dependency expansion: none",
+      "Owner teams: backend_team",
+      "Layers: unclassified",
+      "Scheduler owner teams: backend_team",
+      "Scheduler layers: unclassified"
+    ],
+    "summary_blocks": [
+      "Task type: implementation\nPrimary modules: agents.coder_agent, agents.deploy_agent, agents.test_agent, app.network_agent, app.safety_agent\nDependency expansion: none\nOwner teams: backend_team\nLayers: unclassified\nScheduler owner teams: backend_team\nScheduler layers: unclassified",
+      "Preferred capabilities: agent_orchestration, webapp_generation, deploy_scaffold, tool_extension, kv_cache_manager\nPreferred workers: reviewer, supervisor, coder\nTop capability reputation: agent_orchestration, webapp_generation, deploy_scaffold, tool_extension\nTop worker reputation: reviewer, supervisor, coder\nRepo learning modules=152 chunks=144"
+    ],
+    "budget_chars": 1600
+  },
+  "plan": [
+    {
+      "id": "531ec149",
+      "title": "Understand task",
+      "status": "running",
+      "worker": "reviewer",
+      "phase": "understand"
+    },
+    {
+      "id": "34a9b914",
+      "title": "Draft solution",
+      "status": "pending",
+      "worker": "coder",
+      "phase": "draft"
+    },
+    {
+      "id": "2ee6b4d8",
+      "title": "Execute validation",
+      "status": "pending",
+      "worker": "shell",
+      "phase": "execute"
+    },
+    {
+      "id": "2c4c8074",
+      "title": "Verify result",
+      "status": "pending",
+      "worker": "reviewer",
+      "phase": "verify"
+    },
+    {
+      "id": "88dd843b",
+      "title": "Revise next action",
+      "status": "pending",
+      "worker": "reviewer",
+      "phase": "revise"
+    }
+  ],
+  "result": {}
+}

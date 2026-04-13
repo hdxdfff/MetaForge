@@ -1,0 +1,15 @@
+{
+  "id": "recovery_fresh_signal_required",
+  "recorded_at": "2026-03-20T01:05:00Z",
+  "summary": "Execution recovery must key off fresh completions and fresh artifact evidence, not 24-hour totals, or the daemon will declare recovery stable while current execution is stalled.",
+  "signals": [
+    "recovery_mode=false while current daemon lineage has zero new completed tasks",
+    "recent_completed_tasks derived from 24-hour history masks current execution stall",
+    "recovery tasks stop launching even though ordinary runtime tasks are only failing or timing out"
+  ],
+  "response": {
+    "fresh_completed_target": 1,
+    "fresh_window_hours": 0.5,
+    "require_fresh_real_artifact": true
+  }
+}

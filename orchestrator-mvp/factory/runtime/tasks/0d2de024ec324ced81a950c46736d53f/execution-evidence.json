@@ -1,0 +1,148 @@
+{
+  "task_id": "0d2de024ec324ced81a950c46736d53f",
+  "task_title": "Coordinate cross-project impact for Strengthen agent orchestration capability",
+  "task_status": "timed_out",
+  "started_at": "2026-03-19T17:07:56.155191Z",
+  "updated_at": "2026-03-19T17:20:45.151091Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "eb2ebe12",
+      "step_title": "Understand task",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-03-19T17:20:45.151091Z",
+      "phase": "understand",
+      "worker": "reviewer",
+      "status": "completed",
+      "output_ref": {
+        "artifact_id": "ctx_6fecea53672e",
+        "task_id": "0d2de024ec324ced81a950c46736d53f",
+        "step_id": "eb2ebe12",
+        "channel": "reviewer-output",
+        "title": "Understand task output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\0d2de024ec324ced81a950c46736d53f\\eb2ebe12-reviewer-output-ctx_6fecea53672e.txt",
+        "size_chars": 1768,
+        "line_count": 24,
+        "created_at": "2026-03-19T17:11:15.674138Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "understand",
+          "route_model": "deepseek-reasoner",
+          "route_provider": "reasoning"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 1768,
+        "line_count": 24,
+        "stored_raw": true
+      },
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "69a793bd",
+      "step_title": "Draft solution",
+      "action": "coder_step",
+      "ok": true,
+      "at": "2026-03-19T17:20:45.151091Z",
+      "phase": "draft",
+      "worker": "coder",
+      "status": "completed",
+      "output_ref": {
+        "artifact_id": "ctx_479125b96958",
+        "task_id": "0d2de024ec324ced81a950c46736d53f",
+        "step_id": "69a793bd",
+        "channel": "coder-output",
+        "title": "Draft solution output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\0d2de024ec324ced81a950c46736d53f\\69a793bd-coder-output-ctx_479125b96958.txt",
+        "size_chars": 1171,
+        "line_count": 25,
+        "created_at": "2026-03-19T17:12:36.816371Z",
+        "metadata": {
+          "worker": "coder",
+          "phase": "draft",
+          "route_model": "gpt-5.4-pro",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "coder-output",
+        "char_count": 1171,
+        "line_count": 25,
+        "stored_raw": true
+      },
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "1d2d5db3",
+      "step_title": "Execute validation",
+      "action": "shell_step",
+      "ok": true,
+      "at": "2026-03-19T17:20:45.151091Z",
+      "phase": "execute",
+      "worker": "shell",
+      "status": "completed",
+      "output_ref": {
+        "artifact_id": "ctx_9190c1c34e79",
+        "task_id": "0d2de024ec324ced81a950c46736d53f",
+        "step_id": "1d2d5db3",
+        "channel": "shell-output",
+        "title": "Execute validation output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\0d2de024ec324ced81a950c46736d53f\\1d2d5db3-shell-output-ctx_9190c1c34e79.txt",
+        "size_chars": 312437,
+        "line_count": 4203,
+        "created_at": "2026-03-19T17:13:33.151214Z",
+        "metadata": {
+          "worker": "shell",
+          "phase": "execute",
+          "route_model": "deepseek-chat",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "shell-output",
+        "char_count": 312437,
+        "line_count": 4203,
+        "stored_raw": true
+      },
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "0751fe75",
+      "step_title": "Verify result",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-03-19T17:20:45.151091Z",
+      "phase": "verify",
+      "worker": "reviewer",
+      "status": "running",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "8d4d8b9b",
+      "step_title": "Revise next action",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-03-19T17:20:45.151091Z",
+      "phase": "revise",
+      "worker": "reviewer",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    }
+  ],
+  "result": {
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

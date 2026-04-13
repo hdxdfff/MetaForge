@@ -1,0 +1,236 @@
+{
+  "updated_at": "2026-03-12T07:08:18.721608Z",
+  "workspace": null,
+  "mode": "light",
+  "maintenance": {
+    "updated_at": "2026-03-12T07:08:14.308027Z",
+    "tasks": {
+      "goal_runtime": {
+        "status": "no-change",
+        "goal_count": 410,
+        "active_goal_count": 2,
+        "updated": 0,
+        "completed": 0,
+        "failed": 0,
+        "on_hold": 0,
+        "running": 0,
+        "planned": 0,
+        "decomposition_updates": 0,
+        "task_link_repairs": 0,
+        "task_deduplications": 0
+      },
+      "goal_storage": {
+        "updated_at": "2026-03-12T07:08:14.206862Z",
+        "status": "healthy",
+        "stored_successfully": true,
+        "goal_registry_confirmed": true,
+        "task_queue_confirmed": true,
+        "goal_registry": {
+          "goal_count": 410,
+          "unique_goal_id_count": 410,
+          "active_goal_count": 2,
+          "recent_goal_count_24h": 81
+        },
+        "graph_integrity": {
+          "active_goals_with_graph": 2,
+          "missing_graph_goal_ids": [],
+          "running_goals_missing_tasks": [],
+          "missing_task_goal_ids": []
+        },
+        "task_queue": {
+          "active_task_count": 1,
+          "managed_active_task_count": 0,
+          "managed_active_tasks_with_goal_link": 0,
+          "managed_active_tasks_linked_to_existing_goal": 0,
+          "managed_active_tasks_broken_goal_link": [],
+          "managed_active_tasks_without_goal_link": [],
+          "managed_active_tasks_without_node_link": []
+        },
+        "state_confirmation": {
+          "recent_action_goal_ids": [],
+          "recent_action_missing_goal_ids": [],
+          "memory_kernel_goal_count": 410,
+          "memory_kernel_top_goal_ids": [
+            "goal_10887c64f0",
+            "goal_5fc8f9d272",
+            "goal_7f471cb20d",
+            "goal_84adc26566",
+            "goal_c7dd020683"
+          ],
+          "active_goal_ids_not_in_memory_top": [
+            "goal_1fe0e4bb13",
+            "goal_a2cbaa0d6f"
+          ]
+        },
+        "issues": [],
+        "warnings": []
+      },
+      "reconciled": {
+        "completed_from_goals": 0,
+        "task_ids": []
+      },
+      "reconciled_graph": {
+        "completed_from_graph_nodes": 0,
+        "task_ids": [],
+        "removed_checkpoints": []
+      },
+      "reconciled_smoke": {
+        "completed_smoke_tasks": 0,
+        "task_ids": []
+      },
+      "reconciled_running": {
+        "completed_stale_running": 0,
+        "task_ids": []
+      },
+      "reconciled_planning": {
+        "completed_stale_planning": 0,
+        "task_ids": []
+      },
+      "reconciled_messages": {
+        "auto_resolved_errors": 0,
+        "message_ids": []
+      },
+      "timed_out": [],
+      "archived": [],
+      "active_timeout_minutes": 120,
+      "archive_after_days": 7,
+      "mode": "light"
+    },
+    "mode": "light",
+    "memory": {
+      "decision_log_trimmed": 0,
+      "task_history_trimmed": 0,
+      "mode": "light"
+    }
+  },
+  "tool_health": {
+    "updated_at": "2026-03-12T07:07:04.667237Z",
+    "status": "pass",
+    "issues": [],
+    "daemon": {
+      "status": "operator_attention",
+      "pid": 5868,
+      "cycle": 179,
+      "last_tick_at": "2026-03-12T07:07:04.659241Z"
+    },
+    "control_layer": {
+      "status": "operator_attention",
+      "quality_score": 0.6354,
+      "only_patch_gate_hold": false
+    },
+    "quality": {
+      "status": "attention",
+      "overall_score": 0.6354
+    },
+    "autonomy": {
+      "stage": "stage4_confirmed",
+      "score": 0.6925
+    },
+    "soak": {
+      "status": "stage4_confirmed",
+      "confirmed": true
+    },
+    "company_os": {
+      "status": "developing",
+      "score": 0.4
+    },
+    "automation_lab": {
+      "status": "attention",
+      "score": null
+    },
+    "verification": {
+      "status": "attention"
+    },
+    "startup_grace": false
+  },
+  "tool_health_history": {
+    "history_count": 200,
+    "latest": {
+      "updated_at": "2026-03-12T07:07:04.667237Z",
+      "status": "pass",
+      "issues": [],
+      "daemon": {
+        "status": "operator_attention",
+        "cycle": 179,
+        "last_tick_at": "2026-03-12T07:07:04.659241Z"
+      },
+      "control_layer_status": "operator_attention",
+      "quality_status": "attention",
+      "autonomy_stage": "stage4_confirmed"
+    }
+  },
+  "db_runtime": {
+    "returncode": 0,
+    "passed": true,
+    "payload": {
+      "commands": {
+        "mysql": {
+          "available": false,
+          "path": null,
+          "version": null
+        },
+        "mysqldump": {
+          "available": false,
+          "path": null,
+          "version": null
+        },
+        "mysqladmin": {
+          "available": false,
+          "path": null,
+          "version": null
+        },
+        "psql": {
+          "available": false,
+          "path": null,
+          "version": null
+        },
+        "gsql": {
+          "available": false,
+          "path": null,
+          "version": null
+        },
+        "docker": {
+          "available": true,
+          "path": "C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.EXE",
+          "version": "Docker version 29.2.1, build a5c7197"
+        },
+        "java": {
+          "available": false,
+          "path": null,
+          "version": null
+        }
+      },
+      "workspaces": [
+        {
+          "path": "D:\\?????",
+          "exists": false,
+          "sql_files": 0,
+          "docs": [],
+          "runtime_hints": []
+        },
+        {
+          "path": "D:\\codex\\orchestrator-mvp",
+          "exists": true,
+          "sql_files": 0,
+          "docs": [
+            "README.md",
+            "README.md"
+          ],
+          "runtime_hints": [
+            "docker-compose"
+          ]
+        }
+      ]
+    }
+  },
+  "deployment": {
+    "skipped": true,
+    "reason": "no-workspace"
+  },
+  "verification": {
+    "status": "attention",
+    "patch_gate": "attention",
+    "runtime_health": "attention"
+  },
+  "status": "attention"
+}

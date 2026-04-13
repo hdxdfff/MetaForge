@@ -1,0 +1,68 @@
+{
+    "deploy_production":  {
+                              "mode":  "MANUAL"
+                          },
+    "create_workspace":  {
+                             "mode":  "AUTO"
+                         },
+    "dispatch_low_risk_goal_nodes":  {
+                                         "mode":  "AUTO"
+                                     },
+    "modify_agents":  {
+                          "mode":  "MANUAL"
+                      },
+    "modify_controller":  {
+                              "mode":  "MANUAL"
+                          },
+    "resolve_warning_escalations":  {
+                                        "mode":  "AUTO"
+                                    },
+    "resolve_error_escalations":  {
+                                      "mode":  "MANUAL"
+                                  },
+    "filesystem.write_workspace":  {
+                                       "mode":  "AUTO-LIMIT",
+                                       "path_prefixes":  [
+                                                             "D:\\codex\\orchestrator-mvp\\workspace",
+                                                             "D:\\codex\\orchestrator-mvp\\factory\\workspace"
+                                                         ]
+                                   },
+    "filesystem.delete":  {
+                              "mode":  "MANUAL"
+                          },
+    "git.push":  {
+                     "mode":  "AUTO-LIMIT",
+                     "allowed_remotes":  [
+                                             "origin",
+                                             "github",
+                                             "gitee"
+                                         ]
+                 },
+    "install_package":  {
+                            "mode":  "AUTO-LIMIT",
+                            "allowlist":  [
+                                              "numpy",
+                                              "torch",
+                                              "opencv-python",
+                                              "pytest",
+                                              "fastapi",
+                                              "uvicorn"
+                                          ]
+                        },
+    "docker.run":  {
+                       "mode":  "AUTO-LIMIT",
+                       "allow_images":  [
+                                            "python",
+                                            "node",
+                                            "postgres",
+                                            "redis",
+                                            "nginx"
+                                        ]
+                   },
+    "approved_patch":  {
+                           "mode":  "MANUAL"
+                       },
+    "filesystem.write_core":  {
+                                  "mode":  "MANUAL"
+                              }
+}

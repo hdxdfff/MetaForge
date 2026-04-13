@@ -1,0 +1,17 @@
+{
+  "id": "terminal_checkpoint_restores_task_truth",
+  "updated_at": "2026-03-20T00:00:00Z",
+  "summary": "When tasks.json remains active but runtime checkpoint/context/execution evidence is already terminal, maintenance must restore task truth from runtime evidence before heartbeat timeout reconciliation.",
+  "symptoms": [
+    "tasks.json shows timed_out or running while factory/runtime/tasks/<task_id>/context.json is completed or failed",
+    "graph nodes are requeued even though the detached runner already finished"
+  ],
+  "root_cause": [
+    "maintenance trusted tasks.json active status before consulting terminal checkpoint/runtime evidence",
+    "heartbeat recovery requeued nodes from stale task-table state and overwrote real terminal outcomes"
+  ],
+  "fix": [
+    "restore task status from execution-evidence/context/checkpoint terminal state before heartbeat timeout logic",
+    "repair graph nodes that were requeued from stale active task records"
+  ]
+}

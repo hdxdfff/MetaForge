@@ -1,0 +1,30 @@
+{
+  "task_id": "286b63878bfc439d8526aee110974df6",
+  "task_status": "failed",
+  "phase": "failed",
+  "updated_at": "2026-03-29T11:36:27.526243Z",
+  "heartbeat_at": "2026-03-29T11:36:27.526243Z",
+  "repo_path": "D:\\codex\\generated\\toy-os-demo",
+  "goal": null,
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": null,
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\286b63878bfc439d8526aee110974df6",
+  "error": "Audit output schema rejected for doc_patch/coder: Coder audit output missing required structured sections.",
+  "title": "Delivery smoke verification",
+  "prompt": "Smoke task to verify delivery-ready transition through internal execution.",
+  "scheduler_hint": {},
+  "context_package": {},
+  "plan": [
+    {
+      "id": "d8e098b6",
+      "title": "Write smoke evidence",
+      "status": "failed",
+      "worker": "coder",
+      "phase": "smoke"
+    }
+  ],
+  "result": {}
+}

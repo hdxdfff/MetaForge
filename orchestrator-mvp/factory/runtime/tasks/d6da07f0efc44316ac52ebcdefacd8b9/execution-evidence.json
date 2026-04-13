@@ -1,0 +1,26 @@
+{
+  "task_id": "d6da07f0efc44316ac52ebcdefacd8b9",
+  "task_title": "CLI publication smoke 2",
+  "task_status": "completed",
+  "started_at": "2026-03-29T17:33:43.575252Z",
+  "updated_at": "2026-03-29T18:03:45.067595Z",
+  "completed": true,
+  "steps": [
+    {
+      "step_id": "d6da07f0efc44316ac52ebcdefacd8b9-terminal-record",
+      "step_title": "CLI publication smoke 2",
+      "action": "task_terminal_record",
+      "ok": true,
+      "at": "2026-03-29T18:03:45.067595Z",
+      "status": "completed",
+      "summary": "Stale internal smoke task auto-closed after runtime validation window elapsed.",
+      "error": null,
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ],
+  "result": {
+    "summary": "Stale internal smoke task auto-closed after runtime validation window elapsed."
+  }
+}

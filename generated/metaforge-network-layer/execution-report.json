@@ -1,0 +1,12 @@
+{
+  "artifact_id": "metaforge-network-layer",
+  "executed": true,
+  "success": true,
+  "exit_code": 0,
+  "command": [
+    "C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "D:\\codex\\generated\\metaforge-network-layer\\run_demo.py"
+  ],
+  "stdout": "{\"status\": \"ok\", \"artifact_id\": \"metaforge-network-layer\", \"message\": \"Provide a runnable network-layer rollout bundle with self-test and audit evidence.\", \"args\": []}",
+  "stderr": ""
+}

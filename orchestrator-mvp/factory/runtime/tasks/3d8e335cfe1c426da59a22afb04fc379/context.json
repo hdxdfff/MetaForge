@@ -1,0 +1,151 @@
+{
+  "task_id": "3d8e335cfe1c426da59a22afb04fc379",
+  "task_status": "failed",
+  "phase": "failed",
+  "updated_at": "2026-04-02T21:01:38.558390Z",
+  "heartbeat_at": "2026-04-02T21:01:38.558390Z",
+  "repo_path": "D:\\codex\\orchestrator-mvp",
+  "goal": "Implement the bounded change",
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": "runtime.failure_backlog_automation",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\3d8e335cfe1c426da59a22afb04fc379",
+  "error": "Command contains denied pattern: format",
+  "title": "Implement the bounded change",
+  "prompt": "Inspect the relevant code, make a minimal coherent patch, run local tests or linters, and summarize what changed and what remains risky.",
+  "scheduler_hint": {
+    "automation_source": "failure_backlog_automation",
+    "template_id": "general-coding",
+    "template_category": "development",
+    "cluster_key": "recover stable execution output",
+    "cluster_count": 201,
+    "cluster_status": "attention",
+    "handling_mode": "generic_saturation",
+    "dispatch_now": true,
+    "admission_mode": "normal",
+    "scheduled_by": "runtime.failure_backlog_automation",
+    "decomposition_child": true,
+    "decomposition_parent_task_id": "ab25e9966ecb4563a0199b72ff895688",
+    "decomposition_root_task_id": "ae704ac213fa4e778c41c305d8afa2c8",
+    "decomposition_depth": 2,
+    "max_decomposition_depth": 2,
+    "decomposition_child_index": 2,
+    "decomposition_allow_children": true,
+    "decomposition_path_kind": "branch",
+    "decomposition_shared_dependency_group": "ae704ac213fa4e778c41c305d8afa2c8",
+    "decomposition_repair_for": null,
+    "decomposition_dependencies": [
+      "Analyze the current state"
+    ],
+    "admission_lane": "exploration",
+    "admission_reason": "artifact_spec_missing",
+    "requested_execution_mode": "production",
+    "task_type": "exploration_intake",
+    "queue_name": "exploration",
+    "verification_level": "L1",
+    "max_runtime_seconds": 900,
+    "retry_limit": 0,
+    "rollback_rule": "return_to_planner",
+    "dependency_task_ids": [
+      "d5ed1af5275440b7a8cbe22643c5bd11"
+    ],
+    "dependency_count": 1
+  },
+  "context_package": {},
+  "plan": [
+    {
+      "id": "82ee8726",
+      "title": "Explore repository structure and identify relevant code",
+      "status": "failed",
+      "worker": "docker",
+      "phase": "exploration"
+    },
+    {
+      "id": "2a3d08f9",
+      "title": "Read task specifications or briefs",
+      "status": "pending",
+      "worker": "shell",
+      "phase": "exploration"
+    },
+    {
+      "id": "234389d3",
+      "title": "Identify and analyze main source files",
+      "status": "pending",
+      "worker": "coder",
+      "phase": "analysis"
+    }
+  ],
+  "verification_signals": [
+    {
+      "timestamp": "2026-04-02T20:31:07.775854Z",
+      "kind": "admission_accepted",
+      "success": true,
+      "task_id": "3d8e335cfe1c426da59a22afb04fc379",
+      "admission_lane": null,
+      "admission_reason": null,
+      "execution_mode": "production",
+      "queue_name": "build_test",
+      "task_type": "build_fix"
+    },
+    {
+      "timestamp": "2026-04-02T20:52:07.466803Z",
+      "kind": "step_failed",
+      "success": false,
+      "task_id": "3d8e335cfe1c426da59a22afb04fc379",
+      "step_id": "82ee8726",
+      "step_title": "Explore repository structure and identify relevant code",
+      "worker": "docker",
+      "phase": "exploration",
+      "route_model": "deepseek-chat",
+      "route_provider": "runtime",
+      "elapsed_ms": 297922,
+      "error": "Command contains denied pattern: format",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "error-output",
+        "char_count": 39,
+        "line_count": 1,
+        "stored_raw": false
+      }
+    }
+  ],
+  "verification_signal_count": 2,
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-02T20:31:07.775854Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "3d8e335cfe1c426da59a22afb04fc379",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "production",
+        "queue_name": "build_test",
+        "task_type": "build_fix"
+      },
+      {
+        "timestamp": "2026-04-02T20:52:07.466803Z",
+        "kind": "step_failed",
+        "success": false,
+        "task_id": "3d8e335cfe1c426da59a22afb04fc379",
+        "step_id": "82ee8726",
+        "step_title": "Explore repository structure and identify relevant code",
+        "worker": "docker",
+        "phase": "exploration",
+        "route_model": "deepseek-chat",
+        "route_provider": "runtime",
+        "elapsed_ms": 297922,
+        "error": "Command contains denied pattern: format",
+        "output_ref": {},
+        "output_stats": {
+          "channel": "error-output",
+          "char_count": 39,
+          "line_count": 1,
+          "stored_raw": false
+        }
+      }
+    ]
+  }
+}

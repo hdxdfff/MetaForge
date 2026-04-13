@@ -1,0 +1,138 @@
+[
+  {
+    "task_id": "c6f11c0c44fc49a6bd27ab91810ab92e",
+    "status": "timed_out",
+    "goal": "Strengthen agent orchestration capability",
+    "repo_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+    "updated_at": "2026-03-12T01:32:14.680491Z",
+    "error": "Task timed out after 120 minutes without progress."
+  },
+  {
+    "task_id": "af224c6808d742218a20b13ded6514c2",
+    "status": "timed_out",
+    "goal": "Strengthen agent orchestration capability",
+    "repo_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+    "updated_at": "2026-03-12T01:32:14.680491Z",
+    "error": "Task timed out after 120 minutes without progress."
+  },
+  {
+    "task_id": "facb1f1a2cca4c0884ff7c61c4dd4dfb",
+    "status": "timed_out",
+    "goal": "Stabilize primary AI test provider path",
+    "repo_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+    "updated_at": "2026-03-12T01:32:14.680491Z",
+    "error": "Task timed out after 120 minutes without progress."
+  },
+  {
+    "task_id": "868e4124b0e74da3a7f7e58a6085f86e",
+    "status": "timed_out",
+    "goal": "Expand verification regression coverage",
+    "repo_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+    "updated_at": "2026-03-12T01:32:14.679496Z",
+    "error": "Task timed out after 120 minutes without progress."
+  },
+  {
+    "task_id": "d6e7434df74c4d4cbc3024c9f958ef40",
+    "status": "timed_out",
+    "goal": "Strengthen capability distillation pipeline",
+    "repo_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+    "updated_at": "2026-03-12T01:32:14.679496Z",
+    "error": "Task timed out after 120 minutes without progress."
+  },
+  {
+    "task_id": "19061ea41f494db887acd16af3655cd2",
+    "status": "timed_out",
+    "goal": "Refine MetaFactory architecture governance",
+    "repo_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+    "updated_at": "2026-03-12T01:32:14.679496Z",
+    "error": "Task timed out after 120 minutes without progress."
+  },
+  {
+    "task_id": "4334e5c8644842c88ae5357446e4bb7c",
+    "status": "timed_out",
+    "goal": "Deepen repo learning and knowledge routing reuse",
+    "repo_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+    "updated_at": "2026-03-12T01:32:14.679496Z",
+    "error": "Task timed out after 120 minutes without progress."
+  },
+  {
+    "task_id": "197d845f480743ababfa92208a9a26d0",
+    "status": "timed_out",
+    "goal": "Expand verification regression coverage",
+    "repo_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+    "updated_at": "2026-03-12T01:32:14.679496Z",
+    "error": "Task timed out after 120 minutes without progress."
+  },
+  {
+    "task_id": "eab703f77f7b47148fa7db7f007db56e",
+    "status": "timed_out",
+    "goal": "Strengthen capability distillation pipeline",
+    "repo_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+    "updated_at": "2026-03-12T01:32:14.679496Z",
+    "error": "Task timed out after 120 minutes without progress."
+  },
+  {
+    "task_id": "b071f117f1cf45dd8e9a6d17a362551a",
+    "status": "timed_out",
+    "goal": "Continue ToyOS kernel branch work with mainline context reuse",
+    "repo_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+    "updated_at": "2026-03-12T01:32:14.679496Z",
+    "error": "Task timed out after 120 minutes without progress."
+  },
+  {
+    "task_id": "2d741bd4c93e495d8131e5d13416a29d",
+    "status": "timed_out",
+    "goal": "Deepen repo learning and knowledge routing reuse",
+    "repo_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+    "updated_at": "2026-03-12T01:32:14.679496Z",
+    "error": "Task timed out after 120 minutes without progress."
+  },
+  {
+    "task_id": "2096faa813fb47df9d142215612af442",
+    "status": "timed_out",
+    "goal": "Deepen repo learning and knowledge routing reuse",
+    "repo_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+    "updated_at": "2026-03-12T01:32:14.679496Z",
+    "error": "Task timed out after 120 minutes without progress."
+  },
+  {
+    "task_id": "68d0f8d8d5d64412bb28c29c9dcf5236",
+    "status": "timed_out",
+    "goal": "Continue ToyOS kernel branch work with mainline context reuse",
+    "repo_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+    "updated_at": "2026-03-12T01:32:14.679496Z",
+    "error": "Task timed out after 120 minutes without progress."
+  },
+  {
+    "task_id": "23aed7fd31e84afc9e79dae952256407",
+    "status": "completed",
+    "goal": "Strengthen webapp generation capability",
+    "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\build-ai-video-factory",
+    "updated_at": "2026-03-11T16:04:27.450844Z",
+    "error": null
+  },
+  {
+    "task_id": "cd2dcfe1bcb944dda4ea7c34a0d2604b",
+    "status": "completed",
+    "goal": "Strengthen webapp generation capability",
+    "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\build-ai-video-factory",
+    "updated_at": "2026-03-11T16:04:27.450844Z",
+    "error": null
+  },
+  {
+    "task_id": "cc3f0733b7e1440dbcd64ed810eb3c11",
+    "status": "completed",
+    "goal": null,
+    "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\build-ai-video-factory",
+    "updated_at": "2026-03-11T16:01:15.019186Z",
+    "error": null
+  },
+  {
+    "task_id": "ccb165ed8549456997edf05f8a021395",
+    "status": "waiting_approval",
+    "goal": "goal_4af4102d2f",
+    "repo_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+    "updated_at": "2026-03-11T16:00:28.351326Z",
+    "error": null
+  }
+]

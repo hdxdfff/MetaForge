@@ -1,0 +1,60 @@
+{
+  "task_id": "a591edde9abd480691c496936719f028",
+  "task_title": "Define architecture contract for Ship deployable release artifact bundle",
+  "task_status": "failed",
+  "completed": false,
+  "updated_at": "2026-03-19T16:37:05.667749Z",
+  "result": {
+    "state": "failed_execution",
+    "reason": "Shell command failed with code 1: 'pytest' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���\r\n���������ļ���",
+    "task_id": "a591edde9abd480691c496936719f028",
+    "repo_path": "D:\\codex\\orchestrator-mvp",
+    "execution_mode": "production",
+    "goal": "Ship deployable release artifact bundle",
+    "cheap_calls_used": 3,
+    "cheap_chars_used": 5818,
+    "escalation_count": 1,
+    "failed_steps": [
+      {
+        "step_id": "1a995a18",
+        "title": "Execute validation",
+        "phase": "execute",
+        "worker": "shell",
+        "command": "pytest",
+        "output": "Execute validation failure: 87 chars, 2 non-empty lines.\nHead:\n- Shell command failed with code 1: 'pytest' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���\n- ���������ļ���",
+        "output_ref": {},
+        "output_stats": {
+          "channel": "error-output",
+          "char_count": 87,
+          "line_count": 2,
+          "stored_raw": false
+        },
+        "probe_attempts": 0,
+        "max_probe_attempts": 1,
+        "last_diagnosis": "Diagnosis for Execute validation: 424 chars, 7 non-empty lines.\nHead:\n- Cheap reviewer response\n- Assigned model: deepseek-chat\n- Reason: Default review and summarization stay on the cheap lane; escalate only for regression-heavy or architectural review.\n- Decision: pause",
+        "last_diagnosis_ref": {}
+      }
+    ],
+    "next_action_required": "Inspect execution evidence and rerun or replace the task; no approval hold was applied.",
+    "failure_pause_policy": "If a long task fails, allow at most one cheap-model-approved probe retry with bounded local cost. If cheap approval is missing, ambiguous, or the retry still fails, pause execution, return a structured error report, and wait for explicit core guidance.",
+    "pause_required": false,
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\a591edde9abd480691c496936719f028\\execution-evidence.json",
+    "execution_evidence_step_count": 0
+  },
+  "started_at": "2026-03-19T16:31:05.930666Z",
+  "steps": [
+    {
+      "step_id": "a591edde9abd480691c496936719f028-terminal-record",
+      "step_title": "Define architecture contract for Ship deployable release artifact bundle",
+      "action": "task_terminal_record",
+      "ok": false,
+      "at": "2026-03-19T16:37:05.667749Z",
+      "status": "failed",
+      "summary": null,
+      "error": null,
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ]
+}

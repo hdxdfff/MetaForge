@@ -1,0 +1,70 @@
+{
+  "task_id": "c3d76ef63a394796b1857a65af4a18ca",
+  "task_title": "Frame the problem",
+  "task_status": "timed_out",
+  "started_at": "2026-04-02T09:23:34.182620Z",
+  "updated_at": "2026-04-02T09:41:25.276627Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "fd1ec2a7",
+      "step_title": "Frame research question",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-04-02T09:41:25.276627Z",
+      "phase": "understand",
+      "worker": "reviewer",
+      "status": "running",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "ef95421a",
+      "step_title": "Acquire internet knowledge",
+      "action": "docker_step",
+      "ok": false,
+      "at": "2026-04-02T09:41:25.276627Z",
+      "phase": "execute",
+      "worker": "docker",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "e8db69e0",
+      "step_title": "Synthesize research output",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-04-02T09:41:25.276627Z",
+      "phase": "summarize",
+      "worker": "reviewer",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    }
+  ],
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-02T09:23:34.192469Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "c3d76ef63a394796b1857a65af4a18ca",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "governance",
+        "queue_name": "fastlane",
+        "task_type": "report_refresh"
+      }
+    ],
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

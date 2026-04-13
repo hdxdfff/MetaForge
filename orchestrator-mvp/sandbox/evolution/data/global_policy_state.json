@@ -1,0 +1,121 @@
+{
+  "updated_at": "2026-03-12T07:09:59.505236Z",
+  "focus_capabilities": [
+    "agent_orchestration",
+    "webapp_generation",
+    "deploy_scaffold",
+    "tool_extension",
+    "kv_cache_manager",
+    "local_llm_runner"
+  ],
+  "resource_budget": {
+    "runtime_tasks": 0.35,
+    "experiments": 0.2,
+    "capability_building": 0.15,
+    "maintenance": 0.2
+  },
+  "cadence_policy": {
+    "runtime_dispatch_limit": 2,
+    "goal_generation_every": 3,
+    "maintenance_mode": "full",
+    "maintenance_every": 4,
+    "capability_building_every": 5,
+    "experiment_every": 5,
+    "meta_every": 5,
+    "ai_testing_every": 4
+  },
+  "experiment_portfolio": {
+    "routing-heuristics": 0.35,
+    "prompt-specialization": 0.2,
+    "recovery-patterns": 0.2,
+    "goal-seeding": 0.125,
+    "pattern-rollout": 0.125
+  },
+  "worker_bias_policy": {
+    "reviewer": 0.3,
+    "coder": 0.12,
+    "docker": 0.03,
+    "shell": 0.12
+  },
+  "organization_priority": {
+    "departments": [
+      {
+        "department": "engineering_department",
+        "project_count": 22,
+        "default_worker": "coder"
+      },
+      {
+        "department": "qa_department",
+        "project_count": 22,
+        "default_worker": "shell"
+      },
+      {
+        "department": "architecture_department",
+        "project_count": 11,
+        "default_worker": "reviewer"
+      },
+      {
+        "department": "research_department",
+        "project_count": 11,
+        "default_worker": "reviewer"
+      },
+      {
+        "department": "operations_department",
+        "project_count": 3,
+        "default_worker": "docker"
+      }
+    ]
+  },
+  "top_capabilities": [
+    {
+      "capability_id": "agent_orchestration",
+      "score": 11.9749,
+      "count": 211
+    },
+    {
+      "capability_id": "webapp_generation",
+      "score": 11.718,
+      "count": 204
+    },
+    {
+      "capability_id": "deploy_scaffold",
+      "score": 6.156,
+      "count": 135
+    },
+    {
+      "capability_id": "tool_extension",
+      "score": 4.9275,
+      "count": 135
+    },
+    {
+      "capability_id": "kv_cache_manager",
+      "score": 0.2569,
+      "count": 7
+    },
+    {
+      "capability_id": "local_llm_runner",
+      "score": 0.2569,
+      "count": 7
+    }
+  ],
+  "top_workers": [
+    {
+      "score": 7.908,
+      "count": 151,
+      "worker": "reviewer",
+      "success_rate": 1.0
+    }
+  ],
+  "inputs": {
+    "quality_score": 0.6354,
+    "control_status": "operator_attention",
+    "autonomy_stage": "stage4_confirmed",
+    "autonomy_source": "soak_validation",
+    "autonomy_confirmed": true,
+    "experiment_history_count": 200,
+    "organization_departments": 5,
+    "ai_testing_status": "attention",
+    "ai_testing_pass_rate": 0.8,
+    "ai_testing_error_count": 0
+  }
+}

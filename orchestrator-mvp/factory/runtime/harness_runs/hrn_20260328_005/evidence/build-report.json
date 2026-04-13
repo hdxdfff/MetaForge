@@ -1,0 +1,351 @@
+{
+  "target": "/codex/generated/toy-os-demo",
+  "toolchain": {
+    "nasm": "/usr/bin/nasm",
+    "gcc": "/usr/bin/gcc",
+    "i686_elf_gcc": null,
+    "i686_elf_ld": null,
+    "ld": "/usr/bin/ld",
+    "qemu_system_i386": "/usr/bin/qemu-system-i386",
+    "make": "/usr/bin/make",
+    "docker": null
+  },
+  "checks": [
+    {
+      "ok": true,
+      "command": [
+        "nasm",
+        "-f",
+        "elf32",
+        "boot.asm",
+        "-o",
+        "/codex/generated/toy-os-demo/build/boot.o"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "ok": true,
+      "command": [
+        "nasm",
+        "-f",
+        "elf32",
+        "src/isr_stub.asm",
+        "-o",
+        "/codex/generated/toy-os-demo/build/isr_stub.o"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "ok": true,
+      "command": [
+        "gcc",
+        "-std=gnu99",
+        "-ffreestanding",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Iinclude",
+        "-m32",
+        "-c",
+        "kernel.c",
+        "-o",
+        "/codex/generated/toy-os-demo/build/kernel.o"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "kernel.c:89:13: warning: ‘debug_port_write_dec’ defined but not used [-Wunused-function]\n   89 | static void debug_port_write_dec(uint32_t value) {\n      |             ^~~~~~~~~~~~~~~~~~~~\n"
+    },
+    {
+      "ok": true,
+      "command": [
+        "gcc",
+        "-std=gnu99",
+        "-ffreestanding",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Iinclude",
+        "-m32",
+        "-c",
+        "src/block_device.c",
+        "-o",
+        "/codex/generated/toy-os-demo/build/block_device.o"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "ok": true,
+      "command": [
+        "gcc",
+        "-std=gnu99",
+        "-ffreestanding",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Iinclude",
+        "-m32",
+        "-c",
+        "src/gdt.c",
+        "-o",
+        "/codex/generated/toy-os-demo/build/gdt.o"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "ok": true,
+      "command": [
+        "gcc",
+        "-std=gnu99",
+        "-ffreestanding",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Iinclude",
+        "-m32",
+        "-c",
+        "src/idt.c",
+        "-o",
+        "/codex/generated/toy-os-demo/build/idt.o"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "ok": true,
+      "command": [
+        "gcc",
+        "-std=gnu99",
+        "-ffreestanding",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Iinclude",
+        "-m32",
+        "-c",
+        "src/keyboard.c",
+        "-o",
+        "/codex/generated/toy-os-demo/build/keyboard.o"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "ok": true,
+      "command": [
+        "gcc",
+        "-std=gnu99",
+        "-ffreestanding",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Iinclude",
+        "-m32",
+        "-c",
+        "src/memory.c",
+        "-o",
+        "/codex/generated/toy-os-demo/build/memory.o"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "ok": true,
+      "command": [
+        "gcc",
+        "-std=gnu99",
+        "-ffreestanding",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Iinclude",
+        "-m32",
+        "-c",
+        "src/paging.c",
+        "-o",
+        "/codex/generated/toy-os-demo/build/paging.o"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "ok": true,
+      "command": [
+        "gcc",
+        "-std=gnu99",
+        "-ffreestanding",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Iinclude",
+        "-m32",
+        "-c",
+        "src/panic.c",
+        "-o",
+        "/codex/generated/toy-os-demo/build/panic.o"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "ok": true,
+      "command": [
+        "gcc",
+        "-std=gnu99",
+        "-ffreestanding",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Iinclude",
+        "-m32",
+        "-c",
+        "src/scheduler.c",
+        "-o",
+        "/codex/generated/toy-os-demo/build/scheduler.o"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "ok": true,
+      "command": [
+        "gcc",
+        "-std=gnu99",
+        "-ffreestanding",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Iinclude",
+        "-m32",
+        "-c",
+        "src/syscall.c",
+        "-o",
+        "/codex/generated/toy-os-demo/build/syscall.o"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "src/syscall.c: In function ‘syscall_handle’:\nsrc/syscall.c:90:103: warning: unused parameter ‘arg3’ [-Wunused-parameter]\n   90 | static uint32_t syscall_handle(uint32_t number, uint32_t arg0, uint32_t arg1, uint32_t arg2, uint32_t arg3) {\n      |                                                                                              ~~~~~~~~~^~~~\n"
+    },
+    {
+      "ok": true,
+      "command": [
+        "gcc",
+        "-std=gnu99",
+        "-ffreestanding",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Iinclude",
+        "-m32",
+        "-c",
+        "src/terminal.c",
+        "-o",
+        "/codex/generated/toy-os-demo/build/terminal.o"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "ok": true,
+      "command": [
+        "gcc",
+        "-std=gnu99",
+        "-ffreestanding",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Iinclude",
+        "-m32",
+        "-c",
+        "src/timer.c",
+        "-o",
+        "/codex/generated/toy-os-demo/build/timer.o"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "ok": true,
+      "command": [
+        "gcc",
+        "-std=gnu99",
+        "-ffreestanding",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Iinclude",
+        "-m32",
+        "-c",
+        "src/vfs.c",
+        "-o",
+        "/codex/generated/toy-os-demo/build/vfs.o"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "ok": true,
+      "command": [
+        "ld",
+        "-T",
+        "linker.ld",
+        "-nostdlib",
+        "-o",
+        "/codex/generated/toy-os-demo/build/kernel.bin",
+        "-m",
+        "elf_i386",
+        "/codex/generated/toy-os-demo/build/boot.o",
+        "/codex/generated/toy-os-demo/build/isr_stub.o",
+        "/codex/generated/toy-os-demo/build/kernel.o",
+        "/codex/generated/toy-os-demo/build/block_device.o",
+        "/codex/generated/toy-os-demo/build/gdt.o",
+        "/codex/generated/toy-os-demo/build/idt.o",
+        "/codex/generated/toy-os-demo/build/keyboard.o",
+        "/codex/generated/toy-os-demo/build/memory.o",
+        "/codex/generated/toy-os-demo/build/paging.o",
+        "/codex/generated/toy-os-demo/build/panic.o",
+        "/codex/generated/toy-os-demo/build/scheduler.o",
+        "/codex/generated/toy-os-demo/build/syscall.o",
+        "/codex/generated/toy-os-demo/build/terminal.o",
+        "/codex/generated/toy-os-demo/build/timer.o",
+        "/codex/generated/toy-os-demo/build/vfs.o"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "build_ready": true,
+  "host_build_ready": true,
+  "build_success": true,
+  "link_mode": "docker-managed",
+  "c_source_count": 13,
+  "managed_resolution": {
+    "host_build_tools_present": true,
+    "docker_client_present": false,
+    "docker_daemon_ready": false,
+    "docker_detail": "docker client not detected",
+    "recommended_backend": "docker"
+  },
+  "evidence": {
+    "build_log": "/codex/generated/toy-os-demo/build/build.log",
+    "sha256": "/codex/generated/toy-os-demo/build/artifact.sha256"
+  },
+  "prebuilt_artifact_present": true
+}

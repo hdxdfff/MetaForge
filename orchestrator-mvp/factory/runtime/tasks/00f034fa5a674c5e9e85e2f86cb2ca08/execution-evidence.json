@@ -1,0 +1,28 @@
+{
+  "task_id": "00f034fa5a674c5e9e85e2f86cb2ca08",
+  "task_title": "Implement module app.network_agent",
+  "task_status": "timed_out",
+  "started_at": "2026-03-19T03:37:20.697540Z",
+  "updated_at": "2026-03-19T03:45:05.146993Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "00f034fa5a674c5e9e85e2f86cb2ca08-terminal-record",
+      "step_title": "Implement module app.network_agent",
+      "action": "task_terminal_record",
+      "ok": false,
+      "at": "2026-03-19T03:45:05.146993Z",
+      "status": "timed_out",
+      "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+      "error": null,
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ],
+  "result": {
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "profile": "standard",
+  "kernel_freeze": false,
+  "manual_lock": false,
+  "auto_exit": true,
+  "reasons": [
+    "release-ready live evidence and confirmed soak are available"
+  ],
+  "components": {
+    "orchestrator": true,
+    "scheduler": true,
+    "task_queue": true,
+    "model_router": true,
+    "workspace": true,
+    "governance": true,
+    "observer": true,
+    "policy_contract": true,
+    "approval": true,
+    "security_review": true,
+    "experiments": true,
+    "github_learning": true,
+    "coordination": true,
+    "release_train": true,
+    "platform_generation": true
+  },
+  "task_auto_approve": false,
+  "model_router": {
+    "default_lane": "reasoning",
+    "fallback_lane": "strategic",
+    "local_lane_enabled": false
+  },
+  "updated_at": "2026-04-03T14:24:38.222369Z",
+  "updated_by": "codex"
+}

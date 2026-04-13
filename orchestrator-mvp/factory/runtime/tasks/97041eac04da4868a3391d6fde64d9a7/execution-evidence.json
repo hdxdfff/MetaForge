@@ -1,0 +1,28 @@
+{
+  "task_id": "97041eac04da4868a3391d6fde64d9a7",
+  "task_title": "Implement module agents.coder_agent",
+  "task_status": "timed_out",
+  "started_at": "2026-03-19T03:42:24.849251Z",
+  "updated_at": "2026-03-19T03:50:05.240468Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "97041eac04da4868a3391d6fde64d9a7-terminal-record",
+      "step_title": "Implement module agents.coder_agent",
+      "action": "task_terminal_record",
+      "ok": false,
+      "at": "2026-03-19T03:50:05.240468Z",
+      "status": "timed_out",
+      "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+      "error": null,
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ],
+  "result": {
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Executor Status Packet",
+  "type": "object",
+  "required": [
+    "task_id",
+    "executor_id",
+    "phase",
+    "progress",
+    "heartbeat_at"
+  ],
+  "properties": {
+    "task_id": {
+      "type": "string"
+    },
+    "executor_id": {
+      "type": "string"
+    },
+    "phase": {
+      "type": "string"
+    },
+    "progress": {
+      "type": "number"
+    },
+    "heartbeat_at": {
+      "type": "string"
+    },
+    "metadata": {
+      "type": "object"
+    }
+  }
+}

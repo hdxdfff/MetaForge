@@ -1,0 +1,39 @@
+{
+  "steps": [
+    {
+      "step_id": "task-terminal-record",
+      "step_title": "Implement the bounded change",
+      "action": "task_terminal_record",
+      "ok": false,
+      "at": "2026-04-02T19:14:43.278661Z",
+      "status": "failed",
+      "summary": "",
+      "error": null,
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result"
+    }
+  ],
+  "task_id": "b85245fc8e0141edb7808c2c18e14f56",
+  "task_title": "Implement the bounded change",
+  "task_status": "failed",
+  "completed": false,
+  "updated_at": "2026-04-02T19:15:45.065586Z",
+  "result": {
+    "state": "failed_execution",
+    "reason": "Invalid production plan: reviewer step 'Validate and release' lacks artifact input.",
+    "task_id": "b85245fc8e0141edb7808c2c18e14f56",
+    "repo_path": "D:\\codex\\orchestrator-mvp",
+    "execution_mode": "production",
+    "goal": "Implement the bounded change",
+    "cheap_calls_used": 0,
+    "cheap_chars_used": 0,
+    "escalation_count": 0,
+    "failed_steps": [],
+    "next_action_required": "Inspect execution evidence and rerun or replace the task; no approval hold was applied.",
+    "failure_pause_policy": "If a long task fails, allow at most one cheap-model-approved probe retry with bounded local cost. If cheap approval is missing, ambiguous, or the retry still fails, pause execution, return a structured error report, and wait for explicit core guidance.",
+    "pause_required": false,
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\b85245fc8e0141edb7808c2c18e14f56\\execution-evidence.json",
+    "execution_evidence_step_count": 1
+  }
+}

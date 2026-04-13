@@ -1,0 +1,7 @@
+fastapi==0.116.1
+uvicorn[standard]==0.35.0
+pydantic==2.11.7
+python-dotenv==1.1.1
+openai==1.107.2
+pywebview==5.1
+pyinstaller==6.16.0

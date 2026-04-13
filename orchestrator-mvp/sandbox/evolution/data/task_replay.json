@@ -1,0 +1,33 @@
+[
+  {
+    "task_id": "88e62486433846659c06c54a47c7a252",
+    "skill_id": "invalid_api_key_triage",
+    "replay_status": "ready",
+    "captured_at": "2026-03-09T06:29:53.764818Z"
+  },
+  {
+    "task_id": "79aef50ae6d74f4bb8802c9f4f33a1fc",
+    "skill_id": "completed_1804",
+    "replay_status": "ready",
+    "captured_at": "2026-03-09T06:29:53.764818Z"
+  },
+  {
+    "task_id": "6e73a98fefd94c17b10b85aa1ec5f554",
+    "skill_id": "completed_4642",
+    "replay_status": "ready",
+    "captured_at": "2026-03-09T06:29:53.764818Z"
+  },
+  {
+    "task_id": "5d36aab352db41d4bc890bd9b62cd322",
+    "skill_id": "completed_1554",
+    "replay_status": "ready",
+    "captured_at": "2026-03-09T06:29:53.764818Z"
+  },
+  {
+    "task_id": "smoke12345678",
+    "skill_id": "task_12345678",
+    "goal": "Implement cheap-first router smoke task",
+    "replay_status": "ready",
+    "captured_at": "2026-03-09T10:42:03.022085Z"
+  }
+]

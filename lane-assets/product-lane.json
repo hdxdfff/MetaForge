@@ -1,0 +1,29 @@
+﻿{
+    "system":  "MetaForge OS",
+    "contradiction":  "none_detected",
+    "ceo_priority":  "yellow",
+    "startup_files":  [
+                          "D:\\codex\\METAFORGE-OS.md",
+                          "D:\\codex\\METAFORGE_OS_CODEX_MULTI_SESSION_BOOTSTRAP.md",
+                          "D:\\codex\\METAFORGE_OS_ROLE_SPLIT.md",
+                          "D:\\codex\\METAFORGE_OS_CHORE_QUEUE_POLICY.md",
+                          "D:\\codex\\METAFORGE_OS_DISPATCH_TEMPLATE.md",
+                          "D:\\codex\\METAFORGE_OS_HIGH_THROUGHPUT_TASK_PACK.md"
+                      ],
+    "startup_command":  "D:\\codex\\codex-session-bootstrap.ps1",
+    "next_action":  "continue bounded dispatch with validation-first policy",
+    "lane":  "product-lane",
+    "authoritative_workspace":  "D:\\codex\\generated\\toy-os-demo",
+    "control_tier":  "ceo-review-required unless report-only",
+    "validation":  "product artifact must land in authoritative workspace with validation notes",
+    "focus":  [
+                  "ToyOS bounded delivery",
+                  "workspace integrity",
+                  "syscall/scheduler/paging/docs/tests",
+                  "throughput smoke and regression batch"
+              ],
+    "active_execution_roots":  [
+
+                               ],
+    "invalid_delivery_risk":  "low"
+}

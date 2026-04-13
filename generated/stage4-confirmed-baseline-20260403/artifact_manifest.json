@@ -1,0 +1,20 @@
+{
+  "artifact_id": "stage4-confirmed-baseline-20260403",
+  "type": "report",
+  "version": "0.1.0",
+  "artifact_path": "D:/codex/generated/stage4-confirmed-baseline-20260403",
+  "entrypoint": "run_demo.py",
+  "evidence": [
+    "build-report.json",
+    "test-report.json",
+    "execution-report.json"
+  ],
+  "buildable": true,
+  "runnable": true,
+  "test_passed": true,
+  "reproducible": true,
+  "category": "report",
+  "title": "Stage 4 confirmed baseline bundle",
+  "message": "Provide a runnable baseline snapshot bundle that can self-test and expose the frozen Stage 4 confirmed evidence.",
+  "sha256": "11aec14a91a4b95a3857f1e8722d31afb9c77a94f527806afd2503baa0b5737c"
+}

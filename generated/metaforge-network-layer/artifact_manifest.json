@@ -1,0 +1,20 @@
+{
+  "artifact_id": "metaforge-network-layer",
+  "type": "report",
+  "version": "0.1.0",
+  "artifact_path": "D:/codex/generated/metaforge-network-layer",
+  "entrypoint": "run_demo.py",
+  "evidence": [
+    "build-report.json",
+    "test-report.json",
+    "execution-report.json"
+  ],
+  "buildable": true,
+  "runnable": true,
+  "test_passed": true,
+  "reproducible": true,
+  "category": "report",
+  "title": "MetaForge network layer bundle",
+  "message": "Provide a runnable network-layer rollout bundle with self-test and audit evidence.",
+  "sha256": "eac534ae15f6effde14658ef7582235534c1eb66f5a79ce3bcdf27e041902ffe"
+}

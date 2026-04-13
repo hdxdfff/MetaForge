@@ -1,0 +1,137 @@
+{
+  "steps": [
+    {
+      "step_id": "86bc8f3c",
+      "step_title": "Understand task",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-03-20T09:45:30.269816Z",
+      "worker": "reviewer",
+      "phase": "understand",
+      "route_model": "gpt-5.4-pro",
+      "route_provider": "openai",
+      "output_ref": {
+        "artifact_id": "ctx_ef432b4187b8",
+        "task_id": "6ab98708d255408b84428b562e02d925",
+        "step_id": "86bc8f3c",
+        "channel": "reviewer-output",
+        "title": "Understand task output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\6ab98708d255408b84428b562e02d925\\86bc8f3c-reviewer-output-ctx_ef432b4187b8.txt",
+        "size_chars": 1345,
+        "line_count": 31,
+        "created_at": "2026-03-20T09:45:18.924445Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "understand",
+          "route_model": "gpt-5.4-pro",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 1345,
+        "line_count": 31,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "d8cb6c0d",
+      "step_title": "Draft solution",
+      "action": "coder_step",
+      "ok": true,
+      "at": "2026-03-20T09:46:33.439546Z",
+      "worker": "coder",
+      "phase": "draft",
+      "route_model": "gpt-5.4-pro",
+      "route_provider": "openai",
+      "output_ref": {
+        "artifact_id": "ctx_44270f032bee",
+        "task_id": "6ab98708d255408b84428b562e02d925",
+        "step_id": "d8cb6c0d",
+        "channel": "coder-output",
+        "title": "Draft solution output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\6ab98708d255408b84428b562e02d925\\d8cb6c0d-coder-output-ctx_44270f032bee.txt",
+        "size_chars": 1407,
+        "line_count": 25,
+        "created_at": "2026-03-20T09:46:12.033274Z",
+        "metadata": {
+          "worker": "coder",
+          "phase": "draft",
+          "route_model": "gpt-5.4-pro",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "coder-output",
+        "char_count": 1407,
+        "line_count": 25,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "fe27a3a1",
+      "step_title": "Execute validation",
+      "action": "shell_step",
+      "ok": false,
+      "at": "2026-03-20T09:47:46.937502Z",
+      "worker": "shell",
+      "phase": "execute",
+      "route_model": "deepseek-chat",
+      "route_provider": "runtime",
+      "error": "Shell command failed with code 1: ",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "error-output",
+        "char_count": 34,
+        "line_count": 1,
+        "stored_raw": false
+      },
+      "probe_attempts": 0
+    }
+  ],
+  "task_id": "6ab98708d255408b84428b562e02d925",
+  "task_title": "Define architecture contract for Restore ToyOS real artifact delivery",
+  "task_status": "failed",
+  "started_at": "2026-03-20T09:42:16.171450Z",
+  "updated_at": "2026-03-20T09:48:24.451458Z",
+  "completed": false,
+  "result": {
+    "state": "failed_execution",
+    "reason": "Shell command failed with code 1: ",
+    "task_id": "6ab98708d255408b84428b562e02d925",
+    "repo_path": "D:\\codex\\orchestrator-mvp",
+    "execution_mode": "production",
+    "goal": "Restore ToyOS real artifact delivery",
+    "cheap_calls_used": 3,
+    "cheap_chars_used": 2569,
+    "escalation_count": 2,
+    "failed_steps": [
+      {
+        "step_id": "fe27a3a1",
+        "title": "Execute validation",
+        "phase": "execute",
+        "worker": "shell",
+        "command": "python D:\\codex\\orchestrator-mvp\\tools\\read_only_syntax_check.py .",
+        "output": "Execute validation failure: 34 chars, 1 non-empty lines.\nHead:\n- Shell command failed with code 1:",
+        "output_ref": {},
+        "output_stats": {
+          "channel": "error-output",
+          "char_count": 34,
+          "line_count": 1,
+          "stored_raw": false
+        },
+        "probe_attempts": 0,
+        "max_probe_attempts": 1,
+        "last_diagnosis": "Diagnosis for Execute validation: 507 chars, 11 non-empty lines.\nHead:\n- Fallback\n- Assigned model: deepseek-chat\n- Reason: Default review and summarization stay on the cheap lane; escalate only for regression-heavy or architectural review.\n- Cheap review provider is not configured.\nTail:\n- - regression risks\n- - escalation triggers\n- Provider error: APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'cod...",
+        "last_diagnosis_ref": {}
+      }
+    ],
+    "next_action_required": "Inspect execution evidence and rerun or replace the task; no approval hold was applied.",
+    "failure_pause_policy": "If a long task fails, allow at most one cheap-model-approved probe retry with bounded local cost. If cheap approval is missing, ambiguous, or the retry still fails, pause execution, return a structured error report, and wait for explicit core guidance.",
+    "pause_required": false,
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\6ab98708d255408b84428b562e02d925\\execution-evidence.json",
+    "execution_evidence_step_count": 3
+  }
+}

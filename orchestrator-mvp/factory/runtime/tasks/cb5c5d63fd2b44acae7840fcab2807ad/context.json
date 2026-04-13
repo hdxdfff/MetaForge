@@ -1,0 +1,868 @@
+{
+  "task_id": "cb5c5d63fd2b44acae7840fcab2807ad",
+  "task_status": "failed",
+  "phase": "failed",
+  "updated_at": "2026-04-02T19:30:13.256782Z",
+  "heartbeat_at": "2026-04-02T19:30:13.256782Z",
+  "repo_path": "D:\\codex",
+  "goal": "Restore ToyOS real artifact delivery",
+  "goal_id": "goal_42e8cd07d0",
+  "graph_id": "graph_c9ae2e2b6e",
+  "node_id": "build_toolchain_repair",
+  "scheduled_by": "factory-daemon.replenisher",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\cb5c5d63fd2b44acae7840fcab2807ad",
+  "error": "Production evidence incomplete: fresh=1/3 missing=['generated/toy-os-demo/build-report.json', 'generated/toy-os-demo/build/build.log', 'generated/toy-os-demo/artifact.sha256'] stale=['generated/toy-os-demo/artifact_manifest.json']",
+  "title": "Repair ToyOS build and toolchain",
+  "prompt": "Repair the ToyOS build or toolchain break with the smallest safe patch, then refresh build-report evidence and note any remaining blockers.",
+  "scheduler_hint": {
+    "goal_primary": "Restore ToyOS real artifact delivery",
+    "goal_mode": "toyos_priority_mode",
+    "goal_target": "Restore ToyOS real artifact delivery",
+    "goal_id": "goal_42e8cd07d0",
+    "graph_id": "graph_c9ae2e2b6e",
+    "node_id": "build_toolchain_repair",
+    "node_title": "Repair ToyOS build and toolchain",
+    "task_type": "build_fix",
+    "queue_name": "build_test",
+    "verification_level": "L2",
+    "max_runtime_seconds": 2400,
+    "retry_limit": 1,
+    "rollback_rule": "mark_failed_and_requeue_split",
+    "template_id": "build_toolchain_repair",
+    "admission_mode": "normal",
+    "handling_mode": "toyos_replenishment",
+    "automation_source": "failure_backlog_automation"
+  },
+  "context_package": {},
+  "plan": [
+    {
+      "id": "c0788950",
+      "title": "Spawn decomposition subtasks",
+      "status": "completed",
+      "worker": "planner",
+      "phase": "decompose"
+    },
+    {
+      "id": "8e7fe671",
+      "title": "Wait for child task completion",
+      "status": "completed",
+      "worker": "planner",
+      "phase": "decompose"
+    },
+    {
+      "id": "2cd940f4",
+      "title": "Aggregate decomposition results",
+      "status": "completed",
+      "worker": "reviewer",
+      "phase": "verify"
+    }
+  ],
+  "verification_signals": [
+    {
+      "timestamp": "2026-04-02T19:14:03.444585Z",
+      "kind": "admission_accepted",
+      "success": true,
+      "task_id": "cb5c5d63fd2b44acae7840fcab2807ad",
+      "admission_lane": null,
+      "admission_reason": null,
+      "execution_mode": "production",
+      "queue_name": "build_test",
+      "task_type": "build_fix"
+    },
+    {
+      "timestamp": "2026-04-02T19:16:03.337947Z",
+      "kind": "decomposition_spawned",
+      "success": true,
+      "task_id": "cb5c5d63fd2b44acae7840fcab2807ad",
+      "child_task_count": 3,
+      "child_task_ids": [
+        "a3dad5dcc6ec44708b3bb35b099d9090",
+        "046cff11aa3a4c2c867f96abb602bf4f",
+        "f9c0f6ebc6c04cb5aa1d07aa68afd077"
+      ],
+      "dag": {
+        "shared_nodes": [
+          "Analyze the current state"
+        ],
+        "branch_nodes": [
+          "Implement the bounded change"
+        ],
+        "repair_nodes": [
+          "Validate the result"
+        ],
+        "optional_nodes": [],
+        "speculative_nodes": [],
+        "blocked_nodes": [],
+        "edges": [
+          {
+            "from": "Analyze the current state",
+            "to": "Implement the bounded change",
+            "kind": "branch"
+          },
+          {
+            "from": "Analyze the current state",
+            "to": "Validate the result",
+            "kind": "repair"
+          },
+          {
+            "from": "Implement the bounded change",
+            "to": "Validate the result",
+            "kind": "repair"
+          }
+        ],
+        "shared_dependency_group": "cb5c5d63fd2b44acae7840fcab2807ad",
+        "child_dependency_ids": {
+          "a3dad5dcc6ec44708b3bb35b099d9090": [],
+          "046cff11aa3a4c2c867f96abb602bf4f": [
+            "a3dad5dcc6ec44708b3bb35b099d9090"
+          ],
+          "f9c0f6ebc6c04cb5aa1d07aa68afd077": [
+            "a3dad5dcc6ec44708b3bb35b099d9090",
+            "046cff11aa3a4c2c867f96abb602bf4f"
+          ]
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-02T19:17:06.109884Z",
+      "kind": "step_completed",
+      "success": true,
+      "task_id": "cb5c5d63fd2b44acae7840fcab2807ad",
+      "step_id": "c0788950",
+      "step_title": "Spawn decomposition subtasks",
+      "worker": "planner",
+      "phase": "decompose",
+      "route_model": "internal-recovery",
+      "route_provider": "runtime",
+      "elapsed_ms": 135954,
+      "output_ref": {
+        "artifact_id": "ctx_fd5c6a2df93e",
+        "task_id": "cb5c5d63fd2b44acae7840fcab2807ad",
+        "step_id": "c0788950",
+        "channel": "planner-output",
+        "title": "Spawn decomposition subtasks output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\cb5c5d63fd2b44acae7840fcab2807ad\\c0788950-planner-output-ctx_fd5c6a2df93e.json",
+        "size_chars": 960,
+        "line_count": 34,
+        "created_at": "2026-04-02T19:16:51.639531Z",
+        "metadata": {
+          "worker": "planner",
+          "phase": "decompose",
+          "route_model": "internal-recovery",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 960,
+        "line_count": 34,
+        "stored_raw": true
+      }
+    },
+    {
+      "timestamp": "2026-04-02T19:25:12.970130Z",
+      "kind": "step_completed",
+      "success": true,
+      "task_id": "cb5c5d63fd2b44acae7840fcab2807ad",
+      "step_id": "8e7fe671",
+      "step_title": "Wait for child task completion",
+      "worker": "planner",
+      "phase": "decompose",
+      "route_model": "internal-recovery",
+      "route_provider": "runtime",
+      "elapsed_ms": 452952,
+      "output_ref": {
+        "artifact_id": "ctx_bb4926062767",
+        "task_id": "cb5c5d63fd2b44acae7840fcab2807ad",
+        "step_id": "8e7fe671",
+        "channel": "planner-output",
+        "title": "Wait for child task completion output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\cb5c5d63fd2b44acae7840fcab2807ad\\8e7fe671-planner-output-ctx_bb4926062767.json",
+        "size_chars": 13784,
+        "line_count": 230,
+        "created_at": "2026-04-02T19:24:17.543296Z",
+        "metadata": {
+          "worker": "planner",
+          "phase": "decompose",
+          "route_model": "internal-recovery",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 13784,
+        "line_count": 230,
+        "stored_raw": true
+      }
+    },
+    {
+      "timestamp": "2026-04-02T19:29:13.019200Z",
+      "kind": "step_completed",
+      "success": true,
+      "task_id": "cb5c5d63fd2b44acae7840fcab2807ad",
+      "step_id": "2cd940f4",
+      "step_title": "Aggregate decomposition results",
+      "worker": "reviewer",
+      "phase": "verify",
+      "route_model": "internal-recovery",
+      "route_provider": "runtime",
+      "elapsed_ms": 154547,
+      "output_ref": {
+        "artifact_id": "ctx_3735ba620ce1",
+        "task_id": "cb5c5d63fd2b44acae7840fcab2807ad",
+        "step_id": "2cd940f4",
+        "channel": "reviewer-output",
+        "title": "Aggregate decomposition results output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\cb5c5d63fd2b44acae7840fcab2807ad\\2cd940f4-reviewer-output-ctx_3735ba620ce1.json",
+        "size_chars": 1142,
+        "line_count": 35,
+        "created_at": "2026-04-02T19:28:49.015194Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "verify",
+          "route_model": "internal-recovery",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 1142,
+        "line_count": 35,
+        "stored_raw": true
+      }
+    }
+  ],
+  "verification_signal_count": 5,
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-02T19:14:03.444585Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "cb5c5d63fd2b44acae7840fcab2807ad",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "production",
+        "queue_name": "build_test",
+        "task_type": "build_fix"
+      },
+      {
+        "timestamp": "2026-04-02T19:16:03.337947Z",
+        "kind": "decomposition_spawned",
+        "success": true,
+        "task_id": "cb5c5d63fd2b44acae7840fcab2807ad",
+        "child_task_count": 3,
+        "child_task_ids": [
+          "a3dad5dcc6ec44708b3bb35b099d9090",
+          "046cff11aa3a4c2c867f96abb602bf4f",
+          "f9c0f6ebc6c04cb5aa1d07aa68afd077"
+        ],
+        "dag": {
+          "shared_nodes": [
+            "Analyze the current state"
+          ],
+          "branch_nodes": [
+            "Implement the bounded change"
+          ],
+          "repair_nodes": [
+            "Validate the result"
+          ],
+          "optional_nodes": [],
+          "speculative_nodes": [],
+          "blocked_nodes": [],
+          "edges": [
+            {
+              "from": "Analyze the current state",
+              "to": "Implement the bounded change",
+              "kind": "branch"
+            },
+            {
+              "from": "Analyze the current state",
+              "to": "Validate the result",
+              "kind": "repair"
+            },
+            {
+              "from": "Implement the bounded change",
+              "to": "Validate the result",
+              "kind": "repair"
+            }
+          ],
+          "shared_dependency_group": "cb5c5d63fd2b44acae7840fcab2807ad",
+          "child_dependency_ids": {
+            "a3dad5dcc6ec44708b3bb35b099d9090": [],
+            "046cff11aa3a4c2c867f96abb602bf4f": [
+              "a3dad5dcc6ec44708b3bb35b099d9090"
+            ],
+            "f9c0f6ebc6c04cb5aa1d07aa68afd077": [
+              "a3dad5dcc6ec44708b3bb35b099d9090",
+              "046cff11aa3a4c2c867f96abb602bf4f"
+            ]
+          }
+        }
+      },
+      {
+        "timestamp": "2026-04-02T19:17:06.109884Z",
+        "kind": "step_completed",
+        "success": true,
+        "task_id": "cb5c5d63fd2b44acae7840fcab2807ad",
+        "step_id": "c0788950",
+        "step_title": "Spawn decomposition subtasks",
+        "worker": "planner",
+        "phase": "decompose",
+        "route_model": "internal-recovery",
+        "route_provider": "runtime",
+        "elapsed_ms": 135954,
+        "output_ref": {
+          "artifact_id": "ctx_fd5c6a2df93e",
+          "task_id": "cb5c5d63fd2b44acae7840fcab2807ad",
+          "step_id": "c0788950",
+          "channel": "planner-output",
+          "title": "Spawn decomposition subtasks output",
+          "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\cb5c5d63fd2b44acae7840fcab2807ad\\c0788950-planner-output-ctx_fd5c6a2df93e.json",
+          "size_chars": 960,
+          "line_count": 34,
+          "created_at": "2026-04-02T19:16:51.639531Z",
+          "metadata": {
+            "worker": "planner",
+            "phase": "decompose",
+            "route_model": "internal-recovery",
+            "route_provider": "runtime"
+          }
+        },
+        "output_stats": {
+          "channel": "planner-output",
+          "char_count": 960,
+          "line_count": 34,
+          "stored_raw": true
+        }
+      },
+      {
+        "timestamp": "2026-04-02T19:25:12.970130Z",
+        "kind": "step_completed",
+        "success": true,
+        "task_id": "cb5c5d63fd2b44acae7840fcab2807ad",
+        "step_id": "8e7fe671",
+        "step_title": "Wait for child task completion",
+        "worker": "planner",
+        "phase": "decompose",
+        "route_model": "internal-recovery",
+        "route_provider": "runtime",
+        "elapsed_ms": 452952,
+        "output_ref": {
+          "artifact_id": "ctx_bb4926062767",
+          "task_id": "cb5c5d63fd2b44acae7840fcab2807ad",
+          "step_id": "8e7fe671",
+          "channel": "planner-output",
+          "title": "Wait for child task completion output",
+          "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\cb5c5d63fd2b44acae7840fcab2807ad\\8e7fe671-planner-output-ctx_bb4926062767.json",
+          "size_chars": 13784,
+          "line_count": 230,
+          "created_at": "2026-04-02T19:24:17.543296Z",
+          "metadata": {
+            "worker": "planner",
+            "phase": "decompose",
+            "route_model": "internal-recovery",
+            "route_provider": "runtime"
+          }
+        },
+        "output_stats": {
+          "channel": "planner-output",
+          "char_count": 13784,
+          "line_count": 230,
+          "stored_raw": true
+        }
+      },
+      {
+        "timestamp": "2026-04-02T19:29:13.019200Z",
+        "kind": "step_completed",
+        "success": true,
+        "task_id": "cb5c5d63fd2b44acae7840fcab2807ad",
+        "step_id": "2cd940f4",
+        "step_title": "Aggregate decomposition results",
+        "worker": "reviewer",
+        "phase": "verify",
+        "route_model": "internal-recovery",
+        "route_provider": "runtime",
+        "elapsed_ms": 154547,
+        "output_ref": {
+          "artifact_id": "ctx_3735ba620ce1",
+          "task_id": "cb5c5d63fd2b44acae7840fcab2807ad",
+          "step_id": "2cd940f4",
+          "channel": "reviewer-output",
+          "title": "Aggregate decomposition results output",
+          "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\cb5c5d63fd2b44acae7840fcab2807ad\\2cd940f4-reviewer-output-ctx_3735ba620ce1.json",
+          "size_chars": 1142,
+          "line_count": 35,
+          "created_at": "2026-04-02T19:28:49.015194Z",
+          "metadata": {
+            "worker": "reviewer",
+            "phase": "verify",
+            "route_model": "internal-recovery",
+            "route_provider": "runtime"
+          }
+        },
+        "output_stats": {
+          "channel": "reviewer-output",
+          "char_count": 1142,
+          "line_count": 35,
+          "stored_raw": true
+        }
+      }
+    ],
+    "decomposition": {
+      "summary": "Fallback decomposition for: Repair the ToyOS build or toolchain break with the smallest safe patch, then refresh build-report evidence and note any ",
+      "strategy": "bounded multi-layer split with analysis, execution, and verification branches",
+      "subtasks": [
+        {
+          "title": "Analyze the current state",
+          "prompt": "Inspect the current repository state and isolate the smallest workable slice for: Repair the ToyOS build or toolchain break with the smallest safe patch, then refresh build-report evidence and note any remaining blockers.",
+          "goal": "Identify the smallest viable slice",
+          "task_type": "report_refresh",
+          "path_kind": "shared",
+          "queue_name": "fastlane",
+          "verification_level": "L1",
+          "preferred_worker": "reviewer",
+          "execution_mode": "governance",
+          "execution_lane": "host-control",
+          "decompose_children": false,
+          "shared_dependency_group": "cb5c5d63fd2b44acae7840fcab2807ad",
+          "repair_for": null,
+          "inputs": [],
+          "outputs": [
+            "analysis note"
+          ],
+          "dependencies": [],
+          "acceptance_criteria": [
+            "The smallest feasible slice is identified."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        },
+        {
+          "title": "Implement the bounded change",
+          "prompt": "Make the smallest safe implementation or repair needed for: Repair the ToyOS build or toolchain break with the smallest safe patch, then refresh build-report evidence and note any remaining blockers.",
+          "goal": "Implement the bounded change",
+          "task_type": "build_fix",
+          "path_kind": "branch",
+          "queue_name": "build_test",
+          "verification_level": "L2",
+          "preferred_worker": "coder",
+          "execution_mode": "production",
+          "execution_lane": "vm-first",
+          "decompose_children": true,
+          "shared_dependency_group": "cb5c5d63fd2b44acae7840fcab2807ad",
+          "repair_for": null,
+          "inputs": [
+            "analysis note"
+          ],
+          "outputs": [
+            "bounded patch"
+          ],
+          "dependencies": [
+            "Analyze the current state"
+          ],
+          "acceptance_criteria": [
+            "A bounded implementation exists."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        },
+        {
+          "title": "Validate the result",
+          "prompt": "Run the narrowest useful validation for the bounded change: Repair the ToyOS build or toolchain break with the smallest safe patch, then refresh build-report evidence and note any remaining blockers.",
+          "goal": "Validate the change",
+          "task_type": "unit_test_run",
+          "path_kind": "repair",
+          "queue_name": "build_test",
+          "verification_level": "L2",
+          "preferred_worker": "docker",
+          "execution_mode": "production",
+          "execution_lane": "vm-first",
+          "decompose_children": false,
+          "shared_dependency_group": "cb5c5d63fd2b44acae7840fcab2807ad",
+          "repair_for": "Analyze the current state",
+          "inputs": [
+            "bounded patch"
+          ],
+          "outputs": [
+            "validation evidence"
+          ],
+          "dependencies": [
+            "Analyze the current state",
+            "Implement the bounded change"
+          ],
+          "acceptance_criteria": [
+            "Validation evidence is recorded."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        }
+      ],
+      "dag": {
+        "shared_nodes": [
+          "Analyze the current state"
+        ],
+        "branch_nodes": [
+          "Implement the bounded change"
+        ],
+        "repair_nodes": [
+          "Validate the result"
+        ],
+        "optional_nodes": [],
+        "speculative_nodes": [],
+        "blocked_nodes": [],
+        "edges": [
+          {
+            "from": "Analyze the current state",
+            "to": "Implement the bounded change",
+            "kind": "branch"
+          },
+          {
+            "from": "Analyze the current state",
+            "to": "Validate the result",
+            "kind": "repair"
+          },
+          {
+            "from": "Implement the bounded change",
+            "to": "Validate the result",
+            "kind": "repair"
+          }
+        ],
+        "shared_dependency_group": "cb5c5d63fd2b44acae7840fcab2807ad",
+        "child_dependency_ids": {
+          "a3dad5dcc6ec44708b3bb35b099d9090": [],
+          "046cff11aa3a4c2c867f96abb602bf4f": [
+            "a3dad5dcc6ec44708b3bb35b099d9090"
+          ],
+          "f9c0f6ebc6c04cb5aa1d07aa68afd077": [
+            "a3dad5dcc6ec44708b3bb35b099d9090",
+            "046cff11aa3a4c2c867f96abb602bf4f"
+          ]
+        }
+      },
+      "depth": 0,
+      "max_depth": 2,
+      "mode": "multi_layer",
+      "child_task_ids": [
+        "a3dad5dcc6ec44708b3bb35b099d9090",
+        "046cff11aa3a4c2c867f96abb602bf4f",
+        "f9c0f6ebc6c04cb5aa1d07aa68afd077"
+      ],
+      "child_tasks": [
+        {
+          "task_id": "a3dad5dcc6ec44708b3bb35b099d9090",
+          "title": "Analyze the current state",
+          "task_type": "report_refresh",
+          "execution_mode": "governance",
+          "depth": 1,
+          "path_kind": "shared"
+        },
+        {
+          "task_id": "046cff11aa3a4c2c867f96abb602bf4f",
+          "title": "Implement the bounded change",
+          "task_type": "exploration_intake",
+          "execution_mode": "research",
+          "depth": 1,
+          "path_kind": "branch"
+        },
+        {
+          "task_id": "f9c0f6ebc6c04cb5aa1d07aa68afd077",
+          "title": "Validate the result",
+          "task_type": "exploration_intake",
+          "execution_mode": "research",
+          "depth": 1,
+          "path_kind": "repair"
+        }
+      ],
+      "spawned_at": "2026-04-02T19:16:03.337947Z",
+      "child_statuses": {
+        "a3dad5dcc6ec44708b3bb35b099d9090": {
+          "status": "failed",
+          "updated_at": "2026-04-02T19:20:22.931743Z",
+          "result": {
+            "state": "failed_execution",
+            "reason": "Shell command failed with code 1: Traceback (most recent call last):\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 167, in <module>\r\n    raise SystemExit(main())\r\n                     ^^^^^^\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 141, in main\r\n    spec = json.loads(spec_path.read_text(encoding=\"utf-8\"))\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"pathlib.py\", line 1058, in read_text\r\n  File \"pathlib.py\", line 1044, in open\r\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\codex\\\\tools\\\\generic_qemu_smoke.json'",
+            "task_id": "a3dad5dcc6ec44708b3bb35b099d9090",
+            "repo_path": "D:\\codex",
+            "execution_mode": "governance",
+            "goal": "Identify the smallest viable slice",
+            "cheap_calls_used": 1,
+            "cheap_chars_used": 6795,
+            "escalation_count": 1,
+            "failed_steps": [
+              {
+                "step_id": "4efdfb43",
+                "title": "Boot ToyOS in QEMU",
+                "phase": "verify",
+                "worker": "docker",
+                "command": "\"D:\\codex\\tools\\python311-embed\\python.exe\" \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\" --spec \"D:\\codex\\tools\\generic_qemu_smoke.json\"",
+                "output": "Boot ToyOS in QEMU failure: 610 chars, 10 non-empty lines.\nHead:\n- Shell command failed with code 1: Traceback (most recent call last):\n- File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 167, in <module>\n- raise SystemExit(main())\n- ^^^^^^\nTail:\n- File \"pathlib.py\", line 1058, in read_text\n- File \"pathlib.py\", line 1044, in open\n- FileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\codex\\\\tools\\\\generic_qemu_smoke.json'\nRaw artifact: ctx_31d1007a21df",
+                "output_ref": {
+                  "artifact_id": "ctx_31d1007a21df",
+                  "task_id": "a3dad5dcc6ec44708b3bb35b099d9090",
+                  "step_id": "4efdfb43",
+                  "channel": "error-output",
+                  "title": "Boot ToyOS in QEMU failure",
+                  "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\a3dad5dcc6ec44708b3bb35b099d9090\\4efdfb43-error-output-ctx_31d1007a21df.txt",
+                  "size_chars": 610,
+                  "line_count": 10,
+                  "created_at": "2026-04-02T19:18:10.261267Z",
+                  "metadata": {
+                    "worker": "docker",
+                    "phase": "verify",
+                    "error": "Shell command failed with code 1: Traceback (most recent call last):\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 167, in <module>\r\n    raise SystemExit(main())\r\n                     ^^^^^^\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 141, in main\r\n    spec = json.loads(spec_path.read_text(encoding=\"utf-8\"))\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"pathlib.py\", line 1058, in read_text\r\n  File \"pathlib.py\", line 1044, in open\r\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\codex\\\\tools\\\\generic_qemu_smoke.json'"
+                  }
+                },
+                "output_stats": {
+                  "channel": "error-output",
+                  "char_count": 610,
+                  "line_count": 10,
+                  "stored_raw": true
+                },
+                "probe_attempts": 0,
+                "max_probe_attempts": 1,
+                "last_diagnosis": "Diagnosis for Boot ToyOS in QEMU: 914 chars, 30 non-empty lines.\nHead:\n- Cheap lane escalation triggered.\n- Original worker: reviewer\n- Escalation model: kimi-k2.5\n- Reason: Structured output validation failed for research/governance audit work.\nTail:\n- - next_action\n- Provider error: APITimeoutError: Request timed out.\n- Provider error: APITimeoutError: Request timed out.\nRaw artifact: ctx_0b08dd32ab88",
+                "last_diagnosis_ref": {
+                  "artifact_id": "ctx_0b08dd32ab88",
+                  "task_id": "a3dad5dcc6ec44708b3bb35b099d9090",
+                  "step_id": "4efdfb43",
+                  "channel": "diagnosis-output",
+                  "title": "Diagnosis for Boot ToyOS in QEMU",
+                  "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\a3dad5dcc6ec44708b3bb35b099d9090\\4efdfb43-diagnosis-output-ctx_0b08dd32ab88.txt",
+                  "size_chars": 914,
+                  "line_count": 30,
+                  "created_at": "2026-04-02T19:20:14.927743Z",
+                  "metadata": {
+                    "worker": "reviewer",
+                    "phase": "check",
+                    "route_model": "kimi-k2.5",
+                    "route_provider": "openai"
+                  }
+                }
+              }
+            ],
+            "next_action_required": "Inspect execution evidence and rerun or replace the task; no approval hold was applied.",
+            "failure_pause_policy": "If a long task fails, allow at most one cheap-model-approved probe retry with bounded local cost. If cheap approval is missing, ambiguous, or the retry still fails, pause execution, return a structured error report, and wait for explicit core guidance.",
+            "pause_required": false,
+            "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\a3dad5dcc6ec44708b3bb35b099d9090\\execution-evidence.json",
+            "execution_evidence_step_count": 2
+          }
+        },
+        "046cff11aa3a4c2c867f96abb602bf4f": {
+          "status": "failed",
+          "updated_at": "2026-04-02T19:20:18.331981Z",
+          "result": {
+            "state": "failed_execution",
+            "reason": "<asyncio.locks.Lock object at 0x000001FDBBCE3190 [unlocked, waiters:1]> is bound to a different event loop",
+            "task_id": "046cff11aa3a4c2c867f96abb602bf4f",
+            "repo_path": "D:\\codex",
+            "execution_mode": "research",
+            "goal": "Implement the bounded change",
+            "cheap_calls_used": 1,
+            "cheap_chars_used": 4648,
+            "escalation_count": 1,
+            "failed_steps": [
+              {
+                "step_id": "eb42034c",
+                "title": "Spawn decomposition subtasks",
+                "phase": "decompose",
+                "worker": "planner",
+                "command": "internal://decomposition/spawn-subtasks",
+                "output": "Spawn decomposition subtasks failure: 106 chars, 1 non-empty lines.\nHead:\n- <asyncio.locks.Lock object at 0x000001FDBBCE3190 [unlocked, waiters:1]> is bound to a different event loop",
+                "output_ref": {},
+                "output_stats": {
+                  "channel": "error-output",
+                  "char_count": 106,
+                  "line_count": 1,
+                  "stored_raw": false
+                },
+                "probe_attempts": 0,
+                "max_probe_attempts": 1,
+                "last_diagnosis": "Diagnosis for Spawn decomposition subtasks: 1392 chars, 36 non-empty lines.\nHead:\n- Cheap lane escalation triggered.\n- Original worker: reviewer\n- Escalation model: kimi-k2.5\n- Reason: Cheap worker fallback or loop detected.\nTail:\n- - next_action\n- Provider error: APITimeoutError: Request timed out.\n- Provider error: APITimeoutError: Request timed out.\nRaw artifact: ctx_d82b4efcbc9e",
+                "last_diagnosis_ref": {
+                  "artifact_id": "ctx_d82b4efcbc9e",
+                  "task_id": "046cff11aa3a4c2c867f96abb602bf4f",
+                  "step_id": "eb42034c",
+                  "channel": "diagnosis-output",
+                  "title": "Diagnosis for Spawn decomposition subtasks",
+                  "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\046cff11aa3a4c2c867f96abb602bf4f\\eb42034c-diagnosis-output-ctx_d82b4efcbc9e.txt",
+                  "size_chars": 1392,
+                  "line_count": 36,
+                  "created_at": "2026-04-02T19:20:11.281099Z",
+                  "metadata": {
+                    "worker": "reviewer",
+                    "phase": "check",
+                    "route_model": "kimi-k2.5",
+                    "route_provider": "openai"
+                  }
+                }
+              }
+            ],
+            "next_action_required": "Inspect execution evidence and rerun or replace the task; no approval hold was applied.",
+            "failure_pause_policy": "If a long task fails, allow at most one cheap-model-approved probe retry with bounded local cost. If cheap approval is missing, ambiguous, or the retry still fails, pause execution, return a structured error report, and wait for explicit core guidance.",
+            "pause_required": false,
+            "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\046cff11aa3a4c2c867f96abb602bf4f\\execution-evidence.json",
+            "execution_evidence_step_count": 3
+          }
+        },
+        "f9c0f6ebc6c04cb5aa1d07aa68afd077": {
+          "status": "failed",
+          "updated_at": "2026-04-02T19:21:06.497300Z",
+          "result": {
+            "verification_signals": [
+              {
+                "timestamp": "2026-04-02T19:15:35.797042Z",
+                "kind": "admission_diverted",
+                "success": true,
+                "task_id": "f9c0f6ebc6c04cb5aa1d07aa68afd077",
+                "admission_lane": "exploration",
+                "admission_reason": "artifact_spec_missing",
+                "execution_mode": "research",
+                "queue_name": "exploration",
+                "task_type": "exploration_intake"
+              },
+              {
+                "timestamp": "2026-04-02T19:18:29.876889Z",
+                "kind": "step_completed",
+                "success": true,
+                "task_id": "f9c0f6ebc6c04cb5aa1d07aa68afd077",
+                "step_id": "3800d045",
+                "step_title": "Build Toy OS baseline",
+                "worker": "docker",
+                "phase": "execute",
+                "route_model": "deepseek-chat",
+                "route_provider": "runtime",
+                "elapsed_ms": 37609,
+                "output_ref": {
+                  "artifact_id": "ctx_6302b013ed54",
+                  "task_id": "f9c0f6ebc6c04cb5aa1d07aa68afd077",
+                  "step_id": "3800d045",
+                  "channel": "docker-output",
+                  "title": "Build Toy OS baseline output",
+                  "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\f9c0f6ebc6c04cb5aa1d07aa68afd077\\3800d045-docker-output-ctx_6302b013ed54.txt",
+                  "size_chars": 383,
+                  "line_count": 12,
+                  "created_at": "2026-04-02T19:18:19.975594Z",
+                  "metadata": {
+                    "worker": "docker",
+                    "phase": "execute",
+                    "route_model": "deepseek-chat",
+                    "route_provider": "runtime"
+                  }
+                },
+                "output_stats": {
+                  "channel": "docker-output",
+                  "char_count": 383,
+                  "line_count": 12,
+                  "stored_raw": true
+                }
+              },
+              {
+                "timestamp": "2026-04-02T19:19:01.135721Z",
+                "kind": "step_failed",
+                "success": false,
+                "task_id": "f9c0f6ebc6c04cb5aa1d07aa68afd077",
+                "step_id": "bd85fd2e",
+                "step_title": "Boot ToyOS in QEMU",
+                "worker": "docker",
+                "phase": "verify",
+                "route_model": "deepseek-chat",
+                "route_provider": "runtime",
+                "elapsed_ms": 16687,
+                "error": "Shell command failed with code 1: Traceback (most recent call last):\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 167, in <module>\r\n    raise SystemExit(main())\r\n                     ^^^^^^\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 141, in main\r\n    spec = json.loads(spec_path.read_text(encoding=\"utf-8\"))\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"pathlib.py\", line 1058, in read_text\r\n  File \"pathlib.py\", line 1044, in open\r\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\codex\\\\tools\\\\generic_qemu_smoke.json'",
+                "output_ref": {
+                  "artifact_id": "ctx_f0d6997e2c09",
+                  "task_id": "f9c0f6ebc6c04cb5aa1d07aa68afd077",
+                  "step_id": "bd85fd2e",
+                  "channel": "error-output",
+                  "title": "Boot ToyOS in QEMU failure",
+                  "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\f9c0f6ebc6c04cb5aa1d07aa68afd077\\bd85fd2e-error-output-ctx_f0d6997e2c09.txt",
+                  "size_chars": 610,
+                  "line_count": 10,
+                  "created_at": "2026-04-02T19:18:54.431119Z",
+                  "metadata": {
+                    "worker": "docker",
+                    "phase": "verify",
+                    "error": "Shell command failed with code 1: Traceback (most recent call last):\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 167, in <module>\r\n    raise SystemExit(main())\r\n                     ^^^^^^\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 141, in main\r\n    spec = json.loads(spec_path.read_text(encoding=\"utf-8\"))\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"pathlib.py\", line 1058, in read_text\r\n  File \"pathlib.py\", line 1044, in open\r\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\codex\\\\tools\\\\generic_qemu_smoke.json'"
+                  }
+                },
+                "output_stats": {
+                  "channel": "error-output",
+                  "char_count": 610,
+                  "line_count": 10,
+                  "stored_raw": true
+                }
+              }
+            ]
+          }
+        }
+      },
+      "wait_completed_at": "2026-04-02T19:23:27.509251Z",
+      "wait_timed_out": false,
+      "child_results": [
+        {
+          "task_id": "a3dad5dcc6ec44708b3bb35b099d9090",
+          "title": "Analyze the current state",
+          "status": "failed",
+          "task_type": "report_refresh",
+          "execution_mode": "governance",
+          "summary": null,
+          "delivery_state": null
+        },
+        {
+          "task_id": "046cff11aa3a4c2c867f96abb602bf4f",
+          "title": "Implement the bounded change",
+          "status": "failed",
+          "task_type": "exploration_intake",
+          "execution_mode": "research",
+          "summary": null,
+          "delivery_state": null
+        },
+        {
+          "task_id": "f9c0f6ebc6c04cb5aa1d07aa68afd077",
+          "title": "Validate the result",
+          "status": "failed",
+          "task_type": "exploration_intake",
+          "execution_mode": "research",
+          "summary": null,
+          "delivery_state": null
+        }
+      ],
+      "aggregated_at": "2026-04-02T19:27:54.758871Z",
+      "all_children_terminal": true,
+      "all_children_passed": false
+    },
+    "decomposition_summary": "bounded multi-layer split with analysis, execution, and verification branches",
+    "decomposition_child_count": 3,
+    "decomposition_child_results": [
+      {
+        "task_id": "a3dad5dcc6ec44708b3bb35b099d9090",
+        "title": "Analyze the current state",
+        "status": "failed",
+        "task_type": "report_refresh",
+        "execution_mode": "governance",
+        "summary": null,
+        "delivery_state": null
+      },
+      {
+        "task_id": "046cff11aa3a4c2c867f96abb602bf4f",
+        "title": "Implement the bounded change",
+        "status": "failed",
+        "task_type": "exploration_intake",
+        "execution_mode": "research",
+        "summary": null,
+        "delivery_state": null
+      },
+      {
+        "task_id": "f9c0f6ebc6c04cb5aa1d07aa68afd077",
+        "title": "Validate the result",
+        "status": "failed",
+        "task_type": "exploration_intake",
+        "execution_mode": "research",
+        "summary": null,
+        "delivery_state": null
+      }
+    ]
+  }
+}

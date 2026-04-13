@@ -1,0 +1,28 @@
+{
+  "task_id": "73a9c8f62a9e4a1db9f36fc3a12d7a7a",
+  "task_title": "Coordinate cross-project impact for Strengthen agent orchestration capability",
+  "task_status": "timed_out",
+  "started_at": "2026-03-19T13:52:58.951120Z",
+  "updated_at": "2026-03-19T14:00:04.807740Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "73a9c8f62a9e4a1db9f36fc3a12d7a7a-terminal-record",
+      "step_title": "Coordinate cross-project impact for Strengthen agent orchestration capability",
+      "action": "task_terminal_record",
+      "ok": false,
+      "at": "2026-03-19T14:00:04.807740Z",
+      "status": "timed_out",
+      "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+      "error": null,
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ],
+  "result": {
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

@@ -1,0 +1,760 @@
+{
+  "task_id": "df6ddfeb7d574e15828ac9da6e78f428",
+  "task_status": "failed",
+  "phase": "failed",
+  "updated_at": "2026-03-21T15:28:04.200171Z",
+  "heartbeat_at": "2026-03-21T15:28:04.200171Z",
+  "repo_path": "D:\\codex\\orchestrator-mvp",
+  "goal": "Expand tool extension coverage",
+  "goal_id": "goal_b3a4810042",
+  "graph_id": "graph_53fa2f6666",
+  "node_id": "bootstrap_build",
+  "scheduled_by": "runtime.scheduler",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\df6ddfeb7d574e15828ac9da6e78f428",
+  "error": "Shell command failed with code 1: Traceback (most recent call last):\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 6, in <module>\r\n    from tools.io_utils import atomic_write_json\r\nModuleNotFoundError: No module named 'tools'",
+  "title": "Build current runnable baseline for Expand tool extension coverage",
+  "prompt": "Run the current build path for Expand tool extension coverage first and refresh the earliest runnable build outputs and logs before any architecture review.\n\nRetry chain: previous attempt failed with terminal_status=failed. Repair the failure, keep the same ToyOS mainline goal moving, and rerun the delivery path before claiming completion.",
+  "scheduler_hint": {
+    "goal_id": "goal_b3a4810042",
+    "graph_id": "graph_53fa2f6666",
+    "node_id": "bootstrap_build",
+    "goal_target": "Expand tool extension coverage",
+    "node_title": "Build current runnable baseline for Expand tool extension coverage",
+    "selection_reason": "role-default:ops->docker+team-owner:infrastructure_team->docker",
+    "worker_success_rate": 0.105,
+    "skill_matches": [
+      "task_88f28b27",
+      "completed_1804",
+      "completed_1554",
+      "task_12345678",
+      "task_888601da"
+    ],
+    "scheduled_by": "runtime.scheduler",
+    "required_artifacts": [
+      "docker-compose.app.yml",
+      "deploy-template.yml",
+      "Dockerfile",
+      "tools/ai_testing_compat.py",
+      "tools/artifact_learning.py",
+      "tools/autonomy_state.py",
+      "tools/binary_classification_lab_runner.py",
+      "tools/brain_snapshot.py",
+      "tools/db_runtime_check.py",
+      "tools/execution_trace.py",
+      "tools/factory_event_log.py"
+    ],
+    "min_fresh_artifacts": 3,
+    "artifact_spec": {
+      "artifact_id": "5ef79376ec7549cf9640390490be96fa",
+      "artifact_type": "software_component",
+      "type": "software_component",
+      "deliverables": [
+        "source_code",
+        "build_script",
+        "build_log",
+        "binary_artifact",
+        "deploy_bundle"
+      ],
+      "expected_outputs": [
+        "source_code",
+        "build_script",
+        "build_log",
+        "binary_artifact",
+        "deploy_bundle"
+      ],
+      "required_artifacts": [
+        "docker-compose.app.yml",
+        "deploy-template.yml",
+        "Dockerfile",
+        "tools/ai_testing_compat.py",
+        "tools/artifact_learning.py",
+        "tools/autonomy_state.py",
+        "tools/binary_classification_lab_runner.py",
+        "tools/brain_snapshot.py",
+        "tools/db_runtime_check.py",
+        "tools/execution_trace.py",
+        "tools/factory_event_log.py"
+      ],
+      "evidence": [],
+      "verification": {
+        "build_required": true,
+        "tests_required": true
+      },
+      "registry": "artifact_registry",
+      "test_command": "pytest",
+      "min_fresh_artifacts": 3
+    },
+    "execution_mode": "production",
+    "execution_lane": "host-control",
+    "worker_vm_preferred": false,
+    "module_focus": [
+      "tools.ai_testing_compat",
+      "tools.artifact_learning",
+      "tools.autonomy_state",
+      "tools.binary_classification_lab_runner",
+      "tools.brain_snapshot",
+      "tools.db_runtime_check",
+      "tools.execution_trace",
+      "tools.factory_event_log"
+    ],
+    "owner_teams": [
+      "infrastructure_team"
+    ],
+    "module_ownership": {
+      "module_focus": [
+        "tools.ai_testing_compat",
+        "tools.artifact_learning",
+        "tools.autonomy_state",
+        "tools.binary_classification_lab_runner",
+        "tools.brain_snapshot",
+        "tools.db_runtime_check",
+        "tools.execution_trace",
+        "tools.factory_event_log"
+      ],
+      "owner_teams": [
+        "infrastructure_team"
+      ],
+      "ownership": [
+        {
+          "module": "tools.ai_testing_compat",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified"
+        },
+        {
+          "module": "tools.artifact_learning",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified"
+        },
+        {
+          "module": "tools.autonomy_state",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified"
+        },
+        {
+          "module": "tools.binary_classification_lab_runner",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified"
+        },
+        {
+          "module": "tools.brain_snapshot",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified"
+        },
+        {
+          "module": "tools.db_runtime_check",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified"
+        },
+        {
+          "module": "tools.execution_trace",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified"
+        },
+        {
+          "module": "tools.factory_event_log",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified"
+        }
+      ]
+    },
+    "patch_required": false,
+    "patch_target_teams": [
+      "infrastructure_team"
+    ],
+    "factory_pool": "production",
+    "factory_priority": "P2",
+    "priority_class": "capability-building",
+    "release_tier": "normal",
+    "assigned_department": "engineering_department",
+    "task_heartbeat_at": "2026-03-21T15:14:02.905183Z",
+    "timeslice_seconds": 60,
+    "effective_priority": 2.9202,
+    "priority_components": {
+      "goal_weight": 0.6166,
+      "urgency": 1.0,
+      "stagnation_penalty": 0.0831,
+      "resource_bonus": 0.0105,
+      "priority_bonus": 0.1,
+      "pool_bonus": 0.18,
+      "release_bonus": 0.04,
+      "artifact_stage_bonus": 0.35,
+      "delivery_bonus": 0.22,
+      "first_artifact_bonus": 0.32,
+      "focus_bonus": 0.0,
+      "priority_band": "P2",
+      "factory_pool": "production",
+      "release_tier": "normal",
+      "effective_priority": 2.9202
+    },
+    "focus_mode": false,
+    "checkpoint_hint": {
+      "path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\bootstrap_build",
+      "mode": "task-directory"
+    },
+    "scheduler_reason": "priority=P2 pool=production tier=normal goal_weight=0.62 urgency=1.00 aging=0.08 resource=0.01 artifact_stage=0.35 delivery=0.22 first_artifact=0.32 focus=0.00",
+    "retry_count": 1,
+    "retry_mode": "same_goal_repair",
+    "last_failure_task_id": "267de5c8c4644714ae187554a4607483",
+    "last_failure_summary": "terminal_status=failed",
+    "layers": [
+      "unclassified"
+    ],
+    "graph_matches": [
+      {
+        "module": "tools.ai_testing_compat",
+        "owner_team": "infrastructure_team",
+        "owner": "ops",
+        "layer": "unclassified",
+        "dependency_count": 0,
+        "dependents": 8,
+        "internal_imports": []
+      },
+      {
+        "module": "tools.artifact_learning",
+        "owner_team": "infrastructure_team",
+        "owner": "ops",
+        "layer": "unclassified",
+        "dependency_count": 0,
+        "dependents": 1,
+        "internal_imports": []
+      },
+      {
+        "module": "tools.autonomy_state",
+        "owner_team": "infrastructure_team",
+        "owner": "ops",
+        "layer": "unclassified",
+        "dependency_count": 0,
+        "dependents": 4,
+        "internal_imports": []
+      },
+      {
+        "module": "tools.binary_classification_lab_runner",
+        "owner_team": "infrastructure_team",
+        "owner": "ops",
+        "layer": "unclassified",
+        "dependency_count": 0,
+        "dependents": 1,
+        "internal_imports": []
+      },
+      {
+        "module": "tools.brain_snapshot",
+        "owner_team": "infrastructure_team",
+        "owner": "ops",
+        "layer": "unclassified",
+        "dependency_count": 0,
+        "dependents": 0,
+        "internal_imports": []
+      }
+    ],
+    "strategy_applied": false,
+    "strategy_explored": false,
+    "strategy_reason": "no_strong_pattern",
+    "strategy_revision": 2464
+  },
+  "context_package": {
+    "task": "Expand tool extension coverage",
+    "task_type": "implementation",
+    "repo_path": "D:\\codex\\orchestrator-mvp",
+    "module_focus": [
+      "tools.ai_testing_compat",
+      "tools.artifact_learning",
+      "tools.autonomy_state",
+      "tools.binary_classification_lab_runner",
+      "tools.brain_snapshot"
+    ],
+    "dependency_modules": [],
+    "owner_teams": [
+      "infrastructure_team"
+    ],
+    "layers": [
+      "unclassified"
+    ],
+    "project_context": {},
+    "knowledge_hints": {
+      "preferred_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension",
+        "kv_cache_manager",
+        "local_llm_runner",
+        "token_streaming"
+      ],
+      "preferred_workers": [
+        "reviewer",
+        "coder",
+        "supervisor"
+      ],
+      "repo_learning": {
+        "updated_at": "2026-03-21T15:08:48.442952Z",
+        "embedding": {
+          "provider": "local",
+          "model": "BAAI/bge-small-en-v1.5",
+          "dimensions": 128,
+          "backend": "hashed-local",
+          "ready": true
+        },
+        "graph_modules": 162,
+        "chunk_count": 144,
+        "top_modules": [
+          {
+            "module": "tools.brain_loop",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\brain_loop.py"
+          },
+          {
+            "module": "tools.factory_daemon",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\factory_daemon.py"
+          },
+          {
+            "module": "app.orchestrator",
+            "layer": "unclassified",
+            "owner_team": "backend_team",
+            "path": "D:\\codex\\orchestrator-mvp\\app\\orchestrator.py"
+          },
+          {
+            "module": "tools.meta_factory_control",
+            "layer": "architecture_engine",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\meta_factory_control.py"
+          },
+          {
+            "module": "tools.decision_engine",
+            "layer": "task_graph_planner",
+            "owner_team": "architecture_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\decision_engine.py"
+          },
+          {
+            "module": "app.main",
+            "layer": "unclassified",
+            "owner_team": "backend_team",
+            "path": "D:\\codex\\orchestrator-mvp\\app\\main.py"
+          },
+          {
+            "module": "tools.verification_engine",
+            "layer": "verification",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\verification_engine.py"
+          },
+          {
+            "module": "tools.taskgraph_compiler",
+            "layer": "architecture_engine",
+            "owner_team": "architecture_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\taskgraph_compiler.py"
+          },
+          {
+            "module": "app.worker_adapters",
+            "layer": "unclassified",
+            "owner_team": "backend_team",
+            "path": "D:\\codex\\orchestrator-mvp\\app\\worker_adapters.py"
+          },
+          {
+            "module": "tools.change_request_analyzer",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\change_request_analyzer.py"
+          },
+          {
+            "module": "tools.factory_task_engine",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\factory_task_engine.py"
+          },
+          {
+            "module": "tools.company_os",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\company_os.py"
+          }
+        ],
+        "learned_repositories": [
+          {
+            "repo_id": "gh-dc17f0f4fb",
+            "full_name": "Significant-Gravitas/AutoGPT",
+            "local_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+            "language_mix": [
+              {
+                "language": ".json",
+                "files": 1076
+              },
+              {
+                "language": "Python",
+                "files": 914
+              },
+              {
+                "language": "TypeScript",
+                "files": 911
+              },
+              {
+                "language": "Markdown",
+                "files": 320
+              },
+              {
+                "language": ".yml",
+                "files": 43
+              },
+              {
+                "language": ".yaml",
+                "files": 23
+              }
+            ],
+            "key_files": [
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\README.md"
+            ],
+            "sampled_files": [
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\docs\\integrations\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\classic\\forge\\forge\\components\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\backend\\load-tests\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\classic\\original_autogpt\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\frontend\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\frontend\\package.json",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\README.md"
+            ],
+            "capabilities": [
+              "local_llm_runner",
+              "token_streaming",
+              "kv_cache_manager",
+              "agent_orchestration",
+              "tool_execution",
+              "workflow_planning"
+            ],
+            "architecture_summary": "# AutoGPT: Build, Deploy, and Run AI Agents\n\n[![Discord Follow](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscord.com%2Fapi%2Finvites%2Fautogpt%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&label=total%20members&logo=discord&logoColor=white&color=7289da)](https://discord.gg/autogpt) &ensp;\n[![Twitter Follow](https://img.shields.io/twitter/follow/Auto_GPT?style=social)](https://twitter.com/Auto_GPT) &ensp;\n\n<!-- Keep these links. Translations will automatically update with the README. -->\n[Deutsch](https://zdoc.app/de/Significant-Gravitas/AutoGPT) | \n[Español](https:",
+            "experiment_plan": {
+              "sandbox_required": true,
+              "recommended_commands": [],
+              "can_run_without_dependency_install": false
+            },
+            "chunk_count": 24
+          }
+        ],
+        "learned_repository_count": 1,
+        "extracted_capabilities": [
+          "agent_orchestration",
+          "kv_cache_manager",
+          "local_llm_runner",
+          "token_streaming",
+          "tool_execution",
+          "workflow_planning"
+        ],
+        "github_learning": {
+          "updated_at": "2026-03-21T15:08:48.442952Z",
+          "enabled": true,
+          "topics": [
+            "agent",
+            "llm",
+            "compiler",
+            "kernel",
+            "robotics",
+            "distributed-system",
+            "inference"
+          ],
+          "languages": [
+            "Python",
+            "TypeScript",
+            "Rust",
+            "C++",
+            "C",
+            "Go"
+          ],
+          "managed_repo_count": 10,
+          "ready_repo_count": 1,
+          "candidate_repo_count": 9,
+          "scan_candidate_count": 10,
+          "top_candidates": [
+            {
+              "full_name": "langchain-ai/langchain",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\langchain-ai-langchain",
+              "score": 41262.1142,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "ggerganov/llama.cpp",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\ggerganov-llama.cpp",
+              "score": 30857.5689,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "OpenInterpreter/open-interpreter",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\OpenInterpreter-open-interpreter",
+              "score": 23252.3854,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "microsoft/autogen",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\microsoft-autogen",
+              "score": 16454.9498,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "vllm-project/vllm",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\vllm-project-vllm",
+              "score": 15260.6594,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "ray-project/ray",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\ray-project-ray",
+              "score": 14451.3379,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "crewAIInc/crewAI",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\crewAIInc-crewAI",
+              "score": 12846.5735,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "dask/dask",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\dask-dask",
+              "score": 5243.0283,
+              "learning_status": "candidate"
+            }
+          ]
+        }
+      }
+    },
+    "dialogue_hints": {
+      "active_handoff": {
+        "session_id": "asset-20260314-071552",
+        "source": "metaforge-assetize",
+        "title": "MetaForge dialogue asset 20260314-071552",
+        "workspace": "D:\\codex",
+        "summary": "continue bounded dispatch with validation-first policy",
+        "topics": [
+          "dialogue-compaction",
+          "metaforge-handoff"
+        ],
+        "constraints": [
+          "explicit validation notes required for all delivery claims"
+        ],
+        "decisions": [
+          "continue bounded dispatch with validation-first policy"
+        ],
+        "tags": [],
+        "artifacts": [
+          "D:\\codex\\dialogue-assets\\dialogue-memory-20260314-071552.json",
+          "D:\\codex\\dialogue-assets\\dialogue-handoff-20260314-071552.json",
+          "D:\\codex\\dialogue-assets\\dialogue-asset-note-20260314-071552.md"
+        ],
+        "message_count": 0,
+        "last_user_message": "",
+        "last_assistant_message": "",
+        "updated_at": "2026-03-13T23:15:52.993887Z",
+        "created_at": "2026-03-13T23:15:52.993887Z"
+      },
+      "recent_topics": [
+        "dialogue-compaction",
+        "metaforge-handoff",
+        "codex-memory",
+        "metaforge"
+      ],
+      "shared_constraints": [
+        "explicit validation notes required for all delivery claims",
+        "Explicit validation is required before claiming delivery."
+      ],
+      "recent_decisions": [
+        "continue bounded dispatch with validation-first policy",
+        "Use local dialogue ledger as the shared memory bridge."
+      ],
+      "recent_sessions": [
+        {
+          "session_id": "asset-20260314-071552",
+          "source": "metaforge-assetize",
+          "title": "MetaForge dialogue asset 20260314-071552",
+          "workspace": "D:\\codex",
+          "summary": "continue bounded dispatch with validation-first policy",
+          "topics": [
+            "dialogue-compaction",
+            "metaforge-handoff"
+          ],
+          "constraints": [
+            "explicit validation notes required for all delivery claims"
+          ],
+          "decisions": [
+            "continue bounded dispatch with validation-first policy"
+          ],
+          "tags": [],
+          "artifacts": [
+            "D:\\codex\\dialogue-assets\\dialogue-memory-20260314-071552.json",
+            "D:\\codex\\dialogue-assets\\dialogue-handoff-20260314-071552.json",
+            "D:\\codex\\dialogue-assets\\dialogue-asset-note-20260314-071552.md"
+          ],
+          "message_count": 0,
+          "last_user_message": "",
+          "last_assistant_message": "",
+          "updated_at": "2026-03-13T23:15:52.993887Z",
+          "created_at": "2026-03-13T23:15:52.993887Z"
+        },
+        {
+          "session_id": "asset-20260314-061947",
+          "source": "metaforge-assetize",
+          "title": "MetaForge dialogue asset 20260314-061947",
+          "workspace": "D:\\codex",
+          "summary": "continue bounded dispatch with validation-first policy",
+          "topics": [
+            "dialogue-compaction",
+            "metaforge-handoff"
+          ],
+          "constraints": [
+            "explicit validation notes required for all delivery claims"
+          ],
+          "decisions": [
+            "continue bounded dispatch with validation-first policy"
+          ],
+          "tags": [],
+          "artifacts": [
+            "D:\\codex\\dialogue-assets\\dialogue-memory-20260314-061947.json",
+            "D:\\codex\\dialogue-assets\\dialogue-handoff-20260314-061947.json",
+            "D:\\codex\\dialogue-assets\\dialogue-asset-note-20260314-061947.md"
+          ],
+          "message_count": 0,
+          "last_user_message": "",
+          "last_assistant_message": "",
+          "updated_at": "2026-03-13T22:19:48.421529Z",
+          "created_at": "2026-03-13T22:19:48.421529Z"
+        },
+        {
+          "session_id": "codex-shared-memory-20260314",
+          "source": "codex",
+          "title": "Codex MetaForge shared memory rollout",
+          "workspace": "D:\\codex",
+          "summary": "建立 Codex 本地对话记忆并接入 MetaForge 共享 memory snapshot。",
+          "topics": [
+            "codex-memory",
+            "metaforge"
+          ],
+          "constraints": [
+            "Explicit validation is required before claiming delivery."
+          ],
+          "decisions": [
+            "Use local dialogue ledger as the shared memory bridge."
+          ],
+          "tags": [],
+          "artifacts": [],
+          "message_count": 2,
+          "last_user_message": "现在要求将codex的上下文建立本地储存记忆机制 实现codex所有对话与MetaForge系统共享",
+          "last_assistant_message": "基于现有 memory/context 框架建立本地共享对话记忆，并将其接入 MetaForge snapshot 与 context package。",
+          "updated_at": "2026-03-13T22:16:20.602058Z",
+          "created_at": "2026-03-13T22:16:20.602058Z"
+        }
+      ]
+    },
+    "strategy": {
+      "applied": false,
+      "explored": false,
+      "reason": "no_strong_pattern",
+      "pattern_id": null,
+      "pattern_score": null,
+      "preferred_worker": null,
+      "tools_used": [],
+      "tool_actions": [],
+      "structure_summary": null,
+      "memory_revision": 2464,
+      "hint_lines": [],
+      "exploration_ratio": 0.2,
+      "candidate_count": 0
+    },
+    "verification_scope": {
+      "modules": [
+        "tools.ai_testing_compat",
+        "tools.artifact_learning",
+        "tools.autonomy_state",
+        "tools.binary_classification_lab_runner",
+        "tools.brain_snapshot"
+      ],
+      "teams": [
+        "infrastructure_team"
+      ],
+      "layers": [
+        "unclassified"
+      ]
+    },
+    "current_plan": [
+      "Task type: implementation",
+      "Primary modules: tools.ai_testing_compat, tools.artifact_learning, tools.autonomy_state, tools.binary_classification_lab_runner, tools.brain_snapshot",
+      "Dependency expansion: none",
+      "Owner teams: infrastructure_team",
+      "Layers: unclassified",
+      "Scheduler owner teams: infrastructure_team",
+      "Scheduler layers: unclassified"
+    ],
+    "summary_blocks": [
+      "Task type: implementation\nPrimary modules: tools.ai_testing_compat, tools.artifact_learning, tools.autonomy_state, tools.binary_classification_lab_runner, tools.brain_snapshot\nDependency expansion: none\nOwner teams: infrastructure_team\nLayers: unclassified\nScheduler owner teams: infrastructure_team\nScheduler layers: unclassified",
+      "Failure pattern: unknown_failure -> investigate\nFailure pattern: Task failed after execution error. -> investigate\nPreferred capabilities: agent_orchestration, webapp_generation, deploy_scaffold, tool_extension, kv_cache_manager\nPreferred workers: reviewer, coder, supervisor\nTop capability reputation: agent_orchestration, webapp_generation, deploy_scaffold, tool_extension\nTop worker reputation: reviewer, coder, supervisor\nRepo learning modules=162 chunks=144",
+      "Active dialogue summary: continue bounded dispatch with validation-first policy\nShared dialogue topics: dialogue-compaction, metaforge-handoff, codex-memory, metaforge\nShared dialogue constraints: explicit validation notes required for all delivery claims; Explicit validation is required before claiming delivery.\nShared dialogue decisions: continue bounded dispatch with validation-first policy; Use local dialogue ledger as the shared memory bridge."
+    ],
+    "budget_chars": 1600
+  },
+  "plan": [
+    {
+      "id": "eb814e1c",
+      "title": "Build Toy OS baseline",
+      "status": "completed",
+      "worker": "shell",
+      "phase": "execute"
+    },
+    {
+      "id": "e692e452",
+      "title": "Boot ToyOS in QEMU",
+      "status": "failed",
+      "worker": "shell",
+      "phase": "verify"
+    },
+    {
+      "id": "86b650c2",
+      "title": "Audit ToyOS runtime evidence",
+      "status": "pending",
+      "worker": "reviewer",
+      "phase": "review"
+    },
+    {
+      "id": "1c6a6734",
+      "title": "Patch Toy OS implementation",
+      "status": "pending",
+      "worker": "coder",
+      "phase": "draft"
+    },
+    {
+      "id": "7927efb6",
+      "title": "Rebuild Toy OS after patch",
+      "status": "pending",
+      "worker": "shell",
+      "phase": "execute"
+    },
+    {
+      "id": "982c503d",
+      "title": "Re-run ToyOS QEMU and score artifacts",
+      "status": "pending",
+      "worker": "shell",
+      "phase": "verify"
+    },
+    {
+      "id": "752c720e",
+      "title": "Score ToyOS artifact set",
+      "status": "pending",
+      "worker": "shell",
+      "phase": "verify"
+    },
+    {
+      "id": "cba33101",
+      "title": "Issue ToyOS release decision",
+      "status": "pending",
+      "worker": "reviewer",
+      "phase": "revise"
+    }
+  ],
+  "result": {}
+}

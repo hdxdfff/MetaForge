@@ -1,0 +1,34 @@
+{
+  "task_id": "7f9d614d2e4c4fb29102b742e0b97be1",
+  "task_status": "running",
+  "phase": "step-running",
+  "updated_at": "2026-03-29T11:52:47.865588Z",
+  "heartbeat_at": "2026-03-29T11:52:47.865588Z",
+  "repo_path": null,
+  "goal": null,
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": null,
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\7f9d614d2e4c4fb29102b742e0b97be1",
+  "step_id": "45c55e07",
+  "step_title": "Create smoke evidence",
+  "step_status": "running",
+  "worker": "coder",
+  "probe_attempts": 0,
+  "title": "Delivery smoke verification flow",
+  "prompt": "Create a deterministic smoke result, verify it, and promote it to delivery-ready.",
+  "scheduler_hint": {},
+  "context_package": {},
+  "plan": [
+    {
+      "id": "45c55e07",
+      "title": "Create smoke evidence",
+      "status": "running",
+      "worker": "coder",
+      "phase": "build"
+    }
+  ],
+  "result": {}
+}

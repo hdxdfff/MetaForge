@@ -1,0 +1,41 @@
+{
+  "task_id": "c7b0450190e4431f90998a1d57cd1159",
+  "task_title": "Clarify the target",
+  "task_status": "completed",
+  "started_at": "2026-04-03T16:20:09.378125Z",
+  "updated_at": "2026-04-03T16:21:08.818566Z",
+  "completed": true,
+  "steps": [
+    {
+      "step_id": "c7b0450190e4431f90998a1d57cd1159-terminal-record",
+      "step_title": "Clarify the target",
+      "action": "task_terminal_record",
+      "ok": true,
+      "at": "2026-04-03T16:21:08.818566Z",
+      "status": "completed",
+      "summary": "Superseded by newer runtime task d6c8ce53176e4c5490ca3569393b259e for node boot_qemu_smoke.",
+      "error": null,
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ],
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-03T16:20:09.429402Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "c7b0450190e4431f90998a1d57cd1159",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "governance",
+        "queue_name": "fastlane",
+        "task_type": "report_refresh"
+      }
+    ],
+    "summary": "Superseded by newer runtime task d6c8ce53176e4c5490ca3569393b259e for node boot_qemu_smoke.",
+    "superseded_by": "d6c8ce53176e4c5490ca3569393b259e",
+    "dedupe_reconciled": true
+  }
+}

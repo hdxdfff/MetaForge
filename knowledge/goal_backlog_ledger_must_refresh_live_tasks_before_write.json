@@ -1,0 +1,21 @@
+{
+  "id": "goal_backlog_ledger_must_refresh_live_tasks_before_write",
+  "created_at": "2026-03-29T01:02:00Z",
+  "scope": "goal-backlog-ledger",
+  "symptom": "goal_backlog_status.json kept reporting stale starved/replenishment_failed states even after ToyOS tasks were active because record_goal_backlog_result merged the previous plan snapshot instead of re-reading tasks.json.",
+  "impact": [
+    "control alerts stayed enabled after successful replenishment",
+    "goal_health lagged behind live task state",
+    "brain_loop could keep writing stale failure semantics after the queue had recovered"
+  ],
+  "fix": [
+    "recompute live ToyOS active/pending counts from tasks.json inside record_goal_backlog_result before persisting",
+    "store live_goal_counts and live_goal_health alongside the plan snapshot",
+    "treat any goal with active tasks as degraded rather than starved unless active_count is zero"
+  ],
+  "validation": [
+    "goal_backlog_status.json moved from starved to degraded with live active tasks present",
+    "control_alert_required cleared after the live refresh",
+    "py_compile passed for orchestrator-mvp/tools/goal_backlog_replenisher.py"
+  ]
+}

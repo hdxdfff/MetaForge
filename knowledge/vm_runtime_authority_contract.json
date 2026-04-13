@@ -1,0 +1,59 @@
+{
+  "id": "vm_runtime_authority_contract",
+  "updated_at": "2026-04-10T00:00:00+08:00",
+  "status": "active",
+  "authority_root": "/srv/orchestrator-mvp",
+  "host_workspace": "D:\\codex",
+  "runtime_contract": {
+    "vm_role": [
+      "run daemon",
+      "own live state",
+      "run control layer",
+      "run verification and release",
+      "produce ToyOS evidence"
+    ],
+    "host_role": [
+      "sync",
+      "backup",
+      "read status",
+      "manual recovery trigger"
+    ],
+    "host_must_not": [
+      "become live daemon host",
+      "become authority for live state",
+      "decide release from local stale cache"
+    ]
+  },
+  "migration_rule": {
+    "windows_host_fallback_for_daemon_start_stop": "disabled",
+    "windows_host_scheduled_task_installers": "frozen",
+    "windows_host_watchdog_recovery": "manual_vm_only",
+    "status_commands_should_prefer_vm": true,
+    "container_inside_vm_is_runtime_detail": true
+  },
+  "frozen_host_entrypoints": [
+    "D:\\codex\\orchestrator-mvp\\start-factory-daemon.ps1",
+    "D:\\codex\\orchestrator-mvp\\run-factory-daemon.ps1",
+    "D:\\codex\\orchestrator-mvp\\ensure-factory-daemon.ps1",
+    "D:\\codex\\orchestrator-mvp\\install-factory-daemon-task.ps1",
+    "D:\\codex\\orchestrator-mvp\\install-factory-daemon-startup.ps1",
+    "D:\\codex\\orchestrator-mvp\\install-release-manager-task.ps1",
+    "D:\\codex\\orchestrator-mvp\\install-p2-sandbox-task-generator.ps1",
+    "D:\\codex\\orchestrator-mvp\\install-keepalive-task.ps1",
+    "D:\\codex\\orchestrator-mvp\\install-industrial-readiness-task.ps1",
+    "D:\\codex\\orchestrator-mvp\\install-industrial-operations-task.ps1",
+    "D:\\codex\\orchestrator-mvp\\install-historical-debt-archive-task.ps1",
+    "D:\\codex\\orchestrator-mvp\\install-continuity-metrics-task.ps1",
+    "D:\\codex\\orchestrator-mvp\\install-budget-suppression-task.ps1",
+    "D:\\codex\\orchestrator-mvp\\install-autonomy-control-plane-task.ps1",
+    "D:\\codex\\orchestrator-mvp\\install-stage5-tasks.ps1",
+    "D:\\codex\\orchestrator-mvp\\install-stage5-amplifiers.ps1"
+  ],
+  "acceptance_signals": [
+    "daemon runs under VM-owned runtime root",
+    "live state is written under /srv/orchestrator-mvp/data",
+    "host reads forwarded VM status instead of local stale snapshots",
+    "host daemon start/stop does not fall back to local process launch",
+    "host task installers and watchdog entrypoints are frozen"
+  ]
+}

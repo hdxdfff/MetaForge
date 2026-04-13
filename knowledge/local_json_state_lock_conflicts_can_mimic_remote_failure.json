@@ -1,0 +1,35 @@
+{
+  "id": "local_json_state_lock_conflicts_can_mimic_remote_failure",
+  "created_at": "2026-04-10T00:00:00Z",
+  "kind": "runtime_failure_pattern",
+  "summary": "Repeated write-lock or permission conflicts in D:/codex/orchestrator-mvp/data/*.json can look like a broken remote VM even when the VM and daemon are healthy.",
+  "symptoms": [
+    "factoryctl reports ssh or forwarding errors while the VM daemon is still running",
+    "lock files such as tasks.json.lock or task_publications.json.lock appear repeatedly",
+    "vm_registry.json or other state files stop updating and downstream status snapshots become stale",
+    "release or control status looks inconsistent across local and remote snapshots"
+  ],
+  "root_cause": [
+    "Multiple writers touch the same JSON state layer without a single authoritative write path",
+    "Some writers use weaker atomic writes or inconsistent retry behavior",
+    "Lock files or stale permissions can linger long enough to block writes and make the control plane read stale data"
+  ],
+  "preferred_fix": [
+    "Keep one locking implementation for all JSON state writers",
+    "Treat stale .lock files as a first-class recovery case",
+    "Prefer read-only fallbacks when remote forwarding fails so status can still be inspected",
+    "Verify that only one runtime owns the writable state layer at a time"
+  ],
+  "evidence": [
+    "D:/codex/orchestrator-mvp/app/io_utils.py",
+    "D:/codex/orchestrator-mvp/tools/io_utils.py",
+    "D:/codex/orchestrator-mvp/data/tasks.json.lock",
+    "D:/codex/orchestrator-mvp/data/task_publications.json.lock",
+    "D:/codex/orchestrator-mvp/data/vm_registry.json"
+  ],
+  "verification": [
+    "Get-ChildItem D:\\codex\\orchestrator-mvp\\data -Filter *.lock",
+    "python -m py_compile D:\\codex\\orchestrator-mvp\\tools\\io_utils.py",
+    "Check that factoryctl status reads a fresh local snapshot before blaming the VM"
+  ]
+}

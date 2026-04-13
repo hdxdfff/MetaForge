@@ -1,0 +1,12 @@
+{
+  "artifact_id": "stage5-capability-repairbundle-20260403",
+  "all_passed": true,
+  "passed": true,
+  "command": [
+    "D:\\codex\\tools\\python311-embed\\python.exe",
+    "D:\\codex\\generated\\stage5-capability-repairbundle-20260403\\run_demo.py",
+    "--self-test"
+  ],
+  "stdout": "SELF_TEST_OK",
+  "stderr": ""
+}

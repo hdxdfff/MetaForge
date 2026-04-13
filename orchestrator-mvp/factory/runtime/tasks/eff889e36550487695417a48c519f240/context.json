@@ -1,0 +1,41 @@
+{
+  "task_id": "eff889e36550487695417a48c519f240",
+  "task_status": "running",
+  "phase": "step-running",
+  "updated_at": "2026-03-29T11:42:10.832590Z",
+  "heartbeat_at": "2026-03-29T11:42:10.832590Z",
+  "repo_path": null,
+  "goal": null,
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": null,
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\eff889e36550487695417a48c519f240",
+  "step_id": "3fca5bdd",
+  "step_title": "Create recovery artifact",
+  "step_status": "running",
+  "worker": "coder",
+  "probe_attempts": 0,
+  "title": "Delivery smoke artifact flow",
+  "prompt": "Build and verify a deterministic internal recovery artifact.",
+  "scheduler_hint": {},
+  "context_package": {},
+  "plan": [
+    {
+      "id": "3fca5bdd",
+      "title": "Create recovery artifact",
+      "status": "running",
+      "worker": "coder",
+      "phase": "build"
+    },
+    {
+      "id": "1cf2ffa6",
+      "title": "Verify recovery artifact",
+      "status": "pending",
+      "worker": "reviewer",
+      "phase": "verify"
+    }
+  ],
+  "result": {}
+}

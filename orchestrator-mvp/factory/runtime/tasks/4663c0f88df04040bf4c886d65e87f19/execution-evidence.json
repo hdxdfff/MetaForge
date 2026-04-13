@@ -1,0 +1,28 @@
+{
+  "task_id": "4663c0f88df04040bf4c886d65e87f19",
+  "task_title": "Define architecture contract for Ship deployable release artifact bundle",
+  "task_status": "timed_out",
+  "started_at": "2026-03-19T17:37:23.929932Z",
+  "updated_at": "2026-03-19T17:51:29.846849Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "4663c0f88df04040bf4c886d65e87f19-terminal-record",
+      "step_title": "Define architecture contract for Ship deployable release artifact bundle",
+      "action": "task_terminal_record",
+      "ok": false,
+      "at": "2026-03-19T17:51:29.846849Z",
+      "status": "timed_out",
+      "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+      "error": null,
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ],
+  "result": {
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

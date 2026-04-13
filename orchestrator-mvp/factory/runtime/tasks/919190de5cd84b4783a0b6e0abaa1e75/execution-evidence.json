@@ -1,0 +1,60 @@
+{
+  "steps": [
+    {
+      "step_id": "90790f9b",
+      "step_title": "Smoke docker default",
+      "action": "docker_step",
+      "ok": true,
+      "at": "2026-03-28T18:59:01.772723Z",
+      "worker": "docker",
+      "phase": "execute",
+      "route_model": "deepseek-chat",
+      "route_provider": "runtime",
+      "output_ref": {
+        "artifact_id": "ctx_8623937e43b6",
+        "task_id": "919190de5cd84b4783a0b6e0abaa1e75",
+        "step_id": "90790f9b",
+        "channel": "docker-output",
+        "title": "Smoke docker default output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\919190de5cd84b4783a0b6e0abaa1e75\\90790f9b-docker-output-ctx_8623937e43b6.txt",
+        "size_chars": 12,
+        "line_count": 1,
+        "created_at": "2026-03-28T18:58:58.158212Z",
+        "metadata": {
+          "worker": "docker",
+          "phase": "execute",
+          "route_model": "deepseek-chat",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "docker-output",
+        "char_count": 12,
+        "line_count": 1,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    }
+  ],
+  "task_id": "919190de5cd84b4783a0b6e0abaa1e75",
+  "task_title": null,
+  "task_status": "completed",
+  "started_at": "2026-03-28T18:58:21.294848Z",
+  "updated_at": "2026-03-28T18:59:09.024436Z",
+  "completed": true,
+  "result": {
+    "summary": "Resumed from saved task plan.",
+    "completed_steps": 1,
+    "context_used_chars": 568,
+    "cheap_calls_used": 0,
+    "cheap_chars_used": 0,
+    "escalation_count": 0,
+    "execution_mode": "governance",
+    "production_evidence": {
+      "mode": "governance",
+      "status": "not-required"
+    },
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\919190de5cd84b4783a0b6e0abaa1e75\\execution-evidence.json",
+    "execution_evidence_step_count": 1
+  }
+}

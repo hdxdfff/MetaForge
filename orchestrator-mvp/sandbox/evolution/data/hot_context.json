@@ -1,0 +1,24 @@
+{
+  "updated_at": "2026-03-12T07:08:52.525279Z",
+  "control_center": {
+    "paused": false,
+    "status": "active",
+    "updated_at": "2026-03-09T05:05:09.879563Z",
+    "reason": "test",
+    "resident": true
+  },
+  "policy_version": "9",
+  "active_task_count": 1,
+  "failed_task_count": 0,
+  "open_escalation_count": 1,
+  "active_tasks": [
+    {
+      "id": "ccb165ed8549456997edf05f8a021395",
+      "status": "waiting_approval",
+      "goal": "goal_4af4102d2f",
+      "repo_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+      "updated_at": "2026-03-11T16:00:28.351326Z"
+    }
+  ],
+  "failed_tasks": []
+}

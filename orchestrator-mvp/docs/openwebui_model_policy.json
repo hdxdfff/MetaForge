@@ -1,0 +1,39 @@
+{
+  "source": "D:\\codex\\opencode.jsonc",
+  "provider": {
+    "name": "volcengine-plan",
+    "base_url": "https://ark.cn-beijing.volces.com/api/coding/v3",
+    "model_family": "Volcengine Coding Plan"
+  },
+  "openwebui": {
+    "default_model": "minimax-m2.5",
+    "pinned_models": [
+      "minimax-m2.5",
+      "kimi-k2.5",
+      "vision-pro",
+      "vision-lite"
+    ]
+  },
+  "models": {
+    "primary": {
+      "alias": "minimax-m2.5",
+      "upstream": "minimax-m2.5",
+      "label": "minimax-m2.5"
+    },
+    "small": {
+      "alias": "kimi-k2.5",
+      "upstream": "kimi-k2.5",
+      "label": "kimi-k2.5"
+    },
+    "vision_pro": {
+      "alias": "vision-pro",
+      "upstream": "doubao-1.5-vision-pro-250328",
+      "label": "doubao-1.5-vision-pro-250328"
+    },
+    "vision_lite": {
+      "alias": "vision-lite",
+      "upstream": "doubao-1.5-vision-lite-250315",
+      "label": "doubao-1.5-vision-lite-250315"
+    }
+  }
+}

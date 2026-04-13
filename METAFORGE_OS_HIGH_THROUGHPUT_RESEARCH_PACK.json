@@ -1,0 +1,95 @@
+{
+  "name": "MetaForge High-Throughput Research Batch",
+  "version": 1,
+  "source": "D:\\codex\\METAFORGE_OS_HIGH_THROUGHPUT_BLUEPRINT.md",
+  "tasks": [
+    {
+      "task_id": "throughput-research-audit-001",
+      "lane": "research-lane",
+      "caller": "codex-control",
+      "project_id": null,
+      "repo_path": "D:\\codex\\orchestrator-mvp",
+      "goal": "Audit the throughput blueprint against the controller and identify the smallest queue admission and WIP gaps.",
+      "prompt": "Audit the throughput blueprint against the current controller code, identify the smallest queue admission and WIP gaps, and return a bounded implementation note or patch plan.",
+      "task_type": "artifact_audit",
+      "queue_name": "fastlane",
+      "verification_level": "L1",
+      "max_runtime_seconds": 1800,
+      "retry_limit": 1,
+      "rollback_rule": "mark_failed_and_requeue_split",
+      "execution_mode": "research",
+      "default_allow_resource_scan": true,
+      "default_allow_repo_status": true,
+      "artifact_spec": {
+        "artifact_type": "report",
+        "type": "report",
+        "output": "D:\\codex\\METAFORGE_OS_THROUGHPUT_AUDIT_NOTE.md",
+        "entrypoint": "D:\\codex\\METAFORGE_OS_THROUGHPUT_AUDIT_NOTE.md",
+        "deliverables": [
+          "bounded implementation note",
+          "queue admission gap summary",
+          "WIP gap summary"
+        ],
+        "expected_outputs": [
+          "D:\\codex\\METAFORGE_OS_THROUGHPUT_AUDIT_NOTE.md"
+        ],
+        "required_artifacts": [
+          "D:\\codex\\METAFORGE_OS_THROUGHPUT_AUDIT_NOTE.md"
+        ],
+        "evidence": [
+          "D:\\codex\\METAFORGE_OS_THROUGHPUT_AUDIT_NOTE.md"
+        ],
+        "verification": {
+          "build_required": false,
+          "tests_required": false
+        },
+        "registry": "artifact_registry",
+        "min_fresh_artifacts": 1
+      }
+    },
+    {
+      "task_id": "throughput-schema-delta-001",
+      "lane": "research-lane",
+      "caller": "codex-control",
+      "project_id": null,
+      "repo_path": "D:\\codex\\orchestrator-mvp",
+      "goal": "Define the dispatch schema delta required for task type, queue name, verification level, runtime cap, retry limit, and rollback rule.",
+      "prompt": "Define the dispatch schema delta needed for task type, queue name, verification level, runtime cap, retry limit, and rollback rule, then describe how the controller should reject invalid work.",
+      "task_type": "json_fix",
+      "queue_name": "build_test",
+      "verification_level": "L2",
+      "max_runtime_seconds": 2400,
+      "retry_limit": 1,
+      "rollback_rule": "mark_failed_and_requeue_split",
+      "execution_mode": "governance",
+      "default_allow_resource_scan": true,
+      "default_allow_repo_status": true,
+      "artifact_spec": {
+        "artifact_type": "report",
+        "type": "report",
+        "output": "D:\\codex\\METAFORGE_OS_DISPATCH_SCHEMA_DELTA.md",
+        "entrypoint": "D:\\codex\\METAFORGE_OS_DISPATCH_SCHEMA_DELTA.md",
+        "deliverables": [
+          "dispatch schema delta",
+          "controller rejection rules",
+          "queue admission notes"
+        ],
+        "expected_outputs": [
+          "D:\\codex\\METAFORGE_OS_DISPATCH_SCHEMA_DELTA.md"
+        ],
+        "required_artifacts": [
+          "D:\\codex\\METAFORGE_OS_DISPATCH_SCHEMA_DELTA.md"
+        ],
+        "evidence": [
+          "D:\\codex\\METAFORGE_OS_DISPATCH_SCHEMA_DELTA.md"
+        ],
+        "verification": {
+          "build_required": false,
+          "tests_required": false
+        },
+        "registry": "artifact_registry",
+        "min_fresh_artifacts": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+﻿Operate only on D:\codex\generated\ml-binary-classification-lab.
+Do not modify the control layer, MetaForge OS runtime, unrelated workspaces, or the original file D:\xwechat_files\wxid_wraikhyxu4wp22_ee1d\msg\file\2026-03\实验模板.docx.
+Task: build a bounded auto-run package for the binary classification lab defined by the supplied template. The package must cover logistic regression, linear SVM, and perceptron binary classification with SGD-style training, plus a report structure aligned to the template.
+Required artifact: documentation delta.
+Validation: if a usable local dataset is found, run the experiment and record the execution command, the dataset used, and the measured test accuracy for each model. If no usable dataset is found, perform static verification only and state that limitation explicitly.
+Control tier: chore-only.
+If safe implementation is not possible or required data is missing, downgrade to a blocker-first result instead of inventing metrics or analysis.
+Write the result to D:\codex\generated\ml-binary-classification-lab\BINARY_CLASSIFICATION_AUTORUN_RESULT.md.
+The result must include: source template path, local data discovery result, execution or blocker status, exact validation notes, and the next operator action if blocked.

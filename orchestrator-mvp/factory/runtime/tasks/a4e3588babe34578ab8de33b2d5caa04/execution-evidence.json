@@ -1,0 +1,28 @@
+{
+  "task_id": "a4e3588babe34578ab8de33b2d5caa04",
+  "task_title": "Coordinate cross-project impact for Strengthen webapp generation capability",
+  "task_status": "timed_out",
+  "started_at": "2026-03-19T02:19:41.255272Z",
+  "updated_at": "2026-03-19T02:25:05.063003Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "a4e3588babe34578ab8de33b2d5caa04-terminal-record",
+      "step_title": "Coordinate cross-project impact for Strengthen webapp generation capability",
+      "action": "task_terminal_record",
+      "ok": false,
+      "at": "2026-03-19T02:25:05.063003Z",
+      "status": "timed_out",
+      "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+      "error": null,
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ],
+  "result": {
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

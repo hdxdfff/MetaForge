@@ -1,0 +1,179 @@
+{
+  "task_id": "d6c8ce53176e4c5490ca3569393b259e",
+  "task_title": "Run ToyOS boot and QEMU smoke",
+  "task_status": "completed",
+  "started_at": "2026-04-03T16:19:45.873374Z",
+  "updated_at": "2026-04-03T16:20:53.420964Z",
+  "completed": true,
+  "steps": [
+    {
+      "step_id": "a5fcea4d",
+      "step_title": "Spawn decomposition subtasks",
+      "action": "planner_step",
+      "ok": false,
+      "at": "2026-04-03T16:20:53.420964Z",
+      "phase": "decompose",
+      "worker": "planner",
+      "status": "failed",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "error-output",
+        "char_count": 106,
+        "line_count": 1,
+        "stored_raw": false
+      },
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "ccddb950",
+      "step_title": "Wait for child task completion",
+      "action": "planner_step",
+      "ok": false,
+      "at": "2026-04-03T16:20:53.420964Z",
+      "phase": "decompose",
+      "worker": "planner",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "f4376ee7",
+      "step_title": "Aggregate decomposition results",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-04-03T16:20:53.420964Z",
+      "phase": "verify",
+      "worker": "reviewer",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    }
+  ],
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-03T16:19:45.953994Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "d6c8ce53176e4c5490ca3569393b259e",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "production",
+        "queue_name": "regression",
+        "task_type": "qemu_smoke_run"
+      },
+      {
+        "timestamp": "2026-04-03T16:20:22.137658Z",
+        "kind": "step_failed",
+        "success": false,
+        "task_id": "d6c8ce53176e4c5490ca3569393b259e",
+        "step_id": "a5fcea4d",
+        "step_title": "Spawn decomposition subtasks",
+        "worker": "planner",
+        "phase": "decompose",
+        "route_model": "internal-recovery",
+        "route_provider": "runtime",
+        "elapsed_ms": 15484,
+        "error": "<asyncio.locks.Lock object at 0x000001F8E447CCD0 [unlocked, waiters:1]> is bound to a different event loop",
+        "output_ref": {},
+        "output_stats": {
+          "channel": "error-output",
+          "char_count": 106,
+          "line_count": 1,
+          "stored_raw": false
+        }
+      }
+    ],
+    "decomposition": {
+      "summary": "Fallback decomposition for: Run the ToyOS boot path and QEMU smoke check, capture the exact failure surface, and update the runnable evidence bundle",
+      "strategy": "bounded multi-layer split with analysis, execution, and verification branches",
+      "subtasks": [
+        {
+          "title": "Clarify the target",
+          "prompt": "Restate the objective and the smallest acceptable outcome for: Run the ToyOS boot path and QEMU smoke check, capture the exact failure surface, and update the runnable evidence bundle.",
+          "goal": "Clarify target outcome",
+          "task_type": "report_refresh",
+          "path_kind": "shared",
+          "queue_name": "fastlane",
+          "verification_level": "L1",
+          "preferred_worker": "reviewer",
+          "execution_mode": "governance",
+          "execution_lane": "host-control",
+          "decompose_children": false,
+          "shared_dependency_group": "d6c8ce53176e4c5490ca3569393b259e",
+          "repair_for": null,
+          "inputs": [],
+          "outputs": [
+            "target brief"
+          ],
+          "dependencies": [],
+          "acceptance_criteria": [
+            "Target outcome is explicit."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        },
+        {
+          "title": "Execute the next bounded action",
+          "prompt": "Carry out the smallest bounded action that advances: Run the ToyOS boot path and QEMU smoke check, capture the exact failure surface, and update the runnable evidence bundle.",
+          "goal": "Execute the next action",
+          "task_type": "doc_patch",
+          "path_kind": "repair",
+          "queue_name": "fastlane",
+          "verification_level": "L1",
+          "preferred_worker": "coder",
+          "execution_mode": "governance",
+          "execution_lane": "host-control",
+          "decompose_children": false,
+          "shared_dependency_group": "d6c8ce53176e4c5490ca3569393b259e",
+          "repair_for": "Clarify the target",
+          "inputs": [
+            "target brief"
+          ],
+          "outputs": [
+            "action result"
+          ],
+          "dependencies": [
+            "Clarify the target"
+          ],
+          "acceptance_criteria": [
+            "The action produces a concrete result."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        }
+      ],
+      "dag": {
+        "shared_nodes": [
+          "Clarify the target"
+        ],
+        "branch_nodes": [],
+        "repair_nodes": [
+          "Execute the next bounded action"
+        ],
+        "optional_nodes": [],
+        "speculative_nodes": [],
+        "blocked_nodes": [],
+        "edges": [
+          {
+            "from": "Clarify the target",
+            "to": "Execute the next bounded action",
+            "kind": "repair"
+          }
+        ],
+        "shared_dependency_group": "d6c8ce53176e4c5490ca3569393b259e"
+      },
+      "depth": 0,
+      "max_depth": 2,
+      "mode": "multi_layer"
+    },
+    "summary": "Superseded by newer runtime task c7b0450190e4431f90998a1d57cd1159 for node boot_qemu_smoke.",
+    "superseded_by": "c7b0450190e4431f90998a1d57cd1159",
+    "dedupe_reconciled": true
+  }
+}

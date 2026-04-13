@@ -1,0 +1,186 @@
+{
+  "steps": [
+    {
+      "step_id": "9b9003be",
+      "step_title": "Understand task",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-03-20T07:37:16.545791Z",
+      "worker": "reviewer",
+      "phase": "understand",
+      "route_model": "gpt-5.4-pro",
+      "route_provider": "openai",
+      "output_ref": {
+        "artifact_id": "ctx_d2585b638ea5",
+        "task_id": "a34a7d4cded94bbba049cd064618c221",
+        "step_id": "9b9003be",
+        "channel": "reviewer-output",
+        "title": "Understand task output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\a34a7d4cded94bbba049cd064618c221\\9b9003be-reviewer-output-ctx_d2585b638ea5.txt",
+        "size_chars": 1091,
+        "line_count": 31,
+        "created_at": "2026-03-20T07:37:13.046694Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "understand",
+          "route_model": "gpt-5.4-pro",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 1091,
+        "line_count": 31,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "46197a28",
+      "step_title": "Draft solution",
+      "action": "coder_step",
+      "ok": true,
+      "at": "2026-03-20T07:38:17.799191Z",
+      "worker": "coder",
+      "phase": "draft",
+      "route_model": "gpt-5.4-pro",
+      "route_provider": "openai",
+      "output_ref": {
+        "artifact_id": "ctx_c65ef6f90132",
+        "task_id": "a34a7d4cded94bbba049cd064618c221",
+        "step_id": "46197a28",
+        "channel": "coder-output",
+        "title": "Draft solution output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\a34a7d4cded94bbba049cd064618c221\\46197a28-coder-output-ctx_c65ef6f90132.txt",
+        "size_chars": 1171,
+        "line_count": 25,
+        "created_at": "2026-03-20T07:38:13.908153Z",
+        "metadata": {
+          "worker": "coder",
+          "phase": "draft",
+          "route_model": "gpt-5.4-pro",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "coder-output",
+        "char_count": 1171,
+        "line_count": 25,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "fdb70e67",
+      "step_title": "Execute validation",
+      "action": "shell_step",
+      "ok": true,
+      "at": "2026-03-20T07:38:59.446199Z",
+      "worker": "shell",
+      "phase": "execute",
+      "route_model": "deepseek-chat",
+      "route_provider": "runtime",
+      "output_ref": {
+        "artifact_id": "ctx_fb1a8c285a66",
+        "task_id": "a34a7d4cded94bbba049cd064618c221",
+        "step_id": "fdb70e67",
+        "channel": "shell-output",
+        "title": "Execute validation output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\a34a7d4cded94bbba049cd064618c221\\fdb70e67-shell-output-ctx_fb1a8c285a66.txt",
+        "size_chars": 352,
+        "line_count": 11,
+        "created_at": "2026-03-20T07:38:50.869176Z",
+        "metadata": {
+          "worker": "shell",
+          "phase": "execute",
+          "route_model": "deepseek-chat",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "shell-output",
+        "char_count": 352,
+        "line_count": 11,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "8ce7e192",
+      "step_title": "Verify result",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-03-20T07:39:57.344037Z",
+      "worker": "reviewer",
+      "phase": "verify",
+      "route_model": "deepseek-chat",
+      "route_provider": "cheap",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 389,
+        "line_count": 11,
+        "stored_raw": false
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "624be3ca",
+      "step_title": "Revise next action",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-03-20T07:40:56.448616Z",
+      "worker": "reviewer",
+      "phase": "revise",
+      "route_model": "deepseek-reasoner",
+      "route_provider": "reasoning",
+      "output_ref": {
+        "artifact_id": "ctx_2fedfec487c4",
+        "task_id": "a34a7d4cded94bbba049cd064618c221",
+        "step_id": "624be3ca",
+        "channel": "reviewer-output",
+        "title": "Revise next action output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\a34a7d4cded94bbba049cd064618c221\\624be3ca-reviewer-output-ctx_2fedfec487c4.txt",
+        "size_chars": 959,
+        "line_count": 13,
+        "created_at": "2026-03-20T07:40:54.337002Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "revise",
+          "route_model": "deepseek-reasoner",
+          "route_provider": "reasoning"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 959,
+        "line_count": 13,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    }
+  ],
+  "task_id": "a34a7d4cded94bbba049cd064618c221",
+  "task_title": "Implement module agents.coder_agent",
+  "task_status": "failed",
+  "started_at": "2026-03-20T07:33:56.795524Z",
+  "updated_at": "2026-03-20T07:41:04.536992Z",
+  "completed": false,
+  "result": {
+    "state": "failed_execution",
+    "reason": "Production evidence incomplete: fresh=0/1 missing=['none'] stale=['agents/coder_agent.py']",
+    "task_id": "a34a7d4cded94bbba049cd064618c221",
+    "repo_path": "D:\\codex\\orchestrator-mvp",
+    "execution_mode": "production",
+    "goal": "Strengthen agent orchestration capability",
+    "cheap_calls_used": 4,
+    "cheap_chars_used": 2546,
+    "escalation_count": 2,
+    "failed_steps": [],
+    "next_action_required": "Inspect execution evidence and rerun or replace the task; no approval hold was applied.",
+    "failure_pause_policy": "If a long task fails, allow at most one cheap-model-approved probe retry with bounded local cost. If cheap approval is missing, ambiguous, or the retry still fails, pause execution, return a structured error report, and wait for explicit core guidance.",
+    "pause_required": false,
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\a34a7d4cded94bbba049cd064618c221\\execution-evidence.json",
+    "execution_evidence_step_count": 5
+  }
+}

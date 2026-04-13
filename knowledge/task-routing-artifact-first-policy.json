@@ -1,0 +1,85 @@
+{
+  "recorded_at": "2026-03-21T11:00:00Z",
+  "issue": "task_routing_artifact_first_regression",
+  "signals": {
+    "artifact_rate": 0.0,
+    "conversion_rate": 0.0,
+    "reviewer_bias": "top_worker=reviewer",
+    "pipeline": "build path not triggered first"
+  },
+  "policy": {
+    "first_task_for_system_build": "build/run",
+    "artifact_priority_order": [
+      "artifact-build",
+      "artifact-test",
+      "artifact-audit",
+      "artifact-evidence",
+      "implementation",
+      "architecture"
+    ],
+    "first_artifact_timeout_ticks": 3,
+    "reviewer_contract": {
+      "inputs": "artifact evidence",
+      "outputs": "patch decision or release decision"
+    },
+    "toyos_default_loop": [
+      "build",
+      "qemu",
+      "audit",
+      "patch",
+      "rebuild",
+      "qemu"
+    ]
+  },
+  "touched_files": [
+    "D:\\codex\\orchestrator-mvp\\tools\\taskgraph_compiler.py",
+    "D:\\codex\\orchestrator-mvp\\tools\\scheduling_kernel.py",
+    "D:\\codex\\orchestrator-mvp\\tools\\brain_loop.py",
+    "D:\\codex\\orchestrator-mvp\\runtime\\scheduler.py",
+    "D:\\codex\\orchestrator-mvp\\app\\openai_client.py",
+    "D:\\codex\\orchestrator-mvp\\app\\orchestrator.py"
+  ],
+  "validation": [
+    "D:\\codex\\tools\\python311-embed\\python.exe -m py_compile D:\\codex\\orchestrator-mvp\\app\\openai_client.py D:\\codex\\orchestrator-mvp\\app\\orchestrator.py D:\\codex\\orchestrator-mvp\\tools\\taskgraph_compiler.py D:\\codex\\orchestrator-mvp\\tools\\scheduling_kernel.py D:\\codex\\orchestrator-mvp\\tools\\brain_loop.py D:\\codex\\orchestrator-mvp\\runtime\\scheduler.py",
+    "compile_goal(system_build) => ready node bootstrap_build",
+    "build_scheduling_snapshot(system_build) => top dispatch bootstrap_build",
+    "OpenAIPlanner._fallback_plan(ToyOS) => first step build, reviewer steps artifact-in/decision-out"
+  ],
+  "runtime_repair_followup": {
+    "updated_at": "2026-03-21T13:11:30Z",
+    "additional_root_causes": [
+      "brain_step_budget_too_small_for_live_goal_scan",
+      "artifact_nodes_incorrectly_marked_patch_required",
+      "goal_runtime_kept_terminal_history_tasks_linked_to_active_goals"
+    ],
+    "runtime_signals_after_repair": {
+      "active_tasks": 3,
+      "artifact_rate": 0.0,
+      "conversion_rate": 0.0,
+      "ready_bootstrap_build_nodes": [
+        "graph_2bef8f4018",
+        "graph_7436d96fa4",
+        "graph_2dc97e10f4",
+        "graph_f9f6029ae4",
+        "graph_4824bd0a42",
+        "graph_a5ddbbacba",
+        "graph_8ad91379c3",
+        "graph_b45068d866",
+        "graph_2685556427",
+        "graph_9d8cfbece0"
+      ],
+      "active_bootstrap_build_tasks": [
+        "93f208d99d5e43309722f19a19a030b3",
+        "02473e5a6125474ba88504c11ec7996f",
+        "c2a92b7029bc4a748cfccf06808d1c2f"
+      ]
+    },
+    "files_touched_followup": [
+      "D:/codex/orchestrator-mvp/tools/goal_runtime.py",
+      "D:/codex/orchestrator-mvp/tools/brain_loop.py",
+      "D:/codex/orchestrator-mvp/tools/factory_task_engine.py",
+      "D:/codex/orchestrator-mvp/tools/factory_daemon.py",
+      "D:/codex/orchestrator-mvp/tools/taskgraph_compiler.py"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "pattern_id": "autonomy-score-stale-soak-override",
+  "title": "Autonomy score must not let historical soak override current runtime freshness",
+  "recorded_at": "2026-03-20T00:00:00+08:00",
+  "symptoms": [
+    "autonomy_score reports stage4_confirmed after a daemon restart",
+    "uptime_hours in autonomy_score does not match the current daemon started_at and last_tick_at",
+    "soak_validation remains confirmed while current control layer or uptime has regressed"
+  ],
+  "root_cause": "tools/autonomy_score.py overwrote current uptime and stage with soak_validation.summary when soak_validation.confirmed was true, even if the current runtime had restarted or was no longer aligned with the historical soak snapshot.",
+  "policy": [
+    "Current autonomy status must be computed from fresh daemon heartbeat and current uptime only.",
+    "Historical soak results may be reported as context, but must not override current runtime metrics or stage.",
+    "A running daemon without a fresh heartbeat must be treated as stale for autonomy scoring."
+  ],
+  "evidence_files": [
+    "D:\\codex\\orchestrator-mvp\\tools\\autonomy_score.py",
+    "D:\\codex\\orchestrator-mvp\\data\\soak_validation.json",
+    "D:\\codex\\orchestrator-mvp\\data\\factory_daemon_state.json",
+    "D:\\codex\\orchestrator-mvp\\data\\autonomy_score.json"
+  ]
+}

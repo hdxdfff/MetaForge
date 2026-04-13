@@ -1,0 +1,12 @@
+{
+  "artifact_id": "metaforge-ai-factory",
+  "all_passed": true,
+  "passed": true,
+  "command": [
+    "C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "D:\\codex\\generated\\metaforge-ai-factory\\run_demo.py",
+    "--self-test"
+  ],
+  "stdout": "SELF_TEST_OK",
+  "stderr": ""
+}

@@ -1,0 +1,29 @@
+{
+  "task_id": "task-toyos-build-shadow-0001",
+  "goal_id": "goal-toyos-shadow-validation",
+  "task_type": "build",
+  "owner_role": "builder",
+  "input_spec": {
+    "project_path": "D:\\codex\\generated\\toy-os-demo",
+    "build_profile": "toy_os_build_only",
+    "build_backend": "auto",
+    "build_command": "python orchestrator-mvp/tools/build_toy_os.py --target <shadow workspace>",
+    "artifact_out_dir": "D:\\codex\\orchestrator-mvp\\shadow_factory\\artifacts\\task-toyos-build-shadow-0001"
+  },
+  "expected_outputs": [
+    "build/kernel.bin",
+    "build/build.log",
+    "build/artifact.sha256",
+    "build-report.json",
+    "artifact_manifest.json"
+  ],
+  "acceptance_checks": [
+    "build-report.json exists in shadow artifact dir",
+    "build/kernel.bin exists in shadow artifact dir",
+    "execution-report.json records build_acceptance_only checks"
+  ],
+  "upstream_task_id": null,
+  "artifact_scope": "shadow_only",
+  "shadow_mode": true,
+  "created_at": "2026-03-26T14:40:00Z"
+}

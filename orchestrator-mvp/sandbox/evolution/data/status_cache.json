@@ -1,0 +1,77 @@
+{
+  "updated_at": "2026-03-12T07:07:04.704516Z",
+  "cycle": 179,
+  "interval_seconds": 60,
+  "meta_every": 5,
+  "evolution_every": 5,
+  "policy_schedule": {
+    "meta_every": 5,
+    "evolution_every": 5,
+    "capability_building_every": 5,
+    "maintenance_bias_every": 4,
+    "maintenance_mode": "full",
+    "runtime_dispatch_limit": 2,
+    "goal_generation_every": 3,
+    "ai_testing_every": 4,
+    "resource_budget": {
+      "runtime_tasks": 0.35,
+      "experiments": 0.2,
+      "capability_building": 0.15,
+      "maintenance": 0.2
+    },
+    "run_experiments": false,
+    "cycle": 179,
+    "run_capability_building": false,
+    "allow_goal_generation": false,
+    "run_ai_testing": false
+  },
+  "daemon": {
+    "status": "running",
+    "pid": 5868,
+    "cycle": 179,
+    "interval_seconds": 60,
+    "started_at": "2026-03-12T07:07:04.704516Z",
+    "last_tick_at": "2026-03-12T07:07:04.704516Z",
+    "last_error": null
+  },
+  "control_layer": {
+    "status": "operator_attention",
+    "quality_score": 0.6354,
+    "quality_status": "attention"
+  },
+  "autonomy": {
+    "stage": "stage4_confirmed",
+    "score": 0.6925,
+    "stable_autonomy": null
+  },
+  "engineering_os": {
+    "status": "attention",
+    "patch_gate_status": "attention",
+    "patch_ready_count": 0,
+    "patch_blocked_count": 0
+  },
+  "lab": {
+    "status": null,
+    "score": null
+  },
+  "tool_health": {
+    "status": "attention",
+    "issue_count": 1
+  },
+  "ai_testing": {
+    "status": "attention",
+    "pass_rate": 0.8,
+    "error_count": 0,
+    "updated_at": "2026-03-12T07:03:25.424260Z",
+    "failing_case_ids": [
+      "context-boundary"
+    ],
+    "consecutive_failures": 5,
+    "alert": true,
+    "threshold": 3
+  },
+  "release_ops": {
+    "status": "attention",
+    "release_train_status": "blocked"
+  }
+}

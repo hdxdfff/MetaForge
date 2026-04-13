@@ -1,0 +1,12 @@
+{
+  "updated_at": "2026-03-11T14:43:49.394616Z",
+  "action": "approved_patch",
+  "required_fields": [
+    "reviewer",
+    "reason",
+    "target_files",
+    "validation",
+    "rollback_note"
+  ],
+  "mode": "MANUAL"
+}

@@ -1,0 +1,8 @@
+{
+  "snapshot_id": "snap_b1a63e12",
+  "vm_id": "vm_0822459fe5",
+  "name": "shell-fail-fail",
+  "created_at": "2026-03-21T13:27:55.000248Z",
+  "vm_status": "running",
+  "template_id": "dev_template"
+}

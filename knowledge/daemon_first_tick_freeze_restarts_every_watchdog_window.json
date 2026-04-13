@@ -1,0 +1,25 @@
+{
+  "id": "daemon_first_tick_freeze_restarts_every_watchdog_window",
+  "updated_at": "2026-03-20T13:50:00Z",
+  "type": "failure_pattern",
+  "summary": "Factory daemon can remain running at cycle=1 with last_tick_at=null while watchdog restarts the process on its fixed window.",
+  "symptoms": [
+    "factory_daemon_state.json shows running=true, cycle=1, last_tick_at=null",
+    "factory_daemon.log shows repeated \"Factory daemon started\" every 15 minutes",
+    "tasks stay active but do not produce completed/failed transitions",
+    "artifacts remain historically present but no new runtime execution evidence appears"
+  ],
+  "evidence": {
+    "soak_report": "D:\\codex\\orchestrator-mvp\\data\\soak_report_20260320T124653.json",
+    "daemon_log": "D:\\codex\\orchestrator-mvp\\data\\factory_daemon.log"
+  },
+  "diagnosis": [
+    "This is not a recovery loop. Recovery remained inactive during the soak window.",
+    "This is not an artifact pipeline outage. Artifacts stayed present throughout the soak.",
+    "The hidden fault is before the first successful tick completion."
+  ],
+  "next_checks": [
+    "Instrument tick() phases to find the pre-heartbeat stall before first completion.",
+    "Verify watchdog restart policy does not mask first-tick deadlock by continuously replacing the pid."
+  ]
+}

@@ -1,0 +1,25 @@
+﻿{
+    "system":  "MetaForge OS",
+    "snapshot_type":  "dialogue-compaction",
+    "updated_at":  "2026-03-28T19:01:01.5692237Z",
+    "contradiction":  "none_detected",
+    "ceo_priority":  "green",
+    "lane_hint":  "ceo-lane",
+    "authoritative_workspace":  "D:\\codex\\generated\\toy-os-demo",
+    "control_tier":  "ceo-review-required unless chore-only is explicit",
+    "required_validation":  "explicit validation notes required for all delivery claims",
+    "active_task_count":  1,
+    "active_execution_roots":  [
+                                   "D:\\codex\\orchestrator-mvp"
+                               ],
+    "invalid_delivery_risk":  "low",
+    "startup_files":  [
+                          "D:\\codex\\METAFORGE-OS.md",
+                          "D:\\codex\\METAFORGE_OS_CODEX_MULTI_SESSION_BOOTSTRAP.md",
+                          "D:\\codex\\METAFORGE_OS_ROLE_SPLIT.md",
+                          "D:\\codex\\METAFORGE_OS_CHORE_QUEUE_POLICY.md",
+                          "D:\\codex\\METAFORGE_OS_DISPATCH_TEMPLATE.md"
+                      ],
+    "startup_command":  "D:\\codex\\codex-session-bootstrap.ps1",
+    "next_action":  "continue bounded dispatch with validation-first policy"
+}

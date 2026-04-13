@@ -1,0 +1,103 @@
+{
+  "steps": [
+    {
+      "step_id": "910c9eb2",
+      "step_title": "Run P2 sandbox audit script",
+      "action": "shell_step",
+      "ok": false,
+      "at": "2026-04-03T19:19:39.168637Z",
+      "worker": "shell",
+      "phase": "execute",
+      "route_model": "deepseek-chat",
+      "route_provider": "runtime",
+      "error": "Open Interpreter failed with code 2: D:\\codex\\tools\\python311-embed\\Lib\\site-packages\\interpreter\\core\\utils\\system_debug_info.py:4: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.\r\n  import pkg_resources\r\nusage: interpreter [options]\r\ninterpreter: error: ambiguous option: -c could match -ci, -cw",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "error-output",
+        "char_count": 491,
+        "line_count": 4,
+        "stored_raw": false
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "910c9eb2",
+      "step_title": "Run P2 sandbox audit script",
+      "action": "shell_step",
+      "ok": false,
+      "at": "2026-04-03T19:19:41.704384Z",
+      "worker": "shell",
+      "phase": "execute",
+      "route_model": "deepseek-chat",
+      "route_provider": "runtime",
+      "error": "Open Interpreter failed with code 2: D:\\codex\\tools\\python311-embed\\Lib\\site-packages\\interpreter\\core\\utils\\system_debug_info.py:4: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.\r\n  import pkg_resources\r\nusage: interpreter [options]\r\ninterpreter: error: ambiguous option: -c could match -ci, -cw",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "error-output",
+        "char_count": 491,
+        "line_count": 4,
+        "stored_raw": false
+      },
+      "probe_attempts": 0
+    }
+  ],
+  "task_id": "c3901614941c460bb6385a75403f5b2b",
+  "task_title": "P2 sandbox audit follow-up",
+  "task_status": "failed",
+  "started_at": "2026-04-03T19:19:00.740820Z",
+  "updated_at": "2026-04-03T19:22:40.755302Z",
+  "completed": false,
+  "result": {
+    "state": "failed_execution",
+    "reason": "Open Interpreter failed with code 2: D:\\codex\\tools\\python311-embed\\Lib\\site-packages\\interpreter\\core\\utils\\system_debug_info.py:4: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.\r\n  import pkg_resources\r\nusage: interpreter [options]\r\ninterpreter: error: ambiguous option: -c could match -ci, -cw",
+    "task_id": "c3901614941c460bb6385a75403f5b2b",
+    "repo_path": "D:\\codex\\orchestrator-mvp",
+    "execution_mode": "governance",
+    "goal": "Verify the P2 sandbox section in the control plane summary markdown.",
+    "cheap_calls_used": 2,
+    "cheap_chars_used": 14026,
+    "escalation_count": 2,
+    "failed_steps": [
+      {
+        "step_id": "910c9eb2",
+        "title": "Run P2 sandbox audit script",
+        "phase": "execute",
+        "worker": "shell",
+        "command": "python D:\\codex\\orchestrator-mvp\\tools\\p2_sandbox_audit_runner.py --input-md \"D:\\codex\\orchestrator-mvp\\data\\autonomy_control_plane_summary.md\" --control-json \"D:\\codex\\orchestrator-mvp\\data\\autonomy_control_plane.json\" --output-dir \"D:\\codex\\orchestrator-mvp\\generated\\p2-sandbox-audit\\followup-2\"",
+        "output": "Run P2 sandbox audit script failure: 491 chars, 4 non-empty lines.\nHead:\n- Open Interpreter failed with code 2: D:\\codex\\tools\\python311-embed\\Lib\\site-packages\\interpreter\\core\\utils\\system_debug_info.py:4: UserWarning: pkg_resourc...\n- import pkg_resources\n- usage: interpreter [options]\n- interpreter: error: ambiguous option: -c could match -ci, -cw",
+        "output_ref": {},
+        "output_stats": {
+          "channel": "error-output",
+          "char_count": 491,
+          "line_count": 4,
+          "stored_raw": false
+        },
+        "probe_attempts": 0,
+        "max_probe_attempts": 1,
+        "last_diagnosis": "Diagnosis for Run P2 sandbox audit script: 914 chars, 30 non-empty lines.\nHead:\n- Cheap lane escalation triggered.\n- Original worker: reviewer\n- Escalation model: kimi-k2.5\n- Reason: Structured output validation failed for research/governance audit work.\nTail:\n- - next_action\n- Provider error: APITimeoutError: Request timed out.\n- Provider error: APITimeoutError: Request timed out.\nRaw artifact: ctx_0bc9697153e7",
+        "last_diagnosis_ref": {
+          "artifact_id": "ctx_0bc9697153e7",
+          "task_id": "c3901614941c460bb6385a75403f5b2b",
+          "step_id": "910c9eb2",
+          "channel": "diagnosis-output",
+          "title": "Diagnosis for Run P2 sandbox audit script",
+          "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\c3901614941c460bb6385a75403f5b2b\\910c9eb2-diagnosis-output-ctx_0bc9697153e7.txt",
+          "size_chars": 914,
+          "line_count": 30,
+          "created_at": "2026-04-03T19:22:23.775871Z",
+          "metadata": {
+            "worker": "reviewer",
+            "phase": "check",
+            "route_model": "kimi-k2.5",
+            "route_provider": "openai"
+          }
+        }
+      }
+    ],
+    "next_action_required": "Inspect execution evidence and rerun or replace the task; no approval hold was applied.",
+    "failure_pause_policy": "If a long task fails, allow at most one cheap-model-approved probe retry with bounded local cost. If cheap approval is missing, ambiguous, or the retry still fails, pause execution, return a structured error report, and wait for explicit core guidance.",
+    "pause_required": false,
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\c3901614941c460bb6385a75403f5b2b\\execution-evidence.json",
+    "execution_evidence_step_count": 2
+  }
+}

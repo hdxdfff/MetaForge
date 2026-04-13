@@ -1,0 +1,118 @@
+{
+  "steps": [
+    {
+      "step_id": "d15a275d",
+      "step_title": "Understand webpage goal",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-03-20T16:27:05.814951Z",
+      "worker": "reviewer",
+      "phase": "understand",
+      "route_model": "deepseek-v3.2",
+      "route_provider": "openai",
+      "output_ref": {
+        "artifact_id": "ctx_c5101c938206",
+        "task_id": "8cef4a8597ef42fa9ddaa02c03b491e0",
+        "step_id": "d15a275d",
+        "channel": "reviewer-output",
+        "title": "Understand webpage goal output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\8cef4a8597ef42fa9ddaa02c03b491e0\\d15a275d-reviewer-output-ctx_c5101c938206.txt",
+        "size_chars": 1152,
+        "line_count": 32,
+        "created_at": "2026-03-20T16:26:54.067388Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "understand",
+          "route_model": "deepseek-v3.2",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 1152,
+        "line_count": 32,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "9add5eb6",
+      "step_title": "Read webpage through browser bridge",
+      "action": "shell_step",
+      "ok": false,
+      "at": "2026-03-20T16:27:48.123428Z",
+      "worker": "shell",
+      "phase": "execute",
+      "route_model": "deepseek-chat",
+      "route_provider": "runtime",
+      "error": "Action shell_exec is denied for role reviewer.",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "error-output",
+        "char_count": 46,
+        "line_count": 1,
+        "stored_raw": false
+      },
+      "probe_attempts": 0
+    }
+  ],
+  "task_id": "8cef4a8597ef42fa9ddaa02c03b491e0",
+  "task_title": "Produce binary classification lab operator digest",
+  "task_status": "failed",
+  "started_at": "2026-03-20T16:25:17.725721Z",
+  "updated_at": "2026-03-20T16:28:36.038814Z",
+  "completed": false,
+  "result": {
+    "state": "failed_execution",
+    "reason": "Action shell_exec is denied for role reviewer.",
+    "task_id": "8cef4a8597ef42fa9ddaa02c03b491e0",
+    "repo_path": "D:\\codex\\generated\\ml-binary-classification-lab",
+    "execution_mode": "governance",
+    "goal": "Prepare safe automatic takeover for binary classification lab",
+    "cheap_calls_used": 2,
+    "cheap_chars_used": 2819,
+    "escalation_count": 2,
+    "failed_steps": [
+      {
+        "step_id": "9add5eb6",
+        "title": "Read webpage through browser bridge",
+        "phase": "execute",
+        "worker": "shell",
+        "command": "powershell -ExecutionPolicy Bypass -File D:\\codex\\tools\\browser-automation\\read-page.ps1 -Url https://example.com -Out D:\\codex\\output\\browser\\page.json -Profile default",
+        "output": "Read webpage through browser bridge failure: 46 chars, 1 non-empty lines.\nHead:\n- Action shell_exec is denied for role reviewer.",
+        "output_ref": {},
+        "output_stats": {
+          "channel": "error-output",
+          "char_count": 46,
+          "line_count": 1,
+          "stored_raw": false
+        },
+        "probe_attempts": 0,
+        "max_probe_attempts": 1,
+        "last_diagnosis": "Diagnosis for Read webpage through browser bridge: 1170 chars, 32 non-empty lines.\nHead:\n- Cheap lane escalation triggered.\n- Original worker: reviewer\n- Escalation model: deepseek-v3.2\n- Reason: Cheap worker fallback or loop detected.\nTail:\n- - escalation triggers\n- Provider error: APIConnectionError: Connection error.\n- Provider error: APIConnectionError: Connection error.\nRaw artifact: ctx_471ed09784a8",
+        "last_diagnosis_ref": {
+          "artifact_id": "ctx_471ed09784a8",
+          "task_id": "8cef4a8597ef42fa9ddaa02c03b491e0",
+          "step_id": "9add5eb6",
+          "channel": "diagnosis-output",
+          "title": "Diagnosis for Read webpage through browser bridge",
+          "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\8cef4a8597ef42fa9ddaa02c03b491e0\\9add5eb6-diagnosis-output-ctx_471ed09784a8.txt",
+          "size_chars": 1170,
+          "line_count": 32,
+          "created_at": "2026-03-20T16:27:52.970870Z",
+          "metadata": {
+            "worker": "reviewer",
+            "phase": "check",
+            "route_model": "deepseek-v3.2",
+            "route_provider": "openai"
+          }
+        }
+      }
+    ],
+    "next_action_required": "Inspect execution evidence and rerun or replace the task; no approval hold was applied.",
+    "failure_pause_policy": "If a long task fails, allow at most one cheap-model-approved probe retry with bounded local cost. If cheap approval is missing, ambiguous, or the retry still fails, pause execution, return a structured error report, and wait for explicit core guidance.",
+    "pause_required": false,
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\8cef4a8597ef42fa9ddaa02c03b491e0\\execution-evidence.json",
+    "execution_evidence_step_count": 2
+  }
+}

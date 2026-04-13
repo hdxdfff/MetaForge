@@ -1,0 +1,83 @@
+{
+  "task_id": "d018e4b28ad543c38273177d8f9d5f90",
+  "task_status": "failed",
+  "phase": "failed",
+  "updated_at": "2026-04-02T21:35:10.863932Z",
+  "heartbeat_at": "2026-04-02T21:35:10.863932Z",
+  "repo_path": "D:\\codex\\orchestrator-mvp",
+  "goal": "Implement the bounded change",
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": "runtime.failure_backlog_automation",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\d018e4b28ad543c38273177d8f9d5f90",
+  "error": "[Errno 13] Permission denied: 'D:\\\\codex\\\\orchestrator-mvp\\\\data\\\\tasks.json.lock'",
+  "title": "Implement the bounded change",
+  "prompt": "Use WSL and QEMU as the default loop for ToyOS changes, keep patches small, preserve bootability, run VM tests, and escalate only for architecture or repeated runtime failures.",
+  "scheduler_hint": {
+    "automation_source": "failure_backlog_automation",
+    "template_id": "toyos-mainline",
+    "template_category": "kernel",
+    "cluster_key": "restore toyos real artifact delivery",
+    "cluster_count": 31,
+    "cluster_status": "attention",
+    "handling_mode": "toyos_replenishment",
+    "dispatch_now": false,
+    "admission_mode": "degraded",
+    "scheduled_by": "runtime.failure_backlog_automation",
+    "decomposition_child": true,
+    "decomposition_parent_task_id": "e72f3d97221745f18901318475256d52",
+    "decomposition_root_task_id": "e72f3d97221745f18901318475256d52",
+    "decomposition_depth": 1,
+    "max_decomposition_depth": 2,
+    "decomposition_child_index": 2,
+    "decomposition_allow_children": true,
+    "decomposition_path_kind": "branch",
+    "decomposition_shared_dependency_group": "e72f3d97221745f18901318475256d52",
+    "decomposition_repair_for": null,
+    "decomposition_dependencies": [
+      "Analyze the current state"
+    ],
+    "admission_lane": "exploration",
+    "admission_reason": "artifact_spec_missing",
+    "requested_execution_mode": "production",
+    "task_type": "exploration_intake",
+    "queue_name": "exploration",
+    "verification_level": "L1",
+    "max_runtime_seconds": 900,
+    "retry_limit": 0,
+    "rollback_rule": "return_to_planner"
+  },
+  "context_package": {},
+  "plan": [],
+  "verification_signals": [
+    {
+      "timestamp": "2026-04-02T21:27:33.307714Z",
+      "kind": "admission_diverted",
+      "success": true,
+      "task_id": "d018e4b28ad543c38273177d8f9d5f90",
+      "admission_lane": "exploration",
+      "admission_reason": "artifact_spec_missing",
+      "execution_mode": "research",
+      "queue_name": "exploration",
+      "task_type": "exploration_intake"
+    }
+  ],
+  "verification_signal_count": 1,
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-02T21:27:33.307714Z",
+        "kind": "admission_diverted",
+        "success": true,
+        "task_id": "d018e4b28ad543c38273177d8f9d5f90",
+        "admission_lane": "exploration",
+        "admission_reason": "artifact_spec_missing",
+        "execution_mode": "research",
+        "queue_name": "exploration",
+        "task_type": "exploration_intake"
+      }
+    ]
+  }
+}

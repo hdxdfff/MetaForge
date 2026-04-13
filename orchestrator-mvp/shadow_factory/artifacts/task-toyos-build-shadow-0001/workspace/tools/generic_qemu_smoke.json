@@ -1,0 +1,123 @@
+{
+  "name": "ToyOS QEMU Regression Suite",
+  "report": "build/generic-qemu-smoke-report.json",
+  "tests": [
+    {
+      "name": "qemu_boot_smoke",
+      "cwd": ".",
+      "shell": true,
+      "command": "rm -f build/qemu-debug.log && timeout 25s qemu-system-i386 -kernel build/kernel.bin -display none -debugcon file:build/qemu-debug.log -global isa-debugcon.iobase=0xe9 -no-reboot -no-shutdown || true",
+      "timeout_seconds": 35,
+      "rounds": 5,
+      "required_passes": 5,
+      "allow_timeout": false,
+      "expected_returncodes": [
+        0
+      ],
+      "log_files": [
+        "build/qemu-debug.log"
+      ],
+      "ordered_pass_markers": true,
+      "min_log_size": 200,
+      "pass_markers": [
+        "ToyOS: kernel_main entered",
+        "ToyOS: GDT and TSS ready",
+        "ToyOS: core subsystems initialized",
+        "ToyOS: memory allocations ready",
+        "VFS: format done",
+        "ToyOS: filesystems ready",
+        "ToyOS: processes created",
+        "ToyOS: scheduler rounds completed",
+        "ToyOS: kernel services online"
+      ],
+      "fail_markers": [
+        "PANIC:",
+        "*** KERNEL PANIC ***"
+      ]
+    },
+    {
+      "name": "qemu_boot_soak",
+      "cwd": ".",
+      "shell": true,
+      "command": "rm -f build/qemu-debug.log && timeout 25s qemu-system-i386 -kernel build/kernel.bin -display none -debugcon file:build/qemu-debug.log -global isa-debugcon.iobase=0xe9 -no-reboot -no-shutdown || true",
+      "timeout_seconds": 35,
+      "rounds": 3,
+      "required_passes": 3,
+      "allow_timeout": false,
+      "expected_returncodes": [
+        0
+      ],
+      "log_files": [
+        "build/qemu-debug.log"
+      ],
+      "ordered_pass_markers": true,
+      "min_log_size": 200,
+      "pass_markers": [
+        "ToyOS: kernel_main entered",
+        "ToyOS: kernel services online"
+      ],
+      "fail_markers": [
+        "PANIC:",
+        "*** KERNEL PANIC ***"
+      ]
+    },
+    {
+      "name": "qemu_user_probe_assertions",
+      "cwd": ".",
+      "shell": true,
+      "command": "rm -f build/qemu-debug.log && timeout 20s qemu-system-i386 -kernel build/kernel.bin -display none -debugcon file:build/qemu-debug.log -global isa-debugcon.iobase=0xe9 -no-reboot -no-shutdown || true",
+      "timeout_seconds": 30,
+      "rounds": 3,
+      "required_passes": 3,
+      "allow_timeout": false,
+      "expected_returncodes": [
+        0
+      ],
+      "log_files": [
+        "build/qemu-debug.log"
+      ],
+      "ordered_pass_markers": true,
+      "min_log_size": 200,
+      "pass_markers": [
+        "ToyOS: user probe complete",
+        "ToyOS: scheduler rounds completed",
+        "ToyOS: kernel services online"
+      ],
+      "fail_markers": [
+        "PANIC:",
+        "*** KERNEL PANIC ***"
+      ]
+    },
+    {
+      "name": "qemu_filesystem_stress_assertions",
+      "cwd": ".",
+      "shell": true,
+      "command": "rm -f build/qemu-debug.log && timeout 20s qemu-system-i386 -kernel build/kernel.bin -display none -debugcon file:build/qemu-debug.log -global isa-debugcon.iobase=0xe9 -no-reboot -no-shutdown || true",
+      "timeout_seconds": 30,
+      "rounds": 3,
+      "required_passes": 3,
+      "allow_timeout": false,
+      "expected_returncodes": [
+        0
+      ],
+      "log_files": [
+        "build/qemu-debug.log"
+      ],
+      "ordered_pass_markers": true,
+      "min_log_size": 340,
+      "pass_markers": [
+        "ToyOS: fs stress start",
+        "ToyOS: fs stress verified",
+        "ToyOS: fs stress complete",
+        "ToyOS: kernel services online"
+      ],
+      "fail_markers": [
+        "PANIC:",
+        "*** KERNEL PANIC ***",
+        "ramfs stress mismatch",
+        "tinyfs stress mismatch",
+        "tinyfs stress reread mismatch"
+      ]
+    }
+  ]
+}

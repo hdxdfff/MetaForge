@@ -1,0 +1,65 @@
+{
+  "task_id": "1468740dbc4f4d52ba291afd1b437ba6",
+  "task_status": "failed",
+  "phase": "failed",
+  "updated_at": "2026-03-19T18:02:39.586217Z",
+  "heartbeat_at": "2026-03-19T18:02:39.586217Z",
+  "repo_path": "D:\\codex",
+  "goal": "Recover stable execution output",
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": "factory-daemon.recovery",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\1468740dbc4f4d52ba291afd1b437ba6",
+  "error": "Recovery targets already satisfied by fresh verified completions and runnable artifact evidence.",
+  "recovery_resolution": "superseded",
+  "title": "Execution recovery: smoke and runnable artifact",
+  "prompt": "Execution recovery task: produce a real completed task and a runnable artifact.",
+  "scheduler_hint": {
+    "recovery_task": true,
+    "scheduled_by": "factory-daemon.recovery",
+    "factory_pool": "ops",
+    "execution_mode": "production",
+    "title": "Execution recovery: smoke and runnable artifact"
+  },
+  "context_package": {},
+  "plan": [
+    {
+      "id": "ad8d4c01",
+      "title": "Write recovery smoke file",
+      "status": "completed",
+      "worker": "shell",
+      "phase": "execute"
+    },
+    {
+      "id": "fd58ffc2",
+      "title": "Probe direct LLM path",
+      "status": "running",
+      "worker": "shell",
+      "phase": "execute"
+    },
+    {
+      "id": "72e3d03f",
+      "title": "Create runnable recovery artifact",
+      "status": "pending",
+      "worker": "shell",
+      "phase": "execute"
+    },
+    {
+      "id": "b0f7acd6",
+      "title": "Verify recovery artifact",
+      "status": "pending",
+      "worker": "shell",
+      "phase": "verify"
+    }
+  ],
+  "result": {
+    "resume_requested_at": "2026-03-19T17:48:34.453978Z",
+    "resume_reason": "Recovery task runner was lost before completion; relaunching detached execution.",
+    "recovery_resolution": "newer_evidence_already_satisfied_target",
+    "state": "recovery_task_superseded",
+    "reason": "Recovery targets already satisfied by fresh verified completions and runnable artifact evidence.",
+    "superseded_at": "2026-03-19T18:02:39.586217Z"
+  }
+}

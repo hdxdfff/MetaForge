@@ -1,0 +1,48 @@
+{
+  "roles": {
+    "guest": [
+      "status",
+      "brain-snapshot"
+    ],
+    "observer": [
+      "status",
+      "brain-snapshot",
+      "operator-report",
+      "inbox",
+      "goals",
+      "daemon-status",
+      "branch-workboard",
+      "branch-status",
+      "organization-workboard",
+      "project-graph"
+    ],
+    "planner": [
+      "status",
+      "brain-snapshot",
+      "operator-report",
+      "inbox",
+      "goals",
+      "daemon-status",
+      "branch-workboard",
+      "branch-status",
+      "organization-workboard",
+      "project-graph",
+      "branch-context",
+      "branch-goal",
+      "branch-capability-goal",
+      "branch-test-goal",
+      "branch-production-goal",
+      "goal-new",
+      "compile-goal",
+      "brain-loop",
+      "dispatch",
+      "change-request",
+      "replan"
+    ],
+    "operator": [
+      "*"
+    ]
+  },
+  "single_control_session": false,
+  "default_role_without_token": "observer"
+}

@@ -1,0 +1,488 @@
+{
+  "updated_at": "2026-04-03T17:15:47.239566Z",
+  "status": "normal",
+  "current_state": {
+    "control_layer_status": "stable",
+    "release_operations_status": "pass",
+    "industrial_readiness_status": "pass",
+    "autonomy_stage": "stage4_confirmed",
+    "stable_autonomy": true,
+    "queue_pressure": "low"
+  },
+  "windows": {
+    "24h": {
+      "hours": 24,
+      "completed_tasks": 40,
+      "verified_completed_tasks": 39,
+      "unverified_completed_tasks": 0,
+      "failed_tasks": 1,
+      "task_success_rate": 0.975,
+      "median_task_cycle_minutes": 15.96,
+      "real_artifacts": 14,
+      "artifacts_total": 14,
+      "real_artifact_pass_rate": 1.0,
+      "artifact_lane_diversity": 3
+    },
+    "7d": {
+      "hours": 168,
+      "completed_tasks": 107,
+      "verified_completed_tasks": 107,
+      "unverified_completed_tasks": 0,
+      "failed_tasks": 245,
+      "task_success_rate": 0.304,
+      "median_task_cycle_minutes": 10.28,
+      "real_artifacts": 14,
+      "artifacts_total": 14,
+      "real_artifact_pass_rate": 1.0,
+      "artifact_lane_diversity": 3
+    },
+    "30d": {
+      "hours": 720,
+      "completed_tasks": 211,
+      "verified_completed_tasks": 211,
+      "unverified_completed_tasks": 0,
+      "failed_tasks": 249,
+      "task_success_rate": 0.4587,
+      "median_task_cycle_minutes": 8.97,
+      "real_artifacts": 14,
+      "artifacts_total": 14,
+      "real_artifact_pass_rate": 1.0,
+      "artifact_lane_diversity": 3
+    }
+  },
+  "productivity": {
+    "trend": "up",
+    "24h_score": 65,
+    "7d_score": 133,
+    "30d_score": 237
+  },
+  "task_pools": {
+    "limits": {
+      "P0": 4,
+      "P1": 2,
+      "P2": 1,
+      "P3": 1
+    },
+    "priority_order": [
+      "P0",
+      "P1",
+      "P2",
+      "P3"
+    ],
+    "notes": [
+      "P0 stays highest priority for production delivery and regressions.",
+      "P1 is repair-first and rollback-first.",
+      "P2 is budgeted capability growth.",
+      "P3 is research and only runs when the system is healthy."
+    ]
+  },
+  "budgets": {
+    "self_repair_daily": 5,
+    "artifact_growth_daily": 2,
+    "capability_expansion_daily": 1,
+    "research_daily": 1
+  },
+  "budget_control": {
+    "mode": "budgeted",
+    "policy": {
+      "P0": {
+        "limit": 4,
+        "admission": "always_on",
+        "priority": "production_delivery"
+      },
+      "P1": {
+        "limit": 2,
+        "admission": "repair_first",
+        "priority": "self_repair_and_rollback"
+      },
+      "P2": {
+        "limit": 1,
+        "admission": "budgeted_growth",
+        "priority": "capability_expansion_and_artifact_growth"
+      },
+      "P3": {
+        "limit": 1,
+        "admission": "healthy_only",
+        "priority": "research"
+      }
+    },
+    "daily_budgets": {
+      "self_repair_daily": 5,
+      "artifact_growth_daily": 2,
+      "capability_expansion_daily": 1,
+      "research_daily": 1
+    },
+    "usage_24h": {
+      "self_repair_daily": {
+        "limit": 5,
+        "used_24h": 3,
+        "remaining_24h": 2
+      },
+      "artifact_growth_daily": {
+        "limit": 2,
+        "used_24h": 0,
+        "remaining_24h": 2
+      },
+      "capability_expansion_daily": {
+        "limit": 1,
+        "used_24h": 9,
+        "remaining_24h": 0
+      },
+      "research_daily": {
+        "limit": 1,
+        "used_24h": 0,
+        "remaining_24h": 1
+      }
+    },
+    "gates": {
+      "allow_p0": true,
+      "allow_p1": true,
+      "allow_p2": true,
+      "allow_p3": true,
+      "repair_first": false,
+      "budget_enforced": true
+    }
+  },
+  "daily_actions": {
+    "verification_refresh": {
+      "required": true,
+      "met": true,
+      "source": "D:\\codex\\orchestrator-mvp\\data\\industrial_readiness.json"
+    },
+    "release_readiness_refresh": {
+      "required": true,
+      "met": true,
+      "source": "D:\\codex\\orchestrator-mvp\\data\\release_operations_status.json"
+    },
+    "rollback_drill": {
+      "required": true,
+      "met": true,
+      "source": "D:\\codex\\orchestrator-mvp\\data\\release_rollback_drill.json"
+    },
+    "evidence_integrity_check": {
+      "required": true,
+      "met": true,
+      "source": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+    }
+  },
+  "seven_day_acceptance": {
+    "durability": true,
+    "throughput": true,
+    "conversion": true,
+    "generalization": true,
+    "daily_actions_met": true,
+    "status": "pass"
+  },
+  "blocked_to_done": {
+    "status": "pass",
+    "count": 1,
+    "ledger_path": "D:\\codex\\orchestrator-mvp\\data\\blocked_to_done_transitions.json",
+    "first_created_at": "2026-04-03T15:17:58.188666Z",
+    "last_reduced_at": "2026-04-03T15:17:58.188666Z",
+    "burndown_rate": 1.0
+  },
+  "historical_failure_debt_count": 95,
+  "historical_failure_debt_severity": "high",
+  "historical_failure_debt_burndown_rate": 0.0,
+  "historical_failure_debt_last_reduced_at": "2026-04-03T17:03:47.578896Z",
+  "failure_taxonomy_path": "D:\\codex\\orchestrator-mvp\\data\\industrial_failure_taxonomy.json",
+  "failure_taxonomy": {
+    "updated_at": "2026-04-03T17:15:47.235173Z",
+    "status": "pass",
+    "window_hours": 720,
+    "total_classified_failures_30d": 249,
+    "categories": {
+      "artifact_audit_failure": {
+        "count_30d": 113,
+        "last_seen_at": "2026-04-03T16:20:19.844767Z",
+        "default_strategy": {
+          "priority": "P1",
+          "repair_kind": "artifact_repair",
+          "action": "restore evidence, manifest, or reproducibility assets and rerun artifact audit",
+          "verification": [
+            "artifact audit",
+            "manifest check",
+            "evidence check"
+          ]
+        },
+        "sample_task_ids": [
+          "df1cc9c631eb4b5fb1cc8c146d5d97ad",
+          "fdc383758e3a478cbcb77181cb8ff779",
+          "954c6af729e944f8a73d467fb3c9826c",
+          "0dead6687d5f4832bffaaa66b926e3bf",
+          "41eaada3a400443982bb2414df18a845"
+        ]
+      },
+      "verification_failure": {
+        "count_30d": 60,
+        "last_seen_at": "2026-04-03T13:50:57.693777Z",
+        "default_strategy": {
+          "priority": "P1",
+          "repair_kind": "verification_repair",
+          "action": "add a minimal repro plus the missing validator or assertion and rerun verification",
+          "verification": [
+            "validator smoke",
+            "regression check",
+            "status refresh"
+          ]
+        },
+        "sample_task_ids": [
+          "d27859a51ce2419fbe15e1f6ef4100b9",
+          "1e27ee3aed3c47d6b92c6b931868a639",
+          "941a1f2d427241809948be9c642da0c8",
+          "1bbcba74b8a04861b4a909b5d7a80db4",
+          "c3a6bac078e1441e877f3fc39b245d48"
+        ]
+      },
+      "rollback_failure": {
+        "count_30d": 38,
+        "last_seen_at": "2026-04-03T12:48:36.774358Z",
+        "default_strategy": {
+          "priority": "P1",
+          "repair_kind": "rollback_repair",
+          "action": "fix rollback wiring, then rerun rollback drill before any expansion",
+          "verification": [
+            "rollback drill",
+            "release readiness",
+            "status refresh"
+          ]
+        },
+        "sample_task_ids": [
+          "07adc124c1e64673950aee629f9f873a",
+          "0ce3d51bb624449bac66b7332d287797",
+          "17028ec58bce4b97b8a9ea1c6bc6f56a",
+          "264e66a851b8499fb6ff76be1df30947",
+          "3f44c172cd504c11b9572f1ab841ac1a"
+        ]
+      },
+      "execution_failure": {
+        "count_30d": 15,
+        "last_seen_at": "2026-04-03T12:48:36.773784Z",
+        "default_strategy": {
+          "priority": "P0",
+          "repair_kind": "execution_repair",
+          "action": "repair the failing execution path with the smallest bounded patch and rerun local execution",
+          "verification": [
+            "local execution",
+            "py_compile",
+            "status refresh"
+          ]
+        },
+        "sample_task_ids": [
+          "4e89edc950234b3ebd851408e50d29f6",
+          "a0d24a66d6ce4cef9b200658d760e117",
+          "ac5dc764b8394efa99e9ccfd9b19c270",
+          "bb174aa29f2c43239f3c1f469f246281",
+          "e5b4726c62ae435680c8f7280216b7d5"
+        ]
+      },
+      "dispatch_failure": {
+        "count_30d": 11,
+        "last_seen_at": "2026-04-03T16:22:40.431880Z",
+        "default_strategy": {
+          "priority": "P1",
+          "repair_kind": "dispatch_repair",
+          "action": "repair admission, queue, or scheduler routing and rerun a dispatch smoke",
+          "verification": [
+            "dispatch smoke",
+            "queue sanity",
+            "status refresh"
+          ]
+        },
+        "sample_task_ids": [
+          "288e2bd72b4c476488525ecad61e701f",
+          "49c1b390568142fd9a3071b00c769ad2",
+          "a9661a8d6bb64c65829e379c8b9816f5",
+          "ce92f1e6caf94b8b81566a034a96aa6f",
+          "6b31c460999447479c3cc92d71eeee2b"
+        ]
+      },
+      "environment_failure": {
+        "count_30d": 7,
+        "last_seen_at": "2026-04-02T22:11:48.661533Z",
+        "default_strategy": {
+          "priority": "P1",
+          "repair_kind": "environment_repair",
+          "action": "repair the runtime environment, paths, dependencies, or sandbox assumptions",
+          "verification": [
+            "environment smoke",
+            "path check",
+            "status refresh"
+          ]
+        },
+        "sample_task_ids": [
+          "0d085850ebb64740961a50774c3d52fa",
+          "7c8abc88d2664d76b2b871d5de89c4ed",
+          "d62cfd22cdd240bb8ce57db55051f6f1",
+          "b064f2b7579743c89dbbd0fc46bdb5c9",
+          "22de2b4cf67f4c26825c41d6ed7618b1"
+        ]
+      },
+      "policy_gate_failure": {
+        "count_30d": 5,
+        "last_seen_at": "2026-04-02T09:50:37.527384Z",
+        "default_strategy": {
+          "priority": "P1",
+          "repair_kind": "policy_repair",
+          "action": "adjust the policy or gate inputs with a minimal safe change and rerun the gate",
+          "verification": [
+            "gate refresh",
+            "release readiness",
+            "status refresh"
+          ]
+        },
+        "sample_task_ids": [
+          "3c95090cf4b9418e851443a0679e90e9",
+          "c3d76ef63a394796b1857a65af4a18ca",
+          "324c2ffdabfc49f8b63e5978bb8c1322",
+          "563aa6e9a5f548379b10176dfe792975",
+          "b91474e40db5431f848f23139a96de4a"
+        ]
+      }
+    },
+    "default_strategies": {
+      "dispatch_failure": {
+        "priority": "P1",
+        "repair_kind": "dispatch_repair",
+        "action": "repair admission, queue, or scheduler routing and rerun a dispatch smoke",
+        "verification": [
+          "dispatch smoke",
+          "queue sanity",
+          "status refresh"
+        ]
+      },
+      "execution_failure": {
+        "priority": "P0",
+        "repair_kind": "execution_repair",
+        "action": "repair the failing execution path with the smallest bounded patch and rerun local execution",
+        "verification": [
+          "local execution",
+          "py_compile",
+          "status refresh"
+        ]
+      },
+      "verification_failure": {
+        "priority": "P1",
+        "repair_kind": "verification_repair",
+        "action": "add a minimal repro plus the missing validator or assertion and rerun verification",
+        "verification": [
+          "validator smoke",
+          "regression check",
+          "status refresh"
+        ]
+      },
+      "artifact_audit_failure": {
+        "priority": "P1",
+        "repair_kind": "artifact_repair",
+        "action": "restore evidence, manifest, or reproducibility assets and rerun artifact audit",
+        "verification": [
+          "artifact audit",
+          "manifest check",
+          "evidence check"
+        ]
+      },
+      "rollback_failure": {
+        "priority": "P1",
+        "repair_kind": "rollback_repair",
+        "action": "fix rollback wiring, then rerun rollback drill before any expansion",
+        "verification": [
+          "rollback drill",
+          "release readiness",
+          "status refresh"
+        ]
+      },
+      "environment_failure": {
+        "priority": "P1",
+        "repair_kind": "environment_repair",
+        "action": "repair the runtime environment, paths, dependencies, or sandbox assumptions",
+        "verification": [
+          "environment smoke",
+          "path check",
+          "status refresh"
+        ]
+      },
+      "policy_gate_failure": {
+        "priority": "P1",
+        "repair_kind": "policy_repair",
+        "action": "adjust the policy or gate inputs with a minimal safe change and rerun the gate",
+        "verification": [
+          "gate refresh",
+          "release readiness",
+          "status refresh"
+        ]
+      },
+      "permission_failure": {
+        "priority": "P1",
+        "repair_kind": "permission_repair",
+        "action": "repair path access, execution policy, or privilege boundary and rerun the task",
+        "verification": [
+          "permission smoke",
+          "workspace write check",
+          "status refresh"
+        ]
+      },
+      "provider_failure": {
+        "priority": "P2",
+        "repair_kind": "fallback_repair",
+        "action": "switch to fallback provider, cheap-first routing, or cached evidence path",
+        "verification": [
+          "fallback smoke",
+          "provider probe",
+          "status refresh"
+        ]
+      },
+      "flaky_failure": {
+        "priority": "P1",
+        "repair_kind": "stability_repair",
+        "action": "stabilize retries, isolate nondeterminism, and rerun the failing path repeatedly",
+        "verification": [
+          "repeat smoke",
+          "flake repro",
+          "status refresh"
+        ]
+      }
+    }
+  },
+  "release_freeze": {
+    "status": "normal",
+    "freeze_triggered": false,
+    "freeze_reasons": [],
+    "allow_p0": true,
+    "allow_p1": true,
+    "allow_p2": true,
+    "allow_p3": true,
+    "repair_first": false,
+    "release_freeze": false
+  },
+  "recommendations": [
+    "Keep P0 and repair-first lanes active while the freeze policy is degraded or frozen.",
+    "Budget self-repair and capability growth explicitly before widening concurrency.",
+    "Use the failure taxonomy to generate repair tasks rather than hand-adding generic follow-ups.",
+    "Track historical failure debt separately from current operating state so normal operation can remain normal.",
+    "Treat medium-severity open incidents as debt to clear, not as a reason to degrade the live operating state."
+  ],
+  "source_files": {
+    "tasks": "D:\\codex\\orchestrator-mvp\\data\\tasks.json",
+    "task_history": "D:\\codex\\orchestrator-mvp\\data\\task_history.json",
+    "task_archive": "D:\\codex\\orchestrator-mvp\\data\\task_archive.json",
+    "artifact_registry": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json",
+    "continuity_metrics": "D:\\codex\\orchestrator-mvp\\data\\continuity_metrics.json",
+    "stage5_dashboard": "D:\\codex\\orchestrator-mvp\\data\\stage5_dashboard.json",
+    "industrial_readiness": "D:\\codex\\orchestrator-mvp\\data\\industrial_readiness.json",
+    "release_operations": "D:\\codex\\orchestrator-mvp\\data\\release_operations_status.json",
+    "control_layer": "D:\\codex\\orchestrator-mvp\\data\\control_layer_status.json",
+    "autonomy_score": "D:\\codex\\orchestrator-mvp\\data\\autonomy_score.json",
+    "queue_pressure": "D:\\codex\\orchestrator-mvp\\data\\queue_pressure_analysis.json",
+    "incident_summary": "D:\\codex\\orchestrator-mvp\\data\\incident_ledger_summary.json",
+    "rollback_drill": "D:\\codex\\orchestrator-mvp\\data\\release_rollback_drill.json",
+    "evolution_ledger": "D:\\codex\\orchestrator-mvp\\data\\evolution_ledger.json"
+  },
+  "acceptance": {
+    "7d_stability_pass": true,
+    "durability_pass": true,
+    "throughput_pass": true,
+    "conversion_pass": true,
+    "generalization_pass": true,
+    "daily_actions_met": true
+  }
+}

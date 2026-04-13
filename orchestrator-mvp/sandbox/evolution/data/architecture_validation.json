@@ -1,0 +1,124 @@
+{
+  "updated_at": "2026-03-12T07:09:58.451248Z",
+  "blueprint_system": "AI Factory OS",
+  "module_results": [
+    {
+      "module": "taskgraph_engine",
+      "exists": true,
+      "aliases": [
+        "runtime.taskgraph_engine",
+        "tools.taskgraph_compiler"
+      ]
+    },
+    {
+      "module": "agent_runtime",
+      "exists": true,
+      "aliases": [
+        "runtime",
+        "app.worker_adapters",
+        "app.orchestrator"
+      ]
+    },
+    {
+      "module": "tool_system",
+      "exists": true,
+      "aliases": [
+        "tools.tool_registry",
+        "tools.capability_registry",
+        "tools.vm_orchestrator"
+      ]
+    },
+    {
+      "module": "evolution_engine",
+      "exists": true,
+      "aliases": [
+        "tools.evolution_control",
+        "tools.experiment_planner",
+        "tools.experiment_executor",
+        "tools.experiment_evaluator"
+      ]
+    },
+    {
+      "module": "product_generator",
+      "exists": true,
+      "aliases": [
+        "runtime.platform_generator",
+        "tools.generate_system_workspace"
+      ]
+    },
+    {
+      "module": "context_kernel",
+      "exists": true,
+      "aliases": [
+        "tools.context_kernel"
+      ]
+    },
+    {
+      "module": "resident_core_agent",
+      "exists": true,
+      "aliases": [
+        "tools.codex_control",
+        "tools.meta_factory_control"
+      ]
+    },
+    {
+      "module": "architecture_engine",
+      "exists": true,
+      "aliases": [
+        "tools.architecture_validator",
+        "tools.code_knowledge_graph"
+      ]
+    },
+    {
+      "module": "code_knowledge_graph",
+      "exists": true,
+      "aliases": [
+        "tools.code_knowledge_graph"
+      ]
+    },
+    {
+      "module": "verification_engine",
+      "exists": true,
+      "aliases": [
+        "tools.verification_engine",
+        "tools.quality_system",
+        "tools.soak_validation"
+      ]
+    }
+  ],
+  "missing_modules": [],
+  "rule_results": [
+    {
+      "rule": "agents cannot import runtime",
+      "passed": true,
+      "violations": []
+    },
+    {
+      "rule": "router should avoid embedded persistence",
+      "passed": true,
+      "violations": []
+    },
+    {
+      "rule": "runtime modules cannot depend on app transport handlers",
+      "passed": true,
+      "violations": []
+    },
+    {
+      "rule": "tools may depend on runtime and state, but not app HTTP layer",
+      "passed": true,
+      "violations": []
+    },
+    {
+      "rule": "verification must gate promotion of architecture-affecting changes",
+      "passed": true,
+      "violations": []
+    },
+    {
+      "rule": "engineering modules should have an owner team",
+      "passed": true,
+      "violations": []
+    }
+  ],
+  "status": "pass",
+  "violation_count": 0
+}

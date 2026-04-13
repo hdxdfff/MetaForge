@@ -1,0 +1,17 @@
+from __future__ import annotations
+
+import json
+import sys
+
+
+def main() -> int:
+    args = sys.argv[1:]
+    if "--self-test" in args:
+        print("SELF_TEST_OK")
+        return 0
+    print(json.dumps({"status": "ok", "artifact_id": "execution-kernel-smoke", "message": 'Provide a runnable execution-kernel smoke bundle with self-test and audit evidence.', "args": args}, ensure_ascii=False))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

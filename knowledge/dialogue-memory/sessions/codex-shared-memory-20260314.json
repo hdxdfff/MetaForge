@@ -1,0 +1,33 @@
+{
+  "session_id": "codex-shared-memory-20260314",
+  "source": "codex",
+  "title": "Codex MetaForge shared memory rollout",
+  "workspace": "D:\\codex",
+  "summary": "Build a local dialogue memory bridge and connect Codex conversations to the shared MetaForge snapshot/context package.",
+  "topics": [
+    "codex-memory",
+    "metaforge"
+  ],
+  "constraints": [
+    "Explicit validation is required before claiming delivery."
+  ],
+  "decisions": [
+    "Use local dialogue ledger as the shared memory bridge."
+  ],
+  "tags": [],
+  "artifacts": [],
+  "messages": [
+    {
+      "role": "user",
+      "content": "Build a local storage memory mechanism so Codex conversations can share state with the MetaForge system.",
+      "created_at": "2026-03-13T22:16:20.602058Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Use the existing memory/context framework to build a shared dialogue ledger and connect it into the MetaForge snapshot and context package.",
+      "created_at": "2026-03-13T22:16:20.602058Z"
+    }
+  ],
+  "created_at": "2026-03-13T22:16:20.602058Z",
+  "updated_at": "2026-03-13T22:16:20.602058Z"
+}

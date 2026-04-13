@@ -1,0 +1,54 @@
+services:
+  model-gateway:
+    image: python:3.11-slim
+    working_dir: /workspace
+    command: >
+      sh -c "pip install --no-cache-dir -r requirements.txt &&
+      uvicorn tools.openwebui_model_gateway:app --host 0.0.0.0 --port 8711"
+    env_file:
+      - .env
+    environment:
+      MODEL_GATEWAY_POLICY_PATH: /workspace/docs/openwebui_model_policy.json
+      MODEL_GATEWAY_SYSTEM_PROMPT_PATH: /workspace/docs/openwebui_system_prompt.md
+      MODEL_GATEWAY_UPSTREAM_BASE_URL: ${CODING_PLAN_BASE_URL}
+      MODEL_GATEWAY_UPSTREAM_API_KEY: ${CODING_PLAN_API_KEY}
+    volumes:
+      - ./:/workspace
+    ports:
+      - "8711:8711"
+
+  controller-api:
+    image: python:3.11-slim
+    working_dir: /workspace
+    command: >
+      sh -c "pip install --no-cache-dir -r requirements.txt &&
+      uvicorn app.controller_api:app --host 0.0.0.0 --port 8710"
+    env_file:
+      - .env
+    ports:
+      - "8710:8710"
+    volumes:
+      - ./:/workspace
+
+  openwebui:
+    image: ghcr.io/open-webui/open-webui:v0.8.6
+    depends_on:
+      - model-gateway
+      - controller-api
+    environment:
+      WEBUI_URL: http://127.0.0.1:3001
+      WEBUI_SECRET_KEY: ${WEBUI_SECRET_KEY:-replace-with-a-long-random-secret}
+      ENABLE_OLLAMA_API: "false"
+      OPENAI_API_BASE_URLS: http://model-gateway:8711
+      OPENAI_API_KEY: ${CODING_PLAN_API_KEY}
+      DEFAULT_MODELS: minimax-m2.5
+      DEFAULT_PINNED_MODELS: minimax-m2.5,kimi-k2.5,vision-pro,vision-lite
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "3001:8080"
+    volumes:
+      - openwebui-data:/app/backend/data
+
+volumes:
+  openwebui-data:

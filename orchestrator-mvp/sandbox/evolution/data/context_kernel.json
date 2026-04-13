@@ -1,0 +1,41 @@
+{
+  "updated_at": "2026-03-12T07:08:52.525279Z",
+  "resident_core_agent": {
+    "name": "Resident Core Agent",
+    "mode": "codex-first",
+    "role": "Supervise cheap-first local automation, review escalations, and keep Codex as the primary operator interface.",
+    "expensive_model_policy": "Use premium reasoning only for contradictions, repeated failures, architecture conflicts, security boundaries, and high-risk actions.",
+    "operator_interface": "codex",
+    "updated_at": null
+  },
+  "hot_context": {
+    "updated_at": "2026-03-12T07:08:52.525279Z",
+    "control_center": {
+      "paused": false,
+      "status": "active",
+      "updated_at": "2026-03-09T05:05:09.879563Z",
+      "reason": "test",
+      "resident": true
+    },
+    "policy_version": "9",
+    "active_task_count": 1,
+    "failed_task_count": 0,
+    "open_escalation_count": 1,
+    "active_tasks": [
+      {
+        "id": "ccb165ed8549456997edf05f8a021395",
+        "status": "waiting_approval",
+        "goal": "goal_4af4102d2f",
+        "repo_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+        "updated_at": "2026-03-11T16:00:28.351326Z"
+      }
+    ],
+    "failed_tasks": []
+  },
+  "project_summary_count": 5,
+  "project_context_kernel_count": 5,
+  "project_context_compaction_count": 5,
+  "decision_count": 13,
+  "failure_pattern_count": 1,
+  "escalation_count": 1
+}

@@ -1,0 +1,8 @@
+{
+  "copied": {
+    "D:\\codex\\generated\\toy-os-demo\\build-report.json": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\harness_runs\\hrn_20260328_002\\evidence\\build-report.json",
+    "D:\\codex\\generated\\toy-os-demo\\build\\generic-qemu-smoke-report.json": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\harness_runs\\hrn_20260328_002\\evidence\\qemu-smoke-report.json",
+    "D:\\codex\\generated\\toy-os-demo\\build\\qemu-debug.log": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\harness_runs\\hrn_20260328_002\\evidence\\qemu-output.txt"
+  },
+  "missing": []
+}

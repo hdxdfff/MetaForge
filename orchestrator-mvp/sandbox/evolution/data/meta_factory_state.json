@@ -1,0 +1,1089 @@
+{
+  "updated_at": "2026-03-12T07:09:31.481560Z",
+  "mode": "cheap-first-meta-factory",
+  "core_budget_target": "<=15% strong-model ratio under runtime upgrade policy; actual usage depends on failures",
+  "loops": {
+    "maintenance": {
+      "failed_or_paused_tasks": 1,
+      "recent_failed_task_ids": [
+        "ccb165ed8549456997edf05f8a021395"
+      ],
+      "network_status": "online",
+      "current_proxy": "http://127.0.0.1:7890",
+      "open_core_messages": 1,
+      "suggested_next_actions": [
+        "review paused tasks and convert them into bounded follow-up tasks",
+        "triage open core messages"
+      ]
+    },
+    "database": {
+      "commands": {
+        "mysql": {
+          "available": false,
+          "path": null,
+          "version": null
+        },
+        "mysqldump": {
+          "available": false,
+          "path": null,
+          "version": null
+        },
+        "mysqladmin": {
+          "available": false,
+          "path": null,
+          "version": null
+        },
+        "psql": {
+          "available": false,
+          "path": null,
+          "version": null
+        },
+        "gsql": {
+          "available": false,
+          "path": null,
+          "version": null
+        },
+        "docker": {
+          "available": true,
+          "path": "C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.EXE",
+          "version": "Docker version 29.2.1, build a5c7197"
+        },
+        "java": {
+          "available": false,
+          "path": null,
+          "version": null
+        }
+      },
+      "workspaces": [
+        {
+          "path": "D:\\?????",
+          "exists": false,
+          "sql_files": 0,
+          "docs": [],
+          "runtime_hints": []
+        },
+        {
+          "path": "D:\\codex\\orchestrator-mvp",
+          "exists": true,
+          "sql_files": 0,
+          "docs": [
+            "README.md",
+            "LAUNCH_PACK.md",
+            "README.md"
+          ],
+          "runtime_hints": [
+            "docker-compose"
+          ]
+        }
+      ]
+    },
+    "telemetry": {
+      "updated_at": "2026-03-12T07:08:59.100550Z",
+      "task_total": 17,
+      "task_completed": 3,
+      "task_failed": 0,
+      "task_waiting": 1,
+      "task_success_rate": 0.1765,
+      "cheap_calls_total": 0,
+      "core_escalations_total": 0,
+      "meta_factory_status": "attention",
+      "candidate_count": 3
+    },
+    "evaluation": {
+      "updated_at": "2026-03-12T07:08:59.200954Z",
+      "telemetry_snapshot": {
+        "updated_at": "2026-03-12T07:08:59.100550Z",
+        "task_total": 17,
+        "task_completed": 3,
+        "task_failed": 0,
+        "task_waiting": 1,
+        "task_success_rate": 0.1765,
+        "cheap_calls_total": 0,
+        "core_escalations_total": 0,
+        "meta_factory_status": "attention",
+        "candidate_count": 3
+      },
+      "findings": [],
+      "status": "stable"
+    },
+    "agent_market": {
+      "updated_at": "2026-03-12T07:08:59.311009Z",
+      "agents": [
+        {
+          "agent": "coder_agent",
+          "role": "coder",
+          "success_rate": 0.0,
+          "avg_duration": 0.0,
+          "cost_score": 0.0,
+          "runs": 0
+        },
+        {
+          "agent": "reviewer_agent",
+          "role": "reviewer",
+          "success_rate": 0.0,
+          "avg_duration": 1.0,
+          "cost_score": 0.0,
+          "runs": 6
+        },
+        {
+          "agent": "tester_agent",
+          "role": "tester",
+          "success_rate": 0.0,
+          "avg_duration": 1.0,
+          "cost_score": 0.0,
+          "runs": 3
+        }
+      ]
+    },
+    "architecture_search": {
+      "updated_at": "2026-03-12T07:08:59.412174Z",
+      "proposal_count": 1,
+      "proposals": [
+        {
+          "id": "arch-2026-03-12T070-market",
+          "created_at": "2026-03-12T07:08:59.411173Z",
+          "reason": "At least one agent underperforms in the market.",
+          "proposal": "Run parallel cheap-worker competition before reviewer selection on targeted tasks.",
+          "expected_gain": "better cheap-lane output selection",
+          "status": "proposed"
+        }
+      ]
+    },
+    "product_discovery": {
+      "updated_at": "2026-03-12T07:08:59.526879Z",
+      "idea_count": 3,
+      "ideas": [
+        {
+          "id": "idea-network-lab-assistant",
+          "created_at": "2026-03-12T07:08:59.525869Z",
+          "name": "Network Lab Assistant",
+          "source": "local task history",
+          "status": "discovered"
+        },
+        {
+          "id": "idea-db-lab-assistant",
+          "created_at": "2026-03-12T07:08:59.525869Z",
+          "name": "Database Lab Assistant",
+          "source": "local task history",
+          "status": "discovered"
+        },
+        {
+          "id": "idea-systems-lab-factory",
+          "created_at": "2026-03-12T07:08:59.525869Z",
+          "name": "Systems Lab Factory",
+          "source": "local task history",
+          "status": "discovered"
+        }
+      ]
+    },
+    "self_patch": {
+      "candidates": 9,
+      "merged": 9,
+      "waiting_approval": 0,
+      "blocked": 0
+    },
+    "sandbox": {
+      "updated_at": "2026-03-12T07:09:31.006060Z",
+      "candidate_count": 9,
+      "sandbox_root": "D:\\codex\\orchestrator-mvp\\sandbox\\evolution",
+      "mirrored_paths": [
+        "D:\\codex\\orchestrator-mvp\\sandbox\\evolution\\templates",
+        "D:\\codex\\orchestrator-mvp\\sandbox\\evolution\\data"
+      ],
+      "status": "ready"
+    },
+    "qa": {
+      "ok": true,
+      "compile_app": true,
+      "compile_tools": true
+    },
+    "quality": {
+      "updated_at": "2026-03-12T07:09:31.123145Z",
+      "overall_score": 0.6354,
+      "status": "attention",
+      "task_score": 0.15,
+      "platform_scores": [
+        {
+          "platform_id": "platform_d33a56cc79",
+          "name": "AI Research Factory",
+          "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\ai-research-factory",
+          "required_paths_present": 5,
+          "required_paths_total": 5,
+          "capability_count": 0,
+          "quality_score": 0.77,
+          "quality_status": "promote",
+          "runtime_health": "healthy",
+          "runtime_status": "ready",
+          "last_checked": "2026-03-09T09:18:28.634861Z"
+        },
+        {
+          "platform_id": "platform_8855699f64",
+          "name": "AI Agent Factory",
+          "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\ai-agent-factory",
+          "required_paths_present": 5,
+          "required_paths_total": 5,
+          "capability_count": 2,
+          "quality_score": 0.97,
+          "quality_status": "promote",
+          "runtime_health": "healthy",
+          "runtime_status": "ready",
+          "last_checked": "2026-03-09T09:18:28.635861Z"
+        },
+        {
+          "platform_id": "platform_009b511d6b",
+          "name": "build ai-video-factory",
+          "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\build-ai-video-factory",
+          "required_paths_present": 5,
+          "required_paths_total": 5,
+          "capability_count": 2,
+          "quality_score": 0.97,
+          "quality_status": "promote",
+          "runtime_health": "healthy",
+          "runtime_status": "ready",
+          "last_checked": "2026-03-09T09:18:28.635861Z"
+        },
+        {
+          "platform_id": "platform_8590e6bcbe",
+          "name": "AI Web Platform Factory",
+          "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\ai-web-platform-factory",
+          "required_paths_present": 5,
+          "required_paths_total": 5,
+          "capability_count": 2,
+          "quality_score": 0.97,
+          "quality_status": "promote",
+          "runtime_health": "healthy",
+          "runtime_status": "ready",
+          "last_checked": "2026-03-09T09:18:28.635861Z"
+        },
+        {
+          "platform_id": "platform_df90392702",
+          "name": "Expand capability routing patterns",
+          "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\expand-capability-routing-patterns",
+          "required_paths_present": 5,
+          "required_paths_total": 5,
+          "capability_count": 2,
+          "quality_score": 0.97,
+          "quality_status": "promote",
+          "runtime_health": "healthy",
+          "runtime_status": "ready",
+          "last_checked": "2026-03-10T07:29:33.818932Z"
+        },
+        {
+          "platform_id": "platform_79a3e0e03e",
+          "name": "Improve cheap agent prompts",
+          "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\improve-cheap-agent-prompts",
+          "required_paths_present": 5,
+          "required_paths_total": 5,
+          "capability_count": 2,
+          "quality_score": 0.97,
+          "quality_status": "promote",
+          "runtime_health": "healthy",
+          "runtime_status": "ready",
+          "last_checked": "2026-03-10T08:19:37.356301Z"
+        },
+        {
+          "platform_id": "platform_464dac2a0b",
+          "name": "Optimize task scheduler from agent experience",
+          "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\optimize-task-scheduler-from-agent-experience",
+          "required_paths_present": 5,
+          "required_paths_total": 5,
+          "capability_count": 2,
+          "quality_score": 0.97,
+          "quality_status": "promote",
+          "runtime_health": "healthy",
+          "runtime_status": "ready",
+          "last_checked": "2026-03-10T08:20:37.834091Z"
+        },
+        {
+          "platform_id": "platform_fa6557b2cd",
+          "name": "Strengthen agent orchestration capability",
+          "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-agent-orchestration-capability",
+          "required_paths_present": 5,
+          "required_paths_total": 5,
+          "capability_count": 2,
+          "quality_score": 0.97,
+          "quality_status": "promote",
+          "runtime_health": "healthy",
+          "runtime_status": "ready",
+          "last_checked": "2026-03-11T07:31:45.756699Z"
+        },
+        {
+          "platform_id": "platform_e09cfd3561",
+          "name": "Strengthen webapp generation capability",
+          "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-webapp-generation-capability",
+          "required_paths_present": 5,
+          "required_paths_total": 5,
+          "capability_count": 2,
+          "quality_score": 0.97,
+          "quality_status": "promote",
+          "runtime_health": "healthy",
+          "runtime_status": "ready",
+          "last_checked": "2026-03-11T07:31:45.932293Z"
+        },
+        {
+          "platform_id": "platform_c3bb90675c",
+          "name": "Expand tool extension coverage",
+          "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\expand-tool-extension-coverage",
+          "required_paths_present": 5,
+          "required_paths_total": 5,
+          "capability_count": 2,
+          "quality_score": 0.97,
+          "quality_status": "promote",
+          "runtime_health": "healthy",
+          "runtime_status": "ready",
+          "last_checked": "2026-03-11T07:31:46.150239Z"
+        },
+        {
+          "platform_id": "platform_38c67a4233",
+          "name": "Strengthen agent orchestration capability",
+          "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-agent-orchestration-capability",
+          "required_paths_present": 5,
+          "required_paths_total": 5,
+          "capability_count": 2,
+          "quality_score": 0.97,
+          "quality_status": "promote",
+          "runtime_health": "healthy",
+          "runtime_status": "ready",
+          "last_checked": "2026-03-11T07:31:46.301807Z"
+        },
+        {
+          "platform_id": "platform_b9e5c175ad",
+          "name": "Continue ToyOS kernel branch work with mainline context reuse",
+          "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\continue-toyos-kernel-branch-work-with-mainline-context-reuse",
+          "required_paths_present": 5,
+          "required_paths_total": 5,
+          "capability_count": 2,
+          "quality_score": 0.97,
+          "quality_status": "promote",
+          "runtime_health": "healthy",
+          "runtime_status": "ready",
+          "last_checked": "2026-03-11T07:31:46.522290Z"
+        },
+        {
+          "platform_id": "platform_3f9a992241",
+          "name": "Deepen repo learning and knowledge routing reuse",
+          "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\deepen-repo-learning-and-knowledge-routing-reuse",
+          "required_paths_present": 5,
+          "required_paths_total": 5,
+          "capability_count": 2,
+          "quality_score": 0.97,
+          "quality_status": "promote",
+          "runtime_health": "healthy",
+          "runtime_status": "ready",
+          "last_checked": "2026-03-11T07:31:46.704756Z"
+        },
+        {
+          "platform_id": "platform_83ed536a57",
+          "name": "Deepen repo learning and knowledge routing reuse",
+          "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\deepen-repo-learning-and-knowledge-routing-reuse",
+          "required_paths_present": 5,
+          "required_paths_total": 5,
+          "capability_count": 2,
+          "quality_score": 0.97,
+          "quality_status": "promote",
+          "runtime_health": "healthy",
+          "runtime_status": "ready",
+          "last_checked": "2026-03-11T07:31:46.921974Z"
+        },
+        {
+          "platform_id": "platform_900f86db07",
+          "name": "Continue ToyOS kernel branch work with mainline context reuse",
+          "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\continue-toyos-kernel-branch-work-with-mainline-context-reuse",
+          "required_paths_present": 5,
+          "required_paths_total": 5,
+          "capability_count": 2,
+          "quality_score": 0.97,
+          "quality_status": "promote",
+          "runtime_health": "healthy",
+          "runtime_status": "ready",
+          "last_checked": "2026-03-11T07:31:47.074423Z"
+        },
+        {
+          "platform_id": "platform_4f5397914e",
+          "name": "Deepen repo learning and knowledge routing reuse",
+          "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\deepen-repo-learning-and-knowledge-routing-reuse",
+          "required_paths_present": 5,
+          "required_paths_total": 5,
+          "capability_count": 2,
+          "quality_score": 0.97,
+          "quality_status": "promote",
+          "runtime_health": "healthy",
+          "runtime_status": "ready",
+          "last_checked": "2026-03-11T07:31:47.236459Z"
+        },
+        {
+          "platform_id": "platform_8632991421",
+          "name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+          "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+          "required_paths_present": 5,
+          "required_paths_total": 5,
+          "capability_count": 2,
+          "quality_score": 0.97,
+          "quality_status": "promote",
+          "runtime_health": "healthy",
+          "runtime_status": "ready",
+          "last_checked": "2026-03-11T07:31:47.400572Z"
+        }
+      ],
+      "candidate_scores": [
+        {
+          "candidate_id": "e97a5e3ce0b9",
+          "title": "Align control layer with quality gate",
+          "target_files": [
+            "tools/decision_engine.py",
+            "tools/tool_health_audit.py",
+            "tools/release_operations.py"
+          ],
+          "priority": "high",
+          "approved_patch_required": true,
+          "cheap_worker_ok": false,
+          "sandbox_required": true,
+          "existing_patch_id": null,
+          "quality_score": 0.77,
+          "quality_status": "promote"
+        },
+        {
+          "candidate_id": "96f998f8dd10",
+          "title": "Repair runtime health verification failure",
+          "target_files": [
+            "tools/runtime_maintenance.py",
+            "tools/goal_runtime.py",
+            "tools/task_state_tools.py"
+          ],
+          "priority": "high",
+          "approved_patch_required": false,
+          "cheap_worker_ok": true,
+          "sandbox_required": true,
+          "existing_patch_id": null,
+          "quality_score": 0.95,
+          "quality_status": "promote"
+        },
+        {
+          "candidate_id": "396bc588c6e3",
+          "title": "Harden self-improvement release handoff templates",
+          "target_files": [
+            "templates/reports/lab-report.md.tpl"
+          ],
+          "priority": "medium",
+          "approved_patch_required": false,
+          "cheap_worker_ok": true,
+          "sandbox_required": true,
+          "existing_patch_id": null,
+          "quality_score": 0.83,
+          "quality_status": "promote"
+        },
+        {
+          "candidate_id": "97c92d04991e",
+          "title": "Address failure pattern: Prompt: Unified orchestrator dispatch.\n\nCaller: codex-main\n\nRuntime policy: Prefer local runtime resources such as WSL,",
+          "target_files": [
+            "tools/tool_health_audit.py",
+            "tools/verification_engine.py"
+          ],
+          "priority": "medium",
+          "approved_patch_required": false,
+          "cheap_worker_ok": true,
+          "sandbox_required": true,
+          "existing_patch_id": null,
+          "quality_score": 0.83,
+          "quality_status": "promote"
+        },
+        {
+          "candidate_id": "7621f30045e0",
+          "title": "Repair failing AI behavior regression cases",
+          "target_files": [
+            "tools/ai_test_automation.py",
+            "data/ai_test_suite.json"
+          ],
+          "priority": "high",
+          "approved_patch_required": false,
+          "cheap_worker_ok": true,
+          "sandbox_required": true,
+          "existing_patch_id": null,
+          "quality_score": 0.95,
+          "quality_status": "promote"
+        },
+        {
+          "candidate_id": "6f8fd8400323",
+          "title": "Stabilize primary AI test provider path",
+          "target_files": [
+            "tools/ai_test_automation.py",
+            "app/config.py"
+          ],
+          "priority": "high",
+          "approved_patch_required": true,
+          "cheap_worker_ok": false,
+          "sandbox_required": true,
+          "existing_patch_id": null,
+          "quality_score": 0.77,
+          "quality_status": "promote"
+        },
+        {
+          "candidate_id": "42f22f433820",
+          "title": "Improve runtime success-rate remediation intake",
+          "target_files": [
+            "tools/telemetry_store.py",
+            "tools/self_patch_loop.py"
+          ],
+          "priority": "medium",
+          "approved_patch_required": false,
+          "cheap_worker_ok": true,
+          "sandbox_required": true,
+          "existing_patch_id": null,
+          "quality_score": 0.83,
+          "quality_status": "promote"
+        },
+        {
+          "candidate_id": "d89b8aff686c",
+          "title": "Raise quality task-throughput score",
+          "target_files": [
+            "tools/quality_system.py",
+            "tools/goal_runtime.py",
+            "tools/telemetry_store.py"
+          ],
+          "priority": "medium",
+          "approved_patch_required": false,
+          "cheap_worker_ok": true,
+          "sandbox_required": true,
+          "existing_patch_id": null,
+          "quality_score": 0.83,
+          "quality_status": "promote"
+        },
+        {
+          "candidate_id": "1e76c6a2d61a",
+          "title": "Stabilize daemon health flapping",
+          "target_files": [
+            "tools/factory_daemon.py",
+            "tools/tool_health_audit.py"
+          ],
+          "priority": "high",
+          "approved_patch_required": true,
+          "cheap_worker_ok": false,
+          "sandbox_required": true,
+          "existing_patch_id": null,
+          "quality_score": 0.77,
+          "quality_status": "promote"
+        }
+      ],
+      "promoted_platforms": [
+        {
+          "platform_id": "platform_d33a56cc79",
+          "name": "AI Research Factory",
+          "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\ai-research-factory",
+          "required_paths_present": 5,
+          "required_paths_total": 5,
+          "capability_count": 0,
+          "quality_score": 0.77,
+          "quality_status": "promote",
+          "runtime_health": "healthy",
+          "runtime_status": "ready",
+          "last_checked": "2026-03-09T09:18:28.634861Z"
+        },
+        {
+          "platform_id": "platform_8855699f64",
+          "name": "AI Agent Factory",
+          "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\ai-agent-factory",
+          "required_paths_present": 5,
+          "required_paths_total": 5,
+          "capability_count": 2,
+          "quality_score": 0.97,
+          "quality_status": "promote",
+          "runtime_health": "healthy",
+          "runtime_status": "ready",
+          "last_checked": "2026-03-09T09:18:28.635861Z"
+        },
+        {
+          "platform_id": "platform_009b511d6b",
+          "name": "build ai-video-factory",
+          "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\build-ai-video-factory",
+          "required_paths_present": 5,
+          "required_paths_total": 5,
+          "capability_count": 2,
+          "quality_score": 0.97,
+          "quality_status": "promote",
+          "runtime_health": "healthy",
+          "runtime_status": "ready",
+          "last_checked": "2026-03-09T09:18:28.635861Z"
+        },
+        {
+          "platform_id": "platform_8590e6bcbe",
+          "name": "AI Web Platform Factory",
+          "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\ai-web-platform-factory",
+          "required_paths_present": 5,
+          "required_paths_total": 5,
+          "capability_count": 2,
+          "quality_score": 0.97,
+          "quality_status": "promote",
+          "runtime_health": "healthy",
+          "runtime_status": "ready",
+          "last_checked": "2026-03-09T09:18:28.635861Z"
+        },
+        {
+          "platform_id": "platform_df90392702",
+          "name": "Expand capability routing patterns",
+          "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\expand-capability-routing-patterns",
+          "required_paths_present": 5,
+          "required_paths_total": 5,
+          "capability_count": 2,
+          "quality_score": 0.97,
+          "quality_status": "promote",
+          "runtime_health": "healthy",
+          "runtime_status": "ready",
+          "last_checked": "2026-03-10T07:29:33.818932Z"
+        },
+        {
+          "platform_id": "platform_79a3e0e03e",
+          "name": "Improve cheap agent prompts",
+          "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\improve-cheap-agent-prompts",
+          "required_paths_present": 5,
+          "required_paths_total": 5,
+          "capability_count": 2,
+          "quality_score": 0.97,
+          "quality_status": "promote",
+          "runtime_health": "healthy",
+          "runtime_status": "ready",
+          "last_checked": "2026-03-10T08:19:37.356301Z"
+        },
+        {
+          "platform_id": "platform_464dac2a0b",
+          "name": "Optimize task scheduler from agent experience",
+          "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\optimize-task-scheduler-from-agent-experience",
+          "required_paths_present": 5,
+          "required_paths_total": 5,
+          "capability_count": 2,
+          "quality_score": 0.97,
+          "quality_status": "promote",
+          "runtime_health": "healthy",
+          "runtime_status": "ready",
+          "last_checked": "2026-03-10T08:20:37.834091Z"
+        },
+        {
+          "platform_id": "platform_fa6557b2cd",
+          "name": "Strengthen agent orchestration capability",
+          "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-agent-orchestration-capability",
+          "required_paths_present": 5,
+          "required_paths_total": 5,
+          "capability_count": 2,
+          "quality_score": 0.97,
+          "quality_status": "promote",
+          "runtime_health": "healthy",
+          "runtime_status": "ready",
+          "last_checked": "2026-03-11T07:31:45.756699Z"
+        },
+        {
+          "platform_id": "platform_e09cfd3561",
+          "name": "Strengthen webapp generation capability",
+          "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-webapp-generation-capability",
+          "required_paths_present": 5,
+          "required_paths_total": 5,
+          "capability_count": 2,
+          "quality_score": 0.97,
+          "quality_status": "promote",
+          "runtime_health": "healthy",
+          "runtime_status": "ready",
+          "last_checked": "2026-03-11T07:31:45.932293Z"
+        },
+        {
+          "platform_id": "platform_c3bb90675c",
+          "name": "Expand tool extension coverage",
+          "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\expand-tool-extension-coverage",
+          "required_paths_present": 5,
+          "required_paths_total": 5,
+          "capability_count": 2,
+          "quality_score": 0.97,
+          "quality_status": "promote",
+          "runtime_health": "healthy",
+          "runtime_status": "ready",
+          "last_checked": "2026-03-11T07:31:46.150239Z"
+        },
+        {
+          "platform_id": "platform_38c67a4233",
+          "name": "Strengthen agent orchestration capability",
+          "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\strengthen-agent-orchestration-capability",
+          "required_paths_present": 5,
+          "required_paths_total": 5,
+          "capability_count": 2,
+          "quality_score": 0.97,
+          "quality_status": "promote",
+          "runtime_health": "healthy",
+          "runtime_status": "ready",
+          "last_checked": "2026-03-11T07:31:46.301807Z"
+        },
+        {
+          "platform_id": "platform_b9e5c175ad",
+          "name": "Continue ToyOS kernel branch work with mainline context reuse",
+          "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\continue-toyos-kernel-branch-work-with-mainline-context-reuse",
+          "required_paths_present": 5,
+          "required_paths_total": 5,
+          "capability_count": 2,
+          "quality_score": 0.97,
+          "quality_status": "promote",
+          "runtime_health": "healthy",
+          "runtime_status": "ready",
+          "last_checked": "2026-03-11T07:31:46.522290Z"
+        },
+        {
+          "platform_id": "platform_3f9a992241",
+          "name": "Deepen repo learning and knowledge routing reuse",
+          "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\deepen-repo-learning-and-knowledge-routing-reuse",
+          "required_paths_present": 5,
+          "required_paths_total": 5,
+          "capability_count": 2,
+          "quality_score": 0.97,
+          "quality_status": "promote",
+          "runtime_health": "healthy",
+          "runtime_status": "ready",
+          "last_checked": "2026-03-11T07:31:46.704756Z"
+        },
+        {
+          "platform_id": "platform_83ed536a57",
+          "name": "Deepen repo learning and knowledge routing reuse",
+          "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\deepen-repo-learning-and-knowledge-routing-reuse",
+          "required_paths_present": 5,
+          "required_paths_total": 5,
+          "capability_count": 2,
+          "quality_score": 0.97,
+          "quality_status": "promote",
+          "runtime_health": "healthy",
+          "runtime_status": "ready",
+          "last_checked": "2026-03-11T07:31:46.921974Z"
+        },
+        {
+          "platform_id": "platform_900f86db07",
+          "name": "Continue ToyOS kernel branch work with mainline context reuse",
+          "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\continue-toyos-kernel-branch-work-with-mainline-context-reuse",
+          "required_paths_present": 5,
+          "required_paths_total": 5,
+          "capability_count": 2,
+          "quality_score": 0.97,
+          "quality_status": "promote",
+          "runtime_health": "healthy",
+          "runtime_status": "ready",
+          "last_checked": "2026-03-11T07:31:47.074423Z"
+        },
+        {
+          "platform_id": "platform_4f5397914e",
+          "name": "Deepen repo learning and knowledge routing reuse",
+          "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\deepen-repo-learning-and-knowledge-routing-reuse",
+          "required_paths_present": 5,
+          "required_paths_total": 5,
+          "capability_count": 2,
+          "quality_score": 0.97,
+          "quality_status": "promote",
+          "runtime_health": "healthy",
+          "runtime_status": "ready",
+          "last_checked": "2026-03-11T07:31:47.236459Z"
+        },
+        {
+          "platform_id": "platform_8632991421",
+          "name": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+          "workspace": "D:\\codex\\orchestrator-mvp\\workspace\\coordinate-toyos-kernel-with-ai-math-foundations-workspace",
+          "required_paths_present": 5,
+          "required_paths_total": 5,
+          "capability_count": 2,
+          "quality_score": 0.97,
+          "quality_status": "promote",
+          "runtime_health": "healthy",
+          "runtime_status": "ready",
+          "last_checked": "2026-03-11T07:31:47.400572Z"
+        }
+      ],
+      "promoted_candidates": [
+        {
+          "candidate_id": "e97a5e3ce0b9",
+          "title": "Align control layer with quality gate",
+          "target_files": [
+            "tools/decision_engine.py",
+            "tools/tool_health_audit.py",
+            "tools/release_operations.py"
+          ],
+          "priority": "high",
+          "approved_patch_required": true,
+          "cheap_worker_ok": false,
+          "sandbox_required": true,
+          "existing_patch_id": null,
+          "quality_score": 0.77,
+          "quality_status": "promote"
+        },
+        {
+          "candidate_id": "96f998f8dd10",
+          "title": "Repair runtime health verification failure",
+          "target_files": [
+            "tools/runtime_maintenance.py",
+            "tools/goal_runtime.py",
+            "tools/task_state_tools.py"
+          ],
+          "priority": "high",
+          "approved_patch_required": false,
+          "cheap_worker_ok": true,
+          "sandbox_required": true,
+          "existing_patch_id": null,
+          "quality_score": 0.95,
+          "quality_status": "promote"
+        },
+        {
+          "candidate_id": "396bc588c6e3",
+          "title": "Harden self-improvement release handoff templates",
+          "target_files": [
+            "templates/reports/lab-report.md.tpl"
+          ],
+          "priority": "medium",
+          "approved_patch_required": false,
+          "cheap_worker_ok": true,
+          "sandbox_required": true,
+          "existing_patch_id": null,
+          "quality_score": 0.83,
+          "quality_status": "promote"
+        },
+        {
+          "candidate_id": "97c92d04991e",
+          "title": "Address failure pattern: Prompt: Unified orchestrator dispatch.\n\nCaller: codex-main\n\nRuntime policy: Prefer local runtime resources such as WSL,",
+          "target_files": [
+            "tools/tool_health_audit.py",
+            "tools/verification_engine.py"
+          ],
+          "priority": "medium",
+          "approved_patch_required": false,
+          "cheap_worker_ok": true,
+          "sandbox_required": true,
+          "existing_patch_id": null,
+          "quality_score": 0.83,
+          "quality_status": "promote"
+        },
+        {
+          "candidate_id": "7621f30045e0",
+          "title": "Repair failing AI behavior regression cases",
+          "target_files": [
+            "tools/ai_test_automation.py",
+            "data/ai_test_suite.json"
+          ],
+          "priority": "high",
+          "approved_patch_required": false,
+          "cheap_worker_ok": true,
+          "sandbox_required": true,
+          "existing_patch_id": null,
+          "quality_score": 0.95,
+          "quality_status": "promote"
+        },
+        {
+          "candidate_id": "6f8fd8400323",
+          "title": "Stabilize primary AI test provider path",
+          "target_files": [
+            "tools/ai_test_automation.py",
+            "app/config.py"
+          ],
+          "priority": "high",
+          "approved_patch_required": true,
+          "cheap_worker_ok": false,
+          "sandbox_required": true,
+          "existing_patch_id": null,
+          "quality_score": 0.77,
+          "quality_status": "promote"
+        },
+        {
+          "candidate_id": "42f22f433820",
+          "title": "Improve runtime success-rate remediation intake",
+          "target_files": [
+            "tools/telemetry_store.py",
+            "tools/self_patch_loop.py"
+          ],
+          "priority": "medium",
+          "approved_patch_required": false,
+          "cheap_worker_ok": true,
+          "sandbox_required": true,
+          "existing_patch_id": null,
+          "quality_score": 0.83,
+          "quality_status": "promote"
+        },
+        {
+          "candidate_id": "d89b8aff686c",
+          "title": "Raise quality task-throughput score",
+          "target_files": [
+            "tools/quality_system.py",
+            "tools/goal_runtime.py",
+            "tools/telemetry_store.py"
+          ],
+          "priority": "medium",
+          "approved_patch_required": false,
+          "cheap_worker_ok": true,
+          "sandbox_required": true,
+          "existing_patch_id": null,
+          "quality_score": 0.83,
+          "quality_status": "promote"
+        },
+        {
+          "candidate_id": "1e76c6a2d61a",
+          "title": "Stabilize daemon health flapping",
+          "target_files": [
+            "tools/factory_daemon.py",
+            "tools/tool_health_audit.py"
+          ],
+          "priority": "high",
+          "approved_patch_required": true,
+          "cheap_worker_ok": false,
+          "sandbox_required": true,
+          "existing_patch_id": null,
+          "quality_score": 0.77,
+          "quality_status": "promote"
+        }
+      ],
+      "guard_status": "healthy",
+      "capability_count": 38
+    },
+    "goal_storage": {
+      "updated_at": "2026-03-12T07:09:31.227625Z",
+      "status": "healthy",
+      "stored_successfully": true,
+      "goal_registry_confirmed": true,
+      "task_queue_confirmed": true,
+      "goal_registry": {
+        "goal_count": 412,
+        "unique_goal_id_count": 412,
+        "active_goal_count": 2,
+        "recent_goal_count_24h": 83
+      },
+      "graph_integrity": {
+        "active_goals_with_graph": 2,
+        "missing_graph_goal_ids": [],
+        "running_goals_missing_tasks": [],
+        "missing_task_goal_ids": []
+      },
+      "task_queue": {
+        "active_task_count": 1,
+        "managed_active_task_count": 0,
+        "managed_active_tasks_with_goal_link": 0,
+        "managed_active_tasks_linked_to_existing_goal": 0,
+        "managed_active_tasks_broken_goal_link": [],
+        "managed_active_tasks_without_goal_link": [],
+        "managed_active_tasks_without_node_link": []
+      },
+      "state_confirmation": {
+        "recent_action_goal_ids": [
+          "goal_5316547f09"
+        ],
+        "recent_action_missing_goal_ids": [],
+        "memory_kernel_goal_count": 412,
+        "memory_kernel_top_goal_ids": [
+          "goal_10887c64f0",
+          "goal_5fc8f9d272",
+          "goal_7f471cb20d",
+          "goal_84adc26566",
+          "goal_c7dd020683"
+        ],
+        "active_goal_ids_not_in_memory_top": [
+          "goal_1fe0e4bb13",
+          "goal_a2cbaa0d6f"
+        ]
+      },
+      "issues": [],
+      "warnings": []
+    },
+    "evolution_control": {
+      "updated_at": "2026-03-12T07:09:31.359693Z",
+      "allowed": true,
+      "reason": "ok",
+      "guard_status": "healthy",
+      "strong_allowed": true,
+      "strong_ratio": 0.0,
+      "quality_status": "attention",
+      "selected_candidates": [
+        {
+          "candidate_id": "e97a5e3ce0b9",
+          "title": "Align control layer with quality gate",
+          "target_files": [
+            "tools/decision_engine.py",
+            "tools/tool_health_audit.py",
+            "tools/release_operations.py"
+          ],
+          "priority": "high",
+          "approved_patch_required": true,
+          "cheap_worker_ok": false,
+          "sandbox_required": true,
+          "existing_patch_id": null,
+          "quality_score": 0.77,
+          "quality_status": "promote"
+        },
+        {
+          "candidate_id": "96f998f8dd10",
+          "title": "Repair runtime health verification failure",
+          "target_files": [
+            "tools/runtime_maintenance.py",
+            "tools/goal_runtime.py",
+            "tools/task_state_tools.py"
+          ],
+          "priority": "high",
+          "approved_patch_required": false,
+          "cheap_worker_ok": true,
+          "sandbox_required": true,
+          "existing_patch_id": null,
+          "quality_score": 0.95,
+          "quality_status": "promote"
+        }
+      ],
+      "selected_count": 2
+    },
+    "usage": {
+      "updated_at": "2026-03-12T07:09:31.449871Z",
+      "window_hours": 24,
+      "recent_events": [
+        {
+          "at": "2026-03-11T09:55:38.492531Z",
+          "provider": "cheap",
+          "model": "deepseek-chat"
+        },
+        {
+          "at": "2026-03-11T09:57:23.031957Z",
+          "provider": "cheap",
+          "model": "deepseek-chat"
+        },
+        {
+          "at": "2026-03-11T10:00:02.434825Z",
+          "provider": "cheap",
+          "model": "deepseek-chat"
+        },
+        {
+          "at": "2026-03-11T15:01:55.399961Z",
+          "provider": "cheap",
+          "model": "deepseek-chat"
+        },
+        {
+          "at": "2026-03-11T15:02:22.081937Z",
+          "provider": "cheap",
+          "model": "deepseek-chat"
+        },
+        {
+          "at": "2026-03-11T15:44:00.888742Z",
+          "provider": "cheap",
+          "model": "deepseek-chat"
+        },
+        {
+          "at": "2026-03-11T15:44:28.109943Z",
+          "provider": "cheap",
+          "model": "deepseek-chat"
+        }
+      ],
+      "cheap_calls": 7,
+      "strong_calls": 0,
+      "strong_ratio": 0.0,
+      "max_strong_model_ratio": 0.0,
+      "strong_allowed": true
+    },
+    "upgrade_policy": {
+      "cheap_first": true,
+      "max_strong_model_ratio": 0.0,
+      "max_parallel_tasks": 3,
+      "safe_tasks_only": true,
+      "stop_when_no_safe_tasks": true,
+      "upgrade_priority": [
+        "runtime_stability",
+        "cheap_prompt_improvement",
+        "skill_training",
+        "scheduler_optimization",
+        "capability_generation",
+        "experimental_platform_generation"
+      ],
+      "premium_frozen": true
+    }
+  },
+  "candidate_count": 3,
+  "status": "attention"
+}

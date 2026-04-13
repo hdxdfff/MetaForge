@@ -1,0 +1,95 @@
+{
+  "updated_at": "2026-03-12T07:09:59.570544Z",
+  "status": "attention",
+  "experiment_planner": {
+    "candidate_count": 5,
+    "selected": "Experiment progress-first goal seeding",
+    "selection_reason": "autonomy-engine"
+  },
+  "experiment_executor": {
+    "status": "completed",
+    "target": "Experiment progress-first goal seeding",
+    "kind": "goal-seeding"
+  },
+  "experiment_evaluator": {
+    "status": "evaluated",
+    "score": 0.8995,
+    "adopt": true
+  },
+  "capability_distillation": {
+    "status": "ready",
+    "adopted": true,
+    "capability_hint_count": 9,
+    "worker_bias_count": 0
+  },
+  "knowledge_engine": {
+    "experiment_patterns": 6,
+    "decision_patterns": 3,
+    "repo_learning_chunks": 144,
+    "learned_repositories": 1,
+    "github_ready_repos": 1
+  },
+  "strategy": {
+    "focus_capabilities": [
+      "agent_orchestration",
+      "webapp_generation",
+      "deploy_scaffold",
+      "tool_extension",
+      "kv_cache_manager",
+      "local_llm_runner"
+    ],
+    "portfolio": {
+      "routing-heuristics": 0.35,
+      "prompt-specialization": 0.2,
+      "recovery-patterns": 0.2,
+      "goal-seeding": 0.125,
+      "pattern-rollout": 0.125
+    },
+    "organization_focus": [
+      "engineering_department",
+      "qa_department",
+      "architecture_department",
+      "research_department",
+      "operations_department"
+    ]
+  },
+  "reputation": {
+    "capability_count": 7,
+    "worker_count": 1,
+    "top_capability": "agent_orchestration",
+    "top_worker": "reviewer"
+  },
+  "autonomy": {
+    "stage": "stage4_confirmed",
+    "score": 0.6925,
+    "source": "soak_validation",
+    "confirmed": true
+  },
+  "engineering_os": {
+    "status": "attention",
+    "patch_gate_status": "attention",
+    "patch_ready_count": 0,
+    "patch_blocked_count": 0,
+    "patch_merge_ready": 0
+  },
+  "ai_testing": {
+    "status": "attention",
+    "pass_rate": 0.8,
+    "passed_cases": 4,
+    "total_cases": 5,
+    "error_count": 0,
+    "failing_case_ids": [
+      "context-boundary"
+    ],
+    "updated_at": "2026-03-12T07:08:52.471729Z"
+  },
+  "release_operations": {
+    "status": "attention",
+    "release_train_status": "blocked",
+    "next_action": "advance-release-candidate"
+  },
+  "maturity": {
+    "score": 0.55,
+    "status": "developing"
+  }
+}

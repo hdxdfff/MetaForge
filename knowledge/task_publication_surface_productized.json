@@ -1,0 +1,25 @@
+{
+  "updated_at": "2026-03-30T00:00:00+08:00",
+  "topic": "task_publication_surface",
+  "summary": "Structured task publication should be a distinct control-plane surface, not a free-form dispatch alias.",
+  "decision": [
+    "Use a dedicated TaskPublicationRequest contract.",
+    "Expose a dedicated /api/task-publish endpoint.",
+    "Expose a dedicated task-publish control command.",
+    "Keep natural-language dispatch for ad hoc operator requests."
+  ],
+  "implementation_paths": [
+    "D:\\codex\\orchestrator-mvp\\app\\models.py",
+    "D:\\codex\\orchestrator-mvp\\app\\orchestrator.py",
+    "D:\\codex\\orchestrator-mvp\\app\\main.py",
+    "D:\\codex\\orchestrator-mvp\\tools\\codex_control.py",
+    "D:\\codex\\orchestrator-mvp\\contracts\\schemas\\task_publication.schema.json"
+  ],
+  "residual_risk": "Publication still flows through the existing task execution pipeline; later work may separate admission from execution more cleanly.",
+  "validation_paths": [
+    "D:\\codex\\orchestrator-mvp\\app\\models.py",
+    "D:\\codex\\orchestrator-mvp\\app\\orchestrator.py",
+    "D:\\codex\\orchestrator-mvp\\app\\main.py",
+    "D:\\codex\\orchestrator-mvp\\tools\\codex_control.py"
+  ]
+}

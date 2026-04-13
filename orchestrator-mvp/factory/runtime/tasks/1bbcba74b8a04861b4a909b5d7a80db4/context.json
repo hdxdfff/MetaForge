@@ -1,0 +1,60 @@
+{
+  "task_id": "1bbcba74b8a04861b4a909b5d7a80db4",
+  "task_status": "planning",
+  "phase": "planning",
+  "updated_at": "2026-04-02T23:01:36.889081Z",
+  "heartbeat_at": "2026-04-02T23:01:36.889081Z",
+  "repo_path": "D:\\codex\\orchestrator-mvp",
+  "goal": "Use the orchestrator as an AI-managed software delivery pipeline instead of a single coding agent.",
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": "runtime.failure_backlog_automation",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\1bbcba74b8a04861b4a909b5d7a80db4",
+  "title": "Software Factory Flow",
+  "prompt": "Turn a raw request into a structured delivery flow: derive requirements, architecture notes, task dependencies, role assignments, rule checks, git workflow expectations, implementation steps, validation steps, and release blockers.",
+  "scheduler_hint": {
+    "automation_source": "failure_backlog_automation",
+    "template_id": "software-factory",
+    "template_category": "governance",
+    "cluster_key": "recover stable execution output",
+    "cluster_count": 179,
+    "cluster_status": "attention",
+    "handling_mode": "generic_saturation",
+    "dispatch_now": false,
+    "admission_mode": "degraded",
+    "scheduled_by": "runtime.failure_backlog_automation"
+  },
+  "context_package": {},
+  "plan": [],
+  "verification_signals": [
+    {
+      "timestamp": "2026-04-02T23:00:41.457484Z",
+      "kind": "admission_accepted",
+      "success": true,
+      "task_id": "1bbcba74b8a04861b4a909b5d7a80db4",
+      "admission_lane": null,
+      "admission_reason": null,
+      "execution_mode": "governance",
+      "queue_name": "fastlane",
+      "task_type": "report_refresh"
+    }
+  ],
+  "verification_signal_count": 1,
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-02T23:00:41.457484Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "1bbcba74b8a04861b4a909b5d7a80db4",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "governance",
+        "queue_name": "fastlane",
+        "task_type": "report_refresh"
+      }
+    ]
+  }
+}

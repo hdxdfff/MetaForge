@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Role Handoff",
+  "type": "object",
+  "required": [
+    "handoff_id",
+    "task_id",
+    "from_role",
+    "to_role",
+    "status",
+    "payload",
+    "created_at"
+  ],
+  "properties": {
+    "handoff_id": {
+      "type": "string"
+    },
+    "task_id": {
+      "type": "string"
+    },
+    "from_role": {
+      "type": "string",
+      "enum": [
+        "dispatcher",
+        "builder",
+        "runner",
+        "auditor"
+      ]
+    },
+    "to_role": {
+      "type": "string",
+      "enum": [
+        "builder",
+        "runner",
+        "auditor",
+        "archive"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "success",
+        "failed",
+        "partial"
+      ]
+    },
+    "payload": {
+      "type": "object"
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "created_at": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,264 @@
+{
+  "updated_at": "2026-03-12T07:10:02.662119Z",
+  "status": "ready",
+  "items": [
+    {
+      "finding_id": "e97a5e3ce0b9",
+      "created_at": "2026-03-12T07:09:31.829771Z",
+      "source": "decision_engine",
+      "kind": "control-layer-lags-quality",
+      "title": "Align control layer with quality gate",
+      "summary": "Control remains constrained while quality has already promoted readiness.",
+      "priority": "high",
+      "target_files": [
+        "tools/decision_engine.py",
+        "tools/tool_health_audit.py",
+        "tools/release_operations.py"
+      ],
+      "module_focus": [
+        "tools.decision_engine",
+        "tools.tool_health_audit",
+        "tools.release_operations"
+      ],
+      "owner_teams": [
+        "architecture_team",
+        "infrastructure_team"
+      ],
+      "validation": [
+        "python -m compileall app runtime tools state",
+        "refresh verification status"
+      ],
+      "approved_patch_required": true,
+      "safe_to_auto_merge": false,
+      "status": "queued",
+      "existing_patch_id": null,
+      "existing_patch_status": null
+    },
+    {
+      "finding_id": "96f998f8dd10",
+      "created_at": "2026-03-12T07:09:31.830275Z",
+      "source": "verification_status",
+      "kind": "verification-runtime-health-failure",
+      "title": "Repair runtime health verification failure",
+      "summary": "Runtime health failed verification and should be converted into a bounded self-improvement candidate. active_tasks=1 failed_tasks=13 open_error_escalations=1",
+      "priority": "high",
+      "target_files": [
+        "tools/runtime_maintenance.py",
+        "tools/goal_runtime.py",
+        "tools/task_state_tools.py"
+      ],
+      "module_focus": [
+        "tools.runtime_maintenance",
+        "tools.goal_runtime",
+        "tools.task_state_tools"
+      ],
+      "owner_teams": [
+        "infrastructure_team"
+      ],
+      "validation": [
+        "python -m compileall app runtime tools state",
+        "refresh verification status"
+      ],
+      "approved_patch_required": false,
+      "safe_to_auto_merge": true,
+      "status": "queued",
+      "existing_patch_id": null,
+      "existing_patch_status": null
+    },
+    {
+      "finding_id": "396bc588c6e3",
+      "created_at": "2026-03-12T07:09:31.831279Z",
+      "source": "release_operations",
+      "kind": "release-train-blocked",
+      "title": "Harden self-improvement release handoff templates",
+      "summary": "Release train remains blocked; improve low-risk handoff artifacts before touching core control flow.",
+      "priority": "medium",
+      "target_files": [
+        "templates/reports/lab-report.md.tpl"
+      ],
+      "module_focus": [],
+      "owner_teams": [],
+      "validation": [
+        "file presence check",
+        "static review"
+      ],
+      "approved_patch_required": false,
+      "safe_to_auto_merge": true,
+      "status": "queued",
+      "existing_patch_id": null,
+      "existing_patch_status": null
+    },
+    {
+      "finding_id": "97c92d04991e",
+      "created_at": "2026-03-12T07:09:31.832280Z",
+      "source": "failure_patterns",
+      "kind": "Prompt: Unified orchestrator dispatch.\n\nCaller: codex-main\n\nRuntime policy: Prefer local runtime resources such as WSL,",
+      "title": "Address failure pattern: Prompt: Unified orchestrator dispatch.\n\nCaller: codex-main\n\nRuntime policy: Prefer local runtime resources such as WSL,",
+      "summary": "Tool health reports require bounded remediation and clearer merge gating.",
+      "priority": "medium",
+      "target_files": [
+        "tools/tool_health_audit.py",
+        "tools/verification_engine.py"
+      ],
+      "module_focus": [
+        "tools.tool_health_audit",
+        "tools.verification_engine"
+      ],
+      "owner_teams": [
+        "infrastructure_team"
+      ],
+      "validation": [
+        "python -m compileall app runtime tools state",
+        "refresh verification status"
+      ],
+      "approved_patch_required": false,
+      "safe_to_auto_merge": true,
+      "status": "queued",
+      "existing_patch_id": null,
+      "existing_patch_status": null
+    },
+    {
+      "finding_id": "7621f30045e0",
+      "created_at": "2026-03-12T07:09:31.832785Z",
+      "source": "ai_test_status",
+      "kind": "ai-test-suite-regression",
+      "title": "Repair failing AI behavior regression cases",
+      "summary": "AI test suite contains failing cases or runtime errors and should feed bounded remediation work. failing_cases=context-boundary error_count=0",
+      "priority": "high",
+      "target_files": [
+        "tools/ai_test_automation.py",
+        "data/ai_test_suite.json"
+      ],
+      "module_focus": [
+        "tools.ai_test_automation"
+      ],
+      "owner_teams": [
+        "infrastructure_team"
+      ],
+      "validation": [
+        "python -m compileall app runtime tools state"
+      ],
+      "approved_patch_required": false,
+      "safe_to_auto_merge": true,
+      "status": "queued",
+      "existing_patch_id": null,
+      "existing_patch_status": null
+    },
+    {
+      "finding_id": "6f8fd8400323",
+      "created_at": "2026-03-12T07:09:31.833789Z",
+      "source": "ai_test_status",
+      "kind": "ai-test-provider-fallback",
+      "title": "Stabilize primary AI test provider path",
+      "summary": "AI test automation required fallback because the primary provider failed before the suite could complete normally. failed_providers=openai-primary error_types=AuthenticationError",
+      "priority": "high",
+      "target_files": [
+        "tools/ai_test_automation.py",
+        "app/config.py"
+      ],
+      "module_focus": [
+        "tools.ai_test_automation",
+        "app.config"
+      ],
+      "owner_teams": [
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "validation": [
+        "python -m compileall app runtime tools state"
+      ],
+      "approved_patch_required": true,
+      "safe_to_auto_merge": false,
+      "status": "queued",
+      "existing_patch_id": null,
+      "existing_patch_status": null
+    },
+    {
+      "finding_id": "42f22f433820",
+      "created_at": "2026-03-12T07:09:31.833789Z",
+      "source": "telemetry_events",
+      "kind": "telemetry-low-success-rate",
+      "title": "Improve runtime success-rate remediation intake",
+      "summary": "Runtime telemetry shows weak task throughput and should generate concrete self-improvement candidates. task_total=17 task_failed=0 success_rate=0.1765",
+      "priority": "medium",
+      "target_files": [
+        "tools/telemetry_store.py",
+        "tools/self_patch_loop.py"
+      ],
+      "module_focus": [
+        "tools.telemetry_store",
+        "tools.self_patch_loop"
+      ],
+      "owner_teams": [
+        "infrastructure_team"
+      ],
+      "validation": [
+        "python -m compileall tools"
+      ],
+      "approved_patch_required": false,
+      "safe_to_auto_merge": true,
+      "status": "queued",
+      "existing_patch_id": null,
+      "existing_patch_status": null
+    },
+    {
+      "finding_id": "d89b8aff686c",
+      "created_at": "2026-03-12T07:09:31.835789Z",
+      "source": "quality_status",
+      "kind": "quality-low-task-throughput",
+      "title": "Raise quality task-throughput score",
+      "summary": "Quality scoring is being dragged down by low recent task throughput and should produce bounded remediation work. task_score=0.15 overall_score=0.6354 status=attention",
+      "priority": "medium",
+      "target_files": [
+        "tools/quality_system.py",
+        "tools/goal_runtime.py",
+        "tools/telemetry_store.py"
+      ],
+      "module_focus": [
+        "tools.quality_system",
+        "tools.goal_runtime",
+        "tools.telemetry_store"
+      ],
+      "owner_teams": [
+        "infrastructure_team"
+      ],
+      "validation": [
+        "python -m compileall tools"
+      ],
+      "approved_patch_required": false,
+      "safe_to_auto_merge": true,
+      "status": "queued",
+      "existing_patch_id": null,
+      "existing_patch_status": null
+    },
+    {
+      "finding_id": "1e76c6a2d61a",
+      "created_at": "2026-03-12T07:09:31.835789Z",
+      "source": "tool_health_history",
+      "kind": "daemon-health-flapping",
+      "title": "Stabilize daemon health flapping",
+      "summary": "Tool health history shows repeated daemon instability that should stay visible as a core remediation candidate. recent_failures=4 latest_daemon_status=operator_attention",
+      "priority": "high",
+      "target_files": [
+        "tools/factory_daemon.py",
+        "tools/tool_health_audit.py"
+      ],
+      "module_focus": [
+        "tools.factory_daemon",
+        "tools.tool_health_audit"
+      ],
+      "owner_teams": [
+        "infrastructure_team"
+      ],
+      "validation": [
+        "python -m compileall app runtime tools state",
+        "refresh verification status"
+      ],
+      "approved_patch_required": true,
+      "safe_to_auto_merge": false,
+      "status": "queued",
+      "existing_patch_id": null,
+      "existing_patch_status": null
+    }
+  ]
+}

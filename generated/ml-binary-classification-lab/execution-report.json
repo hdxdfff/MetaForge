@@ -1,0 +1,12 @@
+{
+  "artifact_id": "ml-binary-classification-lab",
+  "executed": true,
+  "success": true,
+  "exit_code": 0,
+  "command": [
+    "C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "D:\\codex\\generated\\ml-binary-classification-lab\\run_demo.py"
+  ],
+  "stdout": "{\"status\": \"ok\", \"artifact_id\": \"ml-binary-classification-lab\", \"message\": \"Provide a runnable lab bundle that can self-test and emit classification metrics.\", \"args\": []}",
+  "stderr": ""
+}

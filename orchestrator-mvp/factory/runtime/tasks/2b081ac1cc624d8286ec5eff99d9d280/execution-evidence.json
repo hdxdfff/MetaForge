@@ -1,0 +1,80 @@
+{
+  "steps": [
+    {
+      "step_id": "a61b4ca5",
+      "step_title": "Understand task",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-03-20T11:48:00.004410Z",
+      "worker": "reviewer",
+      "phase": "understand",
+      "route_model": "deepseek-v3.2",
+      "route_provider": "openai",
+      "output_ref": {
+        "artifact_id": "ctx_0e0a3bda8600",
+        "task_id": "2b081ac1cc624d8286ec5eff99d9d280",
+        "step_id": "a61b4ca5",
+        "channel": "reviewer-output",
+        "title": "Understand task output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\2b081ac1cc624d8286ec5eff99d9d280\\a61b4ca5-reviewer-output-ctx_0e0a3bda8600.txt",
+        "size_chars": 1106,
+        "line_count": 22,
+        "created_at": "2026-03-20T11:47:40.774340Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "understand",
+          "route_model": "deepseek-v3.2",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 1106,
+        "line_count": 22,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "28935899",
+      "step_title": "Draft solution",
+      "action": "coder_step",
+      "ok": true,
+      "at": "2026-03-20T11:49:24.736414Z",
+      "worker": "coder",
+      "phase": "draft",
+      "route_model": "deepseek-v3.2",
+      "route_provider": "openai",
+      "output_ref": {
+        "artifact_id": "ctx_b184ce923ba1",
+        "task_id": "2b081ac1cc624d8286ec5eff99d9d280",
+        "step_id": "28935899",
+        "channel": "coder-output",
+        "title": "Draft solution output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\2b081ac1cc624d8286ec5eff99d9d280\\28935899-coder-output-ctx_b184ce923ba1.txt",
+        "size_chars": 1154,
+        "line_count": 17,
+        "created_at": "2026-03-20T11:49:14.397420Z",
+        "metadata": {
+          "worker": "coder",
+          "phase": "draft",
+          "route_model": "deepseek-v3.2",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "coder-output",
+        "char_count": 1154,
+        "line_count": 17,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    }
+  ],
+  "task_id": "2b081ac1cc624d8286ec5eff99d9d280",
+  "task_title": "Implement module tools.capability_distillation",
+  "task_status": "running",
+  "started_at": "2026-03-20T11:41:04.343041Z",
+  "updated_at": "2026-03-20T11:49:24.736414Z",
+  "completed": false
+}

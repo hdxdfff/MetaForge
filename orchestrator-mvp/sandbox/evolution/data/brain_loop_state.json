@@ -1,0 +1,712 @@
+{
+  "updated_at": "2026-03-12T07:08:58.427069Z",
+  "control_center": {
+    "paused": false,
+    "status": "active"
+  },
+  "approval_policy": {
+    "deploy_production": {
+      "mode": "MANUAL"
+    },
+    "create_workspace": {
+      "mode": "AUTO"
+    },
+    "dispatch_low_risk_goal_nodes": {
+      "mode": "AUTO"
+    },
+    "modify_agents": {
+      "mode": "MANUAL"
+    },
+    "modify_controller": {
+      "mode": "MANUAL"
+    },
+    "resolve_warning_escalations": {
+      "mode": "AUTO"
+    },
+    "resolve_error_escalations": {
+      "mode": "MANUAL"
+    },
+    "filesystem.write_workspace": {
+      "mode": "AUTO-LIMIT",
+      "path_prefixes": [
+        "D:\\codex\\orchestrator-mvp\\workspace",
+        "D:\\codex\\orchestrator-mvp\\factory\\workspace"
+      ]
+    },
+    "filesystem.delete": {
+      "mode": "MANUAL"
+    },
+    "git.push": {
+      "mode": "AUTO-LIMIT",
+      "allowed_remotes": [
+        "origin",
+        "github",
+        "gitee"
+      ]
+    },
+    "install_package": {
+      "mode": "AUTO-LIMIT",
+      "allowlist": [
+        "numpy",
+        "torch",
+        "opencv-python",
+        "pytest",
+        "fastapi",
+        "uvicorn"
+      ]
+    },
+    "docker.run": {
+      "mode": "AUTO-LIMIT",
+      "allow_images": [
+        "python",
+        "node",
+        "postgres",
+        "redis",
+        "nginx"
+      ]
+    },
+    "approved_patch": {
+      "mode": "MANUAL"
+    },
+    "filesystem.write_core": {
+      "mode": "MANUAL"
+    }
+  },
+  "actions": [
+    {
+      "phase": "goal-runtime-sync",
+      "status": "updated",
+      "updated": 0,
+      "active_goal_count": 2
+    },
+    {
+      "phase": "goal-storage-audit",
+      "status": "healthy",
+      "stored_successfully": true,
+      "issues": [],
+      "active_task_count": 1
+    },
+    {
+      "phase": "cross-project-goal-seed",
+      "goal_id": "goal_5316547f09",
+      "target": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "projects": [
+        "79120c5dbb",
+        "aimath0001"
+      ],
+      "departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "score": 0.83
+    },
+    {
+      "phase": "cross-project-coordination-sweep",
+      "candidate_count": 80,
+      "selected_targets": [
+        "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+        "Coordinate ToyOS Kernel with Optimize task scheduler from agent experience",
+        "Coordinate AI Math Foundations Workspace with Optimize task scheduler from agent experience"
+      ]
+    },
+    {
+      "phase": "github-learning-scan",
+      "candidate_count": 10,
+      "top_candidates": [
+        "Significant-Gravitas/AutoGPT",
+        "langchain-ai/langchain",
+        "ggerganov/llama.cpp"
+      ]
+    },
+    {
+      "phase": "github-learning-refresh",
+      "ready_repo_count": 1,
+      "learned_repository_count": 1,
+      "extracted_capabilities": [
+        "agent_orchestration",
+        "kv_cache_manager",
+        "local_llm_runner",
+        "token_streaming",
+        "tool_execution",
+        "workflow_planning"
+      ]
+    },
+    {
+      "phase": "experiment-plan",
+      "selected": "Experiment GitHub repo capability extraction",
+      "candidate_count": 5
+    },
+    {
+      "phase": "experiment-run",
+      "status": "completed",
+      "target": "Experiment GitHub repo capability extraction"
+    },
+    {
+      "phase": "experiment-evaluate",
+      "status": "evaluated",
+      "score": 0.9185,
+      "adopt": true
+    },
+    {
+      "phase": "capability-distillation",
+      "status": "ready",
+      "adopted": true,
+      "capability_hints": 9
+    },
+    {
+      "phase": "github-capability-library",
+      "status": "ready",
+      "asset_count": 6,
+      "synced_registry_count": 0
+    },
+    {
+      "phase": "knowledge-refresh",
+      "decision_patterns": 1,
+      "experiment_patterns": 5
+    },
+    {
+      "phase": "ai-testing-attention",
+      "status": "attention",
+      "pass_rate": 0.8,
+      "error_count": 0,
+      "failing_case_ids": [
+        "context-boundary"
+      ]
+    },
+    {
+      "phase": "guard-throttle",
+      "reason": "platform generation throttled by daily limit",
+      "target": "platform-generation"
+    },
+    {
+      "phase": "cross-project-coordination",
+      "goal_id": "goal_5316547f09",
+      "target": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "coordination_status": "completed",
+      "completed_count": 1,
+      "task_count": 2
+    },
+    {
+      "phase": "decision-engine",
+      "action": "hold",
+      "reason": "control-layer-attention",
+      "selected": null
+    }
+  ],
+  "context_kernel": {
+    "updated_at": "2026-03-12T07:08:52.525279Z",
+    "resident_core_agent": {
+      "name": "Resident Core Agent",
+      "mode": "codex-first",
+      "role": "Supervise cheap-first local automation, review escalations, and keep Codex as the primary operator interface.",
+      "expensive_model_policy": "Use premium reasoning only for contradictions, repeated failures, architecture conflicts, security boundaries, and high-risk actions.",
+      "operator_interface": "codex",
+      "updated_at": null
+    },
+    "hot_context": {
+      "updated_at": "2026-03-12T07:08:52.525279Z",
+      "control_center": {
+        "paused": false,
+        "status": "active",
+        "updated_at": "2026-03-09T05:05:09.879563Z",
+        "reason": "test",
+        "resident": true
+      },
+      "policy_version": "9",
+      "active_task_count": 1,
+      "failed_task_count": 0,
+      "open_escalation_count": 1,
+      "active_tasks": [
+        {
+          "id": "ccb165ed8549456997edf05f8a021395",
+          "status": "waiting_approval",
+          "goal": "goal_4af4102d2f",
+          "repo_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+          "updated_at": "2026-03-11T16:00:28.351326Z"
+        }
+      ],
+      "failed_tasks": []
+    },
+    "project_summary_count": 5,
+    "project_context_kernel_count": 5,
+    "project_context_compaction_count": 5,
+    "decision_count": 13,
+    "failure_pattern_count": 1,
+    "escalation_count": 1
+  },
+  "memory_kernel": {
+    "updated_at": "2026-03-12T07:08:58.420264Z",
+    "goal_count": 412,
+    "task_history_count": 17,
+    "decision_count": 200,
+    "agent_count": 3,
+    "top_goals": [
+      {
+        "goal_id": "goal_84adc26566",
+        "target": "build ai-video-factory",
+        "type": "build_product",
+        "status": "completed",
+        "graph_id": "graph_5ed4269e9a",
+        "task_ids": [],
+        "created_at": "2026-03-09T05:36:51.322777Z",
+        "updated_at": "2026-03-09T12:15:51.835146Z",
+        "progress": {
+          "total_nodes": 5,
+          "completed_nodes": 5,
+          "running_nodes": 0,
+          "blocked_nodes": 0
+        },
+        "next_nodes": []
+      },
+      {
+        "goal_id": "goal_7f471cb20d",
+        "target": "AI Web Platform Factory",
+        "type": "build_platform",
+        "status": "completed",
+        "graph_id": "graph_6c58f5a711",
+        "task_ids": [],
+        "created_at": "2026-03-09T06:47:30.108710Z",
+        "updated_at": "2026-03-09T12:15:51.838146Z",
+        "progress": {
+          "total_nodes": 5,
+          "completed_nodes": 5,
+          "running_nodes": 0,
+          "blocked_nodes": 0
+        },
+        "next_nodes": []
+      },
+      {
+        "goal_id": "goal_c7dd020683",
+        "target": "Run platform verification sweep",
+        "type": "verify_platforms",
+        "status": "completed",
+        "graph_id": "graph_c1c0ced0af",
+        "task_ids": [],
+        "created_at": "2026-03-09T10:56:31.116918Z",
+        "updated_at": "2026-03-11T11:28:08.126344Z",
+        "progress": {
+          "total_nodes": 5,
+          "completed_nodes": 5,
+          "running_nodes": 0,
+          "blocked_nodes": 0
+        },
+        "next_nodes": []
+      },
+      {
+        "goal_id": "goal_5fc8f9d272",
+        "target": "Run platform verification sweep",
+        "type": "verify_platforms",
+        "status": "completed",
+        "graph_id": "graph_a74b7063c5",
+        "task_ids": [],
+        "created_at": "2026-03-09T11:04:03.837861Z",
+        "updated_at": "2026-03-09T11:37:38.945083Z",
+        "progress": {
+          "total_nodes": 4,
+          "completed_nodes": 4,
+          "running_nodes": 0,
+          "blocked_nodes": 0
+        },
+        "next_nodes": []
+      },
+      {
+        "goal_id": "goal_10887c64f0",
+        "target": "Improve cheap agent prompts",
+        "type": "build_product",
+        "status": "completed",
+        "graph_id": "graph_1e8ba9d356",
+        "task_ids": [],
+        "created_at": "2026-03-09T11:05:00.219331Z",
+        "updated_at": "2026-03-09T11:37:38.948606Z",
+        "progress": {
+          "total_nodes": 5,
+          "completed_nodes": 5,
+          "running_nodes": 0,
+          "blocked_nodes": 0
+        },
+        "next_nodes": []
+      }
+    ],
+    "recent_decisions": [
+      {
+        "at": "2026-03-12T07:08:58.420264Z",
+        "type": "brain-loop-action",
+        "goal_id": null,
+        "task_id": null,
+        "node_id": null,
+        "summary": "capability-distillation",
+        "details": {
+          "phase": "capability-distillation",
+          "status": "ready",
+          "adopted": true,
+          "capability_hints": 9
+        }
+      },
+      {
+        "at": "2026-03-12T07:08:58.420264Z",
+        "type": "brain-loop-action",
+        "goal_id": null,
+        "task_id": null,
+        "node_id": null,
+        "summary": "github-capability-library",
+        "details": {
+          "phase": "github-capability-library",
+          "status": "ready",
+          "asset_count": 6,
+          "synced_registry_count": 0
+        }
+      },
+      {
+        "at": "2026-03-12T07:08:58.420264Z",
+        "type": "brain-loop-action",
+        "goal_id": null,
+        "task_id": null,
+        "node_id": null,
+        "summary": "knowledge-refresh",
+        "details": {
+          "phase": "knowledge-refresh",
+          "decision_patterns": 1,
+          "experiment_patterns": 5
+        }
+      },
+      {
+        "at": "2026-03-12T07:08:58.420264Z",
+        "type": "brain-loop-action",
+        "goal_id": null,
+        "task_id": null,
+        "node_id": null,
+        "summary": "ai-testing-attention",
+        "details": {
+          "phase": "ai-testing-attention",
+          "status": "attention",
+          "pass_rate": 0.8,
+          "error_count": 0,
+          "failing_case_ids": [
+            "context-boundary"
+          ]
+        }
+      },
+      {
+        "at": "2026-03-12T07:08:58.420264Z",
+        "type": "brain-loop-action",
+        "goal_id": null,
+        "task_id": null,
+        "node_id": null,
+        "summary": "guard-throttle",
+        "details": {
+          "phase": "guard-throttle",
+          "reason": "platform generation throttled by daily limit",
+          "target": "platform-generation"
+        }
+      },
+      {
+        "at": "2026-03-12T07:08:58.420264Z",
+        "type": "brain-loop-action",
+        "goal_id": "goal_5316547f09",
+        "task_id": null,
+        "node_id": null,
+        "summary": "cross-project-coordination",
+        "details": {
+          "phase": "cross-project-coordination",
+          "goal_id": "goal_5316547f09",
+          "target": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+          "coordination_status": "completed",
+          "completed_count": 1,
+          "task_count": 2
+        }
+      },
+      {
+        "at": "2026-03-12T07:08:58.420264Z",
+        "type": "brain-loop-action",
+        "goal_id": null,
+        "task_id": null,
+        "node_id": null,
+        "summary": "decision-engine",
+        "details": {
+          "phase": "decision-engine",
+          "action": "hold",
+          "reason": "control-layer-attention",
+          "selected": null
+        }
+      },
+      {
+        "at": "2026-03-12T07:08:58.420264Z",
+        "type": "task-exception",
+        "task_id": "ccb165ed8549456997edf05f8a021395",
+        "summary": "Task ccb165ed8549456997edf05f8a021395 is waiting_approval",
+        "details": {
+          "task_id": "ccb165ed8549456997edf05f8a021395",
+          "status": "waiting_approval",
+          "goal": "goal_4af4102d2f",
+          "repo_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+          "updated_at": "2026-03-11T16:00:28.351326Z",
+          "error": null
+        }
+      }
+    ],
+    "agent_summary": [
+      {
+        "worker": "reviewer",
+        "completed": 3,
+        "failed": 0,
+        "waiting_approval": 0,
+        "running": 0,
+        "last_task_id": "cd2dcfe1bcb944dda4ea7c34a0d2604b",
+        "last_goal": "Strengthen webapp generation capability",
+        "last_repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\build-ai-video-factory",
+        "last_status": "completed",
+        "last_updated_at": "2026-03-11T16:04:27.450844Z",
+        "success_rate": 1.0
+      },
+      {
+        "worker": "shell",
+        "completed": 3,
+        "failed": 0,
+        "waiting_approval": 0,
+        "running": 0,
+        "last_task_id": "cd2dcfe1bcb944dda4ea7c34a0d2604b",
+        "last_goal": "Strengthen webapp generation capability",
+        "last_repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\build-ai-video-factory",
+        "last_status": "completed",
+        "last_updated_at": "2026-03-11T16:04:27.450844Z",
+        "success_rate": 1.0
+      },
+      {
+        "worker": "supervisor",
+        "completed": 0,
+        "failed": 0,
+        "waiting_approval": 1,
+        "running": 0,
+        "last_task_id": "facb1f1a2cca4c0884ff7c61c4dd4dfb",
+        "last_goal": "Stabilize primary AI test provider path",
+        "last_repo_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+        "last_status": "timed_out",
+        "last_updated_at": "2026-03-12T01:32:14.680491Z",
+        "success_rate": 0.0
+      }
+    ]
+  },
+  "global_policy": {
+    "updated_at": "2026-03-12T07:08:52.832873Z",
+    "focus_capabilities": [
+      "agent_orchestration",
+      "webapp_generation",
+      "deploy_scaffold",
+      "tool_extension",
+      "kv_cache_manager",
+      "local_llm_runner"
+    ],
+    "resource_budget": {
+      "runtime_tasks": 0.35,
+      "experiments": 0.2,
+      "capability_building": 0.15,
+      "maintenance": 0.2
+    },
+    "cadence_policy": {
+      "runtime_dispatch_limit": 2,
+      "goal_generation_every": 3,
+      "maintenance_mode": "full",
+      "maintenance_every": 4,
+      "capability_building_every": 5,
+      "experiment_every": 5,
+      "meta_every": 5,
+      "ai_testing_every": 4
+    },
+    "experiment_portfolio": {
+      "routing-heuristics": 0.35,
+      "prompt-specialization": 0.2,
+      "recovery-patterns": 0.2,
+      "goal-seeding": 0.125,
+      "pattern-rollout": 0.125
+    },
+    "worker_bias_policy": {
+      "reviewer": 0.3,
+      "coder": 0.12,
+      "docker": 0.03,
+      "shell": 0.12
+    },
+    "organization_priority": {
+      "departments": [
+        {
+          "department": "engineering_department",
+          "project_count": 22,
+          "default_worker": "coder"
+        },
+        {
+          "department": "qa_department",
+          "project_count": 22,
+          "default_worker": "shell"
+        },
+        {
+          "department": "architecture_department",
+          "project_count": 11,
+          "default_worker": "reviewer"
+        },
+        {
+          "department": "research_department",
+          "project_count": 11,
+          "default_worker": "reviewer"
+        },
+        {
+          "department": "operations_department",
+          "project_count": 3,
+          "default_worker": "docker"
+        }
+      ]
+    },
+    "top_capabilities": [
+      {
+        "capability_id": "agent_orchestration",
+        "score": 11.9382,
+        "count": 210
+      },
+      {
+        "capability_id": "webapp_generation",
+        "score": 11.718,
+        "count": 204
+      },
+      {
+        "capability_id": "deploy_scaffold",
+        "score": 6.156,
+        "count": 135
+      },
+      {
+        "capability_id": "tool_extension",
+        "score": 4.9275,
+        "count": 135
+      },
+      {
+        "capability_id": "kv_cache_manager",
+        "score": 0.2202,
+        "count": 6
+      },
+      {
+        "capability_id": "local_llm_runner",
+        "score": 0.2202,
+        "count": 6
+      }
+    ],
+    "top_workers": [
+      {
+        "score": 7.908,
+        "count": 151,
+        "worker": "reviewer",
+        "success_rate": 1.0
+      }
+    ],
+    "inputs": {
+      "quality_score": 0.6354,
+      "control_status": "operator_attention",
+      "autonomy_stage": "stage4_confirmed",
+      "autonomy_source": "soak_validation",
+      "autonomy_confirmed": true,
+      "experiment_history_count": 200,
+      "organization_departments": 5,
+      "ai_testing_status": "attention",
+      "ai_testing_pass_rate": 0.8,
+      "ai_testing_error_count": 0
+    }
+  },
+  "github_learning": {
+    "candidate_count": 10,
+    "clone_status": "skipped",
+    "ready_repo_count": 1,
+    "learned_repository_count": 1
+  },
+  "experiment_cycle": {
+    "selected": "Experiment GitHub repo capability extraction",
+    "run_status": "completed",
+    "evaluation_score": 0.9185,
+    "adopt": true
+  },
+  "ai_testing": {
+    "updated_at": "2026-03-12T07:08:52.471729Z",
+    "status": "attention",
+    "suite": "ai-system-basic-suite",
+    "provider": "cheap-fallback",
+    "api_style": "chat.completions",
+    "model": "deepseek-chat",
+    "base_url": "https://api.deepseek.com",
+    "suite_path": "D:\\codex\\orchestrator-mvp\\data\\ai_test_suite.json",
+    "pass_rate": 0.8,
+    "passed_cases": 4,
+    "total_cases": 5,
+    "failing_case_ids": [
+      "context-boundary"
+    ],
+    "error_count": 0,
+    "error_types": [],
+    "max_attempt_count": 1,
+    "retry_policy": {
+      "max_retries": 2,
+      "backoff_seconds": 2.0
+    },
+    "attempted_providers": [
+      {
+        "provider": "openai-primary",
+        "api_style": "responses",
+        "model": "gpt-5.4",
+        "base_url": "https://api.openai.com/v1",
+        "all_errors": true,
+        "error_types": [
+          "AuthenticationError"
+        ]
+      },
+      {
+        "provider": "cheap-fallback",
+        "api_style": "chat.completions",
+        "model": "deepseek-chat",
+        "base_url": "https://api.deepseek.com",
+        "all_errors": false,
+        "error_types": []
+      }
+    ]
+  },
+  "goal_storage": {
+    "updated_at": "2026-03-12T07:08:52.780422Z",
+    "status": "healthy",
+    "stored_successfully": true,
+    "goal_registry": {
+      "goal_count": 411,
+      "unique_goal_id_count": 411,
+      "active_goal_count": 2,
+      "recent_goal_count_24h": 82
+    },
+    "graph_integrity": {
+      "active_goals_with_graph": 2,
+      "missing_graph_goal_ids": [],
+      "running_goals_missing_tasks": [],
+      "missing_task_goal_ids": []
+    },
+    "task_queue": {
+      "active_task_count": 1,
+      "managed_active_task_count": 0,
+      "managed_active_tasks_with_goal_link": 0,
+      "managed_active_tasks_linked_to_existing_goal": 0,
+      "managed_active_tasks_broken_goal_link": [],
+      "managed_active_tasks_without_goal_link": [],
+      "managed_active_tasks_without_node_link": []
+    },
+    "state_confirmation": {
+      "recent_action_goal_ids": [
+        "goal_da38e5f848"
+      ],
+      "recent_action_missing_goal_ids": [],
+      "memory_kernel_goal_count": 411,
+      "memory_kernel_top_goal_ids": [
+        "goal_10887c64f0",
+        "goal_5fc8f9d272",
+        "goal_7f471cb20d",
+        "goal_84adc26566",
+        "goal_c7dd020683"
+      ],
+      "active_goal_ids_not_in_memory_top": [
+        "goal_1fe0e4bb13",
+        "goal_a2cbaa0d6f"
+      ]
+    },
+    "issues": []
+  }
+}

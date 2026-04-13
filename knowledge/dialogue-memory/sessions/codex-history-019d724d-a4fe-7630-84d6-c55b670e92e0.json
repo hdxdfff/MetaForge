@@ -1,0 +1,21 @@
+{
+  "session_id": "codex-history:019d724d-a4fe-7630-84d6-c55b670e92e0",
+  "source": "codex-history",
+  "title": "E:\\codex\\vm-codex.cmd\n\n  它会在 VM 里打开 Codex CLI 的交互界面。\n  如果你要的是本机直接打开当前 Windows 上的 Codex CLI，也是直接运行 codex。\n\n\n› 你试试",
+  "workspace": "",
+  "summary": "E:\\codex\\vm-codex.cmd\n\n  它会在 VM 里打开 Codex CLI 的交互界面。\n  如果你要的是本机直接打开当前 Windows 上的 Codex CLI，也是直接运行 codex。\n\n\n› 你试试",
+  "topics": [],
+  "constraints": [],
+  "decisions": [],
+  "tags": [],
+  "artifacts": [],
+  "messages": [
+    {
+      "role": "user",
+      "content": "E:\\codex\\vm-codex.cmd\n\n  它会在 VM 里打开 Codex CLI 的交互界面。\n  如果你要的是本机直接打开当前 Windows 上的 Codex CLI，也是直接运行 codex。\n\n\n› 你试试",
+      "created_at": "2026-04-09T12:53:22Z"
+    }
+  ],
+  "created_at": "2026-04-09T12:53:22Z",
+  "updated_at": "2026-04-09T12:53:22Z"
+}

@@ -1,0 +1,21 @@
+{
+  "updated_at": "2026-04-05T18:48:04.430710Z",
+  "status": "pass",
+  "pressure": "low",
+  "open_task_count": 0,
+  "failed_task_count": 129,
+  "historical_failed_task_count": 55,
+  "historical_debt_archive_status": "archived",
+  "historical_debt_archive_count": 55,
+  "active_goal_count": 0,
+  "starvation_seconds": 12,
+  "retry_clusters": 129,
+  "blocked_concentration": 0,
+  "history_window_count": 120,
+  "active_pressure_score": 0,
+  "risk_notes": [
+    "failed_task_count reflects currently open task statuses",
+    "historical_failed_task_count reflects accumulated backlog debt",
+    "historical debt is additionally captured in historical_failure_debt_archive.json"
+  ]
+}

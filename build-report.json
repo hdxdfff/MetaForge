@@ -1,0 +1,61 @@
+{
+  "target": "D:\\codex",
+  "toolchain": {
+    "nasm": "D:\\codex\\bin\\nasm.CMD",
+    "gcc": "D:\\codex\\bin\\gcc.CMD",
+    "i686_elf_gcc": null,
+    "i686_elf_ld": null,
+    "ld": "D:\\codex\\bin\\ld.CMD",
+    "qemu_system_i386": "D:\\codex\\bin\\qemu-system-i386.CMD",
+    "make": "D:\\codex\\bin\\make.CMD",
+    "docker": "C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.EXE"
+  },
+  "checks": [
+    {
+      "ok": false,
+      "command": [
+        "nasm",
+        "boot.asm"
+      ],
+      "returncode": null,
+      "stdout": "",
+      "stderr": "nasm unavailable or boot.asm missing"
+    },
+    {
+      "ok": false,
+      "command": [
+        "nasm",
+        "src/isr_stub.asm"
+      ],
+      "returncode": null,
+      "stdout": "",
+      "stderr": "nasm unavailable or src/isr_stub.asm missing"
+    },
+    {
+      "ok": false,
+      "command": [
+        "ld.CMD"
+      ],
+      "returncode": null,
+      "stdout": "",
+      "stderr": "linker unavailable or prerequisites missing"
+    }
+  ],
+  "build_ready": true,
+  "host_build_ready": true,
+  "build_success": false,
+  "link_mode": "host-fallback",
+  "c_source_count": 0,
+  "managed_resolution": {
+    "host_build_tools_present": true,
+    "docker_client_present": true,
+    "docker_daemon_ready": true,
+    "docker_detail": null,
+    "recommended_backend": "host"
+  },
+  "evidence": {
+    "build_log": "D:\\codex\\build\\build.log",
+    "sha256": "D:\\codex\\build\\artifact.sha256"
+  },
+  "prebuilt_artifact_present": false
+}

@@ -1,0 +1,3867 @@
+{
+  "graph_id": "graph_36dce3a807",
+  "goal_id": "goal_499a5e5ebe",
+  "target": "Continue ToyOS kernel branch work with mainline context reuse",
+  "type": "build_product",
+  "created_at": "2026-03-10T19:34:18.330642Z",
+  "updated_at": "2026-03-11T15:34:55.680463Z",
+  "status": "planned",
+  "meta": {
+    "goal_scale": "engineering-os",
+    "architecture_rules": [
+      "agents cannot import runtime",
+      "router must be stateless",
+      "runtime modules cannot depend on app transport handlers",
+      "tools may depend on runtime and state, but not app HTTP layer",
+      "verification must gate promotion of architecture-affecting changes"
+    ],
+    "agent_teams": [
+      "architecture_team",
+      "backend_team",
+      "infrastructure_team",
+      "testing_team"
+    ],
+    "code_graph_focus": {
+      "module_focus": [
+        "tools.branch_context",
+        "tools.context_kernel",
+        "tools.prepare_self_patch_branch",
+        "tools.branch_workboard",
+        "tools.codex_control",
+        "app.models",
+        "tools.context_builder",
+        "app.main"
+      ],
+      "owner_teams": [
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "layers": [
+        "unclassified"
+      ],
+      "matched_modules": [
+        {
+          "module": "tools.branch_context",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified",
+          "dependency_count": 1,
+          "dependents": 1,
+          "internal_imports": [
+            "tools.context_builder"
+          ]
+        },
+        {
+          "module": "tools.context_kernel",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified",
+          "dependency_count": 1,
+          "dependents": 3,
+          "internal_imports": [
+            "tools.task_state_tools"
+          ]
+        },
+        {
+          "module": "tools.prepare_self_patch_branch",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified",
+          "dependency_count": 1,
+          "dependents": 0,
+          "internal_imports": [
+            "tools.execution_trace"
+          ]
+        },
+        {
+          "module": "tools.branch_workboard",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified",
+          "dependency_count": 2,
+          "dependents": 1,
+          "internal_imports": [
+            "tools.branch_context",
+            "tools.goal_registry"
+          ]
+        },
+        {
+          "module": "tools.codex_control",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified",
+          "dependency_count": 50,
+          "dependents": 0,
+          "internal_imports": [
+            "app.main",
+            "runtime.goal_manager",
+            "runtime.platform_generator",
+            "runtime.scheduler",
+            "runtime.taskgraph_engine",
+            "state.store",
+            "tools.ai_guard",
+            "tools.architecture_validator",
+            "tools.automation_lab",
+            "tools.autonomy_score",
+            "tools.brain_loop",
+            "tools.brain_snapshot",
+            "tools.branch_workboard",
+            "tools.capability_registry",
+            "tools.change_request_analyzer",
+            "tools.code_knowledge_graph",
+            "tools.company_os",
+            "tools.context_cache",
+            "tools.context_kernel",
+            "tools.coordination_runtime",
+            "tools.cross_project_coordination",
+            "tools.dependency_impact_engine",
+            "tools.environment_repair_lane",
+            "tools.experiment_evaluator",
+            "tools.experiment_executor",
+            "tools.experiment_planner",
+            "tools.factory_daemon",
+            "tools.goal_registry",
+            "tools.knowledge_engine",
+            "tools.memory_system",
+            "tools.meta_factory_control",
+            "tools.module_ownership",
+            "tools.module_ownership_graph",
+            "tools.organization_model",
+            "tools.organization_workboard",
+            "tools.platform_registry",
+            "tools.privilege_policy",
+            "tools.project_graph",
+            "tools.release_operations",
+            "tools.release_train_runtime",
+            "tools.replan_engine",
+            "tools.runtime_maintenance",
+            "tools.session_guard",
+            "tools.skill_training_loop",
+            "tools.soak_validation",
+            "tools.taskgraph_compiler",
+            "tools.tool_health_audit",
+            "tools.tool_registry",
+            "tools.verification_engine",
+            "tools.vm_orchestrator"
+          ]
+        },
+        {
+          "module": "app.models",
+          "owner_team": "backend_team",
+          "owner": "coder",
+          "layer": "unclassified",
+          "dependency_count": 0,
+          "dependents": 9,
+          "internal_imports": []
+        },
+        {
+          "module": "tools.context_builder",
+          "owner_team": "infrastructure_team",
+          "owner": "ops",
+          "layer": "unclassified",
+          "dependency_count": 2,
+          "dependents": 5,
+          "internal_imports": [
+            "tools.code_knowledge_graph",
+            "tools.context_cache"
+          ]
+        },
+        {
+          "module": "app.main",
+          "owner_team": "backend_team",
+          "owner": "coder",
+          "layer": "unclassified",
+          "dependency_count": 5,
+          "dependents": 3,
+          "internal_imports": [
+            "app.config",
+            "app.models",
+            "app.network_agent",
+            "tools.execution_trace",
+            "tools.vm_orchestrator"
+          ]
+        }
+      ]
+    },
+    "dependency_impact": {
+      "updated_at": "2026-03-10T19:34:17.448267Z",
+      "request": "Continue ToyOS kernel branch work with mainline context reuse",
+      "focus_modules": [
+        "tools.branch_context",
+        "tools.context_kernel",
+        "tools.prepare_self_patch_branch",
+        "tools.branch_workboard",
+        "tools.codex_control",
+        "app.models",
+        "tools.context_builder",
+        "app.main"
+      ],
+      "impacted_modules": [
+        {
+          "module": "app.main",
+          "depth": 0,
+          "owner_team": "backend_team",
+          "layer": "unclassified",
+          "dependents": 3
+        },
+        {
+          "module": "app.models",
+          "depth": 0,
+          "owner_team": "backend_team",
+          "layer": "unclassified",
+          "dependents": 9
+        },
+        {
+          "module": "tools.branch_context",
+          "depth": 0,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 1
+        },
+        {
+          "module": "tools.branch_workboard",
+          "depth": 0,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 1
+        },
+        {
+          "module": "tools.codex_control",
+          "depth": 0,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 0
+        },
+        {
+          "module": "tools.context_builder",
+          "depth": 0,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 5
+        },
+        {
+          "module": "tools.context_kernel",
+          "depth": 0,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 3
+        },
+        {
+          "module": "tools.prepare_self_patch_branch",
+          "depth": 0,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 0
+        },
+        {
+          "module": "app.budget_manager",
+          "depth": 1,
+          "owner_team": "backend_team",
+          "layer": "unclassified",
+          "dependents": 1
+        },
+        {
+          "module": "app.context_service",
+          "depth": 1,
+          "owner_team": "backend_team",
+          "layer": "unclassified",
+          "dependents": 1
+        },
+        {
+          "module": "app.git_service",
+          "depth": 1,
+          "owner_team": "backend_team",
+          "layer": "unclassified",
+          "dependents": 2
+        },
+        {
+          "module": "app.model_router",
+          "depth": 1,
+          "owner_team": "backend_team",
+          "layer": "unclassified",
+          "dependents": 3
+        },
+        {
+          "module": "app.openai_client",
+          "depth": 1,
+          "owner_team": "backend_team",
+          "layer": "unclassified",
+          "dependents": 1
+        },
+        {
+          "module": "app.orchestrator",
+          "depth": 1,
+          "owner_team": "backend_team",
+          "layer": "unclassified",
+          "dependents": 0
+        },
+        {
+          "module": "app.resource_registry",
+          "depth": 1,
+          "owner_team": "backend_team",
+          "layer": "unclassified",
+          "dependents": 2
+        },
+        {
+          "module": "app.worker_adapters",
+          "depth": 1,
+          "owner_team": "backend_team",
+          "layer": "unclassified",
+          "dependents": 1
+        },
+        {
+          "module": "runtime.scheduler",
+          "depth": 1,
+          "owner_team": "architecture_team",
+          "layer": "agent_teams",
+          "dependents": 2
+        },
+        {
+          "module": "tools.brain_loop",
+          "depth": 1,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 3
+        },
+        {
+          "module": "tools.change_request_analyzer",
+          "depth": 1,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 2
+        },
+        {
+          "module": "tools.factory_daemon",
+          "depth": 1,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 1
+        },
+        {
+          "module": "tools.module_ownership",
+          "depth": 1,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 8
+        },
+        {
+          "module": "app.llm_service",
+          "depth": 2,
+          "owner_team": "backend_team",
+          "layer": "unclassified",
+          "dependents": 1
+        },
+        {
+          "module": "runtime.executor",
+          "depth": 2,
+          "owner_team": "backend_team",
+          "layer": "unclassified",
+          "dependents": 1
+        },
+        {
+          "module": "tools.decision_engine",
+          "depth": 2,
+          "owner_team": "architecture_team",
+          "layer": "task_graph_planner",
+          "dependents": 1
+        },
+        {
+          "module": "tools.meta_factory_control",
+          "depth": 2,
+          "owner_team": "infrastructure_team",
+          "layer": "architecture_engine",
+          "dependents": 3
+        },
+        {
+          "module": "tools.replan_engine",
+          "depth": 2,
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependents": 1
+        },
+        {
+          "module": "tools.taskgraph_compiler",
+          "depth": 2,
+          "owner_team": "architecture_team",
+          "layer": "architecture_engine",
+          "dependents": 3
+        },
+        {
+          "module": "tools.verification_engine",
+          "depth": 2,
+          "owner_team": "infrastructure_team",
+          "layer": "verification",
+          "dependents": 5
+        }
+      ],
+      "affected_teams": [
+        "architecture_team",
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "affected_layers": [
+        "agent_teams",
+        "architecture_engine",
+        "task_graph_planner",
+        "unclassified",
+        "verification"
+      ],
+      "verification_scope": [
+        "app.budget_manager",
+        "app.context_service",
+        "app.git_service",
+        "app.llm_service",
+        "app.main",
+        "app.model_router",
+        "app.models",
+        "app.openai_client",
+        "app.resource_registry",
+        "app.worker_adapters",
+        "runtime.executor",
+        "runtime.scheduler",
+        "tools.brain_loop",
+        "tools.branch_context",
+        "tools.branch_workboard",
+        "tools.change_request_analyzer",
+        "tools.context_builder",
+        "tools.context_kernel",
+        "tools.decision_engine",
+        "tools.factory_daemon",
+        "tools.meta_factory_control",
+        "tools.module_ownership",
+        "tools.replan_engine",
+        "tools.taskgraph_compiler",
+        "tools.verification_engine"
+      ]
+    },
+    "project_impact": {
+      "updated_at": "2026-03-10T19:34:17.655462Z",
+      "request": "Continue ToyOS kernel branch work with mainline context reuse",
+      "query_domains": [
+        "kernel"
+      ],
+      "related_projects": [
+        {
+          "project_id": "79120c5dbb",
+          "name": "ToyOS Kernel",
+          "type": "project",
+          "repo_path": "D:\\codex\\generated\\toy-os-demo",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "project_id": "aimath0001",
+          "name": "AI Math Foundations Workspace",
+          "type": "project",
+          "repo_path": "D:\\人工智能数学基础",
+          "domains": [
+            "kernel"
+          ]
+        },
+        {
+          "project_id": "platform_464dac2a0b",
+          "name": "Optimize task scheduler from agent experience",
+          "type": "platform",
+          "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\optimize-task-scheduler-from-agent-experience",
+          "domains": [
+            "kernel"
+          ]
+        }
+      ],
+      "cross_project_edges": [
+        {
+          "from": "79120c5dbb",
+          "to": "aimath0001",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory",
+            "kernel"
+          ]
+        },
+        {
+          "from": "79120c5dbb",
+          "to": "platform_464dac2a0b",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory",
+            "kernel"
+          ]
+        },
+        {
+          "from": "aimath0001",
+          "to": "79120c5dbb",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory",
+            "kernel"
+          ]
+        },
+        {
+          "from": "aimath0001",
+          "to": "platform_464dac2a0b",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory",
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_464dac2a0b",
+          "to": "79120c5dbb",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory",
+            "kernel"
+          ]
+        },
+        {
+          "from": "platform_464dac2a0b",
+          "to": "aimath0001",
+          "kind": "domain-overlap",
+          "domains": [
+            "factory",
+            "kernel"
+          ]
+        }
+      ],
+      "cross_project_count": 3
+    },
+    "project_graph_summary": {
+      "project_count": 5,
+      "platform_count": 7,
+      "edge_count": 74
+    },
+    "organization_allocation": {
+      "project_id": "79120c5dbb",
+      "name": "ToyOS Kernel",
+      "type": "project",
+      "domains": [
+        "kernel",
+        "factory"
+      ],
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ]
+    },
+    "organization_summary": {
+      "department_count": 5,
+      "team_count": 3
+    },
+    "cross_project_candidate": {},
+    "selected_work_packages": []
+  },
+  "nodes": [
+    {
+      "id": "architecture_contract",
+      "title": "Define architecture contract for Continue ToyOS kernel branch work with mainline context reuse",
+      "role": "architect",
+      "prompt": "Define architecture boundaries, interfaces, and ownership for: Continue ToyOS kernel branch work with mainline context reuse",
+      "dependencies": [],
+      "status": "pending",
+      "task_id": null,
+      "team": "architecture_team",
+      "owned_modules": [
+        "brain",
+        "runtime.scheduler",
+        "tools.taskgraph_compiler",
+        "tools.branch_context",
+        "tools.context_kernel",
+        "tools.prepare_self_patch_branch",
+        "tools.branch_workboard",
+        "tools.codex_control",
+        "app.models",
+        "tools.context_builder",
+        "app.main"
+      ],
+      "kind": "architecture",
+      "module_focus": [
+        "tools.branch_context",
+        "tools.context_kernel",
+        "tools.prepare_self_patch_branch",
+        "tools.branch_workboard",
+        "tools.codex_control",
+        "app.models",
+        "tools.context_builder",
+        "app.main"
+      ],
+      "owner_teams": [
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.branch_context",
+          "tools.context_kernel",
+          "tools.prepare_self_patch_branch",
+          "tools.branch_workboard",
+          "tools.codex_control",
+          "app.models",
+          "tools.context_builder",
+          "app.main"
+        ],
+        "owner_teams": [
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.branch_context",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.context_kernel",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.prepare_self_patch_branch",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.branch_workboard",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.codex_control",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "app.models",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.context_builder",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "app.main",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "dependency_impact": {
+        "updated_at": "2026-03-10T19:34:18.314718Z",
+        "request": "Continue ToyOS kernel branch work with mainline context reuse",
+        "focus_modules": [
+          "tools.branch_context",
+          "tools.context_kernel",
+          "tools.prepare_self_patch_branch",
+          "tools.branch_workboard",
+          "tools.codex_control",
+          "app.models",
+          "tools.context_builder",
+          "app.main"
+        ],
+        "impacted_modules": [
+          {
+            "module": "app.main",
+            "depth": 0,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "app.models",
+            "depth": 0,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 9
+          },
+          {
+            "module": "tools.branch_context",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.branch_workboard",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.codex_control",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.context_builder",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 5
+          },
+          {
+            "module": "tools.context_kernel",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "tools.prepare_self_patch_branch",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "app.budget_manager",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "app.context_service",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "app.git_service",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "app.model_router",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "app.openai_client",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "app.orchestrator",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "app.resource_registry",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "app.worker_adapters",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "runtime.scheduler",
+            "depth": 1,
+            "owner_team": "architecture_team",
+            "layer": "agent_teams",
+            "dependents": 2
+          },
+          {
+            "module": "tools.brain_loop",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "tools.change_request_analyzer",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "tools.factory_daemon",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.module_ownership",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 8
+          },
+          {
+            "module": "app.llm_service",
+            "depth": 2,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "runtime.executor",
+            "depth": 2,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.decision_engine",
+            "depth": 2,
+            "owner_team": "architecture_team",
+            "layer": "task_graph_planner",
+            "dependents": 1
+          },
+          {
+            "module": "tools.meta_factory_control",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "architecture_engine",
+            "dependents": 3
+          },
+          {
+            "module": "tools.replan_engine",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.taskgraph_compiler",
+            "depth": 2,
+            "owner_team": "architecture_team",
+            "layer": "architecture_engine",
+            "dependents": 3
+          },
+          {
+            "module": "tools.verification_engine",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "verification",
+            "dependents": 5
+          }
+        ],
+        "affected_teams": [
+          "architecture_team",
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "affected_layers": [
+          "agent_teams",
+          "architecture_engine",
+          "task_graph_planner",
+          "unclassified",
+          "verification"
+        ],
+        "verification_scope": [
+          "app.budget_manager",
+          "app.context_service",
+          "app.git_service",
+          "app.llm_service",
+          "app.main",
+          "app.model_router",
+          "app.models",
+          "app.openai_client",
+          "app.resource_registry",
+          "app.worker_adapters",
+          "runtime.executor",
+          "runtime.scheduler",
+          "tools.brain_loop",
+          "tools.branch_context",
+          "tools.branch_workboard",
+          "tools.change_request_analyzer",
+          "tools.context_builder",
+          "tools.context_kernel",
+          "tools.decision_engine",
+          "tools.factory_daemon",
+          "tools.meta_factory_control",
+          "tools.module_ownership",
+          "tools.replan_engine",
+          "tools.taskgraph_compiler",
+          "tools.verification_engine"
+        ]
+      },
+      "project_impact": {
+        "updated_at": "2026-03-10T19:34:18.315736Z",
+        "request": "Continue ToyOS kernel branch work with mainline context reuse",
+        "query_domains": [
+          "kernel"
+        ],
+        "related_projects": [
+          {
+            "project_id": "79120c5dbb",
+            "name": "ToyOS Kernel",
+            "type": "project",
+            "repo_path": "D:\\codex\\generated\\toy-os-demo",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "project_id": "aimath0001",
+            "name": "AI Math Foundations Workspace",
+            "type": "project",
+            "repo_path": "D:\\人工智能数学基础",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "project_id": "platform_464dac2a0b",
+            "name": "Optimize task scheduler from agent experience",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\optimize-task-scheduler-from-agent-experience",
+            "domains": [
+              "kernel"
+            ]
+          }
+        ],
+        "cross_project_edges": [
+          {
+            "from": "79120c5dbb",
+            "to": "aimath0001",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "79120c5dbb",
+            "to": "platform_464dac2a0b",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "aimath0001",
+            "to": "79120c5dbb",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "aimath0001",
+            "to": "platform_464dac2a0b",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_464dac2a0b",
+            "to": "79120c5dbb",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_464dac2a0b",
+            "to": "aimath0001",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          }
+        ],
+        "cross_project_count": 3
+      },
+      "ownership_graph_summary": {
+        "module_count": 116,
+        "team_count": 3
+      },
+      "patch_required": false,
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "review_departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "department_workers": {
+        "architecture_department": "reviewer",
+        "engineering_department": "coder",
+        "qa_department": "shell",
+        "research_department": "reviewer"
+      },
+      "worker": "reviewer",
+      "selection_reason": "role-default:architect->reviewer+team-owner:architecture_team->reviewer",
+      "worker_success_rate": 8.355,
+      "skill_matches": [
+        "completed_1554",
+        "completed_1804"
+      ],
+      "execution_lane": "host-control",
+      "worker_vm_preferred": false
+    },
+    {
+      "id": "engineering_plan",
+      "title": "Plan engineering task graph for Continue ToyOS kernel branch work with mainline context reuse",
+      "role": "product",
+      "prompt": "Produce the engineering task graph, interface map, and implementation slices for: Continue ToyOS kernel branch work with mainline context reuse",
+      "dependencies": [
+        "architecture_contract"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "team": "architecture_team",
+      "owned_modules": [
+        "tools.branch_context",
+        "tools.context_kernel",
+        "tools.prepare_self_patch_branch",
+        "tools.branch_workboard",
+        "tools.codex_control",
+        "app.models",
+        "tools.context_builder",
+        "app.main"
+      ],
+      "kind": "planning",
+      "module_focus": [
+        "tools.branch_context",
+        "tools.context_kernel",
+        "tools.prepare_self_patch_branch",
+        "tools.branch_workboard",
+        "tools.codex_control",
+        "app.models",
+        "tools.context_builder",
+        "app.main"
+      ],
+      "owner_teams": [
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.branch_context",
+          "tools.context_kernel",
+          "tools.prepare_self_patch_branch",
+          "tools.branch_workboard",
+          "tools.codex_control",
+          "app.models",
+          "tools.context_builder",
+          "app.main"
+        ],
+        "owner_teams": [
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.branch_context",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.context_kernel",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.prepare_self_patch_branch",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.branch_workboard",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.codex_control",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "app.models",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.context_builder",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "app.main",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "dependency_impact": {
+        "updated_at": "2026-03-10T19:34:18.314718Z",
+        "request": "Continue ToyOS kernel branch work with mainline context reuse",
+        "focus_modules": [
+          "tools.branch_context",
+          "tools.context_kernel",
+          "tools.prepare_self_patch_branch",
+          "tools.branch_workboard",
+          "tools.codex_control",
+          "app.models",
+          "tools.context_builder",
+          "app.main"
+        ],
+        "impacted_modules": [
+          {
+            "module": "app.main",
+            "depth": 0,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "app.models",
+            "depth": 0,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 9
+          },
+          {
+            "module": "tools.branch_context",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.branch_workboard",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.codex_control",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.context_builder",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 5
+          },
+          {
+            "module": "tools.context_kernel",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "tools.prepare_self_patch_branch",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "app.budget_manager",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "app.context_service",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "app.git_service",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "app.model_router",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "app.openai_client",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "app.orchestrator",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "app.resource_registry",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "app.worker_adapters",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "runtime.scheduler",
+            "depth": 1,
+            "owner_team": "architecture_team",
+            "layer": "agent_teams",
+            "dependents": 2
+          },
+          {
+            "module": "tools.brain_loop",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "tools.change_request_analyzer",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "tools.factory_daemon",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.module_ownership",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 8
+          },
+          {
+            "module": "app.llm_service",
+            "depth": 2,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "runtime.executor",
+            "depth": 2,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.decision_engine",
+            "depth": 2,
+            "owner_team": "architecture_team",
+            "layer": "task_graph_planner",
+            "dependents": 1
+          },
+          {
+            "module": "tools.meta_factory_control",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "architecture_engine",
+            "dependents": 3
+          },
+          {
+            "module": "tools.replan_engine",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.taskgraph_compiler",
+            "depth": 2,
+            "owner_team": "architecture_team",
+            "layer": "architecture_engine",
+            "dependents": 3
+          },
+          {
+            "module": "tools.verification_engine",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "verification",
+            "dependents": 5
+          }
+        ],
+        "affected_teams": [
+          "architecture_team",
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "affected_layers": [
+          "agent_teams",
+          "architecture_engine",
+          "task_graph_planner",
+          "unclassified",
+          "verification"
+        ],
+        "verification_scope": [
+          "app.budget_manager",
+          "app.context_service",
+          "app.git_service",
+          "app.llm_service",
+          "app.main",
+          "app.model_router",
+          "app.models",
+          "app.openai_client",
+          "app.resource_registry",
+          "app.worker_adapters",
+          "runtime.executor",
+          "runtime.scheduler",
+          "tools.brain_loop",
+          "tools.branch_context",
+          "tools.branch_workboard",
+          "tools.change_request_analyzer",
+          "tools.context_builder",
+          "tools.context_kernel",
+          "tools.decision_engine",
+          "tools.factory_daemon",
+          "tools.meta_factory_control",
+          "tools.module_ownership",
+          "tools.replan_engine",
+          "tools.taskgraph_compiler",
+          "tools.verification_engine"
+        ]
+      },
+      "project_impact": {
+        "updated_at": "2026-03-10T19:34:18.315736Z",
+        "request": "Continue ToyOS kernel branch work with mainline context reuse",
+        "query_domains": [
+          "kernel"
+        ],
+        "related_projects": [
+          {
+            "project_id": "79120c5dbb",
+            "name": "ToyOS Kernel",
+            "type": "project",
+            "repo_path": "D:\\codex\\generated\\toy-os-demo",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "project_id": "aimath0001",
+            "name": "AI Math Foundations Workspace",
+            "type": "project",
+            "repo_path": "D:\\人工智能数学基础",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "project_id": "platform_464dac2a0b",
+            "name": "Optimize task scheduler from agent experience",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\optimize-task-scheduler-from-agent-experience",
+            "domains": [
+              "kernel"
+            ]
+          }
+        ],
+        "cross_project_edges": [
+          {
+            "from": "79120c5dbb",
+            "to": "aimath0001",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "79120c5dbb",
+            "to": "platform_464dac2a0b",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "aimath0001",
+            "to": "79120c5dbb",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "aimath0001",
+            "to": "platform_464dac2a0b",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_464dac2a0b",
+            "to": "79120c5dbb",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_464dac2a0b",
+            "to": "aimath0001",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          }
+        ],
+        "cross_project_count": 3
+      },
+      "ownership_graph_summary": {
+        "module_count": 116,
+        "team_count": 3
+      },
+      "patch_required": false,
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "review_departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "department_workers": {
+        "architecture_department": "reviewer",
+        "engineering_department": "coder",
+        "qa_department": "shell",
+        "research_department": "reviewer"
+      }
+    },
+    {
+      "id": "cross_project_coordination",
+      "title": "Coordinate cross-project impact for Continue ToyOS kernel branch work with mainline context reuse",
+      "role": "reviewer",
+      "prompt": "Review cross-project downstream impact, compatibility, and rollout planning for: Continue ToyOS kernel branch work with mainline context reuse",
+      "dependencies": [
+        "engineering_plan"
+      ],
+      "status": "completed",
+      "task_id": null,
+      "team": "architecture_team",
+      "owned_modules": [],
+      "kind": "cross-project-coordination",
+      "module_focus": [
+        "tools.branch_context",
+        "tools.context_kernel",
+        "tools.prepare_self_patch_branch",
+        "tools.branch_workboard",
+        "tools.codex_control",
+        "app.models",
+        "tools.context_builder",
+        "app.main"
+      ],
+      "owner_teams": [
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.branch_context",
+          "tools.context_kernel",
+          "tools.prepare_self_patch_branch",
+          "tools.branch_workboard",
+          "tools.codex_control",
+          "app.models",
+          "tools.context_builder",
+          "app.main"
+        ],
+        "owner_teams": [
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.branch_context",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.context_kernel",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.prepare_self_patch_branch",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.branch_workboard",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.codex_control",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "app.models",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.context_builder",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "app.main",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "dependency_impact": {
+        "updated_at": "2026-03-10T19:34:18.314718Z",
+        "request": "Continue ToyOS kernel branch work with mainline context reuse",
+        "focus_modules": [
+          "tools.branch_context",
+          "tools.context_kernel",
+          "tools.prepare_self_patch_branch",
+          "tools.branch_workboard",
+          "tools.codex_control",
+          "app.models",
+          "tools.context_builder",
+          "app.main"
+        ],
+        "impacted_modules": [
+          {
+            "module": "app.main",
+            "depth": 0,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "app.models",
+            "depth": 0,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 9
+          },
+          {
+            "module": "tools.branch_context",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.branch_workboard",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.codex_control",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.context_builder",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 5
+          },
+          {
+            "module": "tools.context_kernel",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "tools.prepare_self_patch_branch",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "app.budget_manager",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "app.context_service",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "app.git_service",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "app.model_router",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "app.openai_client",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "app.orchestrator",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "app.resource_registry",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "app.worker_adapters",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "runtime.scheduler",
+            "depth": 1,
+            "owner_team": "architecture_team",
+            "layer": "agent_teams",
+            "dependents": 2
+          },
+          {
+            "module": "tools.brain_loop",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "tools.change_request_analyzer",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "tools.factory_daemon",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.module_ownership",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 8
+          },
+          {
+            "module": "app.llm_service",
+            "depth": 2,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "runtime.executor",
+            "depth": 2,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.decision_engine",
+            "depth": 2,
+            "owner_team": "architecture_team",
+            "layer": "task_graph_planner",
+            "dependents": 1
+          },
+          {
+            "module": "tools.meta_factory_control",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "architecture_engine",
+            "dependents": 3
+          },
+          {
+            "module": "tools.replan_engine",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.taskgraph_compiler",
+            "depth": 2,
+            "owner_team": "architecture_team",
+            "layer": "architecture_engine",
+            "dependents": 3
+          },
+          {
+            "module": "tools.verification_engine",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "verification",
+            "dependents": 5
+          }
+        ],
+        "affected_teams": [
+          "architecture_team",
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "affected_layers": [
+          "agent_teams",
+          "architecture_engine",
+          "task_graph_planner",
+          "unclassified",
+          "verification"
+        ],
+        "verification_scope": [
+          "app.budget_manager",
+          "app.context_service",
+          "app.git_service",
+          "app.llm_service",
+          "app.main",
+          "app.model_router",
+          "app.models",
+          "app.openai_client",
+          "app.resource_registry",
+          "app.worker_adapters",
+          "runtime.executor",
+          "runtime.scheduler",
+          "tools.brain_loop",
+          "tools.branch_context",
+          "tools.branch_workboard",
+          "tools.change_request_analyzer",
+          "tools.context_builder",
+          "tools.context_kernel",
+          "tools.decision_engine",
+          "tools.factory_daemon",
+          "tools.meta_factory_control",
+          "tools.module_ownership",
+          "tools.replan_engine",
+          "tools.taskgraph_compiler",
+          "tools.verification_engine"
+        ]
+      },
+      "project_impact": {
+        "updated_at": "2026-03-10T19:34:18.315736Z",
+        "request": "Continue ToyOS kernel branch work with mainline context reuse",
+        "query_domains": [
+          "kernel"
+        ],
+        "related_projects": [
+          {
+            "project_id": "79120c5dbb",
+            "name": "ToyOS Kernel",
+            "type": "project",
+            "repo_path": "D:\\codex\\generated\\toy-os-demo",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "project_id": "aimath0001",
+            "name": "AI Math Foundations Workspace",
+            "type": "project",
+            "repo_path": "D:\\人工智能数学基础",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "project_id": "platform_464dac2a0b",
+            "name": "Optimize task scheduler from agent experience",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\optimize-task-scheduler-from-agent-experience",
+            "domains": [
+              "kernel"
+            ]
+          }
+        ],
+        "cross_project_edges": [
+          {
+            "from": "79120c5dbb",
+            "to": "aimath0001",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "79120c5dbb",
+            "to": "platform_464dac2a0b",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "aimath0001",
+            "to": "79120c5dbb",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "aimath0001",
+            "to": "platform_464dac2a0b",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_464dac2a0b",
+            "to": "79120c5dbb",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_464dac2a0b",
+            "to": "aimath0001",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          }
+        ],
+        "cross_project_count": 3
+      },
+      "patch_required": false,
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "review_departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "department_workers": {
+        "architecture_department": "reviewer",
+        "engineering_department": "coder",
+        "qa_department": "shell",
+        "research_department": "reviewer"
+      },
+      "result": {
+        "summary": "Node bypassed because component coordination is disabled under lean_execution.",
+        "disabled_component": "coordination"
+      },
+      "completed_at": "2026-03-12T19:42:40.301756Z"
+    },
+    {
+      "id": "project_sync_79120c5dbb",
+      "title": "Align project ToyOS Kernel for Continue ToyOS kernel branch work with mainline context reuse",
+      "role": "reviewer",
+      "prompt": "Update compatibility plan, interfaces, tests, and rollout steps for project ToyOS Kernel in support of: Continue ToyOS kernel branch work with mainline context reuse",
+      "dependencies": [
+        "cross_project_coordination"
+      ],
+      "status": "completed",
+      "task_id": null,
+      "team": "architecture_team",
+      "owned_modules": [],
+      "kind": "cross-project-work-package",
+      "module_focus": [
+        "tools.branch_context",
+        "tools.context_kernel",
+        "tools.prepare_self_patch_branch",
+        "tools.branch_workboard",
+        "tools.codex_control",
+        "app.models",
+        "tools.context_builder",
+        "app.main"
+      ],
+      "owner_teams": [
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.branch_context",
+          "tools.context_kernel",
+          "tools.prepare_self_patch_branch",
+          "tools.branch_workboard",
+          "tools.codex_control",
+          "app.models",
+          "tools.context_builder",
+          "app.main"
+        ],
+        "owner_teams": [
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.branch_context",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.context_kernel",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.prepare_self_patch_branch",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.branch_workboard",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.codex_control",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "app.models",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.context_builder",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "app.main",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "dependency_impact": {
+        "updated_at": "2026-03-10T19:34:18.314718Z",
+        "request": "Continue ToyOS kernel branch work with mainline context reuse",
+        "focus_modules": [
+          "tools.branch_context",
+          "tools.context_kernel",
+          "tools.prepare_self_patch_branch",
+          "tools.branch_workboard",
+          "tools.codex_control",
+          "app.models",
+          "tools.context_builder",
+          "app.main"
+        ],
+        "impacted_modules": [
+          {
+            "module": "app.main",
+            "depth": 0,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "app.models",
+            "depth": 0,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 9
+          },
+          {
+            "module": "tools.branch_context",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.branch_workboard",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.codex_control",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.context_builder",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 5
+          },
+          {
+            "module": "tools.context_kernel",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "tools.prepare_self_patch_branch",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "app.budget_manager",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "app.context_service",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "app.git_service",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "app.model_router",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "app.openai_client",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "app.orchestrator",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "app.resource_registry",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "app.worker_adapters",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "runtime.scheduler",
+            "depth": 1,
+            "owner_team": "architecture_team",
+            "layer": "agent_teams",
+            "dependents": 2
+          },
+          {
+            "module": "tools.brain_loop",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "tools.change_request_analyzer",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "tools.factory_daemon",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.module_ownership",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 8
+          },
+          {
+            "module": "app.llm_service",
+            "depth": 2,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "runtime.executor",
+            "depth": 2,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.decision_engine",
+            "depth": 2,
+            "owner_team": "architecture_team",
+            "layer": "task_graph_planner",
+            "dependents": 1
+          },
+          {
+            "module": "tools.meta_factory_control",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "architecture_engine",
+            "dependents": 3
+          },
+          {
+            "module": "tools.replan_engine",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.taskgraph_compiler",
+            "depth": 2,
+            "owner_team": "architecture_team",
+            "layer": "architecture_engine",
+            "dependents": 3
+          },
+          {
+            "module": "tools.verification_engine",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "verification",
+            "dependents": 5
+          }
+        ],
+        "affected_teams": [
+          "architecture_team",
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "affected_layers": [
+          "agent_teams",
+          "architecture_engine",
+          "task_graph_planner",
+          "unclassified",
+          "verification"
+        ],
+        "verification_scope": [
+          "app.budget_manager",
+          "app.context_service",
+          "app.git_service",
+          "app.llm_service",
+          "app.main",
+          "app.model_router",
+          "app.models",
+          "app.openai_client",
+          "app.resource_registry",
+          "app.worker_adapters",
+          "runtime.executor",
+          "runtime.scheduler",
+          "tools.brain_loop",
+          "tools.branch_context",
+          "tools.branch_workboard",
+          "tools.change_request_analyzer",
+          "tools.context_builder",
+          "tools.context_kernel",
+          "tools.decision_engine",
+          "tools.factory_daemon",
+          "tools.meta_factory_control",
+          "tools.module_ownership",
+          "tools.replan_engine",
+          "tools.taskgraph_compiler",
+          "tools.verification_engine"
+        ]
+      },
+      "project_impact": {
+        "project": {
+          "project_id": "79120c5dbb",
+          "name": "ToyOS Kernel",
+          "type": "project",
+          "repo_path": "D:\\codex\\generated\\toy-os-demo",
+          "domains": [
+            "kernel"
+          ]
+        },
+        "all": {
+          "updated_at": "2026-03-10T19:34:18.315736Z",
+          "request": "Continue ToyOS kernel branch work with mainline context reuse",
+          "query_domains": [
+            "kernel"
+          ],
+          "related_projects": [
+            {
+              "project_id": "79120c5dbb",
+              "name": "ToyOS Kernel",
+              "type": "project",
+              "repo_path": "D:\\codex\\generated\\toy-os-demo",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "project_id": "aimath0001",
+              "name": "AI Math Foundations Workspace",
+              "type": "project",
+              "repo_path": "D:\\人工智能数学基础",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "project_id": "platform_464dac2a0b",
+              "name": "Optimize task scheduler from agent experience",
+              "type": "platform",
+              "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\optimize-task-scheduler-from-agent-experience",
+              "domains": [
+                "kernel"
+              ]
+            }
+          ],
+          "cross_project_edges": [
+            {
+              "from": "79120c5dbb",
+              "to": "aimath0001",
+              "kind": "domain-overlap",
+              "domains": [
+                "factory",
+                "kernel"
+              ]
+            },
+            {
+              "from": "79120c5dbb",
+              "to": "platform_464dac2a0b",
+              "kind": "domain-overlap",
+              "domains": [
+                "factory",
+                "kernel"
+              ]
+            },
+            {
+              "from": "aimath0001",
+              "to": "79120c5dbb",
+              "kind": "domain-overlap",
+              "domains": [
+                "factory",
+                "kernel"
+              ]
+            },
+            {
+              "from": "aimath0001",
+              "to": "platform_464dac2a0b",
+              "kind": "domain-overlap",
+              "domains": [
+                "factory",
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_464dac2a0b",
+              "to": "79120c5dbb",
+              "kind": "domain-overlap",
+              "domains": [
+                "factory",
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_464dac2a0b",
+              "to": "aimath0001",
+              "kind": "domain-overlap",
+              "domains": [
+                "factory",
+                "kernel"
+              ]
+            }
+          ],
+          "cross_project_count": 3
+        }
+      },
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "review_departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "patch_required": false,
+      "department_workers": {
+        "architecture_department": "reviewer",
+        "engineering_department": "coder",
+        "qa_department": "shell",
+        "research_department": "reviewer"
+      },
+      "result": {
+        "summary": "Node bypassed because component coordination is disabled under lean_execution.",
+        "disabled_component": "coordination"
+      },
+      "completed_at": "2026-03-12T19:42:40.301756Z"
+    },
+    {
+      "id": "project_sync_aimath0001",
+      "title": "Align project AI Math Foundations Workspace for Continue ToyOS kernel branch work with mainline context reuse",
+      "role": "reviewer",
+      "prompt": "Update compatibility plan, interfaces, tests, and rollout steps for project AI Math Foundations Workspace in support of: Continue ToyOS kernel branch work with mainline context reuse",
+      "dependencies": [
+        "cross_project_coordination"
+      ],
+      "status": "completed",
+      "task_id": null,
+      "team": "architecture_team",
+      "owned_modules": [],
+      "kind": "cross-project-work-package",
+      "module_focus": [
+        "tools.branch_context",
+        "tools.context_kernel",
+        "tools.prepare_self_patch_branch",
+        "tools.branch_workboard",
+        "tools.codex_control",
+        "app.models",
+        "tools.context_builder",
+        "app.main"
+      ],
+      "owner_teams": [
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.branch_context",
+          "tools.context_kernel",
+          "tools.prepare_self_patch_branch",
+          "tools.branch_workboard",
+          "tools.codex_control",
+          "app.models",
+          "tools.context_builder",
+          "app.main"
+        ],
+        "owner_teams": [
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.branch_context",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.context_kernel",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.prepare_self_patch_branch",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.branch_workboard",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.codex_control",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "app.models",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.context_builder",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "app.main",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "dependency_impact": {
+        "updated_at": "2026-03-10T19:34:18.314718Z",
+        "request": "Continue ToyOS kernel branch work with mainline context reuse",
+        "focus_modules": [
+          "tools.branch_context",
+          "tools.context_kernel",
+          "tools.prepare_self_patch_branch",
+          "tools.branch_workboard",
+          "tools.codex_control",
+          "app.models",
+          "tools.context_builder",
+          "app.main"
+        ],
+        "impacted_modules": [
+          {
+            "module": "app.main",
+            "depth": 0,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "app.models",
+            "depth": 0,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 9
+          },
+          {
+            "module": "tools.branch_context",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.branch_workboard",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.codex_control",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.context_builder",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 5
+          },
+          {
+            "module": "tools.context_kernel",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "tools.prepare_self_patch_branch",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "app.budget_manager",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "app.context_service",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "app.git_service",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "app.model_router",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "app.openai_client",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "app.orchestrator",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "app.resource_registry",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "app.worker_adapters",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "runtime.scheduler",
+            "depth": 1,
+            "owner_team": "architecture_team",
+            "layer": "agent_teams",
+            "dependents": 2
+          },
+          {
+            "module": "tools.brain_loop",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "tools.change_request_analyzer",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "tools.factory_daemon",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.module_ownership",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 8
+          },
+          {
+            "module": "app.llm_service",
+            "depth": 2,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "runtime.executor",
+            "depth": 2,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.decision_engine",
+            "depth": 2,
+            "owner_team": "architecture_team",
+            "layer": "task_graph_planner",
+            "dependents": 1
+          },
+          {
+            "module": "tools.meta_factory_control",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "architecture_engine",
+            "dependents": 3
+          },
+          {
+            "module": "tools.replan_engine",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.taskgraph_compiler",
+            "depth": 2,
+            "owner_team": "architecture_team",
+            "layer": "architecture_engine",
+            "dependents": 3
+          },
+          {
+            "module": "tools.verification_engine",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "verification",
+            "dependents": 5
+          }
+        ],
+        "affected_teams": [
+          "architecture_team",
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "affected_layers": [
+          "agent_teams",
+          "architecture_engine",
+          "task_graph_planner",
+          "unclassified",
+          "verification"
+        ],
+        "verification_scope": [
+          "app.budget_manager",
+          "app.context_service",
+          "app.git_service",
+          "app.llm_service",
+          "app.main",
+          "app.model_router",
+          "app.models",
+          "app.openai_client",
+          "app.resource_registry",
+          "app.worker_adapters",
+          "runtime.executor",
+          "runtime.scheduler",
+          "tools.brain_loop",
+          "tools.branch_context",
+          "tools.branch_workboard",
+          "tools.change_request_analyzer",
+          "tools.context_builder",
+          "tools.context_kernel",
+          "tools.decision_engine",
+          "tools.factory_daemon",
+          "tools.meta_factory_control",
+          "tools.module_ownership",
+          "tools.replan_engine",
+          "tools.taskgraph_compiler",
+          "tools.verification_engine"
+        ]
+      },
+      "project_impact": {
+        "project": {
+          "project_id": "aimath0001",
+          "name": "AI Math Foundations Workspace",
+          "type": "project",
+          "repo_path": "D:\\人工智能数学基础",
+          "domains": [
+            "kernel"
+          ]
+        },
+        "all": {
+          "updated_at": "2026-03-10T19:34:18.315736Z",
+          "request": "Continue ToyOS kernel branch work with mainline context reuse",
+          "query_domains": [
+            "kernel"
+          ],
+          "related_projects": [
+            {
+              "project_id": "79120c5dbb",
+              "name": "ToyOS Kernel",
+              "type": "project",
+              "repo_path": "D:\\codex\\generated\\toy-os-demo",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "project_id": "aimath0001",
+              "name": "AI Math Foundations Workspace",
+              "type": "project",
+              "repo_path": "D:\\人工智能数学基础",
+              "domains": [
+                "kernel"
+              ]
+            },
+            {
+              "project_id": "platform_464dac2a0b",
+              "name": "Optimize task scheduler from agent experience",
+              "type": "platform",
+              "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\optimize-task-scheduler-from-agent-experience",
+              "domains": [
+                "kernel"
+              ]
+            }
+          ],
+          "cross_project_edges": [
+            {
+              "from": "79120c5dbb",
+              "to": "aimath0001",
+              "kind": "domain-overlap",
+              "domains": [
+                "factory",
+                "kernel"
+              ]
+            },
+            {
+              "from": "79120c5dbb",
+              "to": "platform_464dac2a0b",
+              "kind": "domain-overlap",
+              "domains": [
+                "factory",
+                "kernel"
+              ]
+            },
+            {
+              "from": "aimath0001",
+              "to": "79120c5dbb",
+              "kind": "domain-overlap",
+              "domains": [
+                "factory",
+                "kernel"
+              ]
+            },
+            {
+              "from": "aimath0001",
+              "to": "platform_464dac2a0b",
+              "kind": "domain-overlap",
+              "domains": [
+                "factory",
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_464dac2a0b",
+              "to": "79120c5dbb",
+              "kind": "domain-overlap",
+              "domains": [
+                "factory",
+                "kernel"
+              ]
+            },
+            {
+              "from": "platform_464dac2a0b",
+              "to": "aimath0001",
+              "kind": "domain-overlap",
+              "domains": [
+                "factory",
+                "kernel"
+              ]
+            }
+          ],
+          "cross_project_count": 3
+        }
+      },
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "review_departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "patch_required": false,
+      "department_workers": {
+        "architecture_department": "reviewer",
+        "engineering_department": "coder",
+        "qa_department": "shell",
+        "research_department": "reviewer"
+      },
+      "result": {
+        "summary": "Node bypassed because component coordination is disabled under lean_execution.",
+        "disabled_component": "coordination"
+      },
+      "completed_at": "2026-03-12T19:42:40.301756Z"
+    },
+    {
+      "id": "module_tools_branch_context",
+      "title": "Implement module tools.branch_context",
+      "role": "ops",
+      "prompt": "Implement or refine module tools.branch_context for the current engineering goal.",
+      "dependencies": [
+        "module_tools_context_builder"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "team": "infrastructure_team",
+      "owned_modules": [
+        "tools.branch_context"
+      ],
+      "kind": "module-implementation",
+      "module_focus": [
+        "tools.branch_context"
+      ],
+      "owner_teams": [
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.branch_context"
+        ],
+        "owner_teams": [
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.branch_context",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "owner": "ops",
+      "layer": "unclassified",
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "review_departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "department_workers": {
+        "architecture_department": "reviewer",
+        "engineering_department": "coder",
+        "qa_department": "shell",
+        "research_department": "reviewer"
+      }
+    },
+    {
+      "id": "module_tools_context_kernel",
+      "title": "Implement module tools.context_kernel",
+      "role": "ops",
+      "prompt": "Implement or refine module tools.context_kernel for the current engineering goal.",
+      "dependencies": [
+        "engineering_plan"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "team": "infrastructure_team",
+      "owned_modules": [
+        "tools.context_kernel"
+      ],
+      "kind": "module-implementation",
+      "module_focus": [
+        "tools.context_kernel"
+      ],
+      "owner_teams": [
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.context_kernel"
+        ],
+        "owner_teams": [
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.context_kernel",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "owner": "ops",
+      "layer": "unclassified",
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "review_departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "department_workers": {
+        "architecture_department": "reviewer",
+        "engineering_department": "coder",
+        "qa_department": "shell",
+        "research_department": "reviewer"
+      }
+    },
+    {
+      "id": "module_tools_prepare_self_patch_branch",
+      "title": "Implement module tools.prepare_self_patch_branch",
+      "role": "ops",
+      "prompt": "Implement or refine module tools.prepare_self_patch_branch for the current engineering goal.",
+      "dependencies": [
+        "engineering_plan"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "team": "infrastructure_team",
+      "owned_modules": [
+        "tools.prepare_self_patch_branch"
+      ],
+      "kind": "module-implementation",
+      "module_focus": [
+        "tools.prepare_self_patch_branch"
+      ],
+      "owner_teams": [
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.prepare_self_patch_branch"
+        ],
+        "owner_teams": [
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.prepare_self_patch_branch",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "owner": "ops",
+      "layer": "unclassified",
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "review_departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "department_workers": {
+        "architecture_department": "reviewer",
+        "engineering_department": "coder",
+        "qa_department": "shell",
+        "research_department": "reviewer"
+      }
+    },
+    {
+      "id": "module_tools_branch_workboard",
+      "title": "Implement module tools.branch_workboard",
+      "role": "ops",
+      "prompt": "Implement or refine module tools.branch_workboard for the current engineering goal.",
+      "dependencies": [
+        "module_tools_branch_context"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "team": "infrastructure_team",
+      "owned_modules": [
+        "tools.branch_workboard"
+      ],
+      "kind": "module-implementation",
+      "module_focus": [
+        "tools.branch_workboard"
+      ],
+      "owner_teams": [
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.branch_workboard"
+        ],
+        "owner_teams": [
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.branch_workboard",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "owner": "ops",
+      "layer": "unclassified",
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "review_departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "department_workers": {
+        "architecture_department": "reviewer",
+        "engineering_department": "coder",
+        "qa_department": "shell",
+        "research_department": "reviewer"
+      }
+    },
+    {
+      "id": "module_tools_codex_control",
+      "title": "Implement module tools.codex_control",
+      "role": "ops",
+      "prompt": "Implement or refine module tools.codex_control for the current engineering goal.",
+      "dependencies": [
+        "module_app_main",
+        "module_tools_branch_workboard",
+        "module_tools_context_kernel"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "team": "infrastructure_team",
+      "owned_modules": [
+        "tools.codex_control"
+      ],
+      "kind": "module-implementation",
+      "module_focus": [
+        "tools.codex_control"
+      ],
+      "owner_teams": [
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.codex_control"
+        ],
+        "owner_teams": [
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.codex_control",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "owner": "ops",
+      "layer": "unclassified",
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "review_departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "department_workers": {
+        "architecture_department": "reviewer",
+        "engineering_department": "coder",
+        "qa_department": "shell",
+        "research_department": "reviewer"
+      }
+    },
+    {
+      "id": "module_app_models",
+      "title": "Implement module app.models",
+      "role": "coder",
+      "prompt": "Implement or refine module app.models for the current engineering goal.",
+      "dependencies": [
+        "engineering_plan"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "team": "backend_team",
+      "owned_modules": [
+        "app.models"
+      ],
+      "kind": "module-implementation",
+      "module_focus": [
+        "app.models"
+      ],
+      "owner_teams": [
+        "backend_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "app.models"
+        ],
+        "owner_teams": [
+          "backend_team"
+        ],
+        "ownership": [
+          {
+            "module": "app.models",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "owner": "coder",
+      "layer": "unclassified",
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "review_departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "department_workers": {
+        "architecture_department": "reviewer",
+        "engineering_department": "coder",
+        "qa_department": "shell",
+        "research_department": "reviewer"
+      }
+    },
+    {
+      "id": "module_tools_context_builder",
+      "title": "Implement module tools.context_builder",
+      "role": "ops",
+      "prompt": "Implement or refine module tools.context_builder for the current engineering goal.",
+      "dependencies": [
+        "engineering_plan"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "team": "infrastructure_team",
+      "owned_modules": [
+        "tools.context_builder"
+      ],
+      "kind": "module-implementation",
+      "module_focus": [
+        "tools.context_builder"
+      ],
+      "owner_teams": [
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.context_builder"
+        ],
+        "owner_teams": [
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.context_builder",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "owner": "ops",
+      "layer": "unclassified",
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "review_departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "department_workers": {
+        "architecture_department": "reviewer",
+        "engineering_department": "coder",
+        "qa_department": "shell",
+        "research_department": "reviewer"
+      }
+    },
+    {
+      "id": "module_app_main",
+      "title": "Implement module app.main",
+      "role": "coder",
+      "prompt": "Implement or refine module app.main for the current engineering goal.",
+      "dependencies": [
+        "module_app_models"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "team": "backend_team",
+      "owned_modules": [
+        "app.main"
+      ],
+      "kind": "module-implementation",
+      "module_focus": [
+        "app.main"
+      ],
+      "owner_teams": [
+        "backend_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "app.main"
+        ],
+        "owner_teams": [
+          "backend_team"
+        ],
+        "ownership": [
+          {
+            "module": "app.main",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "owner": "coder",
+      "layer": "unclassified",
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "review_departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "department_workers": {
+        "architecture_department": "reviewer",
+        "engineering_department": "coder",
+        "qa_department": "shell",
+        "research_department": "reviewer"
+      }
+    },
+    {
+      "id": "verification_gate",
+      "title": "Run verification and architecture validation for Continue ToyOS kernel branch work with mainline context reuse",
+      "role": "tester",
+      "prompt": "Run CI, tests, and architecture validation for: Continue ToyOS kernel branch work with mainline context reuse",
+      "dependencies": [
+        "module_tools_branch_context",
+        "module_tools_context_kernel",
+        "module_tools_prepare_self_patch_branch",
+        "module_tools_branch_workboard",
+        "module_tools_codex_control",
+        "module_app_models",
+        "module_tools_context_builder",
+        "module_app_main",
+        "cross_project_coordination",
+        "project_sync_79120c5dbb",
+        "project_sync_aimath0001"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "team": "testing_team",
+      "owned_modules": [
+        "tools.branch_context",
+        "tools.context_kernel",
+        "tools.prepare_self_patch_branch",
+        "tools.branch_workboard",
+        "tools.codex_control",
+        "app.models",
+        "tools.context_builder",
+        "app.main"
+      ],
+      "kind": "verification",
+      "module_focus": [
+        "tools.branch_context",
+        "tools.context_kernel",
+        "tools.prepare_self_patch_branch",
+        "tools.branch_workboard",
+        "tools.codex_control",
+        "app.models",
+        "tools.context_builder",
+        "app.main"
+      ],
+      "owner_teams": [
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.branch_context",
+          "tools.context_kernel",
+          "tools.prepare_self_patch_branch",
+          "tools.branch_workboard",
+          "tools.codex_control",
+          "app.models",
+          "tools.context_builder",
+          "app.main"
+        ],
+        "owner_teams": [
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.branch_context",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.context_kernel",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.prepare_self_patch_branch",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.branch_workboard",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.codex_control",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "app.models",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.context_builder",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "app.main",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "dependency_impact": {
+        "updated_at": "2026-03-10T19:34:18.314718Z",
+        "request": "Continue ToyOS kernel branch work with mainline context reuse",
+        "focus_modules": [
+          "tools.branch_context",
+          "tools.context_kernel",
+          "tools.prepare_self_patch_branch",
+          "tools.branch_workboard",
+          "tools.codex_control",
+          "app.models",
+          "tools.context_builder",
+          "app.main"
+        ],
+        "impacted_modules": [
+          {
+            "module": "app.main",
+            "depth": 0,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "app.models",
+            "depth": 0,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 9
+          },
+          {
+            "module": "tools.branch_context",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.branch_workboard",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.codex_control",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "tools.context_builder",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 5
+          },
+          {
+            "module": "tools.context_kernel",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "tools.prepare_self_patch_branch",
+            "depth": 0,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "app.budget_manager",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "app.context_service",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "app.git_service",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "app.model_router",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "app.openai_client",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "app.orchestrator",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 0
+          },
+          {
+            "module": "app.resource_registry",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "app.worker_adapters",
+            "depth": 1,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "runtime.scheduler",
+            "depth": 1,
+            "owner_team": "architecture_team",
+            "layer": "agent_teams",
+            "dependents": 2
+          },
+          {
+            "module": "tools.brain_loop",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 3
+          },
+          {
+            "module": "tools.change_request_analyzer",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 2
+          },
+          {
+            "module": "tools.factory_daemon",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.module_ownership",
+            "depth": 1,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 8
+          },
+          {
+            "module": "app.llm_service",
+            "depth": 2,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "runtime.executor",
+            "depth": 2,
+            "owner_team": "backend_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.decision_engine",
+            "depth": 2,
+            "owner_team": "architecture_team",
+            "layer": "task_graph_planner",
+            "dependents": 1
+          },
+          {
+            "module": "tools.meta_factory_control",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "architecture_engine",
+            "dependents": 3
+          },
+          {
+            "module": "tools.replan_engine",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "unclassified",
+            "dependents": 1
+          },
+          {
+            "module": "tools.taskgraph_compiler",
+            "depth": 2,
+            "owner_team": "architecture_team",
+            "layer": "architecture_engine",
+            "dependents": 3
+          },
+          {
+            "module": "tools.verification_engine",
+            "depth": 2,
+            "owner_team": "infrastructure_team",
+            "layer": "verification",
+            "dependents": 5
+          }
+        ],
+        "affected_teams": [
+          "architecture_team",
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "affected_layers": [
+          "agent_teams",
+          "architecture_engine",
+          "task_graph_planner",
+          "unclassified",
+          "verification"
+        ],
+        "verification_scope": [
+          "app.budget_manager",
+          "app.context_service",
+          "app.git_service",
+          "app.llm_service",
+          "app.main",
+          "app.model_router",
+          "app.models",
+          "app.openai_client",
+          "app.resource_registry",
+          "app.worker_adapters",
+          "runtime.executor",
+          "runtime.scheduler",
+          "tools.brain_loop",
+          "tools.branch_context",
+          "tools.branch_workboard",
+          "tools.change_request_analyzer",
+          "tools.context_builder",
+          "tools.context_kernel",
+          "tools.decision_engine",
+          "tools.factory_daemon",
+          "tools.meta_factory_control",
+          "tools.module_ownership",
+          "tools.replan_engine",
+          "tools.taskgraph_compiler",
+          "tools.verification_engine"
+        ]
+      },
+      "project_impact": {
+        "updated_at": "2026-03-10T19:34:18.315736Z",
+        "request": "Continue ToyOS kernel branch work with mainline context reuse",
+        "query_domains": [
+          "kernel"
+        ],
+        "related_projects": [
+          {
+            "project_id": "79120c5dbb",
+            "name": "ToyOS Kernel",
+            "type": "project",
+            "repo_path": "D:\\codex\\generated\\toy-os-demo",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "project_id": "aimath0001",
+            "name": "AI Math Foundations Workspace",
+            "type": "project",
+            "repo_path": "D:\\人工智能数学基础",
+            "domains": [
+              "kernel"
+            ]
+          },
+          {
+            "project_id": "platform_464dac2a0b",
+            "name": "Optimize task scheduler from agent experience",
+            "type": "platform",
+            "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\optimize-task-scheduler-from-agent-experience",
+            "domains": [
+              "kernel"
+            ]
+          }
+        ],
+        "cross_project_edges": [
+          {
+            "from": "79120c5dbb",
+            "to": "aimath0001",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "79120c5dbb",
+            "to": "platform_464dac2a0b",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "aimath0001",
+            "to": "79120c5dbb",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "aimath0001",
+            "to": "platform_464dac2a0b",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_464dac2a0b",
+            "to": "79120c5dbb",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          },
+          {
+            "from": "platform_464dac2a0b",
+            "to": "aimath0001",
+            "kind": "domain-overlap",
+            "domains": [
+              "factory",
+              "kernel"
+            ]
+          }
+        ],
+        "cross_project_count": 3
+      },
+      "patch_required": true,
+      "owner_department": "architecture_department",
+      "support_departments": [
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "review_departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "department_workers": {
+        "architecture_department": "reviewer",
+        "engineering_department": "coder",
+        "qa_department": "shell",
+        "research_department": "reviewer"
+      }
+    }
+  ]
+}

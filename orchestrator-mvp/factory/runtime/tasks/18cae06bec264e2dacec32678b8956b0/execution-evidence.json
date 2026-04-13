@@ -1,0 +1,28 @@
+{
+  "task_id": "18cae06bec264e2dacec32678b8956b0",
+  "task_title": "Refresh ToyOS regression and evidence",
+  "task_status": "timed_out",
+  "started_at": "2026-03-29T00:38:37.833987Z",
+  "updated_at": "2026-03-29T00:45:14.845333Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "18cae06bec264e2dacec32678b8956b0-terminal-record",
+      "step_title": "Refresh ToyOS regression and evidence",
+      "action": "task_terminal_record",
+      "ok": false,
+      "at": "2026-03-29T00:45:14.845333Z",
+      "status": "timed_out",
+      "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+      "error": null,
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ],
+  "result": {
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

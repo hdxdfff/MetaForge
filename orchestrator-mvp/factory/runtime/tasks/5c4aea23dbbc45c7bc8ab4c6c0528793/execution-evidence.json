@@ -1,0 +1,117 @@
+{
+  "task_id": "5c4aea23dbbc45c7bc8ab4c6c0528793",
+  "task_title": "Define architecture contract for Ship deployable release artifact bundle",
+  "task_status": "failed",
+  "completed": false,
+  "updated_at": "2026-03-19T16:13:11.811819Z",
+  "result": {
+    "state": "failed_execution",
+    "reason": "Shell command failed with code 1: 'pytest' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���\r\n���������ļ���",
+    "task_id": "5c4aea23dbbc45c7bc8ab4c6c0528793",
+    "repo_path": "D:\\codex\\orchestrator-mvp",
+    "execution_mode": "production",
+    "goal": "Ship deployable release artifact bundle",
+    "cheap_calls_used": 3,
+    "cheap_chars_used": 4199,
+    "escalation_count": 1,
+    "failed_steps": [
+      {
+        "step_id": "3f8a0404",
+        "title": "Execute validation",
+        "phase": "execute",
+        "worker": "shell",
+        "command": "pytest",
+        "output": "Execute validation failure: 87 chars, 2 non-empty lines.\nHead:\n- Shell command failed with code 1: 'pytest' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���\n- ���������ļ���",
+        "output_ref": {},
+        "output_stats": {
+          "channel": "error-output",
+          "char_count": 87,
+          "line_count": 2,
+          "stored_raw": false
+        },
+        "probe_attempts": 0,
+        "max_probe_attempts": 1,
+        "last_diagnosis": "Diagnosis for Execute validation: 526 chars, 7 non-empty lines.\nHead:\n- Cheap reviewer response\n- Assigned model: deepseek-chat\n- Reason: Default review and summarization stay on the cheap lane; escalate only for regression-heavy or architectural review.\n- Decision: pause",
+        "last_diagnosis_ref": {}
+      }
+    ],
+    "next_action_required": "Inspect execution evidence and rerun or replace the task; no approval hold was applied.",
+    "failure_pause_policy": "If a long task fails, allow at most one cheap-model-approved probe retry with bounded local cost. If cheap approval is missing, ambiguous, or the retry still fails, pause execution, return a structured error report, and wait for explicit core guidance.",
+    "pause_required": false,
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\5c4aea23dbbc45c7bc8ab4c6c0528793\\execution-evidence.json",
+    "execution_evidence_step_count": 0
+  },
+  "started_at": "2026-03-19T16:09:50.793656Z",
+  "steps": [
+    {
+      "step_id": "e3cf7e35",
+      "step_title": "Understand task",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-03-19T16:13:11.811819Z",
+      "phase": "understand",
+      "worker": "reviewer",
+      "status": "running",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "2c7ee337",
+      "step_title": "Draft solution",
+      "action": "coder_step",
+      "ok": false,
+      "at": "2026-03-19T16:13:11.811819Z",
+      "phase": "draft",
+      "worker": "coder",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "3f8a0404",
+      "step_title": "Execute validation",
+      "action": "shell_step",
+      "ok": false,
+      "at": "2026-03-19T16:13:11.811819Z",
+      "phase": "execute",
+      "worker": "shell",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "21c8691c",
+      "step_title": "Verify result",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-03-19T16:13:11.811819Z",
+      "phase": "verify",
+      "worker": "reviewer",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "390974f8",
+      "step_title": "Revise next action",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-03-19T16:13:11.811819Z",
+      "phase": "revise",
+      "worker": "reviewer",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    }
+  ]
+}

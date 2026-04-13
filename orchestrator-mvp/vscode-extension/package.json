@@ -1,0 +1,151 @@
+{
+  "name": "ai-command-console-bridge",
+  "displayName": "AI Command Console Bridge",
+  "description": "Minimal VS Code extension that dispatches workspace and file context to the local AI Command Console orchestrator.",
+  "version": "0.0.3",
+  "publisher": "local",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onView:aiCommandConsoleTasksView",
+    "onCommand:aiCommandConsole.dispatchWorkspace",
+    "onCommand:aiCommandConsole.dispatchCurrentFile",
+    "onCommand:aiCommandConsole.dispatchSelection",
+    "onCommand:aiCommandConsole.dispatchPromptFile",
+    "onCommand:aiCommandConsole.openPromptFile",
+    "onCommand:aiCommandConsole.pickProject",
+    "onCommand:aiCommandConsole.refreshTasks",
+    "onCommand:aiCommandConsole.showTaskPanel",
+    "onCommand:aiCommandConsole.openTaskDetails"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "aiCommandConsole.dispatchWorkspace",
+        "title": "AI Command Console: Dispatch Workspace"
+      },
+      {
+        "command": "aiCommandConsole.dispatchCurrentFile",
+        "title": "AI Command Console: Dispatch Current File"
+      },
+      {
+        "command": "aiCommandConsole.dispatchSelection",
+        "title": "AI Command Console: Dispatch Selection"
+      },
+      {
+        "command": "aiCommandConsole.dispatchPromptFile",
+        "title": "AI Command Console: Dispatch Prompt File"
+      },
+      {
+        "command": "aiCommandConsole.openPromptFile",
+        "title": "AI Command Console: Open Prompt File"
+      },
+      {
+        "command": "aiCommandConsole.pickProject",
+        "title": "AI Command Console: Pick Project Memory"
+      },
+      {
+        "command": "aiCommandConsole.refreshTasks",
+        "title": "AI Command Console: Refresh Tasks"
+      },
+      {
+        "command": "aiCommandConsole.showTaskPanel",
+        "title": "AI Command Console: Show Task Panel"
+      },
+      {
+        "command": "aiCommandConsole.openTaskDetails",
+        "title": "AI Command Console: Open Task Details"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "aiCommandConsole",
+          "title": "AI Console",
+          "icon": "media/activity.svg"
+        }
+      ]
+    },
+    "views": {
+      "aiCommandConsole": [
+        {
+          "id": "aiCommandConsoleTasksView",
+          "name": "Tasks"
+        }
+      ]
+    },
+    "menus": {
+      "view/title": [
+        {
+          "command": "aiCommandConsole.refreshTasks",
+          "when": "view == aiCommandConsoleTasksView",
+          "group": "navigation"
+        },
+        {
+          "command": "aiCommandConsole.pickProject",
+          "when": "view == aiCommandConsoleTasksView",
+          "group": "navigation"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "aiCommandConsole.openTaskDetails",
+          "when": "view == aiCommandConsoleTasksView && viewItem == taskItem",
+          "group": "inline"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "AI Command Console Bridge",
+      "properties": {
+        "aiCommandConsole.apiBaseUrl": {
+          "type": "string",
+          "default": "http://127.0.0.1:8787",
+          "description": "Base URL of the local orchestrator API."
+        },
+        "aiCommandConsole.projectId": {
+          "type": "string",
+          "default": "",
+          "description": "Optional default project memory id used for dispatch."
+        },
+        "aiCommandConsole.defaultGoal": {
+          "type": "string",
+          "default": "Keep the workspace healthy and prefer local resources first.",
+          "description": "Default goal sent with dispatch requests."
+        },
+        "aiCommandConsole.dispatchHint": {
+          "type": "string",
+          "default": "Prefer local runtime resources and cheap workers before escalating the planner.",
+          "description": "Routing hint appended to dispatched prompts."
+        },
+        "aiCommandConsole.promptFileName": {
+          "type": "string",
+          "default": ".orchestrator-prompt.txt",
+          "description": "Prompt file stored in the workspace root."
+        },
+        "aiCommandConsole.contextMode": {
+          "type": "string",
+          "enum": ["lean", "standard", "deep"],
+          "default": "lean",
+          "description": "Default context mode for dispatch requests."
+        },
+        "aiCommandConsole.maxContextChars": {
+          "type": "number",
+          "default": 1600,
+          "description": "Default context budget sent to the orchestrator."
+        },
+        "aiCommandConsole.taskPanelRefreshSeconds": {
+          "type": "number",
+          "default": 5,
+          "minimum": 3,
+          "description": "How often the task panel polls the local orchestrator for updated tasks."
+        }
+      }
+    }
+  }
+}

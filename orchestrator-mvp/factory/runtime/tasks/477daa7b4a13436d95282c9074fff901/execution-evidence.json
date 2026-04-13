@@ -1,0 +1,168 @@
+{
+  "steps": [
+    {
+      "step_id": "d82afd3c",
+      "step_title": "Understand task",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-03-20T20:54:55.230541Z",
+      "worker": "reviewer",
+      "phase": "understand",
+      "route_model": "deepseek-v3.2",
+      "route_provider": "openai",
+      "output_ref": {
+        "artifact_id": "ctx_246cf3217fb5",
+        "task_id": "477daa7b4a13436d95282c9074fff901",
+        "step_id": "d82afd3c",
+        "channel": "reviewer-output",
+        "title": "Understand task output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\477daa7b4a13436d95282c9074fff901\\d82afd3c-reviewer-output-ctx_246cf3217fb5.txt",
+        "size_chars": 1204,
+        "line_count": 23,
+        "created_at": "2026-03-20T20:54:51.642636Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "understand",
+          "route_model": "deepseek-v3.2",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 1204,
+        "line_count": 23,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "df7f441c",
+      "step_title": "Draft solution",
+      "action": "coder_step",
+      "ok": true,
+      "at": "2026-03-20T20:55:13.438020Z",
+      "worker": "coder",
+      "phase": "draft",
+      "route_model": "deepseek-v3.2",
+      "route_provider": "openai",
+      "output_ref": {
+        "artifact_id": "ctx_d5a767778f1d",
+        "task_id": "477daa7b4a13436d95282c9074fff901",
+        "step_id": "df7f441c",
+        "channel": "coder-output",
+        "title": "Draft solution output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\477daa7b4a13436d95282c9074fff901\\df7f441c-coder-output-ctx_d5a767778f1d.txt",
+        "size_chars": 1160,
+        "line_count": 17,
+        "created_at": "2026-03-20T20:55:09.769684Z",
+        "metadata": {
+          "worker": "coder",
+          "phase": "draft",
+          "route_model": "deepseek-v3.2",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "coder-output",
+        "char_count": 1160,
+        "line_count": 17,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "dfc4c93a",
+      "step_title": "Execute validation",
+      "action": "shell_step",
+      "ok": true,
+      "at": "2026-03-20T20:55:30.799898Z",
+      "worker": "shell",
+      "phase": "execute",
+      "route_model": "deepseek-chat",
+      "route_provider": "runtime",
+      "output_ref": {
+        "artifact_id": "ctx_ee69158e4d74",
+        "task_id": "477daa7b4a13436d95282c9074fff901",
+        "step_id": "dfc4c93a",
+        "channel": "shell-output",
+        "title": "Execute validation output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\477daa7b4a13436d95282c9074fff901\\dfc4c93a-shell-output-ctx_ee69158e4d74.txt",
+        "size_chars": 145,
+        "line_count": 7,
+        "created_at": "2026-03-20T20:55:26.616012Z",
+        "metadata": {
+          "worker": "shell",
+          "phase": "execute",
+          "route_model": "deepseek-chat",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "shell-output",
+        "char_count": 145,
+        "line_count": 7,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "70dbe363",
+      "step_title": "Verify result",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-03-20T20:55:47.451528Z",
+      "worker": "reviewer",
+      "phase": "verify",
+      "route_model": "deepseek-chat",
+      "route_provider": "cheap",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 507,
+        "line_count": 11,
+        "stored_raw": false
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "53e19afb",
+      "step_title": "Revise next action",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-03-20T20:56:07.833846Z",
+      "worker": "reviewer",
+      "phase": "revise",
+      "route_model": "deepseek-reasoner",
+      "route_provider": "reasoning",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 516,
+        "line_count": 11,
+        "stored_raw": false
+      },
+      "probe_attempts": 0
+    }
+  ],
+  "task_id": "477daa7b4a13436d95282c9074fff901",
+  "task_title": "Align project AI Math Foundations Workspace for Expand tool extension coverage",
+  "task_status": "completed",
+  "started_at": "2026-03-20T20:53:06.447472Z",
+  "updated_at": "2026-03-20T20:56:16.665627Z",
+  "completed": true,
+  "result": {
+    "summary": "Fallback plan generated locally because planner remote access is unavailable.",
+    "completed_steps": 5,
+    "context_used_chars": 602,
+    "cheap_calls_used": 4,
+    "cheap_chars_used": 2544,
+    "escalation_count": 2,
+    "execution_mode": "governance",
+    "production_evidence": {
+      "mode": "governance",
+      "status": "not-required"
+    },
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\477daa7b4a13436d95282c9074fff901\\execution-evidence.json",
+    "execution_evidence_step_count": 5
+  }
+}

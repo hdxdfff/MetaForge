@@ -1,0 +1,469 @@
+ToyOS: kernel_main entered
+ToyOS: GDT and TSS ready
+ToyOS: core subsystems initialized
+ToyOS: memory allocations ready
+ToyOS: paging stage1 skipped (stable path)
+VFS: format start
+VFS: acquire lock
+VFS: lock acquired
+VFS: write superblock
+WwVFS: superblock written
+WwWwWwWwWwWwWwWwVFS: data blocks cleared
+WwVFS: format done
+VFS: mount read super
+RrVFS: mount read dir
+RrVFS: mount done
+VFS: write start
+WwWwWwVFS: write done
+VFS: write start
+WwWwWwVFS: write done
+VFS: write start
+WwWwWwVFS: write done
+ToyOS: filesystems ready
+ToyOS: processes created
+ToyOS: fs stress start
+VFS: write start
+WwWwWwVFS: write done
+RrRrToyOS: fs stress verified
+ToyOS: fs stress complete
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+ToyOS: fs writer A write
+VFS: write start
+WwWwWwVFS: write done
+ToyOS: fs writer B write
+VFS: write start
+WwWwWwVFS: write done
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+RrToyOS: fs writer A verified
+RrToyOS: fs writer B verified
+ToyOS: fs multi verify start
+RrRrToyOS: fs multi verify complete
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+ToyOS: fs mixed probe start
+SYSCALL: entered
+SYSCALL: entered
+RrSYSCALL: entered
+ToyOS: fs mixed probe phase1
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+RrSYSCALL: entered
+ToyOS: fs mixed probe complete
+SYSCALL: entered
+SYSCALL: exit requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: exit requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: exit requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: exit requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: exit requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: exit requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: exit requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: exit requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: exit requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: exit requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: exit requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: exit requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: exit requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: exit requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: exit requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: exit requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: exit requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+SCHED: dispatch user
+SCHED: enter user start
+SCHED: iret handoff
+SYSCALL: entered
+SYSCALL: entered
+SYSCALL: yield requested
+Sf‰Ãf…À…ÝfèÑ¢ÿÿgfÇD$€Ù
+ToyOS: scheduler rounds completed
+INT: 0xFF
+ToyOS: kernel services online

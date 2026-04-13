@@ -1,0 +1,12 @@
+{
+  "updated_at": "2026-04-03T19:26:54.144031Z",
+  "status": "budget_closed",
+  "created_items": 0,
+  "open_items_total": 1,
+  "skipped_due_to_gate": 0,
+  "queue_path": "D:\\codex\\orchestrator-mvp\\data\\p2_sandbox_queue.json",
+  "sandbox_gate": {
+    "allow_p2_sandbox": false,
+    "source": "D:\\codex\\orchestrator-mvp\\data\\industrial_operations.json"
+  }
+}

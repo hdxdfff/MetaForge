@@ -1,0 +1,35 @@
+{
+  "started_at": "2026-04-03T16:29:53.235016Z",
+  "finished_at": "2026-04-03T16:29:53.237206Z",
+  "source": "drill",
+  "release_record_count": 3,
+  "dummy_record": {
+    "id": "rollback-drill-20260403T162953Z",
+    "created_at": "2026-04-03T16:29:53.237206Z",
+    "repo_path": "D:\\codex\\orchestrator-mvp\\generated\\toy-os-demo",
+    "branch": "rollback-drill",
+    "artifacts": [
+      "artifact_manifest.json",
+      "toyos-delivery-closure-report.md"
+    ],
+    "blockers": [],
+    "status": "blocked",
+    "notes": "Synthetic rollback drill using current ToyOS delivery artifacts.",
+    "artifact_evidence": {
+      "artifact_count": 2,
+      "existing_count": 0,
+      "missing_count": 2,
+      "existing": [],
+      "missing": [
+        "artifact_manifest.json",
+        "toyos-delivery-closure-report.md"
+      ],
+      "passed": false
+    },
+    "archived_reason": "rollback-drill-validation-failed",
+    "archived_at": "2026-04-03T16:29:53.237206Z"
+  },
+  "validation_passed": false,
+  "rollback_time_minutes": 0.0,
+  "evidence_dir": "D:\\codex\\orchestrator-mvp\\generated\\release-rollback-drill\\20260403T162953Z"
+}

@@ -1,0 +1,18 @@
+{
+  "artifact_id": "toy-os-demo",
+  "type": "software",
+  "version": "0.1",
+  "buildable": true,
+  "runnable": true,
+  "test_passed": true,
+  "reproducible": true,
+  "artifact_path": "D:/codex/generated/toy-os-demo",
+  "entrypoint": "build/kernel.bin",
+  "evidence": [
+    "build-report.json",
+    "build/build.log",
+    "build/generic-qemu-smoke-report.json",
+    "score-report.json",
+    "build/artifact.sha256"
+  ]
+}

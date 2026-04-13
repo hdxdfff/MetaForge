@@ -1,0 +1,282 @@
+{
+  "task_id": "0dead6687d5f4832bffaaa66b926e3bf",
+  "task_status": "failed",
+  "phase": "failed",
+  "updated_at": "2026-04-02T18:45:58.595176Z",
+  "heartbeat_at": "2026-04-02T18:45:58.595176Z",
+  "repo_path": "D:\\codex",
+  "goal": "Identify the smallest viable slice",
+  "goal_id": "goal_5c12485392",
+  "graph_id": "graph_222cc400a2",
+  "node_id": "analyze_runtime_fault",
+  "scheduled_by": "factory-daemon.replenisher",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\0dead6687d5f4832bffaaa66b926e3bf",
+  "error": "Shell command failed with code 1: Traceback (most recent call last):\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 167, in <module>\r\n    raise SystemExit(main())\r\n                     ^^^^^^\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 141, in main\r\n    spec = json.loads(spec_path.read_text(encoding=\"utf-8\"))\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"pathlib.py\", line 1058, in read_text\r\n  File \"pathlib.py\", line 1044, in open\r\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\codex\\\\tools\\\\generic_qemu_smoke.json'",
+  "title": "Analyze the current state",
+  "prompt": "Execute capability step 'Analyze runtime fault' for: Unblock Restore ToyOS real artifact delivery: Run baseline runtime test loop for Restore ToyOS real artifact delivery",
+  "scheduler_hint": {
+    "goal_primary": "Restore ToyOS real artifact delivery",
+    "goal_mode": "toyos_priority_mode",
+    "goal_target": "Unblock Restore ToyOS real artifact delivery: Run baseline runtime test loop for Restore ToyOS real artifact delivery",
+    "goal_id": "goal_5c12485392",
+    "graph_id": "graph_222cc400a2",
+    "node_id": "analyze_runtime_fault",
+    "node_title": "Analyze runtime fault for Unblock Restore ToyOS real artifact delivery: Run baseline runtime test loop for Restore ToyOS real artifact delivery",
+    "task_type": "build_fix",
+    "queue_name": "build_test",
+    "verification_level": "L2",
+    "max_runtime_seconds": 2400,
+    "retry_limit": 1,
+    "rollback_rule": "mark_failed_and_requeue_split",
+    "template_id": "build_toolchain_repair",
+    "admission_mode": "normal",
+    "handling_mode": "toyos_replenishment",
+    "automation_source": "failure_backlog_automation",
+    "decomposition_child": true,
+    "decomposition_parent_task_id": "91d37c28ef184e34a3de0e049f1640c8",
+    "decomposition_root_task_id": "91d37c28ef184e34a3de0e049f1640c8",
+    "decomposition_depth": 1,
+    "max_decomposition_depth": 2,
+    "decomposition_child_index": 1,
+    "decomposition_allow_children": false,
+    "decomposition_path_kind": "shared",
+    "decomposition_shared_dependency_group": "91d37c28ef184e34a3de0e049f1640c8",
+    "decomposition_repair_for": null,
+    "decomposition_dependencies": [],
+    "dependency_task_ids": [],
+    "dependency_count": 0
+  },
+  "context_package": {},
+  "plan": [
+    {
+      "id": "da4e3239",
+      "title": "Build Toy OS baseline",
+      "status": "completed",
+      "worker": "docker",
+      "phase": "execute"
+    },
+    {
+      "id": "6cd05714",
+      "title": "Boot ToyOS in QEMU",
+      "status": "failed",
+      "worker": "docker",
+      "phase": "verify"
+    },
+    {
+      "id": "5e710006",
+      "title": "Audit ToyOS runtime evidence",
+      "status": "pending",
+      "worker": "reviewer",
+      "phase": "review"
+    },
+    {
+      "id": "6efb53d4",
+      "title": "Patch Toy OS implementation",
+      "status": "pending",
+      "worker": "coder",
+      "phase": "draft"
+    },
+    {
+      "id": "c9f10fef",
+      "title": "Rebuild Toy OS after patch",
+      "status": "pending",
+      "worker": "docker",
+      "phase": "execute"
+    },
+    {
+      "id": "3a73719d",
+      "title": "Re-run ToyOS QEMU and score artifacts",
+      "status": "pending",
+      "worker": "docker",
+      "phase": "verify"
+    },
+    {
+      "id": "e76d2ce0",
+      "title": "Score ToyOS artifact set",
+      "status": "pending",
+      "worker": "docker",
+      "phase": "verify"
+    },
+    {
+      "id": "159aba05",
+      "title": "Issue ToyOS release decision",
+      "status": "pending",
+      "worker": "reviewer",
+      "phase": "revise"
+    }
+  ],
+  "verification_signals": [
+    {
+      "timestamp": "2026-04-02T18:40:35.566631Z",
+      "kind": "admission_accepted",
+      "success": true,
+      "task_id": "0dead6687d5f4832bffaaa66b926e3bf",
+      "admission_lane": null,
+      "admission_reason": null,
+      "execution_mode": "governance",
+      "queue_name": "fastlane",
+      "task_type": "report_refresh"
+    },
+    {
+      "timestamp": "2026-04-02T18:41:34.549600Z",
+      "kind": "step_completed",
+      "success": true,
+      "task_id": "0dead6687d5f4832bffaaa66b926e3bf",
+      "step_id": "da4e3239",
+      "step_title": "Build Toy OS baseline",
+      "worker": "docker",
+      "phase": "execute",
+      "route_model": "deepseek-chat",
+      "route_provider": "runtime",
+      "elapsed_ms": 25952,
+      "output_ref": {
+        "artifact_id": "ctx_29ada05d37b5",
+        "task_id": "0dead6687d5f4832bffaaa66b926e3bf",
+        "step_id": "da4e3239",
+        "channel": "docker-output",
+        "title": "Build Toy OS baseline output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\0dead6687d5f4832bffaaa66b926e3bf\\da4e3239-docker-output-ctx_29ada05d37b5.txt",
+        "size_chars": 383,
+        "line_count": 12,
+        "created_at": "2026-04-02T18:41:24.618683Z",
+        "metadata": {
+          "worker": "docker",
+          "phase": "execute",
+          "route_model": "deepseek-chat",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "docker-output",
+        "char_count": 383,
+        "line_count": 12,
+        "stored_raw": true
+      }
+    },
+    {
+      "timestamp": "2026-04-02T18:42:30.253394Z",
+      "kind": "step_failed",
+      "success": false,
+      "task_id": "0dead6687d5f4832bffaaa66b926e3bf",
+      "step_id": "6cd05714",
+      "step_title": "Boot ToyOS in QEMU",
+      "worker": "docker",
+      "phase": "verify",
+      "route_model": "deepseek-chat",
+      "route_provider": "runtime",
+      "elapsed_ms": 24436,
+      "error": "Shell command failed with code 1: Traceback (most recent call last):\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 167, in <module>\r\n    raise SystemExit(main())\r\n                     ^^^^^^\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 141, in main\r\n    spec = json.loads(spec_path.read_text(encoding=\"utf-8\"))\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"pathlib.py\", line 1058, in read_text\r\n  File \"pathlib.py\", line 1044, in open\r\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\codex\\\\tools\\\\generic_qemu_smoke.json'",
+      "output_ref": {
+        "artifact_id": "ctx_f4e776508607",
+        "task_id": "0dead6687d5f4832bffaaa66b926e3bf",
+        "step_id": "6cd05714",
+        "channel": "error-output",
+        "title": "Boot ToyOS in QEMU failure",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\0dead6687d5f4832bffaaa66b926e3bf\\6cd05714-error-output-ctx_f4e776508607.txt",
+        "size_chars": 610,
+        "line_count": 10,
+        "created_at": "2026-04-02T18:42:21.419046Z",
+        "metadata": {
+          "worker": "docker",
+          "phase": "verify",
+          "error": "Shell command failed with code 1: Traceback (most recent call last):\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 167, in <module>\r\n    raise SystemExit(main())\r\n                     ^^^^^^\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 141, in main\r\n    spec = json.loads(spec_path.read_text(encoding=\"utf-8\"))\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"pathlib.py\", line 1058, in read_text\r\n  File \"pathlib.py\", line 1044, in open\r\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\codex\\\\tools\\\\generic_qemu_smoke.json'"
+        }
+      },
+      "output_stats": {
+        "channel": "error-output",
+        "char_count": 610,
+        "line_count": 10,
+        "stored_raw": true
+      }
+    }
+  ],
+  "verification_signal_count": 3,
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-02T18:40:35.566631Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "0dead6687d5f4832bffaaa66b926e3bf",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "governance",
+        "queue_name": "fastlane",
+        "task_type": "report_refresh"
+      },
+      {
+        "timestamp": "2026-04-02T18:41:34.549600Z",
+        "kind": "step_completed",
+        "success": true,
+        "task_id": "0dead6687d5f4832bffaaa66b926e3bf",
+        "step_id": "da4e3239",
+        "step_title": "Build Toy OS baseline",
+        "worker": "docker",
+        "phase": "execute",
+        "route_model": "deepseek-chat",
+        "route_provider": "runtime",
+        "elapsed_ms": 25952,
+        "output_ref": {
+          "artifact_id": "ctx_29ada05d37b5",
+          "task_id": "0dead6687d5f4832bffaaa66b926e3bf",
+          "step_id": "da4e3239",
+          "channel": "docker-output",
+          "title": "Build Toy OS baseline output",
+          "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\0dead6687d5f4832bffaaa66b926e3bf\\da4e3239-docker-output-ctx_29ada05d37b5.txt",
+          "size_chars": 383,
+          "line_count": 12,
+          "created_at": "2026-04-02T18:41:24.618683Z",
+          "metadata": {
+            "worker": "docker",
+            "phase": "execute",
+            "route_model": "deepseek-chat",
+            "route_provider": "runtime"
+          }
+        },
+        "output_stats": {
+          "channel": "docker-output",
+          "char_count": 383,
+          "line_count": 12,
+          "stored_raw": true
+        }
+      },
+      {
+        "timestamp": "2026-04-02T18:42:30.253394Z",
+        "kind": "step_failed",
+        "success": false,
+        "task_id": "0dead6687d5f4832bffaaa66b926e3bf",
+        "step_id": "6cd05714",
+        "step_title": "Boot ToyOS in QEMU",
+        "worker": "docker",
+        "phase": "verify",
+        "route_model": "deepseek-chat",
+        "route_provider": "runtime",
+        "elapsed_ms": 24436,
+        "error": "Shell command failed with code 1: Traceback (most recent call last):\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 167, in <module>\r\n    raise SystemExit(main())\r\n                     ^^^^^^\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 141, in main\r\n    spec = json.loads(spec_path.read_text(encoding=\"utf-8\"))\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"pathlib.py\", line 1058, in read_text\r\n  File \"pathlib.py\", line 1044, in open\r\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\codex\\\\tools\\\\generic_qemu_smoke.json'",
+        "output_ref": {
+          "artifact_id": "ctx_f4e776508607",
+          "task_id": "0dead6687d5f4832bffaaa66b926e3bf",
+          "step_id": "6cd05714",
+          "channel": "error-output",
+          "title": "Boot ToyOS in QEMU failure",
+          "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\0dead6687d5f4832bffaaa66b926e3bf\\6cd05714-error-output-ctx_f4e776508607.txt",
+          "size_chars": 610,
+          "line_count": 10,
+          "created_at": "2026-04-02T18:42:21.419046Z",
+          "metadata": {
+            "worker": "docker",
+            "phase": "verify",
+            "error": "Shell command failed with code 1: Traceback (most recent call last):\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 167, in <module>\r\n    raise SystemExit(main())\r\n                     ^^^^^^\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 141, in main\r\n    spec = json.loads(spec_path.read_text(encoding=\"utf-8\"))\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"pathlib.py\", line 1058, in read_text\r\n  File \"pathlib.py\", line 1044, in open\r\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\codex\\\\tools\\\\generic_qemu_smoke.json'"
+          }
+        },
+        "output_stats": {
+          "channel": "error-output",
+          "char_count": 610,
+          "line_count": 10,
+          "stored_raw": true
+        }
+      }
+    ]
+  }
+}

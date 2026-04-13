@@ -1,0 +1,105 @@
+{
+  "items": [
+    {
+      "coordination_id": "79120c5dbb__aimath0001",
+      "target": "Coordinate ToyOS Kernel with AI Math Foundations Workspace",
+      "projects": [
+        {
+          "project_id": "79120c5dbb",
+          "name": "ToyOS Kernel",
+          "type": "project"
+        },
+        {
+          "project_id": "aimath0001",
+          "name": "AI Math Foundations Workspace",
+          "type": "project"
+        }
+      ],
+      "departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "work_packages": [
+        {
+          "project_id": "79120c5dbb",
+          "name": "ToyOS Kernel",
+          "owner_department": "architecture_department",
+          "support_departments": [
+            "engineering_department",
+            "qa_department",
+            "research_department"
+          ],
+          "action": "Align interfaces, tests, and rollout notes for ToyOS Kernel"
+        },
+        {
+          "project_id": "aimath0001",
+          "name": "AI Math Foundations Workspace",
+          "owner_department": "architecture_department",
+          "support_departments": [
+            "engineering_department",
+            "qa_department",
+            "research_department"
+          ],
+          "action": "Align interfaces, tests, and rollout notes for AI Math Foundations Workspace"
+        }
+      ],
+      "status": "completed",
+      "created_at": "2026-03-10T14:17:52.261314Z",
+      "completed_at": "2026-03-12T07:09:37.248538Z",
+      "updated_at": "2026-03-12T07:09:37.248538Z"
+    },
+    {
+      "coordination_id": "79120c5dbb__platform_464dac2a0b",
+      "target": "Coordinate ToyOS Kernel with Optimize task scheduler from agent experience",
+      "projects": [
+        {
+          "project_id": "79120c5dbb",
+          "name": "ToyOS Kernel",
+          "type": "project"
+        },
+        {
+          "project_id": "platform_464dac2a0b",
+          "name": "Optimize task scheduler from agent experience",
+          "type": "platform"
+        }
+      ],
+      "departments": [
+        "architecture_department",
+        "engineering_department",
+        "qa_department",
+        "research_department"
+      ],
+      "work_packages": [
+        {
+          "project_id": "79120c5dbb",
+          "name": "ToyOS Kernel",
+          "owner_department": "architecture_department",
+          "support_departments": [
+            "engineering_department",
+            "qa_department",
+            "research_department"
+          ],
+          "action": "Align interfaces, tests, and rollout notes for ToyOS Kernel"
+        },
+        {
+          "project_id": "platform_464dac2a0b",
+          "name": "Optimize task scheduler from agent experience",
+          "owner_department": "architecture_department",
+          "support_departments": [
+            "engineering_department",
+            "qa_department",
+            "research_department"
+          ],
+          "action": "Align interfaces, tests, and rollout notes for Optimize task scheduler from agent experience"
+        }
+      ],
+      "status": "completed",
+      "created_at": "2026-03-10T14:17:52.261314Z",
+      "completed_at": "2026-03-12T07:07:04.550050Z",
+      "updated_at": "2026-03-12T07:07:04.550050Z"
+    }
+  ],
+  "updated_at": "2026-03-12T07:09:37.248538Z"
+}

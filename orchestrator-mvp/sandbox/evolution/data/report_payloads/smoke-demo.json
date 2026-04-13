@@ -1,0 +1,31 @@
+{
+  "title": "ToyOS QEMU Smoke Report",
+  "course": "Operating Systems",
+  "experiment": "ToyOS Boot Smoke Test",
+  "workspace": "D:\\codex\\generated\\toy-os-demo",
+  "objective": "Verify that ToyOS still boots in QEMU after recent kernel changes.",
+  "environment": [
+    "Windows host",
+    "WSL Ubuntu",
+    "QEMU i386"
+  ],
+  "steps": [
+    "Run make qemu-smoke",
+    "Collect debug output",
+    "Check boot markers"
+  ],
+  "observations": [
+    "Kernel services reached online state",
+    "Smoke suite reported pass"
+  ],
+  "result": "The current ToyOS build passes the VM smoke test.",
+  "screenshots": [
+    {
+      "path": "D:\\codex\\output\\browser\\page.png",
+      "caption": "Example screenshot placeholder"
+    }
+  ],
+  "risks": [
+    "Long-duration stability not yet covered here"
+  ]
+}

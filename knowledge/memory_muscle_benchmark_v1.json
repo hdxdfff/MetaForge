@@ -1,0 +1,198 @@
+{
+  "memory_id": "mem_muscle_benchmark_v1_001",
+  "memory_type": "decision",
+  "title": "Memory muscle benchmark v1 validates sediment, promote, bind, reproduce",
+  "summary": "The memory system must keep a fixed benchmark that checks candidate sediment quality, promotion stability, recall correctness, binding to context, and repeated reproduction of the same top result.",
+  "scope": {
+    "system": "metaforge",
+    "workspace": "D:\\codex",
+    "component": [
+      "memory_muscle_benchmark",
+      "memory_objects",
+      "context_builder",
+      "tool_health_audit",
+      "meta_factory_control"
+    ],
+    "task_domain": [
+      "memory",
+      "benchmark",
+      "recall",
+      "binding",
+      "continuity"
+    ]
+  },
+  "tags": [
+    "memory",
+    "benchmark",
+    "muscle-memory",
+    "recall",
+    "binding",
+    "reproduce"
+  ],
+  "authority": "verified",
+  "status": "active",
+  "source_refs": [
+    "D:\\codex\\METAFORGE_OS_MEMORY_MUSCLE_MEMORY.md",
+    "D:\\codex\\METAFORGE_OS_MEMORY_SCHEMA_V1.md",
+    "D:\\codex\\orchestrator-mvp\\data\\memory_quality_scorecard.json",
+    "D:\\codex\\orchestrator-mvp\\data\\memory_objects.jsonl"
+  ],
+  "evidence_refs": [
+    "D:\\codex\\orchestrator-mvp\\data\\memory_quality_scorecard.json",
+    "D:\\codex\\orchestrator-mvp\\data\\memory_integrity.json"
+  ],
+  "created_at": "2026-04-02T13:50:00Z",
+  "updated_at": "2026-04-02T13:50:00Z",
+  "last_verified_at": "2026-04-02T13:50:00Z",
+  "validity": {
+    "kind": "revalidate_on_change",
+    "trigger": [
+      "memory_objects_changed",
+      "memory_candidates_changed",
+      "context_builder_changed",
+      "identity_kernel_changed"
+    ],
+    "expires_at": null
+  },
+  "reuse_score": 0.97,
+  "priority": "high",
+  "superseded_by": null,
+  "conflicts_with": [],
+  "decision": {
+    "question": "How should MetaForge keep a fixed memory-muscle benchmark?",
+    "chosen_option": "Maintain a benchmark that checks sediment, promote, bind, and reproduce on stable probes.",
+    "alternatives_considered": [
+      "Rely only on ad hoc scorecard probes",
+      "Use only recall metrics",
+      "Use a fixed benchmark with stage-specific checks and reproduction tests"
+    ],
+    "reasoning": [
+      "A fixed benchmark makes memory behavior auditable over time.",
+      "Four-stage checks cover both memory quality and behavioral habit formation.",
+      "Repeated probes are needed to detect drift and cache mismatch."
+    ],
+    "impact_scope": [
+      "memory",
+      "tool_health",
+      "control_layer",
+      "soak_validation"
+    ],
+    "rollback_condition": [
+      "If the benchmark becomes stale relative to the memory contract, refresh the fixed probe set."
+    ]
+  },
+  "benchmark": {
+    "sediment_cases": [
+      {
+        "candidate_id": "cand_procedure_build_preflight_toolchain_daemon",
+        "min_completeness": 0.8,
+        "expect_promotable": true
+      },
+      {
+        "candidate_id": "cand_failurefix_runtime_state_persistence_trust",
+        "min_completeness": 0.8,
+        "expect_promotable": true
+      },
+      {
+        "candidate_id": "cand_failurefix_build_ready_requires_toolchain_and_docker",
+        "min_completeness": 0.8,
+        "expect_promotable": true
+      },
+      {
+        "candidate_id": "cand_fact_build_backend_unavailable_details",
+        "min_completeness": 0.75,
+        "expect_promotable": false
+      }
+    ],
+    "promote_cases": [
+      {
+        "candidate_id": "cand_procedure_build_preflight_toolchain_daemon",
+        "expect_promotable": true
+      },
+      {
+        "candidate_id": "cand_failurefix_runtime_state_persistence_trust",
+        "expect_promotable": true
+      },
+      {
+        "candidate_id": "cand_failurefix_build_ready_requires_toolchain_and_docker",
+        "expect_promotable": true
+      },
+      {
+        "candidate_id": "cand_fact_build_backend_unavailable_details",
+        "expect_promotable": false
+      }
+    ],
+    "recall_cases": [
+      {
+        "query": "Refresh shared dialogue memory after routing changes procedure",
+        "expected_memory_id": "mem_procedure_dialogue_sync_metaforge"
+      },
+      {
+        "query": "Current active runtime handoff continue bounded dispatch with validation-first policy handoff",
+        "expected_memory_id": "mem_handoff_active_runtime_metaforge"
+      },
+      {
+        "query": "MetaForge startup command D:\\codex\\codex-session-bootstrap.ps1 is the current startup command for refreshing shared dialogue state fact",
+        "expected_memory_id": "mem_fact_startup_command_metaforge"
+      },
+      {
+        "query": "Build readiness must gate on toolchain and Docker daemon availability failure_fix",
+        "expected_memory_id": "mem_failurefix_build_ready_requires_toolchain_and_docker"
+      },
+      {
+        "query": "State write permission denials weaken trustworthy continuity failure_fix",
+        "expected_memory_id": "mem_failurefix_state_write_permission_denied_continuity"
+      },
+      {
+        "query": "Authoritative workspace for ToyOS execution fact",
+        "expected_memory_id": "mem_fact_authoritative_workspace_toyos_demo"
+      }
+    ],
+    "binding_cases": [
+      {
+        "request": "Fix ToyOS build readiness and validation",
+        "required_titles": [
+          "Authoritative workspace for ToyOS execution",
+          "Build readiness must gate on toolchain and Docker daemon availability",
+          "Current active runtime handoff"
+        ],
+        "min_matches": 3
+      },
+      {
+        "request": "Investigate state persistence continuity drift",
+        "required_titles": [
+          "MetaForge startup command",
+          "State write permission denials weaken trustworthy continuity",
+          "Current active runtime handoff"
+        ],
+        "min_matches": 3
+      },
+      {
+        "request": "Refresh shared dialogue memory and handoff",
+        "required_titles": [
+          "Refresh shared dialogue memory after routing changes",
+          "Current active runtime handoff",
+          "MetaForge startup command"
+        ],
+        "min_matches": 3
+      }
+    ],
+    "reproduce_cases": [
+      {
+        "query": "Current active runtime handoff continue bounded dispatch with validation-first policy handoff",
+        "expected_memory_id": "mem_handoff_active_runtime_metaforge",
+        "repeat_count": 3
+      },
+      {
+        "query": "MetaForge startup command D:\\codex\\codex-session-bootstrap.ps1 is the current startup command for refreshing shared dialogue state fact",
+        "expected_memory_id": "mem_fact_startup_command_metaforge",
+        "repeat_count": 3
+      },
+      {
+        "query": "Build readiness must gate on toolchain and Docker daemon availability failure_fix",
+        "expected_memory_id": "mem_failurefix_build_ready_requires_toolchain_and_docker",
+        "repeat_count": 3
+      }
+    ]
+  }
+}

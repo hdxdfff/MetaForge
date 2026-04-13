@@ -1,0 +1,5228 @@
+{
+  "samples": [
+    {
+      "at": "2026-03-10T20:56:59.186383Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T20:58:01.155276Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T20:59:03.420878Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:00:06.988618Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:01:11.881012Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:02:14.136591Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:03:17.606972Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:04:19.563992Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:05:21.771359Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:06:27.376901Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:07:29.313527Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:08:31.505267Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:09:34.918475Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:10:36.946753Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:11:42.090660Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:12:45.579193Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:13:47.520462Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:14:49.724546Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:15:53.401461Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:16:58.107959Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:18:00.314205Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:19:03.822371Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:20:05.843444Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:21:08.091423Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:22:13.726950Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:23:15.619833Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:24:17.708206Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:25:21.131425Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:26:23.050129Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:27:28.019268Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:28:31.803584Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:29:33.866506Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:30:36.267404Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:31:40.086241Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:32:44.834784Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:33:47.166250Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:34:51.039573Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:35:52.967702Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:36:55.036692Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:38:01.205018Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:39:03.114784Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:40:05.226657Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:41:08.605589Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:42:10.488279Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:43:15.527109Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:44:18.846665Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:45:20.688415Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:46:22.828972Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:47:26.187727Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:48:30.950118Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:49:33.044894Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:50:36.390869Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:51:38.182794Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:52:40.385474Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:53:46.023932Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:54:48.047894Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:55:50.375528Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:56:53.806518Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:57:55.765990Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T21:59:00.863778Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T22:00:04.364289Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T22:01:06.195762Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T22:02:08.390504Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T22:03:11.731298Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T22:04:16.496447Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T22:05:18.685226Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T22:06:22.050045Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T22:07:23.851986Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T22:08:25.951442Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T22:09:31.296866Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T22:10:33.173810Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T22:11:35.388188Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T22:12:38.735724Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T22:13:40.562197Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T22:14:45.530566Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T22:15:48.835892Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T22:16:50.874067Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T22:17:53.052453Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T22:18:56.447326Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T22:20:01.331075Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T22:21:03.589674Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T22:22:06.937132Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T22:23:08.879768Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T22:24:11.090086Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T22:25:16.494386Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T22:26:18.345229Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T22:27:20.414516Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T22:28:23.692894Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T22:29:25.582509Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T22:30:30.423876Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T22:31:33.719719Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T22:32:35.563978Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T23:14:29.059765Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T23:15:32.662835Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T23:16:37.031892Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T23:17:39.243403Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T23:18:42.652275Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T23:19:44.560087Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T23:20:46.818459Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T23:21:52.336252Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T23:22:54.301241Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T23:23:56.502187Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T23:24:59.926523Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T23:26:03.083087Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T23:27:17.079718Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T23:28:29.137995Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T23:29:37.511111Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T23:30:47.392695Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T23:31:59.053220Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T23:33:12.333801Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T23:34:21.865354Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T23:35:33.808482Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T23:36:42.609374Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-10T23:37:52.622500Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-10T23:39:06.273011Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:03:46.911581Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:04:48.828947Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:05:50.877820Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:06:53.043652Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:07:58.358554Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:09:00.260063Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:10:02.095033Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:11:04.006443Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:12:06.108187Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:13:11.589523Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:14:13.430635Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:15:15.157592Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:16:16.788787Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:17:18.709681Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:18:24.077937Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:19:25.742413Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:20:27.419381Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:21:29.070232Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:22:31.041144Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:23:36.253611Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:24:37.989250Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:25:39.675785Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:26:41.359091Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:27:43.418559Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:28:48.644568Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:29:50.373297Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:30:52.068731Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:31:53.754961Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:32:55.726252Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:34:00.870566Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:35:02.631007Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:36:04.403976Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:37:06.127410Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:38:08.108559Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:39:13.196357Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:40:14.872580Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:41:16.596937Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:42:18.287283Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:43:20.326023Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:44:25.746286Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:45:27.832719Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:46:29.559253Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:47:31.236249Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:48:33.196200Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:49:38.341646Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:50:39.981020Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:51:41.662347Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:52:43.392041Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:53:45.371157Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:54:50.649543Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:55:52.351280Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:56:54.044338Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:57:55.675048Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T02:58:57.637512Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T03:00:02.920431Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T03:01:04.648250Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T03:02:06.349441Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T03:03:08.098664Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T03:04:10.031376Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T03:05:15.462099Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T03:32:11.721758Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T03:33:13.975435Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T03:34:15.678853Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T03:35:17.713388Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T03:36:22.788184Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T03:37:24.390083Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T03:38:26.048575Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T03:39:27.689830Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T03:40:29.618093Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T03:41:34.800790Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T03:42:36.450685Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T03:43:38.177558Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T03:44:39.845020Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T03:45:41.763655Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T03:46:46.991538Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T03:47:48.712497Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T03:48:50.472050Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T03:49:52.115368Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T03:50:54.061017Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T03:51:59.394634Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T03:53:01.136231Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T03:54:02.756534Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T03:55:04.459578Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T03:56:06.455630Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T03:57:11.760839Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T03:58:13.394092Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T03:59:15.125116Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:00:16.798163Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:01:36.781094Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:02:39.853743Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:03:48.446583Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:04:59.016619Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:06:08.601710Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:07:22.440787Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:08:30.804266Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:09:41.913571Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:10:51.680057Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:12:01.252118Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:13:13.665645Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:14:24.422274Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:15:32.823828Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:16:41.437905Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:17:51.709072Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:19:07.679859Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:20:16.509595Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:21:24.876723Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:22:33.792902Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:23:46.865402Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:25:00.203568Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:26:08.543582Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:27:16.943195Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:28:27.973901Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:29:37.753707Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:30:52.484181Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:32:01.078764Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:33:12.222371Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:34:21.039056Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:35:31.435401Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:36:46.656016Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:37:57.775651Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:39:05.832704Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:40:14.163330Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:41:24.044786Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:42:45.018728Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:44:03.862956Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:45:14.250069Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:46:24.459141Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:47:39.001143Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:48:55.206202Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:50:04.750900Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:51:15.050929Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:52:27.684255Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:53:39.550942Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:54:55.425370Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:56:05.312842Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:57:17.572515Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:58:27.027094Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T04:59:38.299140Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:00:54.363462Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:02:06.506321Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:03:16.020404Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:04:26.853690Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:05:39.232777Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:06:58.042752Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:08:08.156741Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:09:17.874306Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:10:27.325331Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:11:41.407436Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:12:56.969117Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:14:06.380832Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:15:16.138682Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:16:28.187675Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:17:39.620026Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:18:55.503218Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:20:04.676784Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:21:16.574273Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:22:25.924605Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:23:37.455590Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:24:53.639270Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:26:05.834573Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:27:15.500276Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:28:27.333555Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:29:39.606931Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:31:00.070147Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:32:11.538841Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:33:21.071125Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:34:30.217935Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:35:44.227157Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:37:00.208646Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:38:09.863413Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:39:19.343728Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:40:30.799120Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:41:41.095566Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:42:55.752417Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:44:04.382913Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:45:15.725732Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T05:46:25.493944Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T06:29:43.945258Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T06:30:49.615263Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T06:31:55.064411Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T06:33:03.650955Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T06:34:12.043790Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T06:35:21.919119Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T06:36:37.721318Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T06:37:46.366251Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T06:38:54.690306Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T06:40:03.252750Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T06:41:15.289804Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T06:42:29.142330Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T06:43:37.762221Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T07:29:37.746242Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "policy-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T07:30:41.461092Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "policy-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T07:31:49.037330Z",
+      "action_count": 18,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "generate-platform",
+        "generate-platform",
+        "generate-platform"
+      ]
+    },
+    {
+      "at": "2026-03-11T07:33:03.317649Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T07:34:12.338575Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T07:35:23.695132Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T07:36:32.580205Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T07:37:43.002884Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T07:38:57.422943Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T07:40:08.668459Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T07:41:17.909099Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T07:42:26.957411Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T07:43:37.608654Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T07:44:54.096805Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T08:40:33.992496Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T08:41:37.679247Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T08:42:46.571766Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T08:43:59.398340Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T08:45:13.426925Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T08:46:22.554341Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T08:47:31.686288Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T08:48:42.552898Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T08:49:52.161665Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T08:51:06.654702Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T08:52:15.742581Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T08:53:35.841902Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T08:54:45.404239Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T08:55:56.162412Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T08:57:11.600649Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T08:58:23.442507Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T08:59:32.373868Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T09:00:41.369885Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T09:01:51.656661Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T09:03:08.172804Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T09:04:17.258211Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T09:18:23.461016Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T09:19:27.478222Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T09:20:40.943488Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T09:21:56.309916Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T09:23:04.686714Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T09:24:13.498835Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T09:25:23.783947Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T09:26:34.624906Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T09:27:50.509254Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T09:29:00.728135Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T09:30:12.747400Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T09:31:22.054537Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T09:32:33.243627Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T09:33:48.925968Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T09:35:00.749334Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T09:36:10.546249Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T09:37:20.135057Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T09:38:31.554397Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T09:39:49.144593Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T09:40:58.637415Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T09:42:08.017697Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T09:43:17.155680Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T09:44:30.267606Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T09:45:45.086277Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T09:46:54.623380Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T09:48:03.497151Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T09:49:14.216755Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T09:50:23.833289Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T09:51:38.112176Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T09:52:46.921001Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T09:57:27.543916Z",
+      "action_count": 11,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "compile-goal",
+        "dispatch-node",
+        "compile-goal",
+        "dispatch-node",
+        "compile-goal",
+        "dispatch-budget-hold"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:00:02.602226Z",
+      "action_count": 3,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle",
+        "dispatch-node"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:01:13.639618Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:02:29.300248Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:03:41.462470Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:04:50.936131Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:06:00.471996Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:07:11.464088Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:08:28.462374Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:09:38.434237Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:10:47.397306Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:11:57.000408Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:13:10.639755Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:14:23.978685Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:15:33.250437Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:16:41.903856Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:17:53.748007Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:19:04.656163Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:20:19.493439Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:21:29.109865Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:22:40.468099Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:23:49.822866Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:25:00.224588Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:26:16.795457Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:27:29.404179Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:28:38.811402Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:29:48.323762Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:30:59.020951Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:32:14.114628Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:33:23.484647Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:34:35.918776Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:35:50.408356Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:37:03.293347Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:38:18.806409Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:39:32.550284Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:40:41.772364Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:41:53.321191Z",
+      "action_count": 9,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:43:08.019073Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:44:23.148082Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:45:31.221396Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:46:20.149641Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:47:22.099219Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:48:24.181787Z",
+      "action_count": 6,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:48:32.748363Z",
+      "action_count": 3,
+      "active_actions": [
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:48:33.795953Z",
+      "action_count": 6,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:49:14.648676Z",
+      "action_count": 6,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:49:26.949347Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:50:29.183877Z",
+      "action_count": 6,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:51:34.093448Z",
+      "action_count": 5,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:52:36.068091Z",
+      "action_count": 2,
+      "active_actions": [
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T10:55:57.939652Z",
+      "action_count": 3,
+      "active_actions": [
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T11:02:22.922192Z",
+      "action_count": 3,
+      "active_actions": [
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T11:08:21.894431Z",
+      "action_count": 3,
+      "active_actions": [
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T11:08:47.397479Z",
+      "action_count": 6,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T11:12:12.919026Z",
+      "action_count": 10,
+      "active_actions": [
+        "github-learning-scan",
+        "github-learning-clone",
+        "github-learning-refresh",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "ai-testing-attention",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T11:12:57.312594Z",
+      "action_count": 10,
+      "active_actions": [
+        "github-learning-scan",
+        "github-learning-clone",
+        "github-learning-refresh",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "ai-testing-attention",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T11:15:13.308707Z",
+      "action_count": 3,
+      "active_actions": [
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T11:21:00.197268Z",
+      "action_count": 10,
+      "active_actions": [
+        "goal-runtime-sync",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "ai-testing-attention",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T11:21:38.795854Z",
+      "action_count": 7,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "ai-testing-attention",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T11:22:14.034387Z",
+      "action_count": 9,
+      "active_actions": [
+        "goal-runtime-sync",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T11:25:03.302699Z",
+      "action_count": 11,
+      "active_actions": [
+        "goal-runtime-sync",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "github-capability-library",
+        "knowledge-refresh",
+        "ai-testing-attention"
+      ]
+    },
+    {
+      "at": "2026-03-11T11:28:08.749523Z",
+      "action_count": 7,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "verify-platforms",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T11:34:37.219356Z",
+      "action_count": 3,
+      "active_actions": [
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T11:40:54.624360Z",
+      "action_count": 3,
+      "active_actions": [
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T11:47:31.909199Z",
+      "action_count": 6,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T11:50:50.517982Z",
+      "action_count": 7,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "ai-testing-attention",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T11:57:03.030738Z",
+      "action_count": 3,
+      "active_actions": [
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T12:03:43.785174Z",
+      "action_count": 6,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T12:10:21.505838Z",
+      "action_count": 3,
+      "active_actions": [
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T12:16:46.320733Z",
+      "action_count": 3,
+      "active_actions": [
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T12:23:25.814710Z",
+      "action_count": 10,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "ai-testing-attention",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T12:30:12.190003Z",
+      "action_count": 3,
+      "active_actions": [
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T12:36:49.732422Z",
+      "action_count": 3,
+      "active_actions": [
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T12:43:26.786101Z",
+      "action_count": 6,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T12:50:03.976174Z",
+      "action_count": 3,
+      "active_actions": [
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T12:56:45.816347Z",
+      "action_count": 7,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "ai-testing-attention",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T13:03:10.875196Z",
+      "action_count": 6,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T13:09:48.536198Z",
+      "action_count": 3,
+      "active_actions": [
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T13:16:25.962599Z",
+      "action_count": 3,
+      "active_actions": [
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T13:23:06.657924Z",
+      "action_count": 6,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T13:29:45.833383Z",
+      "action_count": 7,
+      "active_actions": [
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "ai-testing-attention",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T13:58:45.982588Z",
+      "action_count": 3,
+      "active_actions": [
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T14:05:11.028084Z",
+      "action_count": 6,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T14:11:37.541173Z",
+      "action_count": 3,
+      "active_actions": [
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T14:18:02.470218Z",
+      "action_count": 3,
+      "active_actions": [
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T14:24:27.820248Z",
+      "action_count": 10,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "knowledge-refresh",
+        "ai-testing-attention",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T14:30:56.599945Z",
+      "action_count": 3,
+      "active_actions": [
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T14:38:20.854856Z",
+      "action_count": 6,
+      "active_actions": [
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T14:40:28.357283Z",
+      "action_count": 7,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T14:41:33.816753Z",
+      "action_count": 7,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T14:42:38.947614Z",
+      "action_count": 10,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T14:44:37.650743Z",
+      "action_count": 6,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T14:45:44.735345Z",
+      "action_count": 11,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "github-capability-library",
+        "knowledge-refresh"
+      ]
+    },
+    {
+      "at": "2026-03-11T14:46:56.201015Z",
+      "action_count": 9,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T14:48:03.036442Z",
+      "action_count": 6,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T14:49:09.903339Z",
+      "action_count": 6,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T14:50:16.858764Z",
+      "action_count": 14,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation"
+      ]
+    },
+    {
+      "at": "2026-03-11T14:52:10.537981Z",
+      "action_count": 7,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T14:53:19.135436Z",
+      "action_count": 7,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T14:55:13.478455Z",
+      "action_count": 9,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T14:56:19.765090Z",
+      "action_count": 6,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T14:57:25.448715Z",
+      "action_count": 6,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T14:58:32.344293Z",
+      "action_count": 14,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation"
+      ]
+    },
+    {
+      "at": "2026-03-11T14:59:42.806201Z",
+      "action_count": 6,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T15:00:48.635565Z",
+      "action_count": 6,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T15:01:56.358998Z",
+      "action_count": 25,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation"
+      ]
+    },
+    {
+      "at": "2026-03-11T15:03:05.047908Z",
+      "action_count": 14,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "dispatch-node",
+        "dispatch-node",
+        "dispatch-budget-hold",
+        "dispatch-budget-hold"
+      ]
+    },
+    {
+      "at": "2026-03-11T15:05:00.690663Z",
+      "action_count": 20,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "github-capability-library",
+        "knowledge-refresh"
+      ]
+    },
+    {
+      "at": "2026-03-11T15:06:14.135559Z",
+      "action_count": 16,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "dispatch-node"
+      ]
+    },
+    {
+      "at": "2026-03-11T15:34:56.613393Z",
+      "action_count": 11,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "dispatch-node",
+        "dispatch-node",
+        "dispatch-budget-hold"
+      ]
+    },
+    {
+      "at": "2026-03-11T15:38:11.118891Z",
+      "action_count": 18,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation"
+      ]
+    },
+    {
+      "at": "2026-03-11T15:44:28.814457Z",
+      "action_count": 8,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "dispatch-node",
+        "dispatch-node"
+      ]
+    },
+    {
+      "at": "2026-03-11T15:46:23.079192Z",
+      "action_count": 12,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "github-capability-library",
+        "knowledge-refresh"
+      ]
+    },
+    {
+      "at": "2026-03-11T15:47:37.776008Z",
+      "action_count": 10,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T15:49:45.599482Z",
+      "action_count": 6,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T15:50:53.548327Z",
+      "action_count": 14,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation"
+      ]
+    },
+    {
+      "at": "2026-03-11T15:52:08.297779Z",
+      "action_count": 11,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "github-capability-library",
+        "knowledge-refresh"
+      ]
+    },
+    {
+      "at": "2026-03-11T15:53:30.981658Z",
+      "action_count": 6,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T15:54:38.113772Z",
+      "action_count": 9,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-11T15:55:44.851738Z",
+      "action_count": 6,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T15:56:51.377984Z",
+      "action_count": 6,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T15:58:59.248778Z",
+      "action_count": 6,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "experiment-budget-hold",
+        "guard-throttle"
+      ]
+    },
+    {
+      "at": "2026-03-11T16:00:10.474896Z",
+      "action_count": 8,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "compile-goal",
+        "dispatch-node"
+      ]
+    },
+    {
+      "at": "2026-03-12T07:00:15.050037Z",
+      "action_count": 16,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation",
+        "github-capability-library",
+        "knowledge-refresh"
+      ]
+    },
+    {
+      "at": "2026-03-12T07:03:28.810242Z",
+      "action_count": 8,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "goal-generation-budget-hold"
+      ]
+    },
+    {
+      "at": "2026-03-12T07:04:38.123449Z",
+      "action_count": 11,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "cross-project-coordination"
+      ]
+    },
+    {
+      "at": "2026-03-12T07:05:52.017816Z",
+      "action_count": 8,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "goal-generation-budget-hold"
+      ]
+    },
+    {
+      "at": "2026-03-12T07:06:59.559731Z",
+      "action_count": 8,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "ai-testing-attention",
+        "experiment-budget-hold",
+        "guard-throttle",
+        "goal-generation-budget-hold"
+      ]
+    },
+    {
+      "at": "2026-03-12T07:08:23.943162Z",
+      "action_count": 16,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation"
+      ]
+    },
+    {
+      "at": "2026-03-12T07:08:58.429095Z",
+      "action_count": 16,
+      "active_actions": [
+        "goal-runtime-sync",
+        "goal-storage-audit",
+        "cross-project-goal-seed",
+        "cross-project-coordination-sweep",
+        "github-learning-scan",
+        "github-learning-refresh",
+        "experiment-plan",
+        "experiment-run",
+        "experiment-evaluate",
+        "capability-distillation"
+      ]
+    }
+  ],
+  "updated_at": "2026-03-12T07:08:58.429095Z"
+}

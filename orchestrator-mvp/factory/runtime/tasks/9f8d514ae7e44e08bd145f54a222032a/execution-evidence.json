@@ -1,0 +1,71 @@
+{
+  "task_id": "9f8d514ae7e44e08bd145f54a222032a",
+  "task_title": "Execution recovery: smoke and runnable artifact",
+  "task_status": "timed_out",
+  "started_at": "2026-03-19T14:56:21.793285Z",
+  "updated_at": "2026-03-19T15:05:20.594753Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "33ad9ff5",
+      "step_title": "Write recovery smoke file",
+      "action": "shell_step",
+      "ok": false,
+      "at": "2026-03-19T15:05:20.594753Z",
+      "phase": "execute",
+      "worker": "shell",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "ff6e0d11",
+      "step_title": "Probe direct LLM path",
+      "action": "shell_step",
+      "ok": false,
+      "at": "2026-03-19T15:05:20.594753Z",
+      "phase": "execute",
+      "worker": "shell",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "5d31e4bf",
+      "step_title": "Create runnable recovery artifact",
+      "action": "shell_step",
+      "ok": false,
+      "at": "2026-03-19T15:05:20.594753Z",
+      "phase": "execute",
+      "worker": "shell",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "871d1b10",
+      "step_title": "Verify recovery artifact",
+      "action": "shell_step",
+      "ok": false,
+      "at": "2026-03-19T15:05:20.594753Z",
+      "phase": "verify",
+      "worker": "shell",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    }
+  ],
+  "result": {
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

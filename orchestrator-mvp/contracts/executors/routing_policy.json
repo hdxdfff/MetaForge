@@ -1,0 +1,190 @@
+{
+  "version": "v1",
+  "default_executor_id": "script_executor",
+  "rules": [
+    {
+      "rule_id": "code-change",
+      "executor_id": "aider_executor",
+      "task_types": [
+        "build_fix",
+        "subsystem_refactor",
+        "path_repair",
+        "unit_test_run"
+      ],
+      "execution_modes": [
+        "governance",
+        "production"
+      ],
+      "verification_levels": [
+        "l2",
+        "l3"
+      ],
+      "preferred_workers": [
+        "aider",
+        "coder"
+      ]
+    },
+    {
+      "rule_id": "long-implementation",
+      "executor_id": "openhands_executor",
+      "task_types": [
+        "new_artifact_bootstrap",
+        "new_demo_creation",
+        "architecture_migration",
+        "subsystem_refactor"
+      ],
+      "execution_modes": [
+        "governance",
+        "production"
+      ],
+      "verification_levels": [
+        "l2",
+        "l3"
+      ],
+      "preferred_workers": [
+        "openhands",
+        "coder"
+      ]
+    },
+    {
+      "rule_id": "plan-and-build",
+      "executor_id": "plandex_executor",
+      "task_types": [
+        "demo_rebuild",
+        "package_validation",
+        "harness_regression_run",
+        "qemu_smoke_run"
+      ],
+      "execution_modes": [
+        "production"
+      ],
+      "verification_levels": [
+        "l2",
+        "l3"
+      ],
+      "preferred_workers": [
+        "plandex",
+        "tester"
+      ]
+    },
+    {
+      "rule_id": "ci-verification",
+      "executor_id": "ci_executor",
+      "task_types": [
+        "artifact_audit",
+        "qemu_smoke_run",
+        "harness_regression_run",
+        "package_validation",
+        "independent_evidence_check"
+      ],
+      "execution_modes": [
+        "production"
+      ],
+      "verification_levels": [
+        "l2",
+        "l3"
+      ],
+      "preferred_workers": [
+        "reviewer",
+        "shell"
+      ]
+    },
+    {
+      "rule_id": "script-maintenance",
+      "executor_id": "goose_executor",
+      "task_types": [
+        "report_refresh",
+        "registry_reconcile",
+        "evidence_collect",
+        "doc_patch",
+        "json_fix",
+        "config_fix",
+        "manifest_patch"
+      ],
+      "execution_modes": [
+        "governance",
+        "research"
+      ],
+      "verification_levels": [
+        "l1",
+        "l2"
+      ],
+      "preferred_workers": [
+        "goose",
+        "shell",
+        "publisher"
+      ]
+    },
+    {
+      "rule_id": "linkwork-heavy-execution",
+      "executor_id": "linkwork_executor",
+      "task_types": [
+        "handoff_doc_generate",
+        "artifact_evidence_packaging",
+        "structured_research_bundle",
+        "external_info_collect",
+        "tool_assisted_doc_generation",
+        "delivery_bundle_prepare",
+        "report_refresh",
+        "reviewer_role",
+        "reporter_role",
+        "operator_role"
+      ],
+      "execution_modes": [
+        "governance",
+        "research",
+        "production"
+      ],
+      "verification_levels": [
+        "l1",
+        "l2"
+      ],
+      "preferred_workers": [
+        "linkwork",
+        "reviewer",
+        "reporter",
+        "operator"
+      ]
+    },
+    {
+      "rule_id": "cheap-edit",
+      "executor_id": "continue_executor",
+      "task_types": [
+        "doc_patch",
+        "json_fix",
+        "config_fix",
+        "manifest_patch",
+        "small_json_patch"
+      ],
+      "execution_modes": [
+        "governance",
+        "research"
+      ],
+      "verification_levels": [
+        "l1"
+      ],
+      "preferred_workers": [
+        "continue",
+        "reviewer"
+      ]
+    },
+    {
+      "rule_id": "human-gate",
+      "executor_id": "human_review_executor",
+      "task_types": [
+        "release_decision_review",
+        "risk_approval",
+        "architecture_review"
+      ],
+      "execution_modes": [
+        "production"
+      ],
+      "verification_levels": [
+        "l3"
+      ],
+      "preferred_workers": [
+        "reviewer"
+      ]
+    }
+  ]
+}

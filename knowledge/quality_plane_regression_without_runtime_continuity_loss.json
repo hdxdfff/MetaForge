@@ -1,0 +1,87 @@
+{
+  "id": "incident-quality-plane-regression-without-runtime-continuity-loss",
+  "version": "1.0",
+  "updated_at": "2026-03-29T10:30:00Z",
+  "title": "Quality-plane regression without runtime continuity loss",
+  "summary": "Use this pattern when a soak or runtime milestone remains valid, but live release readiness drops because quality gates regress while runtime continuity stays preserved.",
+  "classification": {
+    "incident_type": "quality_plane_regression_without_runtime_continuity_loss",
+    "severity_default": "warning",
+    "service_continuity_lost": false,
+    "milestone_invalidated": false
+  },
+  "detection_signals": [
+    "runtime continuity remains preserved or stable",
+    "daemon remains running and ticks continue advancing",
+    "quality gate drops from pass or ready to candidate, degraded, or attention",
+    "verification pending checks reappear with quality-related reasons",
+    "artifact audit and required artifact presence remain intact"
+  ],
+  "required_split_assessment": {
+    "runtime": [
+      "preserved",
+      "stable"
+    ],
+    "release_readiness": [
+      "ready",
+      "candidate",
+      "degraded"
+    ],
+    "self_model_health": [
+      "healthy",
+      "attention",
+      "blocked"
+    ]
+  },
+  "root_cause_buckets": [
+    {
+      "bucket": "capability_regression",
+      "meaning": "The underlying model or system capability actually regressed."
+    },
+    {
+      "bucket": "eval_drift",
+      "meaning": "The evaluator, rubric, or sample changed enough to flip the verdict without a real capability loss."
+    },
+    {
+      "bucket": "routing_regression",
+      "meaning": "A provider, model, or routing profile changed and reduced quality on one capability slice."
+    },
+    {
+      "bucket": "task_state_semantic_drift",
+      "meaning": "Live health is pulled down by stale or misclassified task states such as active-but-queued."
+    }
+  ],
+  "triage_steps": [
+    "Verify the milestone ledger still shows the historical milestone as committed.",
+    "Check runtime continuity and daemon freshness before classifying any regression.",
+    "Identify the exact failing quality signal or test case that triggered the live downgrade.",
+    "Separate release-readiness regression from self-model or queue-health regression.",
+    "Decide whether the failing quality signal belongs to capability_regression, eval_drift, or routing_regression.",
+    "Decide whether task state semantics need cleanup to remove false active or stalled pressure."
+  ],
+  "reporting_rules": [
+    "Always report milestone validity separately from current live health.",
+    "Do not describe the incident as a runtime failure unless continuity evidence broke.",
+    "State the single triggering quality signal when available.",
+    "List self-model or task-health drag factors as concurrent contributors, not as the primary trigger unless they caused the first downgrade."
+  ],
+  "report_template": {
+    "milestone_line": "12h soak conclusion remains valid.",
+    "live_health_line": "Current live readiness has degraded because quality gate signal(s) regressed.",
+    "axes_line": {
+      "runtime": "preserved/stable",
+      "release_readiness": "candidate",
+      "self_model_health": "attention"
+    }
+  },
+  "example_mapping": {
+    "trigger_signal": "ai_testing.latest-info-awareness",
+    "runtime_state": "preserved",
+    "release_readiness": "candidate",
+    "self_model_health": "attention",
+    "classification": [
+      "quality_plane_regression_without_runtime_continuity_loss",
+      "routing_regression_or_eval_drift_pending_confirmation"
+    ]
+  }
+}

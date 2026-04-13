@@ -1,0 +1,45 @@
+{
+  "steps": [
+    {
+      "step_id": "b18dbe70",
+      "step_title": "Understand task",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-03-20T15:57:43.846522Z",
+      "worker": "reviewer",
+      "phase": "understand",
+      "route_model": "deepseek-v3.2",
+      "route_provider": "openai",
+      "output_ref": {
+        "artifact_id": "ctx_ff9eda73120a",
+        "task_id": "8e560669552447d68f6c1d44185a6db6",
+        "step_id": "b18dbe70",
+        "channel": "reviewer-output",
+        "title": "Understand task output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\8e560669552447d68f6c1d44185a6db6\\b18dbe70-reviewer-output-ctx_ff9eda73120a.txt",
+        "size_chars": 1158,
+        "line_count": 20,
+        "created_at": "2026-03-20T15:57:20.331288Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "understand",
+          "route_model": "deepseek-v3.2",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 1158,
+        "line_count": 20,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    }
+  ],
+  "task_id": "8e560669552447d68f6c1d44185a6db6",
+  "task_title": "Align project Database Systems Lab for Expand tool extension coverage",
+  "task_status": "running",
+  "started_at": "2026-03-20T15:52:27.666590Z",
+  "updated_at": "2026-03-20T15:57:43.846522Z",
+  "completed": false
+}

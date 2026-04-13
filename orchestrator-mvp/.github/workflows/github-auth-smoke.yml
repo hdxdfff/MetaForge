@@ -1,0 +1,57 @@
+name: github-auth-smoke
+
+on:
+  workflow_dispatch:
+    inputs:
+      auth_mode:
+        description: Choose the GitHub API authentication path.
+        required: true
+        default: github_token
+        type: choice
+        options:
+          - github_token
+          - github_app
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version-file: '.python-version'
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Create GitHub App token
+        if: inputs.auth_mode == 'github_app'
+        id: app-token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ vars.ORCH_GITHUB_APP_ID }}
+          private-key: ${{ secrets.ORCH_GITHUB_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+          repositories: ${{ github.event.repository.name }}
+      - name: Run GitHub auth smoke with GITHUB_TOKEN
+        if: inputs.auth_mode == 'github_token'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_AUTH_MODE: github_token
+        run: python tools/github_api_smoke.py --output reports/github-auth-smoke.json
+      - name: Run GitHub auth smoke with GitHub App token
+        if: inputs.auth_mode == 'github_app'
+        env:
+          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_AUTH_MODE: github_app
+          ORCH_GITHUB_APP_ID: ${{ vars.ORCH_GITHUB_APP_ID }}
+          ORCH_GITHUB_APP_OWNER: ${{ github.repository_owner }}
+        run: python tools/github_api_smoke.py --output reports/github-auth-smoke.json
+      - name: Upload smoke report
+        uses: actions/upload-artifact@v4
+        with:
+          name: github-auth-smoke
+          path: reports/github-auth-smoke.json

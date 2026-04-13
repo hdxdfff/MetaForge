@@ -1,0 +1,374 @@
+{
+  "task_id": "8cf3cc1cda12492bad321d7cb2f31275",
+  "task_status": "released",
+  "phase": "verification-passed",
+  "updated_at": "2026-04-02T18:57:12.338708Z",
+  "heartbeat_at": "2026-04-02T18:57:12.338708Z",
+  "repo_path": "D:\\codex\\orchestrator-mvp",
+  "goal": "Validate the change",
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": "runtime.failure_backlog_automation",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\8cf3cc1cda12492bad321d7cb2f31275",
+  "completed_steps": 5,
+  "verification_result": {
+    "status": "verified",
+    "passed": true,
+    "mode": "production",
+    "verification_level": "L2",
+    "contract": {
+      "verification_level": "L2",
+      "required_checks": [
+        "contract_valid",
+        "build_success",
+        "tests_pass",
+        "smoke_pass",
+        "artifact_manifest_present",
+        "evidence_fresh",
+        "release_checklist"
+      ],
+      "artifact_requirements": {
+        "must_register_artifact": true,
+        "must_have_timestamp": true,
+        "must_have_files": [],
+        "expected_outputs": []
+      },
+      "release_gate": "all_required_checks_pass",
+      "failure_policy": "return_to_planner",
+      "evidence_requirements": [],
+      "verification_notes": [
+        "Validate the change",
+        "Produce explicit verification output or a bounded failure report.",
+        "Do not treat documentation-only progress as production completion."
+      ]
+    },
+    "evidence": {
+      "mode": "production",
+      "status": "not-required"
+    }
+  },
+  "delivery_state": "released",
+  "title": "Validate the result",
+  "prompt": "Turn a raw request into a structured delivery flow: derive requirements, architecture notes, task dependencies, role assignments, rule checks, git workflow expectations, implementation steps, validation steps, and release blockers.",
+  "scheduler_hint": {
+    "automation_source": "failure_backlog_automation",
+    "template_id": "software-factory",
+    "template_category": "governance",
+    "cluster_key": "recover stable execution output",
+    "cluster_count": 214,
+    "cluster_status": "attention",
+    "handling_mode": "generic_saturation",
+    "dispatch_now": true,
+    "admission_mode": "normal",
+    "scheduled_by": "runtime.failure_backlog_automation",
+    "decomposition_child": true,
+    "decomposition_parent_task_id": "e981be68069642f7b01e3c3ab9b900c6",
+    "decomposition_root_task_id": "6609c39c1a534e34b4c133f59cf8f8b5",
+    "decomposition_depth": 2,
+    "max_decomposition_depth": 2,
+    "decomposition_child_index": 3,
+    "decomposition_allow_children": false,
+    "decomposition_path_kind": "repair",
+    "decomposition_shared_dependency_group": "6609c39c1a534e34b4c133f59cf8f8b5",
+    "decomposition_repair_for": "Analyze the current state",
+    "decomposition_dependencies": [
+      "Analyze the current state",
+      "Implement the bounded change"
+    ],
+    "admission_lane": "exploration",
+    "admission_reason": "artifact_spec_missing",
+    "requested_execution_mode": "production",
+    "task_type": "exploration_intake",
+    "queue_name": "exploration",
+    "verification_level": "L1",
+    "max_runtime_seconds": 900,
+    "retry_limit": 0,
+    "rollback_rule": "return_to_planner",
+    "dependency_task_ids": [
+      "4153b3c0f43747d1bdcc9a5d506056d8",
+      "e26757484bc0459b83f789b00d1ba675"
+    ],
+    "dependency_count": 2
+  },
+  "context_package": {},
+  "plan": [
+    {
+      "id": "30748a2d",
+      "title": "Understand task",
+      "status": "completed",
+      "worker": "planner",
+      "phase": "understand"
+    },
+    {
+      "id": "586f607e",
+      "title": "Draft solution",
+      "status": "completed",
+      "worker": "coder",
+      "phase": "draft"
+    },
+    {
+      "id": "67b0c96d",
+      "title": "Execute validation",
+      "status": "completed",
+      "worker": "docker",
+      "phase": "execute"
+    },
+    {
+      "id": "5329ddf1",
+      "title": "Issue patch decision",
+      "status": "completed",
+      "worker": "reviewer",
+      "phase": "verify"
+    },
+    {
+      "id": "e2d5404b",
+      "title": "Revise next action",
+      "status": "completed",
+      "worker": "planner",
+      "phase": "revise"
+    }
+  ],
+  "verification_signals": [
+    {
+      "timestamp": "2026-04-02T18:40:22.644733Z",
+      "kind": "admission_accepted",
+      "success": true,
+      "task_id": "8cf3cc1cda12492bad321d7cb2f31275",
+      "admission_lane": null,
+      "admission_reason": null,
+      "execution_mode": "production",
+      "queue_name": "build_test",
+      "task_type": "unit_test_run"
+    },
+    {
+      "timestamp": "2026-04-02T18:43:35.501051Z",
+      "kind": "step_completed",
+      "success": true,
+      "task_id": "8cf3cc1cda12492bad321d7cb2f31275",
+      "step_id": "30748a2d",
+      "step_title": "Understand task",
+      "worker": "planner",
+      "phase": "understand",
+      "route_model": "deepseek-reasoner",
+      "route_provider": "reasoning",
+      "elapsed_ms": 57625,
+      "output_ref": {},
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 582,
+        "line_count": 4,
+        "stored_raw": false
+      }
+    },
+    {
+      "timestamp": "2026-04-02T18:49:51.787113Z",
+      "kind": "step_completed",
+      "success": true,
+      "task_id": "8cf3cc1cda12492bad321d7cb2f31275",
+      "step_id": "586f607e",
+      "step_title": "Draft solution",
+      "worker": "coder",
+      "phase": "draft",
+      "route_model": "kimi-k2.5",
+      "route_provider": "openai",
+      "elapsed_ms": 258092,
+      "output_ref": {
+        "artifact_id": "ctx_cc1b6895dba1",
+        "task_id": "8cf3cc1cda12492bad321d7cb2f31275",
+        "step_id": "586f607e",
+        "channel": "coder-output",
+        "title": "Draft solution output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\8cf3cc1cda12492bad321d7cb2f31275\\586f607e-coder-output-ctx_cc1b6895dba1.txt",
+        "size_chars": 2298,
+        "line_count": 38,
+        "created_at": "2026-04-02T18:49:26.427261Z",
+        "metadata": {
+          "worker": "coder",
+          "phase": "draft",
+          "route_model": "kimi-k2.5",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "coder-output",
+        "char_count": 2298,
+        "line_count": 38,
+        "stored_raw": true
+      }
+    },
+    {
+      "timestamp": "2026-04-02T18:50:58.970530Z",
+      "kind": "step_completed",
+      "success": true,
+      "task_id": "8cf3cc1cda12492bad321d7cb2f31275",
+      "step_id": "67b0c96d",
+      "step_title": "Execute validation",
+      "worker": "docker",
+      "phase": "execute",
+      "route_model": "deepseek-chat",
+      "route_provider": "runtime",
+      "elapsed_ms": 42422,
+      "output_ref": {
+        "artifact_id": "ctx_dfaee81395a3",
+        "task_id": "8cf3cc1cda12492bad321d7cb2f31275",
+        "step_id": "67b0c96d",
+        "channel": "docker-output",
+        "title": "Execute validation output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\8cf3cc1cda12492bad321d7cb2f31275\\67b0c96d-docker-output-ctx_dfaee81395a3.txt",
+        "size_chars": 34,
+        "line_count": 2,
+        "created_at": "2026-04-02T18:50:48.763485Z",
+        "metadata": {
+          "worker": "docker",
+          "phase": "execute",
+          "route_model": "deepseek-chat",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "docker-output",
+        "char_count": 34,
+        "line_count": 2,
+        "stored_raw": true
+      }
+    },
+    {
+      "timestamp": "2026-04-02T18:55:08.209575Z",
+      "kind": "step_completed",
+      "success": true,
+      "task_id": "8cf3cc1cda12492bad321d7cb2f31275",
+      "step_id": "5329ddf1",
+      "step_title": "Issue patch decision",
+      "worker": "reviewer",
+      "phase": "verify",
+      "route_model": "kimi-k2.5",
+      "route_provider": "openai",
+      "elapsed_ms": 224015,
+      "output_ref": {
+        "artifact_id": "ctx_a81fa3601964",
+        "task_id": "8cf3cc1cda12492bad321d7cb2f31275",
+        "step_id": "5329ddf1",
+        "channel": "reviewer-output",
+        "title": "Issue patch decision output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\8cf3cc1cda12492bad321d7cb2f31275\\5329ddf1-reviewer-output-ctx_a81fa3601964.txt",
+        "size_chars": 1392,
+        "line_count": 36,
+        "created_at": "2026-04-02T18:54:14.031067Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "verify",
+          "route_model": "kimi-k2.5",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 1392,
+        "line_count": 36,
+        "stored_raw": true
+      }
+    },
+    {
+      "timestamp": "2026-04-02T18:56:20.608130Z",
+      "kind": "step_completed",
+      "success": true,
+      "task_id": "8cf3cc1cda12492bad321d7cb2f31275",
+      "step_id": "e2d5404b",
+      "step_title": "Revise next action",
+      "worker": "planner",
+      "phase": "revise",
+      "route_model": "kimi-k2.5",
+      "route_provider": "openai",
+      "elapsed_ms": 10719,
+      "output_ref": {},
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 392,
+        "line_count": 4,
+        "stored_raw": false
+      }
+    }
+  ],
+  "verification_signal_count": 6,
+  "result": {
+    "summary": "Fallback plan generated locally because planner remote access is unavailable.",
+    "completed_steps": 5,
+    "context_used_chars": 591,
+    "cheap_calls_used": 2,
+    "cheap_chars_used": 5958,
+    "escalation_count": 2,
+    "execution_mode": "production",
+    "execution_status": "execution_finished",
+    "production_evidence": {
+      "mode": "production",
+      "status": "not-required"
+    },
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\8cf3cc1cda12492bad321d7cb2f31275\\execution-evidence.json",
+    "execution_evidence_step_count": 5,
+    "verification_contract": {
+      "verification_level": "L2",
+      "required_checks": [
+        "contract_valid",
+        "build_success",
+        "tests_pass",
+        "smoke_pass",
+        "artifact_manifest_present",
+        "evidence_fresh",
+        "release_checklist"
+      ],
+      "artifact_requirements": {
+        "must_register_artifact": true,
+        "must_have_timestamp": true,
+        "must_have_files": [],
+        "expected_outputs": []
+      },
+      "release_gate": "all_required_checks_pass",
+      "failure_policy": "return_to_planner",
+      "evidence_requirements": [],
+      "verification_notes": [
+        "Validate the change",
+        "Produce explicit verification output or a bounded failure report.",
+        "Do not treat documentation-only progress as production completion."
+      ]
+    },
+    "verification_result": {
+      "status": "verified",
+      "passed": true,
+      "mode": "production",
+      "verification_level": "L2",
+      "contract": {
+        "verification_level": "L2",
+        "required_checks": [
+          "contract_valid",
+          "build_success",
+          "tests_pass",
+          "smoke_pass",
+          "artifact_manifest_present",
+          "evidence_fresh",
+          "release_checklist"
+        ],
+        "artifact_requirements": {
+          "must_register_artifact": true,
+          "must_have_timestamp": true,
+          "must_have_files": [],
+          "expected_outputs": []
+        },
+        "release_gate": "all_required_checks_pass",
+        "failure_policy": "return_to_planner",
+        "evidence_requirements": [],
+        "verification_notes": [
+          "Validate the change",
+          "Produce explicit verification output or a bounded failure report.",
+          "Do not treat documentation-only progress as production completion."
+        ]
+      },
+      "evidence": {
+        "mode": "production",
+        "status": "not-required"
+      }
+    },
+    "delivery_state": "released"
+  }
+}

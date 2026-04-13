@@ -1,0 +1,19 @@
+﻿{
+  "id": "daemon_tick_governance_must_remain_signal_only_for_stable_soak",
+  "title": "Governance work must stay off the daemon hot path during stable execution soak",
+  "kind": "runtime_pattern",
+  "recorded_at": "2026-03-21T20:00:00+08:00",
+  "symptoms": [
+    "tick stalls for tens of seconds inside engineering_os, verification, control_layer, or coordination",
+    "watchdog stack dump shows governance modules on the main tick thread"
+  ],
+  "root_cause": "Meta/evolution/governance work re-entered the daemon hot path and blocked execution heartbeats.",
+  "fix": [
+    "Force inline_governance=false in the daemon policy schedule during stable execution mode",
+    "Keep global_policy, engineering_os, control_layer, release_ops, coordination, and release_train on signal-only paths"
+  ],
+  "evidence": [
+    "D:/codex/orchestrator-mvp/tools/factory_daemon.py",
+    "D:/codex/orchestrator-mvp/data/soak_report_20260320T185609.json"
+  ]
+}

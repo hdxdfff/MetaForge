@@ -1,0 +1,78 @@
+{
+  "task_id": "7d2685cde98242caadc87e7ed4832c72",
+  "task_status": "planning",
+  "phase": "planning",
+  "updated_at": "2026-04-03T12:49:29.937028Z",
+  "heartbeat_at": "2026-04-03T12:49:29.937028Z",
+  "repo_path": "D:\\codex",
+  "goal": "Identify the smallest viable slice",
+  "goal_id": "goal_42e8cd07d0",
+  "graph_id": "graph_c9ae2e2b6e",
+  "node_id": "build_toolchain_repair",
+  "scheduled_by": "factory-daemon.replenisher",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\7d2685cde98242caadc87e7ed4832c72",
+  "title": "Analyze the current state",
+  "prompt": "Repair the ToyOS build or toolchain break with the smallest safe patch, then refresh build-report evidence and note any remaining blockers.",
+  "scheduler_hint": {
+    "goal_primary": "Restore ToyOS real artifact delivery",
+    "goal_mode": "toyos_priority_mode",
+    "goal_target": "Restore ToyOS real artifact delivery",
+    "goal_id": "goal_42e8cd07d0",
+    "graph_id": "graph_c9ae2e2b6e",
+    "node_id": "build_toolchain_repair",
+    "node_title": "Repair ToyOS build and toolchain",
+    "task_type": "build_fix",
+    "queue_name": "build_test",
+    "verification_level": "L2",
+    "max_runtime_seconds": 2400,
+    "retry_limit": 1,
+    "rollback_rule": "mark_failed_and_requeue_split",
+    "template_id": "build_toolchain_repair",
+    "admission_mode": "normal",
+    "handling_mode": "toyos_replenishment",
+    "automation_source": "failure_backlog_automation",
+    "decomposition_child": true,
+    "decomposition_parent_task_id": "5bb656480b05484caba7e2aec234ce8b",
+    "decomposition_root_task_id": "5bb656480b05484caba7e2aec234ce8b",
+    "decomposition_depth": 1,
+    "max_decomposition_depth": 2,
+    "decomposition_child_index": 1,
+    "decomposition_allow_children": false,
+    "decomposition_path_kind": "shared",
+    "decomposition_shared_dependency_group": "5bb656480b05484caba7e2aec234ce8b",
+    "decomposition_repair_for": null,
+    "decomposition_dependencies": []
+  },
+  "context_package": {},
+  "plan": [],
+  "verification_signals": [
+    {
+      "timestamp": "2026-04-03T12:49:23.155102Z",
+      "kind": "admission_accepted",
+      "success": true,
+      "task_id": "7d2685cde98242caadc87e7ed4832c72",
+      "admission_lane": null,
+      "admission_reason": null,
+      "execution_mode": "governance",
+      "queue_name": "fastlane",
+      "task_type": "report_refresh"
+    }
+  ],
+  "verification_signal_count": 1,
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-03T12:49:23.155102Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "7d2685cde98242caadc87e7ed4832c72",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "governance",
+        "queue_name": "fastlane",
+        "task_type": "report_refresh"
+      }
+    ]
+  }
+}

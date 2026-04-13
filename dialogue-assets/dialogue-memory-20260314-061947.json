@@ -1,0 +1,88 @@
+﻿{
+    "system":  "MetaForge OS",
+    "memory_mode":  "shared-cross-dialogue-memory",
+    "updated_at":  "2026-03-14T06:19:40",
+    "identity_memory":  {
+                            "system":  "MetaForge OS",
+                            "operator_surface":  "OpenCode / Codex",
+                            "acting_ceo_surface":  "main dialogue",
+                            "role_split":  "local small model for chores, OpenCode for CEO mediation, runtime for persistent execution",
+                            "hard_constraints":  [
+                                                     "preserve target-workspace integrity",
+                                                     "no validation means no delivery",
+                                                     "provider-only output is not ToyOS success"
+                                                 ]
+                        },
+    "state_memory":  {
+                         "control_status":  "active",
+                         "active_task_count":  7,
+                         "route_drift_count":  0,
+                         "active_execution_roots":  [
+                                                        "D:\\codex\\orchestrator-mvp"
+                                                    ],
+                         "current_priority":  "green",
+                         "dialogue_session_count":  0,
+                         "dialogue_message_count":  0
+                     },
+    "delivery_memory":  {
+                            "authoritative_product_workspace":  "D:\\codex\\generated\\toy-os-demo",
+                            "current_active_roots":  [
+                                                         "D:\\codex\\orchestrator-mvp"
+                                                     ],
+                            "top_goals":  [
+
+                                          ],
+                            "invalid_delivery_risk":  "low",
+                            "dialogue_workspaces":  {
+
+                                                    }
+                        },
+    "decision_memory":  {
+                            "current_contradiction":  "none_detected",
+                            "next_action":  "continue bounded dispatch with validation-first policy",
+                            "recent_decisions":  [
+
+                                                 ],
+                            "recent_dialogue_decisions":  [
+
+                                                          ]
+                        },
+    "handoff_memory":  {
+                           "lane_hints":  [
+                                              "ceo-lane",
+                                              "chore-lane",
+                                              "product-lane",
+                                              "research-lane"
+                                          ],
+                           "default_control_tier":  "ceo-review-required unless chore-only is explicit",
+                           "startup_files":  [
+                                                 "D:\\codex\\METAFORGE-OS.md",
+                                                 "D:\\codex\\METAFORGE_OS_CODEX_MULTI_SESSION_BOOTSTRAP.md",
+                                                 "D:\\codex\\METAFORGE_OS_ROLE_SPLIT.md",
+                                                 "D:\\codex\\METAFORGE_OS_CHORE_QUEUE_POLICY.md",
+                                                 "D:\\codex\\METAFORGE_OS_DISPATCH_TEMPLATE.md"
+                                             ],
+                           "startup_command":  "D:\\codex\\codex-session-bootstrap.ps1",
+                           "recent_dialogue_topics":  [
+
+                                                      ],
+                           "shared_dialogue_constraints":  [
+
+                                                           ],
+                           "active_dialogue_summary":  ""
+                       },
+    "dialogue_memory":  {
+                            "session_count":  0,
+                            "message_count":  0,
+                            "recent_topics":  [
+
+                                              ],
+                            "recent_decisions":  [
+
+                                                 ],
+                            "shared_constraints":  [
+
+                                                   ],
+                            "active_handoff":  null
+                        }
+}

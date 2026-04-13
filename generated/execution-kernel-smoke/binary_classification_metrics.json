@@ -1,0 +1,20 @@
+{
+  "status": "ok",
+  "updated_at": "2026-03-20T17:19:34.096477Z",
+  "workspace": "D:\\codex\\generated\\execution-kernel-smoke",
+  "source_template": "",
+  "dataset_source": "deterministic synthetic fallback",
+  "dataset_notes": [
+    "No explicit local dataset was supplied to the workflow.",
+    "A deterministic synthetic binary dataset was generated to keep the execution loop closed."
+  ],
+  "train_samples": 180,
+  "test_samples": 60,
+  "feature_count": 12,
+  "accuracies": {
+    "Logistic Regression": 0.95,
+    "Linear SVM": 0.9333333333333333,
+    "Perceptron": 0.95,
+    "SGD Classifier": 0.95
+  }
+}

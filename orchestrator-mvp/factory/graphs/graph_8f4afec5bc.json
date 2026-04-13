@@ -1,0 +1,62 @@
+{
+  "graph_id": "graph_8f4afec5bc",
+  "goal_id": "goal_3295b3a7b5",
+  "target": "Experiment reviewer prompt specialization",
+  "type": "experiment",
+  "created_at": "2026-03-10T09:22:14.024399Z",
+  "updated_at": "2026-03-10T09:43:54.040969Z",
+  "status": "completed",
+  "nodes": [
+    {
+      "id": "product_design",
+      "title": "Design product shape for Experiment reviewer prompt specialization",
+      "role": "product",
+      "prompt": "Create a structured product design for: Experiment reviewer prompt specialization",
+      "dependencies": [],
+      "status": "completed",
+      "task_id": null,
+      "worker": "reviewer",
+      "selection_reason": "role-default:product->reviewer",
+      "worker_success_rate": 0.5,
+      "skill_matches": [
+        "completed_1554",
+        "task_12345678"
+      ],
+      "execution_lane": "host-control",
+      "worker_vm_preferred": false
+    },
+    {
+      "id": "architecture_design",
+      "title": "Design architecture for Experiment reviewer prompt specialization",
+      "role": "architect",
+      "prompt": "Create a practical architecture plan for: Experiment reviewer prompt specialization",
+      "dependencies": [
+        "product_design"
+      ],
+      "status": "completed",
+      "task_id": null
+    },
+    {
+      "id": "implementation_plan",
+      "title": "Plan and start implementation for Experiment reviewer prompt specialization",
+      "role": "coder",
+      "prompt": "Break down implementation work for: Experiment reviewer prompt specialization",
+      "dependencies": [
+        "architecture_design"
+      ],
+      "status": "completed",
+      "task_id": null
+    },
+    {
+      "id": "verification",
+      "title": "Validate generated work for Experiment reviewer prompt specialization",
+      "role": "tester",
+      "prompt": "Create validation steps and tests for: Experiment reviewer prompt specialization",
+      "dependencies": [
+        "implementation_plan"
+      ],
+      "status": "completed",
+      "task_id": null
+    }
+  ]
+}

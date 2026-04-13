@@ -1,0 +1,35 @@
+{
+  "memory_id": "mem_task_publication_tri_state_ledger_001",
+  "memory_type": "procedure",
+  "title": "Task publication should flow through draft, approval, and publish ledger states",
+  "summary": "Publication surfaces should persist a dedicated publication ledger so task creation remains separate from approval and publish commit stages.",
+  "scope": {
+    "system": "metaforge",
+    "workspace": "orchestrator-mvp",
+    "component": ["app/orchestrator.py", "app/main.py", "tools/codex_control.py"]
+  },
+  "tags": ["task-publication", "ledger", "draft", "approval", "publish"],
+  "authority": "verified",
+  "status": "active",
+  "source_refs": [
+    "app/models.py",
+    "app/orchestrator.py",
+    "app/main.py",
+    "tools/codex_control.py"
+  ],
+  "evidence_refs": [
+    "contracts/schemas/task_publication_record.schema.json"
+  ],
+  "created_at": "2026-03-30T00:00:00Z",
+  "updated_at": "2026-03-30T00:00:00Z",
+  "last_verified_at": "2026-03-30T00:00:00Z",
+  "validity": {
+    "kind": "revalidate_on_change",
+    "trigger": ["publication_surface_changed", "ledger_schema_changed"],
+    "expires_at": null
+  },
+  "reuse_score": 0.88,
+  "priority": "high",
+  "superseded_by": null,
+  "conflicts_with": []
+}

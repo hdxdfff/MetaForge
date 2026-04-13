@@ -1,0 +1,192 @@
+{
+  "task_id": "7939f678e2e742469f263a747d16e644",
+  "task_status": "running",
+  "phase": "step-running",
+  "updated_at": "2026-04-03T12:39:07.273798Z",
+  "heartbeat_at": "2026-04-03T12:39:07.273798Z",
+  "repo_path": "D:\\codex\\generated\\toy-os-demo",
+  "goal": "Clarify target outcome",
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": "operator-completion",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\7939f678e2e742469f263a747d16e644",
+  "step_id": "041e249c",
+  "step_title": "Build Toy OS baseline",
+  "step_status": "running",
+  "worker": "docker",
+  "probe_attempts": 0,
+  "title": "Clarify the target",
+  "prompt": "Demonstrate the complete bounded task lifecycle for ToyOS delivery: publish, plan, decompose, execute, verify, and define rollback behavior. Use the recovered stage1 and stage2 runtime state as the working baseline, produce explicit evidence, and if verification fails, return to the planner with a bounded rollback rule instead of claiming completion.",
+  "scheduler_hint": {
+    "publication_mode": "structured",
+    "publication_source": "task-publication",
+    "task_type": "report_refresh",
+    "verification_level": "L2",
+    "goal_admission": {
+      "strategy": "publish-plan-decompose-execute-verify-rollback",
+      "pipeline": [
+        {
+          "stage": "plan",
+          "title": "Plan lifecycle contract",
+          "prompt": "Define the lifecycle contract, evidence requirements, and rollback policy for the ToyOS delivery flow.",
+          "goal": "prepare a bounded lifecycle contract",
+          "task_type": "report_refresh",
+          "path_kind": "shared",
+          "queue_name": "report_refresh",
+          "verification_level": "L2",
+          "preferred_worker": "shell"
+        },
+        {
+          "stage": "decompose",
+          "title": "Decompose into executable phases",
+          "prompt": "Split the lifecycle into bounded child work for execution and verification.",
+          "goal": "create child tasks with explicit dependencies",
+          "task_type": "report_refresh",
+          "path_kind": "branch",
+          "queue_name": "report_refresh",
+          "verification_level": "L2",
+          "preferred_worker": "shell"
+        },
+        {
+          "stage": "execute",
+          "title": "Execute bounded lifecycle work",
+          "prompt": "Run the bounded lifecycle work and collect execution evidence for the ToyOS delivery path.",
+          "goal": "produce execution evidence",
+          "task_type": "report_refresh",
+          "path_kind": "branch",
+          "queue_name": "report_refresh",
+          "verification_level": "L2",
+          "preferred_worker": "shell"
+        },
+        {
+          "stage": "verify",
+          "title": "Verify evidence and contract adherence",
+          "prompt": "Validate the evidence bundle, decomposition results, and runtime completion markers.",
+          "goal": "prove the lifecycle completed",
+          "task_type": "report_refresh",
+          "path_kind": "branch",
+          "queue_name": "report_refresh",
+          "verification_level": "L2",
+          "preferred_worker": "reviewer"
+        },
+        {
+          "stage": "rollback",
+          "title": "Prepare rollback and requeue split",
+          "prompt": "If verification fails, return to the planner, apply the rollback rule, and requeue the work as bounded splits.",
+          "goal": "define rollback behavior",
+          "task_type": "report_refresh",
+          "path_kind": "repair",
+          "queue_name": "report_refresh",
+          "verification_level": "L2",
+          "preferred_worker": "reviewer"
+        }
+      ]
+    },
+    "goal_pipeline_stage": "plan",
+    "goal_pipeline_index": 0,
+    "goal_pipeline_root": "60462def9ec347548ed6bd3bad238c58",
+    "decomposition_child": true,
+    "decomposition_parent_task_id": "5ce8ba97ca6942e0aaadb4c98a5d1a18",
+    "decomposition_root_task_id": "60462def9ec347548ed6bd3bad238c58",
+    "decomposition_depth": 2,
+    "max_decomposition_depth": 2,
+    "decomposition_child_index": 1,
+    "decomposition_allow_children": false,
+    "decomposition_path_kind": "shared",
+    "decomposition_shared_dependency_group": "60462def9ec347548ed6bd3bad238c58",
+    "decomposition_repair_for": null,
+    "decomposition_dependencies": [],
+    "dependency_task_ids": [],
+    "dependency_count": 0
+  },
+  "context_package": {},
+  "plan": [
+    {
+      "id": "041e249c",
+      "title": "Build Toy OS baseline",
+      "status": "running",
+      "worker": "docker",
+      "phase": "execute"
+    },
+    {
+      "id": "52b55353",
+      "title": "Boot ToyOS in QEMU",
+      "status": "pending",
+      "worker": "docker",
+      "phase": "verify"
+    },
+    {
+      "id": "4614cbab",
+      "title": "Audit ToyOS runtime evidence",
+      "status": "pending",
+      "worker": "reviewer",
+      "phase": "review"
+    },
+    {
+      "id": "6a06d376",
+      "title": "Patch Toy OS implementation",
+      "status": "pending",
+      "worker": "coder",
+      "phase": "draft"
+    },
+    {
+      "id": "31e3d098",
+      "title": "Rebuild Toy OS after patch",
+      "status": "pending",
+      "worker": "docker",
+      "phase": "execute"
+    },
+    {
+      "id": "9d937028",
+      "title": "Re-run ToyOS QEMU and score artifacts",
+      "status": "pending",
+      "worker": "docker",
+      "phase": "verify"
+    },
+    {
+      "id": "9b5135e6",
+      "title": "Score ToyOS artifact set",
+      "status": "pending",
+      "worker": "docker",
+      "phase": "verify"
+    },
+    {
+      "id": "46357eed",
+      "title": "Issue ToyOS release decision",
+      "status": "pending",
+      "worker": "reviewer",
+      "phase": "revise"
+    }
+  ],
+  "verification_signals": [
+    {
+      "timestamp": "2026-04-03T12:37:05.669660Z",
+      "kind": "admission_accepted",
+      "success": true,
+      "task_id": "7939f678e2e742469f263a747d16e644",
+      "admission_lane": null,
+      "admission_reason": null,
+      "execution_mode": "governance",
+      "queue_name": "fastlane",
+      "task_type": "report_refresh"
+    }
+  ],
+  "verification_signal_count": 1,
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-03T12:37:05.669660Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "7939f678e2e742469f263a747d16e644",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "governance",
+        "queue_name": "fastlane",
+        "task_type": "report_refresh"
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "run_id": "hrn_20260328_001",
+  "planner_status": "success",
+  "selected_feature": "minimal_syscall_write",
+  "why_this_feature": "Existing syscall path gives a low-risk atomic baseline with real runtime markers.",
+  "deferred_items": [
+    "file descriptor abstraction",
+    "buffer validation hardening",
+    "multi-process syscall table cleanup"
+  ],
+  "risk_notes": [
+    "QEMU smoke depends on Docker-backed toolchain availability.",
+    "Marker validation depends on qemu-debug.log remaining stable."
+  ]
+}

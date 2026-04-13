@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "updated_at": null,
+  "scope": "industrial_production",
+  "slo_sets": {
+    "control_plane": {
+      "control_loop_success_rate_min": 0.995,
+      "control_decision_latency_p95_seconds_max": 5
+    },
+    "execution_plane": {
+      "task_start_latency_p95_minutes_max": 15,
+      "task_success_rate_24h_min": 0.95
+    },
+    "artifact_plane": {
+      "real_artifact_pass_rate_min": 0.95,
+      "artifact_regression_fail_rate_max": 0.05
+    },
+    "recovery_plane": {
+      "mttr_minutes_max": 30,
+      "auto_recovery_success_rate_min": 0.9
+    },
+    "release_plane": {
+      "failed_release_rollback_time_minutes_max": 10
+    },
+    "economics_plane": {
+      "cost_per_real_artifact_max": null
+    }
+  },
+  "error_budget_policy": {
+    "budget_window_hours": 168,
+    "high_risk_freeze_threshold": 0.5,
+    "freeze_actions": [
+      "capability_expansion",
+      "research_breadth_expansion"
+    ],
+    "allowed_actions_during_burn": [
+      "self_repair",
+      "validator_improvement",
+      "rollback_readiness",
+      "incident_response"
+    ]
+  },
+  "notes": [
+    "Thresholds are intentionally conservative until live measurements exist for every plane.",
+    "Missing measurements must be treated as unknown, not pass, for release decisions."
+  ]
+}

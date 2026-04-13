@@ -1,0 +1,131 @@
+{
+  "task_id": "d4249df785d743f092542bfcaf965e7d",
+  "task_status": "running",
+  "phase": "step-running",
+  "updated_at": "2026-03-29T17:31:02.568850Z",
+  "heartbeat_at": "2026-03-29T17:31:02.568850Z",
+  "repo_path": null,
+  "goal": null,
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": "smoke-test",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\d4249df785d743f092542bfcaf965e7d",
+  "step_id": "48554dd4",
+  "step_title": "Wait for child task completion",
+  "step_status": "running",
+  "worker": "planner",
+  "probe_attempts": 0,
+  "heartbeat_reason": "worker-execution-in-progress",
+  "title": "Tri-state publication smoke 2",
+  "prompt": "Validate tri-state task publication flow via draft approve publish.",
+  "scheduler_hint": {
+    "publication_mode": "structured",
+    "publication_source": "task-publication",
+    "task_type": "report_refresh",
+    "verification_level": "L1"
+  },
+  "context_package": {},
+  "plan": [
+    {
+      "id": "f052411e",
+      "title": "Spawn decomposition subtasks",
+      "status": "completed",
+      "worker": "planner",
+      "phase": "decompose"
+    },
+    {
+      "id": "48554dd4",
+      "title": "Wait for child task completion",
+      "status": "running",
+      "worker": "planner",
+      "phase": "decompose"
+    },
+    {
+      "id": "7f90f805",
+      "title": "Aggregate decomposition results",
+      "status": "pending",
+      "worker": "reviewer",
+      "phase": "verify"
+    }
+  ],
+  "result": {
+    "decomposition": {
+      "summary": "Fallback decomposition for: Validate tri-state task publication flow via draft approve publish.",
+      "strategy": "bounded multi-layer split with analysis, execution, and verification branches",
+      "subtasks": [
+        {
+          "title": "Clarify the target",
+          "prompt": "Restate the objective and the smallest acceptable outcome for: Validate tri-state task publication flow via draft approve publish.",
+          "goal": "Clarify target outcome",
+          "task_type": "report_refresh",
+          "queue_name": "fastlane",
+          "verification_level": "L1",
+          "preferred_worker": "reviewer",
+          "execution_mode": "governance",
+          "execution_lane": "host-control",
+          "decompose_children": false,
+          "inputs": [],
+          "outputs": [
+            "target brief"
+          ],
+          "dependencies": [],
+          "acceptance_criteria": [
+            "Target outcome is explicit."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        },
+        {
+          "title": "Execute the next bounded action",
+          "prompt": "Carry out the smallest bounded action that advances: Validate tri-state task publication flow via draft approve publish.",
+          "goal": "Execute the next action",
+          "task_type": "doc_patch",
+          "queue_name": "fastlane",
+          "verification_level": "L1",
+          "preferred_worker": "coder",
+          "execution_mode": "governance",
+          "execution_lane": "host-control",
+          "decompose_children": false,
+          "inputs": [
+            "target brief"
+          ],
+          "outputs": [
+            "action result"
+          ],
+          "dependencies": [],
+          "acceptance_criteria": [
+            "The action produces a concrete result."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        }
+      ],
+      "depth": 0,
+      "max_depth": 2,
+      "mode": "multi_layer",
+      "child_task_ids": [
+        "c0ab03306d844359a801b84b25f4daf0",
+        "1a4860555b224f34877d4a5e33b77a70"
+      ],
+      "child_tasks": [
+        {
+          "task_id": "c0ab03306d844359a801b84b25f4daf0",
+          "title": "Clarify the target",
+          "task_type": "report_refresh",
+          "execution_mode": "governance",
+          "depth": 1
+        },
+        {
+          "task_id": "1a4860555b224f34877d4a5e33b77a70",
+          "title": "Execute the next bounded action",
+          "task_type": "doc_patch",
+          "execution_mode": "governance",
+          "depth": 1
+        }
+      ],
+      "spawned_at": "2026-03-29T17:30:35.664990Z"
+    }
+  }
+}

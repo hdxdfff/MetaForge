@@ -1,0 +1,20 @@
+{
+  "id": "ordinary_task_execution_evidence_missing",
+  "created_at": "2026-03-20T01:55:00+08:00",
+  "scope": "orchestrator-runtime",
+  "symptom": "Ordinary planner/reviewer/coder/shell steps could complete while leaving execution-evidence.json with completed=true but steps=[].",
+  "trigger": "Only internal recovery steps appended execution evidence. _run_step() for normal workers updated events and step outputs but never wrote step evidence.",
+  "impact": [
+    "verified completed task counts were understated",
+    "autonomy and reality dashboards showed false unverified completions",
+    "final acceptance metric 'all completed have execution evidence' could not pass"
+  ],
+  "fix": [
+    "append execution evidence for normal step success and failure in app/orchestrator.py",
+    "backfill empty terminal execution evidence from persisted task plans/results during runtime maintenance"
+  ],
+  "validation": [
+    "py_compile on orchestrator and maintenance modules",
+    "runtime maintenance backfill reduced recent unverified completed tasks to zero"
+  ]
+}

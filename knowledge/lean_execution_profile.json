@@ -1,0 +1,41 @@
+﻿{
+  "updated_at": "2026-03-13T03:36:30+08:00",
+  "profile": "lean_execution",
+  "enabled_components": [
+    "orchestrator",
+    "scheduler",
+    "task_queue",
+    "model_router",
+    "workspace"
+  ],
+  "disabled_components": [
+    "governance",
+    "observer",
+    "policy_contract",
+    "approval",
+    "security_review",
+    "experiments",
+    "github_learning",
+    "coordination",
+    "release_train",
+    "platform_generation"
+  ],
+  "runtime_contract": {
+    "task_auto_approve": true,
+    "tool_policy_default_role": "coder",
+    "workspace_write_scope": "workspace_only",
+    "filesystem_write_core": "MANUAL"
+  },
+  "acceptance_targets": {
+    "daily_tasks": "30-50",
+    "task_success_rate": ">=0.95",
+    "queue_pressure": "no sustained backlog",
+    "manual_intervention_rate": "<0.10"
+  },
+  "validation_paths": [
+    "D:\\codex\\orchestrator-mvp\\data\\kernel_mode.json",
+    "D:\\codex\\orchestrator-mvp\\data\\control_policy.json",
+    "D:\\codex\\orchestrator-mvp\\data\\control_layer_status.json",
+    "D:\\codex\\orchestrator-mvp\\data\\factory_daemon_state.json"
+  ]
+}

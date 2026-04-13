@@ -1,0 +1,161 @@
+{
+  "steps": [
+    {
+      "step_id": "20211e1a",
+      "step_title": "Write recovery smoke file",
+      "action": "write_smoke_file",
+      "ok": true,
+      "at": "2026-03-19T15:18:08.757010Z",
+      "path": "D:\\codex\\orchestrator-mvp\\data\\execution-recovery\\test.txt",
+      "size": 97
+    },
+    {
+      "step_id": "e59b1d3c",
+      "step_title": "Probe direct LLM path",
+      "action": "direct_llm_call",
+      "ok": true,
+      "at": "2026-03-19T15:18:19.422442Z",
+      "provider": "cheap",
+      "model": "deepseek-chat",
+      "usage_before": 10,
+      "usage_after": 11,
+      "used_fallback": false,
+      "output_excerpt": "`print(\"Hello, world!\")`"
+    },
+    {
+      "step_id": "e3d83878",
+      "step_title": "Create runnable recovery artifact",
+      "action": "create_runnable_artifact",
+      "ok": true,
+      "at": "2026-03-19T15:18:28.637312Z",
+      "artifact_dir": "D:\\codex\\generated\\execution-recovery-demo",
+      "build_timestamp": "2026-03-19T15:18:28.414312Z",
+      "test_timestamp": "2026-03-19T15:18:28.519313Z",
+      "execution_timestamp": "2026-03-19T15:18:28.619311Z"
+    },
+    {
+      "step_id": "6c4f90b1",
+      "step_title": "Verify recovery artifact",
+      "action": "verify_runnable_artifact",
+      "ok": true,
+      "at": "2026-03-19T15:18:41.200121Z",
+      "artifact_id": "execution-recovery-demo",
+      "latest_evidence_at": "2026-03-19T15:18:28.619311Z",
+      "dashboard_status": "pass"
+    }
+  ],
+  "task_id": "016e3b660747417785f68dd8e3b112e8",
+  "task_title": "Execution recovery: smoke and runnable artifact",
+  "task_status": "completed",
+  "started_at": "2026-03-19T15:17:44.237596Z",
+  "updated_at": "2026-03-19T15:18:48.052225Z",
+  "completed": true,
+  "result": {
+    "summary": "Resumed from saved task plan.",
+    "completed_steps": 4,
+    "context_used_chars": 586,
+    "cheap_calls_used": 0,
+    "cheap_chars_used": 0,
+    "escalation_count": 0,
+    "execution_mode": "production",
+    "production_evidence": {
+      "mode": "production",
+      "status": "verified",
+      "artifact_spec": {
+        "artifact_id": "execution-recovery-demo",
+        "artifact_type": "demo",
+        "type": "demo",
+        "output": "generated\\execution-recovery-demo",
+        "entrypoint": "generated\\execution-recovery-demo\\run_demo.py",
+        "deliverables": [
+          "generated\\execution-recovery-demo\\run_demo.py",
+          "generated\\execution-recovery-demo\\build-report.json",
+          "generated\\execution-recovery-demo\\test-report.json",
+          "generated\\execution-recovery-demo\\execution-report.json",
+          "generated\\execution-recovery-demo\\artifact_manifest.json",
+          "generated\\execution-recovery-demo\\build.sh",
+          "generated\\execution-recovery-demo\\Dockerfile.build"
+        ],
+        "expected_outputs": [
+          "generated\\execution-recovery-demo\\run_demo.py",
+          "generated\\execution-recovery-demo\\build-report.json",
+          "generated\\execution-recovery-demo\\test-report.json",
+          "generated\\execution-recovery-demo\\execution-report.json",
+          "generated\\execution-recovery-demo\\artifact_manifest.json",
+          "generated\\execution-recovery-demo\\build.sh",
+          "generated\\execution-recovery-demo\\Dockerfile.build"
+        ],
+        "required_artifacts": [
+          "generated\\execution-recovery-demo\\run_demo.py",
+          "generated\\execution-recovery-demo\\build-report.json",
+          "generated\\execution-recovery-demo\\test-report.json",
+          "generated\\execution-recovery-demo\\execution-report.json",
+          "generated\\execution-recovery-demo\\artifact_manifest.json",
+          "generated\\execution-recovery-demo\\build.sh",
+          "generated\\execution-recovery-demo\\Dockerfile.build"
+        ],
+        "evidence": [
+          "build-report.json",
+          "test-report.json",
+          "execution-report.json"
+        ],
+        "verification": {
+          "build_required": true,
+          "tests_required": true,
+          "runtime_required": true
+        },
+        "registry": "artifact_registry",
+        "test_command": "run_demo.py --self-test",
+        "min_fresh_artifacts": 7
+      },
+      "required_count": 7,
+      "min_fresh_artifacts": 7,
+      "fresh_artifacts": [
+        {
+          "path": "D:\\codex\\generated\\execution-recovery-demo\\run_demo.py",
+          "size": 446,
+          "mtime": "2026-03-19T15:18:28.295394Z",
+          "observed_at": "2026-03-19T15:18:28.295394Z"
+        },
+        {
+          "path": "D:\\codex\\generated\\execution-recovery-demo\\build-report.json",
+          "size": 357,
+          "mtime": "2026-03-19T15:18:28.418312Z",
+          "observed_at": "2026-03-19T15:18:28.414312Z"
+        },
+        {
+          "path": "D:\\codex\\generated\\execution-recovery-demo\\test-report.json",
+          "size": 350,
+          "mtime": "2026-03-19T15:18:28.523313Z",
+          "observed_at": "2026-03-19T15:18:28.519313Z"
+        },
+        {
+          "path": "D:\\codex\\generated\\execution-recovery-demo\\execution-report.json",
+          "size": 423,
+          "mtime": "2026-03-19T15:18:28.623312Z",
+          "observed_at": "2026-03-19T15:18:28.619311Z"
+        },
+        {
+          "path": "D:\\codex\\generated\\execution-recovery-demo\\artifact_manifest.json",
+          "size": 491,
+          "mtime": "2026-03-19T15:18:28.631312Z",
+          "observed_at": "2026-03-19T15:18:28.619311Z"
+        },
+        {
+          "path": "D:\\codex\\generated\\execution-recovery-demo\\build.sh",
+          "size": 51,
+          "mtime": "2026-03-19T15:18:28.297590Z",
+          "observed_at": "2026-03-19T15:18:28.297590Z"
+        },
+        {
+          "path": "D:\\codex\\generated\\execution-recovery-demo\\Dockerfile.build",
+          "size": 104,
+          "mtime": "2026-03-19T15:18:28.299435Z",
+          "observed_at": "2026-03-19T15:18:28.299435Z"
+        }
+      ],
+      "stale_artifacts": [],
+      "missing_artifacts": []
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "template_id": "research-project",
+  "description": "Research or experiment project starter with notes, datasets, experiments, and reports.",
+  "required_paths": [
+    "README.md",
+    "notes",
+    "experiments",
+    "reports",
+    "data"
+  ],
+  "generator_outputs": [
+    "research scaffold",
+    "report scaffold",
+    "experiment scaffold"
+  ],
+  "evaluation_checks": [
+    "required paths present",
+    "manifest exists",
+    "readme exists"
+  ]
+}

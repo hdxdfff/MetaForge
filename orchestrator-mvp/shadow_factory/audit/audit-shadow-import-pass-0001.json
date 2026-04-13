@@ -1,0 +1,17 @@
+{
+  "audit_id": "audit-shadow-import-pass-0001",
+  "task_id": "shadow-import-pass-0001",
+  "verdict": "pass",
+  "score": 100,
+  "issues": [],
+  "evidence": {
+    "build_report": "D:\\codex\\orchestrator-mvp\\shadow_factory\\artifacts\\shadow-import-pass-0001\\build-report.json",
+    "execution_report": "D:\\codex\\orchestrator-mvp\\shadow_factory\\artifacts\\shadow-import-pass-0001\\execution-report.json",
+    "artifact_paths": [
+      "D:\\codex\\orchestrator-mvp\\shadow_factory\\artifacts\\shadow-import-pass-0001\\dummy-artifact.txt"
+    ]
+  },
+  "reproducible": false,
+  "shadow_mode": true,
+  "audited_at": "2026-03-28T21:14:21Z"
+}

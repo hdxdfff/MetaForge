@@ -1,0 +1,68 @@
+{
+  "task_id": "c2071fd21b464dcf84c81b18f3a30b13",
+  "task_status": "planning",
+  "phase": "planning",
+  "updated_at": "2026-04-03T17:39:22.521878Z",
+  "heartbeat_at": "2026-04-03T17:39:22.521878Z",
+  "repo_path": "D:\\codex",
+  "goal": "Restore ToyOS real artifact delivery",
+  "goal_id": "goal_42e8cd07d0",
+  "graph_id": "graph_c9ae2e2b6e",
+  "node_id": "module_tools_scheduling_kernel",
+  "scheduled_by": "factory-daemon.replenisher",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\c2071fd21b464dcf84c81b18f3a30b13",
+  "title": "Implement module tools.scheduling_kernel",
+  "prompt": "Implement or refine module tools.scheduling_kernel for the current engineering goal.",
+  "scheduler_hint": {
+    "goal_primary": "Restore ToyOS real artifact delivery",
+    "goal_mode": "toyos_priority_mode",
+    "goal_target": "Restore ToyOS real artifact delivery",
+    "goal_id": "goal_42e8cd07d0",
+    "graph_id": "graph_c9ae2e2b6e",
+    "node_id": "module_tools_scheduling_kernel",
+    "node_title": "Implement module tools.scheduling_kernel",
+    "task_type": "qemu_smoke_run",
+    "queue_name": "regression",
+    "verification_level": "L3",
+    "max_runtime_seconds": 3600,
+    "retry_limit": 1,
+    "rollback_rule": "mark_failed_and_requeue_split",
+    "template_id": "boot_qemu_smoke",
+    "admission_mode": "normal",
+    "budget_pool": "P0",
+    "handling_mode": "toyos_replenishment",
+    "automation_source": "failure_backlog_automation"
+  },
+  "context_package": {},
+  "plan": [],
+  "verification_signals": [
+    {
+      "timestamp": "2026-04-03T17:39:17.363755Z",
+      "kind": "admission_accepted",
+      "success": true,
+      "task_id": "c2071fd21b464dcf84c81b18f3a30b13",
+      "admission_lane": null,
+      "admission_reason": null,
+      "execution_mode": "production",
+      "queue_name": "regression",
+      "task_type": "qemu_smoke_run"
+    }
+  ],
+  "verification_signal_count": 1,
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-03T17:39:17.363755Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "c2071fd21b464dcf84c81b18f3a30b13",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "production",
+        "queue_name": "regression",
+        "task_type": "qemu_smoke_run"
+      }
+    ]
+  }
+}

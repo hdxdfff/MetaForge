@@ -1,0 +1,17 @@
+{
+  "updated_at": "2026-04-09T05:06:37.961499Z",
+  "status": "budget_closed",
+  "open_items_created": 0,
+  "open_items_total": 1,
+  "queue_path": "D:\\codex\\orchestrator-mvp\\data\\capability_build_queue.json",
+  "report_path": "D:\\codex\\orchestrator-mvp\\data\\capability_builder_status.json",
+  "budget_gate": {
+    "allow_p2": false,
+    "source": "D:\\codex\\orchestrator-mvp\\data\\industrial_operations.json"
+  },
+  "contingency_inputs": [
+    "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json",
+    "D:\\codex\\orchestrator-mvp\\data\\continuity_metrics.json",
+    "D:\\codex\\orchestrator-mvp\\data\\stage5_metrics_history.json"
+  ]
+}

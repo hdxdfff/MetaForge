@@ -1,0 +1,39 @@
+{
+  "updated_at": "2026-03-12T07:08:54.376472Z",
+  "capabilities": {
+    "webapp_generation": {
+      "score": 11.718,
+      "count": 204
+    },
+    "agent_orchestration": {
+      "score": 11.9749,
+      "count": 211
+    },
+    "deploy_scaffold": {
+      "score": 6.156,
+      "count": 135
+    },
+    "tool_extension": {
+      "score": 4.9275,
+      "count": 135
+    },
+    "kv_cache_manager": {
+      "score": 0.2569,
+      "count": 7
+    },
+    "local_llm_runner": {
+      "score": 0.2569,
+      "count": 7
+    },
+    "token_streaming": {
+      "score": 0.2569,
+      "count": 7
+    }
+  },
+  "workers": {
+    "reviewer": {
+      "score": 7.908,
+      "count": 151
+    }
+  }
+}

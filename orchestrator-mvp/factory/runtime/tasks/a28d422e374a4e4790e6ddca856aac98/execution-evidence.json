@@ -1,0 +1,80 @@
+{
+  "steps": [
+    {
+      "step_id": "8500cc3d",
+      "step_title": "Understand task",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-03-20T12:57:20.540981Z",
+      "worker": "reviewer",
+      "phase": "understand",
+      "route_model": "deepseek-v3.2",
+      "route_provider": "openai",
+      "output_ref": {
+        "artifact_id": "ctx_b39fbc2a5f6d",
+        "task_id": "a28d422e374a4e4790e6ddca856aac98",
+        "step_id": "8500cc3d",
+        "channel": "reviewer-output",
+        "title": "Understand task output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\a28d422e374a4e4790e6ddca856aac98\\8500cc3d-reviewer-output-ctx_b39fbc2a5f6d.txt",
+        "size_chars": 1136,
+        "line_count": 20,
+        "created_at": "2026-03-20T12:56:55.832946Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "understand",
+          "route_model": "deepseek-v3.2",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 1136,
+        "line_count": 20,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "2d55582f",
+      "step_title": "Draft solution",
+      "action": "coder_step",
+      "ok": true,
+      "at": "2026-03-20T12:59:48.082326Z",
+      "worker": "coder",
+      "phase": "draft",
+      "route_model": "deepseek-v3.2",
+      "route_provider": "openai",
+      "output_ref": {
+        "artifact_id": "ctx_1a36e0df7fb4",
+        "task_id": "a28d422e374a4e4790e6ddca856aac98",
+        "step_id": "2d55582f",
+        "channel": "coder-output",
+        "title": "Draft solution output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\a28d422e374a4e4790e6ddca856aac98\\2d55582f-coder-output-ctx_1a36e0df7fb4.txt",
+        "size_chars": 1215,
+        "line_count": 17,
+        "created_at": "2026-03-20T12:59:22.683613Z",
+        "metadata": {
+          "worker": "coder",
+          "phase": "draft",
+          "route_model": "deepseek-v3.2",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "coder-output",
+        "char_count": 1215,
+        "line_count": 17,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    }
+  ],
+  "task_id": "a28d422e374a4e4790e6ddca856aac98",
+  "task_title": "Implement module agents.test_agent",
+  "task_status": "running",
+  "started_at": "2026-03-20T12:50:42.493371Z",
+  "updated_at": "2026-03-20T12:59:48.082326Z",
+  "completed": false
+}

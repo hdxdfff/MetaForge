@@ -1,0 +1,47 @@
+[
+  {
+    "id": "release-001",
+    "created_at": "2026-03-08T23:56:30.914712Z",
+    "repo_id": null,
+    "repo_path": "D:\\codex\\orchestrator-mvp",
+    "branch": "codex/demo",
+    "artifacts": [
+      "docker-compose.app.yml",
+      "deploy-template.yml"
+    ],
+    "blockers": [],
+    "status": "ready",
+    "notes": "local dry run Promoted to candidate by release train runtime. Promoted to ready by release train runtime.",
+    "updated_at": "2026-03-10T17:25:55.845620Z"
+  },
+  {
+    "id": "release-002",
+    "created_at": "2026-03-09T04:08:32.086286Z",
+    "repo_id": null,
+    "repo_path": "D:\\codex\\orchestrator-mvp",
+    "branch": "codex/evolution-20260309t040831",
+    "artifacts": [
+      "templates/tests/task_templates",
+      "policy/task_templates/prompts"
+    ],
+    "blockers": [],
+    "status": "ready",
+    "notes": "Ready to record a release candidate if a repository path is attached. Promoted to ready by release train runtime.",
+    "updated_at": "2026-03-10T17:27:34.066756Z"
+  },
+  {
+    "id": "release-003",
+    "created_at": "2026-03-09T04:09:19.306038Z",
+    "repo_id": null,
+    "repo_path": "D:\\codex\\orchestrator-mvp",
+    "branch": "codex/evolution-20260309t040919",
+    "artifacts": [
+      "templates/tests/task_templates",
+      "policy/task_templates/prompts"
+    ],
+    "blockers": [],
+    "status": "ready",
+    "notes": "Ready to record a release candidate if a repository path is attached. Promoted to ready by release train runtime.",
+    "updated_at": "2026-03-10T17:28:56.610173Z"
+  }
+]

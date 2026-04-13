@@ -1,0 +1,26 @@
+{
+  "task_id": "de306cd8babe4505911d82092c79be85",
+  "task_title": "Compatibility publication smoke",
+  "task_status": "completed",
+  "started_at": "2026-03-29T17:34:44.565327Z",
+  "updated_at": "2026-03-29T18:04:49.498067Z",
+  "completed": true,
+  "steps": [
+    {
+      "step_id": "de306cd8babe4505911d82092c79be85-terminal-record",
+      "step_title": "Compatibility publication smoke",
+      "action": "task_terminal_record",
+      "ok": true,
+      "at": "2026-03-29T18:04:49.498067Z",
+      "status": "completed",
+      "summary": "Stale internal smoke task auto-closed after runtime validation window elapsed.",
+      "error": null,
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ],
+  "result": {
+    "summary": "Stale internal smoke task auto-closed after runtime validation window elapsed."
+  }
+}

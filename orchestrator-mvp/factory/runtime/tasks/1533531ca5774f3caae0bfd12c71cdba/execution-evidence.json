@@ -1,0 +1,127 @@
+{
+  "task_id": "1533531ca5774f3caae0bfd12c71cdba",
+  "task_title": "Implement module app.network_agent",
+  "task_status": "timed_out",
+  "started_at": "2026-03-19T07:15:46.114954Z",
+  "updated_at": "2026-03-19T13:06:47.835615Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "df24ede4",
+      "step_title": "Understand task",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-03-19T13:06:47.835615Z",
+      "phase": "understand",
+      "worker": "reviewer",
+      "status": "completed",
+      "output_ref": {
+        "artifact_id": "ctx_42dd48488471",
+        "task_id": "1533531ca5774f3caae0bfd12c71cdba",
+        "step_id": "df24ede4",
+        "channel": "reviewer-output",
+        "title": "Understand task output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\1533531ca5774f3caae0bfd12c71cdba\\df24ede4-reviewer-output-ctx_42dd48488471.txt",
+        "size_chars": 1150,
+        "line_count": 32,
+        "created_at": "2026-03-19T07:16:33.098667Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "understand",
+          "route_model": "gpt-5.4-pro",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 1150,
+        "line_count": 32,
+        "stored_raw": true
+      },
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "eb3111a0",
+      "step_title": "Draft solution",
+      "action": "coder_step",
+      "ok": true,
+      "at": "2026-03-19T13:06:47.835615Z",
+      "phase": "draft",
+      "worker": "coder",
+      "status": "completed",
+      "output_ref": {
+        "artifact_id": "ctx_6a91783f874f",
+        "task_id": "1533531ca5774f3caae0bfd12c71cdba",
+        "step_id": "eb3111a0",
+        "channel": "coder-output",
+        "title": "Draft solution output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\1533531ca5774f3caae0bfd12c71cdba\\eb3111a0-coder-output-ctx_6a91783f874f.txt",
+        "size_chars": 1230,
+        "line_count": 26,
+        "created_at": "2026-03-19T07:16:57.305282Z",
+        "metadata": {
+          "worker": "coder",
+          "phase": "draft",
+          "route_model": "gpt-5.4-pro",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "coder-output",
+        "char_count": 1230,
+        "line_count": 26,
+        "stored_raw": true
+      },
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "ceb1ecd1",
+      "step_title": "Execute validation",
+      "action": "shell_step",
+      "ok": false,
+      "at": "2026-03-19T13:06:47.835615Z",
+      "phase": "execute",
+      "worker": "shell",
+      "status": "running",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "ea924434",
+      "step_title": "Verify result",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-03-19T13:06:47.835615Z",
+      "phase": "verify",
+      "worker": "reviewer",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "61a11245",
+      "step_title": "Revise next action",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-03-19T13:06:47.835615Z",
+      "phase": "revise",
+      "worker": "reviewer",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    }
+  ],
+  "result": {
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

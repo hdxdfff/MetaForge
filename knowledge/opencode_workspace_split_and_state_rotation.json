@@ -1,0 +1,31 @@
+{
+  "id": "opencode_workspace_split_and_state_rotation_v1",
+  "status": "active",
+  "updated_at": "2026-04-03T00:00:00Z",
+  "problem": "OpenCode was snapshotting the full D:\\codex worktree into a Git-backed state store, causing snapshot/global object growth into tens of gigabytes.",
+  "root_cause": [
+    "OpenCode workspace root was the entire D:\\codex tree",
+    "Local state root was shared with a large Git-backed snapshot store",
+    "Generated artifacts, caches, and auxiliary worktrees were not separated from interaction state"
+  ],
+  "fix": [
+    "Move OpenCode to a dedicated small workspace: D:\\codex\\opencode-workspace",
+    "Move fast OpenCode to a dedicated small workspace: D:\\codex\\opencode-workspace-fast",
+    "Move OpenCode local state to dedicated roots: D:\\codex\\oi-state-opencode and D:\\codex\\oi-state-opencode-fast",
+    "Delete the old OpenCode snapshot subtrees under D:\\codex\\oi-state\\xdg\\opencode and D:\\codex\\oi-state-fast\\xdg\\opencode",
+    "Keep core state in MetaForge memory, identity, dialogue, and checkpoint registries"
+  ],
+  "guardrails": [
+    "OpenCode local state is disposable and should remain small",
+    "Core state changes must go through controller-backed workflows",
+    "Do not point OpenCode at the full D:\\codex tree again",
+    "Treat large generated folders as non-core and keep them out of the interaction workspace"
+  ],
+  "validation": [
+    "opencode.py compiled",
+    "opencode-factory.py compiled",
+    "OpenCode help launches from the new workspace layout",
+    "Old OpenCode snapshot directories removed",
+    "New state roots contain only small startup cache/log directories"
+  ]
+}

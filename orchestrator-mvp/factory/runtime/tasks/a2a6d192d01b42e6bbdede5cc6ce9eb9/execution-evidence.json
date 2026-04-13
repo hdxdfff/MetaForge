@@ -1,0 +1,131 @@
+{
+  "steps": [
+    {
+      "step_id": "4c603687",
+      "step_title": "Spawn decomposition subtasks",
+      "action": "planner_step",
+      "ok": true,
+      "at": "2026-04-03T17:53:28.241148Z",
+      "phase": "decompose",
+      "worker": "planner",
+      "status": "completed",
+      "output_ref": {
+        "artifact_id": "ctx_a5f34a734298",
+        "task_id": "a2a6d192d01b42e6bbdede5cc6ce9eb9",
+        "step_id": "4c603687",
+        "channel": "planner-output",
+        "title": "Spawn decomposition subtasks output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\a2a6d192d01b42e6bbdede5cc6ce9eb9\\4c603687-planner-output-ctx_a5f34a734298.json",
+        "size_chars": 960,
+        "line_count": 34,
+        "created_at": "2026-04-03T17:33:15.005516Z",
+        "metadata": {
+          "worker": "planner",
+          "phase": "decompose",
+          "route_model": "internal-recovery",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 960,
+        "line_count": 34,
+        "stored_raw": true
+      },
+      "synthesized": true,
+      "source": "task-plan"
+    },
+    {
+      "step_id": "49d30d0b",
+      "step_title": "Wait for child task completion",
+      "action": "planner_step",
+      "ok": true,
+      "at": "2026-04-03T17:53:28.241148Z",
+      "phase": "decompose",
+      "worker": "planner",
+      "status": "completed",
+      "output_ref": {
+        "artifact_id": "ctx_a0fcd00a59df",
+        "task_id": "a2a6d192d01b42e6bbdede5cc6ce9eb9",
+        "step_id": "49d30d0b",
+        "channel": "planner-output",
+        "title": "Wait for child task completion output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\a2a6d192d01b42e6bbdede5cc6ce9eb9\\49d30d0b-planner-output-ctx_a0fcd00a59df.json",
+        "size_chars": 10403,
+        "line_count": 253,
+        "created_at": "2026-04-03T17:52:58.778705Z",
+        "metadata": {
+          "worker": "planner",
+          "phase": "decompose",
+          "route_model": "internal-recovery",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 10403,
+        "line_count": 253,
+        "stored_raw": true
+      },
+      "synthesized": true,
+      "source": "task-plan"
+    },
+    {
+      "step_id": "71aaf972",
+      "step_title": "Aggregate decomposition results",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-04-03T17:53:28.241148Z",
+      "phase": "verify",
+      "worker": "reviewer",
+      "status": "completed",
+      "output_ref": {
+        "artifact_id": "ctx_c77e1c1a88a0",
+        "task_id": "a2a6d192d01b42e6bbdede5cc6ce9eb9",
+        "step_id": "71aaf972",
+        "channel": "reviewer-output",
+        "title": "Aggregate decomposition results output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\a2a6d192d01b42e6bbdede5cc6ce9eb9\\71aaf972-reviewer-output-ctx_c77e1c1a88a0.json",
+        "size_chars": 1271,
+        "line_count": 35,
+        "created_at": "2026-04-03T17:53:20.368725Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "verify",
+          "route_model": "internal-recovery",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 1271,
+        "line_count": 35,
+        "stored_raw": true
+      },
+      "synthesized": true,
+      "source": "task-plan"
+    }
+  ],
+  "task_id": "a2a6d192d01b42e6bbdede5cc6ce9eb9",
+  "task_title": "P2 budget gate test",
+  "task_status": "failed",
+  "completed": false,
+  "updated_at": "2026-04-03T17:53:36.130118Z",
+  "result": {
+    "state": "failed_execution",
+    "reason": "Production evidence incomplete: fresh=0/1 missing=['generated/p2-budget-gate-test/artifact_manifest.json'] stale=['none']",
+    "task_id": "a2a6d192d01b42e6bbdede5cc6ce9eb9",
+    "repo_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+    "execution_mode": "production",
+    "goal": "Exercise industrial P2 admission control.",
+    "cheap_calls_used": 0,
+    "cheap_chars_used": 0,
+    "escalation_count": 0,
+    "failed_steps": [],
+    "next_action_required": "Inspect execution evidence and rerun or replace the task; no approval hold was applied.",
+    "failure_pause_policy": "If a long task fails, allow at most one cheap-model-approved probe retry with bounded local cost. If cheap approval is missing, ambiguous, or the retry still fails, pause execution, return a structured error report, and wait for explicit core guidance.",
+    "pause_required": false,
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\a2a6d192d01b42e6bbdede5cc6ce9eb9\\execution-evidence.json",
+    "execution_evidence_step_count": 3
+  }
+}

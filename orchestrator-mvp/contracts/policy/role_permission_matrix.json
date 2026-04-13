@@ -1,0 +1,58 @@
+{
+  "dispatcher": {
+    "allow": [
+      "task_create",
+      "task_assign",
+      "task_split",
+      "task_queue_update"
+    ],
+    "deny": [
+      "code_write",
+      "shell_execute",
+      "artifact_audit",
+      "artifact_publish"
+    ]
+  },
+  "builder": {
+    "allow": [
+      "code_write",
+      "file_create",
+      "file_modify",
+      "build_execute"
+    ],
+    "deny": [
+      "task_create",
+      "task_redefine",
+      "artifact_audit",
+      "artifact_publish"
+    ]
+  },
+  "runner": {
+    "allow": [
+      "shell_execute",
+      "container_execute",
+      "qemu_execute",
+      "metric_collect",
+      "log_collect"
+    ],
+    "deny": [
+      "task_create",
+      "code_write",
+      "artifact_audit",
+      "artifact_publish"
+    ]
+  },
+  "auditor": {
+    "allow": [
+      "evidence_read",
+      "audit_score",
+      "audit_record_write"
+    ],
+    "deny": [
+      "task_create",
+      "code_write",
+      "shell_execute",
+      "artifact_publish"
+    ]
+  }
+}

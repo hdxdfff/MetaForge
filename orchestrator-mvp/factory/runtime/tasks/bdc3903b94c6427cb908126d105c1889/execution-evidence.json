@@ -1,0 +1,203 @@
+{
+  "steps": [
+    {
+      "step_id": "fd982e38",
+      "step_title": "Spawn decomposition subtasks",
+      "action": "planner_step",
+      "ok": true,
+      "at": "2026-04-02T19:04:49.703892Z",
+      "phase": "decompose",
+      "worker": "planner",
+      "status": "completed",
+      "output_ref": {
+        "artifact_id": "ctx_2342966b2fa4",
+        "task_id": "bdc3903b94c6427cb908126d105c1889",
+        "step_id": "fd982e38",
+        "channel": "planner-output",
+        "title": "Spawn decomposition subtasks output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\bdc3903b94c6427cb908126d105c1889\\fd982e38-planner-output-ctx_2342966b2fa4.json",
+        "size_chars": 950,
+        "line_count": 34,
+        "created_at": "2026-04-02T18:57:12.835811Z",
+        "metadata": {
+          "worker": "planner",
+          "phase": "decompose",
+          "route_model": "internal-recovery",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 950,
+        "line_count": 34,
+        "stored_raw": true
+      },
+      "synthesized": true,
+      "source": "task-plan"
+    },
+    {
+      "step_id": "9eca5a6d",
+      "step_title": "Wait for child task completion",
+      "action": "planner_step",
+      "ok": true,
+      "at": "2026-04-02T19:04:49.703892Z",
+      "phase": "decompose",
+      "worker": "planner",
+      "status": "completed",
+      "output_ref": {
+        "artifact_id": "ctx_459eb3862e7d",
+        "task_id": "bdc3903b94c6427cb908126d105c1889",
+        "step_id": "9eca5a6d",
+        "channel": "planner-output",
+        "title": "Wait for child task completion output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\bdc3903b94c6427cb908126d105c1889\\9eca5a6d-planner-output-ctx_459eb3862e7d.json",
+        "size_chars": 9767,
+        "line_count": 207,
+        "created_at": "2026-04-02T19:04:34.640377Z",
+        "metadata": {
+          "worker": "planner",
+          "phase": "decompose",
+          "route_model": "internal-recovery",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 9767,
+        "line_count": 207,
+        "stored_raw": true
+      },
+      "synthesized": true,
+      "source": "task-plan"
+    },
+    {
+      "step_id": "2b245eb0",
+      "step_title": "Aggregate decomposition results",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-04-02T19:04:49.703892Z",
+      "phase": "verify",
+      "worker": "reviewer",
+      "status": "completed",
+      "output_ref": {
+        "artifact_id": "ctx_541c98f7c8f7",
+        "task_id": "bdc3903b94c6427cb908126d105c1889",
+        "step_id": "2b245eb0",
+        "channel": "reviewer-output",
+        "title": "Aggregate decomposition results output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\bdc3903b94c6427cb908126d105c1889\\2b245eb0-reviewer-output-ctx_541c98f7c8f7.json",
+        "size_chars": 1215,
+        "line_count": 35,
+        "created_at": "2026-04-02T19:04:46.552419Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "verify",
+          "route_model": "internal-recovery",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 1215,
+        "line_count": 35,
+        "stored_raw": true
+      },
+      "synthesized": true,
+      "source": "task-plan"
+    }
+  ],
+  "task_id": "bdc3903b94c6427cb908126d105c1889",
+  "task_title": "Implement the bounded change",
+  "task_status": "released",
+  "completed": true,
+  "updated_at": "2026-04-02T19:05:10.657898Z",
+  "result": {
+    "summary": "Fallback decomposition for: Audit the throughput blueprint against the current controller code, identify the smallest queue admission and WIP gaps, ",
+    "completed_steps": 3,
+    "context_used_chars": 600,
+    "cheap_calls_used": 0,
+    "cheap_chars_used": 0,
+    "escalation_count": 0,
+    "execution_mode": "research",
+    "execution_status": "execution_finished",
+    "production_evidence": {
+      "mode": "research",
+      "status": "not-required"
+    },
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\bdc3903b94c6427cb908126d105c1889\\execution-evidence.json",
+    "execution_evidence_step_count": 3,
+    "verification_contract": {
+      "verification_level": "L1",
+      "required_checks": [
+        "contract_valid",
+        "build_success",
+        "tests_pass",
+        "artifact_manifest_present",
+        "evidence_fresh"
+      ],
+      "artifact_requirements": {
+        "must_register_artifact": true,
+        "must_have_timestamp": true,
+        "must_have_files": [],
+        "expected_outputs": []
+      },
+      "release_gate": "all_required_checks_pass",
+      "failure_policy": "return_to_planner",
+      "evidence_requirements": [],
+      "verification_notes": [
+        "Implement the bounded change",
+        "Produce explicit verification output or a bounded failure report.",
+        "Record what was learned and the bounded next experiment."
+      ]
+    },
+    "verification_result": {
+      "status": "verified",
+      "passed": true,
+      "mode": "research",
+      "verification_level": "L1",
+      "contract": {
+        "verification_level": "L1",
+        "required_checks": [
+          "contract_valid",
+          "build_success",
+          "tests_pass",
+          "artifact_manifest_present",
+          "evidence_fresh"
+        ],
+        "artifact_requirements": {
+          "must_register_artifact": true,
+          "must_have_timestamp": true,
+          "must_have_files": [],
+          "expected_outputs": []
+        },
+        "release_gate": "all_required_checks_pass",
+        "failure_policy": "return_to_planner",
+        "evidence_requirements": [],
+        "verification_notes": [
+          "Implement the bounded change",
+          "Produce explicit verification output or a bounded failure report.",
+          "Record what was learned and the bounded next experiment."
+        ]
+      },
+      "evidence": {
+        "status": "verified",
+        "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\bdc3903b94c6427cb908126d105c1889\\execution-evidence.json",
+        "execution_evidence_present": true,
+        "required_checks": [
+          "contract_valid",
+          "build_success",
+          "tests_pass",
+          "artifact_manifest_present",
+          "evidence_fresh"
+        ],
+        "artifact_requirements": {
+          "must_register_artifact": true,
+          "must_have_timestamp": true,
+          "must_have_files": [],
+          "expected_outputs": []
+        }
+      }
+    },
+    "delivery_state": "released"
+  }
+}

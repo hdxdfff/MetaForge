@@ -1,0 +1,13 @@
+{
+  "generator_status": "completed_with_candidate",
+  "run_id": "hrn_20260328_005",
+  "changed_files": [
+    "D:\\codex\\generated\\toy-os-demo\\docs\\harness\\syscall_exit_runtime_baseline_note.md"
+  ],
+  "commands_executed": [],
+  "build_result": "not_run_by_generator",
+  "self_claim": "candidate_ready_for_evaluation",
+  "known_risks": [
+    "Generator is baseline-only; runtime truth must come from evaluator rerun."
+  ]
+}

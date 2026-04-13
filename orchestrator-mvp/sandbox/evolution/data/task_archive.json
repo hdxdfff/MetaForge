@@ -1,0 +1,10 @@
+[
+  {
+    "task_id": "cc3f0733b7e1440dbcd64ed810eb3c11",
+    "status": "timed_out",
+    "goal": null,
+    "repo_path": "D:\\codex\\orchestrator-mvp\\workspace\\build-ai-video-factory",
+    "updated_at": "2026-03-11T14:46:33.889907Z",
+    "resolution": "Archived by Codex main control as an invalid orphan dispatch routed to an unrelated provider workspace with no goal linkage."
+  }
+]

@@ -1,0 +1,83 @@
+{
+  "steps": [
+    {
+      "step_id": "a495f3e4",
+      "step_title": "Explore repository structure",
+      "action": "shell_step",
+      "ok": false,
+      "at": "2026-04-02T20:44:02.267808Z",
+      "worker": "shell",
+      "phase": "discovery",
+      "route_model": "deepseek-chat",
+      "route_provider": "runtime",
+      "error": "Command prefix 'dir' is not in ORCH_ALLOWED_COMMAND_PREFIXES.",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "error-output",
+        "char_count": 61,
+        "line_count": 1,
+        "stored_raw": false
+      },
+      "probe_attempts": 0
+    }
+  ],
+  "task_id": "c14892da7e0f4ed381ac78774bf2e259",
+  "task_title": "Validate the result",
+  "task_status": "failed",
+  "started_at": "2026-04-02T20:24:21.813189Z",
+  "updated_at": "2026-04-02T20:56:26.766236Z",
+  "completed": false,
+  "result": {
+    "state": "failed_execution",
+    "reason": "Command prefix 'dir' is not in ORCH_ALLOWED_COMMAND_PREFIXES.",
+    "task_id": "c14892da7e0f4ed381ac78774bf2e259",
+    "repo_path": "D:\\codex\\orchestrator-mvp",
+    "execution_mode": "research",
+    "goal": "Validate the change",
+    "cheap_calls_used": 1,
+    "cheap_chars_used": 4190,
+    "escalation_count": 1,
+    "failed_steps": [
+      {
+        "step_id": "a495f3e4",
+        "title": "Explore repository structure",
+        "phase": "discovery",
+        "worker": "shell",
+        "command": "dir /b D:\\codex\\orchestrator-mvp",
+        "output": "Explore repository structure failure: 61 chars, 1 non-empty lines.\nHead:\n- Command prefix 'dir' is not in ORCH_ALLOWED_COMMAND_PREFIXES.",
+        "output_ref": {},
+        "output_stats": {
+          "channel": "error-output",
+          "char_count": 61,
+          "line_count": 1,
+          "stored_raw": false
+        },
+        "probe_attempts": 0,
+        "max_probe_attempts": 1,
+        "last_diagnosis": "Diagnosis for Explore repository structure: 1392 chars, 36 non-empty lines.\nHead:\n- Cheap lane escalation triggered.\n- Original worker: reviewer\n- Escalation model: kimi-k2.5\n- Reason: Cheap worker fallback or loop detected.\nTail:\n- - next_action\n- Provider error: APITimeoutError: Request timed out.\n- Provider error: APITimeoutError: Request timed out.\nRaw artifact: ctx_f5754672d474",
+        "last_diagnosis_ref": {
+          "artifact_id": "ctx_f5754672d474",
+          "task_id": "c14892da7e0f4ed381ac78774bf2e259",
+          "step_id": "a495f3e4",
+          "channel": "diagnosis-output",
+          "title": "Diagnosis for Explore repository structure",
+          "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\c14892da7e0f4ed381ac78774bf2e259\\a495f3e4-diagnosis-output-ctx_f5754672d474.txt",
+          "size_chars": 1392,
+          "line_count": 36,
+          "created_at": "2026-04-02T20:48:39.048195Z",
+          "metadata": {
+            "worker": "reviewer",
+            "phase": "check",
+            "route_model": "kimi-k2.5",
+            "route_provider": "openai"
+          }
+        }
+      }
+    ],
+    "next_action_required": "Inspect execution evidence and rerun or replace the task; no approval hold was applied.",
+    "failure_pause_policy": "If a long task fails, allow at most one cheap-model-approved probe retry with bounded local cost. If cheap approval is missing, ambiguous, or the retry still fails, pause execution, return a structured error report, and wait for explicit core guidance.",
+    "pause_required": false,
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\c14892da7e0f4ed381ac78774bf2e259\\execution-evidence.json",
+    "execution_evidence_step_count": 1
+  }
+}

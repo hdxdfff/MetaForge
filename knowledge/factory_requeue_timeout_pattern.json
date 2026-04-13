@@ -1,0 +1,24 @@
+﻿{
+  "recorded_at": "2026-03-15T02:10:00+08:00",
+  "pattern_id": "factory-requeue-timeout-does-not-equal-terminal-failure",
+  "scope": "orchestrator-mvp/runtime-quality-control",
+  "symptoms": [
+    "quality_score drops to ~0.63 even when platform and safety scores stay high",
+    "control layer holds promotion on quality only",
+    "goal_runtime marks goal failed while timed out tasks explicitly request requeue"
+  ],
+  "detection": {
+    "task_status": ["timed_out", "failed"],
+    "required_signals": ["result.requeue_requested=true or result.heartbeat_timeout=true"],
+    "secondary_signals": ["summary contains 'requested requeue'", "newer planning or queued tasks may exist for the same goal"]
+  },
+  "policy": {
+    "quality_system": "Exclude recoverable requeue heartbeat timeouts from terminal failure scoring and use recent recovering goal ids as active-goal fallback.",
+    "goal_runtime": "Prefer planned/running recovery state over failed when only recoverable requeue timeouts remain."
+  },
+  "evidence_files": [
+    "D:\\codex\\orchestrator-mvp\\data\\quality_status.json",
+    "D:\\codex\\orchestrator-mvp\\data\\goal_runtime_status.json",
+    "D:\\codex\\orchestrator-mvp\\data\\factory_self_report.json"
+  ]
+}

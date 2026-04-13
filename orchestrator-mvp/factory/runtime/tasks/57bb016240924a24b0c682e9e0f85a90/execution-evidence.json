@@ -1,0 +1,41 @@
+{
+  "task_id": "57bb016240924a24b0c682e9e0f85a90",
+  "task_title": "ToyOS full lifecycle flow contract local",
+  "task_status": "completed",
+  "started_at": "2026-04-03T12:31:39.975540Z",
+  "updated_at": "2026-04-03T12:48:51.104096Z",
+  "completed": true,
+  "steps": [
+    {
+      "step_id": "57bb016240924a24b0c682e9e0f85a90-terminal-record",
+      "step_title": "ToyOS full lifecycle flow contract local",
+      "action": "task_terminal_record",
+      "ok": true,
+      "at": "2026-04-03T12:48:51.104096Z",
+      "status": "completed",
+      "summary": "Superseded by newer active task e7a2849fc164414d89796afd14449f8d for goal restore_toyos_delivery.",
+      "error": null,
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ],
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-03T12:31:39.980043Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "57bb016240924a24b0c682e9e0f85a90",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "governance",
+        "queue_name": null,
+        "task_type": "report_refresh"
+      }
+    ],
+    "summary": "Superseded by newer active task e7a2849fc164414d89796afd14449f8d for goal restore_toyos_delivery.",
+    "superseded_by": "e7a2849fc164414d89796afd14449f8d",
+    "dedupe_reconciled": true
+  }
+}

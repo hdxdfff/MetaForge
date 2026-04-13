@@ -1,0 +1,133 @@
+{
+  "task_id": "288e2bd72b4c476488525ecad61e701f",
+  "task_status": "running",
+  "phase": "step-running",
+  "updated_at": "2026-04-03T11:59:08.409778Z",
+  "heartbeat_at": "2026-04-03T11:59:08.409778Z",
+  "repo_path": "D:\\codex\\generated\\toy-os-demo",
+  "goal": "Execute the next action",
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": "operator-completion",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\288e2bd72b4c476488525ecad61e701f",
+  "step_id": "c8afae1f",
+  "step_title": "Build Toy OS baseline",
+  "step_status": "running",
+  "worker": "docker",
+  "probe_attempts": 0,
+  "title": "Execute the next bounded action",
+  "prompt": "Record the completion of ToyOS stage1 and stage2 runtime recovery. The stage1 paging handoff no longer faults after preserving callee-saved registers across the user round-trip, and stage2 plus filesystem regressions now reach ToyOS: kernel services online.",
+  "scheduler_hint": {
+    "publication_mode": "structured",
+    "publication_source": "task-publication",
+    "task_type": "report_refresh",
+    "verification_level": "L1",
+    "decomposition_child": true,
+    "decomposition_parent_task_id": "a9661a8d6bb64c65829e379c8b9816f5",
+    "decomposition_root_task_id": "a9661a8d6bb64c65829e379c8b9816f5",
+    "decomposition_depth": 1,
+    "max_decomposition_depth": 2,
+    "decomposition_child_index": 2,
+    "decomposition_allow_children": false,
+    "decomposition_path_kind": "branch",
+    "decomposition_shared_dependency_group": "a9661a8d6bb64c65829e379c8b9816f5",
+    "decomposition_repair_for": null,
+    "decomposition_dependencies": [
+      "Clarify the target"
+    ],
+    "dependency_task_ids": [
+      "49c1b390568142fd9a3071b00c769ad2"
+    ],
+    "dependency_count": 1
+  },
+  "context_package": {},
+  "plan": [
+    {
+      "id": "c8afae1f",
+      "title": "Build Toy OS baseline",
+      "status": "running",
+      "worker": "docker",
+      "phase": "execute"
+    },
+    {
+      "id": "57191036",
+      "title": "Boot ToyOS in QEMU",
+      "status": "pending",
+      "worker": "docker",
+      "phase": "verify"
+    },
+    {
+      "id": "55da4fa7",
+      "title": "Audit ToyOS runtime evidence",
+      "status": "pending",
+      "worker": "reviewer",
+      "phase": "review"
+    },
+    {
+      "id": "e87eadcc",
+      "title": "Patch Toy OS implementation",
+      "status": "pending",
+      "worker": "coder",
+      "phase": "draft"
+    },
+    {
+      "id": "b85a31ff",
+      "title": "Rebuild Toy OS after patch",
+      "status": "pending",
+      "worker": "docker",
+      "phase": "execute"
+    },
+    {
+      "id": "83ab21e3",
+      "title": "Re-run ToyOS QEMU and score artifacts",
+      "status": "pending",
+      "worker": "docker",
+      "phase": "verify"
+    },
+    {
+      "id": "2f258c37",
+      "title": "Score ToyOS artifact set",
+      "status": "pending",
+      "worker": "docker",
+      "phase": "verify"
+    },
+    {
+      "id": "664d042b",
+      "title": "Issue ToyOS release decision",
+      "status": "pending",
+      "worker": "reviewer",
+      "phase": "revise"
+    }
+  ],
+  "verification_signals": [
+    {
+      "timestamp": "2026-04-03T11:58:42.880874Z",
+      "kind": "admission_accepted",
+      "success": true,
+      "task_id": "288e2bd72b4c476488525ecad61e701f",
+      "admission_lane": null,
+      "admission_reason": null,
+      "execution_mode": "governance",
+      "queue_name": "fastlane",
+      "task_type": "doc_patch"
+    }
+  ],
+  "verification_signal_count": 1,
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-03T11:58:42.880874Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "288e2bd72b4c476488525ecad61e701f",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "governance",
+        "queue_name": "fastlane",
+        "task_type": "doc_patch"
+      }
+    ]
+  }
+}

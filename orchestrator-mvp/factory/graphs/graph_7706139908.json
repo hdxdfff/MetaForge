@@ -1,0 +1,540 @@
+{
+  "graph_id": "graph_7706139908",
+  "goal_id": "goal_a733428f6e",
+  "target": "Strengthen webapp generation capability",
+  "type": "build_product",
+  "created_at": "2026-03-10T11:47:52.734808Z",
+  "updated_at": "2026-03-11T16:00:05.120253Z",
+  "status": "planned",
+  "meta": {
+    "goal_scale": "engineering-os",
+    "architecture_rules": [
+      "agents cannot import runtime",
+      "router must be stateless",
+      "runtime modules cannot depend on app transport handlers",
+      "tools may depend on runtime and state, but not app HTTP layer",
+      "verification must gate promotion of architecture-affecting changes"
+    ],
+    "agent_teams": [
+      "architecture_team",
+      "backend_team",
+      "infrastructure_team",
+      "testing_team"
+    ],
+    "code_graph_focus": {
+      "module_focus": [
+        "app.models",
+        "tools.ai_guard",
+        "tools.capability_distillation",
+        "tools.experiment_executor",
+        "tools.capability_registry",
+        "app.orchestrator",
+        "tools.brain_loop",
+        "tools.codex_control"
+      ],
+      "owner_teams": [
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "layers": [
+        "unclassified"
+      ],
+      "matched_modules": [
+        {
+          "module": "app.models",
+          "owner_team": "backend_team",
+          "layer": "unclassified",
+          "dependency_count": 0,
+          "dependents": 9
+        },
+        {
+          "module": "tools.ai_guard",
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependency_count": 0,
+          "dependents": 3
+        },
+        {
+          "module": "tools.capability_distillation",
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependency_count": 0,
+          "dependents": 1
+        },
+        {
+          "module": "tools.experiment_executor",
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependency_count": 0,
+          "dependents": 3
+        },
+        {
+          "module": "tools.capability_registry",
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependency_count": 1,
+          "dependents": 3
+        },
+        {
+          "module": "app.orchestrator",
+          "owner_team": "backend_team",
+          "layer": "unclassified",
+          "dependency_count": 12,
+          "dependents": 0
+        },
+        {
+          "module": "tools.brain_loop",
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependency_count": 22,
+          "dependents": 3
+        },
+        {
+          "module": "tools.codex_control",
+          "owner_team": "infrastructure_team",
+          "layer": "unclassified",
+          "dependency_count": 32,
+          "dependents": 0
+        }
+      ]
+    }
+  },
+  "nodes": [
+    {
+      "id": "architecture_contract",
+      "title": "Define architecture contract for Strengthen webapp generation capability",
+      "role": "architect",
+      "prompt": "Define architecture boundaries, interfaces, and ownership for: Strengthen webapp generation capability",
+      "dependencies": [],
+      "status": "completed",
+      "task_id": null,
+      "team": "architecture_team",
+      "owned_modules": [
+        "brain",
+        "runtime.scheduler",
+        "tools.taskgraph_compiler",
+        "app.models",
+        "tools.ai_guard",
+        "tools.capability_distillation",
+        "tools.experiment_executor",
+        "tools.capability_registry",
+        "app.orchestrator",
+        "tools.brain_loop",
+        "tools.codex_control"
+      ],
+      "kind": "architecture",
+      "module_focus": [
+        "app.models",
+        "tools.ai_guard",
+        "tools.capability_distillation",
+        "tools.experiment_executor",
+        "tools.capability_registry",
+        "app.orchestrator",
+        "tools.brain_loop",
+        "tools.codex_control"
+      ],
+      "owner_teams": [
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "app.models",
+          "tools.ai_guard",
+          "tools.capability_distillation",
+          "tools.experiment_executor",
+          "tools.capability_registry",
+          "app.orchestrator",
+          "tools.brain_loop",
+          "tools.codex_control"
+        ],
+        "owner_teams": [
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "app.models",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.ai_guard",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.capability_distillation",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.experiment_executor",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.capability_registry",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "app.orchestrator",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.brain_loop",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.codex_control",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "worker": "reviewer",
+      "selection_reason": "role-default:architect->reviewer+team-owner:architecture_team->reviewer",
+      "worker_success_rate": 1.2232,
+      "skill_matches": [
+        "completed_1804",
+        "completed_1554"
+      ],
+      "execution_lane": "host-control",
+      "worker_vm_preferred": false,
+      "result": {
+        "summary": "Runtime-native architecture contract synthesized from project context kernel, code knowledge graph, ownership map, and global policy."
+      },
+      "completed_at": "2026-03-10T12:12:06.617021Z"
+    },
+    {
+      "id": "engineering_plan",
+      "title": "Plan engineering task graph for Strengthen webapp generation capability",
+      "role": "product",
+      "prompt": "Produce the engineering task graph, interface map, and implementation slices for: Strengthen webapp generation capability",
+      "dependencies": [
+        "architecture_contract"
+      ],
+      "status": "completed",
+      "task_id": null,
+      "team": "architecture_team",
+      "owned_modules": [
+        "brain",
+        "runtime.scheduler",
+        "tools.taskgraph_compiler",
+        "app.models",
+        "tools.ai_guard",
+        "tools.capability_distillation",
+        "tools.experiment_executor",
+        "tools.capability_registry",
+        "app.orchestrator",
+        "tools.brain_loop",
+        "tools.codex_control"
+      ],
+      "kind": "planning",
+      "module_focus": [
+        "app.models",
+        "tools.ai_guard",
+        "tools.capability_distillation",
+        "tools.experiment_executor",
+        "tools.capability_registry",
+        "app.orchestrator",
+        "tools.brain_loop",
+        "tools.codex_control"
+      ],
+      "owner_teams": [
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "app.models",
+          "tools.ai_guard",
+          "tools.capability_distillation",
+          "tools.experiment_executor",
+          "tools.capability_registry",
+          "app.orchestrator",
+          "tools.brain_loop",
+          "tools.codex_control"
+        ],
+        "owner_teams": [
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "app.models",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.ai_guard",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.capability_distillation",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.experiment_executor",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.capability_registry",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "app.orchestrator",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.brain_loop",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.codex_control",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "result": {
+        "summary": "Runtime-native engineering plan synthesized from dependency-aware taskgraph and module ownership map."
+      },
+      "completed_at": "2026-03-10T12:12:06.617021Z"
+    },
+    {
+      "id": "backend_impl",
+      "title": "Implement backend/runtime modules for Strengthen webapp generation capability",
+      "role": "coder",
+      "prompt": "Implement backend/runtime modules for: Strengthen webapp generation capability",
+      "dependencies": [
+        "engineering_plan"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "team": "backend_team",
+      "owned_modules": [
+        "app",
+        "runtime",
+        "agents",
+        "app.models",
+        "app.orchestrator"
+      ],
+      "kind": "implementation",
+      "module_focus": [
+        "app.models",
+        "app.orchestrator"
+      ],
+      "owner_teams": [
+        "backend_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "app.models",
+          "app.orchestrator"
+        ],
+        "owner_teams": [
+          "backend_team"
+        ],
+        "ownership": [
+          {
+            "module": "app.models",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          },
+          {
+            "module": "app.orchestrator",
+            "owner_team": "backend_team",
+            "owner": "coder",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "worker": "coder",
+      "selection_reason": "role-default:coder->coder+team-owner:backend_team->coder",
+      "worker_success_rate": 0.21,
+      "skill_matches": [
+        "completed_1804",
+        "completed_1554",
+        "task_12345678"
+      ],
+      "execution_lane": "host-control",
+      "worker_vm_preferred": false
+    },
+    {
+      "id": "infra_impl",
+      "title": "Implement infrastructure/tooling modules for Strengthen webapp generation capability",
+      "role": "ops",
+      "prompt": "Implement infrastructure/tooling modules for: Strengthen webapp generation capability",
+      "dependencies": [
+        "engineering_plan"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "team": "infrastructure_team",
+      "owned_modules": [
+        "tools.vm_orchestrator",
+        "tools.verification_engine",
+        "tools.platform_registry",
+        "tools.ai_guard",
+        "tools.capability_distillation",
+        "tools.experiment_executor",
+        "tools.capability_registry",
+        "tools.brain_loop",
+        "tools.codex_control"
+      ],
+      "kind": "infrastructure",
+      "module_focus": [
+        "tools.ai_guard",
+        "tools.capability_distillation",
+        "tools.experiment_executor",
+        "tools.capability_registry",
+        "tools.brain_loop",
+        "tools.codex_control"
+      ],
+      "owner_teams": [
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [
+          "tools.ai_guard",
+          "tools.capability_distillation",
+          "tools.experiment_executor",
+          "tools.capability_registry",
+          "tools.brain_loop",
+          "tools.codex_control"
+        ],
+        "owner_teams": [
+          "infrastructure_team"
+        ],
+        "ownership": [
+          {
+            "module": "tools.ai_guard",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.capability_distillation",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.experiment_executor",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.capability_registry",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.brain_loop",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          },
+          {
+            "module": "tools.codex_control",
+            "owner_team": "infrastructure_team",
+            "owner": "ops",
+            "layer": "unclassified"
+          }
+        ]
+      },
+      "patch_required": false,
+      "worker": "docker",
+      "selection_reason": "role-default:ops->docker+team-owner:infrastructure_team->docker",
+      "worker_success_rate": 0.075,
+      "skill_matches": [
+        "completed_1554",
+        "completed_1804",
+        "task_12345678"
+      ],
+      "execution_lane": "host-control",
+      "worker_vm_preferred": false
+    },
+    {
+      "id": "verification_gate",
+      "title": "Run verification and architecture validation for Strengthen webapp generation capability",
+      "role": "tester",
+      "prompt": "Run CI, tests, and architecture validation for: Strengthen webapp generation capability",
+      "dependencies": [
+        "backend_impl",
+        "infra_impl"
+      ],
+      "status": "pending",
+      "task_id": null,
+      "team": "testing_team",
+      "owned_modules": [
+        "tests",
+        "tools.quality_system",
+        "tools.soak_validation"
+      ],
+      "kind": "verification",
+      "module_focus": [],
+      "owner_teams": [
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "module_ownership": {
+        "module_focus": [],
+        "owner_teams": [
+          "backend_team",
+          "infrastructure_team"
+        ],
+        "ownership": []
+      },
+      "patch_required": true
+    },
+    {
+      "id": "release_prep",
+      "title": "Prepare release plan for Strengthen webapp generation capability",
+      "role": "ops",
+      "prompt": "Prepare deployment and release checklist for: Strengthen webapp generation capability",
+      "dependencies": [
+        "verification"
+      ],
+      "status": "completed",
+      "task_id": null,
+      "result": {
+        "summary": "Node bypassed because component release_train is disabled under lean_execution.",
+        "disabled_component": "release_train"
+      },
+      "completed_at": "2026-03-12T19:42:40.319835Z"
+    }
+  ]
+}

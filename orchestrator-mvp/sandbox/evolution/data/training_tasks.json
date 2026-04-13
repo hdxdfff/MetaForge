@@ -1,0 +1,30 @@
+[
+  {
+    "task_id": "88e62486433846659c06c54a47c7a252",
+    "goal": null,
+    "status": "failed",
+    "skill_id": "invalid_api_key_triage",
+    "captured_at": "2026-03-09T06:29:53.764818Z"
+  },
+  {
+    "task_id": "79aef50ae6d74f4bb8802c9f4f33a1fc",
+    "goal": null,
+    "status": "completed",
+    "skill_id": "completed_1804",
+    "captured_at": "2026-03-09T06:29:53.764818Z"
+  },
+  {
+    "task_id": "6e73a98fefd94c17b10b85aa1ec5f554",
+    "goal": null,
+    "status": "completed",
+    "skill_id": "completed_4642",
+    "captured_at": "2026-03-09T06:29:53.764818Z"
+  },
+  {
+    "task_id": "5d36aab352db41d4bc890bd9b62cd322",
+    "goal": null,
+    "status": "completed",
+    "skill_id": "completed_1554",
+    "captured_at": "2026-03-09T06:29:53.764818Z"
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "id": "vm_runtime_tasks_directory_must_be_codex_writable",
+  "created_at": "2026-04-09T08:50:00Z",
+  "kind": "runtime_failure_pattern",
+  "summary": "Task checkpoint creation in the VMware Ubuntu VM requires /srv/orchestrator-mvp/factory/runtime/tasks to be owned by codex and writable; otherwise task-delivery smoke and compile-goal fail while writing checkpoint context.",
+  "symptoms": [
+    "task-delivery-smoke fails with PermissionError when creating /srv/orchestrator-mvp/factory/runtime/tasks/<task_id>",
+    "compile-goal or checkpoint updates fail at atomic_write_json(checkpoint_dir / context.json)",
+    "runtime task evidence exists but new task directories cannot be created"
+  ],
+  "trigger_context": {
+    "host": "D:/codex",
+    "runtime": "vmware-ubuntu",
+    "layer": "orchestrator-runtime"
+  },
+  "root_cause": [
+    "/srv/orchestrator-mvp/factory/runtime/tasks was root:root with 0755 permissions",
+    "codex-controlled runtime processes could read existing evidence but could not create new checkpoint directories"
+  ],
+  "preferred_fix": [
+    "chown codex:codex /srv/orchestrator-mvp/factory/runtime/tasks",
+    "chmod 775 /srv/orchestrator-mvp/factory/runtime/tasks"
+  ],
+  "evidence": [
+    "/srv/orchestrator-mvp/factory/runtime/tasks",
+    "/srv/orchestrator-mvp/factory/runtime/tasks/1b0dfa2646344e7294138f8c901f8d97/execution-evidence.json"
+  ],
+  "verification": [
+    "mkdir -p /srv/orchestrator-mvp/factory/runtime/tasks/test-write",
+    "task-delivery-smoke"
+  ]
+}

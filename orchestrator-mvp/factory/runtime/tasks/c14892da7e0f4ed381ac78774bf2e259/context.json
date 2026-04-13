@@ -1,0 +1,167 @@
+{
+  "task_id": "c14892da7e0f4ed381ac78774bf2e259",
+  "task_status": "failed",
+  "phase": "failed",
+  "updated_at": "2026-04-02T20:54:51.922446Z",
+  "heartbeat_at": "2026-04-02T20:54:51.922446Z",
+  "repo_path": "D:\\codex\\orchestrator-mvp",
+  "goal": "Validate the change",
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": "runtime.failure_backlog_automation",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\c14892da7e0f4ed381ac78774bf2e259",
+  "error": "Command prefix 'dir' is not in ORCH_ALLOWED_COMMAND_PREFIXES.",
+  "title": "Validate the result",
+  "prompt": "Turn a raw request into a structured delivery flow: derive requirements, architecture notes, task dependencies, role assignments, rule checks, git workflow expectations, implementation steps, validation steps, and release blockers.",
+  "scheduler_hint": {
+    "automation_source": "failure_backlog_automation",
+    "template_id": "software-factory",
+    "template_category": "governance",
+    "cluster_key": "recover stable execution output",
+    "cluster_count": 201,
+    "cluster_status": "attention",
+    "handling_mode": "generic_saturation",
+    "dispatch_now": false,
+    "admission_mode": "degraded",
+    "scheduled_by": "runtime.failure_backlog_automation",
+    "decomposition_child": true,
+    "decomposition_parent_task_id": "06c57cd956d74e16a74df83ae92accec",
+    "decomposition_root_task_id": "06c57cd956d74e16a74df83ae92accec",
+    "decomposition_depth": 1,
+    "max_decomposition_depth": 2,
+    "decomposition_child_index": 3,
+    "decomposition_allow_children": false,
+    "decomposition_path_kind": "repair",
+    "decomposition_shared_dependency_group": "06c57cd956d74e16a74df83ae92accec",
+    "decomposition_repair_for": "Analyze the current state",
+    "decomposition_dependencies": [
+      "Analyze the current state",
+      "Implement the bounded change"
+    ],
+    "admission_lane": "exploration",
+    "admission_reason": "artifact_spec_missing",
+    "requested_execution_mode": "production",
+    "task_type": "exploration_intake",
+    "queue_name": "exploration",
+    "verification_level": "L1",
+    "max_runtime_seconds": 900,
+    "retry_limit": 0,
+    "rollback_rule": "return_to_planner",
+    "dependency_task_ids": [
+      "fdbe5e99242049288db2ed59fbfe7e3b",
+      "79568bf178634a959a8870b444082605"
+    ],
+    "dependency_count": 2
+  },
+  "context_package": {},
+  "plan": [
+    {
+      "id": "a495f3e4",
+      "title": "Explore repository structure",
+      "status": "failed",
+      "worker": "shell",
+      "phase": "discovery"
+    },
+    {
+      "id": "16e22308",
+      "title": "Check git status and recent changes",
+      "status": "pending",
+      "worker": "shell",
+      "phase": "discovery"
+    },
+    {
+      "id": "880556cc",
+      "title": "Run existing tests",
+      "status": "pending",
+      "worker": "shell",
+      "phase": "validation"
+    },
+    {
+      "id": "edfda678",
+      "title": "Verify build integrity",
+      "status": "pending",
+      "worker": "shell",
+      "phase": "validation"
+    },
+    {
+      "id": "b32c1812",
+      "title": "Compile validation report",
+      "status": "pending",
+      "worker": "reviewer",
+      "phase": "review"
+    }
+  ],
+  "verification_signals": [
+    {
+      "timestamp": "2026-04-02T20:24:24.621359Z",
+      "kind": "admission_diverted",
+      "success": true,
+      "task_id": "c14892da7e0f4ed381ac78774bf2e259",
+      "admission_lane": "exploration",
+      "admission_reason": "artifact_spec_missing",
+      "execution_mode": "research",
+      "queue_name": "exploration",
+      "task_type": "exploration_intake"
+    },
+    {
+      "timestamp": "2026-04-02T20:44:02.439224Z",
+      "kind": "step_failed",
+      "success": false,
+      "task_id": "c14892da7e0f4ed381ac78774bf2e259",
+      "step_id": "a495f3e4",
+      "step_title": "Explore repository structure",
+      "worker": "shell",
+      "phase": "discovery",
+      "route_model": "deepseek-chat",
+      "route_provider": "runtime",
+      "elapsed_ms": 291342,
+      "error": "Command prefix 'dir' is not in ORCH_ALLOWED_COMMAND_PREFIXES.",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "error-output",
+        "char_count": 61,
+        "line_count": 1,
+        "stored_raw": false
+      }
+    }
+  ],
+  "verification_signal_count": 2,
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-02T20:24:24.621359Z",
+        "kind": "admission_diverted",
+        "success": true,
+        "task_id": "c14892da7e0f4ed381ac78774bf2e259",
+        "admission_lane": "exploration",
+        "admission_reason": "artifact_spec_missing",
+        "execution_mode": "research",
+        "queue_name": "exploration",
+        "task_type": "exploration_intake"
+      },
+      {
+        "timestamp": "2026-04-02T20:44:02.439224Z",
+        "kind": "step_failed",
+        "success": false,
+        "task_id": "c14892da7e0f4ed381ac78774bf2e259",
+        "step_id": "a495f3e4",
+        "step_title": "Explore repository structure",
+        "worker": "shell",
+        "phase": "discovery",
+        "route_model": "deepseek-chat",
+        "route_provider": "runtime",
+        "elapsed_ms": 291342,
+        "error": "Command prefix 'dir' is not in ORCH_ALLOWED_COMMAND_PREFIXES.",
+        "output_ref": {},
+        "output_stats": {
+          "channel": "error-output",
+          "char_count": 61,
+          "line_count": 1,
+          "stored_raw": false
+        }
+      }
+    ]
+  }
+}

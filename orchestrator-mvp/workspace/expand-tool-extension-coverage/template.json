@@ -1,0 +1,21 @@
+{
+  "template_id": "webapp",
+  "description": "Local-first web app starter with frontend/backend/docs/deploy skeleton.",
+  "required_paths": [
+    "README.md",
+    "frontend",
+    "backend",
+    "docs",
+    "deploy"
+  ],
+  "generator_outputs": [
+    "workspace scaffold",
+    "module map",
+    "deploy placeholders"
+  ],
+  "evaluation_checks": [
+    "required paths present",
+    "manifest exists",
+    "readme exists"
+  ]
+}

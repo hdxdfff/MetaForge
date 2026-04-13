@@ -1,0 +1,20 @@
+{
+  "artifact_id": "execution-kernel-smoke",
+  "type": "report",
+  "version": "0.1.0",
+  "artifact_path": "D:/codex/generated/execution-kernel-smoke",
+  "entrypoint": "run_demo.py",
+  "evidence": [
+    "build-report.json",
+    "test-report.json",
+    "execution-report.json"
+  ],
+  "buildable": true,
+  "runnable": true,
+  "test_passed": true,
+  "reproducible": true,
+  "category": "report",
+  "title": "Execution kernel smoke bundle",
+  "message": "Provide a runnable execution-kernel smoke bundle with self-test and audit evidence.",
+  "sha256": "f5546906a04c18afa4d6afa5a7286fb105ff16363476cc4fc99ecfe969fdee9f"
+}

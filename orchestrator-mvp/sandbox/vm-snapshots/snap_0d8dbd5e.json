@@ -1,0 +1,8 @@
+{
+  "snapshot_id": "snap_0d8dbd5e",
+  "vm_id": "vm_65777eec80",
+  "name": "shell-ok",
+  "created_at": "2026-03-20T01:01:28.821264Z",
+  "vm_status": "running",
+  "template_id": "dev_template"
+}

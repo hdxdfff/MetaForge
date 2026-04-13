@@ -1,0 +1,152 @@
+{
+  "task_id": "22de2b4cf67f4c26825c41d6ed7618b1",
+  "task_status": "failed",
+  "phase": "failed",
+  "updated_at": "2026-04-02T18:52:44.687998Z",
+  "heartbeat_at": "2026-04-02T18:52:44.687998Z",
+  "repo_path": "D:\\codex\\orchestrator-mvp",
+  "goal": "Clarify target outcome",
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": "runtime.failure_backlog_automation",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\22de2b4cf67f4c26825c41d6ed7618b1",
+  "error": "Command prefix 'ls' is not in ORCH_ALLOWED_COMMAND_PREFIXES.",
+  "title": "Clarify the target",
+  "prompt": "Summarize the experiment objective, exact steps, commands, observed results, and residual risks, then generate a screenshot-friendly lab report in Markdown with local image paths embedded.",
+  "scheduler_hint": {
+    "automation_source": "failure_backlog_automation",
+    "template_id": "lab-report",
+    "template_category": "course",
+    "cluster_key": "recover stable execution output",
+    "cluster_count": 213,
+    "cluster_status": "attention",
+    "handling_mode": "generic_saturation",
+    "dispatch_now": true,
+    "admission_mode": "normal",
+    "scheduled_by": "runtime.failure_backlog_automation",
+    "decomposition_child": true,
+    "decomposition_parent_task_id": "f7badf405f7541768f63e1a00babd50f",
+    "decomposition_root_task_id": "f7badf405f7541768f63e1a00babd50f",
+    "decomposition_depth": 1,
+    "max_decomposition_depth": 2,
+    "decomposition_child_index": 1,
+    "decomposition_allow_children": false,
+    "decomposition_path_kind": "shared",
+    "decomposition_shared_dependency_group": "f7badf405f7541768f63e1a00babd50f",
+    "decomposition_repair_for": null,
+    "decomposition_dependencies": [],
+    "dependency_task_ids": [],
+    "dependency_count": 0
+  },
+  "context_package": {},
+  "plan": [
+    {
+      "id": "bdb73542",
+      "title": "Explore repository structure",
+      "status": "failed",
+      "worker": "shell",
+      "phase": "discovery"
+    },
+    {
+      "id": "b7981621",
+      "title": "Identify experiment context",
+      "status": "pending",
+      "worker": "coder",
+      "phase": "analysis"
+    },
+    {
+      "id": "4c9541e4",
+      "title": "Locate experiment outputs and screenshots",
+      "status": "pending",
+      "worker": "shell",
+      "phase": "discovery"
+    },
+    {
+      "id": "ebffa84b",
+      "title": "Draft lab report content",
+      "status": "pending",
+      "worker": "coder",
+      "phase": "creation"
+    },
+    {
+      "id": "accd7f1e",
+      "title": "Finalize and save lab report",
+      "status": "pending",
+      "worker": "publisher",
+      "phase": "delivery"
+    }
+  ],
+  "verification_signals": [
+    {
+      "timestamp": "2026-04-02T18:45:45.946720Z",
+      "kind": "admission_accepted",
+      "success": true,
+      "task_id": "22de2b4cf67f4c26825c41d6ed7618b1",
+      "admission_lane": null,
+      "admission_reason": null,
+      "execution_mode": "governance",
+      "queue_name": "fastlane",
+      "task_type": "report_refresh"
+    },
+    {
+      "timestamp": "2026-04-02T18:50:01.286978Z",
+      "kind": "step_failed",
+      "success": false,
+      "task_id": "22de2b4cf67f4c26825c41d6ed7618b1",
+      "step_id": "bdb73542",
+      "step_title": "Explore repository structure",
+      "worker": "shell",
+      "phase": "discovery",
+      "route_model": "deepseek-chat",
+      "route_provider": "runtime",
+      "elapsed_ms": 42594,
+      "error": "Command prefix 'ls' is not in ORCH_ALLOWED_COMMAND_PREFIXES.",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "error-output",
+        "char_count": 60,
+        "line_count": 1,
+        "stored_raw": false
+      }
+    }
+  ],
+  "verification_signal_count": 2,
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-02T18:45:45.946720Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "22de2b4cf67f4c26825c41d6ed7618b1",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "governance",
+        "queue_name": "fastlane",
+        "task_type": "report_refresh"
+      },
+      {
+        "timestamp": "2026-04-02T18:50:01.286978Z",
+        "kind": "step_failed",
+        "success": false,
+        "task_id": "22de2b4cf67f4c26825c41d6ed7618b1",
+        "step_id": "bdb73542",
+        "step_title": "Explore repository structure",
+        "worker": "shell",
+        "phase": "discovery",
+        "route_model": "deepseek-chat",
+        "route_provider": "runtime",
+        "elapsed_ms": 42594,
+        "error": "Command prefix 'ls' is not in ORCH_ALLOWED_COMMAND_PREFIXES.",
+        "output_ref": {},
+        "output_stats": {
+          "channel": "error-output",
+          "char_count": 60,
+          "line_count": 1,
+          "stored_raw": false
+        }
+      }
+    ]
+  }
+}

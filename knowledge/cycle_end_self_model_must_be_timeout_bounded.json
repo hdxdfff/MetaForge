@@ -1,0 +1,24 @@
+﻿{
+  "id": "cycle_end_self_model_must_be_timeout_bounded",
+  "created_at": "2026-03-20T16:35:00Z",
+  "kind": "self_model_runtime_pattern",
+  "summary": "Cycle-end self_model review must be best-effort and timeout-bounded; it cannot be allowed to block daemon state persistence or the next scheduling cycle.",
+  "symptoms": [
+    "run_forever.after_tick appears but tick.before_status_write is delayed for many minutes",
+    "daemon reaches cycle-end reflection while last_tick_at remains stale and watchdog pressure increases",
+    "self_model review becomes the only remaining blocker after tick body and status cache logic are otherwise healthy"
+  ],
+  "preferred_fix": {
+    "strategy": "run self_model at cycle end with a strict timeout and degrade to a static operator_attention summary when the review exceeds the budget",
+    "scope": [
+      "tools.factory_daemon",
+      "tools.self_model"
+    ]
+  },
+  "evidence": [
+    "D:/codex/orchestrator-mvp/tools/factory_daemon.py",
+    "D:/codex/orchestrator-mvp/tools/self_model.py",
+    "D:/codex/orchestrator-mvp/data/factory_daemon.tick.log",
+    "D:/codex/orchestrator-mvp/data/factory_daemon_state.json"
+  ]
+}

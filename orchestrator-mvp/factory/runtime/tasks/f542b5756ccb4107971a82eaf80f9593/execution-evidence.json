@@ -1,0 +1,45 @@
+{
+  "steps": [
+    {
+      "step_id": "cc229d47",
+      "step_title": "Understand task",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-03-20T13:29:02.727703Z",
+      "worker": "reviewer",
+      "phase": "understand",
+      "route_model": "deepseek-v3.2",
+      "route_provider": "openai",
+      "output_ref": {
+        "artifact_id": "ctx_e6ba8795ad26",
+        "task_id": "f542b5756ccb4107971a82eaf80f9593",
+        "step_id": "cc229d47",
+        "channel": "reviewer-output",
+        "title": "Understand task output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\f542b5756ccb4107971a82eaf80f9593\\cc229d47-reviewer-output-ctx_e6ba8795ad26.txt",
+        "size_chars": 1024,
+        "line_count": 20,
+        "created_at": "2026-03-20T13:28:46.923274Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "understand",
+          "route_model": "deepseek-v3.2",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 1024,
+        "line_count": 20,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    }
+  ],
+  "task_id": "f542b5756ccb4107971a82eaf80f9593",
+  "task_title": "Align project Computer Network Lab for Strengthen agent orchestration capability",
+  "task_status": "running",
+  "started_at": "2026-03-20T13:22:32.410391Z",
+  "updated_at": "2026-03-20T13:29:02.727703Z",
+  "completed": false
+}

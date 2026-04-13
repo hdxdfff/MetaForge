@@ -1,0 +1,4 @@
+# Write your orchestrator prompt here.
+# Example:
+# Review the current file and propose the next safest refactor.
+# Keep WSL builds passing and prefer cheap workers for routine analysis.

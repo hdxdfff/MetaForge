@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Task Packet",
+  "type": "object",
+  "required": [
+    "task_id",
+    "goal_id",
+    "task_type",
+    "owner_role",
+    "input_spec",
+    "expected_outputs",
+    "acceptance_checks",
+    "artifact_scope",
+    "shadow_mode",
+    "created_at"
+  ],
+  "properties": {
+    "task_id": {
+      "type": "string"
+    },
+    "goal_id": {
+      "type": "string"
+    },
+    "task_type": {
+      "type": "string",
+      "enum": [
+        "build",
+        "run",
+        "audit"
+      ]
+    },
+    "owner_role": {
+      "type": "string",
+      "enum": [
+        "builder",
+        "runner",
+        "auditor"
+      ]
+    },
+    "input_spec": {
+      "type": "object"
+    },
+    "expected_outputs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "acceptance_checks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "upstream_task_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "artifact_scope": {
+      "type": "string",
+      "enum": [
+        "shadow_only"
+      ]
+    },
+    "shadow_mode": {
+      "type": "boolean"
+    },
+    "created_at": {
+      "type": "string"
+    }
+  }
+}

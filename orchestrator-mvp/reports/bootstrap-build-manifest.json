@@ -1,0 +1,10 @@
+{
+  "generated_at": "2026-03-21T22:46:47.372517Z",
+  "kind": "bootstrap-build-manifest",
+  "artifacts": [
+    "D:\\codex\\orchestrator-mvp\\reports\\bootstrap-build-report.json",
+    "D:\\codex\\orchestrator-mvp\\reports\\bootstrap-build.log",
+    "D:\\codex\\orchestrator-mvp\\reports\\bootstrap-build-manifest.json"
+  ],
+  "status": "pass"
+}

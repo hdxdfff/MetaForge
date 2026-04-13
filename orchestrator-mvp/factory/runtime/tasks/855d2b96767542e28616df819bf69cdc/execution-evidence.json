@@ -1,0 +1,26 @@
+{
+  "task_id": "855d2b96767542e28616df819bf69cdc",
+  "task_title": "Advance ToyOS syscall or kernel feature",
+  "task_status": "timed_out",
+  "started_at": "2026-03-29T01:06:31.428198Z",
+  "updated_at": "2026-03-29T10:21:38.908307Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "855d2b96767542e28616df819bf69cdc-terminal-record",
+      "step_title": "Advance ToyOS syscall or kernel feature",
+      "action": "task_terminal_record",
+      "ok": false,
+      "at": "2026-03-29T10:21:38.908307Z",
+      "status": "timed_out",
+      "summary": null,
+      "error": "Task timed out after 120 minutes without progress.",
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ],
+  "result": {
+    "error": "Task timed out after 120 minutes without progress."
+  }
+}

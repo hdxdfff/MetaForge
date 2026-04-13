@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Executor Result Packet",
+  "type": "object",
+  "required": [
+    "task_id",
+    "executor_id",
+    "status",
+    "outputs",
+    "summary",
+    "needs_verification",
+    "generated_at"
+  ],
+  "properties": {
+    "task_id": {
+      "type": "string"
+    },
+    "executor_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "outputs": {
+      "type": "object"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "needs_verification": {
+      "type": "boolean"
+    },
+    "logs_path": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "generated_at": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,139 @@
+[
+  {
+    "id": "workspace-migration",
+    "name": "Workspace Migration Intake",
+    "category": "migration",
+    "prompt": "Inventory the target workspace, identify runnable tools, documents, code, datasets, and likely course or project type, then propose resource registration, project-memory fields, missing runtime dependencies, and the safest next actions.",
+    "goal": "Turn a raw local folder into a reusable orchestrator workspace with minimal premium-model use.",
+    "recommended_context_mode": "lean",
+    "default_allow_resource_scan": true,
+    "default_allow_repo_status": false
+  },
+  {
+    "id": "course-lab",
+    "name": "Course Lab Execution",
+    "category": "course",
+    "prompt": "Restate the assignment, locate the target files, make the smallest correct change, run the exact local or VM validation steps, capture outputs, and draft a concise answer explanation.",
+    "goal": "Complete a bounded course experiment with local verification and minimal theory escalation.",
+    "recommended_context_mode": "lean",
+    "default_allow_resource_scan": true,
+    "default_allow_repo_status": true
+  },
+  {
+    "id": "network-lab",
+    "name": "Network Lab Analysis",
+    "category": "course",
+    "prompt": "Use local networking tools and captures to complete the experiment, record exact commands and observations, and draft a short explanation of packet or protocol behavior.",
+    "goal": "Prefer Wireshark, curl, ping, ss, tcpdump, and WSL networking tools before any premium reasoning.",
+    "recommended_context_mode": "lean",
+    "default_allow_resource_scan": true,
+    "default_allow_repo_status": false
+  },
+  {
+    "id": "database-lab",
+    "name": "Database Lab Setup and Validation",
+    "category": "course",
+    "prompt": "Inspect the schema or lab documents, prepare deterministic SQL or setup steps, validate with local database tools when available, and summarize exact results and remaining runtime gaps.",
+    "goal": "Handle database coursework mainly with local tools and cheap workers.",
+    "recommended_context_mode": "lean",
+    "default_allow_resource_scan": true,
+    "default_allow_repo_status": false
+  },
+  {
+    "id": "browser-reading",
+    "name": "Browser Reading and Login Session",
+    "category": "web",
+    "prompt": "Use the local browser bridge to open a webpage, capture the rendered title, body text, links, and screenshots if needed. If the site requires login, launch a persistent login session profile first and reuse it for later reads.",
+    "goal": "Handle public and login-gated webpages through the real local browser before escalating.",
+    "recommended_context_mode": "lean",
+    "default_allow_resource_scan": true,
+    "default_allow_repo_status": false
+  },
+  {
+    "id": "general-coding",
+    "name": "General Coding Change",
+    "category": "development",
+    "prompt": "Inspect the relevant code, make a minimal coherent patch, run local tests or linters, and summarize what changed and what remains risky.",
+    "goal": "Finish routine coding work with small verified patches and local execution.",
+    "recommended_context_mode": "lean",
+    "default_allow_resource_scan": true,
+    "default_allow_repo_status": true
+  },
+  {
+    "id": "toyos-mainline",
+    "name": "ToyOS Mainline Development",
+    "category": "kernel",
+    "prompt": "Use WSL and QEMU as the default loop for ToyOS changes, keep patches small, preserve bootability, run VM tests, and escalate only for architecture or repeated runtime failures.",
+    "goal": "Use the assistant as the primary implementation worker for ToyOS.",
+    "recommended_context_mode": "lean",
+    "default_allow_resource_scan": true,
+    "default_allow_repo_status": true
+  },
+  {
+    "id": "workspace-intake",
+    "name": "Workspace Intake",
+    "prompt": "Scan this workspace locally, infer the likely stack, identify the main entry points, and propose the cheapest safe next step before any premium-model escalation.",
+    "goal": "Produce a local-first migration summary for a new project or course workspace.",
+    "context_mode": "lean"
+  },
+  {
+    "id": "deployment-wrapup",
+    "name": "Deployment Wrap-up",
+    "category": "deployment",
+    "prompt": "Prepare a local-first deployment checklist, inspect Docker and CI files, generate any missing starter deployment manifests, and summarize which final external credentials or server actions are still blocked.",
+    "goal": "Close deployment gaps without waiting on cloud credentials.",
+    "recommended_context_mode": "lean",
+    "default_allow_resource_scan": true,
+    "default_allow_repo_status": true
+  },
+  {
+    "id": "db-runtime-check",
+    "name": "Database Runtime Check",
+    "category": "database",
+    "prompt": "Inspect local database tooling, available SQL files, and runtime hints, then report what can run immediately, what needs installation, and the cheapest next validation step.",
+    "goal": "Map the local database environment before spending premium-model budget.",
+    "recommended_context_mode": "lean",
+    "default_allow_resource_scan": true,
+    "default_allow_repo_status": false
+  },
+  {
+    "id": "lab-report",
+    "name": "Lab Report with Screenshots",
+    "category": "course",
+    "prompt": "Summarize the experiment objective, exact steps, commands, observed results, and residual risks, then generate a screenshot-friendly lab report in Markdown with local image paths embedded.",
+    "goal": "Produce a reusable local experiment report without spending premium-model budget on formatting.",
+    "recommended_context_mode": "lean",
+    "default_allow_resource_scan": true,
+    "default_allow_repo_status": false
+  },
+  {
+    "id": "software-factory",
+    "name": "Software Factory Flow",
+    "category": "governance",
+    "prompt": "Turn a raw request into a structured delivery flow: derive requirements, architecture notes, task dependencies, role assignments, rule checks, git workflow expectations, implementation steps, validation steps, and release blockers.",
+    "goal": "Use the orchestrator as an AI-managed software delivery pipeline instead of a single coding agent.",
+    "recommended_context_mode": "lean",
+    "default_allow_resource_scan": true,
+    "default_allow_repo_status": true
+  },
+  {
+    "id": "system-generator-loop",
+    "name": "System Generator Loop",
+    "category": "generation",
+    "prompt": "Generate a new isolated system workspace from a template, evaluate the generated scaffold, repair missing required paths if needed, and return a concise generation report.",
+    "goal": "Run a bounded generator/evaluator/fixer loop for Layer 3 system generation.",
+    "recommended_context_mode": "lean",
+    "default_allow_resource_scan": true,
+    "default_allow_repo_status": false
+  },
+  {
+    "id": "auto-debug",
+    "name": "Auto Debug Loop",
+    "category": "debug",
+    "prompt": "Reproduce the failure locally, capture the exact command and error, isolate the smallest failing area, propose the smallest safe fix, rerun the narrowest relevant validation step, and stop after bounded retries with a structured debug summary.",
+    "goal": "Let cheap workers handle routine debugging first and escalate only when repeated failures or risky changes appear.",
+    "recommended_context_mode": "lean",
+    "default_allow_resource_scan": true,
+    "default_allow_repo_status": true
+  }
+]

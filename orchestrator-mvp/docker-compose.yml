@@ -1,0 +1,13 @@
+services:
+  orchestrator:
+    image: python:3.11-slim
+    working_dir: /workspace
+    command: >
+      sh -c "pip install --no-cache-dir -r requirements.txt &&
+      uvicorn app.main:app --host 0.0.0.0 --port 8787"
+    env_file:
+      - .env
+    ports:
+      - "8787:8787"
+    volumes:
+      - ./:/workspace

@@ -1,0 +1,20 @@
+{
+  "handoff_id": "handoff-task-toyos-build-shadow-0001-run",
+  "task_id": "task-toyos-build-shadow-0001",
+  "from_role": "runner",
+  "to_role": "auditor",
+  "status": "failed",
+  "payload": {
+    "build_report_path": "D:\\codex\\orchestrator-mvp\\shadow_factory\\artifacts\\task-toyos-build-shadow-0001\\build-report.json",
+    "execution_report_path": "D:\\codex\\orchestrator-mvp\\shadow_factory\\artifacts\\task-toyos-build-shadow-0001\\build\\execution-report.json",
+    "artifact_paths": [
+      "D:\\codex\\orchestrator-mvp\\shadow_factory\\artifacts\\task-toyos-build-shadow-0001\\builder-execution.json",
+      "D:\\codex\\orchestrator-mvp\\shadow_factory\\artifacts\\task-toyos-build-shadow-0001\\build-report.json",
+      "D:\\codex\\orchestrator-mvp\\shadow_factory\\artifacts\\task-toyos-build-shadow-0001\\build\\build.log"
+    ]
+  },
+  "notes": [
+    "shadow run completed"
+  ],
+  "created_at": "2026-03-26T14:43:11Z"
+}

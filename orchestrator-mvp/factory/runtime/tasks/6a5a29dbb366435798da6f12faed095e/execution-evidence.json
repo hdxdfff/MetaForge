@@ -1,0 +1,137 @@
+{
+  "steps": [
+    {
+      "step_id": "69d3d021",
+      "step_title": "Understand task",
+      "action": "planner_step",
+      "ok": true,
+      "at": "2026-03-28T18:49:26.929330Z",
+      "worker": "planner",
+      "phase": "understand",
+      "route_model": "deepseek-reasoner",
+      "route_provider": "reasoning",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 407,
+        "line_count": 4,
+        "stored_raw": false
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "801b4b58",
+      "step_title": "Draft solution",
+      "action": "coder_step",
+      "ok": true,
+      "at": "2026-03-28T18:50:35.387994Z",
+      "worker": "coder",
+      "phase": "draft",
+      "route_model": "deepseek-v3.2",
+      "route_provider": "openai",
+      "output_ref": {
+        "artifact_id": "ctx_9a46681b1011",
+        "task_id": "6a5a29dbb366435798da6f12faed095e",
+        "step_id": "801b4b58",
+        "channel": "coder-output",
+        "title": "Draft solution output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\6a5a29dbb366435798da6f12faed095e\\801b4b58-coder-output-ctx_9a46681b1011.txt",
+        "size_chars": 1120,
+        "line_count": 20,
+        "created_at": "2026-03-28T18:50:31.701101Z",
+        "metadata": {
+          "worker": "coder",
+          "phase": "draft",
+          "route_model": "deepseek-v3.2",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "coder-output",
+        "char_count": 1120,
+        "line_count": 20,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "16d36752",
+      "step_title": "Execute validation",
+      "action": "docker_step",
+      "ok": false,
+      "at": "2026-03-28T18:50:58.678706Z",
+      "worker": "docker",
+      "phase": "execute",
+      "route_model": "deepseek-chat",
+      "route_provider": "runtime",
+      "error": "Docker run failed with code 127: sh: 1: python: not found",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "error-output",
+        "char_count": 57,
+        "line_count": 1,
+        "stored_raw": false
+      },
+      "probe_attempts": 0
+    }
+  ],
+  "task_id": "6a5a29dbb366435798da6f12faed095e",
+  "task_title": null,
+  "task_status": "failed",
+  "started_at": "2026-03-28T18:46:25.358571Z",
+  "updated_at": "2026-03-28T18:51:57.292950Z",
+  "completed": false,
+  "result": {
+    "state": "failed_execution",
+    "reason": "Docker run failed with code 127: sh: 1: python: not found",
+    "task_id": "6a5a29dbb366435798da6f12faed095e",
+    "repo_path": "D:\\codex\\orchestrator-mvp",
+    "execution_mode": "research",
+    "goal": "Audit the throughput blueprint against the controller and identify the smallest queue admission and WIP gaps.",
+    "cheap_calls_used": 2,
+    "cheap_chars_used": 1939,
+    "escalation_count": 2,
+    "failed_steps": [
+      {
+        "step_id": "16d36752",
+        "title": "Execute validation",
+        "phase": "execute",
+        "worker": "docker",
+        "command": "python D:\\codex\\orchestrator-mvp\\tools\\read_only_syntax_check.py .",
+        "output": "Execute validation failure: 57 chars, 1 non-empty lines.\nHead:\n- Docker run failed with code 127: sh: 1: python: not found",
+        "output_ref": {},
+        "output_stats": {
+          "channel": "error-output",
+          "char_count": 57,
+          "line_count": 1,
+          "stored_raw": false
+        },
+        "probe_attempts": 0,
+        "max_probe_attempts": 1,
+        "last_diagnosis": "Diagnosis for Execute validation: 1062 chars, 21 non-empty lines.\nHead:\n- Cheap lane escalation triggered.\n- Original worker: reviewer\n- Escalation model: deepseek-v3.2\n- Reason: Cheap worker fallback or loop detected.\nTail:\n- Reason: Worker error due to missing Python in Docker container; cheap review provider is also unavailable due to billing issue.\n- Probe: none\n- Notes: Docker step fails because Python is not installed in the image. Fix Dockerfile or use a Python base...\nRaw artifact: ctx_6f1ccd529312",
+        "last_diagnosis_ref": {
+          "artifact_id": "ctx_6f1ccd529312",
+          "task_id": "6a5a29dbb366435798da6f12faed095e",
+          "step_id": "16d36752",
+          "channel": "diagnosis-output",
+          "title": "Diagnosis for Execute validation",
+          "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\6a5a29dbb366435798da6f12faed095e\\16d36752-diagnosis-output-ctx_6f1ccd529312.txt",
+          "size_chars": 1062,
+          "line_count": 21,
+          "created_at": "2026-03-28T18:51:40.732584Z",
+          "metadata": {
+            "worker": "reviewer",
+            "phase": "check",
+            "route_model": "deepseek-v3.2",
+            "route_provider": "openai"
+          }
+        }
+      }
+    ],
+    "next_action_required": "Inspect execution evidence and rerun or replace the task; no approval hold was applied.",
+    "failure_pause_policy": "If a long task fails, allow at most one cheap-model-approved probe retry with bounded local cost. If cheap approval is missing, ambiguous, or the retry still fails, pause execution, return a structured error report, and wait for explicit core guidance.",
+    "pause_required": false,
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\6a5a29dbb366435798da6f12faed095e\\execution-evidence.json",
+    "execution_evidence_step_count": 3
+  }
+}

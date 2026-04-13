@@ -1,0 +1,51 @@
+{
+  "started_at": "2026-04-03T16:30:50.681637Z",
+  "finished_at": "2026-04-03T16:30:50.682642Z",
+  "source": "drill",
+  "release_record_count": 3,
+  "dummy_record": {
+    "id": "rollback-drill-20260403T163050Z",
+    "created_at": "2026-04-03T16:30:50.682642Z",
+    "repo_path": "D:\\codex\\generated\\toy-os-demo",
+    "branch": "rollback-drill",
+    "artifacts": [
+      "artifact_manifest.json",
+      "build-report.json",
+      "build/generic-qemu-smoke-report.json",
+      "toyos-delivery-closure-report.md"
+    ],
+    "blockers": [],
+    "status": "archived",
+    "notes": "Synthetic rollback drill using current ToyOS delivery artifacts.",
+    "artifact_evidence": {
+      "artifact_count": 4,
+      "existing_count": 4,
+      "missing_count": 0,
+      "existing": [
+        {
+          "path": "D:\\codex\\generated\\toy-os-demo\\artifact_manifest.json",
+          "size": 470
+        },
+        {
+          "path": "D:\\codex\\generated\\toy-os-demo\\build-report.json",
+          "size": 8304
+        },
+        {
+          "path": "D:\\codex\\generated\\toy-os-demo\\build\\generic-qemu-smoke-report.json",
+          "size": 41152
+        },
+        {
+          "path": "D:\\codex\\generated\\toy-os-demo\\toyos-delivery-closure-report.md",
+          "size": 2002
+        }
+      ],
+      "missing": [],
+      "passed": true
+    },
+    "archived_reason": "rollback-drill-complete",
+    "archived_at": "2026-04-03T16:30:50.682642Z"
+  },
+  "validation_passed": true,
+  "rollback_time_minutes": 0.0,
+  "evidence_dir": "D:\\codex\\orchestrator-mvp\\generated\\release-rollback-drill\\20260403T163050Z"
+}

@@ -1,0 +1,37 @@
+{
+  "mode": "worker-vm-preferred",
+  "host_plane": [
+    "controller",
+    "daemon",
+    "guard",
+    "quality",
+    "control-layer",
+    "memory",
+    "audit"
+  ],
+  "heavy_workers": [
+    "coder",
+    "tester",
+    "ops",
+    "shell",
+    "docker"
+  ],
+  "default_lane": "host-control",
+  "rules": [
+    {
+      "match": "build/compile/docker/package",
+      "template": "dev_template",
+      "lane": "worker-vm"
+    },
+    {
+      "match": "test/pytest/qemu/regression",
+      "template": "test_template",
+      "lane": "worker-vm"
+    },
+    {
+      "match": "experiment/research/benchmark",
+      "template": "experiment_template",
+      "lane": "worker-vm"
+    }
+  ]
+}

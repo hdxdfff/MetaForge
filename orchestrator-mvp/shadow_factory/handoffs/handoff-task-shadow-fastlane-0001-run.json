@@ -1,0 +1,18 @@
+{
+  "handoff_id": "handoff-task-shadow-fastlane-0001-run",
+  "task_id": "task-shadow-fastlane-0001",
+  "from_role": "runner",
+  "to_role": "auditor",
+  "status": "success",
+  "payload": {
+    "build_report_path": "D:\\codex\\orchestrator-mvp\\shadow_factory\\artifacts\\task-shadow-fastlane-0001\\build-report.json",
+    "execution_report_path": "D:\\codex\\orchestrator-mvp\\shadow_factory\\artifacts\\task-shadow-fastlane-0001\\execution-report.json",
+    "artifact_paths": [
+      "D:\\codex\\orchestrator-mvp\\shadow_factory\\artifacts\\task-shadow-fastlane-0001\\dummy-artifact.txt"
+    ]
+  },
+  "notes": [
+    "shadow run completed"
+  ],
+  "created_at": "2026-03-28T20:58:51Z"
+}

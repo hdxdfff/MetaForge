@@ -1,0 +1,109 @@
+{
+  "steps": [
+    {
+      "step_id": "e1de75b0",
+      "step_title": "Spawn decomposition subtasks",
+      "action": "planner_step",
+      "ok": false,
+      "at": "2026-04-02T19:20:29.585577Z",
+      "phase": "decompose",
+      "worker": "planner",
+      "status": "failed",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "error-output",
+        "char_count": 106,
+        "line_count": 1,
+        "stored_raw": false
+      },
+      "synthesized": true,
+      "source": "task-plan"
+    },
+    {
+      "step_id": "ae34a6ac",
+      "step_title": "Wait for child task completion",
+      "action": "planner_step",
+      "ok": false,
+      "at": "2026-04-02T19:20:29.585577Z",
+      "phase": "decompose",
+      "worker": "planner",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan"
+    },
+    {
+      "step_id": "2f0b6579",
+      "step_title": "Aggregate decomposition results",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-04-02T19:20:29.585577Z",
+      "phase": "verify",
+      "worker": "reviewer",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan"
+    }
+  ],
+  "task_id": "543226595dd645208bd86f0dcba4f65f",
+  "task_title": "Deployment Wrap-up",
+  "task_status": "failed",
+  "completed": false,
+  "updated_at": "2026-04-02T19:21:04.388606Z",
+  "result": {
+    "state": "failed_execution",
+    "reason": "<asyncio.locks.Lock object at 0x000001FDBBCE3190 [unlocked, waiters:1]> is bound to a different event loop",
+    "task_id": "543226595dd645208bd86f0dcba4f65f",
+    "repo_path": "D:\\codex\\orchestrator-mvp",
+    "execution_mode": "governance",
+    "goal": "Close deployment gaps without waiting on cloud credentials.",
+    "cheap_calls_used": 1,
+    "cheap_chars_used": 4864,
+    "escalation_count": 1,
+    "failed_steps": [
+      {
+        "step_id": "e1de75b0",
+        "title": "Spawn decomposition subtasks",
+        "phase": "decompose",
+        "worker": "planner",
+        "command": "internal://decomposition/spawn-subtasks",
+        "output": "Spawn decomposition subtasks failure: 106 chars, 1 non-empty lines.\nHead:\n- <asyncio.locks.Lock object at 0x000001FDBBCE3190 [unlocked, waiters:1]> is bound to a different event loop",
+        "output_ref": {},
+        "output_stats": {
+          "channel": "error-output",
+          "char_count": 106,
+          "line_count": 1,
+          "stored_raw": false
+        },
+        "probe_attempts": 0,
+        "max_probe_attempts": 1,
+        "last_diagnosis": "Diagnosis for Spawn decomposition subtasks: 914 chars, 30 non-empty lines.\nHead:\n- Cheap lane escalation triggered.\n- Original worker: reviewer\n- Escalation model: kimi-k2.5\n- Reason: Structured output validation failed for research/governance audit work.\nTail:\n- - next_action\n- Provider error: APITimeoutError: Request timed out.\n- Provider error: APITimeoutError: Request timed out.\nRaw artifact: ctx_6a7ab3d15f94",
+        "last_diagnosis_ref": {
+          "artifact_id": "ctx_6a7ab3d15f94",
+          "task_id": "543226595dd645208bd86f0dcba4f65f",
+          "step_id": "e1de75b0",
+          "channel": "diagnosis-output",
+          "title": "Diagnosis for Spawn decomposition subtasks",
+          "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\543226595dd645208bd86f0dcba4f65f\\e1de75b0-diagnosis-output-ctx_6a7ab3d15f94.txt",
+          "size_chars": 914,
+          "line_count": 30,
+          "created_at": "2026-04-02T19:20:18.242694Z",
+          "metadata": {
+            "worker": "reviewer",
+            "phase": "check",
+            "route_model": "kimi-k2.5",
+            "route_provider": "openai"
+          }
+        }
+      }
+    ],
+    "next_action_required": "Inspect execution evidence and rerun or replace the task; no approval hold was applied.",
+    "failure_pause_policy": "If a long task fails, allow at most one cheap-model-approved probe retry with bounded local cost. If cheap approval is missing, ambiguous, or the retry still fails, pause execution, return a structured error report, and wait for explicit core guidance.",
+    "pause_required": false,
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\543226595dd645208bd86f0dcba4f65f\\execution-evidence.json",
+    "execution_evidence_step_count": 3
+  }
+}

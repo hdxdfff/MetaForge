@@ -1,0 +1,21 @@
+{
+  "steps": [
+    {
+      "step_id": "3fca5bdd",
+      "step_title": "Create recovery artifact",
+      "action": "create_runnable_artifact",
+      "ok": true,
+      "at": "2026-03-29T11:42:17.856735Z",
+      "artifact_dir": "D:\\codex\\generated\\execution-recovery-demo",
+      "build_timestamp": "2026-03-29T11:42:17.625227Z",
+      "test_timestamp": "2026-03-29T11:42:17.750858Z",
+      "execution_timestamp": "2026-03-29T11:42:17.837901Z"
+    }
+  ],
+  "task_id": "eff889e36550487695417a48c519f240",
+  "task_title": "Delivery smoke artifact flow",
+  "task_status": "running",
+  "started_at": "2026-03-29T11:41:52.558808Z",
+  "updated_at": "2026-03-29T11:42:17.856735Z",
+  "completed": false
+}

@@ -1,0 +1,30 @@
+{
+  "task_id": "e159c5223bc4408c8500ec91b2c8145d",
+  "task_status": "failed",
+  "phase": "failed",
+  "updated_at": "2026-03-28T18:56:00.862564Z",
+  "heartbeat_at": "2026-03-28T18:56:00.862564Z",
+  "repo_path": "D:\\codex",
+  "goal": null,
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": null,
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\e159c5223bc4408c8500ec91b2c8145d",
+  "error": "Docker run failed with code 127: sh: 1: python: not found",
+  "title": null,
+  "prompt": "Docker default command smoke check",
+  "scheduler_hint": {},
+  "context_package": {},
+  "plan": [
+    {
+      "id": "a4e67034",
+      "title": "Smoke docker default",
+      "status": "failed",
+      "worker": "docker",
+      "phase": "execute"
+    }
+  ],
+  "result": {}
+}

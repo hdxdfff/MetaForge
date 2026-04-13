@@ -1,0 +1,8 @@
+{
+  "run_id": "hrn_20260328_005",
+  "planner_status": "success",
+  "selected_feature": "syscall_exit_runtime",
+  "why_this_feature": "Atomic, testable, and low blast radius.",
+  "deferred_items": [],
+  "risk_notes": []
+}

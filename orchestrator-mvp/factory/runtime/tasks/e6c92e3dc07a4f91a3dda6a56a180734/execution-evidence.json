@@ -1,0 +1,28 @@
+{
+  "task_id": "e6c92e3dc07a4f91a3dda6a56a180734",
+  "task_title": "Implement module tools.capability_distillation",
+  "task_status": "timed_out",
+  "started_at": "2026-03-20T05:56:35.377295Z",
+  "updated_at": "2026-03-20T06:10:50.971137Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "e6c92e3dc07a4f91a3dda6a56a180734-terminal-record",
+      "step_title": "Implement module tools.capability_distillation",
+      "action": "task_terminal_record",
+      "ok": false,
+      "at": "2026-03-20T06:10:50.971137Z",
+      "status": "timed_out",
+      "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+      "error": null,
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ],
+  "result": {
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

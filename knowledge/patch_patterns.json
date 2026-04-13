@@ -1,0 +1,24 @@
+﻿[
+  {
+    "pattern_id": "toyos-guarded-kernel-experiment",
+    "project": "ToyOS",
+    "use_when": "Kernel changes are needed but the stable path must remain green.",
+    "steps": [
+      "Add explicit debug markers.",
+      "Hide the new path behind a branch or test-only gate.",
+      "Keep a panic-safe fallback to the previous boot path."
+    ],
+    "success_signal": "Experimental path is testable without regressing the default boot flow."
+  },
+  {
+    "pattern_id": "toyos-contract-first-hardening",
+    "project": "ToyOS",
+    "use_when": "Kernel interfaces need to become safer before a major subsystem upgrade.",
+    "steps": [
+      "Define the interface contract first.",
+      "Route call sites through the shared helper.",
+      "Add regression notes or tests before tightening enforcement."
+    ],
+    "success_signal": "The codebase gains one enforcement point instead of scattered ad hoc checks."
+  }
+]

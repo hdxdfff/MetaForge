@@ -1,0 +1,45 @@
+{
+  "steps": [
+    {
+      "step_id": "932ee874",
+      "step_title": "Understand task",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-03-20T21:18:31.607824Z",
+      "worker": "reviewer",
+      "phase": "understand",
+      "route_model": "deepseek-v3.2",
+      "route_provider": "openai",
+      "output_ref": {
+        "artifact_id": "ctx_059554588b38",
+        "task_id": "2d7b995c9b31411da573b0060a9b7475",
+        "step_id": "932ee874",
+        "channel": "reviewer-output",
+        "title": "Understand task output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\2d7b995c9b31411da573b0060a9b7475\\932ee874-reviewer-output-ctx_059554588b38.txt",
+        "size_chars": 1341,
+        "line_count": 22,
+        "created_at": "2026-03-20T21:18:26.139203Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "understand",
+          "route_model": "deepseek-v3.2",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 1341,
+        "line_count": 22,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    }
+  ],
+  "task_id": "2d7b995c9b31411da573b0060a9b7475",
+  "task_title": "Align project AI Math Foundations Workspace for Expand tool extension coverage",
+  "task_status": "running",
+  "started_at": "2026-03-20T21:16:54.750046Z",
+  "updated_at": "2026-03-20T21:18:31.607824Z",
+  "completed": false
+}

@@ -1,0 +1,61 @@
+{
+  "graph_id": "graph_a7a9d8065c",
+  "goal_id": "goal_0157193690",
+  "target": "Experiment capability routing heuristics",
+  "type": "experiment",
+  "created_at": "2026-03-10T09:18:27.618138Z",
+  "updated_at": "2026-03-10T09:43:54.031445Z",
+  "status": "completed",
+  "nodes": [
+    {
+      "id": "product_design",
+      "title": "Design product shape for Experiment capability routing heuristics",
+      "role": "product",
+      "prompt": "Create a structured product design for: Experiment capability routing heuristics",
+      "dependencies": [],
+      "status": "completed",
+      "task_id": null,
+      "worker": "reviewer",
+      "selection_reason": "role-default:product->reviewer",
+      "worker_success_rate": 1.0,
+      "skill_matches": [
+        "completed_1554"
+      ],
+      "execution_lane": "host-control",
+      "worker_vm_preferred": false
+    },
+    {
+      "id": "architecture_design",
+      "title": "Design architecture for Experiment capability routing heuristics",
+      "role": "architect",
+      "prompt": "Create a practical architecture plan for: Experiment capability routing heuristics",
+      "dependencies": [
+        "product_design"
+      ],
+      "status": "completed",
+      "task_id": null
+    },
+    {
+      "id": "implementation_plan",
+      "title": "Plan and start implementation for Experiment capability routing heuristics",
+      "role": "coder",
+      "prompt": "Break down implementation work for: Experiment capability routing heuristics",
+      "dependencies": [
+        "architecture_design"
+      ],
+      "status": "completed",
+      "task_id": null
+    },
+    {
+      "id": "verification",
+      "title": "Validate generated work for Experiment capability routing heuristics",
+      "role": "tester",
+      "prompt": "Create validation steps and tests for: Experiment capability routing heuristics",
+      "dependencies": [
+        "implementation_plan"
+      ],
+      "status": "completed",
+      "task_id": null
+    }
+  ]
+}

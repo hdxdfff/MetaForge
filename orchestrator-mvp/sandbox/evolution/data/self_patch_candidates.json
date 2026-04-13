@@ -1,0 +1,126 @@
+{
+  "updated_at": "2026-03-12T07:10:02.662119Z",
+  "status": "attention",
+  "candidate_count": 9,
+  "candidates": [
+    {
+      "candidate_id": "e97a5e3ce0b9",
+      "title": "Align control layer with quality gate",
+      "target_files": [
+        "tools/decision_engine.py",
+        "tools/tool_health_audit.py",
+        "tools/release_operations.py"
+      ],
+      "priority": "high",
+      "approved_patch_required": true,
+      "cheap_worker_ok": false,
+      "sandbox_required": true,
+      "existing_patch_id": null
+    },
+    {
+      "candidate_id": "96f998f8dd10",
+      "title": "Repair runtime health verification failure",
+      "target_files": [
+        "tools/runtime_maintenance.py",
+        "tools/goal_runtime.py",
+        "tools/task_state_tools.py"
+      ],
+      "priority": "high",
+      "approved_patch_required": false,
+      "cheap_worker_ok": true,
+      "sandbox_required": true,
+      "existing_patch_id": null
+    },
+    {
+      "candidate_id": "396bc588c6e3",
+      "title": "Harden self-improvement release handoff templates",
+      "target_files": [
+        "templates/reports/lab-report.md.tpl"
+      ],
+      "priority": "medium",
+      "approved_patch_required": false,
+      "cheap_worker_ok": true,
+      "sandbox_required": true,
+      "existing_patch_id": null
+    },
+    {
+      "candidate_id": "97c92d04991e",
+      "title": "Address failure pattern: Prompt: Unified orchestrator dispatch.\n\nCaller: codex-main\n\nRuntime policy: Prefer local runtime resources such as WSL,",
+      "target_files": [
+        "tools/tool_health_audit.py",
+        "tools/verification_engine.py"
+      ],
+      "priority": "medium",
+      "approved_patch_required": false,
+      "cheap_worker_ok": true,
+      "sandbox_required": true,
+      "existing_patch_id": null
+    },
+    {
+      "candidate_id": "7621f30045e0",
+      "title": "Repair failing AI behavior regression cases",
+      "target_files": [
+        "tools/ai_test_automation.py",
+        "data/ai_test_suite.json"
+      ],
+      "priority": "high",
+      "approved_patch_required": false,
+      "cheap_worker_ok": true,
+      "sandbox_required": true,
+      "existing_patch_id": null
+    },
+    {
+      "candidate_id": "6f8fd8400323",
+      "title": "Stabilize primary AI test provider path",
+      "target_files": [
+        "tools/ai_test_automation.py",
+        "app/config.py"
+      ],
+      "priority": "high",
+      "approved_patch_required": true,
+      "cheap_worker_ok": false,
+      "sandbox_required": true,
+      "existing_patch_id": null
+    },
+    {
+      "candidate_id": "42f22f433820",
+      "title": "Improve runtime success-rate remediation intake",
+      "target_files": [
+        "tools/telemetry_store.py",
+        "tools/self_patch_loop.py"
+      ],
+      "priority": "medium",
+      "approved_patch_required": false,
+      "cheap_worker_ok": true,
+      "sandbox_required": true,
+      "existing_patch_id": null
+    },
+    {
+      "candidate_id": "d89b8aff686c",
+      "title": "Raise quality task-throughput score",
+      "target_files": [
+        "tools/quality_system.py",
+        "tools/goal_runtime.py",
+        "tools/telemetry_store.py"
+      ],
+      "priority": "medium",
+      "approved_patch_required": false,
+      "cheap_worker_ok": true,
+      "sandbox_required": true,
+      "existing_patch_id": null
+    },
+    {
+      "candidate_id": "1e76c6a2d61a",
+      "title": "Stabilize daemon health flapping",
+      "target_files": [
+        "tools/factory_daemon.py",
+        "tools/tool_health_audit.py"
+      ],
+      "priority": "high",
+      "approved_patch_required": true,
+      "cheap_worker_ok": false,
+      "sandbox_required": true,
+      "existing_patch_id": null
+    }
+  ]
+}

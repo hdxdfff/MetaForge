@@ -1,0 +1,3 @@
+[core]
+# Intentionally minimal to satisfy OpenHands' config loader and suppress the
+# "config.toml not found" startup warning.

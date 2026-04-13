@@ -1,0 +1,22 @@
+{
+  "updated_at": "2026-03-21T01:20:00+08:00",
+  "title": "Minimal execution kernel validation",
+  "problem": "The orchestration stack can appear active while planner, reviewer, policy, or daemon layers prevent proof of real execution.",
+  "validation_command": "D:\\codex\\factoryctl.cmd execution-kernel-smoke --workspace D:\\codex\\generated\\execution-kernel-smoke",
+  "bypassed_layers": [
+    "planner",
+    "reviewer",
+    "control_layer",
+    "daemon"
+  ],
+  "artifacts": [
+    "D:\\codex\\generated\\execution-kernel-smoke\\BINARY_CLASSIFICATION_AUTORUN_RESULT.md",
+    "D:\\codex\\generated\\execution-kernel-smoke\\binary_classification_metrics.json"
+  ],
+  "guarantees": [
+    "Runs locally with deterministic synthetic data fallback.",
+    "Produces a markdown artifact and machine-readable metrics.",
+    "Does not require external datasets or planner routing."
+  ],
+  "residual_risk": "The smoke run proves a closed local execution loop, but it does not prove that the general multi-agent task pipeline can complete arbitrary shell or coding work."
+}

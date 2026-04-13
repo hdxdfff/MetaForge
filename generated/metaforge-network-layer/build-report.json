@@ -1,0 +1,13 @@
+{
+  "artifact_id": "metaforge-network-layer",
+  "build_success": true,
+  "build_ready": true,
+  "command": [
+    "C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "-m",
+    "py_compile",
+    "D:\\codex\\generated\\metaforge-network-layer\\run_demo.py"
+  ],
+  "stdout": "",
+  "stderr": ""
+}

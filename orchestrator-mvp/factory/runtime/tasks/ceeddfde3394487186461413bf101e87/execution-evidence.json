@@ -1,0 +1,57 @@
+{
+  "task_id": "ceeddfde3394487186461413bf101e87",
+  "task_title": "Build current runnable baseline for Strengthen agent orchestration capability",
+  "task_status": "completed",
+  "started_at": "2026-03-21T21:09:18.477346Z",
+  "updated_at": "2026-03-21T21:15:04.042382Z",
+  "completed": true,
+  "steps": [
+    {
+      "step_id": "17f3a5d5",
+      "step_title": "Refresh bootstrap build evidence",
+      "action": "shell_step",
+      "ok": false,
+      "at": "2026-03-21T21:15:04.042382Z",
+      "phase": "execute",
+      "worker": "shell",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "5006f4bb",
+      "step_title": "Run bootstrap validation sweep",
+      "action": "shell_step",
+      "ok": false,
+      "at": "2026-03-21T21:15:04.042382Z",
+      "phase": "verify",
+      "worker": "shell",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "1c073cd8",
+      "step_title": "Audit bootstrap evidence",
+      "action": "reviewer_step",
+      "ok": false,
+      "at": "2026-03-21T21:15:04.042382Z",
+      "phase": "review",
+      "worker": "reviewer",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    }
+  ],
+  "result": {
+    "summary": "Superseded by newer runtime task bb7bce56037e4b3dae2c03e73b503cae for node bootstrap_build.",
+    "superseded_by": "bb7bce56037e4b3dae2c03e73b503cae",
+    "dedupe_reconciled": true
+  }
+}

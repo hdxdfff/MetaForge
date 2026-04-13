@@ -1,0 +1,18 @@
+﻿{
+  "id": "strategy_scope_must_bind_to_artifact_path_not_workspace_root",
+  "title": "Strategy scope must bind to artifact path, not workspace root",
+  "category": "strategy-learning",
+  "summary": "When a success pattern inherits a broad repo_path such as D:\\codex, the planner can wrongly apply that pattern to unrelated tasks across the workspace.",
+  "trigger": {
+    "signal": "strategy candidate appears on unrelated repo_path",
+    "example": "ToyOS build pattern was suggested for orchestrator runtime tasks"
+  },
+  "resolution": {
+    "rule": "Use artifact_path as repo_scope whenever a valuable artifact exists, and require repo-scope affinity before applying a learned pattern.",
+    "validation": [
+      "positive probe on the source artifact repo still applies the pattern",
+      "negative probe on an unrelated repo returns no_strong_pattern"
+    ]
+  },
+  "recorded_at": "2026-03-20T08:08:00Z"
+}

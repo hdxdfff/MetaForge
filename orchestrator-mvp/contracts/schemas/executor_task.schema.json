@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Executor Task Packet",
+  "type": "object",
+  "required": [
+    "task_id",
+    "task_type",
+    "goal",
+    "inputs",
+    "constraints",
+    "expected_outputs",
+    "verification_level",
+    "created_at"
+  ],
+  "properties": {
+    "task_id": {
+      "type": "string"
+    },
+    "task_type": {
+      "type": "string"
+    },
+    "goal": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "inputs": {
+      "type": "object"
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "expected_outputs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "verification_level": {
+      "type": "string"
+    },
+    "max_runtime_seconds": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "executor_hint": {
+      "type": "object"
+    },
+    "artifact_spec": {
+      "type": "object"
+    },
+    "created_at": {
+      "type": "string"
+    }
+  }
+}

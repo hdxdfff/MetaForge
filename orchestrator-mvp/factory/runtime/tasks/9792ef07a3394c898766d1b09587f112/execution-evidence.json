@@ -1,0 +1,26 @@
+{
+  "task_id": "9792ef07a3394c898766d1b09587f112",
+  "task_title": "Tri-state publication smoke 3",
+  "task_status": "completed",
+  "started_at": "2026-03-29T17:32:58.734669Z",
+  "updated_at": "2026-03-29T18:03:23.578217Z",
+  "completed": true,
+  "steps": [
+    {
+      "step_id": "9792ef07a3394c898766d1b09587f112-terminal-record",
+      "step_title": "Tri-state publication smoke 3",
+      "action": "task_terminal_record",
+      "ok": true,
+      "at": "2026-03-29T18:03:23.578217Z",
+      "status": "completed",
+      "summary": "Stale internal smoke task auto-closed after runtime validation window elapsed.",
+      "error": null,
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ],
+  "result": {
+    "summary": "Stale internal smoke task auto-closed after runtime validation window elapsed."
+  }
+}

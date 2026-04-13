@@ -1,0 +1,177 @@
+{
+  "task_id": "2ddb1b41e87a4dfca73955d37aa5fe4b",
+  "task_status": "running",
+  "phase": "step-running",
+  "updated_at": "2026-04-02T22:21:25.964113Z",
+  "heartbeat_at": "2026-04-02T22:21:25.964113Z",
+  "repo_path": "D:\\codex",
+  "goal": "Restore ToyOS real artifact delivery",
+  "goal_id": "goal_42e8cd07d0",
+  "graph_id": "graph_c9ae2e2b6e",
+  "node_id": "boot_qemu_smoke",
+  "scheduled_by": "factory-daemon.replenisher",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\2ddb1b41e87a4dfca73955d37aa5fe4b",
+  "step_id": "8f0c2004",
+  "step_title": "Spawn decomposition subtasks",
+  "step_status": "running",
+  "worker": "planner",
+  "probe_attempts": 0,
+  "title": "Run ToyOS boot and QEMU smoke",
+  "prompt": "Run the ToyOS boot path and QEMU smoke check, capture the exact failure surface, and update the runnable evidence bundle.",
+  "scheduler_hint": {
+    "goal_primary": "Restore ToyOS real artifact delivery",
+    "goal_mode": "toyos_priority_mode",
+    "goal_target": "Restore ToyOS real artifact delivery",
+    "goal_id": "goal_42e8cd07d0",
+    "graph_id": "graph_c9ae2e2b6e",
+    "node_id": "boot_qemu_smoke",
+    "node_title": "Run ToyOS boot and QEMU smoke",
+    "task_type": "qemu_smoke_run",
+    "queue_name": "regression",
+    "verification_level": "L3",
+    "max_runtime_seconds": 3600,
+    "retry_limit": 1,
+    "rollback_rule": "mark_failed_and_requeue_split",
+    "template_id": "boot_qemu_smoke",
+    "admission_mode": "normal",
+    "handling_mode": "toyos_replenishment",
+    "automation_source": "failure_backlog_automation"
+  },
+  "context_package": {},
+  "plan": [
+    {
+      "id": "8f0c2004",
+      "title": "Spawn decomposition subtasks",
+      "status": "running",
+      "worker": "planner",
+      "phase": "decompose"
+    },
+    {
+      "id": "9692666b",
+      "title": "Wait for child task completion",
+      "status": "pending",
+      "worker": "planner",
+      "phase": "decompose"
+    },
+    {
+      "id": "afdd2e2e",
+      "title": "Aggregate decomposition results",
+      "status": "pending",
+      "worker": "reviewer",
+      "phase": "verify"
+    }
+  ],
+  "verification_signals": [
+    {
+      "timestamp": "2026-04-02T22:19:38.318468Z",
+      "kind": "admission_accepted",
+      "success": true,
+      "task_id": "2ddb1b41e87a4dfca73955d37aa5fe4b",
+      "admission_lane": null,
+      "admission_reason": null,
+      "execution_mode": "production",
+      "queue_name": "regression",
+      "task_type": "qemu_smoke_run"
+    }
+  ],
+  "verification_signal_count": 1,
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-02T22:19:38.318468Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "2ddb1b41e87a4dfca73955d37aa5fe4b",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "production",
+        "queue_name": "regression",
+        "task_type": "qemu_smoke_run"
+      }
+    ],
+    "decomposition": {
+      "summary": "Fallback decomposition for: Run the ToyOS boot path and QEMU smoke check, capture the exact failure surface, and update the runnable evidence bundle",
+      "strategy": "bounded multi-layer split with analysis, execution, and verification branches",
+      "subtasks": [
+        {
+          "title": "Clarify the target",
+          "prompt": "Restate the objective and the smallest acceptable outcome for: Run the ToyOS boot path and QEMU smoke check, capture the exact failure surface, and update the runnable evidence bundle.",
+          "goal": "Clarify target outcome",
+          "task_type": "report_refresh",
+          "path_kind": "shared",
+          "queue_name": "fastlane",
+          "verification_level": "L1",
+          "preferred_worker": "reviewer",
+          "execution_mode": "governance",
+          "execution_lane": "host-control",
+          "decompose_children": false,
+          "shared_dependency_group": "2ddb1b41e87a4dfca73955d37aa5fe4b",
+          "repair_for": null,
+          "inputs": [],
+          "outputs": [
+            "target brief"
+          ],
+          "dependencies": [],
+          "acceptance_criteria": [
+            "Target outcome is explicit."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        },
+        {
+          "title": "Execute the next bounded action",
+          "prompt": "Carry out the smallest bounded action that advances: Run the ToyOS boot path and QEMU smoke check, capture the exact failure surface, and update the runnable evidence bundle.",
+          "goal": "Execute the next action",
+          "task_type": "doc_patch",
+          "path_kind": "repair",
+          "queue_name": "fastlane",
+          "verification_level": "L1",
+          "preferred_worker": "coder",
+          "execution_mode": "governance",
+          "execution_lane": "host-control",
+          "decompose_children": false,
+          "shared_dependency_group": "2ddb1b41e87a4dfca73955d37aa5fe4b",
+          "repair_for": "Clarify the target",
+          "inputs": [
+            "target brief"
+          ],
+          "outputs": [
+            "action result"
+          ],
+          "dependencies": [
+            "Clarify the target"
+          ],
+          "acceptance_criteria": [
+            "The action produces a concrete result."
+          ],
+          "scheduler_hint": {},
+          "executor_hint": {}
+        }
+      ],
+      "dag": {
+        "shared_nodes": [
+          "Clarify the target"
+        ],
+        "branch_nodes": [],
+        "repair_nodes": [
+          "Execute the next bounded action"
+        ],
+        "optional_nodes": [],
+        "speculative_nodes": [],
+        "blocked_nodes": [],
+        "edges": [
+          {
+            "from": "Clarify the target",
+            "to": "Execute the next bounded action",
+            "kind": "repair"
+          }
+        ],
+        "shared_dependency_group": "2ddb1b41e87a4dfca73955d37aa5fe4b"
+      },
+      "depth": 0,
+      "max_depth": 2,
+      "mode": "multi_layer"
+    }
+  }
+}

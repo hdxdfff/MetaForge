@@ -1,0 +1,291 @@
+[
+  {
+    "id": "gh-5dbbd1235b",
+    "name": "langchain",
+    "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\langchain-ai-langchain",
+    "default_branch": "main",
+    "remotes": [
+      {
+        "name": "github",
+        "url": "https://github.com/langchain-ai/langchain.git",
+        "provider": "github"
+      }
+    ],
+    "metadata": {
+      "learning_source": "curated-default",
+      "full_name": "langchain-ai/langchain",
+      "stars": 103000,
+      "topics": [
+        "agent",
+        "llm",
+        "tools",
+        "retrieval"
+      ],
+      "description": "Composable LLM application framework.",
+      "score": 41262.1142,
+      "learning_status": "candidate"
+    },
+    "last_push_at": null
+  },
+  {
+    "id": "gh-72cd70a1e0",
+    "name": "llama.cpp",
+    "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\ggerganov-llama.cpp",
+    "default_branch": "main",
+    "remotes": [
+      {
+        "name": "github",
+        "url": "https://github.com/ggerganov/llama.cpp.git",
+        "provider": "github"
+      }
+    ],
+    "metadata": {
+      "learning_source": "curated-default",
+      "full_name": "ggerganov/llama.cpp",
+      "stars": 77000,
+      "topics": [
+        "inference",
+        "llm",
+        "kv-cache",
+        "quantization"
+      ],
+      "description": "Local LLM inference in portable C/C++.",
+      "score": 30857.5689,
+      "learning_status": "candidate"
+    },
+    "last_push_at": null
+  },
+  {
+    "id": "gh-dbec58c1d3",
+    "name": "open-interpreter",
+    "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\OpenInterpreter-open-interpreter",
+    "default_branch": "main",
+    "remotes": [
+      {
+        "name": "github",
+        "url": "https://github.com/OpenInterpreter/open-interpreter.git",
+        "provider": "github"
+      }
+    ],
+    "metadata": {
+      "learning_source": "curated-default",
+      "full_name": "OpenInterpreter/open-interpreter",
+      "stars": 58000,
+      "topics": [
+        "agent",
+        "computer-use",
+        "tool-executor",
+        "llm"
+      ],
+      "description": "Natural language computer control agent.",
+      "score": 23252.3854,
+      "learning_status": "candidate"
+    },
+    "last_push_at": null
+  },
+  {
+    "id": "gh-9d66d59834",
+    "name": "autogen",
+    "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\microsoft-autogen",
+    "default_branch": "main",
+    "remotes": [
+      {
+        "name": "github",
+        "url": "https://github.com/microsoft/autogen.git",
+        "provider": "github"
+      }
+    ],
+    "metadata": {
+      "learning_source": "curated-default",
+      "full_name": "microsoft/autogen",
+      "stars": 41000,
+      "topics": [
+        "agent",
+        "multi-agent",
+        "orchestration",
+        "llm"
+      ],
+      "description": "Multi-agent framework for autonomous systems.",
+      "score": 16454.9498,
+      "learning_status": "candidate"
+    },
+    "last_push_at": null
+  },
+  {
+    "id": "gh-7b34356fc5",
+    "name": "vllm",
+    "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\vllm-project-vllm",
+    "default_branch": "main",
+    "remotes": [
+      {
+        "name": "github",
+        "url": "https://github.com/vllm-project/vllm.git",
+        "provider": "github"
+      }
+    ],
+    "metadata": {
+      "learning_source": "curated-default",
+      "full_name": "vllm-project/vllm",
+      "stars": 38000,
+      "topics": [
+        "inference",
+        "llm",
+        "serving",
+        "scheduler"
+      ],
+      "description": "High-throughput LLM serving engine.",
+      "score": 15260.6594,
+      "learning_status": "candidate"
+    },
+    "last_push_at": null
+  },
+  {
+    "id": "gh-550cda2a08",
+    "name": "ray",
+    "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\ray-project-ray",
+    "default_branch": "main",
+    "remotes": [
+      {
+        "name": "github",
+        "url": "https://github.com/ray-project/ray.git",
+        "provider": "github"
+      }
+    ],
+    "metadata": {
+      "learning_source": "curated-default",
+      "full_name": "ray-project/ray",
+      "stars": 36000,
+      "topics": [
+        "distributed-system",
+        "scheduler",
+        "runtime",
+        "ml"
+      ],
+      "description": "Distributed compute runtime and scheduling.",
+      "score": 14451.3379,
+      "learning_status": "candidate"
+    },
+    "last_push_at": null
+  },
+  {
+    "id": "gh-dc2ef15e86",
+    "name": "crewAI",
+    "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\crewAIInc-crewAI",
+    "default_branch": "main",
+    "remotes": [
+      {
+        "name": "github",
+        "url": "https://github.com/crewAIInc/crewAI.git",
+        "provider": "github"
+      }
+    ],
+    "metadata": {
+      "learning_source": "curated-default",
+      "full_name": "crewAIInc/crewAI",
+      "stars": 32000,
+      "topics": [
+        "agent",
+        "multi-agent",
+        "workflow",
+        "automation"
+      ],
+      "description": "Collaborative AI agents framework.",
+      "score": 12846.5735,
+      "learning_status": "candidate"
+    },
+    "last_push_at": null
+  },
+  {
+    "id": "gh-3a0c3a2dea",
+    "name": "dask",
+    "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\dask-dask",
+    "default_branch": "main",
+    "remotes": [
+      {
+        "name": "github",
+        "url": "https://github.com/dask/dask.git",
+        "provider": "github"
+      }
+    ],
+    "metadata": {
+      "learning_source": "curated-default",
+      "full_name": "dask/dask",
+      "stars": 13000,
+      "topics": [
+        "distributed-system",
+        "scheduler",
+        "parallel",
+        "data"
+      ],
+      "description": "Parallel and distributed Python execution.",
+      "score": 5243.0283,
+      "learning_status": "candidate"
+    },
+    "last_push_at": null
+  },
+  {
+    "id": "gh-dc17f0f4fb",
+    "name": "AutoGPT",
+    "local_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+    "default_branch": "main",
+    "remotes": [
+      {
+        "name": "github",
+        "url": "https://github.com/Significant-Gravitas/AutoGPT.git",
+        "provider": "github"
+      }
+    ],
+    "metadata": {
+      "learning_source": "local-vendor",
+      "full_name": "Significant-Gravitas/AutoGPT",
+      "stars": 170000,
+      "topics": [
+        "agent",
+        "llm",
+        "automation",
+        "workflow"
+      ],
+      "description": "Agent platform and classic agent runtime.",
+      "score": 68050.6758,
+      "learning_status": "learned",
+      "learned_at": "2026-03-12T07:09:57.434212Z",
+      "capabilities": [
+        "local_llm_runner",
+        "token_streaming",
+        "kv_cache_manager",
+        "agent_orchestration",
+        "tool_execution",
+        "workflow_planning"
+      ]
+    },
+    "last_push_at": null
+  },
+  {
+    "id": "gh-417606d5ac",
+    "name": "xv6-public",
+    "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\mit-pdos-xv6-public",
+    "default_branch": "main",
+    "remotes": [
+      {
+        "name": "github",
+        "url": "https://github.com/mit-pdos/xv6-public.git",
+        "provider": "github"
+      }
+    ],
+    "metadata": {
+      "learning_source": "curated-default",
+      "full_name": "mit-pdos/xv6-public",
+      "stars": 7800,
+      "topics": [
+        "kernel",
+        "os",
+        "scheduler",
+        "systems"
+      ],
+      "description": "Small Unix-like teaching kernel.",
+      "score": 3144.316,
+      "learning_status": "candidate"
+    },
+    "last_push_at": null
+  }
+]

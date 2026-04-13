@@ -1,0 +1,31 @@
+﻿{
+  "id": "powershell_popup_launchers_must_hide_windows_on_windows",
+  "title": "Windows launchers should not spawn visible PowerShell shells",
+  "kind": "runtime_pattern",
+  "recorded_at": "2026-03-26T16:05:00+08:00",
+  "symptoms": [
+    "Repeated PowerShell windows appear when background helpers or startup fallbacks launch",
+    "Minimized shells still interrupt operator work on Windows desktops"
+  ],
+  "root_cause": "A background daemon repeatedly invoked powershell.exe for liveness checks and recovery, but the subprocesses were not always created with CREATE_NO_WINDOW on Windows.",
+  "fix": [
+    "Start the actual worker with pythonw.exe or a detached subprocess when possible",
+    "Use a hidden launcher such as WScript.Shell.Run(..., 0, False) for startup-folder fallbacks",
+    "Avoid -WindowStyle Minimized as a substitute for true hiding",
+    "When Task Scheduler resists direct PowerShell actions, point the task at pythonw.exe and let a Python wrapper launch PowerShell with CREATE_NO_WINDOW",
+    "Apply CREATE_NO_WINDOW directly inside the shell worker and GUI backend subprocess helpers"
+  ],
+  "evidence": [
+    "D:/codex/agents/screen-context-mcp/start.ps1",
+    "D:/codex/orchestrator-mvp/install-factory-daemon-startup.ps1",
+    "D:/codex/orchestrator-mvp/DAEMON_HANDOFF.md",
+    "D:/codex/orchestrator-mvp/tools/factory_daemon.py",
+    "D:/codex/orchestrator-mvp/tools/self_model.py",
+    "D:/codex/orchestrator-mvp/tools/codex_control.py",
+    "D:/codex/orchestrator-mvp/tools/soak_monitor.py"
+  ],
+  "notes": [
+    "The active popup source was the old factory_daemon.py process; restarting it after adding CREATE_NO_WINDOW removed the visible PowerShell child process path.",
+    "A child powershell.exe with command line 'Get-Process -Id <pid> | Out-Null' is expected on Windows, but it should now run hidden."
+  ]
+}

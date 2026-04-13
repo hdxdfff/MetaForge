@@ -1,0 +1,8 @@
+{
+  "task_success_weight": 0.4,
+  "platform_structure_weight": 0.35,
+  "capability_weight": 0.15,
+  "safety_weight": 0.1,
+  "promotion_threshold": 0.75,
+  "candidate_threshold": 0.65
+}

@@ -1,0 +1,28 @@
+{
+  "task_id": "fc0ecb13f2214f34804010aa9637a4fb",
+  "task_title": "Plan engineering task graph for Ship deployable release artifact bundle",
+  "task_status": "timed_out",
+  "started_at": "2026-03-19T04:32:33.438528Z",
+  "updated_at": "2026-03-19T04:40:05.531861Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "fc0ecb13f2214f34804010aa9637a4fb-terminal-record",
+      "step_title": "Plan engineering task graph for Ship deployable release artifact bundle",
+      "action": "task_terminal_record",
+      "ok": false,
+      "at": "2026-03-19T04:40:05.531861Z",
+      "status": "timed_out",
+      "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+      "error": null,
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ],
+  "result": {
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

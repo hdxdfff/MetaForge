@@ -1,0 +1,134 @@
+{
+  "updated_at": "2026-04-09T16:00:05.520202Z",
+  "status": "pass",
+  "industrial_operations_status": "normal",
+  "task_pools": {
+    "limits": {
+      "P0": 4,
+      "P1": 2,
+      "P2": 1,
+      "P3": 1
+    },
+    "priority_order": [
+      "P0",
+      "P1",
+      "P2",
+      "P3"
+    ],
+    "notes": [
+      "P0 stays highest priority for production delivery and regressions.",
+      "P1 is repair-first and rollback-first.",
+      "P2 is budgeted capability growth.",
+      "P2 sandbox is the only low-risk P2 lane and stays narrowly capped.",
+      "P3 is research and only runs when the system is healthy."
+    ]
+  },
+  "budget_control": {
+    "gates": {
+      "allow_p0": true,
+      "allow_p1": true,
+      "allow_p2": false,
+      "allow_p2_sandbox": false,
+      "allow_p3": true,
+      "repair_first": false,
+      "budget_enforced": true
+    },
+    "replenishment": {
+      "self_repair_daily": {
+        "window_basis": "rolling_24h_ledger",
+        "next_replenishment_at": null,
+        "hours_until_replenishment": null,
+        "headroom_ratio": 0.4,
+        "burn_rate": 0.6,
+        "budget_exhausted": false
+      },
+      "artifact_growth_daily": {
+        "window_basis": "rolling_24h",
+        "next_replenishment_at": null,
+        "hours_until_replenishment": null,
+        "headroom_ratio": 1.0,
+        "burn_rate": 0.0,
+        "budget_exhausted": false
+      },
+      "capability_expansion_daily": {
+        "window_basis": "rolling_24h_ledger",
+        "next_replenishment_at": "2026-04-03T19:17:38.418652Z",
+        "hours_until_replenishment": 0.0,
+        "headroom_ratio": 0.0,
+        "burn_rate": 9.0,
+        "budget_exhausted": true
+      },
+      "sandbox_p2_daily": {
+        "window_basis": "rolling_24h",
+        "next_replenishment_at": "2026-04-04T19:03:58.835314Z",
+        "hours_until_replenishment": 23.77,
+        "headroom_ratio": 0.0,
+        "burn_rate": 4.0,
+        "budget_exhausted": true
+      },
+      "research_daily": {
+        "window_basis": "rolling_24h",
+        "next_replenishment_at": null,
+        "hours_until_replenishment": null,
+        "headroom_ratio": 1.0,
+        "burn_rate": 0.0,
+        "budget_exhausted": false
+      }
+    }
+  },
+  "closed_pools": [
+    "P2"
+  ],
+  "closed_pool_count": 1,
+  "suppression": {
+    "goal_backlog": {
+      "candidate_count": 5,
+      "suppressed_count": 0,
+      "goal_health": "starved",
+      "last_replenishment_result": "replenishment_failed",
+      "dispatch_now_count": 2
+    },
+    "artifact_growth": {
+      "status": "budget_closed",
+      "open_items_total": 5,
+      "created_items": 0,
+      "skipped_due_to_budget": 0,
+      "budget_closed": true,
+      "next_replenishment_at": null
+    },
+    "capability_builder": {
+      "status": "budget_closed",
+      "open_items_total": 1,
+      "open_items_created": 0,
+      "budget_closed": true,
+      "next_replenishment_at": "2026-04-03T19:17:38.418652Z"
+    },
+    "p2_sandbox": {
+      "status": "budget_closed",
+      "open_items_total": 1,
+      "created_items": 0,
+      "budget_closed": true,
+      "next_replenishment_at": "2026-04-04T19:03:58.835314Z"
+    },
+    "failure_backlog_automation": {
+      "created_count": 0,
+      "toyos_created_count": 0,
+      "budget_suppressed_candidate_count": 0,
+      "replenishment_block_reason": ""
+    }
+  },
+  "suppressed_total": 1,
+  "next_replenishment_at": {
+    "artifact_growth_daily": null,
+    "capability_expansion_daily": "2026-04-03T19:17:38.418652Z",
+    "sandbox_p2_daily": "2026-04-04T19:03:58.835314Z",
+    "research_daily": null,
+    "self_repair_daily": null
+  },
+  "next_actions": [
+    "Keep P0 and P1 open.",
+    "Do not schedule new P2 capability growth until capability_expansion_daily headroom returns.",
+    "Use the dedicated P2 sandbox lane only for low-risk tasks while allow_p2_sandbox remains true.",
+    "Keep P3 closed until the system is normal and research headroom is available."
+  ]
+}

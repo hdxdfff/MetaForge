@@ -1,0 +1,13 @@
+{
+  "bundle_id": "20260403T153100Z",
+  "created_at": "2026-04-03T15:31:00.368508Z",
+  "status": "confirmed",
+  "stage5_candidate": true,
+  "stage5_confirmed": true,
+  "files": [
+    "stage5_dashboard.json",
+    "stage5_metrics_history.json",
+    "evolution_ledger.json",
+    "README.md"
+  ]
+}

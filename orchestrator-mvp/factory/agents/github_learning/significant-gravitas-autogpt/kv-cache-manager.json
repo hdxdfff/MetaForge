@@ -1,0 +1,41 @@
+{
+  "updated_at": "2026-03-26T14:13:42.207809Z",
+  "source": "github_learning",
+  "provider_platform_id": "github-learning:gh-dc17f0f4fb",
+  "repo_id": "gh-dc17f0f4fb",
+  "repo_full_name": "Significant-Gravitas/AutoGPT",
+  "repo_local_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+  "capability_id": "kv_cache_manager",
+  "keywords": [
+    "agent_orchestration",
+    "cache",
+    "kv",
+    "kv_cache_manager",
+    "local_llm_runner",
+    "manager",
+    "token_streaming",
+    "tool_execution",
+    "workflow_planning"
+  ],
+  "sampled_files": [
+    "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\docs\\integrations\\README.md",
+    "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\README.md",
+    "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\classic\\forge\\forge\\components\\README.md",
+    "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\backend\\load-tests\\README.md",
+    "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\classic\\original_autogpt\\README.md",
+    "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\frontend\\README.md",
+    "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\frontend\\package.json",
+    "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\README.md"
+  ],
+  "key_files": [
+    "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\README.md"
+  ],
+  "architecture_summary": "# AutoGPT: Build, Deploy, and Run AI Agents\n\n[![Discord Follow](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscord.com%2Fapi%2Finvites%2Fautogpt%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&label=total%20members&logo=discord&logoColor=white&color=7289da)](https://discord.gg/autogpt) &ensp;\n[![Twitter Follow](https://img.shields.io/twitter/follow/Auto_GPT?style=social)](https://twitter.com/Auto_GPT) &ensp;\n\n<!-- Keep these links. Translations will automatically update with the README. -->\n[Deutsch](https://zdoc.app/de/Significant-Gravitas/AutoGPT) | \n[Español](https:",
+  "experiment_plan": {
+    "sandbox_required": true,
+    "recommended_commands": [],
+    "can_run_without_dependency_install": false
+  },
+  "distillation_status": "ready",
+  "adopted": true
+}

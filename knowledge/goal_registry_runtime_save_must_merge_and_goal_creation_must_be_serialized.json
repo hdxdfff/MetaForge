@@ -1,0 +1,21 @@
+{
+  "id": "goal_registry_runtime_save_must_merge_and_goal_creation_must_be_serialized",
+  "created_at": "2026-03-21T05:59:30+08:00",
+  "system": "orchestrator-mvp",
+  "scope": "control-plane",
+  "pattern": "goal registry concurrent writes can drop freshly created goals when runtime sync or multiple creators write stale snapshots",
+  "symptoms": [
+    "mainline-goal returns a new goal object but the goal is missing from goal_registry.json afterwards",
+    "parallel goal creation leaves only the last created goal persisted",
+    "runtime sync can overwrite newly created goals if it saves an older in-memory snapshot"
+  ],
+  "fix": [
+    "merge unseen goals from the current registry before save_goals writes",
+    "serialize goal creation writes instead of submitting multiple state mutations in parallel",
+    "restart long-running daemon processes after changing goal persistence logic"
+  ],
+  "validation": [
+    "goal_engine.py compiles",
+    "sequential mainline-goal creation persists all expected goal_ids in factory/goals/goal_registry.json"
+  ]
+}

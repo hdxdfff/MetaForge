@@ -1,0 +1,72 @@
+{
+  "task_id": "6352ae2818d34fb4bb1c5874c844e45c",
+  "task_title": "Execution recovery: smoke and runnable artifact",
+  "task_status": "failed",
+  "started_at": "2026-03-25T15:30:41.291735Z",
+  "updated_at": "2026-03-25T15:34:33.398200Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "693222ee",
+      "step_title": "Write recovery smoke file",
+      "action": "shell_step",
+      "ok": false,
+      "at": "2026-03-25T15:34:33.398200Z",
+      "phase": "execute",
+      "worker": "shell",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "cbb6d068",
+      "step_title": "Probe direct LLM path",
+      "action": "shell_step",
+      "ok": false,
+      "at": "2026-03-25T15:34:33.398200Z",
+      "phase": "execute",
+      "worker": "shell",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "4f6b83f0",
+      "step_title": "Create runnable recovery artifact",
+      "action": "shell_step",
+      "ok": false,
+      "at": "2026-03-25T15:34:33.398200Z",
+      "phase": "execute",
+      "worker": "shell",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    },
+    {
+      "step_id": "c6ef7cd5",
+      "step_title": "Verify recovery artifact",
+      "action": "shell_step",
+      "ok": false,
+      "at": "2026-03-25T15:34:33.398200Z",
+      "phase": "verify",
+      "worker": "shell",
+      "status": "pending",
+      "output_ref": {},
+      "output_stats": {},
+      "synthesized": true,
+      "source": "task-plan-backfill"
+    }
+  ],
+  "result": {
+    "state": "recovery_task_superseded",
+    "reason": "Recovery targets already satisfied by recent verified completions or recent runnable artifact evidence.",
+    "superseded_at": "2026-03-25T15:34:33.398200Z",
+    "recovery_resolution": "newer_evidence_already_satisfied_target"
+  }
+}

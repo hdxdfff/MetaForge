@@ -1,0 +1,1000 @@
+{
+  "task_id": "563aa6e9a5f548379b10176dfe792975",
+  "task_status": "running",
+  "phase": "step-running",
+  "updated_at": "2026-04-02T09:34:35.165163Z",
+  "heartbeat_at": "2026-04-02T09:34:35.165163Z",
+  "repo_path": "D:\\codex",
+  "goal": "Decide the next action",
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": null,
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\563aa6e9a5f548379b10176dfe792975",
+  "step_id": "13750cc3",
+  "step_title": "Frame research question",
+  "step_status": "running",
+  "worker": "reviewer",
+  "probe_attempts": 0,
+  "title": "Synthesize next action",
+  "prompt": "Measure the response speed and answer accuracy of the current OpenCode entry setup. Use the fast entry if available, compare it with the full entry when feasible, and evaluate both against a fixed prompt suite covering system identity, workspace awareness, control-shell boundary, default model policy, and route recommendation. Record startup latency if observable, first-response latency, total completion time, and correctness for each prompt. Return a concise report with per-prompt timings, exact answers, pass/fail notes, and one bounded next-step recommendation. Do not modify runtime internals or unrelated files.",
+  "scheduler_hint": {
+    "goal_target": "Measure OpenCode speed and accuracy",
+    "module_focus": [
+      "tools.binary_classification_lab_runner",
+      "app.executor_adapter",
+      "tools.db_runtime_check",
+      "app.git_service",
+      "tools.approve_self_patch"
+    ],
+    "owner_teams": [
+      "backend_team",
+      "infrastructure_team"
+    ],
+    "layers": [
+      "unclassified"
+    ],
+    "graph_matches": [
+      {
+        "module": "tools.binary_classification_lab_runner",
+        "owner_team": "infrastructure_team",
+        "owner": "ops",
+        "layer": "unclassified",
+        "dependency_count": 0,
+        "dependents": 1,
+        "internal_imports": []
+      },
+      {
+        "module": "app.executor_adapter",
+        "owner_team": "backend_team",
+        "owner": "coder",
+        "layer": "unclassified",
+        "dependency_count": 4,
+        "dependents": 3,
+        "internal_imports": [
+          "app.executor_routing",
+          "tools.company_os",
+          "tools.io_utils",
+          "tools.tool_stack"
+        ]
+      },
+      {
+        "module": "tools.db_runtime_check",
+        "owner_team": "infrastructure_team",
+        "owner": "ops",
+        "layer": "unclassified",
+        "dependency_count": 0,
+        "dependents": 0,
+        "internal_imports": []
+      },
+      {
+        "module": "app.git_service",
+        "owner_team": "backend_team",
+        "owner": "coder",
+        "layer": "unclassified",
+        "dependency_count": 1,
+        "dependents": 2,
+        "internal_imports": [
+          "tools.sync_openwebui_models"
+        ]
+      },
+      {
+        "module": "tools.approve_self_patch",
+        "owner_team": "infrastructure_team",
+        "owner": "ops",
+        "layer": "unclassified",
+        "dependency_count": 1,
+        "dependents": 0,
+        "internal_imports": [
+          "tools.security_write"
+        ]
+      }
+    ],
+    "surface_route": {
+      "request": "Measure the response speed and answer accuracy of the current OpenCode entry setup. Use the fast entry if available, compare it with the full entry when feasible, and evaluate both against a fixed prompt suite covering system identity, workspace awareness, control-shell boundary, default model policy, and route recommendation. Record startup latency if observable, first-response latency, total completion time, and correctness for each prompt. Return a concise report with per-prompt timings, exact answers, pass/fail notes, and one bounded next-step recommendation. Do not modify runtime internals or unrelated files.",
+      "reason": "Matched task shape: short interactive edit",
+      "task_shape": "short interactive edit",
+      "matched_keywords": [
+        "fix",
+        "code"
+      ],
+      "interaction_only": true,
+      "requires_external_executor": true,
+      "rule_launch_mode": "message",
+      "preferred_surface": "Goose",
+      "preferred_available": true,
+      "preferred_resolved": "D:\\codex\\bin\\goose.cmd",
+      "fallback_surface": "Goose",
+      "fallback_available": true,
+      "availability": {
+        "Aider": {
+          "available": true,
+          "resolved": "D:\\codex\\bin\\aider.cmd"
+        },
+        "OpenCode": {
+          "available": true,
+          "resolved": "opencode"
+        },
+        "Goose": {
+          "available": true,
+          "resolved": "D:\\codex\\bin\\goose.cmd"
+        },
+        "OpenHands": {
+          "available": true,
+          "resolved": "D:\\codex\\bin\\openhands.cmd"
+        },
+        "Plandex": {
+          "available": true,
+          "resolved": "D:\\codex\\bin\\plandex.cmd"
+        },
+        "Continue": {
+          "available": true,
+          "resolved": "D:\\Microsoft VS Code\\bin\\code.cmd"
+        },
+        "LinkWork": {
+          "available": true,
+          "resolved": "D:\\codex\\bin\\linkwork.cmd"
+        },
+        "Codex": {
+          "available": true,
+          "resolved": "D:\\codex\\factoryctl.py"
+        }
+      },
+      "launch_mode": "stdin",
+      "launch_hint": "D:\\codex\\bin\\goose.cmd run -i -",
+      "next_step_command": "D:\\codex\\bin\\goose.cmd run -i -",
+      "launch_command": [
+        "D:\\codex\\bin\\goose.cmd",
+        "run",
+        "-i",
+        "-"
+      ],
+      "launch_cwd": "D:\\codex",
+      "launch_stdin_text": "Measure the response speed and answer accuracy of the current OpenCode entry setup. Use the fast entry if available, compare it with the full entry when feasible, and evaluate both against a fixed prompt suite covering system identity, workspace awareness, control-shell boundary, default model policy, and route recommendation. Record startup latency if observable, first-response latency, total completion time, and correctness for each prompt. Return a concise report with per-prompt timings, exact answers, pass/fail notes, and one bounded next-step recommendation. Do not modify runtime internals or unrelated files.",
+      "dispatchable": true,
+      "tool_stack": {
+        "version": "v2",
+        "primary_interactive_surface": "Aider",
+        "control_shells": [
+          "OpenCode",
+          "Goose"
+        ],
+        "control_plane": "MetaForge",
+        "long_task_executors": [
+          "OpenHands",
+          "Plandex",
+          "LinkWork"
+        ],
+        "development_executors": [
+          "OpenCode",
+          "Aider"
+        ],
+        "inspection_surface": "Continue",
+        "final_verification_boundary": [
+          "Verification",
+          "Artifact"
+        ],
+        "routing": [
+          {
+            "task_shape": "ToyOS evidence refresh",
+            "keywords": [
+              "evidence chain",
+              "build-report.json",
+              "generic-qemu-smoke-report.json",
+              "score-report.json",
+              "verification summary",
+              "confirm build-report",
+              "current reports"
+            ],
+            "preferred_surface": "Continue",
+            "fallback_surface": "Goose",
+            "launch_mode": "review",
+            "dispatchable": false
+          },
+          {
+            "task_shape": "short interactive edit",
+            "keywords": [
+              "edit",
+              "fix",
+              "patch",
+              "refactor",
+              "code",
+              "build",
+              "test"
+            ],
+            "preferred_surface": "Aider",
+            "fallback_surface": "Goose",
+            "launch_mode": "message",
+            "dispatchable": true
+          },
+          {
+            "task_shape": "script maintenance and registry work",
+            "keywords": [
+              "report refresh",
+              "report",
+              "registry reconcile",
+              "registry",
+              "evidence collect",
+              "evidence",
+              "doc patch",
+              "json fix",
+              "json",
+              "config fix",
+              "config",
+              "manifest patch",
+              "manifest"
+            ],
+            "preferred_surface": "Goose",
+            "fallback_surface": "Continue",
+            "launch_mode": "control",
+            "dispatchable": true
+          },
+          {
+            "task_shape": "long agentic implementation",
+            "keywords": [
+              "long",
+              "multi-step",
+              "agent",
+              "workflow",
+              "execute",
+              "run"
+            ],
+            "preferred_surface": "OpenHands",
+            "fallback_surface": "Plandex",
+            "launch_mode": "server",
+            "dispatchable": true
+          },
+          {
+            "task_shape": "isolated LinkWork bundle",
+            "keywords": [
+              "handoff",
+              "bundle",
+              "evidence pack",
+              "delivery bundle",
+              "structured research bundle",
+              "role pool",
+              "isolated executor"
+            ],
+            "preferred_surface": "LinkWork",
+            "fallback_surface": "Goose",
+            "launch_mode": "message",
+            "dispatchable": true
+          },
+          {
+            "task_shape": "controlled management and dispatch",
+            "keywords": [
+              "dispatch",
+              "status",
+              "control",
+              "approve",
+              "reject",
+              "session"
+            ],
+            "preferred_surface": "Goose",
+            "fallback_surface": "Continue",
+            "launch_mode": "control",
+            "dispatchable": true
+          },
+          {
+            "task_shape": "code review and PR inspection",
+            "keywords": [
+              "review",
+              "pr",
+              "inspect",
+              "diff",
+              "check"
+            ],
+            "preferred_surface": "Continue",
+            "fallback_surface": "Goose",
+            "launch_mode": "review",
+            "dispatchable": true
+          },
+          {
+            "task_shape": "final acceptance",
+            "keywords": [
+              "verify",
+              "verification",
+              "artifact",
+              "acceptance"
+            ],
+            "preferred_surface": "Verification / Artifact",
+            "fallback_surface": "Continue",
+            "launch_mode": "verify",
+            "dispatchable": false
+          }
+        ],
+        "executor_responsibilities": [
+          {
+            "executor_id": "opencode_executor",
+            "surface": "OpenCode",
+            "task_types": [
+              "build_fix",
+              "demo_rebuild",
+              "subsystem_refactor",
+              "architecture_migration",
+              "path_repair",
+              "unit_test_run"
+            ],
+            "role": "controller-backed development execution"
+          },
+          {
+            "executor_id": "codex_executor",
+            "surface": "Codex",
+            "task_types": [
+              "build_fix",
+              "demo_rebuild",
+              "subsystem_refactor",
+              "architecture_migration",
+              "path_repair",
+              "unit_test_run"
+            ],
+            "role": "legacy alias for OpenCode-backed development execution"
+          },
+          {
+            "executor_id": "linkwork_executor",
+            "surface": "LinkWork",
+            "task_types": [
+              "handoff_doc_generate",
+              "artifact_evidence_packaging",
+              "structured_research_bundle",
+              "external_info_collect",
+              "tool_assisted_doc_generation",
+              "delivery_bundle_prepare",
+              "report_refresh"
+            ],
+            "role": "isolated execution pool for standardized handoff bundles"
+          },
+          {
+            "executor_id": "aider_executor",
+            "surface": "Aider",
+            "task_types": [
+              "build_fix",
+              "subsystem_refactor",
+              "path_repair",
+              "unit_test_run",
+              "doc_patch"
+            ],
+            "role": "short interactive edits"
+          },
+          {
+            "executor_id": "goose_executor",
+            "surface": "Goose",
+            "task_types": [
+              "report_refresh",
+              "registry_reconcile",
+              "evidence_collect",
+              "doc_patch",
+              "json_fix",
+              "config_fix",
+              "manifest_patch"
+            ],
+            "role": "control, dispatch, and script maintenance"
+          },
+          {
+            "executor_id": "openhands_executor",
+            "surface": "OpenHands",
+            "task_types": [
+              "new_artifact_bootstrap",
+              "new_demo_creation",
+              "architecture_migration",
+              "subsystem_refactor"
+            ],
+            "role": "long-running implementation"
+          },
+          {
+            "executor_id": "plandex_executor",
+            "surface": "Plandex",
+            "task_types": [
+              "demo_rebuild",
+              "package_validation",
+              "harness_regression_run",
+              "qemu_smoke_run"
+            ],
+            "role": "long-running rebuild and validation"
+          },
+          {
+            "executor_id": "continue_executor",
+            "surface": "Continue",
+            "task_types": [
+              "artifact_audit",
+              "independent_evidence_check",
+              "release_decision_review"
+            ],
+            "role": "review and independent inspection"
+          },
+          {
+            "executor_id": "ci_executor",
+            "surface": "CI",
+            "task_types": [
+              "artifact_audit",
+              "qemu_smoke_run",
+              "harness_regression_run",
+              "package_validation",
+              "independent_evidence_check"
+            ],
+            "role": "automated verification"
+          },
+          {
+            "executor_id": "human_review_executor",
+            "surface": "Human",
+            "task_types": [
+              "release_decision_review",
+              "risk_approval",
+              "architecture_review"
+            ],
+            "role": "final human gate"
+          }
+        ]
+      },
+      "workspace": "D:\\codex"
+    },
+    "strategy_applied": true,
+    "strategy_explored": false,
+    "strategy_reason": "matched_success_pattern",
+    "strategy_revision": 5277,
+    "strategy_pattern_id": "strategy_8940a86a3700",
+    "strategy_pattern_score": 0.4185,
+    "queue_name": "fastlane",
+    "task_type": "report_refresh",
+    "verification_level": "L1",
+    "max_runtime_seconds": 1800,
+    "retry_limit": 1,
+    "rollback_rule": "mark_failed_and_requeue_split",
+    "throughput": {
+      "queue_name": "fastlane",
+      "task_type": "report_refresh",
+      "verification_level": "L1",
+      "max_runtime_seconds": 1800,
+      "retry_limit": 1,
+      "rollback_rule": "mark_failed_and_requeue_split",
+      "artifact_key": "repo_path:D:\\codex"
+    },
+    "decomposition_child": true,
+    "decomposition_parent_task_id": "3c95090cf4b9418e851443a0679e90e9",
+    "decomposition_root_task_id": "3c95090cf4b9418e851443a0679e90e9",
+    "decomposition_depth": 1,
+    "max_decomposition_depth": 2,
+    "decomposition_child_index": 3,
+    "decomposition_allow_children": false,
+    "decomposition_path_kind": "repair",
+    "decomposition_shared_dependency_group": "3c95090cf4b9418e851443a0679e90e9",
+    "decomposition_repair_for": "Frame the problem",
+    "decomposition_dependencies": [
+      "Frame the problem",
+      "Collect supporting evidence"
+    ],
+    "dependency_task_ids": [
+      "c3d76ef63a394796b1857a65af4a18ca",
+      "a8e3798a85004045aafdda99dd8e35f2"
+    ],
+    "dependency_count": 2
+  },
+  "context_package": {
+    "task": "Measure OpenCode speed and accuracy",
+    "task_type": "implementation",
+    "repo_path": "D:\\codex",
+    "module_focus": [
+      "tools.binary_classification_lab_runner",
+      "app.executor_adapter",
+      "tools.db_runtime_check",
+      "app.git_service",
+      "tools.approve_self_patch"
+    ],
+    "dependency_modules": [],
+    "owner_teams": [
+      "backend_team",
+      "infrastructure_team"
+    ],
+    "layers": [
+      "unclassified"
+    ],
+    "project_context": {},
+    "knowledge_hints": {
+      "preferred_capabilities": [
+        "agent_orchestration",
+        "webapp_generation",
+        "deploy_scaffold",
+        "tool_extension",
+        "kv_cache_manager",
+        "local_llm_runner",
+        "token_streaming"
+      ],
+      "preferred_workers": [
+        "reviewer",
+        "coder",
+        "supervisor"
+      ],
+      "repo_learning": {
+        "updated_at": "2026-03-26T14:13:41.618089Z",
+        "embedding": {
+          "provider": "local",
+          "model": "BAAI/bge-small-en-v1.5",
+          "dimensions": 128,
+          "backend": "hashed-local",
+          "ready": true
+        },
+        "graph_modules": 164,
+        "chunk_count": 144,
+        "top_modules": [
+          {
+            "module": "tools.brain_loop",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\brain_loop.py"
+          },
+          {
+            "module": "tools.factory_daemon",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\factory_daemon.py"
+          },
+          {
+            "module": "app.orchestrator",
+            "layer": "unclassified",
+            "owner_team": "backend_team",
+            "path": "D:\\codex\\orchestrator-mvp\\app\\orchestrator.py"
+          },
+          {
+            "module": "tools.meta_factory_control",
+            "layer": "architecture_engine",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\meta_factory_control.py"
+          },
+          {
+            "module": "tools.decision_engine",
+            "layer": "task_graph_planner",
+            "owner_team": "architecture_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\decision_engine.py"
+          },
+          {
+            "module": "app.main",
+            "layer": "unclassified",
+            "owner_team": "backend_team",
+            "path": "D:\\codex\\orchestrator-mvp\\app\\main.py"
+          },
+          {
+            "module": "tools.verification_engine",
+            "layer": "verification",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\verification_engine.py"
+          },
+          {
+            "module": "tools.taskgraph_compiler",
+            "layer": "architecture_engine",
+            "owner_team": "architecture_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\taskgraph_compiler.py"
+          },
+          {
+            "module": "app.worker_adapters",
+            "layer": "unclassified",
+            "owner_team": "backend_team",
+            "path": "D:\\codex\\orchestrator-mvp\\app\\worker_adapters.py"
+          },
+          {
+            "module": "tools.change_request_analyzer",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\change_request_analyzer.py"
+          },
+          {
+            "module": "tools.factory_task_engine",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\factory_task_engine.py"
+          },
+          {
+            "module": "tools.company_os",
+            "layer": "unclassified",
+            "owner_team": "infrastructure_team",
+            "path": "D:\\codex\\orchestrator-mvp\\tools\\company_os.py"
+          }
+        ],
+        "learned_repositories": [
+          {
+            "repo_id": "gh-dc17f0f4fb",
+            "full_name": "Significant-Gravitas/AutoGPT",
+            "local_path": "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT",
+            "language_mix": [
+              {
+                "language": ".json",
+                "files": 1076
+              },
+              {
+                "language": "Python",
+                "files": 914
+              },
+              {
+                "language": "TypeScript",
+                "files": 911
+              },
+              {
+                "language": "Markdown",
+                "files": 320
+              },
+              {
+                "language": ".yml",
+                "files": 43
+              },
+              {
+                "language": ".yaml",
+                "files": 23
+              }
+            ],
+            "key_files": [
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\README.md"
+            ],
+            "sampled_files": [
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\docs\\integrations\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\classic\\forge\\forge\\components\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\backend\\load-tests\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\classic\\original_autogpt\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\frontend\\README.md",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\frontend\\package.json",
+              "D:\\codex\\agents\\autogpt-classic\\vendor\\AutoGPT\\autogpt_platform\\README.md"
+            ],
+            "capabilities": [
+              "local_llm_runner",
+              "token_streaming",
+              "kv_cache_manager",
+              "agent_orchestration",
+              "tool_execution",
+              "workflow_planning"
+            ],
+            "architecture_summary": "# AutoGPT: Build, Deploy, and Run AI Agents\n\n[![Discord Follow](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscord.com%2Fapi%2Finvites%2Fautogpt%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&label=total%20members&logo=discord&logoColor=white&color=7289da)](https://discord.gg/autogpt) &ensp;\n[![Twitter Follow](https://img.shields.io/twitter/follow/Auto_GPT?style=social)](https://twitter.com/Auto_GPT) &ensp;\n\n<!-- Keep these links. Translations will automatically update with the README. -->\n[Deutsch](https://zdoc.app/de/Significant-Gravitas/AutoGPT) | \n[Español](https:",
+            "experiment_plan": {
+              "sandbox_required": true,
+              "recommended_commands": [],
+              "can_run_without_dependency_install": false
+            },
+            "chunk_count": 24
+          }
+        ],
+        "learned_repository_count": 1,
+        "extracted_capabilities": [
+          "agent_orchestration",
+          "kv_cache_manager",
+          "local_llm_runner",
+          "token_streaming",
+          "tool_execution",
+          "workflow_planning"
+        ],
+        "github_learning": {
+          "updated_at": "2026-03-26T14:13:41.618089Z",
+          "enabled": true,
+          "topics": [
+            "agent",
+            "llm",
+            "compiler",
+            "kernel",
+            "robotics",
+            "distributed-system",
+            "inference"
+          ],
+          "languages": [
+            "Python",
+            "TypeScript",
+            "Rust",
+            "C++",
+            "C",
+            "Go"
+          ],
+          "managed_repo_count": 10,
+          "ready_repo_count": 1,
+          "candidate_repo_count": 9,
+          "scan_candidate_count": 10,
+          "top_candidates": [
+            {
+              "full_name": "langchain-ai/langchain",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\langchain-ai-langchain",
+              "score": 41262.1142,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "ggerganov/llama.cpp",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\ggerganov-llama.cpp",
+              "score": 30857.5689,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "OpenInterpreter/open-interpreter",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\OpenInterpreter-open-interpreter",
+              "score": 23252.3854,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "microsoft/autogen",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\microsoft-autogen",
+              "score": 16454.9498,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "vllm-project/vllm",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\vllm-project-vllm",
+              "score": 15260.6594,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "ray-project/ray",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\ray-project-ray",
+              "score": 14451.3379,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "crewAIInc/crewAI",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\crewAIInc-crewAI",
+              "score": 12846.5735,
+              "learning_status": "candidate"
+            },
+            {
+              "full_name": "dask/dask",
+              "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\dask-dask",
+              "score": 5243.0283,
+              "learning_status": "candidate"
+            }
+          ]
+        }
+      }
+    },
+    "dialogue_hints": {
+      "active_handoff": {
+        "session_id": "asset-20260314-071552",
+        "source": "metaforge-assetize",
+        "title": "MetaForge dialogue asset 20260314-071552",
+        "workspace": "D:\\codex",
+        "summary": "continue bounded dispatch with validation-first policy",
+        "topics": [
+          "dialogue-compaction",
+          "metaforge-handoff"
+        ],
+        "constraints": [
+          "explicit validation notes required for all delivery claims"
+        ],
+        "decisions": [
+          "continue bounded dispatch with validation-first policy"
+        ],
+        "tags": [],
+        "artifacts": [
+          "D:\\codex\\dialogue-assets\\dialogue-memory-20260314-071552.json",
+          "D:\\codex\\dialogue-assets\\dialogue-handoff-20260314-071552.json",
+          "D:\\codex\\dialogue-assets\\dialogue-asset-note-20260314-071552.md"
+        ],
+        "message_count": 0,
+        "last_user_message": "",
+        "last_assistant_message": "",
+        "updated_at": "2026-03-13T23:15:52.993887Z",
+        "created_at": "2026-03-13T23:15:52.993887Z"
+      },
+      "recent_topics": [
+        "dialogue-compaction",
+        "metaforge-handoff",
+        "codex-memory",
+        "metaforge"
+      ],
+      "shared_constraints": [
+        "explicit validation notes required for all delivery claims",
+        "Explicit validation is required before claiming delivery."
+      ],
+      "recent_decisions": [
+        "continue bounded dispatch with validation-first policy",
+        "Use local dialogue ledger as the shared memory bridge."
+      ],
+      "recent_sessions": [
+        {
+          "session_id": "asset-20260314-071552",
+          "source": "metaforge-assetize",
+          "title": "MetaForge dialogue asset 20260314-071552",
+          "workspace": "D:\\codex",
+          "summary": "continue bounded dispatch with validation-first policy",
+          "topics": [
+            "dialogue-compaction",
+            "metaforge-handoff"
+          ],
+          "constraints": [
+            "explicit validation notes required for all delivery claims"
+          ],
+          "decisions": [
+            "continue bounded dispatch with validation-first policy"
+          ],
+          "tags": [],
+          "artifacts": [
+            "D:\\codex\\dialogue-assets\\dialogue-memory-20260314-071552.json",
+            "D:\\codex\\dialogue-assets\\dialogue-handoff-20260314-071552.json",
+            "D:\\codex\\dialogue-assets\\dialogue-asset-note-20260314-071552.md"
+          ],
+          "message_count": 0,
+          "last_user_message": "",
+          "last_assistant_message": "",
+          "updated_at": "2026-03-13T23:15:52.993887Z",
+          "created_at": "2026-03-13T23:15:52.993887Z"
+        },
+        {
+          "session_id": "asset-20260314-061947",
+          "source": "metaforge-assetize",
+          "title": "MetaForge dialogue asset 20260314-061947",
+          "workspace": "D:\\codex",
+          "summary": "continue bounded dispatch with validation-first policy",
+          "topics": [
+            "dialogue-compaction",
+            "metaforge-handoff"
+          ],
+          "constraints": [
+            "explicit validation notes required for all delivery claims"
+          ],
+          "decisions": [
+            "continue bounded dispatch with validation-first policy"
+          ],
+          "tags": [],
+          "artifacts": [
+            "D:\\codex\\dialogue-assets\\dialogue-memory-20260314-061947.json",
+            "D:\\codex\\dialogue-assets\\dialogue-handoff-20260314-061947.json",
+            "D:\\codex\\dialogue-assets\\dialogue-asset-note-20260314-061947.md"
+          ],
+          "message_count": 0,
+          "last_user_message": "",
+          "last_assistant_message": "",
+          "updated_at": "2026-03-13T22:19:48.421529Z",
+          "created_at": "2026-03-13T22:19:48.421529Z"
+        },
+        {
+          "session_id": "codex-shared-memory-20260314",
+          "source": "codex",
+          "title": "Codex MetaForge shared memory rollout",
+          "workspace": "D:\\codex",
+          "summary": "Build a local dialogue memory bridge and connect Codex conversations to the shared MetaForge snapshot/context package.",
+          "topics": [
+            "codex-memory",
+            "metaforge"
+          ],
+          "constraints": [
+            "Explicit validation is required before claiming delivery."
+          ],
+          "decisions": [
+            "Use local dialogue ledger as the shared memory bridge."
+          ],
+          "tags": [],
+          "artifacts": [],
+          "message_count": 2,
+          "last_user_message": "Build a local storage memory mechanism so Codex conversations can share state with the MetaForge system.",
+          "last_assistant_message": "Use the existing memory/context framework to build a shared dialogue ledger and connect it into the MetaForge snapshot and context package.",
+          "updated_at": "2026-03-13T22:16:20.602058Z",
+          "created_at": "2026-03-13T22:16:20.602058Z"
+        }
+      ]
+    },
+    "memory_hints": [
+      "Memory fact: Authoritative workspace for ToyOS execution :: D:\\codex\\generated\\toy-os-demo is the authoritative workspace for ToyOS execution and verification.",
+      "Memory fact: MetaForge startup command :: D:\\codex\\codex-session-bootstrap.ps1 is the current startup command for refreshing shared dialogue state.",
+      "Memory failure-fix: Build readiness must gate on toolchain and Docker daemon availability :: Host-toolchain absence and Docker daemon unavailability should block build readiness claims.",
+      "Memory candidate failure-fix: Build readiness must gate on toolchain and Docker daemon availability :: Host-toolchain absence and Docker daemon unavailability should block build readiness claims.",
+      "Memory candidate procedure: Preflight ToyOS build before claiming readiness :: Probe toolchain and Docker daemon before any ToyOS build verdict.",
+      "Memory candidate failure_fix: Build readiness must gate on toolchain and Docker daemon availability :: Host-toolchain absence and Docker daemon unavailability should block build readiness claims.",
+      "Memory candidate failure_fix: State write permission denials weaken trustworthy continuity :: Persisted state writes can fail while liveness continues, so continuity must include persistence trust."
+    ],
+    "strategy": {
+      "applied": true,
+      "explored": false,
+      "reason": "matched_success_pattern",
+      "pattern_id": "strategy_8940a86a3700",
+      "pattern_score": 0.4185,
+      "preferred_worker": "shell",
+      "tools_used": [
+        "docker_exec",
+        "file_write_workspace",
+        "git_push",
+        "read_repo",
+        "shell_exec",
+        "nasm",
+        "gcc",
+        "ld",
+        "qemu_system_i386",
+        "make"
+      ],
+      "tool_actions": [
+        "docker_exec",
+        "file_write_workspace",
+        "git_push",
+        "read_repo",
+        "shell_exec",
+        "build",
+        "test",
+        "execute"
+      ],
+      "structure_summary": "entrypoint=build/kernel.bin; required_outputs=7; evidence_files=5; delivery=valuable",
+      "memory_revision": 5277,
+      "hint_lines": [
+        "Reuse strategy strategy_8940a86a3700 score=0.4185: prefer tool flow docker_exec, file_write_workspace, git_push, read_repo, shell_exec.",
+        "Preserve structure: entrypoint=build/kernel.bin; required_outputs=7; evidence_files=5; delivery=valuable.",
+        "Preferred worker from prior success: shell."
+      ],
+      "exploration_ratio": 0.2,
+      "candidate_count": 1
+    },
+    "verification_scope": {
+      "modules": [
+        "tools.binary_classification_lab_runner",
+        "app.executor_adapter",
+        "tools.db_runtime_check",
+        "app.git_service",
+        "tools.approve_self_patch"
+      ],
+      "teams": [
+        "backend_team",
+        "infrastructure_team"
+      ],
+      "layers": [
+        "unclassified"
+      ]
+    },
+    "current_plan": [
+      "Task type: implementation",
+      "Primary modules: tools.binary_classification_lab_runner, app.executor_adapter, tools.db_runtime_check, app.git_service, tools.approve_self_patch",
+      "Dependency expansion: none",
+      "Owner teams: backend_team, infrastructure_team",
+      "Layers: unclassified",
+      "Scheduler owner teams: backend_team, infrastructure_team",
+      "Scheduler layers: unclassified",
+      "Strategy pattern: strategy_8940a86a3700 score=0.4185"
+    ],
+    "summary_blocks": [
+      "Task type: implementation\nPrimary modules: tools.binary_classification_lab_runner, app.executor_adapter, tools.db_runtime_check, app.git_service, tools.approve_self_patch\nDependency expansion: none\nOwner teams: backend_team, infrastructure_team\nLayers: unclassified\nScheduler owner teams: backend_team, infrastructure_team\nScheduler layers: unclassified",
+      "Reuse strategy strategy_8940a86a3700 score=0.4185: prefer tool flow docker_exec, file_write_workspace, git_push, read_repo, shell_exec.\nPreserve structure: entrypoint=build/kernel.bin; required_outputs=7; evidence_files=5; delivery=valuable.\nPreferred worker from prior success: shell.",
+      "Failure pattern: unknown_failure -> investigate\nFailure pattern: Task failed after execution error. -> investigate\nPreferred capabilities: agent_orchestration, webapp_generation, deploy_scaffold, tool_extension, kv_cache_manager\nPreferred workers: reviewer, coder, supervisor\nTop capability reputation: agent_orchestration, webapp_generation, deploy_scaffold, tool_extension\nTop worker reputation: reviewer, coder, supervisor\nRepo learning modules=164 chunks=144",
+      "Active dialogue summary: continue bounded dispatch with validation-first policy\nShared dialogue topics: dialogue-compaction, metaforge-handoff, codex-memory, metaforge\nShared dialogue constraints: explicit validation notes required for all delivery claims; Explicit validation is required before claiming delivery.\nShared dialogue decisions: continue bounded dispatch with validation-first policy; Use local dialogue ledger as the shared memory bridge."
+    ],
+    "budget_chars": 1600
+  },
+  "plan": [
+    {
+      "id": "13750cc3",
+      "title": "Frame research question",
+      "status": "running",
+      "worker": "reviewer",
+      "phase": "understand"
+    },
+    {
+      "id": "392cc9af",
+      "title": "Acquire internet knowledge",
+      "status": "pending",
+      "worker": "docker",
+      "phase": "execute"
+    },
+    {
+      "id": "4d9361ea",
+      "title": "Synthesize research output",
+      "status": "pending",
+      "worker": "reviewer",
+      "phase": "summarize"
+    }
+  ],
+  "verification_signals": [
+    {
+      "timestamp": "2026-04-02T09:24:05.087937Z",
+      "kind": "admission_accepted",
+      "success": true,
+      "task_id": "563aa6e9a5f548379b10176dfe792975",
+      "admission_lane": null,
+      "admission_reason": null,
+      "execution_mode": "governance",
+      "queue_name": "fastlane",
+      "task_type": "report_refresh"
+    }
+  ],
+  "verification_signal_count": 1,
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-02T09:24:05.087937Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "563aa6e9a5f548379b10176dfe792975",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "governance",
+        "queue_name": "fastlane",
+        "task_type": "report_refresh"
+      }
+    ]
+  }
+}

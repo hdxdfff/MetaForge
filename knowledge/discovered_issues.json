@@ -1,0 +1,79 @@
+{
+  "updated_at": "2026-03-12T13:14:29.456858Z",
+  "project": "ToyOS",
+  "workspace": "D:\\codex\\generated\\toy-os-demo",
+  "sources": {
+    "build_report": "D:\\codex\\generated\\toy-os-demo\\build-report.json",
+    "kernel": "D:\\codex\\generated\\toy-os-demo\\kernel.c",
+    "syscall": "D:\\codex\\generated\\toy-os-demo\\src\\syscall.c",
+    "smoke_spec": "D:\\codex\\generated\\toy-os-demo\\tools\\generic_qemu_smoke.json"
+  },
+  "issues": [
+    {
+      "finding_id": "toyos-build-status",
+      "category": "build",
+      "severity": "info",
+      "status": "observed",
+      "title": "Track ToyOS build pipeline health",
+      "summary": "Keep build report health visible so future regressions immediately enter the issue stream.",
+      "evidence": {
+        "build_report": "D:\\codex\\generated\\toy-os-demo\\build-report.json",
+        "total_checks": 16,
+        "failed_checks": 0
+      },
+      "next_action": "Refresh build report after every kernel-facing patch."
+    },
+    {
+      "finding_id": "toyos-paging-stage1-gate",
+      "category": "paging",
+      "severity": "high",
+      "status": "open",
+      "title": "Paging is still experimental and not part of the stable default path",
+      "summary": "ToyOS now needs a guarded Stage 1 validation path while keeping the stable boot contract unchanged until ring3 restore is stronger.",
+      "evidence": {
+        "file": "D:\\codex\\generated\\toy-os-demo\\kernel.c",
+        "paging_helper_visible": true,
+        "stable_gate_present": true,
+        "stage1_markers_present": true
+      },
+      "next_action": "Validate the guarded paging path under QEMU and keep it out of the stable default boot path."
+    },
+    {
+      "finding_id": "toyos-syscall-pointer-validation",
+      "category": "syscall",
+      "severity": "high",
+      "status": "open",
+      "title": "Syscall pointer validation is still only minimally paging-aware",
+      "summary": "ToyOS now enforces mapped-range checks when paging is enabled, but it still lacks true per-process and page-permission-aware user-memory validation.",
+      "evidence": {
+        "file": "D:\\codex\\generated\\toy-os-demo\\src\\syscall.c",
+        "validation_stub_present": true,
+        "paging_aware_validation": true
+      },
+      "next_action": "Upgrade mapped-range checks into true per-process and page-permission-aware user-buffer enforcement before promoting stronger ring3 isolation."
+    },
+    {
+      "finding_id": "toyos-regression-surface",
+      "category": "verification",
+      "severity": "medium",
+      "status": "open",
+      "title": "Regression surface is still boot-heavy",
+      "summary": "The current automated suite now includes guarded paging, explicit user-probe assertions, scripted shell-command coverage, bounded filesystem stress, alternating multi-writer verification, user/kernel mixed filesystem reads, repeated known-file reads, missing-path handling, and empty-path negative cases, but it is still light on raw keyboard automation and broader filesystem regressions.",
+      "evidence": {
+        "file": "D:\\codex\\generated\\toy-os-demo\\tools\\generic_qemu_smoke.json",
+        "test_count": 8,
+        "test_names": [
+          "qemu_boot_smoke",
+          "qemu_boot_soak",
+          "qemu_boot_paging_stage1",
+          "qemu_user_probe_assertions",
+          "qemu_shell_probe_assertions",
+          "qemu_filesystem_stress_assertions",
+          "qemu_filesystem_multiwriter_assertions",
+          "qemu_filesystem_mixed_assertions"
+        ]
+      },
+      "next_action": "Expand the suite beyond bounded user/kernel mixed reads into raw keyboard behavior and heavier user/kernel mixed filesystem pressure."
+    }
+  ]
+}

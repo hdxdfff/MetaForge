@@ -1,0 +1,51 @@
+{
+  "status": "confirmed",
+  "stage5_candidate": true,
+  "stage5_confirmed": true,
+  "window_days": 7,
+  "continuous_runtime_hours": 3.3,
+  "new_real_artifacts_24h": 8,
+  "new_real_artifacts_7d": 8,
+  "new_real_artifacts_14d": 8,
+  "self_repair_success_count_7d": 3,
+  "self_repair_success_count_14d": 3,
+  "capability_expansion_count_7d": 9,
+  "capability_expansion_count_14d": 9,
+  "auto_completed_ratio_24h": 0.1848,
+  "blocked_to_done_conversion_7d": 0.0833,
+  "median_time_to_first_result_minutes": 6.5,
+  "regression_fail_rate_7d": 0.0,
+  "productivity_trend": "up",
+  "control_layer_status": "stable",
+  "autonomy_stage": "stage4_confirmed",
+  "stable_autonomy": true,
+  "release_gate_signal_count": 0,
+  "active_queue_pressure": "low",
+  "historical_failure_debt_count": 95,
+  "historical_failure_debt_severity": "high",
+  "historical_failure_debt_burndown_rate": 0.0,
+  "historical_failure_debt_last_reduced_at": null,
+  "amplifier_trigger_count_24h": 5,
+  "amplifier_generated_tasks_24h": 21,
+  "amplifier_entered_execution_24h": 0,
+  "amplifier_completed_tasks_24h": 0,
+  "amplifier_success_conversion_rate": 0.0,
+  "amplifier_breakdown": {
+    "self_repair_task_generator": {
+      "trigger_count": 3,
+      "generated_tasks": 16,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0
+    },
+    "artifact_growth_task_generator": {
+      "trigger_count": 2,
+      "generated_tasks": 5,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0
+    }
+  },
+  "last_evaluated_at": "2026-04-10T05:06:29.871285Z",
+  "reasons": []
+}

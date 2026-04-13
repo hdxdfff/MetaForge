@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Task Publication Request",
+  "type": "object",
+  "required": ["title", "prompt", "task_type", "verification_level"],
+  "properties": {
+    "title": {
+      "type": "string",
+      "minLength": 3
+    },
+    "prompt": {
+      "type": "string",
+      "minLength": 8
+    },
+    "task_type": {
+      "type": "string",
+      "minLength": 2
+    },
+    "verification_level": {
+      "type": "string",
+      "minLength": 2
+    },
+    "repo_path": {
+      "type": ["string", "null"]
+    },
+    "project_id": {
+      "type": ["string", "null"]
+    },
+    "goal": {
+      "type": ["string", "null"]
+    },
+    "goal_id": {
+      "type": ["string", "null"]
+    },
+    "graph_id": {
+      "type": ["string", "null"]
+    },
+    "node_id": {
+      "type": ["string", "null"]
+    },
+    "scheduled_by": {
+      "type": "string"
+    },
+    "execution_mode": {
+      "type": "string",
+      "enum": ["governance", "research", "production"]
+    },
+    "auto_approve": {
+      "type": "boolean"
+    },
+    "allow_resource_scan": {
+      "type": "boolean"
+    },
+    "allow_repo_status": {
+      "type": "boolean"
+    },
+    "queue_name": {
+      "type": ["string", "null"]
+    },
+    "max_runtime_seconds": {
+      "type": ["integer", "null"],
+      "minimum": 1
+    },
+    "retry_limit": {
+      "type": ["integer", "null"],
+      "minimum": 0
+    },
+    "rollback_rule": {
+      "type": ["string", "null"]
+    }
+  },
+  "additionalProperties": true
+}

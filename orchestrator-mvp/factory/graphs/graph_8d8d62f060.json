@@ -1,0 +1,62 @@
+{
+  "graph_id": "graph_8d8d62f060",
+  "goal_id": "goal_db9ba3fae0",
+  "target": "Experiment progress-first goal seeding",
+  "type": "experiment",
+  "created_at": "2026-03-10T09:21:52.987709Z",
+  "updated_at": "2026-03-10T09:43:54.035970Z",
+  "status": "completed",
+  "nodes": [
+    {
+      "id": "product_design",
+      "title": "Design product shape for Experiment progress-first goal seeding",
+      "role": "product",
+      "prompt": "Create a structured product design for: Experiment progress-first goal seeding",
+      "dependencies": [],
+      "status": "completed",
+      "task_id": null,
+      "worker": "reviewer",
+      "selection_reason": "role-default:product->reviewer",
+      "worker_success_rate": 0.5,
+      "skill_matches": [
+        "completed_1554",
+        "task_12345678"
+      ],
+      "execution_lane": "host-control",
+      "worker_vm_preferred": false
+    },
+    {
+      "id": "architecture_design",
+      "title": "Design architecture for Experiment progress-first goal seeding",
+      "role": "architect",
+      "prompt": "Create a practical architecture plan for: Experiment progress-first goal seeding",
+      "dependencies": [
+        "product_design"
+      ],
+      "status": "completed",
+      "task_id": null
+    },
+    {
+      "id": "implementation_plan",
+      "title": "Plan and start implementation for Experiment progress-first goal seeding",
+      "role": "coder",
+      "prompt": "Break down implementation work for: Experiment progress-first goal seeding",
+      "dependencies": [
+        "architecture_design"
+      ],
+      "status": "completed",
+      "task_id": null
+    },
+    {
+      "id": "verification",
+      "title": "Validate generated work for Experiment progress-first goal seeding",
+      "role": "tester",
+      "prompt": "Create validation steps and tests for: Experiment progress-first goal seeding",
+      "dependencies": [
+        "implementation_plan"
+      ],
+      "status": "completed",
+      "task_id": null
+    }
+  ]
+}

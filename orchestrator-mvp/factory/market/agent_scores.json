@@ -1,0 +1,29 @@
+{
+  "updated_at": "2026-03-12T07:08:59.311009Z",
+  "agents": [
+    {
+      "agent": "coder_agent",
+      "role": "coder",
+      "success_rate": 0.0,
+      "avg_duration": 0.0,
+      "cost_score": 0.0,
+      "runs": 0
+    },
+    {
+      "agent": "reviewer_agent",
+      "role": "reviewer",
+      "success_rate": 0.0,
+      "avg_duration": 1.0,
+      "cost_score": 0.0,
+      "runs": 6
+    },
+    {
+      "agent": "tester_agent",
+      "role": "tester",
+      "success_rate": 0.0,
+      "avg_duration": 1.0,
+      "cost_score": 0.0,
+      "runs": 3
+    }
+  ]
+}

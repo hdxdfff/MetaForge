@@ -1,0 +1,265 @@
+{
+  "steps": [
+    {
+      "step_id": "4cc9f263",
+      "step_title": "Understand task",
+      "action": "planner_step",
+      "ok": true,
+      "at": "2026-03-28T22:29:21.963119Z",
+      "worker": "planner",
+      "phase": "understand",
+      "route_model": "deepseek-reasoner",
+      "route_provider": "reasoning",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 456,
+        "line_count": 4,
+        "stored_raw": false
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "fd752d5d",
+      "step_title": "Draft solution",
+      "action": "coder_step",
+      "ok": true,
+      "at": "2026-03-28T22:29:56.735424Z",
+      "worker": "coder",
+      "phase": "draft",
+      "route_model": "ark-code-latest",
+      "route_provider": "openai",
+      "output_ref": {
+        "artifact_id": "ctx_9e964ff2ea0a",
+        "task_id": "f6ee1eee617a44d38b50905e5ea9af10",
+        "step_id": "fd752d5d",
+        "channel": "coder-output",
+        "title": "Draft solution output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\f6ee1eee617a44d38b50905e5ea9af10\\fd752d5d-coder-output-ctx_9e964ff2ea0a.txt",
+        "size_chars": 1280,
+        "line_count": 21,
+        "created_at": "2026-03-28T22:29:52.877850Z",
+        "metadata": {
+          "worker": "coder",
+          "phase": "draft",
+          "route_model": "ark-code-latest",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "coder-output",
+        "char_count": 1280,
+        "line_count": 21,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "d41f37d2",
+      "step_title": "Execute validation",
+      "action": "docker_step",
+      "ok": true,
+      "at": "2026-03-28T22:30:28.998804Z",
+      "worker": "docker",
+      "phase": "execute",
+      "route_model": "deepseek-chat",
+      "route_provider": "runtime",
+      "output_ref": {
+        "artifact_id": "ctx_bca07c5997a2",
+        "task_id": "f6ee1eee617a44d38b50905e5ea9af10",
+        "step_id": "d41f37d2",
+        "channel": "docker-output",
+        "title": "Execute validation output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\f6ee1eee617a44d38b50905e5ea9af10\\d41f37d2-docker-output-ctx_bca07c5997a2.txt",
+        "size_chars": 34,
+        "line_count": 2,
+        "created_at": "2026-03-28T22:30:25.053598Z",
+        "metadata": {
+          "worker": "docker",
+          "phase": "execute",
+          "route_model": "deepseek-chat",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "docker-output",
+        "char_count": 34,
+        "line_count": 2,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "bd227366",
+      "step_title": "Issue patch decision",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-03-28T22:31:01.495088Z",
+      "worker": "reviewer",
+      "phase": "verify",
+      "route_model": "ark-code-latest",
+      "route_provider": "openai",
+      "output_ref": {
+        "artifact_id": "ctx_b527275aa85a",
+        "task_id": "f6ee1eee617a44d38b50905e5ea9af10",
+        "step_id": "bd227366",
+        "channel": "reviewer-output",
+        "title": "Issue patch decision output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\f6ee1eee617a44d38b50905e5ea9af10\\bd227366-reviewer-output-ctx_b527275aa85a.txt",
+        "size_chars": 1009,
+        "line_count": 14,
+        "created_at": "2026-03-28T22:30:57.843803Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "verify",
+          "route_model": "ark-code-latest",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 1009,
+        "line_count": 14,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "40414191",
+      "step_title": "Revise next action",
+      "action": "planner_step",
+      "ok": true,
+      "at": "2026-03-28T22:31:36.559592Z",
+      "worker": "planner",
+      "phase": "revise",
+      "route_model": "deepseek-reasoner",
+      "route_provider": "reasoning",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 266,
+        "line_count": 4,
+        "stored_raw": false
+      },
+      "probe_attempts": 0
+    }
+  ],
+  "task_id": "f6ee1eee617a44d38b50905e5ea9af10",
+  "task_title": null,
+  "task_status": "released",
+  "started_at": "2026-03-28T22:27:37.940920Z",
+  "updated_at": "2026-03-28T22:32:08.942076Z",
+  "completed": true,
+  "result": {
+    "summary": "Fallback plan generated locally because planner remote access is unavailable.",
+    "completed_steps": 5,
+    "context_used_chars": 681,
+    "cheap_calls_used": 2,
+    "cheap_chars_used": 2407,
+    "escalation_count": 0,
+    "execution_mode": "research",
+    "execution_status": "execution_finished",
+    "production_evidence": {
+      "mode": "research",
+      "status": "not-required"
+    },
+    "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\f6ee1eee617a44d38b50905e5ea9af10\\execution-evidence.json",
+    "execution_evidence_step_count": 5,
+    "verification_contract": {
+      "verification_level": "L1",
+      "required_checks": [
+        "contract_valid",
+        "build_success",
+        "tests_pass",
+        "artifact_manifest_present",
+        "evidence_fresh"
+      ],
+      "artifact_requirements": {
+        "must_register_artifact": true,
+        "must_have_timestamp": true,
+        "must_have_files": [
+          "D:\\codex\\METAFORGE_OS_THROUGHPUT_AUDIT_NOTE.md"
+        ],
+        "expected_outputs": [
+          "D:\\codex\\METAFORGE_OS_THROUGHPUT_AUDIT_NOTE.md"
+        ],
+        "entrypoint": "D:\\codex\\METAFORGE_OS_THROUGHPUT_AUDIT_NOTE.md",
+        "artifact_type": "report",
+        "test_command": null
+      },
+      "release_gate": "all_required_checks_pass",
+      "failure_policy": "return_to_planner",
+      "evidence_requirements": [],
+      "verification_notes": [
+        "Audit the throughput blueprint against the controller and identify the smallest queue admission and WIP gaps.",
+        "Produce explicit verification output or a bounded failure report.",
+        "Record what was learned and the bounded next experiment.",
+        "Task is invalid unless the declared artifact set is refreshed and verifiable."
+      ]
+    },
+    "verification_result": {
+      "status": "verified",
+      "passed": true,
+      "mode": "research",
+      "verification_level": "L1",
+      "contract": {
+        "verification_level": "L1",
+        "required_checks": [
+          "contract_valid",
+          "build_success",
+          "tests_pass",
+          "artifact_manifest_present",
+          "evidence_fresh"
+        ],
+        "artifact_requirements": {
+          "must_register_artifact": true,
+          "must_have_timestamp": true,
+          "must_have_files": [
+            "D:\\codex\\METAFORGE_OS_THROUGHPUT_AUDIT_NOTE.md"
+          ],
+          "expected_outputs": [
+            "D:\\codex\\METAFORGE_OS_THROUGHPUT_AUDIT_NOTE.md"
+          ],
+          "entrypoint": "D:\\codex\\METAFORGE_OS_THROUGHPUT_AUDIT_NOTE.md",
+          "artifact_type": "report",
+          "test_command": null
+        },
+        "release_gate": "all_required_checks_pass",
+        "failure_policy": "return_to_planner",
+        "evidence_requirements": [],
+        "verification_notes": [
+          "Audit the throughput blueprint against the controller and identify the smallest queue admission and WIP gaps.",
+          "Produce explicit verification output or a bounded failure report.",
+          "Record what was learned and the bounded next experiment.",
+          "Task is invalid unless the declared artifact set is refreshed and verifiable."
+        ]
+      },
+      "evidence": {
+        "status": "verified",
+        "execution_evidence_path": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\f6ee1eee617a44d38b50905e5ea9af10\\execution-evidence.json",
+        "execution_evidence_present": true,
+        "required_checks": [
+          "contract_valid",
+          "build_success",
+          "tests_pass",
+          "artifact_manifest_present",
+          "evidence_fresh"
+        ],
+        "artifact_requirements": {
+          "must_register_artifact": true,
+          "must_have_timestamp": true,
+          "must_have_files": [
+            "D:\\codex\\METAFORGE_OS_THROUGHPUT_AUDIT_NOTE.md"
+          ],
+          "expected_outputs": [
+            "D:\\codex\\METAFORGE_OS_THROUGHPUT_AUDIT_NOTE.md"
+          ],
+          "entrypoint": "D:\\codex\\METAFORGE_OS_THROUGHPUT_AUDIT_NOTE.md",
+          "artifact_type": "report",
+          "test_command": null
+        }
+      }
+    },
+    "delivery_state": "released"
+  }
+}

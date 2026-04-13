@@ -1,0 +1,196 @@
+{
+  "task_id": "15738ce707034cfd9ef1223a49302aa2",
+  "task_status": "failed",
+  "phase": "failed",
+  "updated_at": "2026-04-02T18:43:23.174269Z",
+  "heartbeat_at": "2026-04-02T18:43:23.174269Z",
+  "repo_path": "D:\\codex\\orchestrator-mvp",
+  "goal": "Execute the next action",
+  "goal_id": null,
+  "graph_id": null,
+  "node_id": null,
+  "scheduled_by": "runtime.failure_backlog_automation",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\15738ce707034cfd9ef1223a49302aa2",
+  "error": "Audit output schema rejected for doc_patch/coder: Coder audit output missing required structured sections.",
+  "title": "Execute the next bounded action",
+  "prompt": "Prepare a local-first deployment checklist, inspect Docker and CI files, generate any missing starter deployment manifests, and summarize which final external credentials or server actions are still blocked.",
+  "scheduler_hint": {
+    "automation_source": "failure_backlog_automation",
+    "template_id": "deployment-wrapup",
+    "template_category": "deployment",
+    "cluster_key": "recover stable execution output",
+    "cluster_count": 214,
+    "cluster_status": "attention",
+    "handling_mode": "generic_saturation",
+    "dispatch_now": false,
+    "admission_mode": "degraded",
+    "scheduled_by": "runtime.failure_backlog_automation",
+    "decomposition_child": true,
+    "decomposition_parent_task_id": "8f3761a614cc44da804118d5132128fb",
+    "decomposition_root_task_id": "8f3761a614cc44da804118d5132128fb",
+    "decomposition_depth": 1,
+    "max_decomposition_depth": 2,
+    "decomposition_child_index": 2,
+    "decomposition_allow_children": false,
+    "decomposition_path_kind": "branch",
+    "decomposition_shared_dependency_group": "8f3761a614cc44da804118d5132128fb",
+    "decomposition_repair_for": null,
+    "decomposition_dependencies": [
+      "Clarify the target"
+    ],
+    "dependency_task_ids": [
+      "1b8aaa720a9b464cb82575ae4dbfeb30"
+    ],
+    "dependency_count": 1
+  },
+  "context_package": {},
+  "plan": [
+    {
+      "id": "51e1b59c",
+      "title": "Understand task",
+      "status": "completed",
+      "worker": "planner",
+      "phase": "understand"
+    },
+    {
+      "id": "b1e65d6e",
+      "title": "Draft solution",
+      "status": "failed",
+      "worker": "coder",
+      "phase": "draft"
+    },
+    {
+      "id": "529cf5c3",
+      "title": "Execute validation",
+      "status": "pending",
+      "worker": "docker",
+      "phase": "execute"
+    },
+    {
+      "id": "724f93cd",
+      "title": "Issue patch decision",
+      "status": "pending",
+      "worker": "reviewer",
+      "phase": "verify"
+    },
+    {
+      "id": "60ada4c6",
+      "title": "Revise next action",
+      "status": "pending",
+      "worker": "planner",
+      "phase": "revise"
+    }
+  ],
+  "verification_signals": [
+    {
+      "timestamp": "2026-04-02T18:37:22.480639Z",
+      "kind": "admission_accepted",
+      "success": true,
+      "task_id": "15738ce707034cfd9ef1223a49302aa2",
+      "admission_lane": null,
+      "admission_reason": null,
+      "execution_mode": "governance",
+      "queue_name": "fastlane",
+      "task_type": "doc_patch"
+    },
+    {
+      "timestamp": "2026-04-02T18:38:49.414041Z",
+      "kind": "step_completed",
+      "success": true,
+      "task_id": "15738ce707034cfd9ef1223a49302aa2",
+      "step_id": "51e1b59c",
+      "step_title": "Understand task",
+      "worker": "planner",
+      "phase": "understand",
+      "route_model": "deepseek-reasoner",
+      "route_provider": "reasoning",
+      "elapsed_ms": 11375,
+      "output_ref": {},
+      "output_stats": {
+        "channel": "planner-output",
+        "char_count": 558,
+        "line_count": 4,
+        "stored_raw": false
+      }
+    },
+    {
+      "timestamp": "2026-04-02T18:40:35.799294Z",
+      "kind": "step_failed",
+      "success": false,
+      "task_id": "15738ce707034cfd9ef1223a49302aa2",
+      "step_id": "b1e65d6e",
+      "step_title": "Draft solution",
+      "worker": "coder",
+      "phase": "draft",
+      "route_model": "kimi-k2.5",
+      "route_provider": "openai",
+      "elapsed_ms": 93516,
+      "error": "Audit output schema rejected for doc_patch/coder: Coder audit output missing required structured sections.",
+      "output_ref": {},
+      "output_stats": {
+        "channel": "error-output",
+        "char_count": 106,
+        "line_count": 1,
+        "stored_raw": false
+      }
+    }
+  ],
+  "verification_signal_count": 3,
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-02T18:37:22.480639Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "15738ce707034cfd9ef1223a49302aa2",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "governance",
+        "queue_name": "fastlane",
+        "task_type": "doc_patch"
+      },
+      {
+        "timestamp": "2026-04-02T18:38:49.414041Z",
+        "kind": "step_completed",
+        "success": true,
+        "task_id": "15738ce707034cfd9ef1223a49302aa2",
+        "step_id": "51e1b59c",
+        "step_title": "Understand task",
+        "worker": "planner",
+        "phase": "understand",
+        "route_model": "deepseek-reasoner",
+        "route_provider": "reasoning",
+        "elapsed_ms": 11375,
+        "output_ref": {},
+        "output_stats": {
+          "channel": "planner-output",
+          "char_count": 558,
+          "line_count": 4,
+          "stored_raw": false
+        }
+      },
+      {
+        "timestamp": "2026-04-02T18:40:35.799294Z",
+        "kind": "step_failed",
+        "success": false,
+        "task_id": "15738ce707034cfd9ef1223a49302aa2",
+        "step_id": "b1e65d6e",
+        "step_title": "Draft solution",
+        "worker": "coder",
+        "phase": "draft",
+        "route_model": "kimi-k2.5",
+        "route_provider": "openai",
+        "elapsed_ms": 93516,
+        "error": "Audit output schema rejected for doc_patch/coder: Coder audit output missing required structured sections.",
+        "output_ref": {},
+        "output_stats": {
+          "channel": "error-output",
+          "char_count": 106,
+          "line_count": 1,
+          "stored_raw": false
+        }
+      }
+    ]
+  }
+}

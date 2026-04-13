@@ -1,0 +1,7 @@
+[
+  {
+    "pattern": "Prompt: Unified orchestrator dispatch.\n\nCaller: codex-main\n\nRuntime policy: Prefer local runtime resources such as WSL, ",
+    "count": 1,
+    "example": "Prompt: Unified orchestrator dispatch.\n\nCaller: codex-main\n\nRuntime policy: Prefer local runtime resources such as WSL, Git, Docker, virtual machines, scripts, and installed developer software before using expensive models. For OS coursewor"
+  }
+]

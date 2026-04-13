@@ -1,0 +1,39 @@
+{
+  "task_id": "1bbcba74b8a04861b4a909b5d7a80db4",
+  "task_title": "Software Factory Flow",
+  "task_status": "timed_out",
+  "started_at": "2026-04-02T23:00:37.842419Z",
+  "updated_at": "2026-04-03T12:48:51.106542Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "1bbcba74b8a04861b4a909b5d7a80db4-terminal-record",
+      "step_title": "Software Factory Flow",
+      "action": "task_terminal_record",
+      "ok": false,
+      "at": "2026-04-03T12:48:51.106542Z",
+      "status": "timed_out",
+      "summary": null,
+      "error": "Task timed out after 120 minutes without progress.",
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ],
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-02T23:00:41.457484Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "1bbcba74b8a04861b4a909b5d7a80db4",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "governance",
+        "queue_name": "fastlane",
+        "task_type": "report_refresh"
+      }
+    ],
+    "error": "Task timed out after 120 minutes without progress."
+  }
+}

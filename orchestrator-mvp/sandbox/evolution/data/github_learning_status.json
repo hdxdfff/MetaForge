@@ -1,0 +1,81 @@
+{
+  "updated_at": "2026-03-12T07:09:56.423975Z",
+  "enabled": true,
+  "topics": [
+    "agent",
+    "llm",
+    "compiler",
+    "kernel",
+    "robotics",
+    "distributed-system",
+    "inference"
+  ],
+  "languages": [
+    "Python",
+    "TypeScript",
+    "Rust",
+    "C++",
+    "C",
+    "Go"
+  ],
+  "managed_repo_count": 10,
+  "ready_repo_count": 1,
+  "candidate_repo_count": 9,
+  "scan_candidate_count": 10,
+  "top_candidates": [
+    {
+      "full_name": "langchain-ai/langchain",
+      "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\langchain-ai-langchain",
+      "score": 41262.1142,
+      "learning_status": "candidate"
+    },
+    {
+      "full_name": "ggerganov/llama.cpp",
+      "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\ggerganov-llama.cpp",
+      "score": 30857.5689,
+      "learning_status": "candidate"
+    },
+    {
+      "full_name": "OpenInterpreter/open-interpreter",
+      "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\OpenInterpreter-open-interpreter",
+      "score": 23252.3854,
+      "learning_status": "candidate"
+    },
+    {
+      "full_name": "microsoft/autogen",
+      "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\microsoft-autogen",
+      "score": 16454.9498,
+      "learning_status": "candidate"
+    },
+    {
+      "full_name": "vllm-project/vllm",
+      "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\vllm-project-vllm",
+      "score": 15260.6594,
+      "learning_status": "candidate"
+    },
+    {
+      "full_name": "ray-project/ray",
+      "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\ray-project-ray",
+      "score": 14451.3379,
+      "learning_status": "candidate"
+    },
+    {
+      "full_name": "crewAIInc/crewAI",
+      "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\crewAIInc-crewAI",
+      "score": 12846.5735,
+      "learning_status": "candidate"
+    },
+    {
+      "full_name": "dask/dask",
+      "local_path": "D:\\codex\\orchestrator-mvp\\workspace\\github-learning\\dask-dask",
+      "score": 5243.0283,
+      "learning_status": "candidate"
+    }
+  ],
+  "scan": {
+    "updated_at": "2026-03-12T07:09:56.419986Z",
+    "candidate_count": 10,
+    "live_scan": false,
+    "registered_count": 0
+  }
+}

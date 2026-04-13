@@ -1,0 +1,74 @@
+{
+  "contract_version": "1.0",
+  "run_id": "hrn_20260328_003",
+  "goal_id": "toyos_qemu_smoke_stability_v1",
+  "product": "toy-os-demo",
+  "feature_name": "qemu_smoke_stability",
+  "feature_type": "runtime_feature",
+  "source_goal": "Validate that the ToyOS smoke run reaches the stable online marker.",
+  "scope": {
+    "allowed_paths": [
+      "generated/toy-os-demo/kernel/**",
+      "generated/toy-os-demo/user/**",
+      "generated/toy-os-demo/tests/**",
+      "generated/toy-os-demo/docs/**"
+    ],
+    "forbidden_paths": [
+      "generated/toy-os-demo/toolchain/**",
+      "generated/toy-os-demo/bootloader/**",
+      "generated/toy-os-demo/network/**"
+    ],
+    "max_files_to_change": 12
+  },
+  "deliverables": [
+    "stable qemu smoke completion marker",
+    "docker-backed build evidence",
+    "qemu smoke report",
+    "runtime log proof"
+  ],
+  "definition_of_done": [
+    "project builds successfully",
+    "qemu smoke run completes without crash",
+    "stable online marker appears in qemu log",
+    "all required evidence files are produced"
+  ],
+  "acceptance_checks": [
+    {
+      "id": "build_success",
+      "type": "command_exit_code",
+      "command": "D:\\codex\\tools\\python311-embed\\python.exe D:\\codex\\generated\\toy-os-demo\\tools\\system_toolchain.py build",
+      "expected_exit_code": 0
+    },
+    {
+      "id": "qemu_smoke",
+      "type": "command_exit_code",
+      "command": "D:\\codex\\tools\\python311-embed\\python.exe D:\\codex\\generated\\toy-os-demo\\tools\\system_toolchain.py qemu-smoke",
+      "expected_exit_code": 0
+    },
+    {
+      "id": "output_contains_marker",
+      "type": "file_contains",
+      "file": "factory/runtime/harness_runs/hrn_20260328_003/evidence/qemu-output.txt",
+      "must_contain": [
+        "ToyOS: kernel services online"
+      ]
+    }
+  ],
+  "required_evidence": [
+    "evidence/build-report.json",
+    "evidence/qemu-smoke-report.json",
+    "evidence/qemu-output.txt",
+    "generator_report.json",
+    "evaluation_report.json"
+  ],
+  "retry_policy": {
+    "max_attempts": 2,
+    "on_fail": "create_fix_task"
+  },
+  "budget": {
+    "max_runtime_minutes": 45,
+    "max_model_calls": 12
+  },
+  "status": "approved_for_execution",
+  "created_at": "2026-03-27T20:10:43.988947+00:00"
+}

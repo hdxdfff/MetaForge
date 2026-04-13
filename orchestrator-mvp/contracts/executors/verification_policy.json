@@ -1,0 +1,52 @@
+{
+  "version": "v1",
+  "levels": [
+    {
+      "level": "L1",
+      "name": "lightweight",
+      "required_checks": [
+        "contract_valid",
+        "artifact_manifest_present"
+      ],
+      "human_review_required": false,
+      "allowed_executors": [
+        "script_executor",
+        "cheap_model_executor",
+        "linkwork_executor"
+      ]
+    },
+    {
+      "level": "L2",
+      "name": "bounded",
+      "required_checks": [
+        "contract_valid",
+        "changed_files_reported",
+        "verification_evidence_present"
+      ],
+      "human_review_required": false,
+      "allowed_executors": [
+        "opencode_executor",
+        "codex_executor",
+        "script_executor",
+        "ci_executor",
+        "linkwork_executor"
+      ]
+    },
+    {
+      "level": "L3",
+      "name": "high_trust",
+      "required_checks": [
+        "contract_valid",
+        "verification_evidence_present",
+        "independent_verification_passed"
+      ],
+      "human_review_required": true,
+      "allowed_executors": [
+        "opencode_executor",
+        "codex_executor",
+        "ci_executor",
+        "human_review_executor"
+      ]
+    }
+  ]
+}

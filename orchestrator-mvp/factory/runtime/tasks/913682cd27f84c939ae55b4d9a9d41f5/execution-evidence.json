@@ -1,0 +1,45 @@
+{
+  "steps": [
+    {
+      "step_id": "081afb39",
+      "step_title": "Build Toy OS baseline",
+      "action": "docker_step",
+      "ok": true,
+      "at": "2026-03-29T00:40:04.077241Z",
+      "worker": "docker",
+      "phase": "execute",
+      "route_model": "deepseek-chat",
+      "route_provider": "runtime",
+      "output_ref": {
+        "artifact_id": "ctx_cbeb25d42db6",
+        "task_id": "913682cd27f84c939ae55b4d9a9d41f5",
+        "step_id": "081afb39",
+        "channel": "docker-output",
+        "title": "Build Toy OS baseline output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\913682cd27f84c939ae55b4d9a9d41f5\\081afb39-docker-output-ctx_cbeb25d42db6.txt",
+        "size_chars": 430,
+        "line_count": 14,
+        "created_at": "2026-03-29T00:39:43.544961Z",
+        "metadata": {
+          "worker": "docker",
+          "phase": "execute",
+          "route_model": "deepseek-chat",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "docker-output",
+        "char_count": 430,
+        "line_count": 14,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    }
+  ],
+  "task_id": "913682cd27f84c939ae55b4d9a9d41f5",
+  "task_title": "Run ToyOS boot and QEMU smoke",
+  "task_status": "running",
+  "started_at": "2026-03-29T00:37:49.683973Z",
+  "updated_at": "2026-03-29T00:40:04.077241Z",
+  "completed": false
+}

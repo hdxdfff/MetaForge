@@ -1,0 +1,3667 @@
+{
+  "version": 1,
+  "updated_at": "2026-04-10T04:38:05.718404Z",
+  "amplifiers": {
+    "self_repair_task_generator": {
+      "trigger_count": 212,
+      "generated_tasks": 1661,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "last_triggered_at": "2026-04-10T04:38:05.718404Z",
+      "last_completed_at": null,
+      "last_updated_at": "2026-04-10T04:38:05.718404Z"
+    },
+    "artifact_growth_task_generator": {
+      "trigger_count": 57,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "last_triggered_at": "2026-04-09T16:08:46.281090Z",
+      "last_completed_at": null,
+      "last_updated_at": "2026-04-09T16:08:46.281090Z"
+    },
+    "p2_sandbox_task_generator": {
+      "trigger_count": 3,
+      "generated_tasks": 2,
+      "entered_execution": 3,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "last_triggered_at": "2026-04-03T19:26:54.142031Z",
+      "last_completed_at": null,
+      "last_updated_at": "2026-04-03T19:26:54.142031Z"
+    }
+  },
+  "events": [
+    {
+      "id": "amp_20260403154323",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-03T15:43:23.191456Z",
+      "trigger_count": 1,
+      "generated_tasks": 3,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260403154323",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-03T15:43:23.398745Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260403160103",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-03T16:01:03.855040Z",
+      "trigger_count": 1,
+      "generated_tasks": 3,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260403160519",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-03T16:05:19.254790Z",
+      "trigger_count": 1,
+      "generated_tasks": 3,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260403160519",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-03T16:05:19.311450Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260403163103",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-03T16:31:03.460918Z",
+      "trigger_count": 1,
+      "generated_tasks": 3,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260403170103",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-03T17:01:03.285336Z",
+      "trigger_count": 1,
+      "generated_tasks": 2,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260403173055",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-03T17:30:55.637060Z",
+      "trigger_count": 1,
+      "generated_tasks": 7,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260403173055",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-03T17:30:55.758705Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260403173103",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-03T17:31:03.061813Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260403173103",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-03T17:31:03.537343Z",
+      "trigger_count": 1,
+      "generated_tasks": 7,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260403173910",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-03T17:39:10.959725Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260403174543",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-03T17:45:43.864330Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260403183803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-03T18:38:03.276767Z",
+      "trigger_count": 1,
+      "generated_tasks": 7,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260403184542",
+      "amplifier": "p2_sandbox_task_generator",
+      "created_at": "2026-04-03T18:45:42.468535Z",
+      "trigger_count": 1,
+      "generated_tasks": 1,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\p2_sandbox_queue.json",
+        "sandbox_gate": true
+      }
+    },
+    {
+      "id": "amp_20260403185710",
+      "amplifier": "p2_sandbox_task_generator",
+      "created_at": "2026-04-03T18:57:10.957882Z",
+      "trigger_count": 0,
+      "generated_tasks": 0,
+      "entered_execution": 1,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "task_id": "b9f135f4c9a14c488931ac0b2587b68e",
+        "task_type": "doc_patch",
+        "budget_pool": "P2",
+        "sandbox_lane": "p2_low_risk"
+      }
+    },
+    {
+      "id": "amp_20260403190804",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-03T19:08:04.407300Z",
+      "trigger_count": 1,
+      "generated_tasks": 7,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260403190844",
+      "amplifier": "p2_sandbox_task_generator",
+      "created_at": "2026-04-03T19:08:44.784896Z",
+      "trigger_count": 0,
+      "generated_tasks": 0,
+      "entered_execution": 1,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "task_id": "9da36c4e524d40b9b664aa4cd5568f24",
+        "task_type": "artifact_audit",
+        "budget_pool": "P2",
+        "sandbox_lane": "p2_low_risk"
+      }
+    },
+    {
+      "id": "amp_20260403192303",
+      "amplifier": "p2_sandbox_task_generator",
+      "created_at": "2026-04-03T19:23:03.616000Z",
+      "trigger_count": 1,
+      "generated_tasks": 1,
+      "entered_execution": 1,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0,
+      "metadata": {
+        "task_id": "c3901614941c460bb6385a75403f5b2b",
+        "output_dir": "D:\\codex\\orchestrator-mvp\\generated\\p2-sandbox-audit\\followup-2",
+        "mode": "p1_repair_followup"
+      }
+    },
+    {
+      "id": "amp_20260403192654",
+      "amplifier": "p2_sandbox_task_generator",
+      "created_at": "2026-04-03T19:26:54.142031Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\p2_sandbox_queue.json",
+        "sandbox_gate": false
+      }
+    },
+    {
+      "id": "amp_20260403193806",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-03T19:38:06.215799Z",
+      "trigger_count": 1,
+      "generated_tasks": 7,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260403200804",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-03T20:08:04.730037Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260403200805",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-03T20:08:05.134095Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260403203806",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-03T20:38:06.511332Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260403210807",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-03T21:08:07.209291Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260403213802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-03T21:38:02.907725Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260403220803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-03T22:08:03.090604Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260403220803",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-03T22:08:03.441222Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260403223802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-03T22:38:02.825798Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260403230803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-03T23:08:03.037544Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260403233802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-03T23:38:02.863207Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404000803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T00:08:03.134352Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404000803",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-04T00:08:03.385085Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260404003802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T00:38:02.919676Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404010803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T01:08:03.057992Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404013802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T01:38:02.900469Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404020803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T02:08:03.159483Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404020803",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-04T02:08:03.455819Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260404023802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T02:38:02.891478Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404030803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T03:08:03.219068Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404033803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T03:38:03.057139Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404040803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T04:08:03.089152Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404040803",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-04T04:08:03.438375Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260404043802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T04:38:02.835257Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404050803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T05:08:03.261815Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404053802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T05:38:02.915128Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404060803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T06:08:03.198434Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404060803",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-04T06:08:03.473259Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260404063802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T06:38:02.900937Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404070803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T07:08:03.040926Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404073802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T07:38:02.971555Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404080803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T08:08:03.025538Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404080803",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-04T08:08:03.440464Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260404083802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T08:38:02.900576Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404090803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T09:08:03.156376Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404093802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T09:38:02.953885Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404100803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T10:08:03.076878Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404100803",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-04T10:08:03.487023Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260404103802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T10:38:02.987426Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404110803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T11:08:03.033924Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404113803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T11:38:03.015737Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404120803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T12:08:03.243159Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404120803",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-04T12:08:03.312306Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260404123803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T12:38:03.105007Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404130803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T13:08:03.094313Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404133803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T13:38:03.037355Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404140803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T14:08:03.244796Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404140803",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-04T14:08:03.399209Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260404143802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T14:38:02.977243Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404150803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T15:08:03.142999Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404153802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T15:38:02.947926Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404160803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T16:08:03.355494Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404160803",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-04T16:08:03.458632Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260404163803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T16:38:03.184748Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404170803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T17:08:03.110256Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404173803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T17:38:03.132991Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404180803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T18:08:03.213537Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404180803",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-04T18:08:03.321935Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260404183803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T18:38:03.062527Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404190803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T19:08:03.164798Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404193803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T19:38:03.176941Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404200803",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-04T20:08:03.427705Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260404200803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T20:08:03.442457Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404203803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T20:38:03.104825Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404210803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T21:08:03.171721Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404213803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T21:38:03.161621Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404220802",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-04T22:08:02.487697Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260404220803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T22:08:03.259669Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404223803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T22:38:03.221187Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404230803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T23:08:03.242019Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260404233803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-04T23:38:03.134229Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405000802",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-05T00:08:02.552009Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260405000803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T00:08:03.336639Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405003803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T00:38:03.370916Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405010803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T01:08:03.309098Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405013803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T01:38:03.950964Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405020802",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-05T02:08:02.487770Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260405020803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T02:08:03.389085Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405023803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T02:38:03.147779Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405030803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T03:08:03.298154Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405033803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T03:38:03.168965Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405040802",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-05T04:08:02.504886Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260405040803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T04:08:03.431700Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405043803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T04:38:03.188033Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405050802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T05:08:02.365280Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405053802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T05:38:02.386237Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405060802",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-05T06:08:02.742636Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260405060802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T06:08:02.760809Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405063802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T06:38:02.214971Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405070802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T07:08:02.421053Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405073802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T07:38:02.411124Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405080802",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-05T08:08:02.569615Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260405080802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T08:08:02.740348Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405083802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T08:38:02.357822Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405090802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T09:08:02.471787Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405093802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T09:38:02.437625Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405100802",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-05T10:08:02.547535Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260405100802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T10:08:02.575783Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405103802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T10:38:02.348424Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405110803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T11:08:03.214664Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405113802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T11:38:02.382059Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405120802",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-05T12:08:02.672635Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260405120802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T12:08:02.718102Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405123802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T12:38:02.430728Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405130802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T13:08:02.553476Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405133802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T13:38:02.557263Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405140803",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-05T14:08:03.289973Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260405140803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T14:08:03.311562Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405143809",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T14:38:09.738612Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405150849",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T15:08:49.562793Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405153802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T15:38:02.938927Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405160804",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-05T16:08:04.126169Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260405160804",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T16:08:04.221865Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405163803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T16:38:03.321521Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405170803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T17:08:03.458165Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405173803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T17:38:03.194900Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405180808",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T18:08:08.336895Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405180810",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-05T18:08:10.785406Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260405183815",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T18:38:15.053939Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405190916",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T19:09:16.840112Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405193804",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T19:38:04.065818Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405200804",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-05T20:08:04.052803Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260405200804",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T20:08:04.175107Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405203804",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T20:38:04.887714Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405210828",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T21:08:28.629851Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405220805",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-05T22:08:05.791504Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260405220806",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T22:08:06.006756Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405223803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T22:38:03.167745Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405230804",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T23:08:04.305042Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260405233803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-05T23:38:03.301759Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260406093802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-06T09:38:02.299514Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260406100802",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-06T10:08:02.925141Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260406100803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-06T10:08:03.002160Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260406103802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-06T10:38:02.291228Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260406110802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-06T11:08:02.773786Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260406113802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-06T11:38:02.271633Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260406120802",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-06T12:08:02.907404Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260406120802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-06T12:08:02.968112Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260406123802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-06T12:38:02.383516Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260406130802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-06T13:08:02.452448Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260406133802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-06T13:38:02.286490Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260406140803",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-06T14:08:03.458750Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260406140803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-06T14:08:03.507977Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260406143803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-06T14:38:03.014758Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260406150803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-06T15:08:03.355439Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260406153803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-06T15:38:03.066966Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260406160803",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-06T16:08:03.473532Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260406160803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-06T16:08:03.490970Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260406163803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-06T16:38:03.019472Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260406170803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-06T17:08:03.377318Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260406173803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-06T17:38:03.054684Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260406180804",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-06T18:08:04.312891Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260406180804",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-06T18:08:04.359612Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260406220804",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-06T22:08:04.386400Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260406220804",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-06T22:08:04.459608Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260406223803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-06T22:38:03.384981Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260406230802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-06T23:08:02.949629Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260407090803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-07T09:08:03.849758Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260407093802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-07T09:38:02.705423Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260407100803",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-07T10:08:03.223637Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260407100803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-07T10:08:03.285723Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260407103802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-07T10:38:02.793934Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260407110803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-07T11:08:03.744691Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260407113802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-07T11:38:02.824431Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260407120802",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-07T12:08:02.996928Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260407120803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-07T12:08:03.120727Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260407123802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-07T12:38:02.804429Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260407130803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-07T13:08:03.572790Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260407133802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-07T13:38:02.851107Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260407140803",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-07T14:08:03.059711Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260407140803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-07T14:08:03.142922Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260407143802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-07T14:38:02.820311Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260407150803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-07T15:08:03.019003Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260407153802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-07T15:38:02.803235Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260407160803",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-07T16:08:03.039986Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260407163803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-07T16:38:03.018070Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260407170803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-07T17:08:03.167956Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260407173802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-07T17:38:02.902446Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260407180803",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-07T18:08:03.691539Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260407180803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-07T18:08:03.760094Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260407183803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-07T18:38:03.601233Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260407190804",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-07T19:08:04.443898Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260407193803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-07T19:38:03.691860Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260407200804",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-07T20:08:04.320769Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260407200804",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-07T20:08:04.378815Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260407220803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-07T22:08:03.919946Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260407220804",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-07T22:08:04.317010Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260407223804",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-07T22:38:04.265626Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260407230805",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-07T23:08:05.764028Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260407233805",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-07T23:38:05.732347Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260408080803",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-08T08:08:03.701183Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260408080803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-08T08:08:03.802448Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260408083802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-08T08:38:02.893656Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260408190808",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-08T19:08:08.546066Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260408193804",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-08T19:38:04.693328Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260408200803",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-08T20:08:03.617262Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260408200803",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-08T20:08:03.674160Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260408203807",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-08T20:38:07.441205Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260408210819",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-08T21:08:19.061621Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260408213805",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-08T21:38:05.154833Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260408220811",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-08T22:08:11.689708Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260408220811",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-08T22:08:11.900796Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260408223809",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-08T22:38:09.592452Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260408230810",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-08T23:08:10.327827Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260408233805",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-08T23:38:05.444703Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260409000819",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-09T00:08:19.620087Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260409000819",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-09T00:08:19.684278Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260409003802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-09T00:38:02.837559Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260409010809",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-09T01:08:09.416658Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260409013809",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-09T01:38:09.908805Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260409020802",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-09T02:08:02.741778Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260409020802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-09T02:08:02.805944Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260409023808",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-09T02:38:08.436206Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260409030802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-09T03:08:02.641559Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260409033946",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-09T03:39:46.408889Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260409041021",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-09T04:10:21.207606Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260409041041",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-09T04:10:41.096028Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260409043853",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-09T04:38:53.337758Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260409050849",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-09T05:08:49.281207Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260409053820",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-09T05:38:20.272876Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260409061139",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-09T06:11:39.026640Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260409061219",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-09T06:12:19.357760Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260409063842",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-09T06:38:42.476744Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260409070802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-09T07:08:02.837350Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260409073804",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-09T07:38:04.720878Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260409080901",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-09T08:09:01.146462Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260409080901",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-09T08:09:01.921962Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260409084015",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-09T08:40:15.061394Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260409090849",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-09T09:08:49.988846Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260409093820",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-09T09:38:20.629222Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260409101115",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-09T10:11:15.792008Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260409101118",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-09T10:11:18.296269Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260409103812",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-09T10:38:12.681462Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260409110824",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-09T11:08:24.971449Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260409114810",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-09T11:48:10.671769Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260409120825",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-09T12:08:25.687226Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260409120825",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-09T12:08:25.797398Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260409123802",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-09T12:38:02.923391Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260409130806",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-09T13:08:06.699760Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260409133947",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-09T13:39:47.870526Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260409140814",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-09T14:08:14.505951Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260409140814",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-09T14:08:14.561575Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260409143818",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-09T14:38:18.515892Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260409150833",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-09T15:08:33.862512Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260409153805",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-09T15:38:05.358234Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260409160846",
+      "amplifier": "artifact_growth_task_generator",
+      "created_at": "2026-04-09T16:08:46.281090Z",
+      "trigger_count": 1,
+      "generated_tasks": 0,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_growth_queue.json",
+        "registry_path": "D:\\codex\\orchestrator-mvp\\data\\artifact_registry.json"
+      }
+    },
+    {
+      "id": "amp_20260409160906",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-09T16:09:06.121221Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260409163821",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-09T16:38:21.475193Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260409170909",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-09T17:09:09.384137Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260410023804",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-10T02:38:04.375822Z",
+      "trigger_count": 1,
+      "generated_tasks": 8,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260410030808",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-10T03:08:08.906565Z",
+      "trigger_count": 1,
+      "generated_tasks": 7,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260410033859",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-10T03:38:59.343810Z",
+      "trigger_count": 1,
+      "generated_tasks": 7,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260410040829",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-10T04:08:29.505923Z",
+      "trigger_count": 1,
+      "generated_tasks": 7,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    },
+    {
+      "id": "amp_20260410043805",
+      "amplifier": "self_repair_task_generator",
+      "created_at": "2026-04-10T04:38:05.718404Z",
+      "trigger_count": 1,
+      "generated_tasks": 7,
+      "entered_execution": 0,
+      "completed_tasks": 0,
+      "success_conversion_rate": 0.0,
+      "metadata": {
+        "queue_path": "D:\\codex\\orchestrator-mvp\\data\\self_improvement_queue.json"
+      }
+    }
+  ]
+}

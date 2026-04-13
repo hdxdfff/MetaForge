@@ -1,0 +1,18 @@
+{
+  "type": "failure_fix",
+  "title": "ToyOS evidence refresh prompts must skip the build loop",
+  "symptom": "A prompt that asked to confirm current ToyOS build-report, generic-qemu-smoke-report, and score-report was routed into a build-first loop and started 'Build Toy OS baseline'.",
+  "root_cause": "Planner fallback treated any ToyOS/QEMU prompt as a build-first request, and the surface router matched 'build' keywords before evidence-refresh intent.",
+  "fix": [
+    "Add a dedicated ToyOS evidence-refresh planner branch that inspects existing artifacts without rebuilding.",
+    "Add a top-priority routing rule for ToyOS evidence refresh prompts so they land on review-oriented surfaces instead of Aider."
+  ],
+  "validation": [
+    "OpenAIPlanner.build_plan now returns Review ToyOS evidence scope -> Inspect current ToyOS artifacts -> Emit ToyOS verification summary for the evidence-refresh prompt.",
+    "task-route now matches task_shape 'ToyOS evidence refresh' and selects Continue with launch_mode review."
+  ],
+  "applies_to": [
+    "D:\\codex\\orchestrator-mvp\\app\\openai_client.py",
+    "D:\\codex\\orchestrator-mvp\\contracts\\tool_stack.json"
+  ]
+}

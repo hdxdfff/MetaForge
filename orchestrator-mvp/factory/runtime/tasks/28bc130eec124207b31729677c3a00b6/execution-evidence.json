@@ -1,0 +1,60 @@
+{
+  "task_id": "28bc130eec124207b31729677c3a00b6",
+  "task_title": "Isolate ToyOS failing test",
+  "task_status": "timed_out",
+  "started_at": "2026-04-02T22:20:27.432807Z",
+  "updated_at": "2026-04-03T12:48:51.106542Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "28bc130eec124207b31729677c3a00b6-terminal-record",
+      "step_title": "Isolate ToyOS failing test",
+      "action": "task_terminal_record",
+      "ok": false,
+      "at": "2026-04-03T12:48:51.106542Z",
+      "status": "timed_out",
+      "summary": null,
+      "error": "Task timed out after 120 minutes without progress.",
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ],
+  "result": {
+    "state": "queued_for_backlog",
+    "reason": "Backlog admission deferred until active capacity is available.",
+    "scheduler_hint": {
+      "goal_primary": "Restore ToyOS real artifact delivery",
+      "goal_mode": "toyos_priority_mode",
+      "goal_target": "Restore ToyOS real artifact delivery",
+      "goal_id": "goal_42e8cd07d0",
+      "graph_id": "graph_c9ae2e2b6e",
+      "node_id": "failing_test_isolation",
+      "node_title": "Isolate ToyOS failing test",
+      "task_type": "harness_regression_run",
+      "queue_name": "regression",
+      "verification_level": "L3",
+      "max_runtime_seconds": 3000,
+      "retry_limit": 1,
+      "rollback_rule": "mark_failed_and_requeue_split",
+      "template_id": "failing_test_isolation",
+      "admission_mode": "degraded",
+      "handling_mode": "toyos_replenishment",
+      "automation_source": "failure_backlog_automation"
+    },
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-02T22:20:28.416550Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "28bc130eec124207b31729677c3a00b6",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "production",
+        "queue_name": "regression",
+        "task_type": "harness_regression_run"
+      }
+    ],
+    "error": "Task timed out after 120 minutes without progress."
+  }
+}

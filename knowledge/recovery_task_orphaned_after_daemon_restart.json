@@ -1,0 +1,32 @@
+﻿{
+  "recorded_at": "2026-03-19T23:50:30+08:00",
+  "pattern_id": "recovery-task-orphaned-after-daemon-restart",
+  "scope": "orchestrator-mvp/execution-recovery",
+  "symptoms": [
+    "factory-daemon recovery task remains in planning or running after the daemon process is restarted",
+    "execution_recovery stays active even though verified completed tasks and a runnable artifact already exist",
+    "daemon keeps reporting active_recovery_task_ids without fresh heartbeat progress"
+  ],
+  "detection": {
+    "task_status": ["planning", "running", "waiting_approval"],
+    "required_signals": [
+      "scheduled_by starts with factory-daemon.recovery",
+      "checkpoint heartbeat is stale beyond the detached runner timeslice"
+    ],
+    "secondary_signals": [
+      "recent_completed_tasks already meets the recovery target",
+      "recent_real_artifacts >= 1",
+      "daemon was restarted after the recovery task was created"
+    ]
+  },
+  "policy": {
+    "orchestrator": "During ensure_execution_recovery, detect stale recovery tasks. If recovery targets are already satisfied, close the stale task instead of keeping recovery mode active forever. If targets are not yet satisfied, relaunch the detached recovery runner.",
+    "validation": "Bind recovery exit to verified completed tasks and runnable artifact evidence, not to the existence of a historical planning task."
+  },
+  "evidence_files": [
+    "D:\\codex\\orchestrator-mvp\\app\\orchestrator.py",
+    "D:\\codex\\orchestrator-mvp\\data\\factory_daemon_state.json",
+    "D:\\codex\\orchestrator-mvp\\data\\task_checkpoints.json",
+    "D:\\codex\\orchestrator-mvp\\data\\tasks.json"
+  ]
+}

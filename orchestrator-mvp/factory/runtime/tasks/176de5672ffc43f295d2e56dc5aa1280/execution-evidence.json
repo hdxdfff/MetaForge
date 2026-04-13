@@ -1,0 +1,60 @@
+{
+  "task_id": "176de5672ffc43f295d2e56dc5aa1280",
+  "task_title": "Audit ToyOS execution environment",
+  "task_status": "completed",
+  "started_at": "2026-04-02T19:49:22.807665Z",
+  "updated_at": "2026-04-02T20:56:34.613757Z",
+  "completed": true,
+  "steps": [
+    {
+      "step_id": "176de5672ffc43f295d2e56dc5aa1280-terminal-record",
+      "step_title": "Audit ToyOS execution environment",
+      "action": "task_terminal_record",
+      "ok": true,
+      "at": "2026-04-02T20:56:34.613757Z",
+      "status": "completed",
+      "summary": "Task auto-completed because its parent completed goal explicitly owns this task.",
+      "error": null,
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ],
+  "result": {
+    "state": "queued_for_backlog",
+    "reason": "Backlog admission deferred until active capacity is available.",
+    "scheduler_hint": {
+      "goal_primary": "Restore ToyOS real artifact delivery",
+      "goal_mode": "toyos_priority_mode",
+      "goal_target": "Unblock Restore ToyOS real artifact delivery: Run baseline runtime test loop for Restore ToyOS real artifact delivery",
+      "goal_id": "goal_5c12485392",
+      "graph_id": "graph_222cc400a2",
+      "node_id": "environment_audit",
+      "node_title": "Audit ToyOS execution environment",
+      "task_type": "artifact_audit",
+      "queue_name": "fastlane",
+      "verification_level": "L1",
+      "max_runtime_seconds": 1200,
+      "retry_limit": 1,
+      "rollback_rule": "mark_failed_and_requeue_split",
+      "template_id": "environment_audit",
+      "admission_mode": "degraded",
+      "handling_mode": "toyos_replenishment",
+      "automation_source": "failure_backlog_automation"
+    },
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-02T19:49:23.534533Z",
+        "kind": "admission_accepted",
+        "success": true,
+        "task_id": "176de5672ffc43f295d2e56dc5aa1280",
+        "admission_lane": null,
+        "admission_reason": null,
+        "execution_mode": "governance",
+        "queue_name": "fastlane",
+        "task_type": "artifact_audit"
+      }
+    ],
+    "summary": "Task auto-completed because its parent completed goal explicitly owns this task."
+  }
+}

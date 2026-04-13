@@ -1,0 +1,141 @@
+{
+  "updated_at": "2026-03-12T07:08:54.376472Z",
+  "experiment": {
+    "target": "Experiment GitHub repo capability extraction",
+    "kind": "github-capability-extraction",
+    "goal_type": "experiment",
+    "worker": null,
+    "source": "github-learning"
+  },
+  "adopted": true,
+  "routing_bias": {
+    "agent_orchestration": 0.04,
+    "kv_cache_manager": 0.04,
+    "local_llm_runner": 0.04,
+    "token_streaming": 0.04
+  },
+  "worker_bias": {},
+  "capability_hints": [
+    {
+      "capability_id": "agent_orchestration",
+      "provider_platform_id": "github-learning:gh-dc17f0f4fb",
+      "provider_name": "Significant-Gravitas/AutoGPT",
+      "boost": 0.04,
+      "matched_bias": {
+        "agent_orchestration": 0.04
+      }
+    },
+    {
+      "capability_id": "agent_orchestration",
+      "provider_platform_id": "platform_38c67a4233",
+      "provider_name": "Strengthen agent orchestration capability",
+      "boost": 0.04,
+      "matched_bias": {
+        "agent_orchestration": 0.04
+      }
+    },
+    {
+      "capability_id": "agent_orchestration",
+      "provider_platform_id": "platform_464dac2a0b",
+      "provider_name": "Optimize task scheduler from agent experience",
+      "boost": 0.04,
+      "matched_bias": {
+        "agent_orchestration": 0.04
+      }
+    },
+    {
+      "capability_id": "agent_orchestration",
+      "provider_platform_id": "platform_79a3e0e03e",
+      "provider_name": "Improve cheap agent prompts",
+      "boost": 0.04,
+      "matched_bias": {
+        "agent_orchestration": 0.04
+      }
+    },
+    {
+      "capability_id": "agent_orchestration",
+      "provider_platform_id": "platform_8855699f64",
+      "provider_name": "AI Agent Factory",
+      "boost": 0.04,
+      "matched_bias": {
+        "agent_orchestration": 0.04
+      }
+    },
+    {
+      "capability_id": "agent_orchestration",
+      "provider_platform_id": "platform_fa6557b2cd",
+      "provider_name": "Strengthen agent orchestration capability",
+      "boost": 0.04,
+      "matched_bias": {
+        "agent_orchestration": 0.04
+      }
+    },
+    {
+      "capability_id": "kv_cache_manager",
+      "provider_platform_id": "github-learning:gh-dc17f0f4fb",
+      "provider_name": "Significant-Gravitas/AutoGPT",
+      "boost": 0.04,
+      "matched_bias": {
+        "kv_cache_manager": 0.04
+      }
+    },
+    {
+      "capability_id": "local_llm_runner",
+      "provider_platform_id": "github-learning:gh-dc17f0f4fb",
+      "provider_name": "Significant-Gravitas/AutoGPT",
+      "boost": 0.04,
+      "matched_bias": {
+        "local_llm_runner": 0.04
+      }
+    },
+    {
+      "capability_id": "token_streaming",
+      "provider_platform_id": "github-learning:gh-dc17f0f4fb",
+      "provider_name": "Significant-Gravitas/AutoGPT",
+      "boost": 0.04,
+      "matched_bias": {
+        "token_streaming": 0.04
+      }
+    }
+  ],
+  "reputation": {
+    "updated_at": "2026-03-12T07:08:54.376472Z",
+    "capabilities": {
+      "webapp_generation": {
+        "score": 11.718,
+        "count": 204
+      },
+      "agent_orchestration": {
+        "score": 11.9749,
+        "count": 211
+      },
+      "deploy_scaffold": {
+        "score": 6.156,
+        "count": 135
+      },
+      "tool_extension": {
+        "score": 4.9275,
+        "count": 135
+      },
+      "kv_cache_manager": {
+        "score": 0.2569,
+        "count": 7
+      },
+      "local_llm_runner": {
+        "score": 0.2569,
+        "count": 7
+      },
+      "token_streaming": {
+        "score": 0.2569,
+        "count": 7
+      }
+    },
+    "workers": {
+      "reviewer": {
+        "score": 7.908,
+        "count": 151
+      }
+    }
+  },
+  "status": "ready"
+}

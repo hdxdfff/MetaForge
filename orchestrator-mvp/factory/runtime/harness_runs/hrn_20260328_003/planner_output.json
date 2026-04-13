@@ -1,0 +1,8 @@
+{
+  "run_id": "hrn_20260328_003",
+  "planner_status": "success",
+  "selected_feature": "qemu_smoke_stability",
+  "why_this_feature": "Atomic, testable, and low blast radius.",
+  "deferred_items": [],
+  "risk_notes": []
+}

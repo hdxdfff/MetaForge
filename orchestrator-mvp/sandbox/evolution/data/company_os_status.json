@@ -1,0 +1,54 @@
+{
+  "updated_at": "2026-03-12T07:09:37.282318Z",
+  "status": "developing",
+  "score": 0.4,
+  "layers": {
+    "strategy": {
+      "status": "pass"
+    },
+    "organization": {
+      "status": "pass"
+    },
+    "project": {
+      "status": "pass"
+    },
+    "engineering": {
+      "status": "attention"
+    },
+    "execution": {
+      "status": "attention"
+    },
+    "learning": {
+      "status": "attention"
+    },
+    "release_operations": {
+      "status": "attention"
+    },
+    "ai_testing": {
+      "status": "attention"
+    }
+  },
+  "autonomy": {
+    "stage": "stage4_confirmed",
+    "score": 0.6925,
+    "source": "soak_validation",
+    "confirmed": true
+  },
+  "summary": {
+    "focus_capabilities": [
+      "agent_orchestration",
+      "webapp_generation",
+      "deploy_scaffold",
+      "tool_extension",
+      "kv_cache_manager",
+      "local_llm_runner"
+    ],
+    "department_count": 5,
+    "project_count": 5,
+    "platform_count": 17,
+    "release_train_status": "blocked",
+    "ai_testing_status": "attention",
+    "ai_testing_pass_rate": 0.8,
+    "ai_testing_error_count": 0
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "task_id": "f55980fdc59b40ee850ac2a6c7f8b734",
+  "task_status": "running",
+  "phase": "step-failed",
+  "updated_at": "2026-04-02T17:32:32.240507Z",
+  "heartbeat_at": "2026-04-02T17:32:32.240507Z",
+  "repo_path": "D:\\codex",
+  "goal": "Validate the change",
+  "goal_id": "goal_42e8cd07d0",
+  "graph_id": "graph_c9ae2e2b6e",
+  "node_id": "build_toolchain_repair",
+  "scheduled_by": "factory-daemon.replenisher",
+  "timeslice_seconds": 60,
+  "checkpoint_dir": "D:\\codex\\orchestrator-mvp\\factory\\runtime\\tasks\\f55980fdc59b40ee850ac2a6c7f8b734",
+  "step_id": "05ccc069",
+  "step_title": "Boot ToyOS in QEMU",
+  "step_status": "failed",
+  "worker": "docker",
+  "probe_attempts": 0,
+  "error": "Shell command failed with code 1: Traceback (most recent call last):\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 167, in <module>\r\n    raise SystemExit(main())\r\n                     ^^^^^^\r\n  File \"D:\\codex\\orchestrator-mvp\\tools\\generic_test_runner.py\", line 141, in main\r\n    spec = json.loads(spec_path.read_text(encoding=\"utf-8\"))\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"pathlib.py\", line 1058, in read_text\r\n  File \"pathlib.py\", line 1044, in open\r\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\codex\\\\tools\\\\generic_qemu_smoke.json'",
+  "title": "Validate the result",
+  "prompt": "Repair the ToyOS build or toolchain break with the smallest safe patch, then refresh build-report evidence and note any remaining blockers.",
+  "scheduler_hint": {
+    "goal_primary": "Restore ToyOS real artifact delivery",
+    "goal_mode": "toyos_priority_mode",
+    "goal_target": "Restore ToyOS real artifact delivery",
+    "goal_id": "goal_42e8cd07d0",
+    "graph_id": "graph_c9ae2e2b6e",
+    "node_id": "build_toolchain_repair",
+    "node_title": "Repair ToyOS build and toolchain",
+    "task_type": "exploration_intake",
+    "queue_name": "exploration",
+    "verification_level": "L1",
+    "max_runtime_seconds": 900,
+    "retry_limit": 0,
+    "rollback_rule": "return_to_planner",
+    "template_id": "build_toolchain_repair",
+    "admission_mode": "normal",
+    "handling_mode": "toyos_replenishment",
+    "automation_source": "failure_backlog_automation",
+    "decomposition_child": true,
+    "decomposition_parent_task_id": "08a9294441ff488baa3bb8f7041cc20b",
+    "decomposition_root_task_id": "08a9294441ff488baa3bb8f7041cc20b",
+    "decomposition_depth": 1,
+    "max_decomposition_depth": 2,
+    "decomposition_child_index": 3,
+    "decomposition_allow_children": false,
+    "decomposition_path_kind": "repair",
+    "decomposition_shared_dependency_group": "08a9294441ff488baa3bb8f7041cc20b",
+    "decomposition_repair_for": "Analyze the current state",
+    "decomposition_dependencies": [
+      "Analyze the current state",
+      "Implement the bounded change"
+    ],
+    "admission_lane": "exploration",
+    "admission_reason": "artifact_spec_missing",
+    "requested_execution_mode": "production",
+    "dependency_task_ids": [
+      "696ba6bb18f84c3b93fc4a37b6432225",
+      "d057fce28d0f468785d3a3ccfcb5f263"
+    ],
+    "dependency_count": 2
+  },
+  "context_package": {},
+  "plan": [
+    {
+      "id": "55e80fe6",
+      "title": "Build Toy OS baseline",
+      "status": "completed",
+      "worker": "docker",
+      "phase": "execute"
+    },
+    {
+      "id": "05ccc069",
+      "title": "Boot ToyOS in QEMU",
+      "status": "failed",
+      "worker": "docker",
+      "phase": "verify"
+    },
+    {
+      "id": "cab1c8bc",
+      "title": "Audit ToyOS runtime evidence",
+      "status": "pending",
+      "worker": "reviewer",
+      "phase": "review"
+    },
+    {
+      "id": "cf667106",
+      "title": "Patch Toy OS implementation",
+      "status": "pending",
+      "worker": "coder",
+      "phase": "draft"
+    },
+    {
+      "id": "82925433",
+      "title": "Rebuild Toy OS after patch",
+      "status": "pending",
+      "worker": "docker",
+      "phase": "execute"
+    },
+    {
+      "id": "14371853",
+      "title": "Re-run ToyOS QEMU and score artifacts",
+      "status": "pending",
+      "worker": "docker",
+      "phase": "verify"
+    },
+    {
+      "id": "9f78b284",
+      "title": "Score ToyOS artifact set",
+      "status": "pending",
+      "worker": "docker",
+      "phase": "verify"
+    },
+    {
+      "id": "b204ad00",
+      "title": "Issue ToyOS release decision",
+      "status": "pending",
+      "worker": "reviewer",
+      "phase": "revise"
+    }
+  ],
+  "verification_signals": [
+    {
+      "timestamp": "2026-04-02T17:31:10.170046Z",
+      "kind": "admission_diverted",
+      "success": true,
+      "task_id": "f55980fdc59b40ee850ac2a6c7f8b734",
+      "admission_lane": "exploration",
+      "admission_reason": "artifact_spec_missing",
+      "execution_mode": "research",
+      "queue_name": "exploration",
+      "task_type": "exploration_intake"
+    },
+    {
+      "timestamp": "2026-04-02T17:32:15.112032Z",
+      "kind": "step_completed",
+      "success": true,
+      "task_id": "f55980fdc59b40ee850ac2a6c7f8b734",
+      "step_id": "55e80fe6",
+      "step_title": "Build Toy OS baseline",
+      "worker": "docker",
+      "phase": "execute",
+      "route_model": "deepseek-chat",
+      "route_provider": "runtime",
+      "elapsed_ms": 17000,
+      "output_ref": {
+        "artifact_id": "ctx_00d01706ae4f",
+        "task_id": "f55980fdc59b40ee850ac2a6c7f8b734",
+        "step_id": "55e80fe6",
+        "channel": "docker-output",
+        "title": "Build Toy OS baseline output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\f55980fdc59b40ee850ac2a6c7f8b734\\55e80fe6-docker-output-ctx_00d01706ae4f.txt",
+        "size_chars": 383,
+        "line_count": 12,
+        "created_at": "2026-04-02T17:32:08.488778Z",
+        "metadata": {
+          "worker": "docker",
+          "phase": "execute",
+          "route_model": "deepseek-chat",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "docker-output",
+        "char_count": 383,
+        "line_count": 12,
+        "stored_raw": true
+      }
+    }
+  ],
+  "verification_signal_count": 2,
+  "result": {
+    "verification_signals": [
+      {
+        "timestamp": "2026-04-02T17:31:10.170046Z",
+        "kind": "admission_diverted",
+        "success": true,
+        "task_id": "f55980fdc59b40ee850ac2a6c7f8b734",
+        "admission_lane": "exploration",
+        "admission_reason": "artifact_spec_missing",
+        "execution_mode": "research",
+        "queue_name": "exploration",
+        "task_type": "exploration_intake"
+      },
+      {
+        "timestamp": "2026-04-02T17:32:15.112032Z",
+        "kind": "step_completed",
+        "success": true,
+        "task_id": "f55980fdc59b40ee850ac2a6c7f8b734",
+        "step_id": "55e80fe6",
+        "step_title": "Build Toy OS baseline",
+        "worker": "docker",
+        "phase": "execute",
+        "route_model": "deepseek-chat",
+        "route_provider": "runtime",
+        "elapsed_ms": 17000,
+        "output_ref": {
+          "artifact_id": "ctx_00d01706ae4f",
+          "task_id": "f55980fdc59b40ee850ac2a6c7f8b734",
+          "step_id": "55e80fe6",
+          "channel": "docker-output",
+          "title": "Build Toy OS baseline output",
+          "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\f55980fdc59b40ee850ac2a6c7f8b734\\55e80fe6-docker-output-ctx_00d01706ae4f.txt",
+          "size_chars": 383,
+          "line_count": 12,
+          "created_at": "2026-04-02T17:32:08.488778Z",
+          "metadata": {
+            "worker": "docker",
+            "phase": "execute",
+            "route_model": "deepseek-chat",
+            "route_provider": "runtime"
+          }
+        },
+        "output_stats": {
+          "channel": "docker-output",
+          "char_count": 383,
+          "line_count": 12,
+          "stored_raw": true
+        }
+      }
+    ]
+  }
+}

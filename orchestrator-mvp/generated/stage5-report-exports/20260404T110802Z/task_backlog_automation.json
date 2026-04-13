@@ -1,0 +1,147 @@
+{
+  "updated_at": "2026-04-04T11:06:39.287275Z",
+  "mode": "light",
+  "runtime": {
+    "active": 0,
+    "pending": 4,
+    "by_status": {
+      "completed": 74,
+      "failed": 129,
+      "timed_out": 110,
+      "pending": 1,
+      "released": 41,
+      "queued": 4
+    }
+  },
+  "terminal_counts": {
+    "live": 313,
+    "history": 61,
+    "archive": 500,
+    "unique_clusters": 46
+  },
+  "cluster_recommendations": [
+    {
+      "cluster_key": "recover stable execution output",
+      "count": 142,
+      "handling_mode": "generic_saturation",
+      "template_ids": [
+        "auto-debug",
+        "general-coding",
+        "software-factory",
+        "deployment-wrapup",
+        "lab-report"
+      ],
+      "status": "attention"
+    },
+    {
+      "cluster_key": "restore toyos real artifact delivery",
+      "count": 52,
+      "handling_mode": "toyos_replenishment",
+      "template_ids": [
+        "toyos-mainline",
+        "toyos-throughput-smoke-pack",
+        "deployment-wrapup",
+        "lab-report"
+      ],
+      "status": "attention"
+    },
+    {
+      "cluster_key": "identify the smallest viable slice",
+      "count": 41,
+      "handling_mode": "generic_saturation",
+      "template_ids": [
+        "auto-debug",
+        "general-coding",
+        "software-factory",
+        "deployment-wrapup",
+        "lab-report"
+      ],
+      "status": "attention"
+    },
+    {
+      "cluster_key": "clarify target outcome",
+      "count": 31,
+      "handling_mode": "generic_saturation",
+      "template_ids": [
+        "auto-debug",
+        "general-coding",
+        "software-factory",
+        "deployment-wrapup",
+        "lab-report"
+      ],
+      "status": "attention"
+    },
+    {
+      "cluster_key": "execute the next action",
+      "count": 24,
+      "handling_mode": "generic_saturation",
+      "template_ids": [
+        "auto-debug",
+        "general-coding",
+        "software-factory",
+        "deployment-wrapup",
+        "lab-report"
+      ],
+      "status": "attention"
+    }
+  ],
+  "cluster_breakdown": [
+    {
+      "cluster_key": "recover stable execution output",
+      "count": 142,
+      "status": "terminal",
+      "source_status": "completed",
+      "handling_mode": "generic_saturation"
+    },
+    {
+      "cluster_key": "restore toyos real artifact delivery",
+      "count": 52,
+      "status": "timeout",
+      "source_status": "timed_out",
+      "handling_mode": "toyos_replenishment"
+    },
+    {
+      "cluster_key": "identify the smallest viable slice",
+      "count": 41,
+      "status": "terminal",
+      "source_status": "completed",
+      "handling_mode": "generic_saturation"
+    },
+    {
+      "cluster_key": "clarify target outcome",
+      "count": 31,
+      "status": "terminal",
+      "source_status": "completed",
+      "handling_mode": "generic_saturation"
+    },
+    {
+      "cluster_key": "execute the next action",
+      "count": 24,
+      "status": "missing_error",
+      "source_status": "failed",
+      "handling_mode": "generic_saturation"
+    }
+  ],
+  "desired_active": 2,
+  "desired_pending": 5,
+  "deficit": 3,
+  "created_tasks": [],
+  "created_count": 0,
+  "toyos_replenishment": {
+    "status": "skipped"
+  },
+  "residual_risk": "Historical terminal failures are summarized, but existing completed/final tasks remain in archival history for auditability.",
+  "template_ids_created": [],
+  "runtime_after": {
+    "active": 0,
+    "pending": 4,
+    "by_status": {
+      "completed": 74,
+      "failed": 129,
+      "timed_out": 110,
+      "pending": 1,
+      "released": 41,
+      "queued": 4
+    }
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "steps": [
+    {
+      "step_id": "33eb0727",
+      "step_title": "Understand task",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-03-20T02:21:32.416108Z",
+      "worker": "reviewer",
+      "phase": "understand",
+      "route_model": "deepseek-reasoner",
+      "route_provider": "reasoning",
+      "output_ref": {
+        "artifact_id": "ctx_99686089f3f0",
+        "task_id": "c63a5de0dc994a20bc9f2920a5a325ba",
+        "step_id": "33eb0727",
+        "channel": "reviewer-output",
+        "title": "Understand task output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\c63a5de0dc994a20bc9f2920a5a325ba\\33eb0727-reviewer-output-ctx_99686089f3f0.txt",
+        "size_chars": 1989,
+        "line_count": 24,
+        "created_at": "2026-03-20T02:21:14.994571Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "understand",
+          "route_model": "deepseek-reasoner",
+          "route_provider": "reasoning"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 1989,
+        "line_count": 24,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "5531231a",
+      "step_title": "Draft solution",
+      "action": "coder_step",
+      "ok": true,
+      "at": "2026-03-20T02:23:37.163306Z",
+      "worker": "coder",
+      "phase": "draft",
+      "route_model": "gpt-5.4-pro",
+      "route_provider": "openai",
+      "output_ref": {
+        "artifact_id": "ctx_234bd7e282ad",
+        "task_id": "c63a5de0dc994a20bc9f2920a5a325ba",
+        "step_id": "5531231a",
+        "channel": "coder-output",
+        "title": "Draft solution output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\c63a5de0dc994a20bc9f2920a5a325ba\\5531231a-coder-output-ctx_234bd7e282ad.txt",
+        "size_chars": 1171,
+        "line_count": 25,
+        "created_at": "2026-03-20T02:23:13.649916Z",
+        "metadata": {
+          "worker": "coder",
+          "phase": "draft",
+          "route_model": "gpt-5.4-pro",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "coder-output",
+        "char_count": 1171,
+        "line_count": 25,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "f434474e",
+      "step_title": "Execute validation",
+      "action": "shell_step",
+      "ok": true,
+      "at": "2026-03-20T02:25:32.548643Z",
+      "worker": "shell",
+      "phase": "execute",
+      "route_model": "deepseek-chat",
+      "route_provider": "runtime",
+      "output_ref": {
+        "artifact_id": "ctx_bf55827b5e1e",
+        "task_id": "c63a5de0dc994a20bc9f2920a5a325ba",
+        "step_id": "f434474e",
+        "channel": "shell-output",
+        "title": "Execute validation output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\c63a5de0dc994a20bc9f2920a5a325ba\\f434474e-shell-output-ctx_bf55827b5e1e.txt",
+        "size_chars": 352,
+        "line_count": 11,
+        "created_at": "2026-03-20T02:25:14.415439Z",
+        "metadata": {
+          "worker": "shell",
+          "phase": "execute",
+          "route_model": "deepseek-chat",
+          "route_provider": "runtime"
+        }
+      },
+      "output_stats": {
+        "channel": "shell-output",
+        "char_count": 352,
+        "line_count": 11,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    },
+    {
+      "step_id": "580a47bd",
+      "step_title": "Verify result",
+      "action": "reviewer_step",
+      "ok": true,
+      "at": "2026-03-20T02:28:10.080580Z",
+      "worker": "reviewer",
+      "phase": "verify",
+      "route_model": "gpt-5.4-pro",
+      "route_provider": "openai",
+      "output_ref": {
+        "artifact_id": "ctx_474e3a0de356",
+        "task_id": "c63a5de0dc994a20bc9f2920a5a325ba",
+        "step_id": "580a47bd",
+        "channel": "reviewer-output",
+        "title": "Verify result output",
+        "path": "D:\\codex\\orchestrator-mvp\\data\\runtime_context\\artifacts\\c63a5de0dc994a20bc9f2920a5a325ba\\580a47bd-reviewer-output-ctx_474e3a0de356.txt",
+        "size_chars": 1091,
+        "line_count": 31,
+        "created_at": "2026-03-20T02:27:42.122382Z",
+        "metadata": {
+          "worker": "reviewer",
+          "phase": "verify",
+          "route_model": "gpt-5.4-pro",
+          "route_provider": "openai"
+        }
+      },
+      "output_stats": {
+        "channel": "reviewer-output",
+        "char_count": 1091,
+        "line_count": 31,
+        "stored_raw": true
+      },
+      "probe_attempts": 0
+    }
+  ],
+  "task_id": "c63a5de0dc994a20bc9f2920a5a325ba",
+  "task_title": "Define architecture contract for Ship deployable release artifact bundle",
+  "task_status": "running",
+  "started_at": "2026-03-20T02:13:55.830730Z",
+  "updated_at": "2026-03-20T02:28:10.080580Z",
+  "completed": false
+}

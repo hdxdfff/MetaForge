@@ -1,0 +1,5 @@
+2026/03/09-06:37:10.158 a59c Creating DB D:\codex\tools\browser-automation\profiles\zhihuishu\Default\EdgeCoupons/coupons_data.db since it was missing.
+2026/03/09-06:37:10.161 a59c Reusing MANIFEST D:\codex\tools\browser-automation\profiles\zhihuishu\Default\EdgeCoupons/coupons_data.db/MANIFEST-000001
+2026/03/09-06:37:10.364 8144 Level-0 table #5: started
+2026/03/09-06:37:10.367 8144 Level-0 table #5: 681597 bytes OK
+2026/03/09-06:37:10.368 8144 Delete type=0 #3

@@ -1,0 +1,28 @@
+{
+  "task_id": "602086a858f04b8884fb4195f4098d5e",
+  "task_title": "Implement module tools.execution_trace",
+  "task_status": "timed_out",
+  "started_at": "2026-03-21T12:54:06.221475Z",
+  "updated_at": "2026-03-21T13:03:51.464695Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "602086a858f04b8884fb4195f4098d5e-terminal-record",
+      "step_title": "Implement module tools.execution_trace",
+      "action": "task_terminal_record",
+      "ok": false,
+      "at": "2026-03-21T13:03:51.464695Z",
+      "status": "timed_out",
+      "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+      "error": null,
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ],
+  "result": {
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

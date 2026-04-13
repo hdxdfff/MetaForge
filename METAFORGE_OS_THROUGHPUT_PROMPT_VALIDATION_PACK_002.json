@@ -1,0 +1,52 @@
+{
+  "name": "MetaForge Throughput Prompt Validation Pack 002",
+  "version": 1,
+  "source": "D:\\codex\\METAFORGE_OS_HIGH_THROUGHPUT_BLUEPRINT.md",
+  "tasks": [
+    {
+      "task_id": "throughput-prompt-validation-002",
+      "lane": "research-lane",
+      "caller": "codex-control",
+      "project_id": null,
+      "repo_path": "D:\\codex\\orchestrator-mvp",
+      "goal": "Validate that audit-task output schema violations are rejected in worker_adapters before task completion.",
+      "prompt": "Audit orchestrator.py and worker_adapters.py again. Return a concrete implementation note with exact files inspected, the smallest remaining gap if any, explicit validation commands, and a bounded next step. Do not answer with a generic summary. If the output is not structurally complete, reject it and explain why.",
+      "task_type": "artifact_audit",
+      "queue_name": "fastlane",
+      "verification_level": "L1",
+      "max_runtime_seconds": 1800,
+      "retry_limit": 1,
+      "rollback_rule": "mark_failed_and_requeue_split",
+      "execution_mode": "research",
+      "default_allow_resource_scan": true,
+      "default_allow_repo_status": true,
+      "artifact_spec": {
+        "artifact_type": "report",
+        "type": "report",
+        "output": "D:\\codex\\METAFORGE_OS_THROUGHPUT_PROMPT_VALIDATION_002.md",
+        "entrypoint": "D:\\codex\\METAFORGE_OS_THROUGHPUT_PROMPT_VALIDATION_002.md",
+        "deliverables": [
+          "concrete implementation note",
+          "exact files inspected",
+          "explicit validation commands",
+          "bounded next step"
+        ],
+        "expected_outputs": [
+          "D:\\codex\\METAFORGE_OS_THROUGHPUT_PROMPT_VALIDATION_002.md"
+        ],
+        "required_artifacts": [
+          "D:\\codex\\METAFORGE_OS_THROUGHPUT_PROMPT_VALIDATION_002.md"
+        ],
+        "evidence": [
+          "D:\\codex\\METAFORGE_OS_THROUGHPUT_PROMPT_VALIDATION_002.md"
+        ],
+        "verification": {
+          "build_required": false,
+          "tests_required": false
+        },
+        "registry": "artifact_registry",
+        "min_fresh_artifacts": 1
+      }
+    }
+  ]
+}

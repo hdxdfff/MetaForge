@@ -1,0 +1,28 @@
+{
+  "task_id": "07573a33d3524292bccc9cfdbc8e95e3",
+  "task_title": "Coordinate cross-project impact for Expand tool extension coverage",
+  "task_status": "timed_out",
+  "started_at": "2026-03-19T13:47:59.092902Z",
+  "updated_at": "2026-03-19T13:55:04.563002Z",
+  "completed": false,
+  "steps": [
+    {
+      "step_id": "07573a33d3524292bccc9cfdbc8e95e3-terminal-record",
+      "step_title": "Coordinate cross-project impact for Expand tool extension coverage",
+      "action": "task_terminal_record",
+      "ok": false,
+      "at": "2026-03-19T13:55:04.563002Z",
+      "status": "timed_out",
+      "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+      "error": null,
+      "production_evidence_status": null,
+      "synthesized": true,
+      "source": "task-result-backfill"
+    }
+  ],
+  "result": {
+    "summary": "Task heartbeat exceeded 5 minutes; runtime requested requeue.",
+    "heartbeat_timeout": true,
+    "requeue_requested": true
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "task_id": "task-shadow-demo-0001",
+  "status": "pass",
+  "executed_at": "2026-03-26T14:28:14Z",
+  "artifact_checked": "D:\\codex\\orchestrator-mvp\\shadow_factory\\artifacts\\task-shadow-demo-0001\\dummy-artifact.txt",
+  "shadow_mode": true
+}
