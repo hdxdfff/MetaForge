@@ -5,6 +5,7 @@ function Get-CodexDefaultVmrunExe {
     $candidates = @(
         "C:\Program Files (x86)\VMware\VMware Workstation\vmrun.exe",
         "C:\Program Files\VMware\VMware Workstation\vmrun.exe",
+        "D:\新建文件夹\vmrun.exe",
         "D:\vmrun.exe"
     )
 
