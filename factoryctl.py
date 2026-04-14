@@ -55,6 +55,7 @@ STRUCTURED_COMMANDS = {
     "memory",
     "dialogue-status",
     "dialogue-sync-current",
+    "generated-sync",
 }
 
 LOCAL_STATUS_COMMANDS = {
@@ -80,6 +81,7 @@ USAGE = """Usage:
   factoryctl.cmd report [--human]
   factoryctl.cmd inbox [--open-only]
   factoryctl.cmd sync [dialogue args...]
+  factoryctl.cmd generated-sync [--force]
   factoryctl.cmd dispatch <prompt> [--precheck-only] [--confirm] [options]
   factoryctl.cmd deploy <target> [options]
   factoryctl.cmd rollback <target> [options]
@@ -104,6 +106,7 @@ Examples:
   factoryctl.cmd memory summary
   factoryctl.cmd memory recall "dialogue sync"
   factoryctl.cmd dialogue-status [--limit N] [--rebuild]
+  factoryctl.cmd generated-sync
   factoryctl.cmd daemon-status
   factoryctl.cmd rnd-pipeline-status
   factoryctl.cmd release-ops-status
@@ -135,6 +138,47 @@ def _run_remote(args: Sequence[str]) -> subprocess.CompletedProcess[str]:
         errors="replace",
         check=False,
     )
+
+
+def _run_generated_sync(*, force: bool = False, quiet: bool = False, cooldown_seconds: int = 300, reason: str = "manual") -> subprocess.CompletedProcess[str]:
+    script = ROOT / "tools" / "generated_sync.py"
+    python = ROOT / "tools" / "python311-embed" / "python.exe"
+    if not script.exists():
+        return subprocess.CompletedProcess(
+            args=["generated_sync.py"],
+            returncode=1,
+            stdout="",
+            stderr=f"Generated sync helper not found: {script}",
+        )
+    python_exe = str(python if python.exists() else Path(sys.executable))
+    command = [
+        python_exe,
+        str(script),
+        "--cooldown-seconds",
+        str(max(0, cooldown_seconds)),
+        "--reason",
+        reason,
+    ]
+    if force:
+        command.append("--force")
+    if quiet:
+        command.append("--quiet")
+    return subprocess.run(
+        command,
+        cwd=str(ROOT),
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+        check=False,
+    )
+
+
+def _maybe_auto_sync_generated(reason: str) -> None:
+    try:
+        _run_generated_sync(quiet=True, cooldown_seconds=300, reason=reason)
+    except Exception:
+        return
 
 
 def _load_json_text(text: str, default: Any) -> Any:
@@ -759,7 +803,29 @@ def _structured_live_first_status(
         _human_status_lines(command, payload)
     else:
         _emit_json(payload)
+    if payload.get("source") == "live":
+        _maybe_auto_sync_generated(f"status:{command}")
     return payload.get("result_code", EXIT_OK)
+
+
+def _structured_generated_sync(argv: Sequence[str]) -> int:
+    parser = argparse.ArgumentParser(prog="factoryctl generated-sync")
+    parser.add_argument("--force", action="store_true")
+    parser.add_argument("--human", action="store_true")
+    args = parser.parse_args(list(argv))
+    result = _run_generated_sync(force=args.force, quiet=False, cooldown_seconds=0, reason="manual")
+    if result.stderr:
+        print(result.stderr, file=sys.stderr, end="" if result.stderr.endswith("\n") else "\n")
+    payload = _load_json_text(result.stdout, {})
+    envelope = _envelope("generated-sync", source="live" if result.returncode == 0 else "cached_state", generated_sync=payload)
+    if args.human:
+        sync_payload = envelope.get("generated_sync") or {}
+        print(f"generated_sync: {sync_payload.get('status') or 'unknown'}")
+        print(f"fingerprint: {sync_payload.get('fingerprint') or 'unknown'}")
+        print(f"host_generated_root: {sync_payload.get('host_generated_root') or str(ROOT / 'generated')}")
+    else:
+        _emit_json(envelope)
+    return EXIT_OK if result.returncode == 0 else EXIT_DEGRADED
 
 
 def _structured_daemon_status(argv: Sequence[str]) -> int:
@@ -2251,6 +2317,8 @@ def main() -> int:
 
     if command == "sync":
         return _structured_sync(argv[1:])
+    if command == "generated-sync":
+        return _structured_generated_sync(argv[1:])
 
     if command == "dialogue-status":
         return _structured_dialogue_status(argv[1:])
