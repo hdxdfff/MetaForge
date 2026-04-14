@@ -18,6 +18,7 @@ TASKS = DATA / 'tasks.json'
 PLATFORMS = FACTORY / 'platform_registry.json'
 CAPABILITIES = FACTORY / 'capability_registry.json'
 GUARD = DATA / 'health_status.json'
+GOAL_STORAGE_AUDIT = DATA / 'goal_storage_audit.json'
 OUT = DATA / 'quality_status.json'
 POLICY = DATA / 'quality_policy.json'
 CANDIDATES = DATA / 'self_patch_candidates.json'
@@ -114,7 +115,23 @@ def _latest_attempts(tasks: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return list(latest.values())
 
 
-def _task_score(tasks: list[dict[str, Any]], active_goal_ids: set[str] | None = None) -> float:
+def _goal_storage_snapshot() -> dict[str, Any]:
+    payload = _load_json(GOAL_STORAGE_AUDIT, {})
+    task_queue = payload.get('task_queue') or {}
+    return {
+        'confirmed': bool(payload.get('task_queue_confirmed')),
+        'status': str(payload.get('status') or '').strip().lower(),
+        'managed_active_task_count': int(task_queue.get('managed_active_task_count') or 0),
+        'managed_active_tasks_with_goal_link': int(task_queue.get('managed_active_tasks_with_goal_link') or 0),
+        'updated_at': payload.get('updated_at'),
+    }
+
+
+def _task_score(
+    tasks: list[dict[str, Any]],
+    active_goal_ids: set[str] | None = None,
+    goal_storage: dict[str, Any] | None = None,
+) -> float:
     if not tasks:
         return 1.0
     filtered_tasks = tasks
@@ -125,10 +142,28 @@ def _task_score(tasks: list[dict[str, Any]], active_goal_ids: set[str] | None = 
     now = datetime.now(timezone.utc)
     cutoff = now - timedelta(hours=12)
     stale_cutoff = now - timedelta(minutes=20)
+    goal_storage = goal_storage or {}
+    queue_confirmed = bool(goal_storage.get('confirmed'))
+    managed_active_task_count = int(goal_storage.get('managed_active_task_count') or 0)
+    managed_active_tasks_with_goal_link = int(goal_storage.get('managed_active_tasks_with_goal_link') or 0)
+    managed_mode = queue_confirmed
+    recent_open_cutoff = now - timedelta(hours=6)
+    recent_closed_cutoff = now - timedelta(hours=24)
     scored_tasks = []
     for item in filtered_tasks:
         ts = _parse_ts(item.get('updated_at') or item.get('created_at'))
-        if ts is None or ts >= cutoff:
+        status = item.get('status')
+        if managed_mode:
+            if status in ACTIVE_TASK_STATUSES and ts is not None and ts >= recent_open_cutoff:
+                scored_tasks.append(item)
+                continue
+            if status == 'completed' and ts is not None and ts >= recent_closed_cutoff:
+                scored_tasks.append(item)
+                continue
+            if status in {'failed', 'timed_out'} and ts is not None and ts >= recent_open_cutoff and not _task_requested_requeue(item):
+                scored_tasks.append(item)
+                continue
+        elif ts is None or ts >= cutoff:
             scored_tasks.append(item)
     if not scored_tasks:
         scored_tasks = filtered_tasks[-10:]
@@ -158,6 +193,14 @@ def _task_score(tasks: list[dict[str, Any]], active_goal_ids: set[str] | None = 
         ts = _parse_ts(item.get('updated_at') or item.get('created_at'))
         if ts is not None and ts <= stale_cutoff:
             stale_active += 1
+    if managed_mode and managed_active_task_count == 0 and managed_active_tasks_with_goal_link == 0:
+        recent_closed = completed + effective_failed
+        if recent_closed <= 0:
+            return 1.0
+        if effective_failed > 0 and completed == 0:
+            return 0.82
+        closed_ratio = completed / max(1, recent_closed)
+        return round(0.88 + min(0.08, closed_ratio * 0.08), 4)
     if not open_tasks:
         recent_closed = completed + effective_failed
         if recent_closed <= 0:
@@ -231,6 +274,7 @@ def _quality_readiness_checks(
     capabilities: list[dict[str, Any]],
     guard: dict[str, Any],
     active_goal_ids: set[str],
+    goal_storage: dict[str, Any] | None = None,
 ) -> list[dict[str, Any]]:
     latest_tasks = _latest_attempts(tasks)
     completed = sum(1 for item in latest_tasks if item.get('status') == 'completed')
@@ -242,6 +286,9 @@ def _quality_readiness_checks(
         ts = _parse_ts(item.get('updated_at') or item.get('created_at'))
         if ts is not None and ts <= datetime.now(timezone.utc) - timedelta(minutes=20):
             stale_active += 1
+    goal_storage = goal_storage or {}
+    managed_active_task_count = int(goal_storage.get('managed_active_task_count') or 0)
+    queue_confirmed = bool(goal_storage.get('confirmed'))
 
     promote_platforms = [item for item in platform_scores if item['quality_status'] == 'promote']
     hold_platforms = [item for item in platform_scores if item['quality_status'] == 'hold']
@@ -263,6 +310,8 @@ def _quality_readiness_checks(
                 'failed_tasks': failed,
                 'stale_active_tasks': stale_active,
                 'open_task_count': sum(1 for item in latest_tasks if item.get('status') in ACTIVE_TASK_STATUSES),
+                'managed_active_task_count': managed_active_task_count,
+                'goal_storage_confirmed': queue_confirmed,
                 'active_goal_ids': sorted(active_goal_ids),
             },
             'next_action': 'restore-task-flow' if task_score < 0.75 else 'observe-only',
@@ -335,6 +384,7 @@ def run_quality() -> dict[str, Any]:
     platforms = list_platforms()
     capabilities = _load_json(CAPABILITIES, {}).get('capabilities', [])
     guard = _load_json(GUARD, {'status': 'unknown'})
+    goal_storage = _goal_storage_snapshot()
     policy = _load_json(POLICY, {})
     candidates_payload = _load_json(CANDIDATES, [])
     if isinstance(candidates_payload, dict):
@@ -348,7 +398,7 @@ def run_quality() -> dict[str, Any]:
     active_goal_ids = {str(item.get('goal_id') or '').strip() for item in goals if item.get('status') in ACTIVE_GOAL_STATUSES}
     if not active_goal_ids:
         active_goal_ids = _recovering_goal_ids(tasks)
-    task_score = _task_score(tasks, active_goal_ids=active_goal_ids)
+    task_score = _task_score(tasks, active_goal_ids=active_goal_ids, goal_storage=goal_storage)
     platform_scores = [_platform_score(platform, capabilities, guard) for platform in platforms]
     candidate_scores = [_candidate_score(item) for item in candidates]
     promoted_platforms = [item for item in platform_scores if item['quality_status'] == 'promote']
@@ -361,6 +411,7 @@ def run_quality() -> dict[str, Any]:
         capabilities=capabilities,
         guard=guard,
         active_goal_ids=active_goal_ids,
+        goal_storage=goal_storage,
     )
 
     overall = round(
