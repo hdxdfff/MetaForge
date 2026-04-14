@@ -1,0 +1,53 @@
+{
+  "updated_at": "2026-04-04T17:12:49.946004Z",
+  "window_hours": 24,
+  "recent_events": [
+    {
+      "at": "2026-04-04T17:12:49.946004Z",
+      "provider": "openai",
+      "model": "kimi-k2.5",
+      "used_fallback": false,
+      "input_chars": 141,
+      "output_chars": 47
+    }
+  ],
+  "cheap_calls": 0,
+  "reasoning_calls": 0,
+  "strong_calls": 1,
+  "total_calls": 1,
+  "successful_calls": 1,
+  "non_fallback_ratio": 1.0,
+  "total_input_chars": 141,
+  "total_output_chars": 47,
+  "output_input_ratio": 0.3333,
+  "reasoning_ratio": 0.0,
+  "strong_ratio": 1.0,
+  "recent_window": {
+    "hours": 1,
+    "cheap_calls": 0,
+    "reasoning_calls": 0,
+    "strong_calls": 1,
+    "total_calls": 1,
+    "successful_calls": 1,
+    "non_fallback_ratio": 1.0,
+    "total_input_chars": 141,
+    "total_output_chars": 47,
+    "output_input_ratio": 0.3333,
+    "reasoning_ratio": 0.0,
+    "strong_ratio": 1.0
+  },
+  "ratio_sample_min_calls": 5,
+  "recent_window_sample_sufficient": false,
+  "effective_ratio_source": "full_window",
+  "effective_reasoning_ratio": 0.0,
+  "effective_strong_ratio": 1.0,
+  "max_reasoning_model_ratio": 0.6,
+  "reasoning_allowed": true,
+  "max_strong_model_ratio": 0.2,
+  "strong_allowed": true,
+  "last_provider": "openai",
+  "last_model": "kimi-k2.5",
+  "reasoning_pressure": 0.0,
+  "strong_pressure": 6.6667,
+  "demand_pressure": "balanced"
+}

@@ -110,7 +110,7 @@ def run_global_policy() -> dict[str, Any]:
         resource_budget["capability_building"] = 0.15
 
     min_active_tasks = 3
-    max_active_tasks = 12
+    max_active_tasks = 16
     min_active_goals = 3
     if active_task_count < min_active_tasks:
         resource_budget["runtime_tasks"] = max(resource_budget["runtime_tasks"], 0.5)
@@ -135,11 +135,11 @@ def run_global_policy() -> dict[str, Any]:
             "pattern-rollout": 0.0,
         }
         min_active_tasks = 1
-        max_active_tasks = 4
+        max_active_tasks = 12
         min_active_goals = 1
 
     cadence_policy = {
-        "runtime_dispatch_limit": 1 if resource_budget["runtime_tasks"] < 0.35 else 2 if resource_budget["runtime_tasks"] < 0.55 else 3,
+        "runtime_dispatch_limit": 2 if resource_budget["runtime_tasks"] < 0.35 else 3 if resource_budget["runtime_tasks"] < 0.65 else 4,
         "goal_generation_every": 1 if active_task_count < min_active_tasks else 5 if resource_budget["runtime_tasks"] < 0.35 else 3 if resource_budget["runtime_tasks"] < 0.55 else 2,
         "maintenance_mode": "full" if resource_budget["maintenance"] >= 0.2 else "light",
         "maintenance_every": 4 if resource_budget["maintenance"] >= 0.2 else 8,
@@ -153,7 +153,7 @@ def run_global_policy() -> dict[str, Any]:
     }
     if kernel_mode.get("kernel_freeze"):
         cadence_policy.update({
-            "runtime_dispatch_limit": 1,
+            "runtime_dispatch_limit": 2,
             "goal_generation_every": 1 if active_task_count == 0 else 2,
             "maintenance_mode": "full",
             "maintenance_every": 1,

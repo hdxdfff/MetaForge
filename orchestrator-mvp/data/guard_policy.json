@@ -1,0 +1,31 @@
+{
+  "max_tasks_per_hour": 20,
+  "max_platforms_per_day": 3,
+  "max_active_tasks": 16,
+  "max_queue_tasks": 40,
+  "max_strong_model_ratio": 0.2,
+  "max_reasoning_model_ratio": 0.6,
+  "max_error_escalations": 5,
+  "protect_core_paths": [
+    "D:\\codex\\orchestrator-mvp\\app",
+    "D:\\codex\\orchestrator-mvp\\runtime",
+    "D:\\codex\\orchestrator-mvp\\tools",
+    "D:\\codex\\orchestrator-mvp\\brain",
+    "D:\\codex\\orchestrator-mvp\\state"
+  ],
+  "workspace_paths": [
+    "D:\\codex\\orchestrator-mvp\\workspace",
+    "D:\\codex\\orchestrator-mvp\\factory\\workspace"
+  ],
+  "deny_learning_keywords": [
+    "miner",
+    "botnet",
+    "ransomware",
+    "keylogger",
+    "exploit",
+    "payload",
+    "credential stealer"
+  ],
+  "premium_frozen": false,
+  "quota_preserve_mode": false
+}

@@ -79,8 +79,8 @@ LOOP_STATE = DATA / "brain_loop_state.json"
 CONTROL_CENTER_STATE = DATA / "control_center_state.json"
 DEFAULT_MIN_ACTIVE_GOALS = 3
 DEFAULT_MIN_ACTIVE_TASKS = 3
-DEFAULT_MAX_ACTIVE_TASKS = 12
-MAX_TASKS_PER_TICK = 1
+DEFAULT_MAX_ACTIVE_TASKS = 16
+MAX_TASKS_PER_TICK = 3
 MAX_STEP_TIME_MS = 5000
 DEFAULT_RUNTIME_SYNC_EVERY = 5
 DEFAULT_TASK_ENGINE_EVERY = 5
@@ -1629,7 +1629,7 @@ def brain_step(policy_schedule: dict | None = None) -> dict:
         1 if focus.get("single_product_mode") else int(schedule.get("min_active_tasks") or DEFAULT_MIN_ACTIVE_TASKS)
     )
     max_active_tasks = (
-        min(2, int(schedule.get("max_active_tasks") or DEFAULT_MAX_ACTIVE_TASKS))
+        min(4, int(schedule.get("max_active_tasks") or DEFAULT_MAX_ACTIVE_TASKS))
         if focus.get("single_product_mode")
         else int(schedule.get("max_active_tasks") or DEFAULT_MAX_ACTIVE_TASKS)
     )
@@ -1978,7 +1978,7 @@ def brain_step(policy_schedule: dict | None = None) -> dict:
             )
 
     unblock_dispatches: list[dict[str, Any]] = []
-    unblock_dispatch_budget = max(1, int(schedule.get("unblock_dispatch_limit") or 1))
+    unblock_dispatch_budget = max(2, int(schedule.get("unblock_dispatch_limit") or 2))
     if (
         not control.get("paused")
         and blocked_candidates_for_repair
@@ -2283,14 +2283,14 @@ def run_once(policy_schedule: dict | None = None) -> dict:
         else int(schedule.get("min_active_tasks") or DEFAULT_MIN_ACTIVE_TASKS)
     )
     max_active_tasks = (
-        min(2, int(schedule.get("max_active_tasks") or DEFAULT_MAX_ACTIVE_TASKS))
+        min(4, int(schedule.get("max_active_tasks") or DEFAULT_MAX_ACTIVE_TASKS))
         if focus.get("single_product_mode")
         else int(schedule.get("max_active_tasks") or DEFAULT_MAX_ACTIVE_TASKS)
     )
     dispatch_headroom = max(0, max_active_tasks - active_task_count_before)
     pressure_gap = max(0, min_active_tasks - active_task_count_before)
     runtime_dispatch_limit = (
-        1 if focus.get("single_product_mode") else int(schedule.get("runtime_dispatch_limit") or 3)
+        2 if focus.get("single_product_mode") else int(schedule.get("runtime_dispatch_limit") or 4)
     )
     runtime_dispatch_limit = max(runtime_dispatch_limit, pressure_gap)
     runtime_dispatch_limit = (

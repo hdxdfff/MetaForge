@@ -1008,7 +1008,7 @@ def _run_bounded_brain_loop() -> dict[str, Any]:
             "run_experiments": False,
             "run_capability_building": False,
             "allow_goal_generation": False,
-            "runtime_dispatch_limit": 1,
+            "runtime_dispatch_limit": 3,
         }
     )
     actions = payload.get("actions") or []

@@ -53,11 +53,11 @@ STALE_MULTIPLIER = 3
 AI_TEST_ALERT_THRESHOLD = 3
 DAEMON_ERROR_RESTART_THRESHOLD = 3
 DEFAULT_MIN_ACTIVE_TASKS = 3
-DEFAULT_MAX_ACTIVE_TASKS = 12
+DEFAULT_MAX_ACTIVE_TASKS = 16
 TICK_STACK_DUMP_SECONDS = 90
 SELF_MODEL_TIMEOUT_SECONDS = 20
 RECOVERY_TIMEOUT_SECONDS = 15
-DEFAULT_BRAIN_STEP_TASK_LIMIT = 1
+DEFAULT_BRAIN_STEP_TASK_LIMIT = 3
 DEFAULT_BRAIN_STEP_BUDGET_MS = 5000
 DEFAULT_MAINTENANCE_EVERY = 10
 DEFAULT_AI_TESTING_EVERY = 300
@@ -2449,6 +2449,77 @@ def _write_watchdog_snapshot(*, daemon_state: dict | None = None, result: dict |
     return payload
 
 
+def _write_recovery_heartbeat_snapshots(
+    *,
+    result: dict | None = None,
+    previous_result: dict | None = None,
+    recovery_payload: dict | None = None,
+    policy_schedule: dict | None = None,
+) -> dict[str, dict]:
+    previous_result = previous_result or {}
+    result = result or {}
+    now = utc()
+
+    brain_loop_snapshot: dict[str, Any] = {}
+    for candidate in (
+        result.get('brain_loop'),
+        previous_result.get('brain_loop'),
+        _read_json_file(DATA / 'brain_loop_state.json', {}),
+        _read_json_file(DATA / 'brain_loop_latest.json', {}),
+    ):
+        if isinstance(candidate, dict) and candidate:
+            brain_loop_snapshot = dict(candidate)
+            break
+    brain_loop_snapshot.update(
+        {
+            'updated_at': now,
+            'status': 'signal-only',
+            'reason': 'execution_recovery_mode',
+            'recovery_mode': True,
+            'source_component': 'factory_daemon',
+        }
+    )
+    if recovery_payload:
+        brain_loop_snapshot['execution_recovery'] = recovery_payload
+    runtime_pressure = _runtime_pressure_snapshot(result or previous_result, policy_schedule=policy_schedule)
+    brain_loop_snapshot['runtime_pressure'] = runtime_pressure
+    if isinstance(previous_result.get('goal_backlog'), dict):
+        brain_loop_snapshot.setdefault('goal_backlog', previous_result.get('goal_backlog'))
+    if isinstance(previous_result.get('task_engine'), dict):
+        brain_loop_snapshot.setdefault('task_engine', previous_result.get('task_engine'))
+
+    task_engine_snapshot: dict[str, Any] = {}
+    for candidate in (
+        result.get('task_engine'),
+        previous_result.get('task_engine'),
+        _read_json_file(FACTORY_TASK_ENGINE_STATUS_PATH, {}),
+    ):
+        if isinstance(candidate, dict) and candidate:
+            task_engine_snapshot = dict(candidate)
+            break
+    task_engine_snapshot.update(
+        {
+            'updated_at': now,
+            'status': 'signal-only',
+            'reason': 'execution_recovery_mode',
+            'recovery_mode': True,
+            'source_component': 'factory_daemon',
+        }
+    )
+    if recovery_payload:
+        task_engine_snapshot['execution_recovery'] = recovery_payload
+
+    brain_loop_paths = [
+        DATA / 'brain_loop_state.json',
+        DATA / 'brain_loop_latest.json',
+        DATA / 'logs' / 'brain_loop_latest.json',
+    ]
+    for path in brain_loop_paths:
+        _atomic_write_text(path, json.dumps(brain_loop_snapshot, ensure_ascii=False, indent=2), encoding='utf-8')
+    _atomic_write_text(FACTORY_TASK_ENGINE_STATUS_PATH, json.dumps(task_engine_snapshot, ensure_ascii=False, indent=2), encoding='utf-8')
+    return {'brain_loop': brain_loop_snapshot, 'task_engine': task_engine_snapshot}
+
+
 def is_pid_running(pid: int) -> bool:
     try:
         if os.name == 'nt':
@@ -2574,7 +2645,7 @@ def _policy_schedule(policy_state: dict, base_meta_every: int, base_evolution_ev
     maintenance_every = int(cadence.get('maintenance_every') or _budget_interval(budget.get('maintenance', 0.1), 10, 4))
     risk_scan_every = int(cadence.get('risk_scan_every') or 5)
     runtime_weight = float(budget.get('runtime_tasks', 0.4) or 0.4)
-    runtime_dispatch_limit = int(cadence.get('runtime_dispatch_limit') or (1 if runtime_weight < 0.35 else 2 if runtime_weight < 0.55 else 3))
+    runtime_dispatch_limit = int(cadence.get('runtime_dispatch_limit') or (2 if runtime_weight < 0.35 else 3 if runtime_weight < 0.65 else 4))
     goal_generation_every = int(cadence.get('goal_generation_every') or _budget_interval(runtime_weight, 4, 2))
     ai_testing_every = int(cadence.get('ai_testing_every') or max(_budget_interval(budget.get('maintenance', 0.1), 12, 4), 24))
     maintenance_mode = str(cadence.get('maintenance_mode') or ('full' if budget.get('maintenance', 0.1) >= 0.2 else 'light'))
@@ -2591,7 +2662,7 @@ def _policy_schedule(policy_state: dict, base_meta_every: int, base_evolution_ev
             'goal_generation_every': 1,
             'ai_testing_every': max(ai_testing_every, 24),
             'min_active_tasks': max(int(cadence.get('min_active_tasks') or DEFAULT_MIN_ACTIVE_TASKS), 4),
-            'max_active_tasks': max(int(cadence.get('max_active_tasks') or DEFAULT_MAX_ACTIVE_TASKS), 12),
+            'max_active_tasks': max(int(cadence.get('max_active_tasks') or DEFAULT_MAX_ACTIVE_TASKS), 16),
             'min_active_goals': max(int(cadence.get('min_active_goals') or 3), 2),
             'resource_budget': budget,
             'kernel_mode': kernel_mode,
@@ -2613,7 +2684,7 @@ def _policy_schedule(policy_state: dict, base_meta_every: int, base_evolution_ev
         'goal_generation_every': goal_generation_every,
         'ai_testing_every': ai_testing_every,
         'min_active_tasks': int(cadence.get('min_active_tasks') or DEFAULT_MIN_ACTIVE_TASKS),
-        'max_active_tasks': int(cadence.get('max_active_tasks') or DEFAULT_MAX_ACTIVE_TASKS),
+        'max_active_tasks': max(int(cadence.get('max_active_tasks') or DEFAULT_MAX_ACTIVE_TASKS), 16),
         'min_active_goals': int(cadence.get('min_active_goals') or 3),
         'resource_budget': budget,
         'kernel_mode': kernel_mode,
@@ -2779,6 +2850,14 @@ def tick(run_meta: bool, run_evolution: bool, policy_schedule: dict | None = Non
                 'smoke_hygiene': smoke_hygiene_payload,
             }
             result['tool_health_history'] = previous_result.get('tool_health_history') or {'history_count': 0, 'latest': None}
+            recovery_heartbeat = _write_recovery_heartbeat_snapshots(
+                result=result,
+                previous_result=previous_result,
+                recovery_payload=recovery_payload,
+                policy_schedule=policy_schedule,
+            )
+            result['brain_loop'] = recovery_heartbeat.get('brain_loop') or result.get('brain_loop')
+            result['task_engine'] = recovery_heartbeat.get('task_engine') or result.get('task_engine')
             shadow_pipeline_every = int((policy_schedule or {}).get('shadow_pipeline_every') or DEFAULT_SHADOW_PIPELINE_EVERY)
             shadow_pending_count = pending_shadow_work_count()
             run_shadow_pipeline_now = observer_enabled and (

@@ -53,10 +53,10 @@ def load_policy() -> dict[str, Any]:
     default = {
         'max_tasks_per_hour': 20,
         'max_platforms_per_day': 3,
-        'max_active_tasks': 8,
-        'max_queue_tasks': 20,
+        'max_active_tasks': 16,
+        'max_queue_tasks': 40,
         'max_reasoning_model_ratio': 0.6,
-        'max_strong_model_ratio': 0.15,
+        'max_strong_model_ratio': 0.2,
         'max_error_escalations': 5,
         'protect_core_paths': [str(ROOT / 'app'), str(ROOT / 'runtime'), str(ROOT / 'tools'), str(ROOT / 'brain'), str(ROOT / 'state')],
         'workspace_paths': [
@@ -249,19 +249,19 @@ def guard_snapshot() -> dict[str, Any]:
     raw_active_tasks = int(task_metrics.get('active') or 0)
     effective_active_tasks = managed_active_tasks if goal_storage_task_queue.get('task_queue_confirmed') else raw_active_tasks
     if created_last_hour >= int(policy.get('max_tasks_per_hour', 20)):
-        max_active_tasks = int(policy.get('max_active_tasks', 8))
-        max_queue_tasks = int(policy.get('max_queue_tasks', 20))
+        max_active_tasks = int(policy.get('max_active_tasks', 16))
+        max_queue_tasks = int(policy.get('max_queue_tasks', 40))
         # Burst creation should throttle orchestration, but only hard-block when the queue is already under pressure.
         if not (lean_execution and effective_active_tasks <= max_active_tasks and task_metrics['queued'] < max_queue_tasks):
             reasons.append('task creation rate exceeded')
             allow_brain_loop = False
             allow_meta = False
-    if effective_active_tasks >= int(policy.get('max_active_tasks', 8)):
+    if effective_active_tasks >= int(policy.get('max_active_tasks', 16)):
         reasons.append('active task limit exceeded')
         allow_brain_loop = False
-    elif raw_active_tasks >= int(policy.get('max_active_tasks', 8)):
+    elif raw_active_tasks >= int(policy.get('max_active_tasks', 16)):
         advisories.append('raw task rows exceed active limit but managed queue is below threshold')
-    if task_metrics['queued'] >= int(policy.get('max_queue_tasks', 20)):
+    if task_metrics['queued'] >= int(policy.get('max_queue_tasks', 40)):
         reasons.append('queue length limit exceeded')
         allow_brain_loop = False
     if ratio_sample_sufficient:
@@ -269,14 +269,14 @@ def guard_snapshot() -> dict[str, Any]:
             reasons.append('reasoning model ratio exceeded')
             allow_meta = False
             allow_evolution = False
-        if not bool(usage_metrics.get('strong_allowed', True)) and usage_metrics.get('strong_ratio', 0.0) > float(policy.get('max_strong_model_ratio', 0.15)):
+        if not bool(usage_metrics.get('strong_allowed', True)) and usage_metrics.get('strong_ratio', 0.0) > float(policy.get('max_strong_model_ratio', 0.2)):
             reasons.append('strong model ratio exceeded')
             allow_meta = False
             allow_evolution = False
     elif effective_ratio_source != 'recent_window':
         if usage_metrics.get('reasoning_ratio', 0.0) > float(policy.get('max_reasoning_model_ratio', 0.6)):
             advisories.append('reasoning model ratio elevated on insufficient recent sample')
-        if usage_metrics.get('strong_ratio', 0.0) > float(policy.get('max_strong_model_ratio', 0.15)):
+        if usage_metrics.get('strong_ratio', 0.0) > float(policy.get('max_strong_model_ratio', 0.2)):
             advisories.append('strong model ratio elevated on insufficient recent sample')
     if message_metrics['open_errors'] >= int(policy.get('max_error_escalations', 5)):
         reasons.append('too many open error escalations')

@@ -499,7 +499,7 @@ def _unblock_strategy(blockers: list[dict[str, Any]], task_status: str = "") -> 
 
 def _pool_wip_cap(dispatch_budget: int, pool: str) -> int:
     target = POOL_BONUS.get(pool, 0.0)
-    return max(1, int(round(dispatch_budget * max(target, 0.33))))
+    return max(1, int(round(dispatch_budget * max(target, 0.5))))
 
 
 def _task_gate_decision(
@@ -742,7 +742,7 @@ def _task_gate_decision(
 def build_scheduling_snapshot(
     goal_graph_pairs: list[dict[str, Any]],
     *,
-    dispatch_budget: int = 3,
+    dispatch_budget: int = 4,
     persist: bool = True,
 ) -> dict[str, Any]:
     tasks = _load_json(TASKS, [])
@@ -1066,7 +1066,7 @@ def build_scheduling_snapshot(
                 "unblock_lane": {
                     "enabled": bool(unblock_queue),
                     "pool": "ops",
-                    "wip_cap": max(1, dispatch_budget // 3 or 1),
+                "wip_cap": max(1, dispatch_budget // 2 or 1),
                 },
                 "verification_gate": global_gates["verification_gate"],
                 "release_gate": global_gates["release_gate"],

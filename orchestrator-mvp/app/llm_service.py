@@ -113,7 +113,7 @@ def _record_usage(provider: str, model: str, used_fallback: bool, input_chars: i
         "output_input_ratio": 0.0,
         "reasoning_ratio": 0.0,
         "strong_ratio": 0.0,
-        "max_strong_model_ratio": 0.15,
+        "max_strong_model_ratio": 0.2,
         "max_reasoning_model_ratio": 0.6,
         "reasoning_allowed": True,
         "strong_allowed": True,

@@ -95,7 +95,7 @@ class Settings:
     smart_model_routing_enabled: bool = os.getenv("ORCH_SMART_MODEL_ROUTING_ENABLED", "true").lower() == "true"
     model_usage_ratio_sample_min_calls: int = int(os.getenv("ORCH_MODEL_RATIO_SAMPLE_MIN_CALLS", "5"))
     model_usage_max_reasoning_ratio: float = float(os.getenv("ORCH_MODEL_MAX_REASONING_RATIO", "0.6"))
-    model_usage_max_strong_ratio: float = float(os.getenv("ORCH_MODEL_MAX_STRONG_RATIO", "0.15"))
+    model_usage_max_strong_ratio: float = float(os.getenv("ORCH_MODEL_MAX_STRONG_RATIO", "0.2"))
     planner_escalation_model: str = _first_env(
         "CODING_PLAN_ESCALATION_MODEL",
         "VOLCENGINE_MODEL_CODING_PLAN_ESCALATION",

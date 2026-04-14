@@ -1,0 +1,195 @@
+{
+  "updated_at": "2026-03-29T00:48:50.327573Z",
+  "focus_capabilities": [
+    "agent_orchestration",
+    "webapp_generation",
+    "deploy_scaffold",
+    "tool_extension",
+    "kv_cache_manager",
+    "local_llm_runner"
+  ],
+  "resource_budget": {
+    "runtime_tasks": 0.5,
+    "experiments": 0.25,
+    "capability_building": 0.2,
+    "maintenance": 0.1
+  },
+  "cadence_policy": {
+    "runtime_dispatch_limit": 3,
+    "goal_generation_every": 1,
+    "maintenance_mode": "light",
+    "maintenance_every": 8,
+    "capability_building_every": 2,
+    "experiment_every": 0,
+    "meta_every": 5,
+    "ai_testing_every": 4,
+    "min_active_tasks": 3,
+    "max_active_tasks": 16,
+    "min_active_goals": 3
+  },
+  "kernel_mode": {
+    "profile": "standard",
+    "kernel_freeze": false,
+    "manual_lock": false,
+    "auto_exit": true,
+    "source": "file",
+    "reasons": [
+      "Align runtime lane metadata with reasoning/strategic routing."
+    ],
+    "operator_role": "operator",
+    "execution_mode": "production",
+    "security_mode": "minimal",
+    "task_type": "production",
+    "workspace_write_scope": "workspace_only",
+    "task_auto_approve": false,
+    "components": {
+      "orchestrator": true,
+      "scheduler": true,
+      "task_queue": true,
+      "model_router": true,
+      "workspace": true,
+      "governance": true,
+      "observer": true,
+      "policy_contract": true,
+      "approval": true,
+      "security_review": true,
+      "experiments": true,
+      "github_learning": true,
+      "coordination": true,
+      "release_train": true,
+      "platform_generation": true
+    },
+    "enabled_components": [
+      "approval",
+      "coordination",
+      "experiments",
+      "github_learning",
+      "governance",
+      "model_router",
+      "observer",
+      "orchestrator",
+      "platform_generation",
+      "policy_contract",
+      "release_train",
+      "scheduler",
+      "security_review",
+      "task_queue",
+      "workspace"
+    ],
+    "disabled_components": [],
+    "model_router": {
+      "default_lane": "reasoning",
+      "fallback_lane": "strategic",
+      "local_lane_enabled": false
+    }
+  },
+  "experiment_portfolio": {
+    "routing-heuristics": 0.3,
+    "prompt-specialization": 0.2,
+    "recovery-patterns": 0.15,
+    "goal-seeding": 0.175,
+    "pattern-rollout": 0.175
+  },
+  "worker_bias_policy": {
+    "reviewer": 0.3,
+    "coder": 0.3,
+    "supervisor": 0.25,
+    "docker": 0.05,
+    "shell": 0.12
+  },
+  "organization_priority": {
+    "departments": [
+      {
+        "department": "engineering_department",
+        "project_count": 49,
+        "default_worker": "coder"
+      },
+      {
+        "department": "qa_department",
+        "project_count": 49,
+        "default_worker": "shell"
+      },
+      {
+        "department": "architecture_department",
+        "project_count": 20,
+        "default_worker": "reviewer"
+      },
+      {
+        "department": "rnd_department",
+        "project_count": 20,
+        "default_worker": "reviewer"
+      },
+      {
+        "department": "operations_department",
+        "project_count": 5,
+        "default_worker": "docker"
+      }
+    ]
+  },
+  "top_capabilities": [
+    {
+      "capability_id": "agent_orchestration",
+      "score": 20.8531,
+      "count": 391
+    },
+    {
+      "capability_id": "webapp_generation",
+      "score": 18.094,
+      "count": 326
+    },
+    {
+      "capability_id": "deploy_scaffold",
+      "score": 9.2112,
+      "count": 202
+    },
+    {
+      "capability_id": "tool_extension",
+      "score": 7.373,
+      "count": 202
+    },
+    {
+      "capability_id": "kv_cache_manager",
+      "score": 2.3855,
+      "count": 65
+    },
+    {
+      "capability_id": "local_llm_runner",
+      "score": 2.3855,
+      "count": 65
+    }
+  ],
+  "top_workers": [
+    {
+      "score": 10.5648,
+      "count": 227,
+      "worker": "reviewer",
+      "success_rate": 0.163
+    },
+    {
+      "score": 0.6696,
+      "count": 9,
+      "worker": "coder",
+      "success_rate": 0.151
+    },
+    {
+      "score": 0.372,
+      "count": 5,
+      "worker": "supervisor",
+      "success_rate": 0.103
+    }
+  ],
+  "inputs": {
+    "quality_score": 0.8079,
+    "control_status": "stable",
+    "autonomy_stage": "stage4_confirmed",
+    "autonomy_source": "soak_validation",
+    "autonomy_confirmed": true,
+    "experiment_history_count": 200,
+    "organization_departments": 5,
+    "ai_testing_status": "degraded",
+    "ai_testing_pass_rate": 0.6,
+    "ai_testing_error_count": 0,
+    "active_task_count": 1,
+    "kernel_freeze": false
+  }
+}

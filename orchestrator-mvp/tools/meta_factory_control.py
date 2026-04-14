@@ -32,7 +32,9 @@ from tools.module_ownership import refresh_patch_submissions, patch_review_queue
 from tools.automation_lab import run_automation_lab_status
 from tools.release_operations import run_release_operations_status
 from tools.tool_health_audit import run_tool_health_audit
+from tools.change_attribution import run_change_attribution_status
 from tools.ai_testing_compat import load_ai_test_status
+from tools.self_repair_playbooks import run_self_repair_playbooks
 from tools.rnd_department import build_rnd_department_status
 from tools.rnd_delivery_pipeline import build_rnd_delivery_pipeline_status
 from tools.rnd_asset_governance import build_rnd_asset_governance_status
@@ -140,7 +142,7 @@ def _resource_governor(guard: dict[str, Any], usage: dict[str, Any]) -> dict[str
         "max_reasoning_model_ratio": float(usage.get("max_reasoning_model_ratio", 0.6) or 0.6),
         "strong_ratio": float(usage_source.get("strong_ratio", 0.0) or 0.0),
         "strong_allowed": bool(usage.get("strong_allowed", True)),
-        "max_strong_model_ratio": float(usage.get("max_strong_model_ratio", 0.15) or 0.15),
+        "max_strong_model_ratio": float(usage.get("max_strong_model_ratio", 0.2) or 0.2),
         "active_tasks": int(tasks.get("active", 0) or 0),
         "queued_tasks": int(tasks.get("queued", 0) or 0),
         "reasons": guard.get("reasons", []),
@@ -592,11 +594,6 @@ def run_control_layer(
     )
     experiment_run = _load_json(DATA / "experiment_run.json", {}) if experiments_enabled else _disabled_status("experiment_run", kernel_mode)
     experiment_eval = _load_json(DATA / "experiment_evaluation.json", {}) if experiments_enabled else _disabled_status("experiment_evaluation", kernel_mode)
-    autonomy = run_autonomy_score(quality_snapshot=quality) if refresh_autonomy else load_snapshot(
-        DATA / "autonomy_score.json",
-        {},
-        previous_payload.get("autonomy_score"),
-    )
     self_model = load_snapshot(DATA / "self_model_runtime.json", {}, previous_payload.get("self_model"))
     platform_health = previous_payload.get("platform_runtime") or {"status": "signal-only", "platform_count": len(platforms), "unhealthy_count": 0}
     decision_status = _load_json(DECISION_ENGINE, {})
@@ -667,6 +664,24 @@ def run_control_layer(
             },
             previous_payload.get("release_operations"),
         )
+    )
+    change_attribution = run_change_attribution_status() if refresh_release_operations else load_snapshot(
+        DATA / "change_attribution_status.json",
+        {"status": "unknown", "recent_changes": [], "decision_summary": {}},
+        previous_payload.get("change_attribution"),
+    )
+    self_repair_playbooks = run_self_repair_playbooks() if refresh_release_operations else load_snapshot(
+        DATA / "self_repair_playbooks_status.json",
+        {"status": "unknown", "active_playbooks": [], "catalog": []},
+        previous_payload.get("self_repair_playbooks"),
+    )
+    autonomy = run_autonomy_score(
+        quality_snapshot=quality,
+        release_operations_snapshot=release_ops,
+    ) if refresh_autonomy else load_snapshot(
+        DATA / "autonomy_score.json",
+        {},
+        previous_payload.get("autonomy_score"),
     )
     rnd_department = load_snapshot(DATA / "rnd_department_status.json", _disabled_status("rnd_department", kernel_mode), previous_payload.get("rnd_department"))
     rnd_delivery_pipeline = load_snapshot(DATA / "rnd_delivery_pipeline_status.json", _disabled_status("rnd_delivery_pipeline", kernel_mode), previous_payload.get("rnd_delivery_pipeline"))
@@ -811,23 +826,6 @@ def run_control_layer(
     runtime_signals = _merge_signals(("runtime_blockers", "Runtime"))
     maturity_signals = _merge_signals(("maturity_signals", "Maturity"))
     release_signals = _merge_signals(("release_gate_signals", "Release Readiness"))
-    signal_dashboard = {
-        "Runtime": {
-            "status": "blocked" if runtime_signals else "healthy",
-            "signal_count": len(runtime_signals),
-            "signals": runtime_signals,
-        },
-        "Maturity": {
-            "status": "attention" if maturity_signals else "ok",
-            "signal_count": len(maturity_signals),
-            "signals": maturity_signals,
-        },
-        "Release Readiness": {
-            "status": "attention" if release_signals else "ready",
-            "signal_count": len(release_signals),
-            "signals": release_signals,
-        },
-    }
     verification_release_gate = verification.get("release_gate") or {}
     promotion_gate = release_ops.get("promotion_gate") or {}
     release_claim_policy = release_ops.get("release_claim_policy") or {}
@@ -845,6 +843,24 @@ def run_control_layer(
         if release_blocks_promotion or release_blocks_verification
         else str(release_claim_policy.get("status") or verification_release_gate.get("status") or promotion_gate.get("status") or "pass")
     )
+    release_dashboard_signals = release_signals if release_status != "pass" else []
+    signal_dashboard = {
+        "Runtime": {
+            "status": "blocked" if runtime_signals else "healthy",
+            "signal_count": len(runtime_signals),
+            "signals": runtime_signals,
+        },
+        "Maturity": {
+            "status": "attention" if maturity_signals else "ok",
+            "signal_count": len(maturity_signals),
+            "signals": maturity_signals,
+        },
+        "Release Readiness": {
+            "status": "attention" if release_dashboard_signals else "ready",
+            "signal_count": len(release_dashboard_signals),
+            "signals": release_dashboard_signals,
+        },
+    }
 
     payload = {
         "updated_at": _utc(),
@@ -1065,6 +1081,8 @@ def run_control_layer(
         "platform_runtime": platform_health,
         "automation_lab": lab_status,
         "release_operations": release_ops,
+        "change_attribution": change_attribution,
+        "self_repair_playbooks": self_repair_playbooks,
     }
     _save_json(OUT, payload)
     return payload

@@ -77,7 +77,7 @@ def _ratio_allowed(ratio: float, total_calls: int, limit: float, min_calls: int)
 def main() -> int:
     telemetry = _load_json(TELEMETRY, {})
     existing = _load_json(OUT, {})
-    policy = _load_json(POLICY, {"max_strong_model_ratio": 0.15, "max_reasoning_model_ratio": 0.6})
+    policy = _load_json(POLICY, {"max_strong_model_ratio": 0.2, "max_reasoning_model_ratio": 0.6})
     now = datetime.now(timezone.utc)
     window_hours = int(existing.get("window_hours", 24) or 24)
     recent_events = existing.get("recent_events", [])
@@ -102,7 +102,7 @@ def main() -> int:
     effective_reasoning_ratio = float(recent_window["reasoning_ratio"] if use_recent_window else reasoning_ratio)
     effective_strong_ratio = float(recent_window["strong_ratio"] if use_recent_window else strong_ratio)
     max_reasoning_ratio = float(policy.get("max_reasoning_model_ratio", 0.6))
-    max_strong_ratio = float(policy.get("max_strong_model_ratio", 0.15))
+    max_strong_ratio = float(policy.get("max_strong_model_ratio", 0.2))
     payload = {
         "updated_at": _utc(),
         "window_hours": window_hours,

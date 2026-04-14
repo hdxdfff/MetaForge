@@ -94,7 +94,7 @@ def _build_resource_market(resources: list[dict[str, Any]], usage: dict[str, Any
     registry = _resource_registry(resources)
     tasks = health.get("tasks") or {}
     active_tasks = int(tasks.get("active", 0) or 0)
-    max_active = max(1, int((health.get("policy") or {}).get("max_active_tasks", 8) or 8))
+    max_active = max(1, int((health.get("policy") or {}).get("max_active_tasks", 16) or 16))
     load_ratio = active_tasks / max_active
     reasoning_ratio = float(usage.get("reasoning_ratio", 0.0) or 0.0)
     reasoning_allowed = bool(usage.get("reasoning_allowed", True))
