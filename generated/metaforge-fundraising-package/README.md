@@ -9,6 +9,7 @@ This package is the first-pass investor kit for MetaForge Control Console.
 - [demo-script.md](./demo-script.md)
 - [data-room-checklist.md](./data-room-checklist.md)
 - [financial-model-template.md](./financial-model-template.md)
+- [business-plan.md](./business-plan.md)
 
 ## Demo assets
 
