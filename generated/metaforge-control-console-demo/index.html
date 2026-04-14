@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MetaForge Control Console Demo</title>
+  <link rel="icon" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%"><stop stop-color="%2363d2ff"/><stop offset="100%" stop-color="%238df7c7"/></linearGradient></defs><rect width="64" height="64" rx="16" fill="%2307111f"/><path d="M15 19h34v7H15zm0 11h34v7H15zm0 11h22v7H15z" fill="url(%23g)"/></svg>' />
+  <style>
+    :root {
+      --bg: #07111f;
+      --panel: rgba(10, 18, 33, 0.78);
+      --panel-2: rgba(13, 24, 43, 0.92);
+      --line: rgba(110, 190, 255, 0.18);
+      --text: #e8f1ff;
+      --muted: #8ea5c0;
+      --accent: #63d2ff;
+      --accent-2: #8df7c7;
+      --warn: #ffcd70;
+      --good: #67f3a2;
+      --bad: #ff7f8a;
+      --shadow: 0 22px 70px rgba(0, 0, 0, 0.4);
+      --radius: 22px;
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(99, 210, 255, 0.22), transparent 34%),
+        radial-gradient(circle at top right, rgba(141, 247, 199, 0.14), transparent 28%),
+        linear-gradient(135deg, #05101d 0%, #071427 45%, #091c30 100%);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+      background-size: 46px 46px;
+      mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.95), transparent 85%);
+      pointer-events: none;
+      opacity: 0.55;
+    }
+
+    .shell {
+      position: relative;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.55fr) minmax(320px, 0.85fr);
+      gap: 20px;
+      align-items: stretch;
+      margin-bottom: 20px;
+    }
+
+    .panel {
+      background: linear-gradient(180deg, rgba(13, 24, 43, 0.94), rgba(8, 15, 29, 0.94));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      backdrop-filter: blur(18px);
+    }
+
+    .hero-copy {
+      padding: 32px;
+      position: relative;
+      min-height: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .badge-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 0 18px rgba(99, 210, 255, 0.55);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(34px, 4.8vw, 62px);
+      line-height: 1.02;
+      letter-spacing: -0.05em;
+      max-width: 12ch;
+    }
+
+    .subtitle {
+      margin-top: 14px;
+      max-width: 62ch;
+      font-size: 17px;
+      line-height: 1.7;
+      color: rgba(232, 241, 255, 0.84);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    button {
+      border: 0;
+      cursor: pointer;
+      color: #08111c;
+      font-weight: 700;
+      border-radius: 999px;
+      padding: 12px 18px;
+      transition: transform 180ms ease, box-shadow 180ms ease, opacity 180ms ease;
+      box-shadow: 0 10px 28px rgba(99, 210, 255, 0.24);
+    }
+
+    button:hover { transform: translateY(-1px); }
+    button:active { transform: translateY(0); }
+
+    .primary {
+      background: linear-gradient(135deg, #88e1ff, #9fffd0);
+    }
+    .secondary {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--text);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: none;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .stat-card {
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 10px;
+    }
+
+    .stat-value {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+
+    .stat-note {
+      margin-top: 8px;
+      color: rgba(232, 241, 255, 0.68);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .main-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr) minmax(320px, 0.8fr);
+      gap: 20px;
+      align-items: start;
+    }
+
+    .section {
+      padding: 20px;
+    }
+
+    .section h2 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      letter-spacing: -0.03em;
+    }
+
+    .section p.lead {
+      margin: 0 0 18px;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .pipeline {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .task {
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .task::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: linear-gradient(180deg, var(--accent), var(--accent-2));
+      opacity: 0.7;
+    }
+
+    .task-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .task-title {
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .task-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: 999px;
+      padding: 6px 10px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .pill strong { color: var(--text); }
+
+    .status {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 800;
+    }
+    .queued { color: var(--warn); }
+    .running { color: var(--accent); }
+    .verifying { color: #9df8cf; }
+    .completed { color: var(--good); }
+
+    .timeline {
+      position: relative;
+      padding-left: 18px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 8px;
+      top: 6px;
+      bottom: 8px;
+      width: 2px;
+      background: linear-gradient(180deg, rgba(99, 210, 255, 0.8), rgba(141, 247, 199, 0.35));
+    }
+
+    .step {
+      position: relative;
+      padding: 0 0 18px 22px;
+    }
+
+    .step::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.15);
+      border: 2px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.02);
+    }
+
+    .step.active::before {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      border-color: rgba(255, 255, 255, 0.22);
+      box-shadow: 0 0 0 6px rgba(99, 210, 255, 0.11), 0 0 18px rgba(99, 210, 255, 0.42);
+    }
+
+    .step.done::before {
+      background: var(--good);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .step-title {
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .step-desc {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .evidence-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .evidence {
+      padding: 14px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .evidence-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .evidence-name {
+      font-weight: 700;
+    }
+
+    .evidence-value {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      color: #d7ecff;
+      font-size: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 8px 10px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .progress {
+      height: 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      overflow: hidden;
+      margin-top: 10px;
+    }
+
+    .bar {
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      width: 24%;
+      transition: width 280ms ease;
+    }
+
+    .log {
+      margin-top: 14px;
+      padding: 14px;
+      min-height: 146px;
+      border-radius: 18px;
+      background: rgba(0, 0, 0, 0.24);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #b7c9df;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 12px;
+      line-height: 1.6;
+      white-space: pre-wrap;
+    }
+
+    .footer {
+      margin-top: 18px;
+      color: rgba(232, 241, 255, 0.58);
+      font-size: 12px;
+      text-align: right;
+      letter-spacing: 0.02em;
+    }
+
+    @media (max-width: 1180px) {
+      .hero, .main-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 680px) {
+      .shell { padding: 12px; }
+      .hero-copy, .section { padding: 18px; }
+      .stats-grid { grid-template-columns: 1fr; }
+      h1 { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <section class="hero">
+      <div class="panel hero-copy">
+        <div>
+          <div class="eyebrow"><span class="badge-dot"></span> MetaForge Control Console Demo</div>
+          <h1>Private AI task orchestration, shown as a real operating console.</h1>
+          <p class="subtitle">
+            A polished, self-contained demo for the product story: one goal enters the system,
+            tasks are dispatched, evidence is collected, and release is gated by live facts.
+            Designed for teams that want automation without losing control.
+          </p>
+          <div class="hero-actions">
+            <button class="primary" id="run-demo">Run demo</button>
+            <button class="secondary" id="reset-demo">Reset state</button>
+          </div>
+        </div>
+        <div class="task-meta">
+          <span class="pill"><strong>Mode</strong> / private VM</span>
+          <span class="pill"><strong>Gate</strong> / live evidence</span>
+          <span class="pill"><strong>Output</strong> / audit-ready artifact</span>
+        </div>
+      </div>
+
+      <aside class="panel section">
+        <h2>Operational snapshot</h2>
+        <p class="lead">A compact view of what the control plane is doing right now.</p>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-label">Goal progress</div>
+            <div class="stat-value" id="metric-progress">25%</div>
+            <div class="stat-note" id="metric-progress-note">Restore ToyOS real artifact delivery</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Queue depth</div>
+            <div class="stat-value" id="metric-queue">4</div>
+            <div class="stat-note">queued + running tasks in the active flow</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Runtime</div>
+            <div class="stat-value" id="metric-runtime">Stable</div>
+            <div class="stat-note">daemon alive, heartbeat fresh</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Release gate</div>
+            <div class="stat-value" id="metric-release">Ready</div>
+            <div class="stat-note">promote only when evidence is fresh</div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="main-grid">
+      <div class="panel section">
+        <h2>Task pipeline</h2>
+        <p class="lead">The same lifecycle the operator sees: queued, running, verifying, completed.</p>
+        <div class="pipeline" id="task-list"></div>
+      </div>
+
+      <div class="panel section">
+        <h2>Execution timeline</h2>
+        <p class="lead">How the control plane moves a goal through dispatch, execution, evidence, and release.</p>
+        <div class="timeline" id="timeline"></div>
+      </div>
+
+      <div class="panel section">
+        <h2>Evidence gate</h2>
+        <p class="lead">A single place to show build, smoke, manifest, checksum, and release readiness.</p>
+        <div class="evidence-stack" id="evidence"></div>
+        <div class="progress" aria-label="demo progress bar">
+          <div class="bar" id="progress-bar"></div>
+        </div>
+        <div class="log" id="console-log"></div>
+      </div>
+    </section>
+
+    <div class="footer">MetaForge Control Console Demo · static, self-contained, browser-ready</div>
+  </div>
+
+  <script>
+    const initialState = {
+      goal: "Restore ToyOS real artifact delivery",
+      progress: 0.25,
+      runtime: "Stable",
+      release: "Ready",
+      queue: 4,
+      activeStep: 1,
+      tasks: [
+        {
+          title: "Audit ToyOS execution environment",
+          status: "completed",
+          owner: "execution",
+          evidence: "environment inventory · validated"
+        },
+        {
+          title: "Localize ToyOS build break",
+          status: "completed",
+          owner: "verification",
+          evidence: "build fix · compile green"
+        },
+        {
+          title: "Run ToyOS boot and QEMU smoke",
+          status: "running",
+          owner: "validation",
+          evidence: "smoke report · fresh"
+        },
+        {
+          title: "Build current runnable baseline",
+          status: "queued",
+          owner: "dispatch",
+          evidence: "awaiting claim"
+        }
+      ],
+      evidence: [
+        { name: "Build report", value: "fresh · pass" },
+        { name: "Smoke report", value: "fresh · pass" },
+        { name: "Artifact manifest", value: "present · signed checksum" },
+        { name: "Release readiness", value: "live gate · pass" }
+      ],
+      timeline: [
+        { title: "1. Goal intake", desc: "A long-running objective enters the control plane and becomes the source of task replenishment.", state: "done" },
+        { title: "2. Dispatch", desc: "The replenisher turns the goal into concrete tasks and puts them into the queue.", state: "active" },
+        { title: "3. Execution", desc: "Workers claim tasks, keep heartbeat alive, and produce fresh evidence.", state: "" },
+        { title: "4. Verification & release", desc: "Only current evidence can complete and promote a task or release candidate.", state: "" }
+      ],
+      log: [
+        "09:00  goal=restore_toyos_delivery",
+        "09:02  replenish => 4 task candidates",
+        "09:05  execution => running",
+        "09:08  evidence => fresh build + smoke",
+        "09:10  release => gated by live facts"
+      ]
+    };
+
+    let state = structuredClone(initialState);
+
+    const taskList = document.getElementById("task-list");
+    const timeline = document.getElementById("timeline");
+    const evidence = document.getElementById("evidence");
+    const log = document.getElementById("console-log");
+    const progressBar = document.getElementById("progress-bar");
+
+    const metricProgress = document.getElementById("metric-progress");
+    const metricProgressNote = document.getElementById("metric-progress-note");
+    const metricQueue = document.getElementById("metric-queue");
+    const metricRuntime = document.getElementById("metric-runtime");
+    const metricRelease = document.getElementById("metric-release");
+
+    function render() {
+      taskList.innerHTML = state.tasks.map((task, index) => `
+        <article class="task">
+          <div class="task-top">
+            <div>
+              <div class="task-title">${index + 1}. ${task.title}</div>
+              <div class="task-meta">
+                <span class="pill"><strong>Owner</strong> / ${task.owner}</span>
+                <span class="pill"><strong>Evidence</strong> / ${task.evidence}</span>
+              </div>
+            </div>
+            <div class="status ${task.status}">${task.status}</div>
+          </div>
+        </article>
+      `).join("");
+
+      timeline.innerHTML = state.timeline.map((step) => `
+        <div class="step ${step.state}">
+          <div class="step-title">${step.title}</div>
+          <div class="step-desc">${step.desc}</div>
+        </div>
+      `).join("");
+
+      evidence.innerHTML = state.evidence.map((item) => `
+        <div class="evidence">
+          <div class="evidence-head">
+            <div class="evidence-name">${item.name}</div>
+            <div class="evidence-value">${item.value}</div>
+          </div>
+        </div>
+      `).join("");
+
+      log.textContent = state.log.join("\n");
+      progressBar.style.width = `${Math.round(state.progress * 100)}%`;
+
+      metricProgress.textContent = `${Math.round(state.progress * 100)}%`;
+      metricProgressNote.textContent = state.goal;
+      metricQueue.textContent = String(state.queue);
+      metricRuntime.textContent = state.runtime;
+      metricRelease.textContent = state.release;
+    }
+
+    function pulse() {
+      const now = new Date();
+      const stamp = now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" });
+      state.log.unshift(`${stamp}  live evidence refreshed`);
+      if (state.log.length > 6) state.log.pop();
+    }
+
+    function runDemo() {
+      state = structuredClone(initialState);
+      state.timeline[1].state = "active";
+      state.tasks = state.tasks.map((task, index) => {
+        if (index === 2) return { ...task, status: "running", evidence: "fresh build + smoke" };
+        if (index === 3) return { ...task, status: "queued", evidence: "awaiting claim" };
+        return task;
+      });
+      state.log = [
+        "09:12  dispatch => enqueue",
+        "09:13  execution => claim + heartbeat",
+        "09:14  verification => fresh evidence gate",
+        "09:15  release => live facts only",
+        "09:16  demo => running"
+      ];
+      state.queue = 4;
+      state.runtime = "Stable";
+      state.release = "Ready";
+      state.progress = 0.52;
+      render();
+
+      setTimeout(() => {
+        state.tasks[2].status = "verifying";
+        state.tasks[2].evidence = "smoke report · verifying";
+        state.timeline[2].state = "active";
+        state.progress = 0.68;
+        state.queue = 3;
+        state.log.unshift("09:17  execution => verifying");
+        render();
+      }, 900);
+
+      setTimeout(() => {
+        state.tasks[2].status = "completed";
+        state.tasks[2].evidence = "smoke report · pass";
+        state.tasks[3].status = "running";
+        state.tasks[3].evidence = "baseline build · live";
+        state.timeline[2].state = "done";
+        state.timeline[3].state = "active";
+        state.progress = 0.86;
+        state.queue = 2;
+        state.release = "Ready";
+        state.log.unshift("09:18  verification => completed");
+        render();
+      }, 1800);
+
+      setTimeout(() => {
+        state.tasks[3].status = "completed";
+        state.tasks[3].evidence = "artifact manifest · signed";
+        state.timeline[3].state = "done";
+        state.progress = 1;
+        state.queue = 0;
+        state.log.unshift("09:19  release => pass");
+        state.log.unshift("09:19  demo => complete");
+        render();
+        pulse();
+      }, 2700);
+    }
+
+    document.getElementById("run-demo").addEventListener("click", runDemo);
+    document.getElementById("reset-demo").addEventListener("click", () => {
+      state = structuredClone(initialState);
+      render();
+    });
+
+    render();
+  </script>
+</body>
+</html>
