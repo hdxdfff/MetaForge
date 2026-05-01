@@ -6,7 +6,7 @@ import re
 import sys
 import time
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 from urllib.parse import urlparse
@@ -31,6 +31,7 @@ DEFAULT_MAX_RETRIES = 2
 DEFAULT_BACKOFF_SECONDS = 2.0
 SCORE_PASS_THRESHOLD = 70.0
 SCORE_WARNING_THRESHOLD = 50.0
+STATUS_STALE_AFTER_HOURS = 24
 CATEGORY_DIMENSION_MAP = {
     "memory": ("accuracy_score", "reasoning_score"),
     "accuracy": ("accuracy_score", "reasoning_score"),
@@ -657,6 +658,67 @@ def _parse_utc_timestamp(value: Any) -> datetime | None:
         return None
 
 
+def _status_staleness(updated_at: Any, *, max_age_hours: int = STATUS_STALE_AFTER_HOURS) -> dict[str, Any]:
+    parsed = _parse_utc_timestamp(updated_at)
+    if parsed is None:
+        return {
+            "stale": True,
+            "stale_seconds": None,
+            "stale_reason": "missing_or_invalid_updated_at",
+            "stale_after_hours": max_age_hours,
+        }
+    age = datetime.now(timezone.utc) - parsed
+    stale = age > timedelta(hours=max_age_hours)
+    return {
+        "stale": stale,
+        "stale_seconds": max(0, int(age.total_seconds())),
+        "stale_reason": "status_older_than_threshold" if stale else None,
+        "stale_after_hours": max_age_hours,
+    }
+
+
+def _provider_error_summary(report: dict[str, Any], error_items: list[dict[str, Any]]) -> dict[str, Any]:
+    error_text = " ".join(str(item.get("error") or "") for item in error_items).lower()
+    attempted = report.get("attempted_providers") or []
+    all_providers_failed = bool(attempted) and all(bool(item.get("all_errors")) for item in attempted if isinstance(item, dict))
+    if "insufficient balance" in error_text or "quota" in error_text or "402" in error_text:
+        reason = "provider_insufficient_balance"
+    elif "badrequest" in " ".join(str(item.get("error_type") or "") for item in error_items).lower():
+        reason = "provider_bad_request"
+    elif all_providers_failed:
+        reason = "all_configured_providers_failed"
+    elif error_items:
+        reason = "provider_transport_error"
+    else:
+        reason = None
+    return {
+        "all_providers_failed": all_providers_failed,
+        "reason": reason,
+        "attempted_providers": attempted,
+    }
+
+
+def _failure_domain(report: dict[str, Any], error_items: list[dict[str, Any]]) -> dict[str, Any]:
+    total_cases = int(report.get("total_cases", 0) or 0)
+    all_cases_errored = bool(total_cases) and len(error_items) == total_cases
+    provider_summary = _provider_error_summary(report, error_items)
+    if all_cases_errored and provider_summary.get("reason"):
+        return {
+            "failure_domain": "provider_transport",
+            "case_failures_are_behavioral": False,
+            "transport_blocked": True,
+            "transport_block_reason": provider_summary.get("reason"),
+            "provider_diagnostics": provider_summary,
+        }
+    return {
+        "failure_domain": "behavioral_failure" if error_items or not report.get("all_passed") else "pass",
+        "case_failures_are_behavioral": True,
+        "transport_blocked": False,
+        "transport_block_reason": None,
+        "provider_diagnostics": provider_summary,
+    }
+
+
 def _recent_transient_recovery_allowed(previous_status: dict[str, Any] | None, report: dict[str, Any], error_items: list[dict[str, Any]]) -> bool:
     previous_status = previous_status or {}
     if previous_status.get("status") != "pass":
@@ -778,6 +840,7 @@ def _stability_layer(
 def summarize_ai_test_report(report: dict[str, Any], previous_status: dict[str, Any] | None = None) -> dict[str, Any]:
     results = report.get("results", [])
     error_items = [item for item in results if item.get("error")]
+    domain = _failure_domain(report, error_items)
     error_count = len(error_items)
     transient_recovery = _recent_transient_recovery_allowed(previous_status, report, error_items)
     case_gates = _case_gate_summary(results)
@@ -846,6 +909,11 @@ def summarize_ai_test_report(report: dict[str, Any], previous_status: dict[str, 
             "mode": "sampled_async",
             "signal_only": True,
         },
+        "failure_domain": domain["failure_domain"],
+        "case_failures_are_behavioral": domain["case_failures_are_behavioral"],
+        "transport_blocked": domain["transport_blocked"],
+        "transport_block_reason": domain["transport_block_reason"],
+        "provider_diagnostics": domain["provider_diagnostics"],
     }
 
 
@@ -861,10 +929,13 @@ def build_status(report: dict[str, Any], previous_status: dict[str, Any] | None 
             error_types.append(error_type)
     max_attempt_count = max((int(item.get("attempt_count", 0) or 0) for item in results), default=0)
     summary = summarize_ai_test_report(report, previous_status=previous_status)
+    staleness = _status_staleness(report.get("generated_at"))
     case_gates = summary["case_gates"]
+    effective_status = "stale" if staleness["stale"] else summary["status"]
+    effective_release_signal = "signal_only" if staleness["stale"] else summary["release_signal"]
     status = {
         "updated_at": report.get("generated_at", _utc()),
-        "status": summary["status"],
+        "status": effective_status,
         "suite": report.get("suite"),
         "provider": report.get("provider"),
         "api_style": report.get("api_style"),
@@ -888,7 +959,7 @@ def build_status(report: dict[str, Any], previous_status: dict[str, Any] | None 
             "backoff_seconds": float(report.get("backoff_seconds", 0.0) or 0.0),
         },
         "attempted_providers": report.get("attempted_providers", []),
-        "release_signal": summary["release_signal"],
+        "release_signal": effective_release_signal,
         "mode": "sampled_async",
         "signal_only": True,
         "overall_score": summary["overall_score"],
@@ -899,7 +970,20 @@ def build_status(report: dict[str, Any], previous_status: dict[str, Any] | None 
         "scorecard": summary["scorecard"],
         "layers": summary["layers"],
         "quality_signal": summary["quality_signal"],
+        **staleness,
+        "failure_domain": summary["failure_domain"],
+        "case_failures_are_behavioral": summary["case_failures_are_behavioral"],
+        "transport_blocked": summary["transport_blocked"],
+        "transport_block_reason": summary["transport_block_reason"],
+        "provider_diagnostics": summary["provider_diagnostics"],
     }
+    if staleness["stale"]:
+        status["quality_signal"] = {
+            **status["quality_signal"],
+            "status": "stale",
+            "release_signal": "signal_only",
+            "stale": True,
+        }
     if summary["layers"]["stability"].get("transient_recovery"):
         status["transport_flap_recovered"] = True
         status["transport_error_count"] = error_count

@@ -1,0 +1,15 @@
+{
+  "pattern_id": "ai-testing-transport-failure-domain",
+  "title": "AI testing transport failures must not masquerade as behavior failures",
+  "status": "active",
+  "created_at": "2026-05-01T02:50:00Z",
+  "symptom": "AI test status reported every release-blocker case as failed when all configured providers returned API errors, including insufficient balance.",
+  "root_cause": "The status builder had no failure-domain distinction, so provider transport/configuration failures were collapsed into behavioral case failures.",
+  "fix": "Classify stale AI test reports and all-provider API failures separately with failure_domain, transport_blocked, transport_block_reason, and provider_diagnostics fields.",
+  "validation": [
+    "python -m compileall tools/ai_test_automation.py tools/verification_engine.py",
+    "tools/ai_test_automation.py --status-only shows status=stale, failure_domain=provider_transport, transport_block_reason=provider_insufficient_balance",
+    "factoryctl ai-test-status exposes stale and provider diagnostics instead of only behavioral failure labels"
+  ],
+  "operator_action": "When failure_domain is provider_transport, repair provider balance, API routing, or model configuration before tuning prompts or case expectations."
+}

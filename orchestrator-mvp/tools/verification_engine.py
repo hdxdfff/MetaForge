@@ -179,6 +179,10 @@ def _ai_testing_check(ai_testing: dict[str, Any]) -> dict[str, Any]:
         str(item)
         for item in (ai_testing.get("failed_release_blocker_case_ids") or []) if str(item).strip()
     ]
+    failure_domain = str(ai_testing.get("failure_domain") or "").strip() or None
+    transport_blocked = bool(ai_testing.get("transport_blocked"))
+    transport_block_reason = str(ai_testing.get("transport_block_reason") or "").strip() or None
+    stale = bool(ai_testing.get("stale"))
     signal_reasons: list[str] = []
     if status in {"degraded", "attention", "missing", "warning"}:
         signal_reasons.append(f"status={status}")
@@ -186,15 +190,23 @@ def _ai_testing_check(ai_testing: dict[str, Any]) -> dict[str, Any]:
         signal_reasons.append(f"release_signal={release_signal}")
     if error_count > 0:
         signal_reasons.append(f"errors={error_count}")
+    if stale:
+        signal_reasons.append("status=stale")
+    if transport_blocked:
+        signal_reasons.append(f"transport_blocked={transport_block_reason or 'unknown'}")
     if total_cases <= 0:
         signal_reasons.append("total_cases=0")
-    elif not all_passed:
+    elif not all_passed and not transport_blocked:
         signal_reasons.append(f"failing_cases={','.join(failing_case_ids[:5]) or 'unknown'}")
     if failed_release_blocker_case_ids:
         signal_reasons.append(f"release_blocker_failures={','.join(failed_release_blocker_case_ids[:5])}")
     blocking_reasons: list[str] = []
     if failed_release_blocker_case_ids:
         blocking_reasons.append("ai_release_blocker_failures")
+    if stale:
+        blocking_reasons.append("ai_testing_stale")
+    if transport_blocked:
+        blocking_reasons.append("ai_testing_provider_unavailable")
     if release_signal not in {"ready", "signal_only", "sampled_async"}:
         blocking_reasons.append("ai_release_signal_invalid")
     return {
@@ -209,6 +221,13 @@ def _ai_testing_check(ai_testing: dict[str, Any]) -> dict[str, Any]:
         "error_types": list(ai_testing.get("error_types", []))[:10],
         "failing_case_ids": failing_case_ids[:10],
         "failed_release_blocker_case_ids": failed_release_blocker_case_ids[:10],
+        "failure_domain": failure_domain,
+        "case_failures_are_behavioral": bool(ai_testing.get("case_failures_are_behavioral", True)),
+        "stale": stale,
+        "stale_seconds": ai_testing.get("stale_seconds"),
+        "transport_blocked": transport_blocked,
+        "transport_block_reason": transport_block_reason,
+        "provider_diagnostics": ai_testing.get("provider_diagnostics") or {},
         "signal_reasons": signal_reasons,
         "blocking_reasons": blocking_reasons,
         "signal_only": not bool(blocking_reasons),
