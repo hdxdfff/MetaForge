@@ -232,7 +232,7 @@ def _launch_triton(q, kv, attn_sink, topk_idxs, scale):
 
 
 @register("sparse_attn", False)
-def sparse_attn(q, kv, attn_sink, topk_idxs, scale=DEFAULT_SCALE):
+def sparse_attn(q, kv, attn_sink, topk_idxs, scale):
     if torch is None:
         raise RuntimeError("torch is required to run sparse_attn")
     # The current portable Triton experiment is correct but slower on the
