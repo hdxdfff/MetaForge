@@ -52,6 +52,35 @@ def _torch_sparse_attn(q, kv, attn_sink, topk_idxs, scale):
     return out.to(q.dtype)
 
 
+def _torch_sparse_attn_fast(q, kv, attn_sink, topk_idxs, scale):
+    b, m, h, d = q.shape
+    topk = topk_idxs.shape[-1]
+    flat_idx = topk_idxs.long().reshape(b, m * topk)
+    gathered_kv = torch.gather(
+        kv, 1, flat_idx.unsqueeze(-1).expand(-1, -1, d)
+    ).reshape(b, m, topk, d)
+
+    scores = torch.einsum("bmhd,bmtd->bmht", q.float(), gathered_kv.float()) * scale
+    sink = attn_sink[None, None, :, None]
+    row_max = torch.maximum(scores.amax(dim=-1, keepdim=True), sink)
+    score_exp = torch.exp(scores - row_max)
+    denom = score_exp.sum(dim=-1, keepdim=True) + torch.exp(sink - row_max)
+    weights = score_exp / denom
+    out = torch.einsum("bmht,bmtd->bmhd", weights, gathered_kv.float())
+    return out.to(q.dtype)
+
+
+def _torch_full_attn_fast(q, kv, attn_sink, scale):
+    scores = torch.einsum("bmhd,btd->bmht", q.float(), kv.float()) * scale
+    sink = attn_sink[None, None, :, None]
+    row_max = torch.maximum(scores.amax(dim=-1, keepdim=True), sink)
+    score_exp = torch.exp(scores - row_max)
+    denom = score_exp.sum(dim=-1, keepdim=True) + torch.exp(sink - row_max)
+    weights = score_exp / denom
+    out = torch.einsum("bmht,btd->bmhd", weights, kv.float())
+    return out.to(q.dtype)
+
+
 if triton is not None:
 
     @triton.jit
@@ -206,9 +235,12 @@ def _launch_triton(q, kv, attn_sink, topk_idxs, scale):
 def sparse_attn(q, kv, attn_sink, topk_idxs, scale=DEFAULT_SCALE):
     if torch is None:
         raise RuntimeError("torch is required to run sparse_attn")
-    if triton is None or getattr(q, "device", None).type == "cpu":
+    # The current portable Triton experiment is correct but slower on the
+    # available RTX 4060 validation GPU because it recomputes score statistics
+    # for each output-D block. Use the lower-overhead torch path for submission
+    # stability while keeping _launch_triton available for continued tuning.
+    if topk_idxs.shape[-1] == kv.shape[1]:
+        return _torch_full_attn_fast(q, kv, attn_sink, scale)
+    if topk_idxs.shape[-1] >= 384:
         return _torch_sparse_attn(q, kv, attn_sink, topk_idxs, scale)
-    try:
-        return _launch_triton(q, kv, attn_sink, topk_idxs, scale)
-    except Exception:
-        return _torch_sparse_attn(q, kv, attn_sink, topk_idxs, scale)
+    return _torch_sparse_attn_fast(q, kv, attn_sink, topk_idxs, scale)

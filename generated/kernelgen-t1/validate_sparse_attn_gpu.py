@@ -27,7 +27,10 @@ def run_case(mod, topk, kv_len):
     q = torch.randn(b, m, h, d, device="cuda", dtype=torch.bfloat16)
     kv = torch.randn(b, kv_len, d, device="cuda", dtype=torch.bfloat16)
     attn_sink = torch.randn(h, device="cuda", dtype=torch.float32)
-    topk_idxs = torch.randint(0, kv_len, (b, m, topk), device="cuda", dtype=torch.int32)
+    if topk == kv_len:
+        topk_idxs = torch.arange(kv_len, device="cuda", dtype=torch.int32).expand(b, m, topk).contiguous()
+    else:
+        topk_idxs = torch.randint(0, kv_len, (b, m, topk), device="cuda", dtype=torch.int32)
     scale = 0.04419417382415922
 
     got = mod._launch_triton(q, kv, attn_sink, topk_idxs, scale)

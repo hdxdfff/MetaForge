@@ -1,0 +1,138 @@
+[
+  {
+    "case": "prefill_t128_small",
+    "shape": {
+      "b": 1,
+      "m": 64,
+      "kv_len": 128,
+      "topk": 128,
+      "h": 16,
+      "d": 512
+    },
+    "submission_ms": 0.2945952500041926,
+    "experimental_triton_ms": 3.119996750001519,
+    "torch_ms": 0.9757779999972627,
+    "speedup_vs_torch": 3.31226657586426,
+    "max_abs": 0.001953125,
+    "experimental_triton_max_abs": 0.0009765625
+  },
+  {
+    "case": "prefill_t384_small",
+    "shape": {
+      "b": 1,
+      "m": 32,
+      "kv_len": 400,
+      "topk": 384,
+      "h": 16,
+      "d": 512
+    },
+    "submission_ms": 1.0013946249998185,
+    "experimental_triton_ms": 3.8151622499995597,
+    "torch_ms": 0.816185333330092,
+    "speedup_vs_torch": 0.8150486461121558,
+    "max_abs": 0.0,
+    "experimental_triton_max_abs": 0.001953125
+  },
+  {
+    "case": "prefill_t640_small",
+    "shape": {
+      "b": 1,
+      "m": 16,
+      "kv_len": 640,
+      "topk": 640,
+      "h": 16,
+      "d": 512
+    },
+    "submission_ms": 0.21168162500373455,
+    "experimental_triton_ms": 3.004540624999663,
+    "torch_ms": 0.6050196666744038,
+    "speedup_vs_torch": 2.858158645861349,
+    "max_abs": 0.00048828125,
+    "experimental_triton_max_abs": 0.00048828125
+  },
+  {
+    "case": "decode_b64_t128",
+    "shape": {
+      "b": 64,
+      "m": 1,
+      "kv_len": 128,
+      "topk": 128,
+      "h": 16,
+      "d": 512
+    },
+    "submission_ms": 0.42559175000178584,
+    "experimental_triton_ms": 2.95821350000125,
+    "torch_ms": 0.5351256666585869,
+    "speedup_vs_torch": 1.2573685149120992,
+    "max_abs": 0.001953125,
+    "experimental_triton_max_abs": 0.001953125
+  },
+  {
+    "case": "decode_b64_t392",
+    "shape": {
+      "b": 64,
+      "m": 1,
+      "kv_len": 400,
+      "topk": 392,
+      "h": 16,
+      "d": 512
+    },
+    "submission_ms": 1.68582662499972,
+    "experimental_triton_ms": 5.032509250000317,
+    "torch_ms": 1.7107256666690773,
+    "speedup_vs_torch": 1.0147696336622762,
+    "max_abs": 0.0,
+    "experimental_triton_max_abs": 0.0009765625
+  },
+  {
+    "case": "decode_b64_t640",
+    "shape": {
+      "b": 64,
+      "m": 1,
+      "kv_len": 640,
+      "topk": 640,
+      "h": 16,
+      "d": 512
+    },
+    "submission_ms": 2.353648124994834,
+    "experimental_triton_ms": 9.937968875000536,
+    "torch_ms": 3.3693310000065444,
+    "speedup_vs_torch": 1.4315355656716697,
+    "max_abs": 0.0009765625,
+    "experimental_triton_max_abs": 0.0009765625
+  },
+  {
+    "case": "decode_b16_t640",
+    "shape": {
+      "b": 16,
+      "m": 1,
+      "kv_len": 1408,
+      "topk": 640,
+      "h": 16,
+      "d": 512
+    },
+    "submission_ms": 0.573247749997563,
+    "experimental_triton_ms": 2.2409742500002494,
+    "torch_ms": 0.5692706666498756,
+    "speedup_vs_torch": 0.9930621910897961,
+    "max_abs": 0.0,
+    "experimental_triton_max_abs": 0.00048828125
+  },
+  {
+    "case": "decode_b1_t640",
+    "shape": {
+      "b": 1,
+      "m": 1,
+      "kv_len": 4480,
+      "topk": 640,
+      "h": 16,
+      "d": 512
+    },
+    "submission_ms": 0.18424437499930946,
+    "experimental_triton_ms": 0.5783971249968545,
+    "torch_ms": 0.18068099999860956,
+    "speedup_vs_torch": 0.9806595180953923,
+    "max_abs": 0.0,
+    "experimental_triton_max_abs": 0.0009765625
+  }
+]
