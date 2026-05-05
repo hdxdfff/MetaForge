@@ -68,6 +68,7 @@ if triton is not None:
         kv_len: tl.constexpr,
         topk: tl.constexpr,
         d_block_id: tl.constexpr,
+        HEAD_DIM_C: tl.constexpr,
         BLOCK_D: tl.constexpr,
         BLOCK_T: tl.constexpr,
     ):
@@ -78,11 +79,11 @@ if triton is not None:
         b_id = pid // seq_len
 
         offs_d = d_block_id * BLOCK_D + tl.arange(0, BLOCK_D)
-        full_d = tl.arange(0, HEAD_DIM)
+        full_d = tl.arange(0, HEAD_DIM_C)
         offs_t = tl.arange(0, BLOCK_T)
 
-        q_base = ((b_id * seq_len + token_id) * heads + h_id) * HEAD_DIM
-        q_full = tl.load(q_ptr + q_base + full_d, mask=full_d < HEAD_DIM).to(tl.float32)
+        q_base = ((b_id * seq_len + token_id) * heads + h_id) * HEAD_DIM_C
+        q_full = tl.load(q_ptr + q_base + full_d, mask=full_d < HEAD_DIM_C).to(tl.float32)
 
         sink = tl.load(sink_ptr + h_id).to(tl.float32)
         row_max = sink
@@ -96,11 +97,11 @@ if triton is not None:
                 other=0,
             )
             scores = tl.zeros((BLOCK_T,), tl.float32)
-            for d0 in range(0, HEAD_DIM, 64):
+            for d0 in range(0, HEAD_DIM_C, 64):
                 kd = d0 + tl.arange(0, 64)
                 qv = tl.load(q_ptr + q_base + kd).to(tl.float32)
                 kvv = tl.load(
-                    kv_ptr + (b_id * kv_len + kv_idx[:, None]) * HEAD_DIM + kd[None, :],
+                    kv_ptr + (b_id * kv_len + kv_idx[:, None]) * HEAD_DIM_C + kd[None, :],
                     mask=valid_t[:, None],
                     other=0.0,
                 ).to(tl.float32)
@@ -119,11 +120,11 @@ if triton is not None:
                 other=0,
             )
             scores = tl.zeros((BLOCK_T,), tl.float32)
-            for d0 in range(0, HEAD_DIM, 64):
+            for d0 in range(0, HEAD_DIM_C, 64):
                 kd = d0 + tl.arange(0, 64)
                 qv = tl.load(q_ptr + q_base + kd).to(tl.float32)
                 kvv = tl.load(
-                    kv_ptr + (b_id * kv_len + kv_idx[:, None]) * HEAD_DIM + kd[None, :],
+                    kv_ptr + (b_id * kv_len + kv_idx[:, None]) * HEAD_DIM_C + kd[None, :],
                     mask=valid_t[:, None],
                     other=0.0,
                 ).to(tl.float32)
@@ -142,11 +143,11 @@ if triton is not None:
                 other=0,
             )
             scores = tl.zeros((BLOCK_T,), tl.float32)
-            for d0 in range(0, HEAD_DIM, 64):
+            for d0 in range(0, HEAD_DIM_C, 64):
                 kd = d0 + tl.arange(0, 64)
                 qv = tl.load(q_ptr + q_base + kd).to(tl.float32)
                 kvv = tl.load(
-                    kv_ptr + (b_id * kv_len + kv_idx[:, None]) * HEAD_DIM + kd[None, :],
+                    kv_ptr + (b_id * kv_len + kv_idx[:, None]) * HEAD_DIM_C + kd[None, :],
                     mask=valid_t[:, None],
                     other=0.0,
                 ).to(tl.float32)
@@ -155,14 +156,14 @@ if triton is not None:
             weight = tl.exp(scores * scale - row_max) / denom
             weight = tl.where(valid_t, weight, 0.0)
             vals = tl.load(
-                kv_ptr + (b_id * kv_len + kv_idx[:, None]) * HEAD_DIM + offs_d[None, :],
-                mask=valid_t[:, None] & (offs_d[None, :] < HEAD_DIM),
+                kv_ptr + (b_id * kv_len + kv_idx[:, None]) * HEAD_DIM_C + offs_d[None, :],
+                mask=valid_t[:, None] & (offs_d[None, :] < HEAD_DIM_C),
                 other=0.0,
             ).to(tl.float32)
             acc += tl.sum(vals * weight[:, None], axis=0)
 
-        out_base = ((b_id * seq_len + token_id) * heads + h_id) * HEAD_DIM
-        tl.store(out_ptr + out_base + offs_d, acc, mask=offs_d < HEAD_DIM)
+        out_base = ((b_id * seq_len + token_id) * heads + h_id) * HEAD_DIM_C
+        tl.store(out_ptr + out_base + offs_d, acc, mask=offs_d < HEAD_DIM_C)
 
 
 def _launch_triton(q, kv, attn_sink, topk_idxs, scale):
@@ -193,6 +194,7 @@ def _launch_triton(q, kv, attn_sink, topk_idxs, scale):
             kv_len,
             topk,
             d_block_id,
+            HEAD_DIM_C=HEAD_DIM,
             BLOCK_D=block_d,
             BLOCK_T=block_t,
             num_warps=4,
