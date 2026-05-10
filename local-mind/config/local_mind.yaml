@@ -26,6 +26,9 @@ memory:
   max_memory_tokens: 2200
   max_recent_events: 20
   consolidation_min_importance: 0.65
+  embedding_maintenance_interval_minutes: 30
+  embedding_maintenance_limit: 24
+  embedding_maintenance_min_importance: 0.0
 
 context_budget:
   identity_tokens: 600

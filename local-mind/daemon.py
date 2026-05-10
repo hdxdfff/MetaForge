@@ -144,6 +144,29 @@ class LocalMindDaemon:
             self.memory.append_event("consolidation", "Consolidated recent events", result, importance=0.6)
             self.memory.update_runtime_state({"last_consolidation_at": now_iso()})
 
+    def maybe_maintain_embeddings(self, health: dict[str, Any]) -> None:
+        if health["status"] != "ok":
+            return
+        state = read_json(ROOT / "data" / "runtime_state.json", {})
+        last = parse_time(state.get("last_embedding_maintenance_at"))
+        memory_config = self.config.get("memory", {})
+        interval = int(memory_config.get("embedding_maintenance_interval_minutes", 30))
+        if last is not None and datetime.now(timezone.utc).astimezone() - last < timedelta(minutes=interval):
+            return
+        result = self.memory.store.embed_missing(
+            self.model,
+            limit=int(memory_config.get("embedding_maintenance_limit", 24)),
+            min_importance=float(memory_config.get("embedding_maintenance_min_importance", 0.0)),
+        )
+        self.memory.append_event(
+            "embedding_maintenance",
+            "Maintained memory embeddings",
+            result,
+            importance=0.4,
+            verified=not result.get("failures"),
+        )
+        self.memory.update_runtime_state({"last_embedding_maintenance_at": now_iso()})
+
     def tick(self) -> None:
         self.heartbeat()
         state = read_json(ROOT / "data" / "runtime_state.json", {})
@@ -155,6 +178,7 @@ class LocalMindDaemon:
             if task:
                 self.process_task(task)
         self.maybe_consolidate()
+        self.maybe_maintain_embeddings(health)
 
     def run(self, once: bool = False) -> None:
         while True:

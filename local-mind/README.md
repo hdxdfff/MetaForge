@@ -49,6 +49,7 @@ Initialize or refresh the SQLite memory layer from JSON/JSONL state:
 
 ```bash
 ./scripts/init_memory_wsl.sh
+./scripts/maintain_memory_wsl.sh
 ```
 
 This creates and refreshes:
@@ -68,6 +69,8 @@ The daemon also performs this sync on startup, so `init_memory_wsl.sh` is mainly
 for inspection and manual refreshes.
 When Ollama is online, daemon context retrieval uses vector search with lexical
 fallback; when Ollama is offline, it falls back to lexical SQLite search.
+The daemon also runs low-frequency embedding maintenance using the interval and
+limit under `memory.embedding_maintenance_*` in `config/local_mind.yaml`.
 
 Artifacts and evidence are written under `data/`, `reports/`, and
 `vector_index/`.
