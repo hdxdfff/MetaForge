@@ -57,6 +57,19 @@ class OllamaClient:
         content = response.json()["message"]["content"]
         return json.loads(content)
 
+    def embed(self, text: str) -> list[float]:
+        payload = {
+            "model": self.embedding_model,
+            "input": text,
+            "keep_alive": self.keep_alive,
+        }
+        response = requests.post(f"{self.base_url}/api/embed", json=payload, timeout=120)
+        response.raise_for_status()
+        embeddings = response.json().get("embeddings", [])
+        if not embeddings:
+            return []
+        return [float(value) for value in embeddings[0]]
+
     def warm(self) -> dict[str, Any]:
         payload = {
             "model": self.chat_model,
@@ -74,9 +87,13 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--health", action="store_true")
     parser.add_argument("--warm", action="store_true")
+    parser.add_argument("--embed", default=None)
     args = parser.parse_args()
     client = OllamaClient(load_config())
-    if args.warm:
+    if args.embed is not None:
+        vector = client.embed(args.embed)
+        print(json.dumps({"model": client.embedding_model, "dimensions": len(vector), "preview": vector[:5]}, indent=2))
+    elif args.warm:
         print(json.dumps(client.warm(), indent=2, ensure_ascii=False))
     else:
         print(json.dumps(client.health(), indent=2, ensure_ascii=False))

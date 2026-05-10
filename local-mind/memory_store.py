@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import json
 import sqlite3
+import hashlib
+import math
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
@@ -9,6 +11,7 @@ from typing import Any
 
 from json_store import read_json, read_jsonl_tail
 from local_mind_paths import ROOT, resolve_local
+from model_client import OllamaClient
 
 
 def now_iso() -> str:
@@ -36,6 +39,21 @@ class MemoryHit:
 def tokenize(text: str) -> set[str]:
     normalized = "".join(char.lower() if char.isalnum() else " " for char in text)
     return {token for token in normalized.split() if len(token) > 1}
+
+
+def content_hash(text: str) -> str:
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+
+def cosine_similarity(left: list[float], right: list[float]) -> float:
+    if not left or not right or len(left) != len(right):
+        return 0.0
+    dot = sum(a * b for a, b in zip(left, right))
+    left_norm = math.sqrt(sum(a * a for a in left))
+    right_norm = math.sqrt(sum(b * b for b in right))
+    if left_norm == 0 or right_norm == 0:
+        return 0.0
+    return dot / (left_norm * right_norm)
 
 
 class MemoryStore:
@@ -101,6 +119,9 @@ class MemoryStore:
                   content_hash text,
                   updated_at text not null
                 );
+
+                create index if not exists idx_vector_items_model
+                  on vector_items(embedding_model);
                 """
             )
 
@@ -226,6 +247,78 @@ class MemoryStore:
             counts["preference"] += 1
         return counts
 
+    def embed_missing(self, client: OllamaClient, *, limit: int = 100, min_importance: float = 0.0) -> dict[str, Any]:
+        self.initialize()
+        with self.connect() as connection:
+            rows = connection.execute(
+                """
+                select memory_id, memory_type, content, importance, confidence, metadata_json
+                from memory_items
+                where length(trim(content)) > 0 and importance >= ?
+                order by
+                  case memory_type
+                    when 'semantic' then 0
+                    when 'procedural' then 1
+                    when 'preference' then 2
+                    else 3
+                  end,
+                  importance desc,
+                  updated_at desc
+                limit 1000
+                """,
+                (min_importance,),
+            ).fetchall()
+        with self.connect_vector() as vector_connection:
+            existing = {
+                str(row["memory_id"]): str(row["content_hash"])
+                for row in vector_connection.execute(
+                    "select memory_id, content_hash from vector_items where embedding_model = ?",
+                    (client.embedding_model,),
+                ).fetchall()
+            }
+        embedded = 0
+        skipped = 0
+        failures: list[dict[str, str]] = []
+        for row in rows:
+            memory_id = str(row["memory_id"])
+            text = str(row["content"])
+            digest = content_hash(text)
+            if existing.get(memory_id) == digest:
+                skipped += 1
+                continue
+            try:
+                vector = client.embed(text)
+            except Exception as exc:
+                failures.append({"memory_id": memory_id, "error": str(exc)})
+                continue
+            if not vector:
+                failures.append({"memory_id": memory_id, "error": "empty embedding"})
+                continue
+            with self.connect_vector() as vector_connection:
+                vector_connection.execute(
+                    """
+                    insert into vector_items (
+                      memory_id, embedding_model, embedding_json, content_hash, updated_at
+                    )
+                    values (?, ?, ?, ?, ?)
+                    on conflict(memory_id) do update set
+                      embedding_model = excluded.embedding_model,
+                      embedding_json = excluded.embedding_json,
+                      content_hash = excluded.content_hash,
+                      updated_at = excluded.updated_at
+                    """,
+                    (memory_id, client.embedding_model, json.dumps(vector), digest, now_iso()),
+                )
+            embedded += 1
+            if embedded >= limit:
+                break
+        return {
+            "embedding_model": client.embedding_model,
+            "embedded": embedded,
+            "skipped": skipped,
+            "failures": failures,
+        }
+
     def search(self, query: str, *, top_k: int = 8, memory_types: set[str] | None = None) -> list[MemoryHit]:
         self.initialize()
         query_tokens = tokenize(query)
@@ -264,6 +357,69 @@ class MemoryStore:
             )
         return sorted(hits, key=lambda hit: hit.score, reverse=True)[:top_k]
 
+    def search_vector(
+        self,
+        query: str,
+        client: OllamaClient,
+        *,
+        top_k: int = 8,
+        memory_types: set[str] | None = None,
+    ) -> list[MemoryHit]:
+        self.initialize()
+        query_vector = client.embed(query)
+        if not query_vector:
+            return self.search(query, top_k=top_k, memory_types=memory_types)
+        lexical_hits = {hit.memory_id: hit for hit in self.search(query, top_k=50, memory_types=memory_types)}
+        with self.connect_vector() as vector_connection:
+            vector_rows = vector_connection.execute(
+                """
+                select memory_id, embedding_json
+                from vector_items
+                where embedding_model = ?
+                """,
+                (client.embedding_model,),
+            ).fetchall()
+        if not vector_rows:
+            return self.search(query, top_k=top_k, memory_types=memory_types)
+        memory_ids = [str(row["memory_id"]) for row in vector_rows]
+        placeholders = ",".join("?" for _ in memory_ids)
+        with self.connect() as connection:
+            memory_rows = connection.execute(
+                f"""
+                select memory_id, memory_type, content, importance, confidence, verified, metadata_json
+                from memory_items
+                where memory_id in ({placeholders})
+                """,
+                memory_ids,
+            ).fetchall()
+        memory_by_id = {str(row["memory_id"]): row for row in memory_rows}
+        hits: list[MemoryHit] = []
+        for vector_row in vector_rows:
+            memory_id = str(vector_row["memory_id"])
+            row = memory_by_id.get(memory_id)
+            if row is None:
+                continue
+            memory_type = str(row["memory_type"])
+            if memory_types and memory_type not in memory_types:
+                continue
+            vector = json.loads(vector_row["embedding_json"] or "[]")
+            vector_score = cosine_similarity(query_vector, [float(value) for value in vector])
+            lexical_score = lexical_hits.get(memory_id).score if memory_id in lexical_hits else 0.0
+            score = vector_score * 0.75 + lexical_score * 0.25
+            metadata = json.loads(row["metadata_json"] or "{}")
+            hits.append(
+                MemoryHit(
+                    memory_id=memory_id,
+                    memory_type=memory_type,
+                    content=str(row["content"]),
+                    score=score,
+                    metadata={**metadata, "verified": bool(row["verified"]), "vector_score": vector_score, "lexical_score": lexical_score},
+                )
+            )
+        if not hits:
+            return self.search(query, top_k=top_k, memory_types=memory_types)
+        return sorted(hits, key=lambda hit: hit.score, reverse=True)[:top_k]
+
     def stats(self) -> dict[str, Any]:
         self.initialize()
         with self.connect() as connection:
@@ -279,7 +435,21 @@ class MemoryStore:
             "sqlite_db": str(self.db_path),
             "vector_index": str(self.vector_db_path),
             "counts": {str(row["memory_type"]): int(row["count"]) for row in rows},
+            "vectors": self.vector_stats(),
         }
+
+    def vector_stats(self) -> dict[str, Any]:
+        self.initialize()
+        with self.connect_vector() as connection:
+            rows = connection.execute(
+                """
+                select embedding_model, count(*) as count
+                from vector_items
+                group by embedding_model
+                order by embedding_model
+                """
+            ).fetchall()
+        return {str(row["embedding_model"]): int(row["count"]) for row in rows}
 
 
 def main() -> None:
@@ -288,7 +458,10 @@ def main() -> None:
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--sync", action="store_true", help="Initialize SQLite stores and sync JSON/JSONL memories.")
+    parser.add_argument("--embed-missing", action="store_true", help="Generate embeddings for memory items missing vectors.")
     parser.add_argument("--search", default=None, help="Search memories with lexical scoring.")
+    parser.add_argument("--vector", action="store_true", help="Use vector search with lexical fallback for --search.")
+    parser.add_argument("--limit", type=int, default=100)
     args = parser.parse_args()
 
     with (ROOT / "config" / "local_mind.yaml").open("r", encoding="utf-8") as handle:
@@ -297,9 +470,18 @@ def main() -> None:
     if args.sync:
         print(json.dumps({"synced": store.sync_from_files(), "stats": store.stats()}, indent=2, ensure_ascii=False))
         return
+    if args.embed_missing:
+        store.sync_from_files()
+        client = OllamaClient(config)
+        print(json.dumps({"embedding": store.embed_missing(client, limit=args.limit), "stats": store.stats()}, indent=2, ensure_ascii=False))
+        return
     if args.search:
         store.sync_from_files()
-        hits = [hit.as_context_item() for hit in store.search(args.search)]
+        if args.vector:
+            client = OllamaClient(config)
+            hits = [hit.as_context_item() for hit in store.search_vector(args.search, client)]
+        else:
+            hits = [hit.as_context_item() for hit in store.search(args.search)]
         print(json.dumps(hits, indent=2, ensure_ascii=False))
         return
     store.initialize()

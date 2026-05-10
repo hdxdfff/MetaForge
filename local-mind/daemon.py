@@ -76,10 +76,10 @@ class LocalMindDaemon:
     def process_task(self, task: dict[str, Any]) -> None:
         state = read_json(ROOT / "data" / "runtime_state.json", {})
         recent = self.memory.recent_events()
-        memories = self.memory.retrieve_relevant(task)
+        health = self.health()
+        memories = self.memory.retrieve_relevant(task, embedding_client=self.model if health["status"] == "ok" else None)
         context = build_context_packet(task, state, recent, memories)
         context_hash = "sha256:" + hashlib.sha256(context.encode("utf-8")).hexdigest()
-        health = self.health()
         if health["status"] != "ok":
             fallback = {
                 "state_understanding": "Ollama is not available; using deterministic low-risk bootstrap action.",

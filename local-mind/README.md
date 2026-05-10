@@ -51,17 +51,23 @@ Initialize or refresh the SQLite memory layer from JSON/JSONL state:
 ./scripts/init_memory_wsl.sh
 ```
 
-This creates:
+This creates and refreshes:
 
 - `data/memory.sqlite` for canonical memory records
-- `vector_index/memory_index.sqlite` for future embedding records
+- `vector_index/memory_index.sqlite` for Ollama embedding records
 
-The first retrieval pass uses deterministic lexical scoring over SQLite. The
-embedding table is present but intentionally not auto-filled yet, keeping V1
-cheap and predictable.
+Search supports deterministic lexical scoring and optional vector scoring:
+
+```bash
+python memory_store.py --search status
+python memory_store.py --search status --vector
+./scripts/search_memory_wsl.sh status
+```
 
 The daemon also performs this sync on startup, so `init_memory_wsl.sh` is mainly
 for inspection and manual refreshes.
+When Ollama is online, daemon context retrieval uses vector search with lexical
+fallback; when Ollama is offline, it falls back to lexical SQLite search.
 
 Artifacts and evidence are written under `data/`, `reports/`, and
 `vector_index/`.

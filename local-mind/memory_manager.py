@@ -63,7 +63,7 @@ class MemoryManager:
     def recent_events(self) -> list[dict[str, Any]]:
         return read_jsonl_tail(self.event_log, self.max_recent_events)
 
-    def retrieve_relevant(self, task: dict[str, Any]) -> list[dict[str, Any]]:
+    def retrieve_relevant(self, task: dict[str, Any], embedding_client: Any | None = None) -> list[dict[str, Any]]:
         semantic = read_json(ROOT / "data" / "semantic_memory.json", {"memories": []}).get("memories", [])
         procedures = read_json(ROOT / "data" / "procedural_memory.json", {"procedures": []}).get("procedures", [])
         title = task.get("title", "").lower()
@@ -77,7 +77,13 @@ class MemoryManager:
             if "status" in title or any(token in trigger for token in title.split()):
                 memories.append({"type": "procedural", **item})
         top_k = int(self.config.get("memory", {}).get("retrieve_top_k", 8))
-        sqlite_hits = [hit.as_context_item() for hit in self.store.search(task.get("title", ""), top_k=top_k)]
+        if embedding_client is not None:
+            try:
+                sqlite_hits = [hit.as_context_item() for hit in self.store.search_vector(task.get("title", ""), embedding_client, top_k=top_k)]
+            except Exception:
+                sqlite_hits = [hit.as_context_item() for hit in self.store.search(task.get("title", ""), top_k=top_k)]
+        else:
+            sqlite_hits = [hit.as_context_item() for hit in self.store.search(task.get("title", ""), top_k=top_k)]
         seen = {item.get("memory_id") or item.get("procedure_id") for item in memories}
         for hit in sqlite_hits:
             if hit.get("memory_id") not in seen:

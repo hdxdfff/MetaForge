@@ -10,3 +10,4 @@ fi
 . .venv/bin/activate
 python -m pip install -q -r requirements.txt
 python memory_store.py --sync
+python memory_store.py --embed-missing
