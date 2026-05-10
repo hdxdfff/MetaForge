@@ -1,0 +1,15 @@
+{
+  "memories": [
+    {
+      "memory_id": "sem_bootstrap_001",
+      "content": "Local Mind Kernel treats model responses as proposals; local state and verifier evidence are the source of truth.",
+      "source_events": [],
+      "confidence": 0.95,
+      "last_verified_at": null,
+      "behavioral_effect": [
+        "do not claim success before verifier evidence exists",
+        "cite concrete state files when reporting status"
+      ]
+    }
+  ]
+}

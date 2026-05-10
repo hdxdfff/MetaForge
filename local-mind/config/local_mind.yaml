@@ -1,0 +1,66 @@
+runtime:
+  name: local_mind_kernel
+  root: "/mnt/d/codex/local-mind"
+  tick_interval_seconds: 60
+  model_tick_interval_seconds: 300
+  consolidation_interval_hours: 24
+  mode: guarded_autonomy
+
+model:
+  provider: ollama
+  base_url: "http://127.0.0.1:11434"
+  chat_model: "qwen3:8b"
+  embedding_model: "nomic-embed-text"
+  keep_alive: "-1m"
+  default_num_ctx: 8192
+  max_output_tokens: 1024
+  temperature: 0.2
+  top_p: 0.9
+
+memory:
+  event_log: "data/event_log.jsonl"
+  decision_ledger: "data/decision_ledger.jsonl"
+  sqlite_db: "data/memory.sqlite"
+  vector_index: "vector_index/memory_index.sqlite"
+  retrieve_top_k: 8
+  max_memory_tokens: 2200
+  max_recent_events: 20
+  consolidation_min_importance: 0.65
+
+context_budget:
+  identity_tokens: 600
+  goal_tokens: 700
+  current_state_tokens: 900
+  recent_events_tokens: 1200
+  retrieved_memory_tokens: 2200
+  procedural_memory_tokens: 1200
+  policy_tokens: 700
+  task_tokens: 1000
+  output_contract_tokens: 500
+
+safety:
+  allow_shell: true
+  allow_file_read: true
+  allow_file_write: true
+  allow_network: false
+  allow_delete: false
+  allow_git_push: false
+  allow_package_install: false
+  require_approval_for_high_risk: true
+  max_actions_per_tick: 3
+
+verification:
+  require_evidence_for_success: true
+  require_test_after_code_change: true
+  success_claim_needs_verifier: true
+  write_failure_patterns: true
+
+cloud_escalation:
+  enabled: true
+  trigger_on:
+    - high_risk
+    - repeated_failure
+    - architecture_decision
+    - ambiguous_state
+    - context_overflow
+  provider: manual

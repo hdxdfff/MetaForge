@@ -1,0 +1,22 @@
+{
+  "procedures": [
+    {
+      "procedure_id": "proc_bootstrap_001",
+      "name": "Check Local Mind Kernel status",
+      "trigger": "operator asks whether the local mind runtime is alive",
+      "steps": [
+        "read data/runtime_state.json",
+        "inspect data/event_log.jsonl freshness",
+        "inspect data/task_queue.json for pending or blocked tasks",
+        "report file paths used as evidence"
+      ],
+      "risk": "low",
+      "success_criteria": [
+        "state source is explicit",
+        "live status is distinguished from cached state",
+        "evidence paths are listed"
+      ],
+      "verified_success_count": 0
+    }
+  ]
+}

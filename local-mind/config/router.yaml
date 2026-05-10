@@ -1,0 +1,18 @@
+reasoning_policy:
+  default: no_think
+  use_think_when:
+    - repeated_failure
+    - conflicting_memory
+    - code_change
+    - architecture_decision
+    - user_explicitly_asks_analysis
+  max_think_tasks_per_hour: 6
+
+escalation:
+  triggers:
+    repeated_failure_count: 3
+    risk_level: high
+    context_tokens_above: 7000
+    verifier_conflict: true
+    identity_or_policy_change: true
+    user_requests_high_quality: true

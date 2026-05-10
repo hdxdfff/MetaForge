@@ -1,0 +1,43 @@
+{
+  "memory_types": {
+    "event": {
+      "description": "raw event timeline",
+      "storage": "event_log.jsonl"
+    },
+    "episodic": {
+      "description": "important situated memories",
+      "storage": "episodic_memory.jsonl"
+    },
+    "semantic": {
+      "description": "stable verified facts",
+      "storage": "semantic_memory.json"
+    },
+    "procedural": {
+      "description": "reusable workflows and repair patterns",
+      "storage": "procedural_memory.json"
+    },
+    "preference": {
+      "description": "confirmed long-term user preferences",
+      "storage": "preference_memory.json"
+    },
+    "identity": {
+      "description": "system identity and boundaries",
+      "storage": "identity.json",
+      "requires_manual_review": true
+    }
+  },
+  "write_rules": {
+    "raw_event": "always",
+    "episodic": "importance >= 0.65",
+    "semantic": "importance >= 0.75 and verified == true",
+    "procedural": "verified_success_count >= 3",
+    "preference": "user_confirmed == true",
+    "identity": "manual_only"
+  },
+  "forgetting_rules": {
+    "low_importance_event_retention_days": 14,
+    "failed_memory_candidate_retention_days": 7,
+    "duplicate_summary_merge": true,
+    "conflicting_memory_requires_review": true
+  }
+}

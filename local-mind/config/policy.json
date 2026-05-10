@@ -1,0 +1,31 @@
+{
+  "risk_levels": {
+    "low": [
+      "read state files",
+      "summarize logs",
+      "generate reports",
+      "create tasks",
+      "write memory candidates"
+    ],
+    "medium": [
+      "modify ordinary text files",
+      "run validation commands",
+      "generate patch files",
+      "clean temporary logs"
+    ],
+    "high": [
+      "delete files",
+      "modify system configuration",
+      "install dependencies",
+      "network requests",
+      "git push",
+      "start or stop long-running services",
+      "modify identity core"
+    ]
+  },
+  "default_permission": {
+    "low": "auto",
+    "medium": "guarded",
+    "high": "manual_approval"
+  }
+}

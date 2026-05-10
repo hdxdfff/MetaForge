@@ -1,0 +1,14 @@
+{
+  "goals": [
+    {
+      "goal_id": "goal_local_mind_v0",
+      "title": "Keep a local continuous-memory kernel running under WSL",
+      "status": "active",
+      "success_criteria": [
+        "heartbeat events are written",
+        "pending tasks are processed only through proposals",
+        "success is committed only with verifier evidence"
+      ]
+    }
+  ]
+}

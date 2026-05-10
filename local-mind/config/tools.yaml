@@ -1,0 +1,44 @@
+tools:
+  read_file:
+    enabled: true
+    risk: low
+    allowed_roots:
+      - "/mnt/d/codex/local-mind"
+      - "/mnt/d/codex/orchestrator-mvp/data"
+      - "/mnt/d/codex/generated"
+
+  write_file:
+    enabled: true
+    risk: medium
+    allowed_roots:
+      - "/mnt/d/codex/local-mind/data"
+      - "/mnt/d/codex/local-mind/reports"
+    forbidden_patterns:
+      - "*.exe"
+      - "*.dll"
+      - "*.ps1"
+
+  run_command:
+    enabled: true
+    risk: medium
+    timeout_seconds: 60
+    allowed_commands:
+      - "python3 --version"
+      - "python3 -m compileall"
+      - "git status"
+      - "ls"
+      - "cat"
+    forbidden_commands:
+      - "rm"
+      - "rmdir"
+      - "format"
+      - "shutdown"
+      - "curl"
+      - "wget"
+      - "git push"
+
+  network:
+    enabled: false
+
+  delete_file:
+    enabled: false
