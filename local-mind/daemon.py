@@ -17,6 +17,7 @@ from local_mind_paths import ROOT
 from memory_manager import MemoryManager, now_iso
 from model_client import OllamaClient
 from preference_manager import handle_model_candidates
+from procedural_manager import record_successful_decision
 from router import should_escalate, should_use_think
 from task_queue import TaskQueue
 from tool_executor import ToolExecutor
@@ -126,6 +127,7 @@ class LocalMindDaemon:
             proposal.get("memory_write_candidates", []),
             source_ref=decision["decision_id"],
         )
+        procedural_result = record_successful_decision(decision)
         self.memory.append_event(
             "task_processed",
             f"Processed task {task.get('task_id')}",
@@ -133,6 +135,7 @@ class LocalMindDaemon:
                 "decision_id": decision["decision_id"],
                 "committed_to_state": decision["committed_to_state"],
                 "preference_candidates": preference_result,
+                "procedural_candidate": procedural_result,
             },
             importance=0.7 if decision["committed_to_state"] else 0.5,
             verified=decision["committed_to_state"],

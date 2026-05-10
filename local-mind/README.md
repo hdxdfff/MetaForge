@@ -53,6 +53,7 @@ Initialize or refresh the SQLite memory layer from JSON/JSONL state:
 ./scripts/consolidate_memory_wsl.sh
 ./scripts/selftest_memory_wsl.sh
 ./scripts/preferences_wsl.sh list
+./scripts/procedures_wsl.sh list
 ```
 
 This creates and refreshes:
@@ -79,7 +80,7 @@ updates `reports/daily_summary.md`, and archives low-value old events to
 `data/event_archive.jsonl` once retention thresholds are exceeded.
 `selftest_memory_wsl.sh` validates the retention branch against temporary data
 under `.tmp/` without touching the real event log. It also validates preference
-gating against temporary preference files.
+gating and procedural promotion against temporary memory files.
 
 ## Preference Gate
 
@@ -92,6 +93,17 @@ operator action:
 ./scripts/preferences_wsl.sh list
 ./scripts/preferences_wsl.sh approve pref_cand_xxx
 ./scripts/preferences_wsl.sh add "Prefer concise summaries" --confirmed
+```
+
+## Procedure Gate
+
+Verified successful decisions create entries in `data/procedural_candidates.json`.
+A repeated workflow is promoted into `data/procedural_memory.json` only after it
+reaches the success threshold, currently three verified successes:
+
+```bash
+./scripts/procedures_wsl.sh list
+./scripts/procedures_wsl.sh promote proc_cand_xxx
 ```
 
 Artifacts and evidence are written under `data/`, `reports/`, and
