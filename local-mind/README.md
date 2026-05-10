@@ -52,6 +52,7 @@ Initialize or refresh the SQLite memory layer from JSON/JSONL state:
 ./scripts/maintain_memory_wsl.sh
 ./scripts/consolidate_memory_wsl.sh
 ./scripts/selftest_memory_wsl.sh
+./scripts/preferences_wsl.sh list
 ```
 
 This creates and refreshes:
@@ -77,7 +78,21 @@ Consolidation writes high-importance events to `data/episodic_memory.jsonl`,
 updates `reports/daily_summary.md`, and archives low-value old events to
 `data/event_archive.jsonl` once retention thresholds are exceeded.
 `selftest_memory_wsl.sh` validates the retention branch against temporary data
-under `.tmp/` without touching the real event log.
+under `.tmp/` without touching the real event log. It also validates preference
+gating against temporary preference files.
+
+## Preference Gate
+
+Model-proposed preferences are written only to `data/preference_candidates.json`.
+Confirmed long-term preferences enter `data/preference_memory.json` only through
+operator action:
+
+```bash
+./scripts/preferences_wsl.sh add "Prefer evidence-backed status reports"
+./scripts/preferences_wsl.sh list
+./scripts/preferences_wsl.sh approve pref_cand_xxx
+./scripts/preferences_wsl.sh add "Prefer concise summaries" --confirmed
+```
 
 Artifacts and evidence are written under `data/`, `reports/`, and
 `vector_index/`.

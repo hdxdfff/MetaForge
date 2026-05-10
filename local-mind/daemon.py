@@ -16,6 +16,7 @@ from json_store import read_json
 from local_mind_paths import ROOT
 from memory_manager import MemoryManager, now_iso
 from model_client import OllamaClient
+from preference_manager import handle_model_candidates
 from router import should_escalate, should_use_think
 from task_queue import TaskQueue
 from tool_executor import ToolExecutor
@@ -121,10 +122,18 @@ class LocalMindDaemon:
             "committed_to_state": self.verifier.all_success_criteria_met(task, results),
         }
         self.memory.append_decision(decision)
+        preference_result = handle_model_candidates(
+            proposal.get("memory_write_candidates", []),
+            source_ref=decision["decision_id"],
+        )
         self.memory.append_event(
             "task_processed",
             f"Processed task {task.get('task_id')}",
-            {"decision_id": decision["decision_id"], "committed_to_state": decision["committed_to_state"]},
+            {
+                "decision_id": decision["decision_id"],
+                "committed_to_state": decision["committed_to_state"],
+                "preference_candidates": preference_result,
+            },
             importance=0.7 if decision["committed_to_state"] else 0.5,
             verified=decision["committed_to_state"],
         )

@@ -177,10 +177,12 @@ class MemoryStore:
     def sync_from_files(self) -> dict[str, int]:
         self.initialize()
         counts = {"event": 0, "episodic": 0, "semantic": 0, "procedural": 0, "preference": 0}
+        active_ids: set[str] = set()
         for event in read_jsonl_tail(ROOT / "data" / "event_log.jsonl", 5000):
             event_id = event.get("event_id")
             if not event_id:
                 continue
+            active_ids.add(str(event_id))
             self.upsert_memory(
                 memory_id=event_id,
                 memory_type="event",
@@ -197,6 +199,7 @@ class MemoryStore:
             memory_id = item.get("memory_id")
             if not memory_id:
                 continue
+            active_ids.add(str(memory_id))
             self.upsert_memory(
                 memory_id=memory_id,
                 memory_type="episodic",
@@ -214,6 +217,7 @@ class MemoryStore:
             memory_id = item.get("memory_id")
             if not memory_id:
                 continue
+            active_ids.add(str(memory_id))
             self.upsert_memory(
                 memory_id=memory_id,
                 memory_type="semantic",
@@ -231,6 +235,7 @@ class MemoryStore:
             procedure_id = item.get("procedure_id")
             if not procedure_id:
                 continue
+            active_ids.add(str(procedure_id))
             content = "\n".join([item.get("name", ""), item.get("trigger", ""), *item.get("steps", [])])
             self.upsert_memory(
                 memory_id=procedure_id,
@@ -249,6 +254,7 @@ class MemoryStore:
             memory_id = item.get("memory_id") or item.get("preference_id")
             if not memory_id:
                 continue
+            active_ids.add(str(memory_id))
             self.upsert_memory(
                 memory_id=memory_id,
                 memory_type="preference",
@@ -261,7 +267,32 @@ class MemoryStore:
                 metadata=item,
             )
             counts["preference"] += 1
+        self.prune_missing(active_ids)
         return counts
+
+    def prune_missing(self, active_ids: set[str]) -> dict[str, int]:
+        self.initialize()
+        if not active_ids:
+            return {"memory_deleted": 0, "vectors_deleted": 0}
+        placeholders = ",".join("?" for _ in active_ids)
+        params = list(active_ids)
+        with self.connect() as connection:
+            result = connection.execute(
+                f"""
+                delete from memory_items
+                where memory_type in ('event', 'episodic', 'semantic', 'procedural', 'preference')
+                  and memory_id not in ({placeholders})
+                """,
+                params,
+            )
+            memory_deleted = result.rowcount if result.rowcount is not None else 0
+        with self.connect_vector() as connection:
+            result = connection.execute(
+                f"delete from vector_items where memory_id not in ({placeholders})",
+                params,
+            )
+            vectors_deleted = result.rowcount if result.rowcount is not None else 0
+        return {"memory_deleted": memory_deleted, "vectors_deleted": vectors_deleted}
 
     def embed_missing(self, client: OllamaClient, *, limit: int = 100, min_importance: float = 0.0) -> dict[str, Any]:
         self.initialize()
