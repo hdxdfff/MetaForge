@@ -43,5 +43,25 @@ For Ollama 0.20.x, the configured negative `keep_alive` value includes a unit
 ./scripts/run_wsl.sh
 ```
 
+## Memory Store
+
+Initialize or refresh the SQLite memory layer from JSON/JSONL state:
+
+```bash
+./scripts/init_memory_wsl.sh
+```
+
+This creates:
+
+- `data/memory.sqlite` for canonical memory records
+- `vector_index/memory_index.sqlite` for future embedding records
+
+The first retrieval pass uses deterministic lexical scoring over SQLite. The
+embedding table is present but intentionally not auto-filled yet, keeping V1
+cheap and predictable.
+
+The daemon also performs this sync on startup, so `init_memory_wsl.sh` is mainly
+for inspection and manual refreshes.
+
 Artifacts and evidence are written under `data/`, `reports/`, and
 `vector_index/`.

@@ -2,3 +2,5 @@
 __pycache__/
 *.pyc
 reports/ollama_serve.log
+data/*.sqlite
+vector_index/*.sqlite

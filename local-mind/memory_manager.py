@@ -6,6 +6,7 @@ from uuid import uuid4
 
 from json_store import append_jsonl, read_json, read_jsonl_tail, write_json
 from local_mind_paths import ROOT, resolve_local
+from memory_store import MemoryStore
 
 
 def now_iso() -> str:
@@ -19,6 +20,8 @@ class MemoryManager:
         self.event_log = resolve_local(memory.get("event_log", "data/event_log.jsonl"))
         self.decision_ledger = resolve_local(memory.get("decision_ledger", "data/decision_ledger.jsonl"))
         self.max_recent_events = int(memory.get("max_recent_events", 20))
+        self.store = MemoryStore(config)
+        self.last_sync_counts = self.store.sync_from_files()
 
     def append_event(
         self,
@@ -41,6 +44,17 @@ class MemoryManager:
             "memory_candidate": importance >= float(self.config.get("memory", {}).get("consolidation_min_importance", 0.65)),
         }
         append_jsonl(self.event_log, record)
+        self.store.upsert_memory(
+            memory_id=record["event_id"],
+            memory_type="event",
+            content=summary,
+            source="event_log",
+            source_ref=str(self.event_log),
+            importance=importance,
+            confidence=1.0 if verified else 0.4,
+            verified=verified,
+            metadata=record,
+        )
         return record
 
     def append_decision(self, record: dict[str, Any]) -> None:
@@ -62,7 +76,14 @@ class MemoryManager:
             trigger = item.get("trigger", "").lower()
             if "status" in title or any(token in trigger for token in title.split()):
                 memories.append({"type": "procedural", **item})
-        return memories[: int(self.config.get("memory", {}).get("retrieve_top_k", 8))]
+        top_k = int(self.config.get("memory", {}).get("retrieve_top_k", 8))
+        sqlite_hits = [hit.as_context_item() for hit in self.store.search(task.get("title", ""), top_k=top_k)]
+        seen = {item.get("memory_id") or item.get("procedure_id") for item in memories}
+        for hit in sqlite_hits:
+            if hit.get("memory_id") not in seen:
+                memories.append(hit)
+                seen.add(hit.get("memory_id"))
+        return memories[:top_k]
 
     def update_runtime_state(self, updates: dict[str, Any]) -> dict[str, Any]:
         path = ROOT / "data" / "runtime_state.json"
