@@ -54,6 +54,7 @@ Initialize or refresh the SQLite memory layer from JSON/JSONL state:
 ./scripts/selftest_memory_wsl.sh
 ./scripts/preferences_wsl.sh list
 ./scripts/procedures_wsl.sh list
+./scripts/semantic_wsl.sh list
 ```
 
 This creates and refreshes:
@@ -80,7 +81,8 @@ updates `reports/daily_summary.md`, and archives low-value old events to
 `data/event_archive.jsonl` once retention thresholds are exceeded.
 `selftest_memory_wsl.sh` validates the retention branch against temporary data
 under `.tmp/` without touching the real event log. It also validates preference
-gating and procedural promotion against temporary memory files.
+gating, procedural promotion, and semantic fact promotion against temporary
+memory files.
 
 ## Preference Gate
 
@@ -104,6 +106,18 @@ reaches the success threshold, currently three verified successes:
 ```bash
 ./scripts/procedures_wsl.sh list
 ./scripts/procedures_wsl.sh promote proc_cand_xxx
+```
+
+## Semantic Gate
+
+Semantic facts are written first to `data/semantic_candidates.json`. A candidate
+is promoted into `data/semantic_memory.json` only when every referenced source
+event exists and is verified:
+
+```bash
+./scripts/semantic_wsl.sh list
+./scripts/semantic_wsl.sh add "Fact text" --event-id evt_xxx
+./scripts/semantic_wsl.sh review
 ```
 
 Artifacts and evidence are written under `data/`, `reports/`, and

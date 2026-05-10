@@ -19,6 +19,7 @@ from model_client import OllamaClient
 from preference_manager import handle_model_candidates
 from procedural_manager import record_successful_decision
 from router import should_escalate, should_use_think
+from semantic_manager import handle_model_candidates as handle_semantic_candidates
 from task_queue import TaskQueue
 from tool_executor import ToolExecutor
 from verifier import Verifier
@@ -128,7 +129,7 @@ class LocalMindDaemon:
             source_ref=decision["decision_id"],
         )
         procedural_result = record_successful_decision(decision)
-        self.memory.append_event(
+        task_event = self.memory.append_event(
             "task_processed",
             f"Processed task {task.get('task_id')}",
             {
@@ -140,6 +141,19 @@ class LocalMindDaemon:
             importance=0.7 if decision["committed_to_state"] else 0.5,
             verified=decision["committed_to_state"],
         )
+        semantic_result = handle_semantic_candidates(
+            proposal.get("memory_write_candidates", []),
+            source_ref=decision["decision_id"],
+            source_event_ids=[task_event["event_id"]] if task_event.get("verified") else [],
+        )
+        if semantic_result.get("processed"):
+            self.memory.append_event(
+                "semantic_candidate_review",
+                "Reviewed semantic memory candidates",
+                {"decision_id": decision["decision_id"], "semantic_candidates": semantic_result},
+                importance=0.5,
+                verified=True,
+            )
         if decision["committed_to_state"]:
             evidence = next((item["result"].get("target") for item in results if item["result"].get("target")), None)
             self.queue.update_status(task["task_id"], "verified_success", evidence=evidence)

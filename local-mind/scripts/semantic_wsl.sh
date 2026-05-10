@@ -9,8 +9,4 @@ fi
 
 . .venv/bin/activate
 python -m pip install -q -r requirements.txt
-python -m compileall -q .
-python selftest_compaction.py
-python selftest_preference_gate.py
-python selftest_procedural_gate.py
-python selftest_semantic_gate.py
+python semantic_manager.py "$@"
