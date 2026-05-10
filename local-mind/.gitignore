@@ -4,3 +4,4 @@ __pycache__/
 reports/ollama_serve.log
 data/*.sqlite
 vector_index/*.sqlite
+.tmp/

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from collections import Counter
 from datetime import datetime, timezone
+from pathlib import Path
 from typing import Any
 
 from json_store import append_jsonl, read_json, read_jsonl_tail, write_json
@@ -71,9 +72,11 @@ def compact_event_log(
     max_events: int,
     keep_recent_events: int,
     min_importance: float,
+    event_log_path: Path | None = None,
+    archive_path: Path | None = None,
 ) -> dict[str, Any]:
-    event_log = ROOT / "data" / "event_log.jsonl"
-    archive = ROOT / "data" / "event_archive.jsonl"
+    event_log = event_log_path or ROOT / "data" / "event_log.jsonl"
+    archive = archive_path or ROOT / "data" / "event_archive.jsonl"
     events = read_jsonl_all(event_log)
     if len(events) <= max_events:
         return {"compacted": False, "events_before": len(events), "events_after": len(events), "archived": 0}

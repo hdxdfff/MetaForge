@@ -51,6 +51,7 @@ Initialize or refresh the SQLite memory layer from JSON/JSONL state:
 ./scripts/init_memory_wsl.sh
 ./scripts/maintain_memory_wsl.sh
 ./scripts/consolidate_memory_wsl.sh
+./scripts/selftest_memory_wsl.sh
 ```
 
 This creates and refreshes:
@@ -75,6 +76,8 @@ limit under `memory.embedding_maintenance_*` in `config/local_mind.yaml`.
 Consolidation writes high-importance events to `data/episodic_memory.jsonl`,
 updates `reports/daily_summary.md`, and archives low-value old events to
 `data/event_archive.jsonl` once retention thresholds are exceeded.
+`selftest_memory_wsl.sh` validates the retention branch against temporary data
+under `.tmp/` without touching the real event log.
 
 Artifacts and evidence are written under `data/`, `reports/`, and
 `vector_index/`.
