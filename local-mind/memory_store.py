@@ -176,7 +176,7 @@ class MemoryStore:
 
     def sync_from_files(self) -> dict[str, int]:
         self.initialize()
-        counts = {"event": 0, "semantic": 0, "procedural": 0, "preference": 0}
+        counts = {"event": 0, "episodic": 0, "semantic": 0, "procedural": 0, "preference": 0}
         for event in read_jsonl_tail(ROOT / "data" / "event_log.jsonl", 5000):
             event_id = event.get("event_id")
             if not event_id:
@@ -193,6 +193,22 @@ class MemoryStore:
                 metadata=event,
             )
             counts["event"] += 1
+        for item in read_jsonl_tail(ROOT / "data" / "episodic_memory.jsonl", 5000):
+            memory_id = item.get("memory_id")
+            if not memory_id:
+                continue
+            self.upsert_memory(
+                memory_id=memory_id,
+                memory_type="episodic",
+                content=item.get("content", ""),
+                source="episodic_memory",
+                source_ref="data/episodic_memory.jsonl",
+                importance=float(item.get("importance", 0.65)),
+                confidence=1.0 if item.get("verified") else 0.5,
+                verified=bool(item.get("verified")),
+                metadata=item,
+            )
+            counts["episodic"] += 1
         semantic = read_json(ROOT / "data" / "semantic_memory.json", {"memories": []}).get("memories", [])
         for item in semantic:
             memory_id = item.get("memory_id")

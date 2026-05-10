@@ -29,6 +29,10 @@ memory:
   embedding_maintenance_interval_minutes: 30
   embedding_maintenance_limit: 24
   embedding_maintenance_min_importance: 0.0
+  event_retention_max_events: 5000
+  event_retention_keep_recent_events: 500
+  event_retention_min_importance: 0.65
+  event_archive: "data/event_archive.jsonl"
 
 context_budget:
   identity_tokens: 600

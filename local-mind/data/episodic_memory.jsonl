@@ -1,0 +1,2 @@
+
+{"memory_id": "epi_evt_20260510_093509_752c4e42", "timestamp": "2026-05-10T10:13:31+08:00", "source_event_id": "evt_20260510_093509_752c4e42", "content": "Processed task task_bootstrap_001", "event_type": "task_processed", "importance": 0.7, "verified": true, "evidence": {"decision_id": "dec_20260510_093509_4998c82f", "committed_to_state": true}}
