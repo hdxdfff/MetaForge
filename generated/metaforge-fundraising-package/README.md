@@ -11,6 +11,12 @@ It now separates external-facing investor materials from internal planning notes
 - [data-room-checklist.md](./data-room-checklist.md)
 - [financial-model-template.md](./financial-model-template.md)
 - [business-plan.md](./business-plan.md)
+- [README.zh.md](./README.zh.md)
+- [one-pager.zh.md](./one-pager.zh.md)
+- [pitch-deck.zh.md](./pitch-deck.zh.md)
+- [demo-script.zh.md](./demo-script.zh.md)
+- [data-room-checklist.zh.md](./data-room-checklist.zh.md)
+- [financial-model-template.zh.md](./financial-model-template.zh.md)
 
 ## Demo assets
 
@@ -25,7 +31,8 @@ MetaForge is presented here as a private AI task control plane for R&D teams: ta
 ## Investor-facing language split
 
 - `one-pager.md`, `pitch-deck.md`, and `demo-script.md` are the English investor-facing bundle.
-- `business-plan.md` is the Chinese planning/reference version.
+- `README.zh.md`, `one-pager.zh.md`, `pitch-deck.zh.md`, `demo-script.zh.md`, `data-room-checklist.zh.md`, and `financial-model-template.zh.md` are the Chinese investor-facing bundle.
+- `business-plan.md` is the Chinese long-form planning/reference version.
 - If you want a single-language external packet, export only one language path and keep the other internal.
 
 ## What still needs founder input before formal outreach
