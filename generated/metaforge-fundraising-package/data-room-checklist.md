@@ -1,5 +1,15 @@
 # Data Room Checklist
 
+## External-ready gate
+
+Do not send the investor package externally until these are filled:
+
+- founder / team bios
+- funding amount, instrument, and valuation / cap
+- public demo URL or screen recording
+- at least one externally shareable traction proof point
+- 12-month use-of-funds model
+
 ## Company
 
 - legal entity information

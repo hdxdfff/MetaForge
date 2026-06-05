@@ -1,4 +1,4 @@
-# MetaForge Control Console Pitch Deck Outline
+# MetaForge Control Console Pitch Deck
 
 ## Slide 1 — Title
 
@@ -15,8 +15,6 @@ Subtitle: turn engineering goals into auditable, recoverable task flows.
 - Teams have task sprawl, weak status visibility, and inconsistent handoffs.
 - Build/validation evidence lives in too many places.
 - Once an automation flow breaks, recovery is manual and fragile.
-
-Speaker note: lead with operational pain, not model capability.
 
 ---
 
@@ -40,8 +38,6 @@ MetaForge provides one console for:
 - release gating
 - private deployment
 
-Speaker note: one control plane, one audit trail.
-
 ---
 
 ## Slide 5 — Product demo
@@ -54,7 +50,8 @@ Show the live demo:
 4. release gate only passes on fresh facts
 
 Demo asset:
-- `generated/metaforge-control-console-demo/index.html`
+- hosted demo URL: [insert]
+- internal demo artifact exists in the workspace and should not be linked in the external packet
 
 ---
 
@@ -85,8 +82,6 @@ Demo asset:
 - evidence layer
 - release layer
 
-Speaker note: keep this diagram simple and non-technical.
-
 ---
 
 ## Slide 9 — Market / customer
@@ -115,20 +110,25 @@ Call out the first beachhead: teams that want AI workflow control without giving
 - audit-ready artifact chain
 - repeatable control-plane narrative
 - private deployment posture
-
-Add:
-- pilot users
-- usage metrics
-- customer quotes
-when available.
+- design partner pipeline [insert]
+- customer quotes [insert if available]
 
 ---
 
-## Slide 12 — Ask
+## Slide 12 — Team
+
+- founder / operator bio: [insert]
+- relevant shipped systems: [insert]
+- domain expertise: [insert]
+- advisors / advocates: [insert if any]
+
+---
+
+## Slide 13 — Ask
 
 - pilot customers
 - design partners
 - strategic introductions
 - funding for productization and go-to-market
-
-Speaker note: make the next step easy to say yes to.
+- round / instrument / amount: [insert]
+- use of funds: [insert]
