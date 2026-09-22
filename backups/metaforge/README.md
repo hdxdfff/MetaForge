@@ -1,27 +1,7 @@
-# MetaForge
+# Historical backup notice
 
-This entry page covers the first backup track in the repository.
+This directory is retained only to preserve the repository's historical layout. It is **not** a backup entry point and contains no current restore instructions.
 
-## Scope
+The public backup release previously referenced here has been removed. MetaForge backup archives, manifests, and environment snapshots must be stored only in a separate private backup repository or private storage. They must never be uploaded to releases of this public repository.
 
-- `generated/toy-os-demo`
-- `orchestrator-mvp/factory/runtime/harness_runs`
-- `orchestrator-mvp/data/harness_goals`
-- `goals`
-
-## Assets
-
-- Manifest: [codex-complete-plus-generated-v2-20260404-022752.manifest.json](https://github.com/hdxdfff/MetaForge/releases/download/backup-codex-complete-plus-generated-v2-20260404-022752/codex-complete-plus-generated-v2-20260404-022752.manifest.json)
-- Archive: [codex-complete-plus-generated-v2-20260404-022752.zip](https://github.com/hdxdfff/MetaForge/releases/download/backup-codex-complete-plus-generated-v2-20260404-022752/codex-complete-plus-generated-v2-20260404-022752.zip)
-- Note: the archive is a release asset and does not appear as a normal file in this directory.
-- Release: [backup-codex-complete-plus-generated-v2-20260404-022752](https://github.com/hdxdfff/MetaForge/releases/tag/backup-codex-complete-plus-generated-v2-20260404-022752)
-
-## Restore order
-
-1. Restore the manifest first.
-2. Restore the archive second.
-3. Reconcile harness state only after both assets are present.
-
-## Boundary
-
-This track is independent from the ToyOS project backup.
+For the current project overview and repository policy, see the [root README](../../README.md).

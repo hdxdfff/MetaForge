@@ -1,18 +1,7 @@
-# Backup Index
+# Historical backup layout
 
-This directory contains two independent backup tracks in dedicated subdirectories.
+This directory is retained as historical repository context. It is not an active backup index and must not be used to distribute, locate, or restore operational backups.
 
-## Project 1: MetaForge
+The public backup release formerly referenced in this directory has been removed. Backup archives, manifests, and environment snapshots belong only in separate private storage. Do not upload them to this public repository or attach them to its GitHub Releases.
 
-- Entry page: [metaforge/README.md](metaforge/README.md)
-- Manifest asset: [codex-complete-plus-generated-v2-20260404-022752.manifest.json](https://github.com/hdxdfff/MetaForge/releases/download/backup-codex-complete-plus-generated-v2-20260404-022752/codex-complete-plus-generated-v2-20260404-022752.manifest.json)
-- Archive asset: [codex-complete-plus-generated-v2-20260404-022752.zip](https://github.com/hdxdfff/MetaForge/releases/download/backup-codex-complete-plus-generated-v2-20260404-022752/codex-complete-plus-generated-v2-20260404-022752.zip)
-- Note: release assets hold the large archive artifacts.
-- Release: [backup-codex-complete-plus-generated-v2-20260404-022752](https://github.com/hdxdfff/MetaForge/releases/tag/backup-codex-complete-plus-generated-v2-20260404-022752)
-
-## Project 2: ToyOS project backup
-
-- Entry page: [toyos/README.md](toyos/README.md)
-- Manifest: [toyos-project-backup-20260404-023214.manifest.json](toyos-project-backup-20260404-023214.manifest.json)
-- Archive: [toyos-project-backup-20260404-023214.zip](toyos-project-backup-20260404-023214.zip)
-- Scope: ToyOS delivery artifacts kept separate from MetaForge
+See the [root README](../README.md) for the current MetaForge project overview and repository policy.
